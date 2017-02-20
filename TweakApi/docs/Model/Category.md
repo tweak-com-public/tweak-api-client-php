@@ -1,0 +1,17 @@
+# Category
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **string** |  | [optional] 
+**description** | **string** |  | [optional] 
+**id** | **double** |  | [optional] 
+**categoryId** | **double** |  | [optional] 
+**parentId** | **double** |  | [optional] 
+**designId** | **double** |  | [optional] 
+**children** | **object[]** |  | [optional] 
+**parent** | **object** |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
