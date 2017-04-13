@@ -66,7 +66,7 @@ class InlineResponse2003 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'greeting' => 'string'
+        'active' => 'bool'
     );
 
     public static function swaggerTypes()
@@ -79,7 +79,7 @@ class InlineResponse2003 implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'greeting' => 'greeting'
+        'active' => 'active'
     );
 
     public static function attributeMap()
@@ -92,7 +92,7 @@ class InlineResponse2003 implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'greeting' => 'setGreeting'
+        'active' => 'setActive'
     );
 
     public static function setters()
@@ -105,7 +105,7 @@ class InlineResponse2003 implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'greeting' => 'getGreeting'
+        'active' => 'getActive'
     );
 
     public static function getters()
@@ -129,7 +129,7 @@ class InlineResponse2003 implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['greeting'] = isset($data['greeting']) ? $data['greeting'] : null;
+        $this->container['active'] = isset($data['active']) ? $data['active'] : null;
     }
 
     /**
@@ -156,22 +156,22 @@ class InlineResponse2003 implements ArrayAccess
 
 
     /**
-     * Gets greeting
-     * @return string
+     * Gets active
+     * @return bool
      */
-    public function getGreeting()
+    public function getActive()
     {
-        return $this->container['greeting'];
+        return $this->container['active'];
     }
 
     /**
-     * Sets greeting
-     * @param string $greeting
+     * Sets active
+     * @param bool $active
      * @return $this
      */
-    public function setGreeting($greeting)
+    public function setActive($active)
     {
-        $this->container['greeting'] = $greeting;
+        $this->container['active'] = $active;
 
         return $this;
     }

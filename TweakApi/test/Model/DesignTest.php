@@ -96,9 +96,9 @@ class DesignTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "colors"
      */
-    public function testPropertyName()
+    public function testPropertyColors()
     {
 
     }
@@ -112,9 +112,9 @@ class DesignTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "thumbnail"
+     * Test attribute "name"
      */
-    public function testPropertyThumbnail()
+    public function testPropertyName()
     {
 
     }
@@ -123,6 +123,54 @@ class DesignTest extends \PHPUnit_Framework_TestCase
      * Test attribute "object"
      */
     public function testPropertyObject()
+    {
+
+    }
+
+    /**
+     * Test attribute "thumbnail"
+     */
+    public function testPropertyThumbnail()
+    {
+
+    }
+
+    /**
+     * Test attribute "expired"
+     */
+    public function testPropertyExpired()
+    {
+
+    }
+
+    /**
+     * Test attribute "description"
+     */
+    public function testPropertyDescription()
+    {
+
+    }
+
+    /**
+     * Test attribute "purpose"
+     */
+    public function testPropertyPurpose()
+    {
+
+    }
+
+    /**
+     * Test attribute "created"
+     */
+    public function testPropertyCreated()
+    {
+
+    }
+
+    /**
+     * Test attribute "modified"
+     */
+    public function testPropertyModified()
     {
 
     }
@@ -144,6 +192,30 @@ class DesignTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "templateId"
+     */
+    public function testPropertyTemplateId()
+    {
+
+    }
+
+    /**
+     * Test attribute "portalId"
+     */
+    public function testPropertyPortalId()
+    {
+
+    }
+
+    /**
+     * Test attribute "requesterId"
+     */
+    public function testPropertyRequesterId()
+    {
+
+    }
+
+    /**
      * Test attribute "tags"
      */
     public function testPropertyTags()
@@ -152,17 +224,57 @@ class DesignTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "categories"
+     * Test attribute "customer"
      */
-    public function testPropertyCategories()
+    public function testPropertyCustomer()
     {
 
     }
 
     /**
-     * Test attribute "customer"
+     * Test attribute "template"
      */
-    public function testPropertyCustomer()
+    public function testPropertyTemplate()
+    {
+
+    }
+
+    /**
+     * Test attribute "portal"
+     */
+    public function testPropertyPortal()
+    {
+
+    }
+
+    /**
+     * Test attribute "requester"
+     */
+    public function testPropertyRequester()
+    {
+
+    }
+
+    /**
+     * Test attribute "commenters"
+     */
+    public function testPropertyCommenters()
+    {
+
+    }
+
+    /**
+     * Test attribute "assignees"
+     */
+    public function testPropertyAssignees()
+    {
+
+    }
+
+    /**
+     * Test attribute "reviewers"
+     */
+    public function testPropertyReviewers()
     {
 
     }

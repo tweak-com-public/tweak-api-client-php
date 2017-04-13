@@ -90,199 +90,419 @@ class TagApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for tagCount
+     * Test case for tagsChangeStreamGet
+     *
+     * Create a change stream..
+     *
+     */
+    public function testTagsChangeStreamGet()
+    {
+
+    }
+
+    /**
+     * Test case for tagsChangeStreamPost
+     *
+     * Create a change stream..
+     *
+     */
+    public function testTagsChangeStreamPost()
+    {
+
+    }
+
+    /**
+     * Test case for tagsCountGet
      *
      * Count instances of the model matched by where from the data source..
      *
      */
-    public function testTagCount()
+    public function testTagsCountGet()
     {
 
     }
 
     /**
-     * Test case for tagCreate
-     *
-     * Create a new instance of the model and persist it into the data source..
-     *
-     */
-    public function testTagCreate()
-    {
-
-    }
-
-    /**
-     * Test case for tagCreateChangeStreamGetTagsChangeStream
-     *
-     * Create a change stream..
-     *
-     */
-    public function testTagCreateChangeStreamGetTagsChangeStream()
-    {
-
-    }
-
-    /**
-     * Test case for tagCreateChangeStreamPostTagsChangeStream
-     *
-     * Create a change stream..
-     *
-     */
-    public function testTagCreateChangeStreamPostTagsChangeStream()
-    {
-
-    }
-
-    /**
-     * Test case for tagDeleteById
-     *
-     * Delete a model instance by {{id}} from the data source..
-     *
-     */
-    public function testTagDeleteById()
-    {
-
-    }
-
-    /**
-     * Test case for tagExistsGetTagsidExists
-     *
-     * Check whether a model instance exists in the data source..
-     *
-     */
-    public function testTagExistsGetTagsidExists()
-    {
-
-    }
-
-    /**
-     * Test case for tagExistsHeadTagsid
-     *
-     * Check whether a model instance exists in the data source..
-     *
-     */
-    public function testTagExistsHeadTagsid()
-    {
-
-    }
-
-    /**
-     * Test case for tagFind
-     *
-     * Find all instances of the model matched by filter from the data source..
-     *
-     */
-    public function testTagFind()
-    {
-
-    }
-
-    /**
-     * Test case for tagFindById
-     *
-     * Find a model instance by {{id}} from the data source..
-     *
-     */
-    public function testTagFindById()
-    {
-
-    }
-
-    /**
-     * Test case for tagFindOne
+     * Test case for tagsFindOneGet
      *
      * Find first instance of the model matched by filter from the data source..
      *
      */
-    public function testTagFindOne()
+    public function testTagsFindOneGet()
     {
 
     }
 
     /**
-     * Test case for tagPrototypeUpdateAttributesPatchTagsid
+     * Test case for tagsGet
+     *
+     * Find all instances of the model matched by filter from the data source..
+     *
+     */
+    public function testTagsGet()
+    {
+
+    }
+
+    /**
+     * Test case for tagsIdDelete
+     *
+     * Delete a model instance by {{id}} from the data source..
+     *
+     */
+    public function testTagsIdDelete()
+    {
+
+    }
+
+    /**
+     * Test case for tagsIdDesignsCountGet
+     *
+     * Counts designs of Tag..
+     *
+     */
+    public function testTagsIdDesignsCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for tagsIdDesignsDelete
+     *
+     * Deletes all designs of this model..
+     *
+     */
+    public function testTagsIdDesignsDelete()
+    {
+
+    }
+
+    /**
+     * Test case for tagsIdDesignsFkDelete
+     *
+     * Delete a related item by id for designs..
+     *
+     */
+    public function testTagsIdDesignsFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for tagsIdDesignsFkGet
+     *
+     * Find a related item by id for designs..
+     *
+     */
+    public function testTagsIdDesignsFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for tagsIdDesignsFkPut
+     *
+     * Update a related item by id for designs..
+     *
+     */
+    public function testTagsIdDesignsFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for tagsIdDesignsGet
+     *
+     * Queries designs of Tag..
+     *
+     */
+    public function testTagsIdDesignsGet()
+    {
+
+    }
+
+    /**
+     * Test case for tagsIdDesignsPost
+     *
+     * Creates a new instance in designs of this model..
+     *
+     */
+    public function testTagsIdDesignsPost()
+    {
+
+    }
+
+    /**
+     * Test case for tagsIdDesignsRelFkDelete
+     *
+     * Remove the designs relation to an item by id..
+     *
+     */
+    public function testTagsIdDesignsRelFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for tagsIdDesignsRelFkHead
+     *
+     * Check the existence of designs relation to an item by id..
+     *
+     */
+    public function testTagsIdDesignsRelFkHead()
+    {
+
+    }
+
+    /**
+     * Test case for tagsIdDesignsRelFkPut
+     *
+     * Add a related item by id for designs..
+     *
+     */
+    public function testTagsIdDesignsRelFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for tagsIdExistsGet
+     *
+     * Check whether a model instance exists in the data source..
+     *
+     */
+    public function testTagsIdExistsGet()
+    {
+
+    }
+
+    /**
+     * Test case for tagsIdGet
+     *
+     * Find a model instance by {{id}} from the data source..
+     *
+     */
+    public function testTagsIdGet()
+    {
+
+    }
+
+    /**
+     * Test case for tagsIdHead
+     *
+     * Check whether a model instance exists in the data source..
+     *
+     */
+    public function testTagsIdHead()
+    {
+
+    }
+
+    /**
+     * Test case for tagsIdPatch
      *
      * Patch attributes for a model instance and persist it into the data source..
      *
      */
-    public function testTagPrototypeUpdateAttributesPatchTagsid()
+    public function testTagsIdPatch()
     {
 
     }
 
     /**
-     * Test case for tagPrototypeUpdateAttributesPutTagsid
-     *
-     * Patch attributes for a model instance and persist it into the data source..
-     *
-     */
-    public function testTagPrototypeUpdateAttributesPutTagsid()
-    {
-
-    }
-
-    /**
-     * Test case for tagReplaceById
+     * Test case for tagsIdPut
      *
      * Replace attributes for a model instance and persist it into the data source..
      *
      */
-    public function testTagReplaceById()
+    public function testTagsIdPut()
     {
 
     }
 
     /**
-     * Test case for tagReplaceOrCreate
+     * Test case for tagsIdReplacePost
+     *
+     * Replace attributes for a model instance and persist it into the data source..
+     *
+     */
+    public function testTagsIdReplacePost()
+    {
+
+    }
+
+    /**
+     * Test case for tagsIdTemplatesCountGet
+     *
+     * Counts templates of Tag..
+     *
+     */
+    public function testTagsIdTemplatesCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for tagsIdTemplatesDelete
+     *
+     * Deletes all templates of this model..
+     *
+     */
+    public function testTagsIdTemplatesDelete()
+    {
+
+    }
+
+    /**
+     * Test case for tagsIdTemplatesFkDelete
+     *
+     * Delete a related item by id for templates..
+     *
+     */
+    public function testTagsIdTemplatesFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for tagsIdTemplatesFkGet
+     *
+     * Find a related item by id for templates..
+     *
+     */
+    public function testTagsIdTemplatesFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for tagsIdTemplatesFkPut
+     *
+     * Update a related item by id for templates..
+     *
+     */
+    public function testTagsIdTemplatesFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for tagsIdTemplatesGet
+     *
+     * Queries templates of Tag..
+     *
+     */
+    public function testTagsIdTemplatesGet()
+    {
+
+    }
+
+    /**
+     * Test case for tagsIdTemplatesPost
+     *
+     * Creates a new instance in templates of this model..
+     *
+     */
+    public function testTagsIdTemplatesPost()
+    {
+
+    }
+
+    /**
+     * Test case for tagsIdTemplatesRelFkDelete
+     *
+     * Remove the templates relation to an item by id..
+     *
+     */
+    public function testTagsIdTemplatesRelFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for tagsIdTemplatesRelFkHead
+     *
+     * Check the existence of templates relation to an item by id..
+     *
+     */
+    public function testTagsIdTemplatesRelFkHead()
+    {
+
+    }
+
+    /**
+     * Test case for tagsIdTemplatesRelFkPut
+     *
+     * Add a related item by id for templates..
+     *
+     */
+    public function testTagsIdTemplatesRelFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for tagsPatch
+     *
+     * Patch an existing model instance or insert a new one into the data source..
+     *
+     */
+    public function testTagsPatch()
+    {
+
+    }
+
+    /**
+     * Test case for tagsPost
+     *
+     * Create a new instance of the model and persist it into the data source..
+     *
+     */
+    public function testTagsPost()
+    {
+
+    }
+
+    /**
+     * Test case for tagsPut
      *
      * Replace an existing model instance or insert a new one into the data source..
      *
      */
-    public function testTagReplaceOrCreate()
+    public function testTagsPut()
     {
 
     }
 
     /**
-     * Test case for tagUpdateAll
+     * Test case for tagsReplaceOrCreatePost
+     *
+     * Replace an existing model instance or insert a new one into the data source..
+     *
+     */
+    public function testTagsReplaceOrCreatePost()
+    {
+
+    }
+
+    /**
+     * Test case for tagsUpdatePost
      *
      * Update instances of the model matched by {{where}} from the data source..
      *
      */
-    public function testTagUpdateAll()
+    public function testTagsUpdatePost()
     {
 
     }
 
     /**
-     * Test case for tagUpsertPatchTags
-     *
-     * Patch an existing model instance or insert a new one into the data source..
-     *
-     */
-    public function testTagUpsertPatchTags()
-    {
-
-    }
-
-    /**
-     * Test case for tagUpsertPutTags
-     *
-     * Patch an existing model instance or insert a new one into the data source..
-     *
-     */
-    public function testTagUpsertPutTags()
-    {
-
-    }
-
-    /**
-     * Test case for tagUpsertWithWhere
+     * Test case for tagsUpsertWithWherePost
      *
      * Update an existing model instance or insert a new one into the data source based on the where criteria..
      *
      */
-    public function testTagUpsertWithWhere()
+    public function testTagsUpsertWithWherePost()
     {
 
     }

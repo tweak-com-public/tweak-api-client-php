@@ -90,397 +90,639 @@ class CustomerApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for customerConfirm
+     * Test case for customersChangePasswordPost
+     *
+     * Change a user's password..
+     *
+     */
+    public function testCustomersChangePasswordPost()
+    {
+
+    }
+
+    /**
+     * Test case for customersChangeStreamGet
+     *
+     * Create a change stream..
+     *
+     */
+    public function testCustomersChangeStreamGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersChangeStreamPost
+     *
+     * Create a change stream..
+     *
+     */
+    public function testCustomersChangeStreamPost()
+    {
+
+    }
+
+    /**
+     * Test case for customersConfirmGet
      *
      * Confirm a user registration with email verification token..
      *
      */
-    public function testCustomerConfirm()
+    public function testCustomersConfirmGet()
     {
 
     }
 
     /**
-     * Test case for customerCount
+     * Test case for customersCountGet
      *
      * Count instances of the model matched by where from the data source..
      *
      */
-    public function testCustomerCount()
+    public function testCustomersCountGet()
     {
 
     }
 
     /**
-     * Test case for customerCreate
-     *
-     * Create a new instance of the model and persist it into the data source..
-     *
-     */
-    public function testCustomerCreate()
-    {
-
-    }
-
-    /**
-     * Test case for customerCreateChangeStreamGetCustomersChangeStream
-     *
-     * Create a change stream..
-     *
-     */
-    public function testCustomerCreateChangeStreamGetCustomersChangeStream()
-    {
-
-    }
-
-    /**
-     * Test case for customerCreateChangeStreamPostCustomersChangeStream
-     *
-     * Create a change stream..
-     *
-     */
-    public function testCustomerCreateChangeStreamPostCustomersChangeStream()
-    {
-
-    }
-
-    /**
-     * Test case for customerDeleteById
-     *
-     * Delete a model instance by {{id}} from the data source..
-     *
-     */
-    public function testCustomerDeleteById()
-    {
-
-    }
-
-    /**
-     * Test case for customerExistsGetCustomersidExists
-     *
-     * Check whether a model instance exists in the data source..
-     *
-     */
-    public function testCustomerExistsGetCustomersidExists()
-    {
-
-    }
-
-    /**
-     * Test case for customerExistsHeadCustomersid
-     *
-     * Check whether a model instance exists in the data source..
-     *
-     */
-    public function testCustomerExistsHeadCustomersid()
-    {
-
-    }
-
-    /**
-     * Test case for customerFind
-     *
-     * Find all instances of the model matched by filter from the data source..
-     *
-     */
-    public function testCustomerFind()
-    {
-
-    }
-
-    /**
-     * Test case for customerFindById
-     *
-     * Find a model instance by {{id}} from the data source..
-     *
-     */
-    public function testCustomerFindById()
-    {
-
-    }
-
-    /**
-     * Test case for customerFindOne
+     * Test case for customersFindOneGet
      *
      * Find first instance of the model matched by filter from the data source..
      *
      */
-    public function testCustomerFindOne()
+    public function testCustomersFindOneGet()
     {
 
     }
 
     /**
-     * Test case for customerLogin
+     * Test case for customersGet
      *
-     * Login a user with username/email and password..
+     * Find all instances of the model matched by filter from the data source..
      *
      */
-    public function testCustomerLogin()
+    public function testCustomersGet()
     {
 
     }
 
     /**
-     * Test case for customerLogout
-     *
-     * Logout a user with access token..
-     *
-     */
-    public function testCustomerLogout()
-    {
-
-    }
-
-    /**
-     * Test case for customerPrototypeCountAccessTokens
+     * Test case for customersIdAccessTokensCountGet
      *
      * Counts accessTokens of Customer..
      *
      */
-    public function testCustomerPrototypeCountAccessTokens()
+    public function testCustomersIdAccessTokensCountGet()
     {
 
     }
 
     /**
-     * Test case for customerPrototypeCountDesigns
-     *
-     * Counts designs of Customer..
-     *
-     */
-    public function testCustomerPrototypeCountDesigns()
-    {
-
-    }
-
-    /**
-     * Test case for customerPrototypeCreateAccessTokens
-     *
-     * Creates a new instance in accessTokens of this model..
-     *
-     */
-    public function testCustomerPrototypeCreateAccessTokens()
-    {
-
-    }
-
-    /**
-     * Test case for customerPrototypeCreateDesigns
-     *
-     * Creates a new instance in designs of this model..
-     *
-     */
-    public function testCustomerPrototypeCreateDesigns()
-    {
-
-    }
-
-    /**
-     * Test case for customerPrototypeDeleteAccessTokens
+     * Test case for customersIdAccessTokensDelete
      *
      * Deletes all accessTokens of this model..
      *
      */
-    public function testCustomerPrototypeDeleteAccessTokens()
+    public function testCustomersIdAccessTokensDelete()
     {
 
     }
 
     /**
-     * Test case for customerPrototypeDeleteDesigns
-     *
-     * Deletes all designs of this model..
-     *
-     */
-    public function testCustomerPrototypeDeleteDesigns()
-    {
-
-    }
-
-    /**
-     * Test case for customerPrototypeDestroyByIdAccessTokens
+     * Test case for customersIdAccessTokensFkDelete
      *
      * Delete a related item by id for accessTokens..
      *
      */
-    public function testCustomerPrototypeDestroyByIdAccessTokens()
+    public function testCustomersIdAccessTokensFkDelete()
     {
 
     }
 
     /**
-     * Test case for customerPrototypeDestroyByIdDesigns
-     *
-     * Delete a related item by id for designs..
-     *
-     */
-    public function testCustomerPrototypeDestroyByIdDesigns()
-    {
-
-    }
-
-    /**
-     * Test case for customerPrototypeFindByIdAccessTokens
+     * Test case for customersIdAccessTokensFkGet
      *
      * Find a related item by id for accessTokens..
      *
      */
-    public function testCustomerPrototypeFindByIdAccessTokens()
+    public function testCustomersIdAccessTokensFkGet()
     {
 
     }
 
     /**
-     * Test case for customerPrototypeFindByIdDesigns
-     *
-     * Find a related item by id for designs..
-     *
-     */
-    public function testCustomerPrototypeFindByIdDesigns()
-    {
-
-    }
-
-    /**
-     * Test case for customerPrototypeGetAccessTokens
-     *
-     * Queries accessTokens of Customer..
-     *
-     */
-    public function testCustomerPrototypeGetAccessTokens()
-    {
-
-    }
-
-    /**
-     * Test case for customerPrototypeGetDesigns
-     *
-     * Queries designs of Customer..
-     *
-     */
-    public function testCustomerPrototypeGetDesigns()
-    {
-
-    }
-
-    /**
-     * Test case for customerPrototypeUpdateAttributesPatchCustomersid
-     *
-     * Patch attributes for a model instance and persist it into the data source..
-     *
-     */
-    public function testCustomerPrototypeUpdateAttributesPatchCustomersid()
-    {
-
-    }
-
-    /**
-     * Test case for customerPrototypeUpdateAttributesPutCustomersid
-     *
-     * Patch attributes for a model instance and persist it into the data source..
-     *
-     */
-    public function testCustomerPrototypeUpdateAttributesPutCustomersid()
-    {
-
-    }
-
-    /**
-     * Test case for customerPrototypeUpdateByIdAccessTokens
+     * Test case for customersIdAccessTokensFkPut
      *
      * Update a related item by id for accessTokens..
      *
      */
-    public function testCustomerPrototypeUpdateByIdAccessTokens()
+    public function testCustomersIdAccessTokensFkPut()
     {
 
     }
 
     /**
-     * Test case for customerPrototypeUpdateByIdDesigns
+     * Test case for customersIdAccessTokensGet
+     *
+     * Queries accessTokens of Customer..
+     *
+     */
+    public function testCustomersIdAccessTokensGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdAccessTokensPost
+     *
+     * Creates a new instance in accessTokens of this model..
+     *
+     */
+    public function testCustomersIdAccessTokensPost()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdActiveGet
+     *
+     * Define whether customer is active or not.
+     *
+     */
+    public function testCustomersIdActiveGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdDelete
+     *
+     * Delete a model instance by {{id}} from the data source..
+     *
+     */
+    public function testCustomersIdDelete()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdDesignsCountGet
+     *
+     * Counts designs of Customer..
+     *
+     */
+    public function testCustomersIdDesignsCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdDesignsDelete
+     *
+     * Deletes all designs of this model..
+     *
+     */
+    public function testCustomersIdDesignsDelete()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdDesignsFkDelete
+     *
+     * Delete a related item by id for designs..
+     *
+     */
+    public function testCustomersIdDesignsFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdDesignsFkGet
+     *
+     * Find a related item by id for designs..
+     *
+     */
+    public function testCustomersIdDesignsFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdDesignsFkPut
      *
      * Update a related item by id for designs..
      *
      */
-    public function testCustomerPrototypeUpdateByIdDesigns()
+    public function testCustomersIdDesignsFkPut()
     {
 
     }
 
     /**
-     * Test case for customerReplaceById
+     * Test case for customersIdDesignsGet
+     *
+     * Queries designs of Customer..
+     *
+     */
+    public function testCustomersIdDesignsGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdDesignsPost
+     *
+     * Creates a new instance in designs of this model..
+     *
+     */
+    public function testCustomersIdDesignsPost()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdExistsGet
+     *
+     * Check whether a model instance exists in the data source..
+     *
+     */
+    public function testCustomersIdExistsGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdGet
+     *
+     * Find a model instance by {{id}} from the data source..
+     *
+     */
+    public function testCustomersIdGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdHead
+     *
+     * Check whether a model instance exists in the data source..
+     *
+     */
+    public function testCustomersIdHead()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdInvitationTicketsCountGet
+     *
+     * Counts invitationTickets of Customer..
+     *
+     */
+    public function testCustomersIdInvitationTicketsCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdInvitationTicketsDelete
+     *
+     * Deletes all invitationTickets of this model..
+     *
+     */
+    public function testCustomersIdInvitationTicketsDelete()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdInvitationTicketsFkDelete
+     *
+     * Delete a related item by id for invitationTickets..
+     *
+     */
+    public function testCustomersIdInvitationTicketsFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdInvitationTicketsFkGet
+     *
+     * Find a related item by id for invitationTickets..
+     *
+     */
+    public function testCustomersIdInvitationTicketsFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdInvitationTicketsFkPut
+     *
+     * Update a related item by id for invitationTickets..
+     *
+     */
+    public function testCustomersIdInvitationTicketsFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdInvitationTicketsGet
+     *
+     * Queries invitationTickets of Customer..
+     *
+     */
+    public function testCustomersIdInvitationTicketsGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdInvitationTicketsPost
+     *
+     * Creates a new instance in invitationTickets of this model..
+     *
+     */
+    public function testCustomersIdInvitationTicketsPost()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdPatch
+     *
+     * Patch attributes for a model instance and persist it into the data source..
+     *
+     */
+    public function testCustomersIdPatch()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdPut
      *
      * Replace attributes for a model instance and persist it into the data source..
      *
      */
-    public function testCustomerReplaceById()
+    public function testCustomersIdPut()
     {
 
     }
 
     /**
-     * Test case for customerReplaceOrCreate
+     * Test case for customersIdReplacePost
+     *
+     * Replace attributes for a model instance and persist it into the data source..
+     *
+     */
+    public function testCustomersIdReplacePost()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsCountGet
+     *
+     * Counts teams of Customer..
+     *
+     */
+    public function testCustomersIdTeamsCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsDelete
+     *
+     * Deletes all teams of this model..
+     *
+     */
+    public function testCustomersIdTeamsDelete()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsFkChangePost
+     *
+     * Change from a Team to another.
+     *
+     */
+    public function testCustomersIdTeamsFkChangePost()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsFkDelete
+     *
+     * Delete a related item by id for teams..
+     *
+     */
+    public function testCustomersIdTeamsFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsFkGet
+     *
+     * Find a related item by id for teams..
+     *
+     */
+    public function testCustomersIdTeamsFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsFkPut
+     *
+     * Update a related item by id for teams..
+     *
+     */
+    public function testCustomersIdTeamsFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsGet
+     *
+     * Queries teams of Customer..
+     *
+     */
+    public function testCustomersIdTeamsGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsPost
+     *
+     * Creates a new instance in teams of this model..
+     *
+     */
+    public function testCustomersIdTeamsPost()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsRelFkDelete
+     *
+     * Remove the teams relation to an item by id..
+     *
+     */
+    public function testCustomersIdTeamsRelFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsRelFkHead
+     *
+     * Check the existence of teams relation to an item by id..
+     *
+     */
+    public function testCustomersIdTeamsRelFkHead()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsRelFkPut
+     *
+     * Add a related item by id for teams..
+     *
+     */
+    public function testCustomersIdTeamsRelFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for customersInvitationTicketsAcceptPost
+     *
+     * Accept invitation with token.
+     *
+     */
+    public function testCustomersInvitationTicketsAcceptPost()
+    {
+
+    }
+
+    /**
+     * Test case for customersLoginPost
+     *
+     * Login a user with username/email and password..
+     *
+     */
+    public function testCustomersLoginPost()
+    {
+
+    }
+
+    /**
+     * Test case for customersLogoutPost
+     *
+     * Logout a user with access token..
+     *
+     */
+    public function testCustomersLogoutPost()
+    {
+
+    }
+
+    /**
+     * Test case for customersPatch
+     *
+     * Patch an existing model instance or insert a new one into the data source..
+     *
+     */
+    public function testCustomersPatch()
+    {
+
+    }
+
+    /**
+     * Test case for customersPost
+     *
+     * Create a new instance of the model and persist it into the data source..
+     *
+     */
+    public function testCustomersPost()
+    {
+
+    }
+
+    /**
+     * Test case for customersPut
      *
      * Replace an existing model instance or insert a new one into the data source..
      *
      */
-    public function testCustomerReplaceOrCreate()
+    public function testCustomersPut()
     {
 
     }
 
     /**
-     * Test case for customerResetPassword
+     * Test case for customersRegisterPost
+     *
+     * Create customer and assign it to a team.
+     *
+     */
+    public function testCustomersRegisterPost()
+    {
+
+    }
+
+    /**
+     * Test case for customersReplaceOrCreatePost
+     *
+     * Replace an existing model instance or insert a new one into the data source..
+     *
+     */
+    public function testCustomersReplaceOrCreatePost()
+    {
+
+    }
+
+    /**
+     * Test case for customersResetPost
      *
      * Reset password for a user with email..
      *
      */
-    public function testCustomerResetPassword()
+    public function testCustomersResetPost()
     {
 
     }
 
     /**
-     * Test case for customerUpdateAll
+     * Test case for customersUpdatePost
      *
      * Update instances of the model matched by {{where}} from the data source..
      *
      */
-    public function testCustomerUpdateAll()
+    public function testCustomersUpdatePost()
     {
 
     }
 
     /**
-     * Test case for customerUpsertPatchCustomers
-     *
-     * Patch an existing model instance or insert a new one into the data source..
-     *
-     */
-    public function testCustomerUpsertPatchCustomers()
-    {
-
-    }
-
-    /**
-     * Test case for customerUpsertPutCustomers
-     *
-     * Patch an existing model instance or insert a new one into the data source..
-     *
-     */
-    public function testCustomerUpsertPutCustomers()
-    {
-
-    }
-
-    /**
-     * Test case for customerUpsertWithWhere
+     * Test case for customersUpsertWithWherePost
      *
      * Update an existing model instance or insert a new one into the data source based on the where criteria..
      *
      */
-    public function testCustomerUpsertWithWhere()
+    public function testCustomersUpsertWithWherePost()
     {
 
     }

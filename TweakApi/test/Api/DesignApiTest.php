@@ -90,364 +90,683 @@ class DesignApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for designCount
+     * Test case for designsChangeStreamGet
+     *
+     * Create a change stream..
+     *
+     */
+    public function testDesignsChangeStreamGet()
+    {
+
+    }
+
+    /**
+     * Test case for designsChangeStreamPost
+     *
+     * Create a change stream..
+     *
+     */
+    public function testDesignsChangeStreamPost()
+    {
+
+    }
+
+    /**
+     * Test case for designsCountGet
      *
      * Count instances of the model matched by where from the data source..
      *
      */
-    public function testDesignCount()
+    public function testDesignsCountGet()
     {
 
     }
 
     /**
-     * Test case for designCreate
-     *
-     * Create a new instance of the model and persist it into the data source..
-     *
-     */
-    public function testDesignCreate()
-    {
-
-    }
-
-    /**
-     * Test case for designCreateChangeStreamGetDesignsChangeStream
-     *
-     * Create a change stream..
-     *
-     */
-    public function testDesignCreateChangeStreamGetDesignsChangeStream()
-    {
-
-    }
-
-    /**
-     * Test case for designCreateChangeStreamPostDesignsChangeStream
-     *
-     * Create a change stream..
-     *
-     */
-    public function testDesignCreateChangeStreamPostDesignsChangeStream()
-    {
-
-    }
-
-    /**
-     * Test case for designDeleteById
-     *
-     * Delete a model instance by {{id}} from the data source..
-     *
-     */
-    public function testDesignDeleteById()
-    {
-
-    }
-
-    /**
-     * Test case for designExistsGetDesignsidExists
-     *
-     * Check whether a model instance exists in the data source..
-     *
-     */
-    public function testDesignExistsGetDesignsidExists()
-    {
-
-    }
-
-    /**
-     * Test case for designExistsHeadDesignsid
-     *
-     * Check whether a model instance exists in the data source..
-     *
-     */
-    public function testDesignExistsHeadDesignsid()
-    {
-
-    }
-
-    /**
-     * Test case for designFind
-     *
-     * Find all instances of the model matched by filter from the data source..
-     *
-     */
-    public function testDesignFind()
-    {
-
-    }
-
-    /**
-     * Test case for designFindById
-     *
-     * Find a model instance by {{id}} from the data source..
-     *
-     */
-    public function testDesignFindById()
-    {
-
-    }
-
-    /**
-     * Test case for designFindOne
+     * Test case for designsFindOneGet
      *
      * Find first instance of the model matched by filter from the data source..
      *
      */
-    public function testDesignFindOne()
+    public function testDesignsFindOneGet()
     {
 
     }
 
     /**
-     * Test case for designPrototypeCountCategories
+     * Test case for designsGet
      *
-     * Counts categories of Design..
+     * Find all instances of the model matched by filter from the data source..
      *
      */
-    public function testDesignPrototypeCountCategories()
+    public function testDesignsGet()
     {
 
     }
 
     /**
-     * Test case for designPrototypeCountTags
+     * Test case for designsIdAssigneesCountGet
      *
-     * Counts tags of Design..
+     * Counts assignees of Design..
      *
      */
-    public function testDesignPrototypeCountTags()
+    public function testDesignsIdAssigneesCountGet()
     {
 
     }
 
     /**
-     * Test case for designPrototypeCreateCategories
+     * Test case for designsIdAssigneesDelete
      *
-     * Creates a new instance in categories of this model..
+     * Deletes all assignees of this model..
      *
      */
-    public function testDesignPrototypeCreateCategories()
+    public function testDesignsIdAssigneesDelete()
     {
 
     }
 
     /**
-     * Test case for designPrototypeCreateTags
+     * Test case for designsIdAssigneesFkDelete
      *
-     * Creates a new instance in tags of this model..
+     * Delete a related item by id for assignees..
      *
      */
-    public function testDesignPrototypeCreateTags()
+    public function testDesignsIdAssigneesFkDelete()
     {
 
     }
 
     /**
-     * Test case for designPrototypeDeleteCategories
+     * Test case for designsIdAssigneesFkGet
      *
-     * Deletes all categories of this model..
+     * Find a related item by id for assignees..
      *
      */
-    public function testDesignPrototypeDeleteCategories()
+    public function testDesignsIdAssigneesFkGet()
     {
 
     }
 
     /**
-     * Test case for designPrototypeDeleteTags
+     * Test case for designsIdAssigneesFkPut
      *
-     * Deletes all tags of this model..
+     * Update a related item by id for assignees..
      *
      */
-    public function testDesignPrototypeDeleteTags()
+    public function testDesignsIdAssigneesFkPut()
     {
 
     }
 
     /**
-     * Test case for designPrototypeDestroyByIdCategories
+     * Test case for designsIdAssigneesGet
      *
-     * Delete a related item by id for categories..
+     * Queries assignees of Design..
      *
      */
-    public function testDesignPrototypeDestroyByIdCategories()
+    public function testDesignsIdAssigneesGet()
     {
 
     }
 
     /**
-     * Test case for designPrototypeDestroyByIdTags
+     * Test case for designsIdAssigneesPost
      *
-     * Delete a related item by id for tags..
+     * Creates a new instance in assignees of this model..
      *
      */
-    public function testDesignPrototypeDestroyByIdTags()
+    public function testDesignsIdAssigneesPost()
     {
 
     }
 
     /**
-     * Test case for designPrototypeFindByIdCategories
+     * Test case for designsIdAssigneesRelFkDelete
      *
-     * Find a related item by id for categories..
+     * Remove the assignees relation to an item by id..
      *
      */
-    public function testDesignPrototypeFindByIdCategories()
+    public function testDesignsIdAssigneesRelFkDelete()
     {
 
     }
 
     /**
-     * Test case for designPrototypeFindByIdTags
+     * Test case for designsIdAssigneesRelFkHead
      *
-     * Find a related item by id for tags..
+     * Check the existence of assignees relation to an item by id..
      *
      */
-    public function testDesignPrototypeFindByIdTags()
+    public function testDesignsIdAssigneesRelFkHead()
     {
 
     }
 
     /**
-     * Test case for designPrototypeGetCategories
+     * Test case for designsIdAssigneesRelFkPut
      *
-     * Queries categories of Design..
+     * Add a related item by id for assignees..
      *
      */
-    public function testDesignPrototypeGetCategories()
+    public function testDesignsIdAssigneesRelFkPut()
     {
 
     }
 
     /**
-     * Test case for designPrototypeGetCustomer
+     * Test case for designsIdCommentersCountGet
+     *
+     * Counts commenters of Design..
+     *
+     */
+    public function testDesignsIdCommentersCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdCommentersDelete
+     *
+     * Deletes all commenters of this model..
+     *
+     */
+    public function testDesignsIdCommentersDelete()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdCommentersFkDelete
+     *
+     * Delete a related item by id for commenters..
+     *
+     */
+    public function testDesignsIdCommentersFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdCommentersFkGet
+     *
+     * Find a related item by id for commenters..
+     *
+     */
+    public function testDesignsIdCommentersFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdCommentersFkPut
+     *
+     * Update a related item by id for commenters..
+     *
+     */
+    public function testDesignsIdCommentersFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdCommentersGet
+     *
+     * Queries commenters of Design..
+     *
+     */
+    public function testDesignsIdCommentersGet()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdCommentersPost
+     *
+     * Creates a new instance in commenters of this model..
+     *
+     */
+    public function testDesignsIdCommentersPost()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdCommentersRelFkDelete
+     *
+     * Remove the commenters relation to an item by id..
+     *
+     */
+    public function testDesignsIdCommentersRelFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdCommentersRelFkHead
+     *
+     * Check the existence of commenters relation to an item by id..
+     *
+     */
+    public function testDesignsIdCommentersRelFkHead()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdCommentersRelFkPut
+     *
+     * Add a related item by id for commenters..
+     *
+     */
+    public function testDesignsIdCommentersRelFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdCustomerGet
      *
      * Fetches belongsTo relation customer..
      *
      */
-    public function testDesignPrototypeGetCustomer()
+    public function testDesignsIdCustomerGet()
     {
 
     }
 
     /**
-     * Test case for designPrototypeGetTags
+     * Test case for designsIdDelete
      *
-     * Queries tags of Design..
+     * Delete a model instance by {{id}} from the data source..
      *
      */
-    public function testDesignPrototypeGetTags()
+    public function testDesignsIdDelete()
     {
 
     }
 
     /**
-     * Test case for designPrototypeUpdateAttributesPatchDesignsid
+     * Test case for designsIdExistsGet
+     *
+     * Check whether a model instance exists in the data source..
+     *
+     */
+    public function testDesignsIdExistsGet()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdGet
+     *
+     * Find a model instance by {{id}} from the data source..
+     *
+     */
+    public function testDesignsIdGet()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdHead
+     *
+     * Check whether a model instance exists in the data source..
+     *
+     */
+    public function testDesignsIdHead()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdPatch
      *
      * Patch attributes for a model instance and persist it into the data source..
      *
      */
-    public function testDesignPrototypeUpdateAttributesPatchDesignsid()
+    public function testDesignsIdPatch()
     {
 
     }
 
     /**
-     * Test case for designPrototypeUpdateAttributesPutDesignsid
+     * Test case for designsIdPortalGet
      *
-     * Patch attributes for a model instance and persist it into the data source..
+     * Fetches belongsTo relation portal..
      *
      */
-    public function testDesignPrototypeUpdateAttributesPutDesignsid()
+    public function testDesignsIdPortalGet()
     {
 
     }
 
     /**
-     * Test case for designPrototypeUpdateByIdCategories
-     *
-     * Update a related item by id for categories..
-     *
-     */
-    public function testDesignPrototypeUpdateByIdCategories()
-    {
-
-    }
-
-    /**
-     * Test case for designPrototypeUpdateByIdTags
-     *
-     * Update a related item by id for tags..
-     *
-     */
-    public function testDesignPrototypeUpdateByIdTags()
-    {
-
-    }
-
-    /**
-     * Test case for designReplaceById
+     * Test case for designsIdPut
      *
      * Replace attributes for a model instance and persist it into the data source..
      *
      */
-    public function testDesignReplaceById()
+    public function testDesignsIdPut()
     {
 
     }
 
     /**
-     * Test case for designReplaceOrCreate
+     * Test case for designsIdReplacePost
+     *
+     * Replace attributes for a model instance and persist it into the data source..
+     *
+     */
+    public function testDesignsIdReplacePost()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdRequesterGet
+     *
+     * Fetches belongsTo relation requester..
+     *
+     */
+    public function testDesignsIdRequesterGet()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdReviewersCountGet
+     *
+     * Counts reviewers of Design..
+     *
+     */
+    public function testDesignsIdReviewersCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdReviewersDelete
+     *
+     * Deletes all reviewers of this model..
+     *
+     */
+    public function testDesignsIdReviewersDelete()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdReviewersFkDelete
+     *
+     * Delete a related item by id for reviewers..
+     *
+     */
+    public function testDesignsIdReviewersFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdReviewersFkGet
+     *
+     * Find a related item by id for reviewers..
+     *
+     */
+    public function testDesignsIdReviewersFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdReviewersFkPut
+     *
+     * Update a related item by id for reviewers..
+     *
+     */
+    public function testDesignsIdReviewersFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdReviewersGet
+     *
+     * Queries reviewers of Design..
+     *
+     */
+    public function testDesignsIdReviewersGet()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdReviewersPost
+     *
+     * Creates a new instance in reviewers of this model..
+     *
+     */
+    public function testDesignsIdReviewersPost()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdReviewersRelFkDelete
+     *
+     * Remove the reviewers relation to an item by id..
+     *
+     */
+    public function testDesignsIdReviewersRelFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdReviewersRelFkHead
+     *
+     * Check the existence of reviewers relation to an item by id..
+     *
+     */
+    public function testDesignsIdReviewersRelFkHead()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdReviewersRelFkPut
+     *
+     * Add a related item by id for reviewers..
+     *
+     */
+    public function testDesignsIdReviewersRelFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdTagsCountGet
+     *
+     * Counts tags of Design..
+     *
+     */
+    public function testDesignsIdTagsCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdTagsDelete
+     *
+     * Deletes all tags of this model..
+     *
+     */
+    public function testDesignsIdTagsDelete()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdTagsFkDelete
+     *
+     * Delete a related item by id for tags..
+     *
+     */
+    public function testDesignsIdTagsFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdTagsFkGet
+     *
+     * Find a related item by id for tags..
+     *
+     */
+    public function testDesignsIdTagsFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdTagsFkPut
+     *
+     * Update a related item by id for tags..
+     *
+     */
+    public function testDesignsIdTagsFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdTagsGet
+     *
+     * Queries tags of Design..
+     *
+     */
+    public function testDesignsIdTagsGet()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdTagsPost
+     *
+     * Creates a new instance in tags of this model..
+     *
+     */
+    public function testDesignsIdTagsPost()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdTagsRelFkDelete
+     *
+     * Remove the tags relation to an item by id..
+     *
+     */
+    public function testDesignsIdTagsRelFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdTagsRelFkHead
+     *
+     * Check the existence of tags relation to an item by id..
+     *
+     */
+    public function testDesignsIdTagsRelFkHead()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdTagsRelFkPut
+     *
+     * Add a related item by id for tags..
+     *
+     */
+    public function testDesignsIdTagsRelFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdTemplateGet
+     *
+     * Fetches belongsTo relation template..
+     *
+     */
+    public function testDesignsIdTemplateGet()
+    {
+
+    }
+
+    /**
+     * Test case for designsPatch
+     *
+     * Patch an existing model instance or insert a new one into the data source..
+     *
+     */
+    public function testDesignsPatch()
+    {
+
+    }
+
+    /**
+     * Test case for designsPost
+     *
+     * Create a new instance of the model and persist it into the data source..
+     *
+     */
+    public function testDesignsPost()
+    {
+
+    }
+
+    /**
+     * Test case for designsPut
      *
      * Replace an existing model instance or insert a new one into the data source..
      *
      */
-    public function testDesignReplaceOrCreate()
+    public function testDesignsPut()
     {
 
     }
 
     /**
-     * Test case for designUpdateAll
+     * Test case for designsReplaceOrCreatePost
+     *
+     * Replace an existing model instance or insert a new one into the data source..
+     *
+     */
+    public function testDesignsReplaceOrCreatePost()
+    {
+
+    }
+
+    /**
+     * Test case for designsUpdatePost
      *
      * Update instances of the model matched by {{where}} from the data source..
      *
      */
-    public function testDesignUpdateAll()
+    public function testDesignsUpdatePost()
     {
 
     }
 
     /**
-     * Test case for designUpsertPatchDesigns
-     *
-     * Patch an existing model instance or insert a new one into the data source..
-     *
-     */
-    public function testDesignUpsertPatchDesigns()
-    {
-
-    }
-
-    /**
-     * Test case for designUpsertPutDesigns
-     *
-     * Patch an existing model instance or insert a new one into the data source..
-     *
-     */
-    public function testDesignUpsertPutDesigns()
-    {
-
-    }
-
-    /**
-     * Test case for designUpsertWithWhere
+     * Test case for designsUpsertWithWherePost
      *
      * Update an existing model instance or insert a new one into the data source based on the where criteria..
      *
      */
-    public function testDesignUpsertWithWhere()
+    public function testDesignsUpsertWithWherePost()
     {
 
     }

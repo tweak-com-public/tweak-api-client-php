@@ -96,6 +96,14 @@ class CustomerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "profilePicture"
+     */
+    public function testPropertyProfilePicture()
+    {
+
+    }
+
+    /**
      * Test attribute "firstName"
      */
     public function testPropertyFirstName()
@@ -112,49 +120,9 @@ class CustomerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "realm"
+     * Test attribute "initials"
      */
-    public function testPropertyRealm()
-    {
-
-    }
-
-    /**
-     * Test attribute "username"
-     */
-    public function testPropertyUsername()
-    {
-
-    }
-
-    /**
-     * Test attribute "credentials"
-     */
-    public function testPropertyCredentials()
-    {
-
-    }
-
-    /**
-     * Test attribute "challenges"
-     */
-    public function testPropertyChallenges()
-    {
-
-    }
-
-    /**
-     * Test attribute "email"
-     */
-    public function testPropertyEmail()
-    {
-
-    }
-
-    /**
-     * Test attribute "emailVerified"
-     */
-    public function testPropertyEmailVerified()
+    public function testPropertyInitials()
     {
 
     }
@@ -176,9 +144,41 @@ class CustomerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "lastUpdated"
+     * Test attribute "modified"
      */
-    public function testPropertyLastUpdated()
+    public function testPropertyModified()
+    {
+
+    }
+
+    /**
+     * Test attribute "realm"
+     */
+    public function testPropertyRealm()
+    {
+
+    }
+
+    /**
+     * Test attribute "username"
+     */
+    public function testPropertyUsername()
+    {
+
+    }
+
+    /**
+     * Test attribute "email"
+     */
+    public function testPropertyEmail()
+    {
+
+    }
+
+    /**
+     * Test attribute "emailVerified"
+     */
+    public function testPropertyEmailVerified()
     {
 
     }
@@ -195,6 +195,30 @@ class CustomerTest extends \PHPUnit_Framework_TestCase
      * Test attribute "designs"
      */
     public function testPropertyDesigns()
+    {
+
+    }
+
+    /**
+     * Test attribute "teams"
+     */
+    public function testPropertyTeams()
+    {
+
+    }
+
+    /**
+     * Test attribute "invitationTickets"
+     */
+    public function testPropertyInvitationTickets()
+    {
+
+    }
+
+    /**
+     * Test attribute "accessTokens"
+     */
+    public function testPropertyAccessTokens()
     {
 
     }

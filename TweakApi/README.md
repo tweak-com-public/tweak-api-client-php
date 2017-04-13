@@ -62,14 +62,14 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
-$api_instance = new Tweak\Api\Api\CategoryApi();
-$where = "where_example"; // string | Criteria to match model instances
+$api_instance = new Tweak\Api\Api\CustomerApi();
+$oldPassword = "oldPassword_example"; // string | 
+$newPassword = "newPassword_example"; // string | 
 
 try {
-    $result = $api_instance->categoryCount($where);
-    print_r($result);
+    $api_instance->customersChangePasswordPost($oldPassword, $newPassword);
 } catch (Exception $e) {
-    echo 'Exception when calling CategoryApi->categoryCount: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CustomerApi->customersChangePasswordPost: ', $e->getMessage(), PHP_EOL;
 }
 
 ?>
@@ -81,163 +81,707 @@ All URIs are relative to *https://apidevcdn.tweak.com/api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*CategoryApi* | [**categoryCount**](docs/Api/CategoryApi.md#categorycount) | **GET** /Categories/count | Count instances of the model matched by where from the data source.
-*CategoryApi* | [**categoryCreate**](docs/Api/CategoryApi.md#categorycreate) | **POST** /Categories | Create a new instance of the model and persist it into the data source.
-*CategoryApi* | [**categoryCreateChangeStreamGetCategoriesChangeStream**](docs/Api/CategoryApi.md#categorycreatechangestreamgetcategorieschangestream) | **GET** /Categories/change-stream | Create a change stream.
-*CategoryApi* | [**categoryCreateChangeStreamPostCategoriesChangeStream**](docs/Api/CategoryApi.md#categorycreatechangestreampostcategorieschangestream) | **POST** /Categories/change-stream | Create a change stream.
-*CategoryApi* | [**categoryDeleteById**](docs/Api/CategoryApi.md#categorydeletebyid) | **DELETE** /Categories/{id} | Delete a model instance by {{id}} from the data source.
-*CategoryApi* | [**categoryExistsGetCategoriesidExists**](docs/Api/CategoryApi.md#categoryexistsgetcategoriesidexists) | **GET** /Categories/{id}/exists | Check whether a model instance exists in the data source.
-*CategoryApi* | [**categoryExistsHeadCategoriesid**](docs/Api/CategoryApi.md#categoryexistsheadcategoriesid) | **HEAD** /Categories/{id} | Check whether a model instance exists in the data source.
-*CategoryApi* | [**categoryFind**](docs/Api/CategoryApi.md#categoryfind) | **GET** /Categories | Find all instances of the model matched by filter from the data source.
-*CategoryApi* | [**categoryFindById**](docs/Api/CategoryApi.md#categoryfindbyid) | **GET** /Categories/{id} | Find a model instance by {{id}} from the data source.
-*CategoryApi* | [**categoryFindOne**](docs/Api/CategoryApi.md#categoryfindone) | **GET** /Categories/findOne | Find first instance of the model matched by filter from the data source.
-*CategoryApi* | [**categoryPrototypeCountChildren**](docs/Api/CategoryApi.md#categoryprototypecountchildren) | **GET** /Categories/{id}/children/count | Counts children of Category.
-*CategoryApi* | [**categoryPrototypeCreateChildren**](docs/Api/CategoryApi.md#categoryprototypecreatechildren) | **POST** /Categories/{id}/children | Creates a new instance in children of this model.
-*CategoryApi* | [**categoryPrototypeDeleteChildren**](docs/Api/CategoryApi.md#categoryprototypedeletechildren) | **DELETE** /Categories/{id}/children | Deletes all children of this model.
-*CategoryApi* | [**categoryPrototypeDestroyByIdChildren**](docs/Api/CategoryApi.md#categoryprototypedestroybyidchildren) | **DELETE** /Categories/{id}/children/{fk} | Delete a related item by id for children.
-*CategoryApi* | [**categoryPrototypeFindByIdChildren**](docs/Api/CategoryApi.md#categoryprototypefindbyidchildren) | **GET** /Categories/{id}/children/{fk} | Find a related item by id for children.
-*CategoryApi* | [**categoryPrototypeGetChildren**](docs/Api/CategoryApi.md#categoryprototypegetchildren) | **GET** /Categories/{id}/children | Queries children of Category.
-*CategoryApi* | [**categoryPrototypeGetParent**](docs/Api/CategoryApi.md#categoryprototypegetparent) | **GET** /Categories/{id}/parent | Fetches belongsTo relation parent.
-*CategoryApi* | [**categoryPrototypeUpdateAttributesPatchCategoriesid**](docs/Api/CategoryApi.md#categoryprototypeupdateattributespatchcategoriesid) | **PATCH** /Categories/{id} | Patch attributes for a model instance and persist it into the data source.
-*CategoryApi* | [**categoryPrototypeUpdateAttributesPutCategoriesid**](docs/Api/CategoryApi.md#categoryprototypeupdateattributesputcategoriesid) | **PUT** /Categories/{id} | Patch attributes for a model instance and persist it into the data source.
-*CategoryApi* | [**categoryPrototypeUpdateByIdChildren**](docs/Api/CategoryApi.md#categoryprototypeupdatebyidchildren) | **PUT** /Categories/{id}/children/{fk} | Update a related item by id for children.
-*CategoryApi* | [**categoryReplaceById**](docs/Api/CategoryApi.md#categoryreplacebyid) | **POST** /Categories/{id}/replace | Replace attributes for a model instance and persist it into the data source.
-*CategoryApi* | [**categoryReplaceOrCreate**](docs/Api/CategoryApi.md#categoryreplaceorcreate) | **POST** /Categories/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
-*CategoryApi* | [**categoryUpdateAll**](docs/Api/CategoryApi.md#categoryupdateall) | **POST** /Categories/update | Update instances of the model matched by {{where}} from the data source.
-*CategoryApi* | [**categoryUpsertPatchCategories**](docs/Api/CategoryApi.md#categoryupsertpatchcategories) | **PATCH** /Categories | Patch an existing model instance or insert a new one into the data source.
-*CategoryApi* | [**categoryUpsertPutCategories**](docs/Api/CategoryApi.md#categoryupsertputcategories) | **PUT** /Categories | Patch an existing model instance or insert a new one into the data source.
-*CategoryApi* | [**categoryUpsertWithWhere**](docs/Api/CategoryApi.md#categoryupsertwithwhere) | **POST** /Categories/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
-*CustomerApi* | [**customerConfirm**](docs/Api/CustomerApi.md#customerconfirm) | **GET** /Customers/confirm | Confirm a user registration with email verification token.
-*CustomerApi* | [**customerCount**](docs/Api/CustomerApi.md#customercount) | **GET** /Customers/count | Count instances of the model matched by where from the data source.
-*CustomerApi* | [**customerCreate**](docs/Api/CustomerApi.md#customercreate) | **POST** /Customers | Create a new instance of the model and persist it into the data source.
-*CustomerApi* | [**customerCreateChangeStreamGetCustomersChangeStream**](docs/Api/CustomerApi.md#customercreatechangestreamgetcustomerschangestream) | **GET** /Customers/change-stream | Create a change stream.
-*CustomerApi* | [**customerCreateChangeStreamPostCustomersChangeStream**](docs/Api/CustomerApi.md#customercreatechangestreampostcustomerschangestream) | **POST** /Customers/change-stream | Create a change stream.
-*CustomerApi* | [**customerDeleteById**](docs/Api/CustomerApi.md#customerdeletebyid) | **DELETE** /Customers/{id} | Delete a model instance by {{id}} from the data source.
-*CustomerApi* | [**customerExistsGetCustomersidExists**](docs/Api/CustomerApi.md#customerexistsgetcustomersidexists) | **GET** /Customers/{id}/exists | Check whether a model instance exists in the data source.
-*CustomerApi* | [**customerExistsHeadCustomersid**](docs/Api/CustomerApi.md#customerexistsheadcustomersid) | **HEAD** /Customers/{id} | Check whether a model instance exists in the data source.
-*CustomerApi* | [**customerFind**](docs/Api/CustomerApi.md#customerfind) | **GET** /Customers | Find all instances of the model matched by filter from the data source.
-*CustomerApi* | [**customerFindById**](docs/Api/CustomerApi.md#customerfindbyid) | **GET** /Customers/{id} | Find a model instance by {{id}} from the data source.
-*CustomerApi* | [**customerFindOne**](docs/Api/CustomerApi.md#customerfindone) | **GET** /Customers/findOne | Find first instance of the model matched by filter from the data source.
-*CustomerApi* | [**customerLogin**](docs/Api/CustomerApi.md#customerlogin) | **POST** /Customers/login | Login a user with username/email and password.
-*CustomerApi* | [**customerLogout**](docs/Api/CustomerApi.md#customerlogout) | **POST** /Customers/logout | Logout a user with access token.
-*CustomerApi* | [**customerPrototypeCountAccessTokens**](docs/Api/CustomerApi.md#customerprototypecountaccesstokens) | **GET** /Customers/{id}/accessTokens/count | Counts accessTokens of Customer.
-*CustomerApi* | [**customerPrototypeCountDesigns**](docs/Api/CustomerApi.md#customerprototypecountdesigns) | **GET** /Customers/{id}/designs/count | Counts designs of Customer.
-*CustomerApi* | [**customerPrototypeCreateAccessTokens**](docs/Api/CustomerApi.md#customerprototypecreateaccesstokens) | **POST** /Customers/{id}/accessTokens | Creates a new instance in accessTokens of this model.
-*CustomerApi* | [**customerPrototypeCreateDesigns**](docs/Api/CustomerApi.md#customerprototypecreatedesigns) | **POST** /Customers/{id}/designs | Creates a new instance in designs of this model.
-*CustomerApi* | [**customerPrototypeDeleteAccessTokens**](docs/Api/CustomerApi.md#customerprototypedeleteaccesstokens) | **DELETE** /Customers/{id}/accessTokens | Deletes all accessTokens of this model.
-*CustomerApi* | [**customerPrototypeDeleteDesigns**](docs/Api/CustomerApi.md#customerprototypedeletedesigns) | **DELETE** /Customers/{id}/designs | Deletes all designs of this model.
-*CustomerApi* | [**customerPrototypeDestroyByIdAccessTokens**](docs/Api/CustomerApi.md#customerprototypedestroybyidaccesstokens) | **DELETE** /Customers/{id}/accessTokens/{fk} | Delete a related item by id for accessTokens.
-*CustomerApi* | [**customerPrototypeDestroyByIdDesigns**](docs/Api/CustomerApi.md#customerprototypedestroybyiddesigns) | **DELETE** /Customers/{id}/designs/{fk} | Delete a related item by id for designs.
-*CustomerApi* | [**customerPrototypeFindByIdAccessTokens**](docs/Api/CustomerApi.md#customerprototypefindbyidaccesstokens) | **GET** /Customers/{id}/accessTokens/{fk} | Find a related item by id for accessTokens.
-*CustomerApi* | [**customerPrototypeFindByIdDesigns**](docs/Api/CustomerApi.md#customerprototypefindbyiddesigns) | **GET** /Customers/{id}/designs/{fk} | Find a related item by id for designs.
-*CustomerApi* | [**customerPrototypeGetAccessTokens**](docs/Api/CustomerApi.md#customerprototypegetaccesstokens) | **GET** /Customers/{id}/accessTokens | Queries accessTokens of Customer.
-*CustomerApi* | [**customerPrototypeGetDesigns**](docs/Api/CustomerApi.md#customerprototypegetdesigns) | **GET** /Customers/{id}/designs | Queries designs of Customer.
-*CustomerApi* | [**customerPrototypeUpdateAttributesPatchCustomersid**](docs/Api/CustomerApi.md#customerprototypeupdateattributespatchcustomersid) | **PATCH** /Customers/{id} | Patch attributes for a model instance and persist it into the data source.
-*CustomerApi* | [**customerPrototypeUpdateAttributesPutCustomersid**](docs/Api/CustomerApi.md#customerprototypeupdateattributesputcustomersid) | **PUT** /Customers/{id} | Patch attributes for a model instance and persist it into the data source.
-*CustomerApi* | [**customerPrototypeUpdateByIdAccessTokens**](docs/Api/CustomerApi.md#customerprototypeupdatebyidaccesstokens) | **PUT** /Customers/{id}/accessTokens/{fk} | Update a related item by id for accessTokens.
-*CustomerApi* | [**customerPrototypeUpdateByIdDesigns**](docs/Api/CustomerApi.md#customerprototypeupdatebyiddesigns) | **PUT** /Customers/{id}/designs/{fk} | Update a related item by id for designs.
-*CustomerApi* | [**customerReplaceById**](docs/Api/CustomerApi.md#customerreplacebyid) | **POST** /Customers/{id}/replace | Replace attributes for a model instance and persist it into the data source.
-*CustomerApi* | [**customerReplaceOrCreate**](docs/Api/CustomerApi.md#customerreplaceorcreate) | **POST** /Customers/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
-*CustomerApi* | [**customerResetPassword**](docs/Api/CustomerApi.md#customerresetpassword) | **POST** /Customers/reset | Reset password for a user with email.
-*CustomerApi* | [**customerUpdateAll**](docs/Api/CustomerApi.md#customerupdateall) | **POST** /Customers/update | Update instances of the model matched by {{where}} from the data source.
-*CustomerApi* | [**customerUpsertPatchCustomers**](docs/Api/CustomerApi.md#customerupsertpatchcustomers) | **PATCH** /Customers | Patch an existing model instance or insert a new one into the data source.
-*CustomerApi* | [**customerUpsertPutCustomers**](docs/Api/CustomerApi.md#customerupsertputcustomers) | **PUT** /Customers | Patch an existing model instance or insert a new one into the data source.
-*CustomerApi* | [**customerUpsertWithWhere**](docs/Api/CustomerApi.md#customerupsertwithwhere) | **POST** /Customers/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
-*DesignApi* | [**designCount**](docs/Api/DesignApi.md#designcount) | **GET** /Designs/count | Count instances of the model matched by where from the data source.
-*DesignApi* | [**designCreate**](docs/Api/DesignApi.md#designcreate) | **POST** /Designs | Create a new instance of the model and persist it into the data source.
-*DesignApi* | [**designCreateChangeStreamGetDesignsChangeStream**](docs/Api/DesignApi.md#designcreatechangestreamgetdesignschangestream) | **GET** /Designs/change-stream | Create a change stream.
-*DesignApi* | [**designCreateChangeStreamPostDesignsChangeStream**](docs/Api/DesignApi.md#designcreatechangestreampostdesignschangestream) | **POST** /Designs/change-stream | Create a change stream.
-*DesignApi* | [**designDeleteById**](docs/Api/DesignApi.md#designdeletebyid) | **DELETE** /Designs/{id} | Delete a model instance by {{id}} from the data source.
-*DesignApi* | [**designExistsGetDesignsidExists**](docs/Api/DesignApi.md#designexistsgetdesignsidexists) | **GET** /Designs/{id}/exists | Check whether a model instance exists in the data source.
-*DesignApi* | [**designExistsHeadDesignsid**](docs/Api/DesignApi.md#designexistsheaddesignsid) | **HEAD** /Designs/{id} | Check whether a model instance exists in the data source.
-*DesignApi* | [**designFind**](docs/Api/DesignApi.md#designfind) | **GET** /Designs | Find all instances of the model matched by filter from the data source.
-*DesignApi* | [**designFindById**](docs/Api/DesignApi.md#designfindbyid) | **GET** /Designs/{id} | Find a model instance by {{id}} from the data source.
-*DesignApi* | [**designFindOne**](docs/Api/DesignApi.md#designfindone) | **GET** /Designs/findOne | Find first instance of the model matched by filter from the data source.
-*DesignApi* | [**designPrototypeCountCategories**](docs/Api/DesignApi.md#designprototypecountcategories) | **GET** /Designs/{id}/categories/count | Counts categories of Design.
-*DesignApi* | [**designPrototypeCountTags**](docs/Api/DesignApi.md#designprototypecounttags) | **GET** /Designs/{id}/tags/count | Counts tags of Design.
-*DesignApi* | [**designPrototypeCreateCategories**](docs/Api/DesignApi.md#designprototypecreatecategories) | **POST** /Designs/{id}/categories | Creates a new instance in categories of this model.
-*DesignApi* | [**designPrototypeCreateTags**](docs/Api/DesignApi.md#designprototypecreatetags) | **POST** /Designs/{id}/tags | Creates a new instance in tags of this model.
-*DesignApi* | [**designPrototypeDeleteCategories**](docs/Api/DesignApi.md#designprototypedeletecategories) | **DELETE** /Designs/{id}/categories | Deletes all categories of this model.
-*DesignApi* | [**designPrototypeDeleteTags**](docs/Api/DesignApi.md#designprototypedeletetags) | **DELETE** /Designs/{id}/tags | Deletes all tags of this model.
-*DesignApi* | [**designPrototypeDestroyByIdCategories**](docs/Api/DesignApi.md#designprototypedestroybyidcategories) | **DELETE** /Designs/{id}/categories/{fk} | Delete a related item by id for categories.
-*DesignApi* | [**designPrototypeDestroyByIdTags**](docs/Api/DesignApi.md#designprototypedestroybyidtags) | **DELETE** /Designs/{id}/tags/{fk} | Delete a related item by id for tags.
-*DesignApi* | [**designPrototypeFindByIdCategories**](docs/Api/DesignApi.md#designprototypefindbyidcategories) | **GET** /Designs/{id}/categories/{fk} | Find a related item by id for categories.
-*DesignApi* | [**designPrototypeFindByIdTags**](docs/Api/DesignApi.md#designprototypefindbyidtags) | **GET** /Designs/{id}/tags/{fk} | Find a related item by id for tags.
-*DesignApi* | [**designPrototypeGetCategories**](docs/Api/DesignApi.md#designprototypegetcategories) | **GET** /Designs/{id}/categories | Queries categories of Design.
-*DesignApi* | [**designPrototypeGetCustomer**](docs/Api/DesignApi.md#designprototypegetcustomer) | **GET** /Designs/{id}/customer | Fetches belongsTo relation customer.
-*DesignApi* | [**designPrototypeGetTags**](docs/Api/DesignApi.md#designprototypegettags) | **GET** /Designs/{id}/tags | Queries tags of Design.
-*DesignApi* | [**designPrototypeUpdateAttributesPatchDesignsid**](docs/Api/DesignApi.md#designprototypeupdateattributespatchdesignsid) | **PATCH** /Designs/{id} | Patch attributes for a model instance and persist it into the data source.
-*DesignApi* | [**designPrototypeUpdateAttributesPutDesignsid**](docs/Api/DesignApi.md#designprototypeupdateattributesputdesignsid) | **PUT** /Designs/{id} | Patch attributes for a model instance and persist it into the data source.
-*DesignApi* | [**designPrototypeUpdateByIdCategories**](docs/Api/DesignApi.md#designprototypeupdatebyidcategories) | **PUT** /Designs/{id}/categories/{fk} | Update a related item by id for categories.
-*DesignApi* | [**designPrototypeUpdateByIdTags**](docs/Api/DesignApi.md#designprototypeupdatebyidtags) | **PUT** /Designs/{id}/tags/{fk} | Update a related item by id for tags.
-*DesignApi* | [**designReplaceById**](docs/Api/DesignApi.md#designreplacebyid) | **POST** /Designs/{id}/replace | Replace attributes for a model instance and persist it into the data source.
-*DesignApi* | [**designReplaceOrCreate**](docs/Api/DesignApi.md#designreplaceorcreate) | **POST** /Designs/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
-*DesignApi* | [**designUpdateAll**](docs/Api/DesignApi.md#designupdateall) | **POST** /Designs/update | Update instances of the model matched by {{where}} from the data source.
-*DesignApi* | [**designUpsertPatchDesigns**](docs/Api/DesignApi.md#designupsertpatchdesigns) | **PATCH** /Designs | Patch an existing model instance or insert a new one into the data source.
-*DesignApi* | [**designUpsertPutDesigns**](docs/Api/DesignApi.md#designupsertputdesigns) | **PUT** /Designs | Patch an existing model instance or insert a new one into the data source.
-*DesignApi* | [**designUpsertWithWhere**](docs/Api/DesignApi.md#designupsertwithwhere) | **POST** /Designs/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
-*MessageApi* | [**messageGreet**](docs/Api/MessageApi.md#messagegreet) | **GET** /Messages/greet | 
-*TagApi* | [**tagCount**](docs/Api/TagApi.md#tagcount) | **GET** /Tags/count | Count instances of the model matched by where from the data source.
-*TagApi* | [**tagCreate**](docs/Api/TagApi.md#tagcreate) | **POST** /Tags | Create a new instance of the model and persist it into the data source.
-*TagApi* | [**tagCreateChangeStreamGetTagsChangeStream**](docs/Api/TagApi.md#tagcreatechangestreamgettagschangestream) | **GET** /Tags/change-stream | Create a change stream.
-*TagApi* | [**tagCreateChangeStreamPostTagsChangeStream**](docs/Api/TagApi.md#tagcreatechangestreamposttagschangestream) | **POST** /Tags/change-stream | Create a change stream.
-*TagApi* | [**tagDeleteById**](docs/Api/TagApi.md#tagdeletebyid) | **DELETE** /Tags/{id} | Delete a model instance by {{id}} from the data source.
-*TagApi* | [**tagExistsGetTagsidExists**](docs/Api/TagApi.md#tagexistsgettagsidexists) | **GET** /Tags/{id}/exists | Check whether a model instance exists in the data source.
-*TagApi* | [**tagExistsHeadTagsid**](docs/Api/TagApi.md#tagexistsheadtagsid) | **HEAD** /Tags/{id} | Check whether a model instance exists in the data source.
-*TagApi* | [**tagFind**](docs/Api/TagApi.md#tagfind) | **GET** /Tags | Find all instances of the model matched by filter from the data source.
-*TagApi* | [**tagFindById**](docs/Api/TagApi.md#tagfindbyid) | **GET** /Tags/{id} | Find a model instance by {{id}} from the data source.
-*TagApi* | [**tagFindOne**](docs/Api/TagApi.md#tagfindone) | **GET** /Tags/findOne | Find first instance of the model matched by filter from the data source.
-*TagApi* | [**tagPrototypeUpdateAttributesPatchTagsid**](docs/Api/TagApi.md#tagprototypeupdateattributespatchtagsid) | **PATCH** /Tags/{id} | Patch attributes for a model instance and persist it into the data source.
-*TagApi* | [**tagPrototypeUpdateAttributesPutTagsid**](docs/Api/TagApi.md#tagprototypeupdateattributesputtagsid) | **PUT** /Tags/{id} | Patch attributes for a model instance and persist it into the data source.
-*TagApi* | [**tagReplaceById**](docs/Api/TagApi.md#tagreplacebyid) | **POST** /Tags/{id}/replace | Replace attributes for a model instance and persist it into the data source.
-*TagApi* | [**tagReplaceOrCreate**](docs/Api/TagApi.md#tagreplaceorcreate) | **POST** /Tags/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
-*TagApi* | [**tagUpdateAll**](docs/Api/TagApi.md#tagupdateall) | **POST** /Tags/update | Update instances of the model matched by {{where}} from the data source.
-*TagApi* | [**tagUpsertPatchTags**](docs/Api/TagApi.md#tagupsertpatchtags) | **PATCH** /Tags | Patch an existing model instance or insert a new one into the data source.
-*TagApi* | [**tagUpsertPutTags**](docs/Api/TagApi.md#tagupsertputtags) | **PUT** /Tags | Patch an existing model instance or insert a new one into the data source.
-*TagApi* | [**tagUpsertWithWhere**](docs/Api/TagApi.md#tagupsertwithwhere) | **POST** /Tags/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
-*UserApi* | [**userConfirm**](docs/Api/UserApi.md#userconfirm) | **GET** /Users/confirm | Confirm a user registration with email verification token.
-*UserApi* | [**userCount**](docs/Api/UserApi.md#usercount) | **GET** /Users/count | Count instances of the model matched by where from the data source.
-*UserApi* | [**userCreate**](docs/Api/UserApi.md#usercreate) | **POST** /Users | Create a new instance of the model and persist it into the data source.
-*UserApi* | [**userCreateChangeStreamGetUsersChangeStream**](docs/Api/UserApi.md#usercreatechangestreamgetuserschangestream) | **GET** /Users/change-stream | Create a change stream.
-*UserApi* | [**userCreateChangeStreamPostUsersChangeStream**](docs/Api/UserApi.md#usercreatechangestreampostuserschangestream) | **POST** /Users/change-stream | Create a change stream.
-*UserApi* | [**userDeleteById**](docs/Api/UserApi.md#userdeletebyid) | **DELETE** /Users/{id} | Delete a model instance by {{id}} from the data source.
-*UserApi* | [**userExistsGetUsersidExists**](docs/Api/UserApi.md#userexistsgetusersidexists) | **GET** /Users/{id}/exists | Check whether a model instance exists in the data source.
-*UserApi* | [**userExistsHeadUsersid**](docs/Api/UserApi.md#userexistsheadusersid) | **HEAD** /Users/{id} | Check whether a model instance exists in the data source.
-*UserApi* | [**userFind**](docs/Api/UserApi.md#userfind) | **GET** /Users | Find all instances of the model matched by filter from the data source.
-*UserApi* | [**userFindById**](docs/Api/UserApi.md#userfindbyid) | **GET** /Users/{id} | Find a model instance by {{id}} from the data source.
-*UserApi* | [**userFindOne**](docs/Api/UserApi.md#userfindone) | **GET** /Users/findOne | Find first instance of the model matched by filter from the data source.
-*UserApi* | [**userLogin**](docs/Api/UserApi.md#userlogin) | **POST** /Users/login | Login a user with username/email and password.
-*UserApi* | [**userLogout**](docs/Api/UserApi.md#userlogout) | **POST** /Users/logout | Logout a user with access token.
-*UserApi* | [**userPrototypeCountAccessTokens**](docs/Api/UserApi.md#userprototypecountaccesstokens) | **GET** /Users/{id}/accessTokens/count | Counts accessTokens of User.
-*UserApi* | [**userPrototypeCreateAccessTokens**](docs/Api/UserApi.md#userprototypecreateaccesstokens) | **POST** /Users/{id}/accessTokens | Creates a new instance in accessTokens of this model.
-*UserApi* | [**userPrototypeDeleteAccessTokens**](docs/Api/UserApi.md#userprototypedeleteaccesstokens) | **DELETE** /Users/{id}/accessTokens | Deletes all accessTokens of this model.
-*UserApi* | [**userPrototypeDestroyByIdAccessTokens**](docs/Api/UserApi.md#userprototypedestroybyidaccesstokens) | **DELETE** /Users/{id}/accessTokens/{fk} | Delete a related item by id for accessTokens.
-*UserApi* | [**userPrototypeFindByIdAccessTokens**](docs/Api/UserApi.md#userprototypefindbyidaccesstokens) | **GET** /Users/{id}/accessTokens/{fk} | Find a related item by id for accessTokens.
-*UserApi* | [**userPrototypeGetAccessTokens**](docs/Api/UserApi.md#userprototypegetaccesstokens) | **GET** /Users/{id}/accessTokens | Queries accessTokens of User.
-*UserApi* | [**userPrototypeUpdateAttributesPatchUsersid**](docs/Api/UserApi.md#userprototypeupdateattributespatchusersid) | **PATCH** /Users/{id} | Patch attributes for a model instance and persist it into the data source.
-*UserApi* | [**userPrototypeUpdateAttributesPutUsersid**](docs/Api/UserApi.md#userprototypeupdateattributesputusersid) | **PUT** /Users/{id} | Patch attributes for a model instance and persist it into the data source.
-*UserApi* | [**userPrototypeUpdateByIdAccessTokens**](docs/Api/UserApi.md#userprototypeupdatebyidaccesstokens) | **PUT** /Users/{id}/accessTokens/{fk} | Update a related item by id for accessTokens.
-*UserApi* | [**userReplaceById**](docs/Api/UserApi.md#userreplacebyid) | **POST** /Users/{id}/replace | Replace attributes for a model instance and persist it into the data source.
-*UserApi* | [**userReplaceOrCreate**](docs/Api/UserApi.md#userreplaceorcreate) | **POST** /Users/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
-*UserApi* | [**userResetPassword**](docs/Api/UserApi.md#userresetpassword) | **POST** /Users/reset | Reset password for a user with email.
-*UserApi* | [**userUpdateAll**](docs/Api/UserApi.md#userupdateall) | **POST** /Users/update | Update instances of the model matched by {{where}} from the data source.
-*UserApi* | [**userUpsertPatchUsers**](docs/Api/UserApi.md#userupsertpatchusers) | **PATCH** /Users | Patch an existing model instance or insert a new one into the data source.
-*UserApi* | [**userUpsertPutUsers**](docs/Api/UserApi.md#userupsertputusers) | **PUT** /Users | Patch an existing model instance or insert a new one into the data source.
-*UserApi* | [**userUpsertWithWhere**](docs/Api/UserApi.md#userupsertwithwhere) | **POST** /Users/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
+*CustomerApi* | [**customersChangePasswordPost**](docs/Api/CustomerApi.md#customerschangepasswordpost) | **POST** /Customers/change-password | Change a user&#39;s password.
+*CustomerApi* | [**customersChangeStreamGet**](docs/Api/CustomerApi.md#customerschangestreamget) | **GET** /Customers/change-stream | Create a change stream.
+*CustomerApi* | [**customersChangeStreamPost**](docs/Api/CustomerApi.md#customerschangestreampost) | **POST** /Customers/change-stream | Create a change stream.
+*CustomerApi* | [**customersConfirmGet**](docs/Api/CustomerApi.md#customersconfirmget) | **GET** /Customers/confirm | Confirm a user registration with email verification token.
+*CustomerApi* | [**customersCountGet**](docs/Api/CustomerApi.md#customerscountget) | **GET** /Customers/count | Count instances of the model matched by where from the data source.
+*CustomerApi* | [**customersFindOneGet**](docs/Api/CustomerApi.md#customersfindoneget) | **GET** /Customers/findOne | Find first instance of the model matched by filter from the data source.
+*CustomerApi* | [**customersGet**](docs/Api/CustomerApi.md#customersget) | **GET** /Customers | Find all instances of the model matched by filter from the data source.
+*CustomerApi* | [**customersIdAccessTokensCountGet**](docs/Api/CustomerApi.md#customersidaccesstokenscountget) | **GET** /Customers/{id}/accessTokens/count | Counts accessTokens of Customer.
+*CustomerApi* | [**customersIdAccessTokensDelete**](docs/Api/CustomerApi.md#customersidaccesstokensdelete) | **DELETE** /Customers/{id}/accessTokens | Deletes all accessTokens of this model.
+*CustomerApi* | [**customersIdAccessTokensFkDelete**](docs/Api/CustomerApi.md#customersidaccesstokensfkdelete) | **DELETE** /Customers/{id}/accessTokens/{fk} | Delete a related item by id for accessTokens.
+*CustomerApi* | [**customersIdAccessTokensFkGet**](docs/Api/CustomerApi.md#customersidaccesstokensfkget) | **GET** /Customers/{id}/accessTokens/{fk} | Find a related item by id for accessTokens.
+*CustomerApi* | [**customersIdAccessTokensFkPut**](docs/Api/CustomerApi.md#customersidaccesstokensfkput) | **PUT** /Customers/{id}/accessTokens/{fk} | Update a related item by id for accessTokens.
+*CustomerApi* | [**customersIdAccessTokensGet**](docs/Api/CustomerApi.md#customersidaccesstokensget) | **GET** /Customers/{id}/accessTokens | Queries accessTokens of Customer.
+*CustomerApi* | [**customersIdAccessTokensPost**](docs/Api/CustomerApi.md#customersidaccesstokenspost) | **POST** /Customers/{id}/accessTokens | Creates a new instance in accessTokens of this model.
+*CustomerApi* | [**customersIdActiveGet**](docs/Api/CustomerApi.md#customersidactiveget) | **GET** /Customers/{id}/active | Define whether customer is active or not
+*CustomerApi* | [**customersIdDelete**](docs/Api/CustomerApi.md#customersiddelete) | **DELETE** /Customers/{id} | Delete a model instance by {{id}} from the data source.
+*CustomerApi* | [**customersIdDesignsCountGet**](docs/Api/CustomerApi.md#customersiddesignscountget) | **GET** /Customers/{id}/designs/count | Counts designs of Customer.
+*CustomerApi* | [**customersIdDesignsDelete**](docs/Api/CustomerApi.md#customersiddesignsdelete) | **DELETE** /Customers/{id}/designs | Deletes all designs of this model.
+*CustomerApi* | [**customersIdDesignsFkDelete**](docs/Api/CustomerApi.md#customersiddesignsfkdelete) | **DELETE** /Customers/{id}/designs/{fk} | Delete a related item by id for designs.
+*CustomerApi* | [**customersIdDesignsFkGet**](docs/Api/CustomerApi.md#customersiddesignsfkget) | **GET** /Customers/{id}/designs/{fk} | Find a related item by id for designs.
+*CustomerApi* | [**customersIdDesignsFkPut**](docs/Api/CustomerApi.md#customersiddesignsfkput) | **PUT** /Customers/{id}/designs/{fk} | Update a related item by id for designs.
+*CustomerApi* | [**customersIdDesignsGet**](docs/Api/CustomerApi.md#customersiddesignsget) | **GET** /Customers/{id}/designs | Queries designs of Customer.
+*CustomerApi* | [**customersIdDesignsPost**](docs/Api/CustomerApi.md#customersiddesignspost) | **POST** /Customers/{id}/designs | Creates a new instance in designs of this model.
+*CustomerApi* | [**customersIdExistsGet**](docs/Api/CustomerApi.md#customersidexistsget) | **GET** /Customers/{id}/exists | Check whether a model instance exists in the data source.
+*CustomerApi* | [**customersIdGet**](docs/Api/CustomerApi.md#customersidget) | **GET** /Customers/{id} | Find a model instance by {{id}} from the data source.
+*CustomerApi* | [**customersIdHead**](docs/Api/CustomerApi.md#customersidhead) | **HEAD** /Customers/{id} | Check whether a model instance exists in the data source.
+*CustomerApi* | [**customersIdInvitationTicketsCountGet**](docs/Api/CustomerApi.md#customersidinvitationticketscountget) | **GET** /Customers/{id}/invitationTickets/count | Counts invitationTickets of Customer.
+*CustomerApi* | [**customersIdInvitationTicketsDelete**](docs/Api/CustomerApi.md#customersidinvitationticketsdelete) | **DELETE** /Customers/{id}/invitationTickets | Deletes all invitationTickets of this model.
+*CustomerApi* | [**customersIdInvitationTicketsFkDelete**](docs/Api/CustomerApi.md#customersidinvitationticketsfkdelete) | **DELETE** /Customers/{id}/invitationTickets/{fk} | Delete a related item by id for invitationTickets.
+*CustomerApi* | [**customersIdInvitationTicketsFkGet**](docs/Api/CustomerApi.md#customersidinvitationticketsfkget) | **GET** /Customers/{id}/invitationTickets/{fk} | Find a related item by id for invitationTickets.
+*CustomerApi* | [**customersIdInvitationTicketsFkPut**](docs/Api/CustomerApi.md#customersidinvitationticketsfkput) | **PUT** /Customers/{id}/invitationTickets/{fk} | Update a related item by id for invitationTickets.
+*CustomerApi* | [**customersIdInvitationTicketsGet**](docs/Api/CustomerApi.md#customersidinvitationticketsget) | **GET** /Customers/{id}/invitationTickets | Queries invitationTickets of Customer.
+*CustomerApi* | [**customersIdInvitationTicketsPost**](docs/Api/CustomerApi.md#customersidinvitationticketspost) | **POST** /Customers/{id}/invitationTickets | Creates a new instance in invitationTickets of this model.
+*CustomerApi* | [**customersIdPatch**](docs/Api/CustomerApi.md#customersidpatch) | **PATCH** /Customers/{id} | Patch attributes for a model instance and persist it into the data source.
+*CustomerApi* | [**customersIdPut**](docs/Api/CustomerApi.md#customersidput) | **PUT** /Customers/{id} | Replace attributes for a model instance and persist it into the data source.
+*CustomerApi* | [**customersIdReplacePost**](docs/Api/CustomerApi.md#customersidreplacepost) | **POST** /Customers/{id}/replace | Replace attributes for a model instance and persist it into the data source.
+*CustomerApi* | [**customersIdTeamsCountGet**](docs/Api/CustomerApi.md#customersidteamscountget) | **GET** /Customers/{id}/teams/count | Counts teams of Customer.
+*CustomerApi* | [**customersIdTeamsDelete**](docs/Api/CustomerApi.md#customersidteamsdelete) | **DELETE** /Customers/{id}/teams | Deletes all teams of this model.
+*CustomerApi* | [**customersIdTeamsFkChangePost**](docs/Api/CustomerApi.md#customersidteamsfkchangepost) | **POST** /Customers/{id}/teams/{fk}/change | Change from a Team to another
+*CustomerApi* | [**customersIdTeamsFkDelete**](docs/Api/CustomerApi.md#customersidteamsfkdelete) | **DELETE** /Customers/{id}/teams/{fk} | Delete a related item by id for teams.
+*CustomerApi* | [**customersIdTeamsFkGet**](docs/Api/CustomerApi.md#customersidteamsfkget) | **GET** /Customers/{id}/teams/{fk} | Find a related item by id for teams.
+*CustomerApi* | [**customersIdTeamsFkPut**](docs/Api/CustomerApi.md#customersidteamsfkput) | **PUT** /Customers/{id}/teams/{fk} | Update a related item by id for teams.
+*CustomerApi* | [**customersIdTeamsGet**](docs/Api/CustomerApi.md#customersidteamsget) | **GET** /Customers/{id}/teams | Queries teams of Customer.
+*CustomerApi* | [**customersIdTeamsPost**](docs/Api/CustomerApi.md#customersidteamspost) | **POST** /Customers/{id}/teams | Creates a new instance in teams of this model.
+*CustomerApi* | [**customersIdTeamsRelFkDelete**](docs/Api/CustomerApi.md#customersidteamsrelfkdelete) | **DELETE** /Customers/{id}/teams/rel/{fk} | Remove the teams relation to an item by id.
+*CustomerApi* | [**customersIdTeamsRelFkHead**](docs/Api/CustomerApi.md#customersidteamsrelfkhead) | **HEAD** /Customers/{id}/teams/rel/{fk} | Check the existence of teams relation to an item by id.
+*CustomerApi* | [**customersIdTeamsRelFkPut**](docs/Api/CustomerApi.md#customersidteamsrelfkput) | **PUT** /Customers/{id}/teams/rel/{fk} | Add a related item by id for teams.
+*CustomerApi* | [**customersInvitationTicketsAcceptPost**](docs/Api/CustomerApi.md#customersinvitationticketsacceptpost) | **POST** /Customers/invitationTickets/accept | Accept invitation with token
+*CustomerApi* | [**customersLoginPost**](docs/Api/CustomerApi.md#customersloginpost) | **POST** /Customers/login | Login a user with username/email and password.
+*CustomerApi* | [**customersLogoutPost**](docs/Api/CustomerApi.md#customerslogoutpost) | **POST** /Customers/logout | Logout a user with access token.
+*CustomerApi* | [**customersPatch**](docs/Api/CustomerApi.md#customerspatch) | **PATCH** /Customers | Patch an existing model instance or insert a new one into the data source.
+*CustomerApi* | [**customersPost**](docs/Api/CustomerApi.md#customerspost) | **POST** /Customers | Create a new instance of the model and persist it into the data source.
+*CustomerApi* | [**customersPut**](docs/Api/CustomerApi.md#customersput) | **PUT** /Customers | Replace an existing model instance or insert a new one into the data source.
+*CustomerApi* | [**customersRegisterPost**](docs/Api/CustomerApi.md#customersregisterpost) | **POST** /Customers/register | Create customer and assign it to a team
+*CustomerApi* | [**customersReplaceOrCreatePost**](docs/Api/CustomerApi.md#customersreplaceorcreatepost) | **POST** /Customers/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
+*CustomerApi* | [**customersResetPost**](docs/Api/CustomerApi.md#customersresetpost) | **POST** /Customers/reset | Reset password for a user with email.
+*CustomerApi* | [**customersUpdatePost**](docs/Api/CustomerApi.md#customersupdatepost) | **POST** /Customers/update | Update instances of the model matched by {{where}} from the data source.
+*CustomerApi* | [**customersUpsertWithWherePost**](docs/Api/CustomerApi.md#customersupsertwithwherepost) | **POST** /Customers/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
+*DesignApi* | [**designsChangeStreamGet**](docs/Api/DesignApi.md#designschangestreamget) | **GET** /Designs/change-stream | Create a change stream.
+*DesignApi* | [**designsChangeStreamPost**](docs/Api/DesignApi.md#designschangestreampost) | **POST** /Designs/change-stream | Create a change stream.
+*DesignApi* | [**designsCountGet**](docs/Api/DesignApi.md#designscountget) | **GET** /Designs/count | Count instances of the model matched by where from the data source.
+*DesignApi* | [**designsFindOneGet**](docs/Api/DesignApi.md#designsfindoneget) | **GET** /Designs/findOne | Find first instance of the model matched by filter from the data source.
+*DesignApi* | [**designsGet**](docs/Api/DesignApi.md#designsget) | **GET** /Designs | Find all instances of the model matched by filter from the data source.
+*DesignApi* | [**designsIdAssigneesCountGet**](docs/Api/DesignApi.md#designsidassigneescountget) | **GET** /Designs/{id}/assignees/count | Counts assignees of Design.
+*DesignApi* | [**designsIdAssigneesDelete**](docs/Api/DesignApi.md#designsidassigneesdelete) | **DELETE** /Designs/{id}/assignees | Deletes all assignees of this model.
+*DesignApi* | [**designsIdAssigneesFkDelete**](docs/Api/DesignApi.md#designsidassigneesfkdelete) | **DELETE** /Designs/{id}/assignees/{fk} | Delete a related item by id for assignees.
+*DesignApi* | [**designsIdAssigneesFkGet**](docs/Api/DesignApi.md#designsidassigneesfkget) | **GET** /Designs/{id}/assignees/{fk} | Find a related item by id for assignees.
+*DesignApi* | [**designsIdAssigneesFkPut**](docs/Api/DesignApi.md#designsidassigneesfkput) | **PUT** /Designs/{id}/assignees/{fk} | Update a related item by id for assignees.
+*DesignApi* | [**designsIdAssigneesGet**](docs/Api/DesignApi.md#designsidassigneesget) | **GET** /Designs/{id}/assignees | Queries assignees of Design.
+*DesignApi* | [**designsIdAssigneesPost**](docs/Api/DesignApi.md#designsidassigneespost) | **POST** /Designs/{id}/assignees | Creates a new instance in assignees of this model.
+*DesignApi* | [**designsIdAssigneesRelFkDelete**](docs/Api/DesignApi.md#designsidassigneesrelfkdelete) | **DELETE** /Designs/{id}/assignees/rel/{fk} | Remove the assignees relation to an item by id.
+*DesignApi* | [**designsIdAssigneesRelFkHead**](docs/Api/DesignApi.md#designsidassigneesrelfkhead) | **HEAD** /Designs/{id}/assignees/rel/{fk} | Check the existence of assignees relation to an item by id.
+*DesignApi* | [**designsIdAssigneesRelFkPut**](docs/Api/DesignApi.md#designsidassigneesrelfkput) | **PUT** /Designs/{id}/assignees/rel/{fk} | Add a related item by id for assignees.
+*DesignApi* | [**designsIdCommentersCountGet**](docs/Api/DesignApi.md#designsidcommenterscountget) | **GET** /Designs/{id}/commenters/count | Counts commenters of Design.
+*DesignApi* | [**designsIdCommentersDelete**](docs/Api/DesignApi.md#designsidcommentersdelete) | **DELETE** /Designs/{id}/commenters | Deletes all commenters of this model.
+*DesignApi* | [**designsIdCommentersFkDelete**](docs/Api/DesignApi.md#designsidcommentersfkdelete) | **DELETE** /Designs/{id}/commenters/{fk} | Delete a related item by id for commenters.
+*DesignApi* | [**designsIdCommentersFkGet**](docs/Api/DesignApi.md#designsidcommentersfkget) | **GET** /Designs/{id}/commenters/{fk} | Find a related item by id for commenters.
+*DesignApi* | [**designsIdCommentersFkPut**](docs/Api/DesignApi.md#designsidcommentersfkput) | **PUT** /Designs/{id}/commenters/{fk} | Update a related item by id for commenters.
+*DesignApi* | [**designsIdCommentersGet**](docs/Api/DesignApi.md#designsidcommentersget) | **GET** /Designs/{id}/commenters | Queries commenters of Design.
+*DesignApi* | [**designsIdCommentersPost**](docs/Api/DesignApi.md#designsidcommenterspost) | **POST** /Designs/{id}/commenters | Creates a new instance in commenters of this model.
+*DesignApi* | [**designsIdCommentersRelFkDelete**](docs/Api/DesignApi.md#designsidcommentersrelfkdelete) | **DELETE** /Designs/{id}/commenters/rel/{fk} | Remove the commenters relation to an item by id.
+*DesignApi* | [**designsIdCommentersRelFkHead**](docs/Api/DesignApi.md#designsidcommentersrelfkhead) | **HEAD** /Designs/{id}/commenters/rel/{fk} | Check the existence of commenters relation to an item by id.
+*DesignApi* | [**designsIdCommentersRelFkPut**](docs/Api/DesignApi.md#designsidcommentersrelfkput) | **PUT** /Designs/{id}/commenters/rel/{fk} | Add a related item by id for commenters.
+*DesignApi* | [**designsIdCustomerGet**](docs/Api/DesignApi.md#designsidcustomerget) | **GET** /Designs/{id}/customer | Fetches belongsTo relation customer.
+*DesignApi* | [**designsIdDelete**](docs/Api/DesignApi.md#designsiddelete) | **DELETE** /Designs/{id} | Delete a model instance by {{id}} from the data source.
+*DesignApi* | [**designsIdExistsGet**](docs/Api/DesignApi.md#designsidexistsget) | **GET** /Designs/{id}/exists | Check whether a model instance exists in the data source.
+*DesignApi* | [**designsIdGet**](docs/Api/DesignApi.md#designsidget) | **GET** /Designs/{id} | Find a model instance by {{id}} from the data source.
+*DesignApi* | [**designsIdHead**](docs/Api/DesignApi.md#designsidhead) | **HEAD** /Designs/{id} | Check whether a model instance exists in the data source.
+*DesignApi* | [**designsIdPatch**](docs/Api/DesignApi.md#designsidpatch) | **PATCH** /Designs/{id} | Patch attributes for a model instance and persist it into the data source.
+*DesignApi* | [**designsIdPortalGet**](docs/Api/DesignApi.md#designsidportalget) | **GET** /Designs/{id}/portal | Fetches belongsTo relation portal.
+*DesignApi* | [**designsIdPut**](docs/Api/DesignApi.md#designsidput) | **PUT** /Designs/{id} | Replace attributes for a model instance and persist it into the data source.
+*DesignApi* | [**designsIdReplacePost**](docs/Api/DesignApi.md#designsidreplacepost) | **POST** /Designs/{id}/replace | Replace attributes for a model instance and persist it into the data source.
+*DesignApi* | [**designsIdRequesterGet**](docs/Api/DesignApi.md#designsidrequesterget) | **GET** /Designs/{id}/requester | Fetches belongsTo relation requester.
+*DesignApi* | [**designsIdReviewersCountGet**](docs/Api/DesignApi.md#designsidreviewerscountget) | **GET** /Designs/{id}/reviewers/count | Counts reviewers of Design.
+*DesignApi* | [**designsIdReviewersDelete**](docs/Api/DesignApi.md#designsidreviewersdelete) | **DELETE** /Designs/{id}/reviewers | Deletes all reviewers of this model.
+*DesignApi* | [**designsIdReviewersFkDelete**](docs/Api/DesignApi.md#designsidreviewersfkdelete) | **DELETE** /Designs/{id}/reviewers/{fk} | Delete a related item by id for reviewers.
+*DesignApi* | [**designsIdReviewersFkGet**](docs/Api/DesignApi.md#designsidreviewersfkget) | **GET** /Designs/{id}/reviewers/{fk} | Find a related item by id for reviewers.
+*DesignApi* | [**designsIdReviewersFkPut**](docs/Api/DesignApi.md#designsidreviewersfkput) | **PUT** /Designs/{id}/reviewers/{fk} | Update a related item by id for reviewers.
+*DesignApi* | [**designsIdReviewersGet**](docs/Api/DesignApi.md#designsidreviewersget) | **GET** /Designs/{id}/reviewers | Queries reviewers of Design.
+*DesignApi* | [**designsIdReviewersPost**](docs/Api/DesignApi.md#designsidreviewerspost) | **POST** /Designs/{id}/reviewers | Creates a new instance in reviewers of this model.
+*DesignApi* | [**designsIdReviewersRelFkDelete**](docs/Api/DesignApi.md#designsidreviewersrelfkdelete) | **DELETE** /Designs/{id}/reviewers/rel/{fk} | Remove the reviewers relation to an item by id.
+*DesignApi* | [**designsIdReviewersRelFkHead**](docs/Api/DesignApi.md#designsidreviewersrelfkhead) | **HEAD** /Designs/{id}/reviewers/rel/{fk} | Check the existence of reviewers relation to an item by id.
+*DesignApi* | [**designsIdReviewersRelFkPut**](docs/Api/DesignApi.md#designsidreviewersrelfkput) | **PUT** /Designs/{id}/reviewers/rel/{fk} | Add a related item by id for reviewers.
+*DesignApi* | [**designsIdTagsCountGet**](docs/Api/DesignApi.md#designsidtagscountget) | **GET** /Designs/{id}/tags/count | Counts tags of Design.
+*DesignApi* | [**designsIdTagsDelete**](docs/Api/DesignApi.md#designsidtagsdelete) | **DELETE** /Designs/{id}/tags | Deletes all tags of this model.
+*DesignApi* | [**designsIdTagsFkDelete**](docs/Api/DesignApi.md#designsidtagsfkdelete) | **DELETE** /Designs/{id}/tags/{fk} | Delete a related item by id for tags.
+*DesignApi* | [**designsIdTagsFkGet**](docs/Api/DesignApi.md#designsidtagsfkget) | **GET** /Designs/{id}/tags/{fk} | Find a related item by id for tags.
+*DesignApi* | [**designsIdTagsFkPut**](docs/Api/DesignApi.md#designsidtagsfkput) | **PUT** /Designs/{id}/tags/{fk} | Update a related item by id for tags.
+*DesignApi* | [**designsIdTagsGet**](docs/Api/DesignApi.md#designsidtagsget) | **GET** /Designs/{id}/tags | Queries tags of Design.
+*DesignApi* | [**designsIdTagsPost**](docs/Api/DesignApi.md#designsidtagspost) | **POST** /Designs/{id}/tags | Creates a new instance in tags of this model.
+*DesignApi* | [**designsIdTagsRelFkDelete**](docs/Api/DesignApi.md#designsidtagsrelfkdelete) | **DELETE** /Designs/{id}/tags/rel/{fk} | Remove the tags relation to an item by id.
+*DesignApi* | [**designsIdTagsRelFkHead**](docs/Api/DesignApi.md#designsidtagsrelfkhead) | **HEAD** /Designs/{id}/tags/rel/{fk} | Check the existence of tags relation to an item by id.
+*DesignApi* | [**designsIdTagsRelFkPut**](docs/Api/DesignApi.md#designsidtagsrelfkput) | **PUT** /Designs/{id}/tags/rel/{fk} | Add a related item by id for tags.
+*DesignApi* | [**designsIdTemplateGet**](docs/Api/DesignApi.md#designsidtemplateget) | **GET** /Designs/{id}/template | Fetches belongsTo relation template.
+*DesignApi* | [**designsPatch**](docs/Api/DesignApi.md#designspatch) | **PATCH** /Designs | Patch an existing model instance or insert a new one into the data source.
+*DesignApi* | [**designsPost**](docs/Api/DesignApi.md#designspost) | **POST** /Designs | Create a new instance of the model and persist it into the data source.
+*DesignApi* | [**designsPut**](docs/Api/DesignApi.md#designsput) | **PUT** /Designs | Replace an existing model instance or insert a new one into the data source.
+*DesignApi* | [**designsReplaceOrCreatePost**](docs/Api/DesignApi.md#designsreplaceorcreatepost) | **POST** /Designs/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
+*DesignApi* | [**designsUpdatePost**](docs/Api/DesignApi.md#designsupdatepost) | **POST** /Designs/update | Update instances of the model matched by {{where}} from the data source.
+*DesignApi* | [**designsUpsertWithWherePost**](docs/Api/DesignApi.md#designsupsertwithwherepost) | **POST** /Designs/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
+*DesignAssigneeApi* | [**designAssigneesChangeStreamGet**](docs/Api/DesignAssigneeApi.md#designassigneeschangestreamget) | **GET** /DesignAssignees/change-stream | Create a change stream.
+*DesignAssigneeApi* | [**designAssigneesChangeStreamPost**](docs/Api/DesignAssigneeApi.md#designassigneeschangestreampost) | **POST** /DesignAssignees/change-stream | Create a change stream.
+*DesignAssigneeApi* | [**designAssigneesCountGet**](docs/Api/DesignAssigneeApi.md#designassigneescountget) | **GET** /DesignAssignees/count | Count instances of the model matched by where from the data source.
+*DesignAssigneeApi* | [**designAssigneesFindOneGet**](docs/Api/DesignAssigneeApi.md#designassigneesfindoneget) | **GET** /DesignAssignees/findOne | Find first instance of the model matched by filter from the data source.
+*DesignAssigneeApi* | [**designAssigneesGet**](docs/Api/DesignAssigneeApi.md#designassigneesget) | **GET** /DesignAssignees | Find all instances of the model matched by filter from the data source.
+*DesignAssigneeApi* | [**designAssigneesIdAssigneeGet**](docs/Api/DesignAssigneeApi.md#designassigneesidassigneeget) | **GET** /DesignAssignees/{id}/assignee | Fetches belongsTo relation assignee.
+*DesignAssigneeApi* | [**designAssigneesIdDelete**](docs/Api/DesignAssigneeApi.md#designassigneesiddelete) | **DELETE** /DesignAssignees/{id} | Delete a model instance by {{id}} from the data source.
+*DesignAssigneeApi* | [**designAssigneesIdDesignGet**](docs/Api/DesignAssigneeApi.md#designassigneesiddesignget) | **GET** /DesignAssignees/{id}/design | Fetches belongsTo relation design.
+*DesignAssigneeApi* | [**designAssigneesIdExistsGet**](docs/Api/DesignAssigneeApi.md#designassigneesidexistsget) | **GET** /DesignAssignees/{id}/exists | Check whether a model instance exists in the data source.
+*DesignAssigneeApi* | [**designAssigneesIdGet**](docs/Api/DesignAssigneeApi.md#designassigneesidget) | **GET** /DesignAssignees/{id} | Find a model instance by {{id}} from the data source.
+*DesignAssigneeApi* | [**designAssigneesIdHead**](docs/Api/DesignAssigneeApi.md#designassigneesidhead) | **HEAD** /DesignAssignees/{id} | Check whether a model instance exists in the data source.
+*DesignAssigneeApi* | [**designAssigneesIdPatch**](docs/Api/DesignAssigneeApi.md#designassigneesidpatch) | **PATCH** /DesignAssignees/{id} | Patch attributes for a model instance and persist it into the data source.
+*DesignAssigneeApi* | [**designAssigneesIdPut**](docs/Api/DesignAssigneeApi.md#designassigneesidput) | **PUT** /DesignAssignees/{id} | Replace attributes for a model instance and persist it into the data source.
+*DesignAssigneeApi* | [**designAssigneesIdReplacePost**](docs/Api/DesignAssigneeApi.md#designassigneesidreplacepost) | **POST** /DesignAssignees/{id}/replace | Replace attributes for a model instance and persist it into the data source.
+*DesignAssigneeApi* | [**designAssigneesPatch**](docs/Api/DesignAssigneeApi.md#designassigneespatch) | **PATCH** /DesignAssignees | Patch an existing model instance or insert a new one into the data source.
+*DesignAssigneeApi* | [**designAssigneesPost**](docs/Api/DesignAssigneeApi.md#designassigneespost) | **POST** /DesignAssignees | Create a new instance of the model and persist it into the data source.
+*DesignAssigneeApi* | [**designAssigneesPut**](docs/Api/DesignAssigneeApi.md#designassigneesput) | **PUT** /DesignAssignees | Replace an existing model instance or insert a new one into the data source.
+*DesignAssigneeApi* | [**designAssigneesReplaceOrCreatePost**](docs/Api/DesignAssigneeApi.md#designassigneesreplaceorcreatepost) | **POST** /DesignAssignees/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
+*DesignAssigneeApi* | [**designAssigneesUpdatePost**](docs/Api/DesignAssigneeApi.md#designassigneesupdatepost) | **POST** /DesignAssignees/update | Update instances of the model matched by {{where}} from the data source.
+*DesignAssigneeApi* | [**designAssigneesUpsertWithWherePost**](docs/Api/DesignAssigneeApi.md#designassigneesupsertwithwherepost) | **POST** /DesignAssignees/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
+*DesignCommentApi* | [**designCommentsChangeStreamGet**](docs/Api/DesignCommentApi.md#designcommentschangestreamget) | **GET** /DesignComments/change-stream | Create a change stream.
+*DesignCommentApi* | [**designCommentsChangeStreamPost**](docs/Api/DesignCommentApi.md#designcommentschangestreampost) | **POST** /DesignComments/change-stream | Create a change stream.
+*DesignCommentApi* | [**designCommentsCountGet**](docs/Api/DesignCommentApi.md#designcommentscountget) | **GET** /DesignComments/count | Count instances of the model matched by where from the data source.
+*DesignCommentApi* | [**designCommentsFindOneGet**](docs/Api/DesignCommentApi.md#designcommentsfindoneget) | **GET** /DesignComments/findOne | Find first instance of the model matched by filter from the data source.
+*DesignCommentApi* | [**designCommentsGet**](docs/Api/DesignCommentApi.md#designcommentsget) | **GET** /DesignComments | Find all instances of the model matched by filter from the data source.
+*DesignCommentApi* | [**designCommentsIdCommenterGet**](docs/Api/DesignCommentApi.md#designcommentsidcommenterget) | **GET** /DesignComments/{id}/commenter | Fetches belongsTo relation commenter.
+*DesignCommentApi* | [**designCommentsIdDelete**](docs/Api/DesignCommentApi.md#designcommentsiddelete) | **DELETE** /DesignComments/{id} | Delete a model instance by {{id}} from the data source.
+*DesignCommentApi* | [**designCommentsIdDesignGet**](docs/Api/DesignCommentApi.md#designcommentsiddesignget) | **GET** /DesignComments/{id}/design | Fetches belongsTo relation design.
+*DesignCommentApi* | [**designCommentsIdExistsGet**](docs/Api/DesignCommentApi.md#designcommentsidexistsget) | **GET** /DesignComments/{id}/exists | Check whether a model instance exists in the data source.
+*DesignCommentApi* | [**designCommentsIdGet**](docs/Api/DesignCommentApi.md#designcommentsidget) | **GET** /DesignComments/{id} | Find a model instance by {{id}} from the data source.
+*DesignCommentApi* | [**designCommentsIdHead**](docs/Api/DesignCommentApi.md#designcommentsidhead) | **HEAD** /DesignComments/{id} | Check whether a model instance exists in the data source.
+*DesignCommentApi* | [**designCommentsIdPatch**](docs/Api/DesignCommentApi.md#designcommentsidpatch) | **PATCH** /DesignComments/{id} | Patch attributes for a model instance and persist it into the data source.
+*DesignCommentApi* | [**designCommentsIdPut**](docs/Api/DesignCommentApi.md#designcommentsidput) | **PUT** /DesignComments/{id} | Replace attributes for a model instance and persist it into the data source.
+*DesignCommentApi* | [**designCommentsIdReplacePost**](docs/Api/DesignCommentApi.md#designcommentsidreplacepost) | **POST** /DesignComments/{id}/replace | Replace attributes for a model instance and persist it into the data source.
+*DesignCommentApi* | [**designCommentsIdRepliesCountGet**](docs/Api/DesignCommentApi.md#designcommentsidrepliescountget) | **GET** /DesignComments/{id}/replies/count | Counts replies of DesignComment.
+*DesignCommentApi* | [**designCommentsIdRepliesDelete**](docs/Api/DesignCommentApi.md#designcommentsidrepliesdelete) | **DELETE** /DesignComments/{id}/replies | Deletes all replies of this model.
+*DesignCommentApi* | [**designCommentsIdRepliesFkDelete**](docs/Api/DesignCommentApi.md#designcommentsidrepliesfkdelete) | **DELETE** /DesignComments/{id}/replies/{fk} | Delete a related item by id for replies.
+*DesignCommentApi* | [**designCommentsIdRepliesFkGet**](docs/Api/DesignCommentApi.md#designcommentsidrepliesfkget) | **GET** /DesignComments/{id}/replies/{fk} | Find a related item by id for replies.
+*DesignCommentApi* | [**designCommentsIdRepliesFkPut**](docs/Api/DesignCommentApi.md#designcommentsidrepliesfkput) | **PUT** /DesignComments/{id}/replies/{fk} | Update a related item by id for replies.
+*DesignCommentApi* | [**designCommentsIdRepliesGet**](docs/Api/DesignCommentApi.md#designcommentsidrepliesget) | **GET** /DesignComments/{id}/replies | Queries replies of DesignComment.
+*DesignCommentApi* | [**designCommentsIdRepliesPost**](docs/Api/DesignCommentApi.md#designcommentsidrepliespost) | **POST** /DesignComments/{id}/replies | Creates a new instance in replies of this model.
+*DesignCommentApi* | [**designCommentsIdReplyOfGet**](docs/Api/DesignCommentApi.md#designcommentsidreplyofget) | **GET** /DesignComments/{id}/replyOf | Fetches belongsTo relation replyOf.
+*DesignCommentApi* | [**designCommentsPatch**](docs/Api/DesignCommentApi.md#designcommentspatch) | **PATCH** /DesignComments | Patch an existing model instance or insert a new one into the data source.
+*DesignCommentApi* | [**designCommentsPost**](docs/Api/DesignCommentApi.md#designcommentspost) | **POST** /DesignComments | Create a new instance of the model and persist it into the data source.
+*DesignCommentApi* | [**designCommentsPut**](docs/Api/DesignCommentApi.md#designcommentsput) | **PUT** /DesignComments | Replace an existing model instance or insert a new one into the data source.
+*DesignCommentApi* | [**designCommentsReplaceOrCreatePost**](docs/Api/DesignCommentApi.md#designcommentsreplaceorcreatepost) | **POST** /DesignComments/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
+*DesignCommentApi* | [**designCommentsUpdatePost**](docs/Api/DesignCommentApi.md#designcommentsupdatepost) | **POST** /DesignComments/update | Update instances of the model matched by {{where}} from the data source.
+*DesignCommentApi* | [**designCommentsUpsertWithWherePost**](docs/Api/DesignCommentApi.md#designcommentsupsertwithwherepost) | **POST** /DesignComments/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
+*DesignReviewApi* | [**designReviewsChangeStreamGet**](docs/Api/DesignReviewApi.md#designreviewschangestreamget) | **GET** /DesignReviews/change-stream | Create a change stream.
+*DesignReviewApi* | [**designReviewsChangeStreamPost**](docs/Api/DesignReviewApi.md#designreviewschangestreampost) | **POST** /DesignReviews/change-stream | Create a change stream.
+*DesignReviewApi* | [**designReviewsCountGet**](docs/Api/DesignReviewApi.md#designreviewscountget) | **GET** /DesignReviews/count | Count instances of the model matched by where from the data source.
+*DesignReviewApi* | [**designReviewsFindOneGet**](docs/Api/DesignReviewApi.md#designreviewsfindoneget) | **GET** /DesignReviews/findOne | Find first instance of the model matched by filter from the data source.
+*DesignReviewApi* | [**designReviewsGet**](docs/Api/DesignReviewApi.md#designreviewsget) | **GET** /DesignReviews | Find all instances of the model matched by filter from the data source.
+*DesignReviewApi* | [**designReviewsIdDelete**](docs/Api/DesignReviewApi.md#designreviewsiddelete) | **DELETE** /DesignReviews/{id} | Delete a model instance by {{id}} from the data source.
+*DesignReviewApi* | [**designReviewsIdDesignGet**](docs/Api/DesignReviewApi.md#designreviewsiddesignget) | **GET** /DesignReviews/{id}/design | Fetches belongsTo relation design.
+*DesignReviewApi* | [**designReviewsIdExistsGet**](docs/Api/DesignReviewApi.md#designreviewsidexistsget) | **GET** /DesignReviews/{id}/exists | Check whether a model instance exists in the data source.
+*DesignReviewApi* | [**designReviewsIdGet**](docs/Api/DesignReviewApi.md#designreviewsidget) | **GET** /DesignReviews/{id} | Find a model instance by {{id}} from the data source.
+*DesignReviewApi* | [**designReviewsIdHead**](docs/Api/DesignReviewApi.md#designreviewsidhead) | **HEAD** /DesignReviews/{id} | Check whether a model instance exists in the data source.
+*DesignReviewApi* | [**designReviewsIdPatch**](docs/Api/DesignReviewApi.md#designreviewsidpatch) | **PATCH** /DesignReviews/{id} | Patch attributes for a model instance and persist it into the data source.
+*DesignReviewApi* | [**designReviewsIdPut**](docs/Api/DesignReviewApi.md#designreviewsidput) | **PUT** /DesignReviews/{id} | Replace attributes for a model instance and persist it into the data source.
+*DesignReviewApi* | [**designReviewsIdReplacePost**](docs/Api/DesignReviewApi.md#designreviewsidreplacepost) | **POST** /DesignReviews/{id}/replace | Replace attributes for a model instance and persist it into the data source.
+*DesignReviewApi* | [**designReviewsIdReviewerGet**](docs/Api/DesignReviewApi.md#designreviewsidreviewerget) | **GET** /DesignReviews/{id}/reviewer | Fetches belongsTo relation reviewer.
+*DesignReviewApi* | [**designReviewsPatch**](docs/Api/DesignReviewApi.md#designreviewspatch) | **PATCH** /DesignReviews | Patch an existing model instance or insert a new one into the data source.
+*DesignReviewApi* | [**designReviewsPost**](docs/Api/DesignReviewApi.md#designreviewspost) | **POST** /DesignReviews | Create a new instance of the model and persist it into the data source.
+*DesignReviewApi* | [**designReviewsPut**](docs/Api/DesignReviewApi.md#designreviewsput) | **PUT** /DesignReviews | Replace an existing model instance or insert a new one into the data source.
+*DesignReviewApi* | [**designReviewsReplaceOrCreatePost**](docs/Api/DesignReviewApi.md#designreviewsreplaceorcreatepost) | **POST** /DesignReviews/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
+*DesignReviewApi* | [**designReviewsUpdatePost**](docs/Api/DesignReviewApi.md#designreviewsupdatepost) | **POST** /DesignReviews/update | Update instances of the model matched by {{where}} from the data source.
+*DesignReviewApi* | [**designReviewsUpsertWithWherePost**](docs/Api/DesignReviewApi.md#designreviewsupsertwithwherepost) | **POST** /DesignReviews/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
+*DesignTagApi* | [**designTagsChangeStreamGet**](docs/Api/DesignTagApi.md#designtagschangestreamget) | **GET** /DesignTags/change-stream | Create a change stream.
+*DesignTagApi* | [**designTagsChangeStreamPost**](docs/Api/DesignTagApi.md#designtagschangestreampost) | **POST** /DesignTags/change-stream | Create a change stream.
+*DesignTagApi* | [**designTagsCountGet**](docs/Api/DesignTagApi.md#designtagscountget) | **GET** /DesignTags/count | Count instances of the model matched by where from the data source.
+*DesignTagApi* | [**designTagsFindOneGet**](docs/Api/DesignTagApi.md#designtagsfindoneget) | **GET** /DesignTags/findOne | Find first instance of the model matched by filter from the data source.
+*DesignTagApi* | [**designTagsGet**](docs/Api/DesignTagApi.md#designtagsget) | **GET** /DesignTags | Find all instances of the model matched by filter from the data source.
+*DesignTagApi* | [**designTagsIdDelete**](docs/Api/DesignTagApi.md#designtagsiddelete) | **DELETE** /DesignTags/{id} | Delete a model instance by {{id}} from the data source.
+*DesignTagApi* | [**designTagsIdDesignGet**](docs/Api/DesignTagApi.md#designtagsiddesignget) | **GET** /DesignTags/{id}/design | Fetches belongsTo relation design.
+*DesignTagApi* | [**designTagsIdExistsGet**](docs/Api/DesignTagApi.md#designtagsidexistsget) | **GET** /DesignTags/{id}/exists | Check whether a model instance exists in the data source.
+*DesignTagApi* | [**designTagsIdGet**](docs/Api/DesignTagApi.md#designtagsidget) | **GET** /DesignTags/{id} | Find a model instance by {{id}} from the data source.
+*DesignTagApi* | [**designTagsIdHead**](docs/Api/DesignTagApi.md#designtagsidhead) | **HEAD** /DesignTags/{id} | Check whether a model instance exists in the data source.
+*DesignTagApi* | [**designTagsIdPatch**](docs/Api/DesignTagApi.md#designtagsidpatch) | **PATCH** /DesignTags/{id} | Patch attributes for a model instance and persist it into the data source.
+*DesignTagApi* | [**designTagsIdPut**](docs/Api/DesignTagApi.md#designtagsidput) | **PUT** /DesignTags/{id} | Replace attributes for a model instance and persist it into the data source.
+*DesignTagApi* | [**designTagsIdReplacePost**](docs/Api/DesignTagApi.md#designtagsidreplacepost) | **POST** /DesignTags/{id}/replace | Replace attributes for a model instance and persist it into the data source.
+*DesignTagApi* | [**designTagsIdTagGet**](docs/Api/DesignTagApi.md#designtagsidtagget) | **GET** /DesignTags/{id}/tag | Fetches belongsTo relation tag.
+*DesignTagApi* | [**designTagsPatch**](docs/Api/DesignTagApi.md#designtagspatch) | **PATCH** /DesignTags | Patch an existing model instance or insert a new one into the data source.
+*DesignTagApi* | [**designTagsPost**](docs/Api/DesignTagApi.md#designtagspost) | **POST** /DesignTags | Create a new instance of the model and persist it into the data source.
+*DesignTagApi* | [**designTagsPut**](docs/Api/DesignTagApi.md#designtagsput) | **PUT** /DesignTags | Replace an existing model instance or insert a new one into the data source.
+*DesignTagApi* | [**designTagsReplaceOrCreatePost**](docs/Api/DesignTagApi.md#designtagsreplaceorcreatepost) | **POST** /DesignTags/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
+*DesignTagApi* | [**designTagsUpdatePost**](docs/Api/DesignTagApi.md#designtagsupdatepost) | **POST** /DesignTags/update | Update instances of the model matched by {{where}} from the data source.
+*DesignTagApi* | [**designTagsUpsertWithWherePost**](docs/Api/DesignTagApi.md#designtagsupsertwithwherepost) | **POST** /DesignTags/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
+*ImageApi* | [**imagesChangeStreamGet**](docs/Api/ImageApi.md#imageschangestreamget) | **GET** /Images/change-stream | Create a change stream.
+*ImageApi* | [**imagesChangeStreamPost**](docs/Api/ImageApi.md#imageschangestreampost) | **POST** /Images/change-stream | Create a change stream.
+*ImageApi* | [**imagesCountGet**](docs/Api/ImageApi.md#imagescountget) | **GET** /Images/count | Count instances of the model matched by where from the data source.
+*ImageApi* | [**imagesFindOneGet**](docs/Api/ImageApi.md#imagesfindoneget) | **GET** /Images/findOne | Find first instance of the model matched by filter from the data source.
+*ImageApi* | [**imagesGet**](docs/Api/ImageApi.md#imagesget) | **GET** /Images | Find all instances of the model matched by filter from the data source.
+*ImageApi* | [**imagesIdDelete**](docs/Api/ImageApi.md#imagesiddelete) | **DELETE** /Images/{id} | Delete a model instance by {{id}} from the data source.
+*ImageApi* | [**imagesIdExistsGet**](docs/Api/ImageApi.md#imagesidexistsget) | **GET** /Images/{id}/exists | Check whether a model instance exists in the data source.
+*ImageApi* | [**imagesIdGet**](docs/Api/ImageApi.md#imagesidget) | **GET** /Images/{id} | Find a model instance by {{id}} from the data source.
+*ImageApi* | [**imagesIdHead**](docs/Api/ImageApi.md#imagesidhead) | **HEAD** /Images/{id} | Check whether a model instance exists in the data source.
+*ImageApi* | [**imagesIdPatch**](docs/Api/ImageApi.md#imagesidpatch) | **PATCH** /Images/{id} | Patch attributes for a model instance and persist it into the data source.
+*ImageApi* | [**imagesIdPut**](docs/Api/ImageApi.md#imagesidput) | **PUT** /Images/{id} | Replace attributes for a model instance and persist it into the data source.
+*ImageApi* | [**imagesIdReplacePost**](docs/Api/ImageApi.md#imagesidreplacepost) | **POST** /Images/{id}/replace | Replace attributes for a model instance and persist it into the data source.
+*ImageApi* | [**imagesPatch**](docs/Api/ImageApi.md#imagespatch) | **PATCH** /Images | Patch an existing model instance or insert a new one into the data source.
+*ImageApi* | [**imagesPost**](docs/Api/ImageApi.md#imagespost) | **POST** /Images | Create a new instance of the model and persist it into the data source.
+*ImageApi* | [**imagesPut**](docs/Api/ImageApi.md#imagesput) | **PUT** /Images | Replace an existing model instance or insert a new one into the data source.
+*ImageApi* | [**imagesReplaceOrCreatePost**](docs/Api/ImageApi.md#imagesreplaceorcreatepost) | **POST** /Images/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
+*ImageApi* | [**imagesUpdatePost**](docs/Api/ImageApi.md#imagesupdatepost) | **POST** /Images/update | Update instances of the model matched by {{where}} from the data source.
+*ImageApi* | [**imagesUpsertWithWherePost**](docs/Api/ImageApi.md#imagesupsertwithwherepost) | **POST** /Images/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
+*InvitationTicketApi* | [**invitationTicketsChangeStreamGet**](docs/Api/InvitationTicketApi.md#invitationticketschangestreamget) | **GET** /InvitationTickets/change-stream | Create a change stream.
+*InvitationTicketApi* | [**invitationTicketsChangeStreamPost**](docs/Api/InvitationTicketApi.md#invitationticketschangestreampost) | **POST** /InvitationTickets/change-stream | Create a change stream.
+*InvitationTicketApi* | [**invitationTicketsCountGet**](docs/Api/InvitationTicketApi.md#invitationticketscountget) | **GET** /InvitationTickets/count | Count instances of the model matched by where from the data source.
+*InvitationTicketApi* | [**invitationTicketsFindOneGet**](docs/Api/InvitationTicketApi.md#invitationticketsfindoneget) | **GET** /InvitationTickets/findOne | Find first instance of the model matched by filter from the data source.
+*InvitationTicketApi* | [**invitationTicketsGet**](docs/Api/InvitationTicketApi.md#invitationticketsget) | **GET** /InvitationTickets | Find all instances of the model matched by filter from the data source.
+*InvitationTicketApi* | [**invitationTicketsIdDelete**](docs/Api/InvitationTicketApi.md#invitationticketsiddelete) | **DELETE** /InvitationTickets/{id} | Delete a model instance by {{id}} from the data source.
+*InvitationTicketApi* | [**invitationTicketsIdExistsGet**](docs/Api/InvitationTicketApi.md#invitationticketsidexistsget) | **GET** /InvitationTickets/{id}/exists | Check whether a model instance exists in the data source.
+*InvitationTicketApi* | [**invitationTicketsIdGet**](docs/Api/InvitationTicketApi.md#invitationticketsidget) | **GET** /InvitationTickets/{id} | Find a model instance by {{id}} from the data source.
+*InvitationTicketApi* | [**invitationTicketsIdHead**](docs/Api/InvitationTicketApi.md#invitationticketsidhead) | **HEAD** /InvitationTickets/{id} | Check whether a model instance exists in the data source.
+*InvitationTicketApi* | [**invitationTicketsIdInviteeGet**](docs/Api/InvitationTicketApi.md#invitationticketsidinviteeget) | **GET** /InvitationTickets/{id}/invitee | Fetches belongsTo relation invitee.
+*InvitationTicketApi* | [**invitationTicketsIdInviterGet**](docs/Api/InvitationTicketApi.md#invitationticketsidinviterget) | **GET** /InvitationTickets/{id}/inviter | Fetches belongsTo relation inviter.
+*InvitationTicketApi* | [**invitationTicketsIdPatch**](docs/Api/InvitationTicketApi.md#invitationticketsidpatch) | **PATCH** /InvitationTickets/{id} | Patch attributes for a model instance and persist it into the data source.
+*InvitationTicketApi* | [**invitationTicketsIdPut**](docs/Api/InvitationTicketApi.md#invitationticketsidput) | **PUT** /InvitationTickets/{id} | Replace attributes for a model instance and persist it into the data source.
+*InvitationTicketApi* | [**invitationTicketsIdReplacePost**](docs/Api/InvitationTicketApi.md#invitationticketsidreplacepost) | **POST** /InvitationTickets/{id}/replace | Replace attributes for a model instance and persist it into the data source.
+*InvitationTicketApi* | [**invitationTicketsPatch**](docs/Api/InvitationTicketApi.md#invitationticketspatch) | **PATCH** /InvitationTickets | Patch an existing model instance or insert a new one into the data source.
+*InvitationTicketApi* | [**invitationTicketsPost**](docs/Api/InvitationTicketApi.md#invitationticketspost) | **POST** /InvitationTickets | Create a new instance of the model and persist it into the data source.
+*InvitationTicketApi* | [**invitationTicketsPut**](docs/Api/InvitationTicketApi.md#invitationticketsput) | **PUT** /InvitationTickets | Replace an existing model instance or insert a new one into the data source.
+*InvitationTicketApi* | [**invitationTicketsReplaceOrCreatePost**](docs/Api/InvitationTicketApi.md#invitationticketsreplaceorcreatepost) | **POST** /InvitationTickets/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
+*InvitationTicketApi* | [**invitationTicketsUpdatePost**](docs/Api/InvitationTicketApi.md#invitationticketsupdatepost) | **POST** /InvitationTickets/update | Update instances of the model matched by {{where}} from the data source.
+*InvitationTicketApi* | [**invitationTicketsUpsertWithWherePost**](docs/Api/InvitationTicketApi.md#invitationticketsupsertwithwherepost) | **POST** /InvitationTickets/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
+*PortalApi* | [**portalsChangeStreamGet**](docs/Api/PortalApi.md#portalschangestreamget) | **GET** /Portals/change-stream | Create a change stream.
+*PortalApi* | [**portalsChangeStreamPost**](docs/Api/PortalApi.md#portalschangestreampost) | **POST** /Portals/change-stream | Create a change stream.
+*PortalApi* | [**portalsCountGet**](docs/Api/PortalApi.md#portalscountget) | **GET** /Portals/count | Count instances of the model matched by where from the data source.
+*PortalApi* | [**portalsFindOneGet**](docs/Api/PortalApi.md#portalsfindoneget) | **GET** /Portals/findOne | Find first instance of the model matched by filter from the data source.
+*PortalApi* | [**portalsGet**](docs/Api/PortalApi.md#portalsget) | **GET** /Portals | Find all instances of the model matched by filter from the data source.
+*PortalApi* | [**portalsIdDelete**](docs/Api/PortalApi.md#portalsiddelete) | **DELETE** /Portals/{id} | Delete a model instance by {{id}} from the data source.
+*PortalApi* | [**portalsIdDesignsCountGet**](docs/Api/PortalApi.md#portalsiddesignscountget) | **GET** /Portals/{id}/designs/count | Counts designs of Portal.
+*PortalApi* | [**portalsIdDesignsDelete**](docs/Api/PortalApi.md#portalsiddesignsdelete) | **DELETE** /Portals/{id}/designs | Deletes all designs of this model.
+*PortalApi* | [**portalsIdDesignsFkDelete**](docs/Api/PortalApi.md#portalsiddesignsfkdelete) | **DELETE** /Portals/{id}/designs/{fk} | Delete a related item by id for designs.
+*PortalApi* | [**portalsIdDesignsFkGet**](docs/Api/PortalApi.md#portalsiddesignsfkget) | **GET** /Portals/{id}/designs/{fk} | Find a related item by id for designs.
+*PortalApi* | [**portalsIdDesignsFkPut**](docs/Api/PortalApi.md#portalsiddesignsfkput) | **PUT** /Portals/{id}/designs/{fk} | Update a related item by id for designs.
+*PortalApi* | [**portalsIdDesignsGet**](docs/Api/PortalApi.md#portalsiddesignsget) | **GET** /Portals/{id}/designs | Queries designs of Portal.
+*PortalApi* | [**portalsIdDesignsPost**](docs/Api/PortalApi.md#portalsiddesignspost) | **POST** /Portals/{id}/designs | Creates a new instance in designs of this model.
+*PortalApi* | [**portalsIdExistsGet**](docs/Api/PortalApi.md#portalsidexistsget) | **GET** /Portals/{id}/exists | Check whether a model instance exists in the data source.
+*PortalApi* | [**portalsIdGet**](docs/Api/PortalApi.md#portalsidget) | **GET** /Portals/{id} | Find a model instance by {{id}} from the data source.
+*PortalApi* | [**portalsIdHead**](docs/Api/PortalApi.md#portalsidhead) | **HEAD** /Portals/{id} | Check whether a model instance exists in the data source.
+*PortalApi* | [**portalsIdMembersCountGet**](docs/Api/PortalApi.md#portalsidmemberscountget) | **GET** /Portals/{id}/members/count | Counts members of Portal.
+*PortalApi* | [**portalsIdMembersDelete**](docs/Api/PortalApi.md#portalsidmembersdelete) | **DELETE** /Portals/{id}/members | Deletes all members of this model.
+*PortalApi* | [**portalsIdMembersFkDelete**](docs/Api/PortalApi.md#portalsidmembersfkdelete) | **DELETE** /Portals/{id}/members/{fk} | Delete a related item by id for members.
+*PortalApi* | [**portalsIdMembersFkGet**](docs/Api/PortalApi.md#portalsidmembersfkget) | **GET** /Portals/{id}/members/{fk} | Find a related item by id for members.
+*PortalApi* | [**portalsIdMembersFkPut**](docs/Api/PortalApi.md#portalsidmembersfkput) | **PUT** /Portals/{id}/members/{fk} | Update a related item by id for members.
+*PortalApi* | [**portalsIdMembersGet**](docs/Api/PortalApi.md#portalsidmembersget) | **GET** /Portals/{id}/members | Queries members of Portal.
+*PortalApi* | [**portalsIdMembersPost**](docs/Api/PortalApi.md#portalsidmemberspost) | **POST** /Portals/{id}/members | Creates a new instance in members of this model.
+*PortalApi* | [**portalsIdMembersRelFkDelete**](docs/Api/PortalApi.md#portalsidmembersrelfkdelete) | **DELETE** /Portals/{id}/members/rel/{fk} | Remove the members relation to an item by id.
+*PortalApi* | [**portalsIdMembersRelFkHead**](docs/Api/PortalApi.md#portalsidmembersrelfkhead) | **HEAD** /Portals/{id}/members/rel/{fk} | Check the existence of members relation to an item by id.
+*PortalApi* | [**portalsIdMembersRelFkPut**](docs/Api/PortalApi.md#portalsidmembersrelfkput) | **PUT** /Portals/{id}/members/rel/{fk} | Add a related item by id for members.
+*PortalApi* | [**portalsIdPatch**](docs/Api/PortalApi.md#portalsidpatch) | **PATCH** /Portals/{id} | Patch attributes for a model instance and persist it into the data source.
+*PortalApi* | [**portalsIdPermissionDelete**](docs/Api/PortalApi.md#portalsidpermissiondelete) | **DELETE** /Portals/{id}/permission | Deletes permission of this model.
+*PortalApi* | [**portalsIdPermissionGet**](docs/Api/PortalApi.md#portalsidpermissionget) | **GET** /Portals/{id}/permission | Fetches hasOne relation permission.
+*PortalApi* | [**portalsIdPermissionPost**](docs/Api/PortalApi.md#portalsidpermissionpost) | **POST** /Portals/{id}/permission | Creates a new instance in permission of this model.
+*PortalApi* | [**portalsIdPermissionPut**](docs/Api/PortalApi.md#portalsidpermissionput) | **PUT** /Portals/{id}/permission | Update permission of this model.
+*PortalApi* | [**portalsIdPut**](docs/Api/PortalApi.md#portalsidput) | **PUT** /Portals/{id} | Replace attributes for a model instance and persist it into the data source.
+*PortalApi* | [**portalsIdReplacePost**](docs/Api/PortalApi.md#portalsidreplacepost) | **POST** /Portals/{id}/replace | Replace attributes for a model instance and persist it into the data source.
+*PortalApi* | [**portalsIdTeamGet**](docs/Api/PortalApi.md#portalsidteamget) | **GET** /Portals/{id}/team | Fetches belongsTo relation team.
+*PortalApi* | [**portalsIdTemplatesCountGet**](docs/Api/PortalApi.md#portalsidtemplatescountget) | **GET** /Portals/{id}/templates/count | Counts templates of Portal.
+*PortalApi* | [**portalsIdTemplatesDelete**](docs/Api/PortalApi.md#portalsidtemplatesdelete) | **DELETE** /Portals/{id}/templates | Deletes all templates of this model.
+*PortalApi* | [**portalsIdTemplatesFkDelete**](docs/Api/PortalApi.md#portalsidtemplatesfkdelete) | **DELETE** /Portals/{id}/templates/{fk} | Delete a related item by id for templates.
+*PortalApi* | [**portalsIdTemplatesFkGet**](docs/Api/PortalApi.md#portalsidtemplatesfkget) | **GET** /Portals/{id}/templates/{fk} | Find a related item by id for templates.
+*PortalApi* | [**portalsIdTemplatesFkPut**](docs/Api/PortalApi.md#portalsidtemplatesfkput) | **PUT** /Portals/{id}/templates/{fk} | Update a related item by id for templates.
+*PortalApi* | [**portalsIdTemplatesGet**](docs/Api/PortalApi.md#portalsidtemplatesget) | **GET** /Portals/{id}/templates | Queries templates of Portal.
+*PortalApi* | [**portalsIdTemplatesPost**](docs/Api/PortalApi.md#portalsidtemplatespost) | **POST** /Portals/{id}/templates | Creates a new instance in templates of this model.
+*PortalApi* | [**portalsIdTemplatesRelFkDelete**](docs/Api/PortalApi.md#portalsidtemplatesrelfkdelete) | **DELETE** /Portals/{id}/templates/rel/{fk} | Remove the templates relation to an item by id.
+*PortalApi* | [**portalsIdTemplatesRelFkHead**](docs/Api/PortalApi.md#portalsidtemplatesrelfkhead) | **HEAD** /Portals/{id}/templates/rel/{fk} | Check the existence of templates relation to an item by id.
+*PortalApi* | [**portalsIdTemplatesRelFkPut**](docs/Api/PortalApi.md#portalsidtemplatesrelfkput) | **PUT** /Portals/{id}/templates/rel/{fk} | Add a related item by id for templates.
+*PortalApi* | [**portalsPatch**](docs/Api/PortalApi.md#portalspatch) | **PATCH** /Portals | Patch an existing model instance or insert a new one into the data source.
+*PortalApi* | [**portalsPost**](docs/Api/PortalApi.md#portalspost) | **POST** /Portals | Create a new instance of the model and persist it into the data source.
+*PortalApi* | [**portalsPut**](docs/Api/PortalApi.md#portalsput) | **PUT** /Portals | Replace an existing model instance or insert a new one into the data source.
+*PortalApi* | [**portalsReplaceOrCreatePost**](docs/Api/PortalApi.md#portalsreplaceorcreatepost) | **POST** /Portals/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
+*PortalApi* | [**portalsUpdatePost**](docs/Api/PortalApi.md#portalsupdatepost) | **POST** /Portals/update | Update instances of the model matched by {{where}} from the data source.
+*PortalApi* | [**portalsUpsertWithWherePost**](docs/Api/PortalApi.md#portalsupsertwithwherepost) | **POST** /Portals/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
+*PortalMemberApi* | [**portalMembersChangeStreamGet**](docs/Api/PortalMemberApi.md#portalmemberschangestreamget) | **GET** /PortalMembers/change-stream | Create a change stream.
+*PortalMemberApi* | [**portalMembersChangeStreamPost**](docs/Api/PortalMemberApi.md#portalmemberschangestreampost) | **POST** /PortalMembers/change-stream | Create a change stream.
+*PortalMemberApi* | [**portalMembersCountGet**](docs/Api/PortalMemberApi.md#portalmemberscountget) | **GET** /PortalMembers/count | Count instances of the model matched by where from the data source.
+*PortalMemberApi* | [**portalMembersFindOneGet**](docs/Api/PortalMemberApi.md#portalmembersfindoneget) | **GET** /PortalMembers/findOne | Find first instance of the model matched by filter from the data source.
+*PortalMemberApi* | [**portalMembersGet**](docs/Api/PortalMemberApi.md#portalmembersget) | **GET** /PortalMembers | Find all instances of the model matched by filter from the data source.
+*PortalMemberApi* | [**portalMembersIdAssignedDesignsCountGet**](docs/Api/PortalMemberApi.md#portalmembersidassigneddesignscountget) | **GET** /PortalMembers/{id}/assignedDesigns/count | Counts assignedDesigns of PortalMember.
+*PortalMemberApi* | [**portalMembersIdAssignedDesignsDelete**](docs/Api/PortalMemberApi.md#portalmembersidassigneddesignsdelete) | **DELETE** /PortalMembers/{id}/assignedDesigns | Deletes all assignedDesigns of this model.
+*PortalMemberApi* | [**portalMembersIdAssignedDesignsFkDelete**](docs/Api/PortalMemberApi.md#portalmembersidassigneddesignsfkdelete) | **DELETE** /PortalMembers/{id}/assignedDesigns/{fk} | Delete a related item by id for assignedDesigns.
+*PortalMemberApi* | [**portalMembersIdAssignedDesignsFkGet**](docs/Api/PortalMemberApi.md#portalmembersidassigneddesignsfkget) | **GET** /PortalMembers/{id}/assignedDesigns/{fk} | Find a related item by id for assignedDesigns.
+*PortalMemberApi* | [**portalMembersIdAssignedDesignsFkPut**](docs/Api/PortalMemberApi.md#portalmembersidassigneddesignsfkput) | **PUT** /PortalMembers/{id}/assignedDesigns/{fk} | Update a related item by id for assignedDesigns.
+*PortalMemberApi* | [**portalMembersIdAssignedDesignsGet**](docs/Api/PortalMemberApi.md#portalmembersidassigneddesignsget) | **GET** /PortalMembers/{id}/assignedDesigns | Queries assignedDesigns of PortalMember.
+*PortalMemberApi* | [**portalMembersIdAssignedDesignsPost**](docs/Api/PortalMemberApi.md#portalmembersidassigneddesignspost) | **POST** /PortalMembers/{id}/assignedDesigns | Creates a new instance in assignedDesigns of this model.
+*PortalMemberApi* | [**portalMembersIdAssignedDesignsRelFkDelete**](docs/Api/PortalMemberApi.md#portalmembersidassigneddesignsrelfkdelete) | **DELETE** /PortalMembers/{id}/assignedDesigns/rel/{fk} | Remove the assignedDesigns relation to an item by id.
+*PortalMemberApi* | [**portalMembersIdAssignedDesignsRelFkHead**](docs/Api/PortalMemberApi.md#portalmembersidassigneddesignsrelfkhead) | **HEAD** /PortalMembers/{id}/assignedDesigns/rel/{fk} | Check the existence of assignedDesigns relation to an item by id.
+*PortalMemberApi* | [**portalMembersIdAssignedDesignsRelFkPut**](docs/Api/PortalMemberApi.md#portalmembersidassigneddesignsrelfkput) | **PUT** /PortalMembers/{id}/assignedDesigns/rel/{fk} | Add a related item by id for assignedDesigns.
+*PortalMemberApi* | [**portalMembersIdCommentedDesignsCountGet**](docs/Api/PortalMemberApi.md#portalmembersidcommenteddesignscountget) | **GET** /PortalMembers/{id}/commentedDesigns/count | Counts commentedDesigns of PortalMember.
+*PortalMemberApi* | [**portalMembersIdCommentedDesignsDelete**](docs/Api/PortalMemberApi.md#portalmembersidcommenteddesignsdelete) | **DELETE** /PortalMembers/{id}/commentedDesigns | Deletes all commentedDesigns of this model.
+*PortalMemberApi* | [**portalMembersIdCommentedDesignsFkDelete**](docs/Api/PortalMemberApi.md#portalmembersidcommenteddesignsfkdelete) | **DELETE** /PortalMembers/{id}/commentedDesigns/{fk} | Delete a related item by id for commentedDesigns.
+*PortalMemberApi* | [**portalMembersIdCommentedDesignsFkGet**](docs/Api/PortalMemberApi.md#portalmembersidcommenteddesignsfkget) | **GET** /PortalMembers/{id}/commentedDesigns/{fk} | Find a related item by id for commentedDesigns.
+*PortalMemberApi* | [**portalMembersIdCommentedDesignsFkPut**](docs/Api/PortalMemberApi.md#portalmembersidcommenteddesignsfkput) | **PUT** /PortalMembers/{id}/commentedDesigns/{fk} | Update a related item by id for commentedDesigns.
+*PortalMemberApi* | [**portalMembersIdCommentedDesignsGet**](docs/Api/PortalMemberApi.md#portalmembersidcommenteddesignsget) | **GET** /PortalMembers/{id}/commentedDesigns | Queries commentedDesigns of PortalMember.
+*PortalMemberApi* | [**portalMembersIdCommentedDesignsPost**](docs/Api/PortalMemberApi.md#portalmembersidcommenteddesignspost) | **POST** /PortalMembers/{id}/commentedDesigns | Creates a new instance in commentedDesigns of this model.
+*PortalMemberApi* | [**portalMembersIdCommentedDesignsRelFkDelete**](docs/Api/PortalMemberApi.md#portalmembersidcommenteddesignsrelfkdelete) | **DELETE** /PortalMembers/{id}/commentedDesigns/rel/{fk} | Remove the commentedDesigns relation to an item by id.
+*PortalMemberApi* | [**portalMembersIdCommentedDesignsRelFkHead**](docs/Api/PortalMemberApi.md#portalmembersidcommenteddesignsrelfkhead) | **HEAD** /PortalMembers/{id}/commentedDesigns/rel/{fk} | Check the existence of commentedDesigns relation to an item by id.
+*PortalMemberApi* | [**portalMembersIdCommentedDesignsRelFkPut**](docs/Api/PortalMemberApi.md#portalmembersidcommenteddesignsrelfkput) | **PUT** /PortalMembers/{id}/commentedDesigns/rel/{fk} | Add a related item by id for commentedDesigns.
+*PortalMemberApi* | [**portalMembersIdDelete**](docs/Api/PortalMemberApi.md#portalmembersiddelete) | **DELETE** /PortalMembers/{id} | Delete a model instance by {{id}} from the data source.
+*PortalMemberApi* | [**portalMembersIdExistsGet**](docs/Api/PortalMemberApi.md#portalmembersidexistsget) | **GET** /PortalMembers/{id}/exists | Check whether a model instance exists in the data source.
+*PortalMemberApi* | [**portalMembersIdGet**](docs/Api/PortalMemberApi.md#portalmembersidget) | **GET** /PortalMembers/{id} | Find a model instance by {{id}} from the data source.
+*PortalMemberApi* | [**portalMembersIdHead**](docs/Api/PortalMemberApi.md#portalmembersidhead) | **HEAD** /PortalMembers/{id} | Check whether a model instance exists in the data source.
+*PortalMemberApi* | [**portalMembersIdMemberGet**](docs/Api/PortalMemberApi.md#portalmembersidmemberget) | **GET** /PortalMembers/{id}/member | Fetches belongsTo relation member.
+*PortalMemberApi* | [**portalMembersIdPatch**](docs/Api/PortalMemberApi.md#portalmembersidpatch) | **PATCH** /PortalMembers/{id} | Patch attributes for a model instance and persist it into the data source.
+*PortalMemberApi* | [**portalMembersIdPortalGet**](docs/Api/PortalMemberApi.md#portalmembersidportalget) | **GET** /PortalMembers/{id}/portal | Fetches belongsTo relation portal.
+*PortalMemberApi* | [**portalMembersIdPut**](docs/Api/PortalMemberApi.md#portalmembersidput) | **PUT** /PortalMembers/{id} | Replace attributes for a model instance and persist it into the data source.
+*PortalMemberApi* | [**portalMembersIdReplacePost**](docs/Api/PortalMemberApi.md#portalmembersidreplacepost) | **POST** /PortalMembers/{id}/replace | Replace attributes for a model instance and persist it into the data source.
+*PortalMemberApi* | [**portalMembersIdRequesterDesignsCountGet**](docs/Api/PortalMemberApi.md#portalmembersidrequesterdesignscountget) | **GET** /PortalMembers/{id}/requesterDesigns/count | Counts requesterDesigns of PortalMember.
+*PortalMemberApi* | [**portalMembersIdRequesterDesignsDelete**](docs/Api/PortalMemberApi.md#portalmembersidrequesterdesignsdelete) | **DELETE** /PortalMembers/{id}/requesterDesigns | Deletes all requesterDesigns of this model.
+*PortalMemberApi* | [**portalMembersIdRequesterDesignsFkDelete**](docs/Api/PortalMemberApi.md#portalmembersidrequesterdesignsfkdelete) | **DELETE** /PortalMembers/{id}/requesterDesigns/{fk} | Delete a related item by id for requesterDesigns.
+*PortalMemberApi* | [**portalMembersIdRequesterDesignsFkGet**](docs/Api/PortalMemberApi.md#portalmembersidrequesterdesignsfkget) | **GET** /PortalMembers/{id}/requesterDesigns/{fk} | Find a related item by id for requesterDesigns.
+*PortalMemberApi* | [**portalMembersIdRequesterDesignsFkPut**](docs/Api/PortalMemberApi.md#portalmembersidrequesterdesignsfkput) | **PUT** /PortalMembers/{id}/requesterDesigns/{fk} | Update a related item by id for requesterDesigns.
+*PortalMemberApi* | [**portalMembersIdRequesterDesignsGet**](docs/Api/PortalMemberApi.md#portalmembersidrequesterdesignsget) | **GET** /PortalMembers/{id}/requesterDesigns | Queries requesterDesigns of PortalMember.
+*PortalMemberApi* | [**portalMembersIdRequesterDesignsPost**](docs/Api/PortalMemberApi.md#portalmembersidrequesterdesignspost) | **POST** /PortalMembers/{id}/requesterDesigns | Creates a new instance in requesterDesigns of this model.
+*PortalMemberApi* | [**portalMembersIdReviewedDesignsCountGet**](docs/Api/PortalMemberApi.md#portalmembersidrevieweddesignscountget) | **GET** /PortalMembers/{id}/reviewedDesigns/count | Counts reviewedDesigns of PortalMember.
+*PortalMemberApi* | [**portalMembersIdReviewedDesignsDelete**](docs/Api/PortalMemberApi.md#portalmembersidrevieweddesignsdelete) | **DELETE** /PortalMembers/{id}/reviewedDesigns | Deletes all reviewedDesigns of this model.
+*PortalMemberApi* | [**portalMembersIdReviewedDesignsFkDelete**](docs/Api/PortalMemberApi.md#portalmembersidrevieweddesignsfkdelete) | **DELETE** /PortalMembers/{id}/reviewedDesigns/{fk} | Delete a related item by id for reviewedDesigns.
+*PortalMemberApi* | [**portalMembersIdReviewedDesignsFkGet**](docs/Api/PortalMemberApi.md#portalmembersidrevieweddesignsfkget) | **GET** /PortalMembers/{id}/reviewedDesigns/{fk} | Find a related item by id for reviewedDesigns.
+*PortalMemberApi* | [**portalMembersIdReviewedDesignsFkPut**](docs/Api/PortalMemberApi.md#portalmembersidrevieweddesignsfkput) | **PUT** /PortalMembers/{id}/reviewedDesigns/{fk} | Update a related item by id for reviewedDesigns.
+*PortalMemberApi* | [**portalMembersIdReviewedDesignsGet**](docs/Api/PortalMemberApi.md#portalmembersidrevieweddesignsget) | **GET** /PortalMembers/{id}/reviewedDesigns | Queries reviewedDesigns of PortalMember.
+*PortalMemberApi* | [**portalMembersIdReviewedDesignsPost**](docs/Api/PortalMemberApi.md#portalmembersidrevieweddesignspost) | **POST** /PortalMembers/{id}/reviewedDesigns | Creates a new instance in reviewedDesigns of this model.
+*PortalMemberApi* | [**portalMembersIdReviewedDesignsRelFkDelete**](docs/Api/PortalMemberApi.md#portalmembersidrevieweddesignsrelfkdelete) | **DELETE** /PortalMembers/{id}/reviewedDesigns/rel/{fk} | Remove the reviewedDesigns relation to an item by id.
+*PortalMemberApi* | [**portalMembersIdReviewedDesignsRelFkHead**](docs/Api/PortalMemberApi.md#portalmembersidrevieweddesignsrelfkhead) | **HEAD** /PortalMembers/{id}/reviewedDesigns/rel/{fk} | Check the existence of reviewedDesigns relation to an item by id.
+*PortalMemberApi* | [**portalMembersIdReviewedDesignsRelFkPut**](docs/Api/PortalMemberApi.md#portalmembersidrevieweddesignsrelfkput) | **PUT** /PortalMembers/{id}/reviewedDesigns/rel/{fk} | Add a related item by id for reviewedDesigns.
+*PortalMemberApi* | [**portalMembersPatch**](docs/Api/PortalMemberApi.md#portalmemberspatch) | **PATCH** /PortalMembers | Patch an existing model instance or insert a new one into the data source.
+*PortalMemberApi* | [**portalMembersPost**](docs/Api/PortalMemberApi.md#portalmemberspost) | **POST** /PortalMembers | Create a new instance of the model and persist it into the data source.
+*PortalMemberApi* | [**portalMembersPut**](docs/Api/PortalMemberApi.md#portalmembersput) | **PUT** /PortalMembers | Replace an existing model instance or insert a new one into the data source.
+*PortalMemberApi* | [**portalMembersReplaceOrCreatePost**](docs/Api/PortalMemberApi.md#portalmembersreplaceorcreatepost) | **POST** /PortalMembers/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
+*PortalMemberApi* | [**portalMembersUpdatePost**](docs/Api/PortalMemberApi.md#portalmembersupdatepost) | **POST** /PortalMembers/update | Update instances of the model matched by {{where}} from the data source.
+*PortalMemberApi* | [**portalMembersUpsertWithWherePost**](docs/Api/PortalMemberApi.md#portalmembersupsertwithwherepost) | **POST** /PortalMembers/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
+*PortalPermissionSetApi* | [**portalPermissionSetsChangeStreamGet**](docs/Api/PortalPermissionSetApi.md#portalpermissionsetschangestreamget) | **GET** /PortalPermissionSets/change-stream | Create a change stream.
+*PortalPermissionSetApi* | [**portalPermissionSetsChangeStreamPost**](docs/Api/PortalPermissionSetApi.md#portalpermissionsetschangestreampost) | **POST** /PortalPermissionSets/change-stream | Create a change stream.
+*PortalPermissionSetApi* | [**portalPermissionSetsCountGet**](docs/Api/PortalPermissionSetApi.md#portalpermissionsetscountget) | **GET** /PortalPermissionSets/count | Count instances of the model matched by where from the data source.
+*PortalPermissionSetApi* | [**portalPermissionSetsFindOneGet**](docs/Api/PortalPermissionSetApi.md#portalpermissionsetsfindoneget) | **GET** /PortalPermissionSets/findOne | Find first instance of the model matched by filter from the data source.
+*PortalPermissionSetApi* | [**portalPermissionSetsGet**](docs/Api/PortalPermissionSetApi.md#portalpermissionsetsget) | **GET** /PortalPermissionSets | Find all instances of the model matched by filter from the data source.
+*PortalPermissionSetApi* | [**portalPermissionSetsIdDelete**](docs/Api/PortalPermissionSetApi.md#portalpermissionsetsiddelete) | **DELETE** /PortalPermissionSets/{id} | Delete a model instance by {{id}} from the data source.
+*PortalPermissionSetApi* | [**portalPermissionSetsIdExistsGet**](docs/Api/PortalPermissionSetApi.md#portalpermissionsetsidexistsget) | **GET** /PortalPermissionSets/{id}/exists | Check whether a model instance exists in the data source.
+*PortalPermissionSetApi* | [**portalPermissionSetsIdGet**](docs/Api/PortalPermissionSetApi.md#portalpermissionsetsidget) | **GET** /PortalPermissionSets/{id} | Find a model instance by {{id}} from the data source.
+*PortalPermissionSetApi* | [**portalPermissionSetsIdHead**](docs/Api/PortalPermissionSetApi.md#portalpermissionsetsidhead) | **HEAD** /PortalPermissionSets/{id} | Check whether a model instance exists in the data source.
+*PortalPermissionSetApi* | [**portalPermissionSetsIdPatch**](docs/Api/PortalPermissionSetApi.md#portalpermissionsetsidpatch) | **PATCH** /PortalPermissionSets/{id} | Patch attributes for a model instance and persist it into the data source.
+*PortalPermissionSetApi* | [**portalPermissionSetsIdPortalGet**](docs/Api/PortalPermissionSetApi.md#portalpermissionsetsidportalget) | **GET** /PortalPermissionSets/{id}/portal | Fetches belongsTo relation portal.
+*PortalPermissionSetApi* | [**portalPermissionSetsIdPut**](docs/Api/PortalPermissionSetApi.md#portalpermissionsetsidput) | **PUT** /PortalPermissionSets/{id} | Replace attributes for a model instance and persist it into the data source.
+*PortalPermissionSetApi* | [**portalPermissionSetsIdReplacePost**](docs/Api/PortalPermissionSetApi.md#portalpermissionsetsidreplacepost) | **POST** /PortalPermissionSets/{id}/replace | Replace attributes for a model instance and persist it into the data source.
+*PortalPermissionSetApi* | [**portalPermissionSetsPatch**](docs/Api/PortalPermissionSetApi.md#portalpermissionsetspatch) | **PATCH** /PortalPermissionSets | Patch an existing model instance or insert a new one into the data source.
+*PortalPermissionSetApi* | [**portalPermissionSetsPost**](docs/Api/PortalPermissionSetApi.md#portalpermissionsetspost) | **POST** /PortalPermissionSets | Create a new instance of the model and persist it into the data source.
+*PortalPermissionSetApi* | [**portalPermissionSetsPut**](docs/Api/PortalPermissionSetApi.md#portalpermissionsetsput) | **PUT** /PortalPermissionSets | Replace an existing model instance or insert a new one into the data source.
+*PortalPermissionSetApi* | [**portalPermissionSetsReplaceOrCreatePost**](docs/Api/PortalPermissionSetApi.md#portalpermissionsetsreplaceorcreatepost) | **POST** /PortalPermissionSets/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
+*PortalPermissionSetApi* | [**portalPermissionSetsUpdatePost**](docs/Api/PortalPermissionSetApi.md#portalpermissionsetsupdatepost) | **POST** /PortalPermissionSets/update | Update instances of the model matched by {{where}} from the data source.
+*PortalPermissionSetApi* | [**portalPermissionSetsUpsertWithWherePost**](docs/Api/PortalPermissionSetApi.md#portalpermissionsetsupsertwithwherepost) | **POST** /PortalPermissionSets/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
+*PortalTemplateApi* | [**portalTemplatesChangeStreamGet**](docs/Api/PortalTemplateApi.md#portaltemplateschangestreamget) | **GET** /PortalTemplates/change-stream | Create a change stream.
+*PortalTemplateApi* | [**portalTemplatesChangeStreamPost**](docs/Api/PortalTemplateApi.md#portaltemplateschangestreampost) | **POST** /PortalTemplates/change-stream | Create a change stream.
+*PortalTemplateApi* | [**portalTemplatesCountGet**](docs/Api/PortalTemplateApi.md#portaltemplatescountget) | **GET** /PortalTemplates/count | Count instances of the model matched by where from the data source.
+*PortalTemplateApi* | [**portalTemplatesFindOneGet**](docs/Api/PortalTemplateApi.md#portaltemplatesfindoneget) | **GET** /PortalTemplates/findOne | Find first instance of the model matched by filter from the data source.
+*PortalTemplateApi* | [**portalTemplatesGet**](docs/Api/PortalTemplateApi.md#portaltemplatesget) | **GET** /PortalTemplates | Find all instances of the model matched by filter from the data source.
+*PortalTemplateApi* | [**portalTemplatesIdDelete**](docs/Api/PortalTemplateApi.md#portaltemplatesiddelete) | **DELETE** /PortalTemplates/{id} | Delete a model instance by {{id}} from the data source.
+*PortalTemplateApi* | [**portalTemplatesIdExistsGet**](docs/Api/PortalTemplateApi.md#portaltemplatesidexistsget) | **GET** /PortalTemplates/{id}/exists | Check whether a model instance exists in the data source.
+*PortalTemplateApi* | [**portalTemplatesIdGet**](docs/Api/PortalTemplateApi.md#portaltemplatesidget) | **GET** /PortalTemplates/{id} | Find a model instance by {{id}} from the data source.
+*PortalTemplateApi* | [**portalTemplatesIdHead**](docs/Api/PortalTemplateApi.md#portaltemplatesidhead) | **HEAD** /PortalTemplates/{id} | Check whether a model instance exists in the data source.
+*PortalTemplateApi* | [**portalTemplatesIdPatch**](docs/Api/PortalTemplateApi.md#portaltemplatesidpatch) | **PATCH** /PortalTemplates/{id} | Patch attributes for a model instance and persist it into the data source.
+*PortalTemplateApi* | [**portalTemplatesIdPortalGet**](docs/Api/PortalTemplateApi.md#portaltemplatesidportalget) | **GET** /PortalTemplates/{id}/portal | Fetches belongsTo relation portal.
+*PortalTemplateApi* | [**portalTemplatesIdPut**](docs/Api/PortalTemplateApi.md#portaltemplatesidput) | **PUT** /PortalTemplates/{id} | Replace attributes for a model instance and persist it into the data source.
+*PortalTemplateApi* | [**portalTemplatesIdReplacePost**](docs/Api/PortalTemplateApi.md#portaltemplatesidreplacepost) | **POST** /PortalTemplates/{id}/replace | Replace attributes for a model instance and persist it into the data source.
+*PortalTemplateApi* | [**portalTemplatesIdTemplateGet**](docs/Api/PortalTemplateApi.md#portaltemplatesidtemplateget) | **GET** /PortalTemplates/{id}/template | Fetches belongsTo relation template.
+*PortalTemplateApi* | [**portalTemplatesPatch**](docs/Api/PortalTemplateApi.md#portaltemplatespatch) | **PATCH** /PortalTemplates | Patch an existing model instance or insert a new one into the data source.
+*PortalTemplateApi* | [**portalTemplatesPost**](docs/Api/PortalTemplateApi.md#portaltemplatespost) | **POST** /PortalTemplates | Create a new instance of the model and persist it into the data source.
+*PortalTemplateApi* | [**portalTemplatesPut**](docs/Api/PortalTemplateApi.md#portaltemplatesput) | **PUT** /PortalTemplates | Replace an existing model instance or insert a new one into the data source.
+*PortalTemplateApi* | [**portalTemplatesReplaceOrCreatePost**](docs/Api/PortalTemplateApi.md#portaltemplatesreplaceorcreatepost) | **POST** /PortalTemplates/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
+*PortalTemplateApi* | [**portalTemplatesUpdatePost**](docs/Api/PortalTemplateApi.md#portaltemplatesupdatepost) | **POST** /PortalTemplates/update | Update instances of the model matched by {{where}} from the data source.
+*PortalTemplateApi* | [**portalTemplatesUpsertWithWherePost**](docs/Api/PortalTemplateApi.md#portaltemplatesupsertwithwherepost) | **POST** /PortalTemplates/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
+*TagApi* | [**tagsChangeStreamGet**](docs/Api/TagApi.md#tagschangestreamget) | **GET** /Tags/change-stream | Create a change stream.
+*TagApi* | [**tagsChangeStreamPost**](docs/Api/TagApi.md#tagschangestreampost) | **POST** /Tags/change-stream | Create a change stream.
+*TagApi* | [**tagsCountGet**](docs/Api/TagApi.md#tagscountget) | **GET** /Tags/count | Count instances of the model matched by where from the data source.
+*TagApi* | [**tagsFindOneGet**](docs/Api/TagApi.md#tagsfindoneget) | **GET** /Tags/findOne | Find first instance of the model matched by filter from the data source.
+*TagApi* | [**tagsGet**](docs/Api/TagApi.md#tagsget) | **GET** /Tags | Find all instances of the model matched by filter from the data source.
+*TagApi* | [**tagsIdDelete**](docs/Api/TagApi.md#tagsiddelete) | **DELETE** /Tags/{id} | Delete a model instance by {{id}} from the data source.
+*TagApi* | [**tagsIdDesignsCountGet**](docs/Api/TagApi.md#tagsiddesignscountget) | **GET** /Tags/{id}/designs/count | Counts designs of Tag.
+*TagApi* | [**tagsIdDesignsDelete**](docs/Api/TagApi.md#tagsiddesignsdelete) | **DELETE** /Tags/{id}/designs | Deletes all designs of this model.
+*TagApi* | [**tagsIdDesignsFkDelete**](docs/Api/TagApi.md#tagsiddesignsfkdelete) | **DELETE** /Tags/{id}/designs/{fk} | Delete a related item by id for designs.
+*TagApi* | [**tagsIdDesignsFkGet**](docs/Api/TagApi.md#tagsiddesignsfkget) | **GET** /Tags/{id}/designs/{fk} | Find a related item by id for designs.
+*TagApi* | [**tagsIdDesignsFkPut**](docs/Api/TagApi.md#tagsiddesignsfkput) | **PUT** /Tags/{id}/designs/{fk} | Update a related item by id for designs.
+*TagApi* | [**tagsIdDesignsGet**](docs/Api/TagApi.md#tagsiddesignsget) | **GET** /Tags/{id}/designs | Queries designs of Tag.
+*TagApi* | [**tagsIdDesignsPost**](docs/Api/TagApi.md#tagsiddesignspost) | **POST** /Tags/{id}/designs | Creates a new instance in designs of this model.
+*TagApi* | [**tagsIdDesignsRelFkDelete**](docs/Api/TagApi.md#tagsiddesignsrelfkdelete) | **DELETE** /Tags/{id}/designs/rel/{fk} | Remove the designs relation to an item by id.
+*TagApi* | [**tagsIdDesignsRelFkHead**](docs/Api/TagApi.md#tagsiddesignsrelfkhead) | **HEAD** /Tags/{id}/designs/rel/{fk} | Check the existence of designs relation to an item by id.
+*TagApi* | [**tagsIdDesignsRelFkPut**](docs/Api/TagApi.md#tagsiddesignsrelfkput) | **PUT** /Tags/{id}/designs/rel/{fk} | Add a related item by id for designs.
+*TagApi* | [**tagsIdExistsGet**](docs/Api/TagApi.md#tagsidexistsget) | **GET** /Tags/{id}/exists | Check whether a model instance exists in the data source.
+*TagApi* | [**tagsIdGet**](docs/Api/TagApi.md#tagsidget) | **GET** /Tags/{id} | Find a model instance by {{id}} from the data source.
+*TagApi* | [**tagsIdHead**](docs/Api/TagApi.md#tagsidhead) | **HEAD** /Tags/{id} | Check whether a model instance exists in the data source.
+*TagApi* | [**tagsIdPatch**](docs/Api/TagApi.md#tagsidpatch) | **PATCH** /Tags/{id} | Patch attributes for a model instance and persist it into the data source.
+*TagApi* | [**tagsIdPut**](docs/Api/TagApi.md#tagsidput) | **PUT** /Tags/{id} | Replace attributes for a model instance and persist it into the data source.
+*TagApi* | [**tagsIdReplacePost**](docs/Api/TagApi.md#tagsidreplacepost) | **POST** /Tags/{id}/replace | Replace attributes for a model instance and persist it into the data source.
+*TagApi* | [**tagsIdTemplatesCountGet**](docs/Api/TagApi.md#tagsidtemplatescountget) | **GET** /Tags/{id}/templates/count | Counts templates of Tag.
+*TagApi* | [**tagsIdTemplatesDelete**](docs/Api/TagApi.md#tagsidtemplatesdelete) | **DELETE** /Tags/{id}/templates | Deletes all templates of this model.
+*TagApi* | [**tagsIdTemplatesFkDelete**](docs/Api/TagApi.md#tagsidtemplatesfkdelete) | **DELETE** /Tags/{id}/templates/{fk} | Delete a related item by id for templates.
+*TagApi* | [**tagsIdTemplatesFkGet**](docs/Api/TagApi.md#tagsidtemplatesfkget) | **GET** /Tags/{id}/templates/{fk} | Find a related item by id for templates.
+*TagApi* | [**tagsIdTemplatesFkPut**](docs/Api/TagApi.md#tagsidtemplatesfkput) | **PUT** /Tags/{id}/templates/{fk} | Update a related item by id for templates.
+*TagApi* | [**tagsIdTemplatesGet**](docs/Api/TagApi.md#tagsidtemplatesget) | **GET** /Tags/{id}/templates | Queries templates of Tag.
+*TagApi* | [**tagsIdTemplatesPost**](docs/Api/TagApi.md#tagsidtemplatespost) | **POST** /Tags/{id}/templates | Creates a new instance in templates of this model.
+*TagApi* | [**tagsIdTemplatesRelFkDelete**](docs/Api/TagApi.md#tagsidtemplatesrelfkdelete) | **DELETE** /Tags/{id}/templates/rel/{fk} | Remove the templates relation to an item by id.
+*TagApi* | [**tagsIdTemplatesRelFkHead**](docs/Api/TagApi.md#tagsidtemplatesrelfkhead) | **HEAD** /Tags/{id}/templates/rel/{fk} | Check the existence of templates relation to an item by id.
+*TagApi* | [**tagsIdTemplatesRelFkPut**](docs/Api/TagApi.md#tagsidtemplatesrelfkput) | **PUT** /Tags/{id}/templates/rel/{fk} | Add a related item by id for templates.
+*TagApi* | [**tagsPatch**](docs/Api/TagApi.md#tagspatch) | **PATCH** /Tags | Patch an existing model instance or insert a new one into the data source.
+*TagApi* | [**tagsPost**](docs/Api/TagApi.md#tagspost) | **POST** /Tags | Create a new instance of the model and persist it into the data source.
+*TagApi* | [**tagsPut**](docs/Api/TagApi.md#tagsput) | **PUT** /Tags | Replace an existing model instance or insert a new one into the data source.
+*TagApi* | [**tagsReplaceOrCreatePost**](docs/Api/TagApi.md#tagsreplaceorcreatepost) | **POST** /Tags/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
+*TagApi* | [**tagsUpdatePost**](docs/Api/TagApi.md#tagsupdatepost) | **POST** /Tags/update | Update instances of the model matched by {{where}} from the data source.
+*TagApi* | [**tagsUpsertWithWherePost**](docs/Api/TagApi.md#tagsupsertwithwherepost) | **POST** /Tags/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
+*TeamApi* | [**teamsChangeStreamGet**](docs/Api/TeamApi.md#teamschangestreamget) | **GET** /Teams/change-stream | Create a change stream.
+*TeamApi* | [**teamsChangeStreamPost**](docs/Api/TeamApi.md#teamschangestreampost) | **POST** /Teams/change-stream | Create a change stream.
+*TeamApi* | [**teamsCountGet**](docs/Api/TeamApi.md#teamscountget) | **GET** /Teams/count | Count instances of the model matched by where from the data source.
+*TeamApi* | [**teamsFindOneGet**](docs/Api/TeamApi.md#teamsfindoneget) | **GET** /Teams/findOne | Find first instance of the model matched by filter from the data source.
+*TeamApi* | [**teamsGet**](docs/Api/TeamApi.md#teamsget) | **GET** /Teams | Find all instances of the model matched by filter from the data source.
+*TeamApi* | [**teamsIdBrandDelete**](docs/Api/TeamApi.md#teamsidbranddelete) | **DELETE** /Teams/{id}/brand | Deletes brand of this model.
+*TeamApi* | [**teamsIdBrandGet**](docs/Api/TeamApi.md#teamsidbrandget) | **GET** /Teams/{id}/brand | Fetches hasOne relation brand.
+*TeamApi* | [**teamsIdBrandPost**](docs/Api/TeamApi.md#teamsidbrandpost) | **POST** /Teams/{id}/brand | Creates a new instance in brand of this model.
+*TeamApi* | [**teamsIdBrandPut**](docs/Api/TeamApi.md#teamsidbrandput) | **PUT** /Teams/{id}/brand | Update brand of this model.
+*TeamApi* | [**teamsIdDelete**](docs/Api/TeamApi.md#teamsiddelete) | **DELETE** /Teams/{id} | Delete a model instance by {{id}} from the data source.
+*TeamApi* | [**teamsIdExistsGet**](docs/Api/TeamApi.md#teamsidexistsget) | **GET** /Teams/{id}/exists | Check whether a model instance exists in the data source.
+*TeamApi* | [**teamsIdGet**](docs/Api/TeamApi.md#teamsidget) | **GET** /Teams/{id} | Find a model instance by {{id}} from the data source.
+*TeamApi* | [**teamsIdHead**](docs/Api/TeamApi.md#teamsidhead) | **HEAD** /Teams/{id} | Check whether a model instance exists in the data source.
+*TeamApi* | [**teamsIdMembersCountGet**](docs/Api/TeamApi.md#teamsidmemberscountget) | **GET** /Teams/{id}/members/count | Counts members of Team.
+*TeamApi* | [**teamsIdMembersDelete**](docs/Api/TeamApi.md#teamsidmembersdelete) | **DELETE** /Teams/{id}/members | Deletes all members of this model.
+*TeamApi* | [**teamsIdMembersFkDelete**](docs/Api/TeamApi.md#teamsidmembersfkdelete) | **DELETE** /Teams/{id}/members/{fk} | Delete a related item by id for members.
+*TeamApi* | [**teamsIdMembersFkGet**](docs/Api/TeamApi.md#teamsidmembersfkget) | **GET** /Teams/{id}/members/{fk} | Find a related item by id for members.
+*TeamApi* | [**teamsIdMembersFkPut**](docs/Api/TeamApi.md#teamsidmembersfkput) | **PUT** /Teams/{id}/members/{fk} | Update a related item by id for members.
+*TeamApi* | [**teamsIdMembersGet**](docs/Api/TeamApi.md#teamsidmembersget) | **GET** /Teams/{id}/members | Queries members of Team.
+*TeamApi* | [**teamsIdMembersPost**](docs/Api/TeamApi.md#teamsidmemberspost) | **POST** /Teams/{id}/members | Creates a new instance in members of this model.
+*TeamApi* | [**teamsIdMembersRelFkDelete**](docs/Api/TeamApi.md#teamsidmembersrelfkdelete) | **DELETE** /Teams/{id}/members/rel/{fk} | Remove the members relation to an item by id.
+*TeamApi* | [**teamsIdMembersRelFkHead**](docs/Api/TeamApi.md#teamsidmembersrelfkhead) | **HEAD** /Teams/{id}/members/rel/{fk} | Check the existence of members relation to an item by id.
+*TeamApi* | [**teamsIdMembersRelFkPut**](docs/Api/TeamApi.md#teamsidmembersrelfkput) | **PUT** /Teams/{id}/members/rel/{fk} | Add a related item by id for members.
+*TeamApi* | [**teamsIdPatch**](docs/Api/TeamApi.md#teamsidpatch) | **PATCH** /Teams/{id} | Patch attributes for a model instance and persist it into the data source.
+*TeamApi* | [**teamsIdPortalsCountGet**](docs/Api/TeamApi.md#teamsidportalscountget) | **GET** /Teams/{id}/portals/count | Counts portals of Team.
+*TeamApi* | [**teamsIdPortalsDelete**](docs/Api/TeamApi.md#teamsidportalsdelete) | **DELETE** /Teams/{id}/portals | Deletes all portals of this model.
+*TeamApi* | [**teamsIdPortalsFkDelete**](docs/Api/TeamApi.md#teamsidportalsfkdelete) | **DELETE** /Teams/{id}/portals/{fk} | Delete a related item by id for portals.
+*TeamApi* | [**teamsIdPortalsFkGet**](docs/Api/TeamApi.md#teamsidportalsfkget) | **GET** /Teams/{id}/portals/{fk} | Find a related item by id for portals.
+*TeamApi* | [**teamsIdPortalsFkPut**](docs/Api/TeamApi.md#teamsidportalsfkput) | **PUT** /Teams/{id}/portals/{fk} | Update a related item by id for portals.
+*TeamApi* | [**teamsIdPortalsGet**](docs/Api/TeamApi.md#teamsidportalsget) | **GET** /Teams/{id}/portals | Queries portals of Team.
+*TeamApi* | [**teamsIdPortalsPost**](docs/Api/TeamApi.md#teamsidportalspost) | **POST** /Teams/{id}/portals | Creates a new instance in portals of this model.
+*TeamApi* | [**teamsIdPut**](docs/Api/TeamApi.md#teamsidput) | **PUT** /Teams/{id} | Replace attributes for a model instance and persist it into the data source.
+*TeamApi* | [**teamsIdReplacePost**](docs/Api/TeamApi.md#teamsidreplacepost) | **POST** /Teams/{id}/replace | Replace attributes for a model instance and persist it into the data source.
+*TeamApi* | [**teamsIdTemplatesCountGet**](docs/Api/TeamApi.md#teamsidtemplatescountget) | **GET** /Teams/{id}/templates/count | Counts templates of Team.
+*TeamApi* | [**teamsIdTemplatesDelete**](docs/Api/TeamApi.md#teamsidtemplatesdelete) | **DELETE** /Teams/{id}/templates | Deletes all templates of this model.
+*TeamApi* | [**teamsIdTemplatesFkDelete**](docs/Api/TeamApi.md#teamsidtemplatesfkdelete) | **DELETE** /Teams/{id}/templates/{fk} | Delete a related item by id for templates.
+*TeamApi* | [**teamsIdTemplatesFkGet**](docs/Api/TeamApi.md#teamsidtemplatesfkget) | **GET** /Teams/{id}/templates/{fk} | Find a related item by id for templates.
+*TeamApi* | [**teamsIdTemplatesFkPut**](docs/Api/TeamApi.md#teamsidtemplatesfkput) | **PUT** /Teams/{id}/templates/{fk} | Update a related item by id for templates.
+*TeamApi* | [**teamsIdTemplatesGet**](docs/Api/TeamApi.md#teamsidtemplatesget) | **GET** /Teams/{id}/templates | Queries templates of Team.
+*TeamApi* | [**teamsIdTemplatesPost**](docs/Api/TeamApi.md#teamsidtemplatespost) | **POST** /Teams/{id}/templates | Creates a new instance in templates of this model.
+*TeamApi* | [**teamsPatch**](docs/Api/TeamApi.md#teamspatch) | **PATCH** /Teams | Patch an existing model instance or insert a new one into the data source.
+*TeamApi* | [**teamsPost**](docs/Api/TeamApi.md#teamspost) | **POST** /Teams | Create a new instance of the model and persist it into the data source.
+*TeamApi* | [**teamsPut**](docs/Api/TeamApi.md#teamsput) | **PUT** /Teams | Replace an existing model instance or insert a new one into the data source.
+*TeamApi* | [**teamsReplaceOrCreatePost**](docs/Api/TeamApi.md#teamsreplaceorcreatepost) | **POST** /Teams/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
+*TeamApi* | [**teamsUpdatePost**](docs/Api/TeamApi.md#teamsupdatepost) | **POST** /Teams/update | Update instances of the model matched by {{where}} from the data source.
+*TeamApi* | [**teamsUpsertWithWherePost**](docs/Api/TeamApi.md#teamsupsertwithwherepost) | **POST** /Teams/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
+*TeamBrandApi* | [**teamBrandsChangeStreamGet**](docs/Api/TeamBrandApi.md#teambrandschangestreamget) | **GET** /TeamBrands/change-stream | Create a change stream.
+*TeamBrandApi* | [**teamBrandsChangeStreamPost**](docs/Api/TeamBrandApi.md#teambrandschangestreampost) | **POST** /TeamBrands/change-stream | Create a change stream.
+*TeamBrandApi* | [**teamBrandsCountGet**](docs/Api/TeamBrandApi.md#teambrandscountget) | **GET** /TeamBrands/count | Count instances of the model matched by where from the data source.
+*TeamBrandApi* | [**teamBrandsFindOneGet**](docs/Api/TeamBrandApi.md#teambrandsfindoneget) | **GET** /TeamBrands/findOne | Find first instance of the model matched by filter from the data source.
+*TeamBrandApi* | [**teamBrandsGet**](docs/Api/TeamBrandApi.md#teambrandsget) | **GET** /TeamBrands | Find all instances of the model matched by filter from the data source.
+*TeamBrandApi* | [**teamBrandsIdDelete**](docs/Api/TeamBrandApi.md#teambrandsiddelete) | **DELETE** /TeamBrands/{id} | Delete a model instance by {{id}} from the data source.
+*TeamBrandApi* | [**teamBrandsIdExistsGet**](docs/Api/TeamBrandApi.md#teambrandsidexistsget) | **GET** /TeamBrands/{id}/exists | Check whether a model instance exists in the data source.
+*TeamBrandApi* | [**teamBrandsIdGet**](docs/Api/TeamBrandApi.md#teambrandsidget) | **GET** /TeamBrands/{id} | Find a model instance by {{id}} from the data source.
+*TeamBrandApi* | [**teamBrandsIdHead**](docs/Api/TeamBrandApi.md#teambrandsidhead) | **HEAD** /TeamBrands/{id} | Check whether a model instance exists in the data source.
+*TeamBrandApi* | [**teamBrandsIdPatch**](docs/Api/TeamBrandApi.md#teambrandsidpatch) | **PATCH** /TeamBrands/{id} | Patch attributes for a model instance and persist it into the data source.
+*TeamBrandApi* | [**teamBrandsIdPut**](docs/Api/TeamBrandApi.md#teambrandsidput) | **PUT** /TeamBrands/{id} | Replace attributes for a model instance and persist it into the data source.
+*TeamBrandApi* | [**teamBrandsIdReplacePost**](docs/Api/TeamBrandApi.md#teambrandsidreplacepost) | **POST** /TeamBrands/{id}/replace | Replace attributes for a model instance and persist it into the data source.
+*TeamBrandApi* | [**teamBrandsIdTeamGet**](docs/Api/TeamBrandApi.md#teambrandsidteamget) | **GET** /TeamBrands/{id}/team | Fetches belongsTo relation team.
+*TeamBrandApi* | [**teamBrandsPatch**](docs/Api/TeamBrandApi.md#teambrandspatch) | **PATCH** /TeamBrands | Patch an existing model instance or insert a new one into the data source.
+*TeamBrandApi* | [**teamBrandsPost**](docs/Api/TeamBrandApi.md#teambrandspost) | **POST** /TeamBrands | Create a new instance of the model and persist it into the data source.
+*TeamBrandApi* | [**teamBrandsPut**](docs/Api/TeamBrandApi.md#teambrandsput) | **PUT** /TeamBrands | Replace an existing model instance or insert a new one into the data source.
+*TeamBrandApi* | [**teamBrandsReplaceOrCreatePost**](docs/Api/TeamBrandApi.md#teambrandsreplaceorcreatepost) | **POST** /TeamBrands/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
+*TeamBrandApi* | [**teamBrandsUpdatePost**](docs/Api/TeamBrandApi.md#teambrandsupdatepost) | **POST** /TeamBrands/update | Update instances of the model matched by {{where}} from the data source.
+*TeamBrandApi* | [**teamBrandsUpsertWithWherePost**](docs/Api/TeamBrandApi.md#teambrandsupsertwithwherepost) | **POST** /TeamBrands/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
+*TeamMemberApi* | [**teamMembersChangeStreamGet**](docs/Api/TeamMemberApi.md#teammemberschangestreamget) | **GET** /TeamMembers/change-stream | Create a change stream.
+*TeamMemberApi* | [**teamMembersChangeStreamPost**](docs/Api/TeamMemberApi.md#teammemberschangestreampost) | **POST** /TeamMembers/change-stream | Create a change stream.
+*TeamMemberApi* | [**teamMembersCountGet**](docs/Api/TeamMemberApi.md#teammemberscountget) | **GET** /TeamMembers/count | Count instances of the model matched by where from the data source.
+*TeamMemberApi* | [**teamMembersFindOneGet**](docs/Api/TeamMemberApi.md#teammembersfindoneget) | **GET** /TeamMembers/findOne | Find first instance of the model matched by filter from the data source.
+*TeamMemberApi* | [**teamMembersGet**](docs/Api/TeamMemberApi.md#teammembersget) | **GET** /TeamMembers | Find all instances of the model matched by filter from the data source.
+*TeamMemberApi* | [**teamMembersIdCustomerGet**](docs/Api/TeamMemberApi.md#teammembersidcustomerget) | **GET** /TeamMembers/{id}/customer | Fetches belongsTo relation customer.
+*TeamMemberApi* | [**teamMembersIdDelete**](docs/Api/TeamMemberApi.md#teammembersiddelete) | **DELETE** /TeamMembers/{id} | Delete a model instance by {{id}} from the data source.
+*TeamMemberApi* | [**teamMembersIdExistsGet**](docs/Api/TeamMemberApi.md#teammembersidexistsget) | **GET** /TeamMembers/{id}/exists | Check whether a model instance exists in the data source.
+*TeamMemberApi* | [**teamMembersIdGet**](docs/Api/TeamMemberApi.md#teammembersidget) | **GET** /TeamMembers/{id} | Find a model instance by {{id}} from the data source.
+*TeamMemberApi* | [**teamMembersIdHead**](docs/Api/TeamMemberApi.md#teammembersidhead) | **HEAD** /TeamMembers/{id} | Check whether a model instance exists in the data source.
+*TeamMemberApi* | [**teamMembersIdInvitationTicketsCountGet**](docs/Api/TeamMemberApi.md#teammembersidinvitationticketscountget) | **GET** /TeamMembers/{id}/invitationTickets/count | Counts invitationTickets of TeamMember.
+*TeamMemberApi* | [**teamMembersIdInvitationTicketsDelete**](docs/Api/TeamMemberApi.md#teammembersidinvitationticketsdelete) | **DELETE** /TeamMembers/{id}/invitationTickets | Deletes all invitationTickets of this model.
+*TeamMemberApi* | [**teamMembersIdInvitationTicketsFkDelete**](docs/Api/TeamMemberApi.md#teammembersidinvitationticketsfkdelete) | **DELETE** /TeamMembers/{id}/invitationTickets/{fk} | Delete a related item by id for invitationTickets.
+*TeamMemberApi* | [**teamMembersIdInvitationTicketsFkGet**](docs/Api/TeamMemberApi.md#teammembersidinvitationticketsfkget) | **GET** /TeamMembers/{id}/invitationTickets/{fk} | Find a related item by id for invitationTickets.
+*TeamMemberApi* | [**teamMembersIdInvitationTicketsFkPut**](docs/Api/TeamMemberApi.md#teammembersidinvitationticketsfkput) | **PUT** /TeamMembers/{id}/invitationTickets/{fk} | Update a related item by id for invitationTickets.
+*TeamMemberApi* | [**teamMembersIdInvitationTicketsGet**](docs/Api/TeamMemberApi.md#teammembersidinvitationticketsget) | **GET** /TeamMembers/{id}/invitationTickets | Queries invitationTickets of TeamMember.
+*TeamMemberApi* | [**teamMembersIdInvitationTicketsPost**](docs/Api/TeamMemberApi.md#teammembersidinvitationticketspost) | **POST** /TeamMembers/{id}/invitationTickets | Creates a new instance in invitationTickets of this model.
+*TeamMemberApi* | [**teamMembersIdInviteInviteePost**](docs/Api/TeamMemberApi.md#teammembersidinviteinviteepost) | **POST** /TeamMembers/{id}/invite/{invitee} | Invite somebody to join the team
+*TeamMemberApi* | [**teamMembersIdPatch**](docs/Api/TeamMemberApi.md#teammembersidpatch) | **PATCH** /TeamMembers/{id} | Patch attributes for a model instance and persist it into the data source.
+*TeamMemberApi* | [**teamMembersIdPortalsCountGet**](docs/Api/TeamMemberApi.md#teammembersidportalscountget) | **GET** /TeamMembers/{id}/portals/count | Counts portals of TeamMember.
+*TeamMemberApi* | [**teamMembersIdPortalsDelete**](docs/Api/TeamMemberApi.md#teammembersidportalsdelete) | **DELETE** /TeamMembers/{id}/portals | Deletes all portals of this model.
+*TeamMemberApi* | [**teamMembersIdPortalsFkDelete**](docs/Api/TeamMemberApi.md#teammembersidportalsfkdelete) | **DELETE** /TeamMembers/{id}/portals/{fk} | Delete a related item by id for portals.
+*TeamMemberApi* | [**teamMembersIdPortalsFkGet**](docs/Api/TeamMemberApi.md#teammembersidportalsfkget) | **GET** /TeamMembers/{id}/portals/{fk} | Find a related item by id for portals.
+*TeamMemberApi* | [**teamMembersIdPortalsFkPut**](docs/Api/TeamMemberApi.md#teammembersidportalsfkput) | **PUT** /TeamMembers/{id}/portals/{fk} | Update a related item by id for portals.
+*TeamMemberApi* | [**teamMembersIdPortalsGet**](docs/Api/TeamMemberApi.md#teammembersidportalsget) | **GET** /TeamMembers/{id}/portals | Queries portals of TeamMember.
+*TeamMemberApi* | [**teamMembersIdPortalsPost**](docs/Api/TeamMemberApi.md#teammembersidportalspost) | **POST** /TeamMembers/{id}/portals | Creates a new instance in portals of this model.
+*TeamMemberApi* | [**teamMembersIdPortalsRelFkDelete**](docs/Api/TeamMemberApi.md#teammembersidportalsrelfkdelete) | **DELETE** /TeamMembers/{id}/portals/rel/{fk} | Remove the portals relation to an item by id.
+*TeamMemberApi* | [**teamMembersIdPortalsRelFkHead**](docs/Api/TeamMemberApi.md#teammembersidportalsrelfkhead) | **HEAD** /TeamMembers/{id}/portals/rel/{fk} | Check the existence of portals relation to an item by id.
+*TeamMemberApi* | [**teamMembersIdPortalsRelFkPut**](docs/Api/TeamMemberApi.md#teammembersidportalsrelfkput) | **PUT** /TeamMembers/{id}/portals/rel/{fk} | Add a related item by id for portals.
+*TeamMemberApi* | [**teamMembersIdPut**](docs/Api/TeamMemberApi.md#teammembersidput) | **PUT** /TeamMembers/{id} | Replace attributes for a model instance and persist it into the data source.
+*TeamMemberApi* | [**teamMembersIdReplacePost**](docs/Api/TeamMemberApi.md#teammembersidreplacepost) | **POST** /TeamMembers/{id}/replace | Replace attributes for a model instance and persist it into the data source.
+*TeamMemberApi* | [**teamMembersIdTargetModelTargetIdInviteInviteePost**](docs/Api/TeamMemberApi.md#teammembersidtargetmodeltargetidinviteinviteepost) | **POST** /TeamMembers/{id}/{targetModel}/{targetId}/invite/{invitee} | Invite somebody to join a team, portal or other targets
+*TeamMemberApi* | [**teamMembersIdTargetModelTargetIdInvitePost**](docs/Api/TeamMemberApi.md#teammembersidtargetmodeltargetidinvitepost) | **POST** /TeamMembers/{id}/{targetModel}/{targetId}/invite | Invite a group of people to join a team, portal or other targets
+*TeamMemberApi* | [**teamMembersIdTeamGet**](docs/Api/TeamMemberApi.md#teammembersidteamget) | **GET** /TeamMembers/{id}/team | Fetches belongsTo relation team.
+*TeamMemberApi* | [**teamMembersIdTemplatesCountGet**](docs/Api/TeamMemberApi.md#teammembersidtemplatescountget) | **GET** /TeamMembers/{id}/templates/count | Counts templates of TeamMember.
+*TeamMemberApi* | [**teamMembersIdTemplatesDelete**](docs/Api/TeamMemberApi.md#teammembersidtemplatesdelete) | **DELETE** /TeamMembers/{id}/templates | Deletes all templates of this model.
+*TeamMemberApi* | [**teamMembersIdTemplatesFkDelete**](docs/Api/TeamMemberApi.md#teammembersidtemplatesfkdelete) | **DELETE** /TeamMembers/{id}/templates/{fk} | Delete a related item by id for templates.
+*TeamMemberApi* | [**teamMembersIdTemplatesFkGet**](docs/Api/TeamMemberApi.md#teammembersidtemplatesfkget) | **GET** /TeamMembers/{id}/templates/{fk} | Find a related item by id for templates.
+*TeamMemberApi* | [**teamMembersIdTemplatesFkPut**](docs/Api/TeamMemberApi.md#teammembersidtemplatesfkput) | **PUT** /TeamMembers/{id}/templates/{fk} | Update a related item by id for templates.
+*TeamMemberApi* | [**teamMembersIdTemplatesGet**](docs/Api/TeamMemberApi.md#teammembersidtemplatesget) | **GET** /TeamMembers/{id}/templates | Queries templates of TeamMember.
+*TeamMemberApi* | [**teamMembersIdTemplatesPost**](docs/Api/TeamMemberApi.md#teammembersidtemplatespost) | **POST** /TeamMembers/{id}/templates | Creates a new instance in templates of this model.
+*TeamMemberApi* | [**teamMembersIdTemplatesRelFkDelete**](docs/Api/TeamMemberApi.md#teammembersidtemplatesrelfkdelete) | **DELETE** /TeamMembers/{id}/templates/rel/{fk} | Remove the templates relation to an item by id.
+*TeamMemberApi* | [**teamMembersIdTemplatesRelFkHead**](docs/Api/TeamMemberApi.md#teammembersidtemplatesrelfkhead) | **HEAD** /TeamMembers/{id}/templates/rel/{fk} | Check the existence of templates relation to an item by id.
+*TeamMemberApi* | [**teamMembersIdTemplatesRelFkPut**](docs/Api/TeamMemberApi.md#teammembersidtemplatesrelfkput) | **PUT** /TeamMembers/{id}/templates/rel/{fk} | Add a related item by id for templates.
+*TeamMemberApi* | [**teamMembersIdUploadedTemplatesCountGet**](docs/Api/TeamMemberApi.md#teammembersiduploadedtemplatescountget) | **GET** /TeamMembers/{id}/uploadedTemplates/count | Counts uploadedTemplates of TeamMember.
+*TeamMemberApi* | [**teamMembersIdUploadedTemplatesDelete**](docs/Api/TeamMemberApi.md#teammembersiduploadedtemplatesdelete) | **DELETE** /TeamMembers/{id}/uploadedTemplates | Deletes all uploadedTemplates of this model.
+*TeamMemberApi* | [**teamMembersIdUploadedTemplatesFkDelete**](docs/Api/TeamMemberApi.md#teammembersiduploadedtemplatesfkdelete) | **DELETE** /TeamMembers/{id}/uploadedTemplates/{fk} | Delete a related item by id for uploadedTemplates.
+*TeamMemberApi* | [**teamMembersIdUploadedTemplatesFkGet**](docs/Api/TeamMemberApi.md#teammembersiduploadedtemplatesfkget) | **GET** /TeamMembers/{id}/uploadedTemplates/{fk} | Find a related item by id for uploadedTemplates.
+*TeamMemberApi* | [**teamMembersIdUploadedTemplatesFkPut**](docs/Api/TeamMemberApi.md#teammembersiduploadedtemplatesfkput) | **PUT** /TeamMembers/{id}/uploadedTemplates/{fk} | Update a related item by id for uploadedTemplates.
+*TeamMemberApi* | [**teamMembersIdUploadedTemplatesGet**](docs/Api/TeamMemberApi.md#teammembersiduploadedtemplatesget) | **GET** /TeamMembers/{id}/uploadedTemplates | Queries uploadedTemplates of TeamMember.
+*TeamMemberApi* | [**teamMembersIdUploadedTemplatesPost**](docs/Api/TeamMemberApi.md#teammembersiduploadedtemplatespost) | **POST** /TeamMembers/{id}/uploadedTemplates | Creates a new instance in uploadedTemplates of this model.
+*TeamMemberApi* | [**teamMembersPatch**](docs/Api/TeamMemberApi.md#teammemberspatch) | **PATCH** /TeamMembers | Patch an existing model instance or insert a new one into the data source.
+*TeamMemberApi* | [**teamMembersPost**](docs/Api/TeamMemberApi.md#teammemberspost) | **POST** /TeamMembers | Create a new instance of the model and persist it into the data source.
+*TeamMemberApi* | [**teamMembersPut**](docs/Api/TeamMemberApi.md#teammembersput) | **PUT** /TeamMembers | Replace an existing model instance or insert a new one into the data source.
+*TeamMemberApi* | [**teamMembersReplaceOrCreatePost**](docs/Api/TeamMemberApi.md#teammembersreplaceorcreatepost) | **POST** /TeamMembers/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
+*TeamMemberApi* | [**teamMembersUpdatePost**](docs/Api/TeamMemberApi.md#teammembersupdatepost) | **POST** /TeamMembers/update | Update instances of the model matched by {{where}} from the data source.
+*TeamMemberApi* | [**teamMembersUpsertWithWherePost**](docs/Api/TeamMemberApi.md#teammembersupsertwithwherepost) | **POST** /TeamMembers/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
+*TemplateApi* | [**templatesChangeStreamGet**](docs/Api/TemplateApi.md#templateschangestreamget) | **GET** /Templates/change-stream | Create a change stream.
+*TemplateApi* | [**templatesChangeStreamPost**](docs/Api/TemplateApi.md#templateschangestreampost) | **POST** /Templates/change-stream | Create a change stream.
+*TemplateApi* | [**templatesCountGet**](docs/Api/TemplateApi.md#templatescountget) | **GET** /Templates/count | Count instances of the model matched by where from the data source.
+*TemplateApi* | [**templatesFindOneGet**](docs/Api/TemplateApi.md#templatesfindoneget) | **GET** /Templates/findOne | Find first instance of the model matched by filter from the data source.
+*TemplateApi* | [**templatesGet**](docs/Api/TemplateApi.md#templatesget) | **GET** /Templates | Find all instances of the model matched by filter from the data source.
+*TemplateApi* | [**templatesIdDelete**](docs/Api/TemplateApi.md#templatesiddelete) | **DELETE** /Templates/{id} | Delete a model instance by {{id}} from the data source.
+*TemplateApi* | [**templatesIdDesignsCountGet**](docs/Api/TemplateApi.md#templatesiddesignscountget) | **GET** /Templates/{id}/designs/count | Counts designs of Template.
+*TemplateApi* | [**templatesIdDesignsDelete**](docs/Api/TemplateApi.md#templatesiddesignsdelete) | **DELETE** /Templates/{id}/designs | Deletes all designs of this model.
+*TemplateApi* | [**templatesIdDesignsFkDelete**](docs/Api/TemplateApi.md#templatesiddesignsfkdelete) | **DELETE** /Templates/{id}/designs/{fk} | Delete a related item by id for designs.
+*TemplateApi* | [**templatesIdDesignsFkGet**](docs/Api/TemplateApi.md#templatesiddesignsfkget) | **GET** /Templates/{id}/designs/{fk} | Find a related item by id for designs.
+*TemplateApi* | [**templatesIdDesignsFkPut**](docs/Api/TemplateApi.md#templatesiddesignsfkput) | **PUT** /Templates/{id}/designs/{fk} | Update a related item by id for designs.
+*TemplateApi* | [**templatesIdDesignsGet**](docs/Api/TemplateApi.md#templatesiddesignsget) | **GET** /Templates/{id}/designs | Queries designs of Template.
+*TemplateApi* | [**templatesIdDesignsPost**](docs/Api/TemplateApi.md#templatesiddesignspost) | **POST** /Templates/{id}/designs | Creates a new instance in designs of this model.
+*TemplateApi* | [**templatesIdExistsGet**](docs/Api/TemplateApi.md#templatesidexistsget) | **GET** /Templates/{id}/exists | Check whether a model instance exists in the data source.
+*TemplateApi* | [**templatesIdGet**](docs/Api/TemplateApi.md#templatesidget) | **GET** /Templates/{id} | Find a model instance by {{id}} from the data source.
+*TemplateApi* | [**templatesIdHead**](docs/Api/TemplateApi.md#templatesidhead) | **HEAD** /Templates/{id} | Check whether a model instance exists in the data source.
+*TemplateApi* | [**templatesIdMembersCountGet**](docs/Api/TemplateApi.md#templatesidmemberscountget) | **GET** /Templates/{id}/members/count | Counts members of Template.
+*TemplateApi* | [**templatesIdMembersDelete**](docs/Api/TemplateApi.md#templatesidmembersdelete) | **DELETE** /Templates/{id}/members | Deletes all members of this model.
+*TemplateApi* | [**templatesIdMembersFkDelete**](docs/Api/TemplateApi.md#templatesidmembersfkdelete) | **DELETE** /Templates/{id}/members/{fk} | Delete a related item by id for members.
+*TemplateApi* | [**templatesIdMembersFkGet**](docs/Api/TemplateApi.md#templatesidmembersfkget) | **GET** /Templates/{id}/members/{fk} | Find a related item by id for members.
+*TemplateApi* | [**templatesIdMembersFkPut**](docs/Api/TemplateApi.md#templatesidmembersfkput) | **PUT** /Templates/{id}/members/{fk} | Update a related item by id for members.
+*TemplateApi* | [**templatesIdMembersGet**](docs/Api/TemplateApi.md#templatesidmembersget) | **GET** /Templates/{id}/members | Queries members of Template.
+*TemplateApi* | [**templatesIdMembersPost**](docs/Api/TemplateApi.md#templatesidmemberspost) | **POST** /Templates/{id}/members | Creates a new instance in members of this model.
+*TemplateApi* | [**templatesIdMembersRelFkDelete**](docs/Api/TemplateApi.md#templatesidmembersrelfkdelete) | **DELETE** /Templates/{id}/members/rel/{fk} | Remove the members relation to an item by id.
+*TemplateApi* | [**templatesIdMembersRelFkHead**](docs/Api/TemplateApi.md#templatesidmembersrelfkhead) | **HEAD** /Templates/{id}/members/rel/{fk} | Check the existence of members relation to an item by id.
+*TemplateApi* | [**templatesIdMembersRelFkPut**](docs/Api/TemplateApi.md#templatesidmembersrelfkput) | **PUT** /Templates/{id}/members/rel/{fk} | Add a related item by id for members.
+*TemplateApi* | [**templatesIdPatch**](docs/Api/TemplateApi.md#templatesidpatch) | **PATCH** /Templates/{id} | Patch attributes for a model instance and persist it into the data source.
+*TemplateApi* | [**templatesIdPermissionDelete**](docs/Api/TemplateApi.md#templatesidpermissiondelete) | **DELETE** /Templates/{id}/permission | Deletes permission of this model.
+*TemplateApi* | [**templatesIdPermissionGet**](docs/Api/TemplateApi.md#templatesidpermissionget) | **GET** /Templates/{id}/permission | Fetches hasOne relation permission.
+*TemplateApi* | [**templatesIdPermissionPost**](docs/Api/TemplateApi.md#templatesidpermissionpost) | **POST** /Templates/{id}/permission | Creates a new instance in permission of this model.
+*TemplateApi* | [**templatesIdPermissionPut**](docs/Api/TemplateApi.md#templatesidpermissionput) | **PUT** /Templates/{id}/permission | Update permission of this model.
+*TemplateApi* | [**templatesIdPortalsCountGet**](docs/Api/TemplateApi.md#templatesidportalscountget) | **GET** /Templates/{id}/portals/count | Counts portals of Template.
+*TemplateApi* | [**templatesIdPortalsDelete**](docs/Api/TemplateApi.md#templatesidportalsdelete) | **DELETE** /Templates/{id}/portals | Deletes all portals of this model.
+*TemplateApi* | [**templatesIdPortalsFkDelete**](docs/Api/TemplateApi.md#templatesidportalsfkdelete) | **DELETE** /Templates/{id}/portals/{fk} | Delete a related item by id for portals.
+*TemplateApi* | [**templatesIdPortalsFkGet**](docs/Api/TemplateApi.md#templatesidportalsfkget) | **GET** /Templates/{id}/portals/{fk} | Find a related item by id for portals.
+*TemplateApi* | [**templatesIdPortalsFkPut**](docs/Api/TemplateApi.md#templatesidportalsfkput) | **PUT** /Templates/{id}/portals/{fk} | Update a related item by id for portals.
+*TemplateApi* | [**templatesIdPortalsGet**](docs/Api/TemplateApi.md#templatesidportalsget) | **GET** /Templates/{id}/portals | Queries portals of Template.
+*TemplateApi* | [**templatesIdPortalsPost**](docs/Api/TemplateApi.md#templatesidportalspost) | **POST** /Templates/{id}/portals | Creates a new instance in portals of this model.
+*TemplateApi* | [**templatesIdPortalsRelFkDelete**](docs/Api/TemplateApi.md#templatesidportalsrelfkdelete) | **DELETE** /Templates/{id}/portals/rel/{fk} | Remove the portals relation to an item by id.
+*TemplateApi* | [**templatesIdPortalsRelFkHead**](docs/Api/TemplateApi.md#templatesidportalsrelfkhead) | **HEAD** /Templates/{id}/portals/rel/{fk} | Check the existence of portals relation to an item by id.
+*TemplateApi* | [**templatesIdPortalsRelFkPut**](docs/Api/TemplateApi.md#templatesidportalsrelfkput) | **PUT** /Templates/{id}/portals/rel/{fk} | Add a related item by id for portals.
+*TemplateApi* | [**templatesIdPut**](docs/Api/TemplateApi.md#templatesidput) | **PUT** /Templates/{id} | Replace attributes for a model instance and persist it into the data source.
+*TemplateApi* | [**templatesIdReplacePost**](docs/Api/TemplateApi.md#templatesidreplacepost) | **POST** /Templates/{id}/replace | Replace attributes for a model instance and persist it into the data source.
+*TemplateApi* | [**templatesIdTagsCountGet**](docs/Api/TemplateApi.md#templatesidtagscountget) | **GET** /Templates/{id}/tags/count | Counts tags of Template.
+*TemplateApi* | [**templatesIdTagsDelete**](docs/Api/TemplateApi.md#templatesidtagsdelete) | **DELETE** /Templates/{id}/tags | Deletes all tags of this model.
+*TemplateApi* | [**templatesIdTagsFkDelete**](docs/Api/TemplateApi.md#templatesidtagsfkdelete) | **DELETE** /Templates/{id}/tags/{fk} | Delete a related item by id for tags.
+*TemplateApi* | [**templatesIdTagsFkGet**](docs/Api/TemplateApi.md#templatesidtagsfkget) | **GET** /Templates/{id}/tags/{fk} | Find a related item by id for tags.
+*TemplateApi* | [**templatesIdTagsFkPut**](docs/Api/TemplateApi.md#templatesidtagsfkput) | **PUT** /Templates/{id}/tags/{fk} | Update a related item by id for tags.
+*TemplateApi* | [**templatesIdTagsGet**](docs/Api/TemplateApi.md#templatesidtagsget) | **GET** /Templates/{id}/tags | Queries tags of Template.
+*TemplateApi* | [**templatesIdTagsPost**](docs/Api/TemplateApi.md#templatesidtagspost) | **POST** /Templates/{id}/tags | Creates a new instance in tags of this model.
+*TemplateApi* | [**templatesIdTagsRelFkDelete**](docs/Api/TemplateApi.md#templatesidtagsrelfkdelete) | **DELETE** /Templates/{id}/tags/rel/{fk} | Remove the tags relation to an item by id.
+*TemplateApi* | [**templatesIdTagsRelFkHead**](docs/Api/TemplateApi.md#templatesidtagsrelfkhead) | **HEAD** /Templates/{id}/tags/rel/{fk} | Check the existence of tags relation to an item by id.
+*TemplateApi* | [**templatesIdTagsRelFkPut**](docs/Api/TemplateApi.md#templatesidtagsrelfkput) | **PUT** /Templates/{id}/tags/rel/{fk} | Add a related item by id for tags.
+*TemplateApi* | [**templatesIdTeamGet**](docs/Api/TemplateApi.md#templatesidteamget) | **GET** /Templates/{id}/team | Fetches belongsTo relation team.
+*TemplateApi* | [**templatesPatch**](docs/Api/TemplateApi.md#templatespatch) | **PATCH** /Templates | Patch an existing model instance or insert a new one into the data source.
+*TemplateApi* | [**templatesPost**](docs/Api/TemplateApi.md#templatespost) | **POST** /Templates | Create a new instance of the model and persist it into the data source.
+*TemplateApi* | [**templatesPut**](docs/Api/TemplateApi.md#templatesput) | **PUT** /Templates | Replace an existing model instance or insert a new one into the data source.
+*TemplateApi* | [**templatesReplaceOrCreatePost**](docs/Api/TemplateApi.md#templatesreplaceorcreatepost) | **POST** /Templates/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
+*TemplateApi* | [**templatesUpdatePost**](docs/Api/TemplateApi.md#templatesupdatepost) | **POST** /Templates/update | Update instances of the model matched by {{where}} from the data source.
+*TemplateApi* | [**templatesUpsertWithWherePost**](docs/Api/TemplateApi.md#templatesupsertwithwherepost) | **POST** /Templates/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
+*TemplateMemberApi* | [**templateMembersChangeStreamGet**](docs/Api/TemplateMemberApi.md#templatememberschangestreamget) | **GET** /TemplateMembers/change-stream | Create a change stream.
+*TemplateMemberApi* | [**templateMembersChangeStreamPost**](docs/Api/TemplateMemberApi.md#templatememberschangestreampost) | **POST** /TemplateMembers/change-stream | Create a change stream.
+*TemplateMemberApi* | [**templateMembersCountGet**](docs/Api/TemplateMemberApi.md#templatememberscountget) | **GET** /TemplateMembers/count | Count instances of the model matched by where from the data source.
+*TemplateMemberApi* | [**templateMembersFindOneGet**](docs/Api/TemplateMemberApi.md#templatemembersfindoneget) | **GET** /TemplateMembers/findOne | Find first instance of the model matched by filter from the data source.
+*TemplateMemberApi* | [**templateMembersGet**](docs/Api/TemplateMemberApi.md#templatemembersget) | **GET** /TemplateMembers | Find all instances of the model matched by filter from the data source.
+*TemplateMemberApi* | [**templateMembersIdDelete**](docs/Api/TemplateMemberApi.md#templatemembersiddelete) | **DELETE** /TemplateMembers/{id} | Delete a model instance by {{id}} from the data source.
+*TemplateMemberApi* | [**templateMembersIdExistsGet**](docs/Api/TemplateMemberApi.md#templatemembersidexistsget) | **GET** /TemplateMembers/{id}/exists | Check whether a model instance exists in the data source.
+*TemplateMemberApi* | [**templateMembersIdGet**](docs/Api/TemplateMemberApi.md#templatemembersidget) | **GET** /TemplateMembers/{id} | Find a model instance by {{id}} from the data source.
+*TemplateMemberApi* | [**templateMembersIdHead**](docs/Api/TemplateMemberApi.md#templatemembersidhead) | **HEAD** /TemplateMembers/{id} | Check whether a model instance exists in the data source.
+*TemplateMemberApi* | [**templateMembersIdMemberGet**](docs/Api/TemplateMemberApi.md#templatemembersidmemberget) | **GET** /TemplateMembers/{id}/member | Fetches belongsTo relation member.
+*TemplateMemberApi* | [**templateMembersIdPatch**](docs/Api/TemplateMemberApi.md#templatemembersidpatch) | **PATCH** /TemplateMembers/{id} | Patch attributes for a model instance and persist it into the data source.
+*TemplateMemberApi* | [**templateMembersIdPut**](docs/Api/TemplateMemberApi.md#templatemembersidput) | **PUT** /TemplateMembers/{id} | Replace attributes for a model instance and persist it into the data source.
+*TemplateMemberApi* | [**templateMembersIdReplacePost**](docs/Api/TemplateMemberApi.md#templatemembersidreplacepost) | **POST** /TemplateMembers/{id}/replace | Replace attributes for a model instance and persist it into the data source.
+*TemplateMemberApi* | [**templateMembersIdTemplateGet**](docs/Api/TemplateMemberApi.md#templatemembersidtemplateget) | **GET** /TemplateMembers/{id}/template | Fetches belongsTo relation template.
+*TemplateMemberApi* | [**templateMembersPatch**](docs/Api/TemplateMemberApi.md#templatememberspatch) | **PATCH** /TemplateMembers | Patch an existing model instance or insert a new one into the data source.
+*TemplateMemberApi* | [**templateMembersPost**](docs/Api/TemplateMemberApi.md#templatememberspost) | **POST** /TemplateMembers | Create a new instance of the model and persist it into the data source.
+*TemplateMemberApi* | [**templateMembersPut**](docs/Api/TemplateMemberApi.md#templatemembersput) | **PUT** /TemplateMembers | Replace an existing model instance or insert a new one into the data source.
+*TemplateMemberApi* | [**templateMembersReplaceOrCreatePost**](docs/Api/TemplateMemberApi.md#templatemembersreplaceorcreatepost) | **POST** /TemplateMembers/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
+*TemplateMemberApi* | [**templateMembersUpdatePost**](docs/Api/TemplateMemberApi.md#templatemembersupdatepost) | **POST** /TemplateMembers/update | Update instances of the model matched by {{where}} from the data source.
+*TemplateMemberApi* | [**templateMembersUpsertWithWherePost**](docs/Api/TemplateMemberApi.md#templatemembersupsertwithwherepost) | **POST** /TemplateMembers/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
+*TemplatePermissionSetApi* | [**templatePermissionSetsChangeStreamGet**](docs/Api/TemplatePermissionSetApi.md#templatepermissionsetschangestreamget) | **GET** /TemplatePermissionSets/change-stream | Create a change stream.
+*TemplatePermissionSetApi* | [**templatePermissionSetsChangeStreamPost**](docs/Api/TemplatePermissionSetApi.md#templatepermissionsetschangestreampost) | **POST** /TemplatePermissionSets/change-stream | Create a change stream.
+*TemplatePermissionSetApi* | [**templatePermissionSetsCountGet**](docs/Api/TemplatePermissionSetApi.md#templatepermissionsetscountget) | **GET** /TemplatePermissionSets/count | Count instances of the model matched by where from the data source.
+*TemplatePermissionSetApi* | [**templatePermissionSetsFindOneGet**](docs/Api/TemplatePermissionSetApi.md#templatepermissionsetsfindoneget) | **GET** /TemplatePermissionSets/findOne | Find first instance of the model matched by filter from the data source.
+*TemplatePermissionSetApi* | [**templatePermissionSetsGet**](docs/Api/TemplatePermissionSetApi.md#templatepermissionsetsget) | **GET** /TemplatePermissionSets | Find all instances of the model matched by filter from the data source.
+*TemplatePermissionSetApi* | [**templatePermissionSetsIdDelete**](docs/Api/TemplatePermissionSetApi.md#templatepermissionsetsiddelete) | **DELETE** /TemplatePermissionSets/{id} | Delete a model instance by {{id}} from the data source.
+*TemplatePermissionSetApi* | [**templatePermissionSetsIdExistsGet**](docs/Api/TemplatePermissionSetApi.md#templatepermissionsetsidexistsget) | **GET** /TemplatePermissionSets/{id}/exists | Check whether a model instance exists in the data source.
+*TemplatePermissionSetApi* | [**templatePermissionSetsIdGet**](docs/Api/TemplatePermissionSetApi.md#templatepermissionsetsidget) | **GET** /TemplatePermissionSets/{id} | Find a model instance by {{id}} from the data source.
+*TemplatePermissionSetApi* | [**templatePermissionSetsIdHead**](docs/Api/TemplatePermissionSetApi.md#templatepermissionsetsidhead) | **HEAD** /TemplatePermissionSets/{id} | Check whether a model instance exists in the data source.
+*TemplatePermissionSetApi* | [**templatePermissionSetsIdPatch**](docs/Api/TemplatePermissionSetApi.md#templatepermissionsetsidpatch) | **PATCH** /TemplatePermissionSets/{id} | Patch attributes for a model instance and persist it into the data source.
+*TemplatePermissionSetApi* | [**templatePermissionSetsIdPut**](docs/Api/TemplatePermissionSetApi.md#templatepermissionsetsidput) | **PUT** /TemplatePermissionSets/{id} | Replace attributes for a model instance and persist it into the data source.
+*TemplatePermissionSetApi* | [**templatePermissionSetsIdReplacePost**](docs/Api/TemplatePermissionSetApi.md#templatepermissionsetsidreplacepost) | **POST** /TemplatePermissionSets/{id}/replace | Replace attributes for a model instance and persist it into the data source.
+*TemplatePermissionSetApi* | [**templatePermissionSetsIdTemplateGet**](docs/Api/TemplatePermissionSetApi.md#templatepermissionsetsidtemplateget) | **GET** /TemplatePermissionSets/{id}/template | Fetches belongsTo relation template.
+*TemplatePermissionSetApi* | [**templatePermissionSetsPatch**](docs/Api/TemplatePermissionSetApi.md#templatepermissionsetspatch) | **PATCH** /TemplatePermissionSets | Patch an existing model instance or insert a new one into the data source.
+*TemplatePermissionSetApi* | [**templatePermissionSetsPost**](docs/Api/TemplatePermissionSetApi.md#templatepermissionsetspost) | **POST** /TemplatePermissionSets | Create a new instance of the model and persist it into the data source.
+*TemplatePermissionSetApi* | [**templatePermissionSetsPut**](docs/Api/TemplatePermissionSetApi.md#templatepermissionsetsput) | **PUT** /TemplatePermissionSets | Replace an existing model instance or insert a new one into the data source.
+*TemplatePermissionSetApi* | [**templatePermissionSetsReplaceOrCreatePost**](docs/Api/TemplatePermissionSetApi.md#templatepermissionsetsreplaceorcreatepost) | **POST** /TemplatePermissionSets/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
+*TemplatePermissionSetApi* | [**templatePermissionSetsUpdatePost**](docs/Api/TemplatePermissionSetApi.md#templatepermissionsetsupdatepost) | **POST** /TemplatePermissionSets/update | Update instances of the model matched by {{where}} from the data source.
+*TemplatePermissionSetApi* | [**templatePermissionSetsUpsertWithWherePost**](docs/Api/TemplatePermissionSetApi.md#templatepermissionsetsupsertwithwherepost) | **POST** /TemplatePermissionSets/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
+*TemplateTagApi* | [**templateTagsChangeStreamGet**](docs/Api/TemplateTagApi.md#templatetagschangestreamget) | **GET** /TemplateTags/change-stream | Create a change stream.
+*TemplateTagApi* | [**templateTagsChangeStreamPost**](docs/Api/TemplateTagApi.md#templatetagschangestreampost) | **POST** /TemplateTags/change-stream | Create a change stream.
+*TemplateTagApi* | [**templateTagsCountGet**](docs/Api/TemplateTagApi.md#templatetagscountget) | **GET** /TemplateTags/count | Count instances of the model matched by where from the data source.
+*TemplateTagApi* | [**templateTagsFindOneGet**](docs/Api/TemplateTagApi.md#templatetagsfindoneget) | **GET** /TemplateTags/findOne | Find first instance of the model matched by filter from the data source.
+*TemplateTagApi* | [**templateTagsGet**](docs/Api/TemplateTagApi.md#templatetagsget) | **GET** /TemplateTags | Find all instances of the model matched by filter from the data source.
+*TemplateTagApi* | [**templateTagsIdDelete**](docs/Api/TemplateTagApi.md#templatetagsiddelete) | **DELETE** /TemplateTags/{id} | Delete a model instance by {{id}} from the data source.
+*TemplateTagApi* | [**templateTagsIdExistsGet**](docs/Api/TemplateTagApi.md#templatetagsidexistsget) | **GET** /TemplateTags/{id}/exists | Check whether a model instance exists in the data source.
+*TemplateTagApi* | [**templateTagsIdGet**](docs/Api/TemplateTagApi.md#templatetagsidget) | **GET** /TemplateTags/{id} | Find a model instance by {{id}} from the data source.
+*TemplateTagApi* | [**templateTagsIdHead**](docs/Api/TemplateTagApi.md#templatetagsidhead) | **HEAD** /TemplateTags/{id} | Check whether a model instance exists in the data source.
+*TemplateTagApi* | [**templateTagsIdPatch**](docs/Api/TemplateTagApi.md#templatetagsidpatch) | **PATCH** /TemplateTags/{id} | Patch attributes for a model instance and persist it into the data source.
+*TemplateTagApi* | [**templateTagsIdPut**](docs/Api/TemplateTagApi.md#templatetagsidput) | **PUT** /TemplateTags/{id} | Replace attributes for a model instance and persist it into the data source.
+*TemplateTagApi* | [**templateTagsIdReplacePost**](docs/Api/TemplateTagApi.md#templatetagsidreplacepost) | **POST** /TemplateTags/{id}/replace | Replace attributes for a model instance and persist it into the data source.
+*TemplateTagApi* | [**templateTagsIdTagGet**](docs/Api/TemplateTagApi.md#templatetagsidtagget) | **GET** /TemplateTags/{id}/tag | Fetches belongsTo relation tag.
+*TemplateTagApi* | [**templateTagsIdTemplateGet**](docs/Api/TemplateTagApi.md#templatetagsidtemplateget) | **GET** /TemplateTags/{id}/template | Fetches belongsTo relation template.
+*TemplateTagApi* | [**templateTagsPatch**](docs/Api/TemplateTagApi.md#templatetagspatch) | **PATCH** /TemplateTags | Patch an existing model instance or insert a new one into the data source.
+*TemplateTagApi* | [**templateTagsPost**](docs/Api/TemplateTagApi.md#templatetagspost) | **POST** /TemplateTags | Create a new instance of the model and persist it into the data source.
+*TemplateTagApi* | [**templateTagsPut**](docs/Api/TemplateTagApi.md#templatetagsput) | **PUT** /TemplateTags | Replace an existing model instance or insert a new one into the data source.
+*TemplateTagApi* | [**templateTagsReplaceOrCreatePost**](docs/Api/TemplateTagApi.md#templatetagsreplaceorcreatepost) | **POST** /TemplateTags/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
+*TemplateTagApi* | [**templateTagsUpdatePost**](docs/Api/TemplateTagApi.md#templatetagsupdatepost) | **POST** /TemplateTags/update | Update instances of the model matched by {{where}} from the data source.
+*TemplateTagApi* | [**templateTagsUpsertWithWherePost**](docs/Api/TemplateTagApi.md#templatetagsupsertwithwherepost) | **POST** /TemplateTags/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
 
 
 ## Documentation For Models
 
- - [AccessToken](docs/Model/AccessToken.md)
- - [Category](docs/Model/Category.md)
  - [Customer](docs/Model/Customer.md)
  - [Design](docs/Model/Design.md)
+ - [DesignAssignee](docs/Model/DesignAssignee.md)
+ - [DesignComment](docs/Model/DesignComment.md)
+ - [DesignReview](docs/Model/DesignReview.md)
+ - [DesignTag](docs/Model/DesignTag.md)
+ - [GeoPoint](docs/Model/GeoPoint.md)
+ - [Image](docs/Model/Image.md)
  - [InlineResponse200](docs/Model/InlineResponse200.md)
  - [InlineResponse2001](docs/Model/InlineResponse2001.md)
  - [InlineResponse2002](docs/Model/InlineResponse2002.md)
  - [InlineResponse2003](docs/Model/InlineResponse2003.md)
+ - [InvitationTicket](docs/Model/InvitationTicket.md)
+ - [Portal](docs/Model/Portal.md)
+ - [PortalMember](docs/Model/PortalMember.md)
+ - [PortalPermissionSet](docs/Model/PortalPermissionSet.md)
+ - [PortalTemplate](docs/Model/PortalTemplate.md)
  - [Tag](docs/Model/Tag.md)
- - [User](docs/Model/User.md)
+ - [Team](docs/Model/Team.md)
+ - [TeamBrand](docs/Model/TeamBrand.md)
+ - [TeamMember](docs/Model/TeamMember.md)
+ - [TeamMemberAccessToken](docs/Model/TeamMemberAccessToken.md)
+ - [Template](docs/Model/Template.md)
+ - [TemplateMember](docs/Model/TemplateMember.md)
+ - [TemplatePermissionSet](docs/Model/TemplatePermissionSet.md)
+ - [TemplateTag](docs/Model/TemplateTag.md)
 
 
 ## Documentation For Authorization

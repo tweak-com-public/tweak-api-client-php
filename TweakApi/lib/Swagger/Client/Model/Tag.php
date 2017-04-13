@@ -67,8 +67,11 @@ class Tag implements ArrayAccess
       */
     protected static $swaggerTypes = array(
         'name' => 'string',
+        'created' => '\DateTime',
+        'modified' => '\DateTime',
         'id' => 'double',
-        'designId' => 'double'
+        'templates' => 'object[]',
+        'designs' => 'object[]'
     );
 
     public static function swaggerTypes()
@@ -82,8 +85,11 @@ class Tag implements ArrayAccess
      */
     protected static $attributeMap = array(
         'name' => 'name',
+        'created' => 'created',
+        'modified' => 'modified',
         'id' => 'id',
-        'designId' => 'designId'
+        'templates' => 'templates',
+        'designs' => 'designs'
     );
 
     public static function attributeMap()
@@ -97,8 +103,11 @@ class Tag implements ArrayAccess
      */
     protected static $setters = array(
         'name' => 'setName',
+        'created' => 'setCreated',
+        'modified' => 'setModified',
         'id' => 'setId',
-        'designId' => 'setDesignId'
+        'templates' => 'setTemplates',
+        'designs' => 'setDesigns'
     );
 
     public static function setters()
@@ -112,8 +121,11 @@ class Tag implements ArrayAccess
      */
     protected static $getters = array(
         'name' => 'getName',
+        'created' => 'getCreated',
+        'modified' => 'getModified',
         'id' => 'getId',
-        'designId' => 'getDesignId'
+        'templates' => 'getTemplates',
+        'designs' => 'getDesigns'
     );
 
     public static function getters()
@@ -138,8 +150,11 @@ class Tag implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['created'] = isset($data['created']) ? $data['created'] : null;
+        $this->container['modified'] = isset($data['modified']) ? $data['modified'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['designId'] = isset($data['designId']) ? $data['designId'] : null;
+        $this->container['templates'] = isset($data['templates']) ? $data['templates'] : null;
+        $this->container['designs'] = isset($data['designs']) ? $data['designs'] : null;
     }
 
     /**
@@ -150,6 +165,9 @@ class Tag implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
+        if ($this->container['name'] === null) {
+            $invalid_properties[] = "'name' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -161,6 +179,9 @@ class Tag implements ArrayAccess
      */
     public function valid()
     {
+        if ($this->container['name'] === null) {
+            return false;
+        }
         return true;
     }
 
@@ -187,6 +208,48 @@ class Tag implements ArrayAccess
     }
 
     /**
+     * Gets created
+     * @return \DateTime
+     */
+    public function getCreated()
+    {
+        return $this->container['created'];
+    }
+
+    /**
+     * Sets created
+     * @param \DateTime $created
+     * @return $this
+     */
+    public function setCreated($created)
+    {
+        $this->container['created'] = $created;
+
+        return $this;
+    }
+
+    /**
+     * Gets modified
+     * @return \DateTime
+     */
+    public function getModified()
+    {
+        return $this->container['modified'];
+    }
+
+    /**
+     * Sets modified
+     * @param \DateTime $modified
+     * @return $this
+     */
+    public function setModified($modified)
+    {
+        $this->container['modified'] = $modified;
+
+        return $this;
+    }
+
+    /**
      * Gets id
      * @return double
      */
@@ -208,22 +271,43 @@ class Tag implements ArrayAccess
     }
 
     /**
-     * Gets designId
-     * @return double
+     * Gets templates
+     * @return object[]
      */
-    public function getDesignId()
+    public function getTemplates()
     {
-        return $this->container['designId'];
+        return $this->container['templates'];
     }
 
     /**
-     * Sets designId
-     * @param double $designId
+     * Sets templates
+     * @param object[] $templates
      * @return $this
      */
-    public function setDesignId($designId)
+    public function setTemplates($templates)
     {
-        $this->container['designId'] = $designId;
+        $this->container['templates'] = $templates;
+
+        return $this;
+    }
+
+    /**
+     * Gets designs
+     * @return object[]
+     */
+    public function getDesigns()
+    {
+        return $this->container['designs'];
+    }
+
+    /**
+     * Sets designs
+     * @param object[] $designs
+     * @return $this
+     */
+    public function setDesigns($designs)
+    {
+        $this->container['designs'] = $designs;
 
         return $this;
     }

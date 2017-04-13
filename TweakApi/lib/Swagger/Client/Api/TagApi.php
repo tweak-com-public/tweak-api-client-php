@@ -103,172 +103,7 @@ class TagApi
     }
 
     /**
-     * Operation tagCount
-     *
-     * Count instances of the model matched by where from the data source.
-     *
-     * @param string $where Criteria to match model instances (optional)
-     * @return \Swagger\Client\Model\InlineResponse200
-     * @throws \Tweak\Api\ApiException on non-2xx response
-     */
-    public function tagCount($where = null)
-    {
-        list($response) = $this->tagCountWithHttpInfo($where);
-        return $response;
-    }
-
-    /**
-     * Operation tagCountWithHttpInfo
-     *
-     * Count instances of the model matched by where from the data source.
-     *
-     * @param string $where Criteria to match model instances (optional)
-     * @return array of \Swagger\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Tweak\Api\ApiException on non-2xx response
-     */
-    public function tagCountWithHttpInfo($where = null)
-    {
-        // parse inputs
-        $resourcePath = "/Tags/count";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
-
-        // query params
-        if ($where !== null) {
-            $queryParams['where'] = $this->apiClient->getSerializer()->toQueryValue($where);
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $queryParams['access_token'] = $apiKey;
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'GET',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\Swagger\Client\Model\InlineResponse200',
-                '/Tags/count'
-            );
-
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader);
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse200', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation tagCreate
-     *
-     * Create a new instance of the model and persist it into the data source.
-     *
-     * @param \Swagger\Client\Model\Tag $data Model instance data (optional)
-     * @return \Swagger\Client\Model\Tag
-     * @throws \Tweak\Api\ApiException on non-2xx response
-     */
-    public function tagCreate($data = null)
-    {
-        list($response) = $this->tagCreateWithHttpInfo($data);
-        return $response;
-    }
-
-    /**
-     * Operation tagCreateWithHttpInfo
-     *
-     * Create a new instance of the model and persist it into the data source.
-     *
-     * @param \Swagger\Client\Model\Tag $data Model instance data (optional)
-     * @return array of \Swagger\Client\Model\Tag, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Tweak\Api\ApiException on non-2xx response
-     */
-    public function tagCreateWithHttpInfo($data = null)
-    {
-        // parse inputs
-        $resourcePath = "/Tags";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
-
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        // body params
-        $_tempBody = null;
-        if (isset($data)) {
-            $_tempBody = $data;
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $queryParams['access_token'] = $apiKey;
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'POST',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\Swagger\Client\Model\Tag',
-                '/Tags'
-            );
-
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Tag', $httpHeader), $statusCode, $httpHeader);
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Tag', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation tagCreateChangeStreamGetTagsChangeStream
+     * Operation tagsChangeStreamGet
      *
      * Create a change stream.
      *
@@ -276,14 +111,14 @@ class TagApi
      * @return \SplFileObject
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function tagCreateChangeStreamGetTagsChangeStream($options = null)
+    public function tagsChangeStreamGet($options = null)
     {
-        list($response) = $this->tagCreateChangeStreamGetTagsChangeStreamWithHttpInfo($options);
+        list($response) = $this->tagsChangeStreamGetWithHttpInfo($options);
         return $response;
     }
 
     /**
-     * Operation tagCreateChangeStreamGetTagsChangeStreamWithHttpInfo
+     * Operation tagsChangeStreamGetWithHttpInfo
      *
      * Create a change stream.
      *
@@ -291,7 +126,7 @@ class TagApi
      * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function tagCreateChangeStreamGetTagsChangeStreamWithHttpInfo($options = null)
+    public function tagsChangeStreamGetWithHttpInfo($options = null)
     {
         // parse inputs
         $resourcePath = "/Tags/change-stream";
@@ -350,7 +185,7 @@ class TagApi
     }
 
     /**
-     * Operation tagCreateChangeStreamPostTagsChangeStream
+     * Operation tagsChangeStreamPost
      *
      * Create a change stream.
      *
@@ -358,14 +193,14 @@ class TagApi
      * @return \SplFileObject
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function tagCreateChangeStreamPostTagsChangeStream($options = null)
+    public function tagsChangeStreamPost($options = null)
     {
-        list($response) = $this->tagCreateChangeStreamPostTagsChangeStreamWithHttpInfo($options);
+        list($response) = $this->tagsChangeStreamPostWithHttpInfo($options);
         return $response;
     }
 
     /**
-     * Operation tagCreateChangeStreamPostTagsChangeStreamWithHttpInfo
+     * Operation tagsChangeStreamPostWithHttpInfo
      *
      * Create a change stream.
      *
@@ -373,7 +208,7 @@ class TagApi
      * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function tagCreateChangeStreamPostTagsChangeStreamWithHttpInfo($options = null)
+    public function tagsChangeStreamPostWithHttpInfo($options = null)
     {
         // parse inputs
         $resourcePath = "/Tags/change-stream";
@@ -432,7 +267,253 @@ class TagApi
     }
 
     /**
-     * Operation tagDeleteById
+     * Operation tagsCountGet
+     *
+     * Count instances of the model matched by where from the data source.
+     *
+     * @param string $where Criteria to match model instances (optional)
+     * @return \Swagger\Client\Model\InlineResponse200
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsCountGet($where = null)
+    {
+        list($response) = $this->tagsCountGetWithHttpInfo($where);
+        return $response;
+    }
+
+    /**
+     * Operation tagsCountGetWithHttpInfo
+     *
+     * Count instances of the model matched by where from the data source.
+     *
+     * @param string $where Criteria to match model instances (optional)
+     * @return array of \Swagger\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsCountGetWithHttpInfo($where = null)
+    {
+        // parse inputs
+        $resourcePath = "/Tags/count";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($where !== null) {
+            $queryParams['where'] = $this->apiClient->getSerializer()->toQueryValue($where);
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\InlineResponse200',
+                '/Tags/count'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse200', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation tagsFindOneGet
+     *
+     * Find first instance of the model matched by filter from the data source.
+     *
+     * @param string $filter Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({\&quot;something\&quot;:\&quot;value\&quot;}) (optional)
+     * @return \Swagger\Client\Model\Tag
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsFindOneGet($filter = null)
+    {
+        list($response) = $this->tagsFindOneGetWithHttpInfo($filter);
+        return $response;
+    }
+
+    /**
+     * Operation tagsFindOneGetWithHttpInfo
+     *
+     * Find first instance of the model matched by filter from the data source.
+     *
+     * @param string $filter Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({\&quot;something\&quot;:\&quot;value\&quot;}) (optional)
+     * @return array of \Swagger\Client\Model\Tag, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsFindOneGetWithHttpInfo($filter = null)
+    {
+        // parse inputs
+        $resourcePath = "/Tags/findOne";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($filter !== null) {
+            $queryParams['filter'] = $this->apiClient->getSerializer()->toQueryValue($filter);
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\Tag',
+                '/Tags/findOne'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Tag', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Tag', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation tagsGet
+     *
+     * Find all instances of the model matched by filter from the data source.
+     *
+     * @param string $filter Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({\&quot;something\&quot;:\&quot;value\&quot;}) (optional)
+     * @return \Swagger\Client\Model\Tag[]
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsGet($filter = null)
+    {
+        list($response) = $this->tagsGetWithHttpInfo($filter);
+        return $response;
+    }
+
+    /**
+     * Operation tagsGetWithHttpInfo
+     *
+     * Find all instances of the model matched by filter from the data source.
+     *
+     * @param string $filter Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({\&quot;something\&quot;:\&quot;value\&quot;}) (optional)
+     * @return array of \Swagger\Client\Model\Tag[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsGetWithHttpInfo($filter = null)
+    {
+        // parse inputs
+        $resourcePath = "/Tags";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($filter !== null) {
+            $queryParams['filter'] = $this->apiClient->getSerializer()->toQueryValue($filter);
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\Tag[]',
+                '/Tags'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Tag[]', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Tag[]', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation tagsIdDelete
      *
      * Delete a model instance by {{id}} from the data source.
      *
@@ -440,14 +521,14 @@ class TagApi
      * @return object
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function tagDeleteById($id)
+    public function tagsIdDelete($id)
     {
-        list($response) = $this->tagDeleteByIdWithHttpInfo($id);
+        list($response) = $this->tagsIdDeleteWithHttpInfo($id);
         return $response;
     }
 
     /**
-     * Operation tagDeleteByIdWithHttpInfo
+     * Operation tagsIdDeleteWithHttpInfo
      *
      * Delete a model instance by {{id}} from the data source.
      *
@@ -455,11 +536,11 @@ class TagApi
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function tagDeleteByIdWithHttpInfo($id)
+    public function tagsIdDeleteWithHttpInfo($id)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling tagDeleteById');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling tagsIdDelete');
         }
         // parse inputs
         $resourcePath = "/Tags/{id}";
@@ -522,7 +603,1012 @@ class TagApi
     }
 
     /**
-     * Operation tagExistsGetTagsidExists
+     * Operation tagsIdDesignsCountGet
+     *
+     * Counts designs of Tag.
+     *
+     * @param string $id Tag id (required)
+     * @param string $where Criteria to match model instances (optional)
+     * @return \Swagger\Client\Model\InlineResponse200
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdDesignsCountGet($id, $where = null)
+    {
+        list($response) = $this->tagsIdDesignsCountGetWithHttpInfo($id, $where);
+        return $response;
+    }
+
+    /**
+     * Operation tagsIdDesignsCountGetWithHttpInfo
+     *
+     * Counts designs of Tag.
+     *
+     * @param string $id Tag id (required)
+     * @param string $where Criteria to match model instances (optional)
+     * @return array of \Swagger\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdDesignsCountGetWithHttpInfo($id, $where = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling tagsIdDesignsCountGet');
+        }
+        // parse inputs
+        $resourcePath = "/Tags/{id}/designs/count";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($where !== null) {
+            $queryParams['where'] = $this->apiClient->getSerializer()->toQueryValue($where);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\InlineResponse200',
+                '/Tags/{id}/designs/count'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse200', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation tagsIdDesignsDelete
+     *
+     * Deletes all designs of this model.
+     *
+     * @param string $id Tag id (required)
+     * @return void
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdDesignsDelete($id)
+    {
+        list($response) = $this->tagsIdDesignsDeleteWithHttpInfo($id);
+        return $response;
+    }
+
+    /**
+     * Operation tagsIdDesignsDeleteWithHttpInfo
+     *
+     * Deletes all designs of this model.
+     *
+     * @param string $id Tag id (required)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdDesignsDeleteWithHttpInfo($id)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling tagsIdDesignsDelete');
+        }
+        // parse inputs
+        $resourcePath = "/Tags/{id}/designs";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/Tags/{id}/designs'
+            );
+
+            return array(null, $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation tagsIdDesignsFkDelete
+     *
+     * Delete a related item by id for designs.
+     *
+     * @param string $id Tag id (required)
+     * @param string $fk Foreign key for designs (required)
+     * @return void
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdDesignsFkDelete($id, $fk)
+    {
+        list($response) = $this->tagsIdDesignsFkDeleteWithHttpInfo($id, $fk);
+        return $response;
+    }
+
+    /**
+     * Operation tagsIdDesignsFkDeleteWithHttpInfo
+     *
+     * Delete a related item by id for designs.
+     *
+     * @param string $id Tag id (required)
+     * @param string $fk Foreign key for designs (required)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdDesignsFkDeleteWithHttpInfo($id, $fk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling tagsIdDesignsFkDelete');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling tagsIdDesignsFkDelete');
+        }
+        // parse inputs
+        $resourcePath = "/Tags/{id}/designs/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/Tags/{id}/designs/{fk}'
+            );
+
+            return array(null, $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation tagsIdDesignsFkGet
+     *
+     * Find a related item by id for designs.
+     *
+     * @param string $id Tag id (required)
+     * @param string $fk Foreign key for designs (required)
+     * @return \Swagger\Client\Model\Design
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdDesignsFkGet($id, $fk)
+    {
+        list($response) = $this->tagsIdDesignsFkGetWithHttpInfo($id, $fk);
+        return $response;
+    }
+
+    /**
+     * Operation tagsIdDesignsFkGetWithHttpInfo
+     *
+     * Find a related item by id for designs.
+     *
+     * @param string $id Tag id (required)
+     * @param string $fk Foreign key for designs (required)
+     * @return array of \Swagger\Client\Model\Design, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdDesignsFkGetWithHttpInfo($id, $fk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling tagsIdDesignsFkGet');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling tagsIdDesignsFkGet');
+        }
+        // parse inputs
+        $resourcePath = "/Tags/{id}/designs/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\Design',
+                '/Tags/{id}/designs/{fk}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Design', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Design', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation tagsIdDesignsFkPut
+     *
+     * Update a related item by id for designs.
+     *
+     * @param string $id Tag id (required)
+     * @param string $fk Foreign key for designs (required)
+     * @param \Swagger\Client\Model\Design $data  (optional)
+     * @return \Swagger\Client\Model\Design
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdDesignsFkPut($id, $fk, $data = null)
+    {
+        list($response) = $this->tagsIdDesignsFkPutWithHttpInfo($id, $fk, $data);
+        return $response;
+    }
+
+    /**
+     * Operation tagsIdDesignsFkPutWithHttpInfo
+     *
+     * Update a related item by id for designs.
+     *
+     * @param string $id Tag id (required)
+     * @param string $fk Foreign key for designs (required)
+     * @param \Swagger\Client\Model\Design $data  (optional)
+     * @return array of \Swagger\Client\Model\Design, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdDesignsFkPutWithHttpInfo($id, $fk, $data = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling tagsIdDesignsFkPut');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling tagsIdDesignsFkPut');
+        }
+        // parse inputs
+        $resourcePath = "/Tags/{id}/designs/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\Design',
+                '/Tags/{id}/designs/{fk}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Design', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Design', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation tagsIdDesignsGet
+     *
+     * Queries designs of Tag.
+     *
+     * @param string $id Tag id (required)
+     * @param string $filter  (optional)
+     * @return \Swagger\Client\Model\Design[]
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdDesignsGet($id, $filter = null)
+    {
+        list($response) = $this->tagsIdDesignsGetWithHttpInfo($id, $filter);
+        return $response;
+    }
+
+    /**
+     * Operation tagsIdDesignsGetWithHttpInfo
+     *
+     * Queries designs of Tag.
+     *
+     * @param string $id Tag id (required)
+     * @param string $filter  (optional)
+     * @return array of \Swagger\Client\Model\Design[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdDesignsGetWithHttpInfo($id, $filter = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling tagsIdDesignsGet');
+        }
+        // parse inputs
+        $resourcePath = "/Tags/{id}/designs";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($filter !== null) {
+            $queryParams['filter'] = $this->apiClient->getSerializer()->toQueryValue($filter);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\Design[]',
+                '/Tags/{id}/designs'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Design[]', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Design[]', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation tagsIdDesignsPost
+     *
+     * Creates a new instance in designs of this model.
+     *
+     * @param string $id Tag id (required)
+     * @param \Swagger\Client\Model\Design $data  (optional)
+     * @return \Swagger\Client\Model\Design
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdDesignsPost($id, $data = null)
+    {
+        list($response) = $this->tagsIdDesignsPostWithHttpInfo($id, $data);
+        return $response;
+    }
+
+    /**
+     * Operation tagsIdDesignsPostWithHttpInfo
+     *
+     * Creates a new instance in designs of this model.
+     *
+     * @param string $id Tag id (required)
+     * @param \Swagger\Client\Model\Design $data  (optional)
+     * @return array of \Swagger\Client\Model\Design, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdDesignsPostWithHttpInfo($id, $data = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling tagsIdDesignsPost');
+        }
+        // parse inputs
+        $resourcePath = "/Tags/{id}/designs";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\Design',
+                '/Tags/{id}/designs'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Design', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Design', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation tagsIdDesignsRelFkDelete
+     *
+     * Remove the designs relation to an item by id.
+     *
+     * @param string $id Tag id (required)
+     * @param string $fk Foreign key for designs (required)
+     * @return void
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdDesignsRelFkDelete($id, $fk)
+    {
+        list($response) = $this->tagsIdDesignsRelFkDeleteWithHttpInfo($id, $fk);
+        return $response;
+    }
+
+    /**
+     * Operation tagsIdDesignsRelFkDeleteWithHttpInfo
+     *
+     * Remove the designs relation to an item by id.
+     *
+     * @param string $id Tag id (required)
+     * @param string $fk Foreign key for designs (required)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdDesignsRelFkDeleteWithHttpInfo($id, $fk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling tagsIdDesignsRelFkDelete');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling tagsIdDesignsRelFkDelete');
+        }
+        // parse inputs
+        $resourcePath = "/Tags/{id}/designs/rel/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/Tags/{id}/designs/rel/{fk}'
+            );
+
+            return array(null, $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation tagsIdDesignsRelFkHead
+     *
+     * Check the existence of designs relation to an item by id.
+     *
+     * @param string $id Tag id (required)
+     * @param string $fk Foreign key for designs (required)
+     * @return bool
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdDesignsRelFkHead($id, $fk)
+    {
+        list($response) = $this->tagsIdDesignsRelFkHeadWithHttpInfo($id, $fk);
+        return $response;
+    }
+
+    /**
+     * Operation tagsIdDesignsRelFkHeadWithHttpInfo
+     *
+     * Check the existence of designs relation to an item by id.
+     *
+     * @param string $id Tag id (required)
+     * @param string $fk Foreign key for designs (required)
+     * @return array of bool, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdDesignsRelFkHeadWithHttpInfo($id, $fk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling tagsIdDesignsRelFkHead');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling tagsIdDesignsRelFkHead');
+        }
+        // parse inputs
+        $resourcePath = "/Tags/{id}/designs/rel/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'HEAD',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                'bool',
+                '/Tags/{id}/designs/rel/{fk}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, 'bool', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), 'bool', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation tagsIdDesignsRelFkPut
+     *
+     * Add a related item by id for designs.
+     *
+     * @param string $id Tag id (required)
+     * @param string $fk Foreign key for designs (required)
+     * @param \Swagger\Client\Model\DesignTag $data  (optional)
+     * @return \Swagger\Client\Model\DesignTag
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdDesignsRelFkPut($id, $fk, $data = null)
+    {
+        list($response) = $this->tagsIdDesignsRelFkPutWithHttpInfo($id, $fk, $data);
+        return $response;
+    }
+
+    /**
+     * Operation tagsIdDesignsRelFkPutWithHttpInfo
+     *
+     * Add a related item by id for designs.
+     *
+     * @param string $id Tag id (required)
+     * @param string $fk Foreign key for designs (required)
+     * @param \Swagger\Client\Model\DesignTag $data  (optional)
+     * @return array of \Swagger\Client\Model\DesignTag, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdDesignsRelFkPutWithHttpInfo($id, $fk, $data = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling tagsIdDesignsRelFkPut');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling tagsIdDesignsRelFkPut');
+        }
+        // parse inputs
+        $resourcePath = "/Tags/{id}/designs/rel/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\DesignTag',
+                '/Tags/{id}/designs/rel/{fk}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\DesignTag', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\DesignTag', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation tagsIdExistsGet
      *
      * Check whether a model instance exists in the data source.
      *
@@ -530,14 +1616,14 @@ class TagApi
      * @return \Swagger\Client\Model\InlineResponse2002
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function tagExistsGetTagsidExists($id)
+    public function tagsIdExistsGet($id)
     {
-        list($response) = $this->tagExistsGetTagsidExistsWithHttpInfo($id);
+        list($response) = $this->tagsIdExistsGetWithHttpInfo($id);
         return $response;
     }
 
     /**
-     * Operation tagExistsGetTagsidExistsWithHttpInfo
+     * Operation tagsIdExistsGetWithHttpInfo
      *
      * Check whether a model instance exists in the data source.
      *
@@ -545,11 +1631,11 @@ class TagApi
      * @return array of \Swagger\Client\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function tagExistsGetTagsidExistsWithHttpInfo($id)
+    public function tagsIdExistsGetWithHttpInfo($id)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling tagExistsGetTagsidExists');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling tagsIdExistsGet');
         }
         // parse inputs
         $resourcePath = "/Tags/{id}/exists";
@@ -612,7 +1698,103 @@ class TagApi
     }
 
     /**
-     * Operation tagExistsHeadTagsid
+     * Operation tagsIdGet
+     *
+     * Find a model instance by {{id}} from the data source.
+     *
+     * @param string $id Model id (required)
+     * @param string $filter Filter defining fields and include - must be a JSON-encoded string ({\&quot;something\&quot;:\&quot;value\&quot;}) (optional)
+     * @return \Swagger\Client\Model\Tag
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdGet($id, $filter = null)
+    {
+        list($response) = $this->tagsIdGetWithHttpInfo($id, $filter);
+        return $response;
+    }
+
+    /**
+     * Operation tagsIdGetWithHttpInfo
+     *
+     * Find a model instance by {{id}} from the data source.
+     *
+     * @param string $id Model id (required)
+     * @param string $filter Filter defining fields and include - must be a JSON-encoded string ({\&quot;something\&quot;:\&quot;value\&quot;}) (optional)
+     * @return array of \Swagger\Client\Model\Tag, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdGetWithHttpInfo($id, $filter = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling tagsIdGet');
+        }
+        // parse inputs
+        $resourcePath = "/Tags/{id}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($filter !== null) {
+            $queryParams['filter'] = $this->apiClient->getSerializer()->toQueryValue($filter);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\Tag',
+                '/Tags/{id}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Tag', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Tag', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation tagsIdHead
      *
      * Check whether a model instance exists in the data source.
      *
@@ -620,14 +1802,14 @@ class TagApi
      * @return \Swagger\Client\Model\InlineResponse2002
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function tagExistsHeadTagsid($id)
+    public function tagsIdHead($id)
     {
-        list($response) = $this->tagExistsHeadTagsidWithHttpInfo($id);
+        list($response) = $this->tagsIdHeadWithHttpInfo($id);
         return $response;
     }
 
     /**
-     * Operation tagExistsHeadTagsidWithHttpInfo
+     * Operation tagsIdHeadWithHttpInfo
      *
      * Check whether a model instance exists in the data source.
      *
@@ -635,11 +1817,11 @@ class TagApi
      * @return array of \Swagger\Client\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function tagExistsHeadTagsidWithHttpInfo($id)
+    public function tagsIdHeadWithHttpInfo($id)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling tagExistsHeadTagsid');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling tagsIdHead');
         }
         // parse inputs
         $resourcePath = "/Tags/{id}";
@@ -702,267 +1884,7 @@ class TagApi
     }
 
     /**
-     * Operation tagFind
-     *
-     * Find all instances of the model matched by filter from the data source.
-     *
-     * @param string $filter Filter defining fields, where, include, order, offset, and limit (optional)
-     * @return \Swagger\Client\Model\Tag[]
-     * @throws \Tweak\Api\ApiException on non-2xx response
-     */
-    public function tagFind($filter = null)
-    {
-        list($response) = $this->tagFindWithHttpInfo($filter);
-        return $response;
-    }
-
-    /**
-     * Operation tagFindWithHttpInfo
-     *
-     * Find all instances of the model matched by filter from the data source.
-     *
-     * @param string $filter Filter defining fields, where, include, order, offset, and limit (optional)
-     * @return array of \Swagger\Client\Model\Tag[], HTTP status code, HTTP response headers (array of strings)
-     * @throws \Tweak\Api\ApiException on non-2xx response
-     */
-    public function tagFindWithHttpInfo($filter = null)
-    {
-        // parse inputs
-        $resourcePath = "/Tags";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
-
-        // query params
-        if ($filter !== null) {
-            $queryParams['filter'] = $this->apiClient->getSerializer()->toQueryValue($filter);
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $queryParams['access_token'] = $apiKey;
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'GET',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\Swagger\Client\Model\Tag[]',
-                '/Tags'
-            );
-
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Tag[]', $httpHeader), $statusCode, $httpHeader);
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Tag[]', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation tagFindById
-     *
-     * Find a model instance by {{id}} from the data source.
-     *
-     * @param string $id Model id (required)
-     * @param string $filter Filter defining fields and include (optional)
-     * @return \Swagger\Client\Model\Tag
-     * @throws \Tweak\Api\ApiException on non-2xx response
-     */
-    public function tagFindById($id, $filter = null)
-    {
-        list($response) = $this->tagFindByIdWithHttpInfo($id, $filter);
-        return $response;
-    }
-
-    /**
-     * Operation tagFindByIdWithHttpInfo
-     *
-     * Find a model instance by {{id}} from the data source.
-     *
-     * @param string $id Model id (required)
-     * @param string $filter Filter defining fields and include (optional)
-     * @return array of \Swagger\Client\Model\Tag, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Tweak\Api\ApiException on non-2xx response
-     */
-    public function tagFindByIdWithHttpInfo($id, $filter = null)
-    {
-        // verify the required parameter 'id' is set
-        if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling tagFindById');
-        }
-        // parse inputs
-        $resourcePath = "/Tags/{id}";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
-
-        // query params
-        if ($filter !== null) {
-            $queryParams['filter'] = $this->apiClient->getSerializer()->toQueryValue($filter);
-        }
-        // path params
-        if ($id !== null) {
-            $resourcePath = str_replace(
-                "{" . "id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $queryParams['access_token'] = $apiKey;
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'GET',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\Swagger\Client\Model\Tag',
-                '/Tags/{id}'
-            );
-
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Tag', $httpHeader), $statusCode, $httpHeader);
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Tag', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation tagFindOne
-     *
-     * Find first instance of the model matched by filter from the data source.
-     *
-     * @param string $filter Filter defining fields, where, include, order, offset, and limit (optional)
-     * @return \Swagger\Client\Model\Tag
-     * @throws \Tweak\Api\ApiException on non-2xx response
-     */
-    public function tagFindOne($filter = null)
-    {
-        list($response) = $this->tagFindOneWithHttpInfo($filter);
-        return $response;
-    }
-
-    /**
-     * Operation tagFindOneWithHttpInfo
-     *
-     * Find first instance of the model matched by filter from the data source.
-     *
-     * @param string $filter Filter defining fields, where, include, order, offset, and limit (optional)
-     * @return array of \Swagger\Client\Model\Tag, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Tweak\Api\ApiException on non-2xx response
-     */
-    public function tagFindOneWithHttpInfo($filter = null)
-    {
-        // parse inputs
-        $resourcePath = "/Tags/findOne";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
-
-        // query params
-        if ($filter !== null) {
-            $queryParams['filter'] = $this->apiClient->getSerializer()->toQueryValue($filter);
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $queryParams['access_token'] = $apiKey;
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'GET',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\Swagger\Client\Model\Tag',
-                '/Tags/findOne'
-            );
-
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Tag', $httpHeader), $statusCode, $httpHeader);
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Tag', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation tagPrototypeUpdateAttributesPatchTagsid
+     * Operation tagsIdPatch
      *
      * Patch attributes for a model instance and persist it into the data source.
      *
@@ -971,14 +1893,14 @@ class TagApi
      * @return \Swagger\Client\Model\Tag
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function tagPrototypeUpdateAttributesPatchTagsid($id, $data = null)
+    public function tagsIdPatch($id, $data = null)
     {
-        list($response) = $this->tagPrototypeUpdateAttributesPatchTagsidWithHttpInfo($id, $data);
+        list($response) = $this->tagsIdPatchWithHttpInfo($id, $data);
         return $response;
     }
 
     /**
-     * Operation tagPrototypeUpdateAttributesPatchTagsidWithHttpInfo
+     * Operation tagsIdPatchWithHttpInfo
      *
      * Patch attributes for a model instance and persist it into the data source.
      *
@@ -987,11 +1909,11 @@ class TagApi
      * @return array of \Swagger\Client\Model\Tag, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function tagPrototypeUpdateAttributesPatchTagsidWithHttpInfo($id, $data = null)
+    public function tagsIdPatchWithHttpInfo($id, $data = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling tagPrototypeUpdateAttributesPatchTagsid');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling tagsIdPatch');
         }
         // parse inputs
         $resourcePath = "/Tags/{id}";
@@ -1059,36 +1981,36 @@ class TagApi
     }
 
     /**
-     * Operation tagPrototypeUpdateAttributesPutTagsid
+     * Operation tagsIdPut
      *
-     * Patch attributes for a model instance and persist it into the data source.
+     * Replace attributes for a model instance and persist it into the data source.
      *
-     * @param string $id Tag id (required)
-     * @param \Swagger\Client\Model\Tag $data An object of model property name/value pairs (optional)
+     * @param string $id Model id (required)
+     * @param \Swagger\Client\Model\Tag $data Model instance data (optional)
      * @return \Swagger\Client\Model\Tag
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function tagPrototypeUpdateAttributesPutTagsid($id, $data = null)
+    public function tagsIdPut($id, $data = null)
     {
-        list($response) = $this->tagPrototypeUpdateAttributesPutTagsidWithHttpInfo($id, $data);
+        list($response) = $this->tagsIdPutWithHttpInfo($id, $data);
         return $response;
     }
 
     /**
-     * Operation tagPrototypeUpdateAttributesPutTagsidWithHttpInfo
+     * Operation tagsIdPutWithHttpInfo
      *
-     * Patch attributes for a model instance and persist it into the data source.
+     * Replace attributes for a model instance and persist it into the data source.
      *
-     * @param string $id Tag id (required)
-     * @param \Swagger\Client\Model\Tag $data An object of model property name/value pairs (optional)
+     * @param string $id Model id (required)
+     * @param \Swagger\Client\Model\Tag $data Model instance data (optional)
      * @return array of \Swagger\Client\Model\Tag, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function tagPrototypeUpdateAttributesPutTagsidWithHttpInfo($id, $data = null)
+    public function tagsIdPutWithHttpInfo($id, $data = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling tagPrototypeUpdateAttributesPutTagsid');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling tagsIdPut');
         }
         // parse inputs
         $resourcePath = "/Tags/{id}";
@@ -1156,7 +2078,7 @@ class TagApi
     }
 
     /**
-     * Operation tagReplaceById
+     * Operation tagsIdReplacePost
      *
      * Replace attributes for a model instance and persist it into the data source.
      *
@@ -1165,14 +2087,14 @@ class TagApi
      * @return \Swagger\Client\Model\Tag
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function tagReplaceById($id, $data = null)
+    public function tagsIdReplacePost($id, $data = null)
     {
-        list($response) = $this->tagReplaceByIdWithHttpInfo($id, $data);
+        list($response) = $this->tagsIdReplacePostWithHttpInfo($id, $data);
         return $response;
     }
 
     /**
-     * Operation tagReplaceByIdWithHttpInfo
+     * Operation tagsIdReplacePostWithHttpInfo
      *
      * Replace attributes for a model instance and persist it into the data source.
      *
@@ -1181,11 +2103,11 @@ class TagApi
      * @return array of \Swagger\Client\Model\Tag, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function tagReplaceByIdWithHttpInfo($id, $data = null)
+    public function tagsIdReplacePostWithHttpInfo($id, $data = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling tagReplaceById');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling tagsIdReplacePost');
         }
         // parse inputs
         $resourcePath = "/Tags/{id}/replace";
@@ -1253,7 +2175,1178 @@ class TagApi
     }
 
     /**
-     * Operation tagReplaceOrCreate
+     * Operation tagsIdTemplatesCountGet
+     *
+     * Counts templates of Tag.
+     *
+     * @param string $id Tag id (required)
+     * @param string $where Criteria to match model instances (optional)
+     * @return \Swagger\Client\Model\InlineResponse200
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdTemplatesCountGet($id, $where = null)
+    {
+        list($response) = $this->tagsIdTemplatesCountGetWithHttpInfo($id, $where);
+        return $response;
+    }
+
+    /**
+     * Operation tagsIdTemplatesCountGetWithHttpInfo
+     *
+     * Counts templates of Tag.
+     *
+     * @param string $id Tag id (required)
+     * @param string $where Criteria to match model instances (optional)
+     * @return array of \Swagger\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdTemplatesCountGetWithHttpInfo($id, $where = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling tagsIdTemplatesCountGet');
+        }
+        // parse inputs
+        $resourcePath = "/Tags/{id}/templates/count";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($where !== null) {
+            $queryParams['where'] = $this->apiClient->getSerializer()->toQueryValue($where);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\InlineResponse200',
+                '/Tags/{id}/templates/count'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse200', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation tagsIdTemplatesDelete
+     *
+     * Deletes all templates of this model.
+     *
+     * @param string $id Tag id (required)
+     * @return void
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdTemplatesDelete($id)
+    {
+        list($response) = $this->tagsIdTemplatesDeleteWithHttpInfo($id);
+        return $response;
+    }
+
+    /**
+     * Operation tagsIdTemplatesDeleteWithHttpInfo
+     *
+     * Deletes all templates of this model.
+     *
+     * @param string $id Tag id (required)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdTemplatesDeleteWithHttpInfo($id)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling tagsIdTemplatesDelete');
+        }
+        // parse inputs
+        $resourcePath = "/Tags/{id}/templates";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/Tags/{id}/templates'
+            );
+
+            return array(null, $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation tagsIdTemplatesFkDelete
+     *
+     * Delete a related item by id for templates.
+     *
+     * @param string $id Tag id (required)
+     * @param string $fk Foreign key for templates (required)
+     * @return void
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdTemplatesFkDelete($id, $fk)
+    {
+        list($response) = $this->tagsIdTemplatesFkDeleteWithHttpInfo($id, $fk);
+        return $response;
+    }
+
+    /**
+     * Operation tagsIdTemplatesFkDeleteWithHttpInfo
+     *
+     * Delete a related item by id for templates.
+     *
+     * @param string $id Tag id (required)
+     * @param string $fk Foreign key for templates (required)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdTemplatesFkDeleteWithHttpInfo($id, $fk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling tagsIdTemplatesFkDelete');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling tagsIdTemplatesFkDelete');
+        }
+        // parse inputs
+        $resourcePath = "/Tags/{id}/templates/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/Tags/{id}/templates/{fk}'
+            );
+
+            return array(null, $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation tagsIdTemplatesFkGet
+     *
+     * Find a related item by id for templates.
+     *
+     * @param string $id Tag id (required)
+     * @param string $fk Foreign key for templates (required)
+     * @return \Swagger\Client\Model\Template
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdTemplatesFkGet($id, $fk)
+    {
+        list($response) = $this->tagsIdTemplatesFkGetWithHttpInfo($id, $fk);
+        return $response;
+    }
+
+    /**
+     * Operation tagsIdTemplatesFkGetWithHttpInfo
+     *
+     * Find a related item by id for templates.
+     *
+     * @param string $id Tag id (required)
+     * @param string $fk Foreign key for templates (required)
+     * @return array of \Swagger\Client\Model\Template, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdTemplatesFkGetWithHttpInfo($id, $fk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling tagsIdTemplatesFkGet');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling tagsIdTemplatesFkGet');
+        }
+        // parse inputs
+        $resourcePath = "/Tags/{id}/templates/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\Template',
+                '/Tags/{id}/templates/{fk}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Template', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Template', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation tagsIdTemplatesFkPut
+     *
+     * Update a related item by id for templates.
+     *
+     * @param string $id Tag id (required)
+     * @param string $fk Foreign key for templates (required)
+     * @param \Swagger\Client\Model\Template $data  (optional)
+     * @return \Swagger\Client\Model\Template
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdTemplatesFkPut($id, $fk, $data = null)
+    {
+        list($response) = $this->tagsIdTemplatesFkPutWithHttpInfo($id, $fk, $data);
+        return $response;
+    }
+
+    /**
+     * Operation tagsIdTemplatesFkPutWithHttpInfo
+     *
+     * Update a related item by id for templates.
+     *
+     * @param string $id Tag id (required)
+     * @param string $fk Foreign key for templates (required)
+     * @param \Swagger\Client\Model\Template $data  (optional)
+     * @return array of \Swagger\Client\Model\Template, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdTemplatesFkPutWithHttpInfo($id, $fk, $data = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling tagsIdTemplatesFkPut');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling tagsIdTemplatesFkPut');
+        }
+        // parse inputs
+        $resourcePath = "/Tags/{id}/templates/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\Template',
+                '/Tags/{id}/templates/{fk}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Template', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Template', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation tagsIdTemplatesGet
+     *
+     * Queries templates of Tag.
+     *
+     * @param string $id Tag id (required)
+     * @param string $filter  (optional)
+     * @return \Swagger\Client\Model\Template[]
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdTemplatesGet($id, $filter = null)
+    {
+        list($response) = $this->tagsIdTemplatesGetWithHttpInfo($id, $filter);
+        return $response;
+    }
+
+    /**
+     * Operation tagsIdTemplatesGetWithHttpInfo
+     *
+     * Queries templates of Tag.
+     *
+     * @param string $id Tag id (required)
+     * @param string $filter  (optional)
+     * @return array of \Swagger\Client\Model\Template[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdTemplatesGetWithHttpInfo($id, $filter = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling tagsIdTemplatesGet');
+        }
+        // parse inputs
+        $resourcePath = "/Tags/{id}/templates";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($filter !== null) {
+            $queryParams['filter'] = $this->apiClient->getSerializer()->toQueryValue($filter);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\Template[]',
+                '/Tags/{id}/templates'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Template[]', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Template[]', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation tagsIdTemplatesPost
+     *
+     * Creates a new instance in templates of this model.
+     *
+     * @param string $id Tag id (required)
+     * @param \Swagger\Client\Model\Template $data  (optional)
+     * @return \Swagger\Client\Model\Template
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdTemplatesPost($id, $data = null)
+    {
+        list($response) = $this->tagsIdTemplatesPostWithHttpInfo($id, $data);
+        return $response;
+    }
+
+    /**
+     * Operation tagsIdTemplatesPostWithHttpInfo
+     *
+     * Creates a new instance in templates of this model.
+     *
+     * @param string $id Tag id (required)
+     * @param \Swagger\Client\Model\Template $data  (optional)
+     * @return array of \Swagger\Client\Model\Template, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdTemplatesPostWithHttpInfo($id, $data = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling tagsIdTemplatesPost');
+        }
+        // parse inputs
+        $resourcePath = "/Tags/{id}/templates";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\Template',
+                '/Tags/{id}/templates'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Template', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Template', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation tagsIdTemplatesRelFkDelete
+     *
+     * Remove the templates relation to an item by id.
+     *
+     * @param string $id Tag id (required)
+     * @param string $fk Foreign key for templates (required)
+     * @return void
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdTemplatesRelFkDelete($id, $fk)
+    {
+        list($response) = $this->tagsIdTemplatesRelFkDeleteWithHttpInfo($id, $fk);
+        return $response;
+    }
+
+    /**
+     * Operation tagsIdTemplatesRelFkDeleteWithHttpInfo
+     *
+     * Remove the templates relation to an item by id.
+     *
+     * @param string $id Tag id (required)
+     * @param string $fk Foreign key for templates (required)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdTemplatesRelFkDeleteWithHttpInfo($id, $fk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling tagsIdTemplatesRelFkDelete');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling tagsIdTemplatesRelFkDelete');
+        }
+        // parse inputs
+        $resourcePath = "/Tags/{id}/templates/rel/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/Tags/{id}/templates/rel/{fk}'
+            );
+
+            return array(null, $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation tagsIdTemplatesRelFkHead
+     *
+     * Check the existence of templates relation to an item by id.
+     *
+     * @param string $id Tag id (required)
+     * @param string $fk Foreign key for templates (required)
+     * @return bool
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdTemplatesRelFkHead($id, $fk)
+    {
+        list($response) = $this->tagsIdTemplatesRelFkHeadWithHttpInfo($id, $fk);
+        return $response;
+    }
+
+    /**
+     * Operation tagsIdTemplatesRelFkHeadWithHttpInfo
+     *
+     * Check the existence of templates relation to an item by id.
+     *
+     * @param string $id Tag id (required)
+     * @param string $fk Foreign key for templates (required)
+     * @return array of bool, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdTemplatesRelFkHeadWithHttpInfo($id, $fk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling tagsIdTemplatesRelFkHead');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling tagsIdTemplatesRelFkHead');
+        }
+        // parse inputs
+        $resourcePath = "/Tags/{id}/templates/rel/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'HEAD',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                'bool',
+                '/Tags/{id}/templates/rel/{fk}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, 'bool', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), 'bool', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation tagsIdTemplatesRelFkPut
+     *
+     * Add a related item by id for templates.
+     *
+     * @param string $id Tag id (required)
+     * @param string $fk Foreign key for templates (required)
+     * @param \Swagger\Client\Model\TemplateTag $data  (optional)
+     * @return \Swagger\Client\Model\TemplateTag
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdTemplatesRelFkPut($id, $fk, $data = null)
+    {
+        list($response) = $this->tagsIdTemplatesRelFkPutWithHttpInfo($id, $fk, $data);
+        return $response;
+    }
+
+    /**
+     * Operation tagsIdTemplatesRelFkPutWithHttpInfo
+     *
+     * Add a related item by id for templates.
+     *
+     * @param string $id Tag id (required)
+     * @param string $fk Foreign key for templates (required)
+     * @param \Swagger\Client\Model\TemplateTag $data  (optional)
+     * @return array of \Swagger\Client\Model\TemplateTag, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsIdTemplatesRelFkPutWithHttpInfo($id, $fk, $data = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling tagsIdTemplatesRelFkPut');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling tagsIdTemplatesRelFkPut');
+        }
+        // parse inputs
+        $resourcePath = "/Tags/{id}/templates/rel/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\TemplateTag',
+                '/Tags/{id}/templates/rel/{fk}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TemplateTag', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TemplateTag', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation tagsPatch
+     *
+     * Patch an existing model instance or insert a new one into the data source.
+     *
+     * @param \Swagger\Client\Model\Tag $data Model instance data (optional)
+     * @return \Swagger\Client\Model\Tag
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsPatch($data = null)
+    {
+        list($response) = $this->tagsPatchWithHttpInfo($data);
+        return $response;
+    }
+
+    /**
+     * Operation tagsPatchWithHttpInfo
+     *
+     * Patch an existing model instance or insert a new one into the data source.
+     *
+     * @param \Swagger\Client\Model\Tag $data Model instance data (optional)
+     * @return array of \Swagger\Client\Model\Tag, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsPatchWithHttpInfo($data = null)
+    {
+        // parse inputs
+        $resourcePath = "/Tags";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PATCH',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\Tag',
+                '/Tags'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Tag', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Tag', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation tagsPost
+     *
+     * Create a new instance of the model and persist it into the data source.
+     *
+     * @param \Swagger\Client\Model\Tag $data Model instance data (optional)
+     * @return \Swagger\Client\Model\Tag
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsPost($data = null)
+    {
+        list($response) = $this->tagsPostWithHttpInfo($data);
+        return $response;
+    }
+
+    /**
+     * Operation tagsPostWithHttpInfo
+     *
+     * Create a new instance of the model and persist it into the data source.
+     *
+     * @param \Swagger\Client\Model\Tag $data Model instance data (optional)
+     * @return array of \Swagger\Client\Model\Tag, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsPostWithHttpInfo($data = null)
+    {
+        // parse inputs
+        $resourcePath = "/Tags";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\Tag',
+                '/Tags'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Tag', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Tag', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation tagsPut
      *
      * Replace an existing model instance or insert a new one into the data source.
      *
@@ -1261,14 +3354,14 @@ class TagApi
      * @return \Swagger\Client\Model\Tag
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function tagReplaceOrCreate($data = null)
+    public function tagsPut($data = null)
     {
-        list($response) = $this->tagReplaceOrCreateWithHttpInfo($data);
+        list($response) = $this->tagsPutWithHttpInfo($data);
         return $response;
     }
 
     /**
-     * Operation tagReplaceOrCreateWithHttpInfo
+     * Operation tagsPutWithHttpInfo
      *
      * Replace an existing model instance or insert a new one into the data source.
      *
@@ -1276,7 +3369,90 @@ class TagApi
      * @return array of \Swagger\Client\Model\Tag, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function tagReplaceOrCreateWithHttpInfo($data = null)
+    public function tagsPutWithHttpInfo($data = null)
+    {
+        // parse inputs
+        $resourcePath = "/Tags";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\Tag',
+                '/Tags'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Tag', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Tag', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation tagsReplaceOrCreatePost
+     *
+     * Replace an existing model instance or insert a new one into the data source.
+     *
+     * @param \Swagger\Client\Model\Tag $data Model instance data (optional)
+     * @return \Swagger\Client\Model\Tag
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsReplaceOrCreatePost($data = null)
+    {
+        list($response) = $this->tagsReplaceOrCreatePostWithHttpInfo($data);
+        return $response;
+    }
+
+    /**
+     * Operation tagsReplaceOrCreatePostWithHttpInfo
+     *
+     * Replace an existing model instance or insert a new one into the data source.
+     *
+     * @param \Swagger\Client\Model\Tag $data Model instance data (optional)
+     * @return array of \Swagger\Client\Model\Tag, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function tagsReplaceOrCreatePostWithHttpInfo($data = null)
     {
         // parse inputs
         $resourcePath = "/Tags/replaceOrCreate";
@@ -1336,7 +3512,7 @@ class TagApi
     }
 
     /**
-     * Operation tagUpdateAll
+     * Operation tagsUpdatePost
      *
      * Update instances of the model matched by {{where}} from the data source.
      *
@@ -1345,14 +3521,14 @@ class TagApi
      * @return \Swagger\Client\Model\InlineResponse2001
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function tagUpdateAll($where = null, $data = null)
+    public function tagsUpdatePost($where = null, $data = null)
     {
-        list($response) = $this->tagUpdateAllWithHttpInfo($where, $data);
+        list($response) = $this->tagsUpdatePostWithHttpInfo($where, $data);
         return $response;
     }
 
     /**
-     * Operation tagUpdateAllWithHttpInfo
+     * Operation tagsUpdatePostWithHttpInfo
      *
      * Update instances of the model matched by {{where}} from the data source.
      *
@@ -1361,7 +3537,7 @@ class TagApi
      * @return array of \Swagger\Client\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function tagUpdateAllWithHttpInfo($where = null, $data = null)
+    public function tagsUpdatePostWithHttpInfo($where = null, $data = null)
     {
         // parse inputs
         $resourcePath = "/Tags/update";
@@ -1425,173 +3601,7 @@ class TagApi
     }
 
     /**
-     * Operation tagUpsertPatchTags
-     *
-     * Patch an existing model instance or insert a new one into the data source.
-     *
-     * @param \Swagger\Client\Model\Tag $data Model instance data (optional)
-     * @return \Swagger\Client\Model\Tag
-     * @throws \Tweak\Api\ApiException on non-2xx response
-     */
-    public function tagUpsertPatchTags($data = null)
-    {
-        list($response) = $this->tagUpsertPatchTagsWithHttpInfo($data);
-        return $response;
-    }
-
-    /**
-     * Operation tagUpsertPatchTagsWithHttpInfo
-     *
-     * Patch an existing model instance or insert a new one into the data source.
-     *
-     * @param \Swagger\Client\Model\Tag $data Model instance data (optional)
-     * @return array of \Swagger\Client\Model\Tag, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Tweak\Api\ApiException on non-2xx response
-     */
-    public function tagUpsertPatchTagsWithHttpInfo($data = null)
-    {
-        // parse inputs
-        $resourcePath = "/Tags";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
-
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        // body params
-        $_tempBody = null;
-        if (isset($data)) {
-            $_tempBody = $data;
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $queryParams['access_token'] = $apiKey;
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'PATCH',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\Swagger\Client\Model\Tag',
-                '/Tags'
-            );
-
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Tag', $httpHeader), $statusCode, $httpHeader);
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Tag', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation tagUpsertPutTags
-     *
-     * Patch an existing model instance or insert a new one into the data source.
-     *
-     * @param \Swagger\Client\Model\Tag $data Model instance data (optional)
-     * @return \Swagger\Client\Model\Tag
-     * @throws \Tweak\Api\ApiException on non-2xx response
-     */
-    public function tagUpsertPutTags($data = null)
-    {
-        list($response) = $this->tagUpsertPutTagsWithHttpInfo($data);
-        return $response;
-    }
-
-    /**
-     * Operation tagUpsertPutTagsWithHttpInfo
-     *
-     * Patch an existing model instance or insert a new one into the data source.
-     *
-     * @param \Swagger\Client\Model\Tag $data Model instance data (optional)
-     * @return array of \Swagger\Client\Model\Tag, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Tweak\Api\ApiException on non-2xx response
-     */
-    public function tagUpsertPutTagsWithHttpInfo($data = null)
-    {
-        // parse inputs
-        $resourcePath = "/Tags";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
-
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        // body params
-        $_tempBody = null;
-        if (isset($data)) {
-            $_tempBody = $data;
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $queryParams['access_token'] = $apiKey;
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'PUT',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\Swagger\Client\Model\Tag',
-                '/Tags'
-            );
-
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Tag', $httpHeader), $statusCode, $httpHeader);
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Tag', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation tagUpsertWithWhere
+     * Operation tagsUpsertWithWherePost
      *
      * Update an existing model instance or insert a new one into the data source based on the where criteria.
      *
@@ -1600,14 +3610,14 @@ class TagApi
      * @return \Swagger\Client\Model\Tag
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function tagUpsertWithWhere($where = null, $data = null)
+    public function tagsUpsertWithWherePost($where = null, $data = null)
     {
-        list($response) = $this->tagUpsertWithWhereWithHttpInfo($where, $data);
+        list($response) = $this->tagsUpsertWithWherePostWithHttpInfo($where, $data);
         return $response;
     }
 
     /**
-     * Operation tagUpsertWithWhereWithHttpInfo
+     * Operation tagsUpsertWithWherePostWithHttpInfo
      *
      * Update an existing model instance or insert a new one into the data source based on the where criteria.
      *
@@ -1616,7 +3626,7 @@ class TagApi
      * @return array of \Swagger\Client\Model\Tag, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function tagUpsertWithWhereWithHttpInfo($where = null, $data = null)
+    public function tagsUpsertWithWherePostWithHttpInfo($where = null, $data = null)
     {
         // parse inputs
         $resourcePath = "/Tags/upsertWithWhere";

@@ -66,19 +66,22 @@ class Customer implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
+        'profilePicture' => 'string',
         'firstName' => 'string',
         'lastName' => 'string',
-        'realm' => 'string',
-        'username' => 'string',
-        'credentials' => 'object',
-        'challenges' => 'object',
-        'email' => 'string',
-        'emailVerified' => 'bool',
+        'initials' => 'string',
         'status' => 'string',
         'created' => '\DateTime',
-        'lastUpdated' => '\DateTime',
+        'modified' => '\DateTime',
+        'realm' => 'string',
+        'username' => 'string',
+        'email' => 'string',
+        'emailVerified' => 'bool',
         'id' => 'double',
-        'designs' => 'object[]'
+        'designs' => 'object[]',
+        'teams' => 'object[]',
+        'invitationTickets' => 'object[]',
+        'accessTokens' => 'object[]'
     );
 
     public static function swaggerTypes()
@@ -91,19 +94,22 @@ class Customer implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
+        'profilePicture' => 'profilePicture',
         'firstName' => 'firstName',
         'lastName' => 'lastName',
-        'realm' => 'realm',
-        'username' => 'username',
-        'credentials' => 'credentials',
-        'challenges' => 'challenges',
-        'email' => 'email',
-        'emailVerified' => 'emailVerified',
+        'initials' => 'initials',
         'status' => 'status',
         'created' => 'created',
-        'lastUpdated' => 'lastUpdated',
+        'modified' => 'modified',
+        'realm' => 'realm',
+        'username' => 'username',
+        'email' => 'email',
+        'emailVerified' => 'emailVerified',
         'id' => 'id',
-        'designs' => 'designs'
+        'designs' => 'designs',
+        'teams' => 'teams',
+        'invitationTickets' => 'invitationTickets',
+        'accessTokens' => 'accessTokens'
     );
 
     public static function attributeMap()
@@ -116,19 +122,22 @@ class Customer implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
+        'profilePicture' => 'setProfilePicture',
         'firstName' => 'setFirstName',
         'lastName' => 'setLastName',
-        'realm' => 'setRealm',
-        'username' => 'setUsername',
-        'credentials' => 'setCredentials',
-        'challenges' => 'setChallenges',
-        'email' => 'setEmail',
-        'emailVerified' => 'setEmailVerified',
+        'initials' => 'setInitials',
         'status' => 'setStatus',
         'created' => 'setCreated',
-        'lastUpdated' => 'setLastUpdated',
+        'modified' => 'setModified',
+        'realm' => 'setRealm',
+        'username' => 'setUsername',
+        'email' => 'setEmail',
+        'emailVerified' => 'setEmailVerified',
         'id' => 'setId',
-        'designs' => 'setDesigns'
+        'designs' => 'setDesigns',
+        'teams' => 'setTeams',
+        'invitationTickets' => 'setInvitationTickets',
+        'accessTokens' => 'setAccessTokens'
     );
 
     public static function setters()
@@ -141,19 +150,22 @@ class Customer implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
+        'profilePicture' => 'getProfilePicture',
         'firstName' => 'getFirstName',
         'lastName' => 'getLastName',
-        'realm' => 'getRealm',
-        'username' => 'getUsername',
-        'credentials' => 'getCredentials',
-        'challenges' => 'getChallenges',
-        'email' => 'getEmail',
-        'emailVerified' => 'getEmailVerified',
+        'initials' => 'getInitials',
         'status' => 'getStatus',
         'created' => 'getCreated',
-        'lastUpdated' => 'getLastUpdated',
+        'modified' => 'getModified',
+        'realm' => 'getRealm',
+        'username' => 'getUsername',
+        'email' => 'getEmail',
+        'emailVerified' => 'getEmailVerified',
         'id' => 'getId',
-        'designs' => 'getDesigns'
+        'designs' => 'getDesigns',
+        'teams' => 'getTeams',
+        'invitationTickets' => 'getInvitationTickets',
+        'accessTokens' => 'getAccessTokens'
     );
 
     public static function getters()
@@ -161,8 +173,22 @@ class Customer implements ArrayAccess
         return self::$getters;
     }
 
+    const STATUS_ACTIVE = 'active';
+    const STATUS_INACTIVE = 'inactive';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getStatusAllowableValues()
+    {
+        return [
+            self::STATUS_ACTIVE,
+            self::STATUS_INACTIVE,
+        ];
+    }
     
 
     /**
@@ -177,19 +203,22 @@ class Customer implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['profilePicture'] = isset($data['profilePicture']) ? $data['profilePicture'] : null;
         $this->container['firstName'] = isset($data['firstName']) ? $data['firstName'] : null;
         $this->container['lastName'] = isset($data['lastName']) ? $data['lastName'] : null;
+        $this->container['initials'] = isset($data['initials']) ? $data['initials'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : 'active';
+        $this->container['created'] = isset($data['created']) ? $data['created'] : null;
+        $this->container['modified'] = isset($data['modified']) ? $data['modified'] : null;
         $this->container['realm'] = isset($data['realm']) ? $data['realm'] : null;
         $this->container['username'] = isset($data['username']) ? $data['username'] : null;
-        $this->container['credentials'] = isset($data['credentials']) ? $data['credentials'] : null;
-        $this->container['challenges'] = isset($data['challenges']) ? $data['challenges'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['emailVerified'] = isset($data['emailVerified']) ? $data['emailVerified'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['created'] = isset($data['created']) ? $data['created'] : null;
-        $this->container['lastUpdated'] = isset($data['lastUpdated']) ? $data['lastUpdated'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['designs'] = isset($data['designs']) ? $data['designs'] : null;
+        $this->container['teams'] = isset($data['teams']) ? $data['teams'] : null;
+        $this->container['invitationTickets'] = isset($data['invitationTickets']) ? $data['invitationTickets'] : null;
+        $this->container['accessTokens'] = isset($data['accessTokens']) ? $data['accessTokens'] : null;
     }
 
     /**
@@ -200,6 +229,20 @@ class Customer implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
+        if ($this->container['firstName'] === null) {
+            $invalid_properties[] = "'firstName' can't be null";
+        }
+        if ($this->container['lastName'] === null) {
+            $invalid_properties[] = "'lastName' can't be null";
+        }
+        if ($this->container['initials'] === null) {
+            $invalid_properties[] = "'initials' can't be null";
+        }
+        $allowed_values = array("active", "inactive");
+        if (!in_array($this->container['status'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'status', must be one of #{allowed_values}.";
+        }
+
         if ($this->container['email'] === null) {
             $invalid_properties[] = "'email' can't be null";
         }
@@ -214,12 +257,46 @@ class Customer implements ArrayAccess
      */
     public function valid()
     {
+        if ($this->container['firstName'] === null) {
+            return false;
+        }
+        if ($this->container['lastName'] === null) {
+            return false;
+        }
+        if ($this->container['initials'] === null) {
+            return false;
+        }
+        $allowed_values = array("active", "inactive");
+        if (!in_array($this->container['status'], $allowed_values)) {
+            return false;
+        }
         if ($this->container['email'] === null) {
             return false;
         }
         return true;
     }
 
+
+    /**
+     * Gets profilePicture
+     * @return string
+     */
+    public function getProfilePicture()
+    {
+        return $this->container['profilePicture'];
+    }
+
+    /**
+     * Sets profilePicture
+     * @param string $profilePicture
+     * @return $this
+     */
+    public function setProfilePicture($profilePicture)
+    {
+        $this->container['profilePicture'] = $profilePicture;
+
+        return $this;
+    }
 
     /**
      * Gets firstName
@@ -259,6 +336,94 @@ class Customer implements ArrayAccess
     public function setLastName($lastName)
     {
         $this->container['lastName'] = $lastName;
+
+        return $this;
+    }
+
+    /**
+     * Gets initials
+     * @return string
+     */
+    public function getInitials()
+    {
+        return $this->container['initials'];
+    }
+
+    /**
+     * Sets initials
+     * @param string $initials
+     * @return $this
+     */
+    public function setInitials($initials)
+    {
+        $this->container['initials'] = $initials;
+
+        return $this;
+    }
+
+    /**
+     * Gets status
+     * @return string
+     */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+     * Sets status
+     * @param string $status
+     * @return $this
+     */
+    public function setStatus($status)
+    {
+        $allowed_values = array('active', 'inactive');
+        if (!in_array($status, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'active', 'inactive'");
+        }
+        $this->container['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * Gets created
+     * @return \DateTime
+     */
+    public function getCreated()
+    {
+        return $this->container['created'];
+    }
+
+    /**
+     * Sets created
+     * @param \DateTime $created
+     * @return $this
+     */
+    public function setCreated($created)
+    {
+        $this->container['created'] = $created;
+
+        return $this;
+    }
+
+    /**
+     * Gets modified
+     * @return \DateTime
+     */
+    public function getModified()
+    {
+        return $this->container['modified'];
+    }
+
+    /**
+     * Sets modified
+     * @param \DateTime $modified
+     * @return $this
+     */
+    public function setModified($modified)
+    {
+        $this->container['modified'] = $modified;
 
         return $this;
     }
@@ -306,48 +471,6 @@ class Customer implements ArrayAccess
     }
 
     /**
-     * Gets credentials
-     * @return object
-     */
-    public function getCredentials()
-    {
-        return $this->container['credentials'];
-    }
-
-    /**
-     * Sets credentials
-     * @param object $credentials
-     * @return $this
-     */
-    public function setCredentials($credentials)
-    {
-        $this->container['credentials'] = $credentials;
-
-        return $this;
-    }
-
-    /**
-     * Gets challenges
-     * @return object
-     */
-    public function getChallenges()
-    {
-        return $this->container['challenges'];
-    }
-
-    /**
-     * Sets challenges
-     * @param object $challenges
-     * @return $this
-     */
-    public function setChallenges($challenges)
-    {
-        $this->container['challenges'] = $challenges;
-
-        return $this;
-    }
-
-    /**
      * Gets email
      * @return string
      */
@@ -390,69 +513,6 @@ class Customer implements ArrayAccess
     }
 
     /**
-     * Gets status
-     * @return string
-     */
-    public function getStatus()
-    {
-        return $this->container['status'];
-    }
-
-    /**
-     * Sets status
-     * @param string $status
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        $this->container['status'] = $status;
-
-        return $this;
-    }
-
-    /**
-     * Gets created
-     * @return \DateTime
-     */
-    public function getCreated()
-    {
-        return $this->container['created'];
-    }
-
-    /**
-     * Sets created
-     * @param \DateTime $created
-     * @return $this
-     */
-    public function setCreated($created)
-    {
-        $this->container['created'] = $created;
-
-        return $this;
-    }
-
-    /**
-     * Gets lastUpdated
-     * @return \DateTime
-     */
-    public function getLastUpdated()
-    {
-        return $this->container['lastUpdated'];
-    }
-
-    /**
-     * Sets lastUpdated
-     * @param \DateTime $lastUpdated
-     * @return $this
-     */
-    public function setLastUpdated($lastUpdated)
-    {
-        $this->container['lastUpdated'] = $lastUpdated;
-
-        return $this;
-    }
-
-    /**
      * Gets id
      * @return double
      */
@@ -490,6 +550,69 @@ class Customer implements ArrayAccess
     public function setDesigns($designs)
     {
         $this->container['designs'] = $designs;
+
+        return $this;
+    }
+
+    /**
+     * Gets teams
+     * @return object[]
+     */
+    public function getTeams()
+    {
+        return $this->container['teams'];
+    }
+
+    /**
+     * Sets teams
+     * @param object[] $teams
+     * @return $this
+     */
+    public function setTeams($teams)
+    {
+        $this->container['teams'] = $teams;
+
+        return $this;
+    }
+
+    /**
+     * Gets invitationTickets
+     * @return object[]
+     */
+    public function getInvitationTickets()
+    {
+        return $this->container['invitationTickets'];
+    }
+
+    /**
+     * Sets invitationTickets
+     * @param object[] $invitationTickets
+     * @return $this
+     */
+    public function setInvitationTickets($invitationTickets)
+    {
+        $this->container['invitationTickets'] = $invitationTickets;
+
+        return $this;
+    }
+
+    /**
+     * Gets accessTokens
+     * @return object[]
+     */
+    public function getAccessTokens()
+    {
+        return $this->container['accessTokens'];
+    }
+
+    /**
+     * Sets accessTokens
+     * @param object[] $accessTokens
+     * @return $this
+     */
+    public function setAccessTokens($accessTokens)
+    {
+        $this->container['accessTokens'] = $accessTokens;
 
         return $this;
     }

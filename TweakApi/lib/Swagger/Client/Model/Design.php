@@ -66,15 +66,29 @@ class Design implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'name' => 'string',
+        'colors' => 'string[]',
         'image' => 'string',
-        'thumbnail' => 'string',
+        'name' => 'string',
         'object' => 'object',
+        'thumbnail' => 'string',
+        'expired' => '\DateTime',
+        'description' => 'string',
+        'purpose' => 'string',
+        'created' => '\DateTime',
+        'modified' => '\DateTime',
         'id' => 'double',
         'customerId' => 'double',
+        'templateId' => 'double',
+        'portalId' => 'double',
+        'requesterId' => 'double',
         'tags' => 'object[]',
-        'categories' => 'object[]',
-        'customer' => 'object'
+        'customer' => 'object',
+        'template' => 'object',
+        'portal' => 'object',
+        'requester' => 'object',
+        'commenters' => 'object[]',
+        'assignees' => 'object[]',
+        'reviewers' => 'object[]'
     );
 
     public static function swaggerTypes()
@@ -87,15 +101,29 @@ class Design implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'name' => 'name',
+        'colors' => 'colors',
         'image' => 'image',
-        'thumbnail' => 'thumbnail',
+        'name' => 'name',
         'object' => 'object',
+        'thumbnail' => 'thumbnail',
+        'expired' => 'expired',
+        'description' => 'description',
+        'purpose' => 'purpose',
+        'created' => 'created',
+        'modified' => 'modified',
         'id' => 'id',
         'customerId' => 'customerId',
+        'templateId' => 'templateId',
+        'portalId' => 'portalId',
+        'requesterId' => 'requesterId',
         'tags' => 'tags',
-        'categories' => 'categories',
-        'customer' => 'customer'
+        'customer' => 'customer',
+        'template' => 'template',
+        'portal' => 'portal',
+        'requester' => 'requester',
+        'commenters' => 'commenters',
+        'assignees' => 'assignees',
+        'reviewers' => 'reviewers'
     );
 
     public static function attributeMap()
@@ -108,15 +136,29 @@ class Design implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'name' => 'setName',
+        'colors' => 'setColors',
         'image' => 'setImage',
-        'thumbnail' => 'setThumbnail',
+        'name' => 'setName',
         'object' => 'setObject',
+        'thumbnail' => 'setThumbnail',
+        'expired' => 'setExpired',
+        'description' => 'setDescription',
+        'purpose' => 'setPurpose',
+        'created' => 'setCreated',
+        'modified' => 'setModified',
         'id' => 'setId',
         'customerId' => 'setCustomerId',
+        'templateId' => 'setTemplateId',
+        'portalId' => 'setPortalId',
+        'requesterId' => 'setRequesterId',
         'tags' => 'setTags',
-        'categories' => 'setCategories',
-        'customer' => 'setCustomer'
+        'customer' => 'setCustomer',
+        'template' => 'setTemplate',
+        'portal' => 'setPortal',
+        'requester' => 'setRequester',
+        'commenters' => 'setCommenters',
+        'assignees' => 'setAssignees',
+        'reviewers' => 'setReviewers'
     );
 
     public static function setters()
@@ -129,15 +171,29 @@ class Design implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'name' => 'getName',
+        'colors' => 'getColors',
         'image' => 'getImage',
-        'thumbnail' => 'getThumbnail',
+        'name' => 'getName',
         'object' => 'getObject',
+        'thumbnail' => 'getThumbnail',
+        'expired' => 'getExpired',
+        'description' => 'getDescription',
+        'purpose' => 'getPurpose',
+        'created' => 'getCreated',
+        'modified' => 'getModified',
         'id' => 'getId',
         'customerId' => 'getCustomerId',
+        'templateId' => 'getTemplateId',
+        'portalId' => 'getPortalId',
+        'requesterId' => 'getRequesterId',
         'tags' => 'getTags',
-        'categories' => 'getCategories',
-        'customer' => 'getCustomer'
+        'customer' => 'getCustomer',
+        'template' => 'getTemplate',
+        'portal' => 'getPortal',
+        'requester' => 'getRequester',
+        'commenters' => 'getCommenters',
+        'assignees' => 'getAssignees',
+        'reviewers' => 'getReviewers'
     );
 
     public static function getters()
@@ -145,8 +201,22 @@ class Design implements ArrayAccess
         return self::$getters;
     }
 
+    const PURPOSE_NONE = 'none';
+    const PURPOSE_PRINT_ORDER = 'printOrder';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getPurposeAllowableValues()
+    {
+        return [
+            self::PURPOSE_NONE,
+            self::PURPOSE_PRINT_ORDER,
+        ];
+    }
     
 
     /**
@@ -161,15 +231,29 @@ class Design implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['colors'] = isset($data['colors']) ? $data['colors'] : null;
         $this->container['image'] = isset($data['image']) ? $data['image'] : null;
-        $this->container['thumbnail'] = isset($data['thumbnail']) ? $data['thumbnail'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['object'] = isset($data['object']) ? $data['object'] : null;
+        $this->container['thumbnail'] = isset($data['thumbnail']) ? $data['thumbnail'] : null;
+        $this->container['expired'] = isset($data['expired']) ? $data['expired'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : '';
+        $this->container['purpose'] = isset($data['purpose']) ? $data['purpose'] : 'none';
+        $this->container['created'] = isset($data['created']) ? $data['created'] : null;
+        $this->container['modified'] = isset($data['modified']) ? $data['modified'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['customerId'] = isset($data['customerId']) ? $data['customerId'] : null;
+        $this->container['templateId'] = isset($data['templateId']) ? $data['templateId'] : null;
+        $this->container['portalId'] = isset($data['portalId']) ? $data['portalId'] : null;
+        $this->container['requesterId'] = isset($data['requesterId']) ? $data['requesterId'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
-        $this->container['categories'] = isset($data['categories']) ? $data['categories'] : null;
         $this->container['customer'] = isset($data['customer']) ? $data['customer'] : null;
+        $this->container['template'] = isset($data['template']) ? $data['template'] : null;
+        $this->container['portal'] = isset($data['portal']) ? $data['portal'] : null;
+        $this->container['requester'] = isset($data['requester']) ? $data['requester'] : null;
+        $this->container['commenters'] = isset($data['commenters']) ? $data['commenters'] : null;
+        $this->container['assignees'] = isset($data['assignees']) ? $data['assignees'] : null;
+        $this->container['reviewers'] = isset($data['reviewers']) ? $data['reviewers'] : null;
     }
 
     /**
@@ -180,6 +264,17 @@ class Design implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
+        if ($this->container['name'] === null) {
+            $invalid_properties[] = "'name' can't be null";
+        }
+        if ($this->container['object'] === null) {
+            $invalid_properties[] = "'object' can't be null";
+        }
+        $allowed_values = array("none", "printOrder");
+        if (!in_array($this->container['purpose'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'purpose', must be one of #{allowed_values}.";
+        }
+
         return $invalid_properties;
     }
 
@@ -191,27 +286,37 @@ class Design implements ArrayAccess
      */
     public function valid()
     {
+        if ($this->container['name'] === null) {
+            return false;
+        }
+        if ($this->container['object'] === null) {
+            return false;
+        }
+        $allowed_values = array("none", "printOrder");
+        if (!in_array($this->container['purpose'], $allowed_values)) {
+            return false;
+        }
         return true;
     }
 
 
     /**
-     * Gets name
-     * @return string
+     * Gets colors
+     * @return string[]
      */
-    public function getName()
+    public function getColors()
     {
-        return $this->container['name'];
+        return $this->container['colors'];
     }
 
     /**
-     * Sets name
-     * @param string $name
+     * Sets colors
+     * @param string[] $colors
      * @return $this
      */
-    public function setName($name)
+    public function setColors($colors)
     {
-        $this->container['name'] = $name;
+        $this->container['colors'] = $colors;
 
         return $this;
     }
@@ -238,22 +343,22 @@ class Design implements ArrayAccess
     }
 
     /**
-     * Gets thumbnail
+     * Gets name
      * @return string
      */
-    public function getThumbnail()
+    public function getName()
     {
-        return $this->container['thumbnail'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets thumbnail
-     * @param string $thumbnail
+     * Sets name
+     * @param string $name
      * @return $this
      */
-    public function setThumbnail($thumbnail)
+    public function setName($name)
     {
-        $this->container['thumbnail'] = $thumbnail;
+        $this->container['name'] = $name;
 
         return $this;
     }
@@ -275,6 +380,136 @@ class Design implements ArrayAccess
     public function setObject($object)
     {
         $this->container['object'] = $object;
+
+        return $this;
+    }
+
+    /**
+     * Gets thumbnail
+     * @return string
+     */
+    public function getThumbnail()
+    {
+        return $this->container['thumbnail'];
+    }
+
+    /**
+     * Sets thumbnail
+     * @param string $thumbnail
+     * @return $this
+     */
+    public function setThumbnail($thumbnail)
+    {
+        $this->container['thumbnail'] = $thumbnail;
+
+        return $this;
+    }
+
+    /**
+     * Gets expired
+     * @return \DateTime
+     */
+    public function getExpired()
+    {
+        return $this->container['expired'];
+    }
+
+    /**
+     * Sets expired
+     * @param \DateTime $expired
+     * @return $this
+     */
+    public function setExpired($expired)
+    {
+        $this->container['expired'] = $expired;
+
+        return $this;
+    }
+
+    /**
+     * Gets description
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+     * Sets description
+     * @param string $description
+     * @return $this
+     */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
+
+        return $this;
+    }
+
+    /**
+     * Gets purpose
+     * @return string
+     */
+    public function getPurpose()
+    {
+        return $this->container['purpose'];
+    }
+
+    /**
+     * Sets purpose
+     * @param string $purpose
+     * @return $this
+     */
+    public function setPurpose($purpose)
+    {
+        $allowed_values = array('none', 'printOrder');
+        if (!in_array($purpose, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'purpose', must be one of 'none', 'printOrder'");
+        }
+        $this->container['purpose'] = $purpose;
+
+        return $this;
+    }
+
+    /**
+     * Gets created
+     * @return \DateTime
+     */
+    public function getCreated()
+    {
+        return $this->container['created'];
+    }
+
+    /**
+     * Sets created
+     * @param \DateTime $created
+     * @return $this
+     */
+    public function setCreated($created)
+    {
+        $this->container['created'] = $created;
+
+        return $this;
+    }
+
+    /**
+     * Gets modified
+     * @return \DateTime
+     */
+    public function getModified()
+    {
+        return $this->container['modified'];
+    }
+
+    /**
+     * Sets modified
+     * @param \DateTime $modified
+     * @return $this
+     */
+    public function setModified($modified)
+    {
+        $this->container['modified'] = $modified;
 
         return $this;
     }
@@ -322,6 +557,69 @@ class Design implements ArrayAccess
     }
 
     /**
+     * Gets templateId
+     * @return double
+     */
+    public function getTemplateId()
+    {
+        return $this->container['templateId'];
+    }
+
+    /**
+     * Sets templateId
+     * @param double $templateId
+     * @return $this
+     */
+    public function setTemplateId($templateId)
+    {
+        $this->container['templateId'] = $templateId;
+
+        return $this;
+    }
+
+    /**
+     * Gets portalId
+     * @return double
+     */
+    public function getPortalId()
+    {
+        return $this->container['portalId'];
+    }
+
+    /**
+     * Sets portalId
+     * @param double $portalId
+     * @return $this
+     */
+    public function setPortalId($portalId)
+    {
+        $this->container['portalId'] = $portalId;
+
+        return $this;
+    }
+
+    /**
+     * Gets requesterId
+     * @return double
+     */
+    public function getRequesterId()
+    {
+        return $this->container['requesterId'];
+    }
+
+    /**
+     * Sets requesterId
+     * @param double $requesterId
+     * @return $this
+     */
+    public function setRequesterId($requesterId)
+    {
+        $this->container['requesterId'] = $requesterId;
+
+        return $this;
+    }
+
+    /**
      * Gets tags
      * @return object[]
      */
@@ -343,27 +641,6 @@ class Design implements ArrayAccess
     }
 
     /**
-     * Gets categories
-     * @return object[]
-     */
-    public function getCategories()
-    {
-        return $this->container['categories'];
-    }
-
-    /**
-     * Sets categories
-     * @param object[] $categories
-     * @return $this
-     */
-    public function setCategories($categories)
-    {
-        $this->container['categories'] = $categories;
-
-        return $this;
-    }
-
-    /**
      * Gets customer
      * @return object
      */
@@ -380,6 +657,132 @@ class Design implements ArrayAccess
     public function setCustomer($customer)
     {
         $this->container['customer'] = $customer;
+
+        return $this;
+    }
+
+    /**
+     * Gets template
+     * @return object
+     */
+    public function getTemplate()
+    {
+        return $this->container['template'];
+    }
+
+    /**
+     * Sets template
+     * @param object $template
+     * @return $this
+     */
+    public function setTemplate($template)
+    {
+        $this->container['template'] = $template;
+
+        return $this;
+    }
+
+    /**
+     * Gets portal
+     * @return object
+     */
+    public function getPortal()
+    {
+        return $this->container['portal'];
+    }
+
+    /**
+     * Sets portal
+     * @param object $portal
+     * @return $this
+     */
+    public function setPortal($portal)
+    {
+        $this->container['portal'] = $portal;
+
+        return $this;
+    }
+
+    /**
+     * Gets requester
+     * @return object
+     */
+    public function getRequester()
+    {
+        return $this->container['requester'];
+    }
+
+    /**
+     * Sets requester
+     * @param object $requester
+     * @return $this
+     */
+    public function setRequester($requester)
+    {
+        $this->container['requester'] = $requester;
+
+        return $this;
+    }
+
+    /**
+     * Gets commenters
+     * @return object[]
+     */
+    public function getCommenters()
+    {
+        return $this->container['commenters'];
+    }
+
+    /**
+     * Sets commenters
+     * @param object[] $commenters
+     * @return $this
+     */
+    public function setCommenters($commenters)
+    {
+        $this->container['commenters'] = $commenters;
+
+        return $this;
+    }
+
+    /**
+     * Gets assignees
+     * @return object[]
+     */
+    public function getAssignees()
+    {
+        return $this->container['assignees'];
+    }
+
+    /**
+     * Sets assignees
+     * @param object[] $assignees
+     * @return $this
+     */
+    public function setAssignees($assignees)
+    {
+        $this->container['assignees'] = $assignees;
+
+        return $this;
+    }
+
+    /**
+     * Gets reviewers
+     * @return object[]
+     */
+    public function getReviewers()
+    {
+        return $this->container['reviewers'];
+    }
+
+    /**
+     * Sets reviewers
+     * @param object[] $reviewers
+     * @return $this
+     */
+    public function setReviewers($reviewers)
+    {
+        $this->container['reviewers'] = $reviewers;
 
         return $this;
     }

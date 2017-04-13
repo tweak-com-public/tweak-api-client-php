@@ -104,6 +104,22 @@ class TagTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "created"
+     */
+    public function testPropertyCreated()
+    {
+
+    }
+
+    /**
+     * Test attribute "modified"
+     */
+    public function testPropertyModified()
+    {
+
+    }
+
+    /**
      * Test attribute "id"
      */
     public function testPropertyId()
@@ -112,9 +128,17 @@ class TagTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "designId"
+     * Test attribute "templates"
      */
-    public function testPropertyDesignId()
+    public function testPropertyTemplates()
+    {
+
+    }
+
+    /**
+     * Test attribute "designs"
+     */
+    public function testPropertyDesigns()
     {
 
     }

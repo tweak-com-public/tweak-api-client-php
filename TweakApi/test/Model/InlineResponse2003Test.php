@@ -96,9 +96,9 @@ class InlineResponse2003Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "greeting"
+     * Test attribute "active"
      */
-    public function testPropertyGreeting()
+    public function testPropertyActive()
     {
 
     }
