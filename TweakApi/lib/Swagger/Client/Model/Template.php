@@ -73,12 +73,12 @@ class Template implements ArrayAccess
         'id' => 'double',
         'teamId' => 'string',
         'memberId' => 'double',
-        'portals' => 'object[]',
-        'team' => 'object',
-        'members' => 'object[]',
-        'permission' => 'object',
-        'designs' => 'object[]',
-        'tags' => 'object[]'
+        'portals' => '\Swagger\Client\Model\Portal[]',
+        'team' => '\Swagger\Client\Model\Team',
+        'members' => '\Swagger\Client\Model\TeamMember[]',
+        'permission' => '\Swagger\Client\Model\TemplatePermissionSet',
+        'designs' => '\Swagger\Client\Model\Design[]',
+        'tags' => '\Swagger\Client\Model\Tag[]'
     );
 
     public static function swaggerTypes()
@@ -370,7 +370,7 @@ class Template implements ArrayAccess
 
     /**
      * Gets portals
-     * @return object[]
+     * @return \Swagger\Client\Model\Portal[]
      */
     public function getPortals()
     {
@@ -379,7 +379,7 @@ class Template implements ArrayAccess
 
     /**
      * Sets portals
-     * @param object[] $portals
+     * @param \Swagger\Client\Model\Portal[] $portals
      * @return $this
      */
     public function setPortals($portals)
@@ -391,7 +391,7 @@ class Template implements ArrayAccess
 
     /**
      * Gets team
-     * @return object
+     * @return \Swagger\Client\Model\Team
      */
     public function getTeam()
     {
@@ -400,7 +400,7 @@ class Template implements ArrayAccess
 
     /**
      * Sets team
-     * @param object $team
+     * @param \Swagger\Client\Model\Team $team
      * @return $this
      */
     public function setTeam($team)
@@ -412,7 +412,7 @@ class Template implements ArrayAccess
 
     /**
      * Gets members
-     * @return object[]
+     * @return \Swagger\Client\Model\TeamMember[]
      */
     public function getMembers()
     {
@@ -421,7 +421,7 @@ class Template implements ArrayAccess
 
     /**
      * Sets members
-     * @param object[] $members
+     * @param \Swagger\Client\Model\TeamMember[] $members
      * @return $this
      */
     public function setMembers($members)
@@ -433,7 +433,7 @@ class Template implements ArrayAccess
 
     /**
      * Gets permission
-     * @return object
+     * @return \Swagger\Client\Model\TemplatePermissionSet
      */
     public function getPermission()
     {
@@ -442,7 +442,7 @@ class Template implements ArrayAccess
 
     /**
      * Sets permission
-     * @param object $permission
+     * @param \Swagger\Client\Model\TemplatePermissionSet $permission
      * @return $this
      */
     public function setPermission($permission)
@@ -454,7 +454,7 @@ class Template implements ArrayAccess
 
     /**
      * Gets designs
-     * @return object[]
+     * @return \Swagger\Client\Model\Design[]
      */
     public function getDesigns()
     {
@@ -463,7 +463,7 @@ class Template implements ArrayAccess
 
     /**
      * Sets designs
-     * @param object[] $designs
+     * @param \Swagger\Client\Model\Design[] $designs
      * @return $this
      */
     public function setDesigns($designs)
@@ -475,7 +475,7 @@ class Template implements ArrayAccess
 
     /**
      * Gets tags
-     * @return object[]
+     * @return \Swagger\Client\Model\Tag[]
      */
     public function getTags()
     {
@@ -484,7 +484,7 @@ class Template implements ArrayAccess
 
     /**
      * Sets tags
-     * @param object[] $tags
+     * @param \Swagger\Client\Model\Tag[] $tags
      * @return $this
      */
     public function setTags($tags)

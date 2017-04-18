@@ -69,7 +69,7 @@ class TeamBrand implements ArrayAccess
         'name' => 'string',
         'id' => 'double',
         'teamId' => 'string',
-        'team' => 'object'
+        'team' => '\Swagger\Client\Model\Team'
     );
 
     public static function swaggerTypes()
@@ -235,7 +235,7 @@ class TeamBrand implements ArrayAccess
 
     /**
      * Gets team
-     * @return object
+     * @return \Swagger\Client\Model\Team
      */
     public function getTeam()
     {
@@ -244,7 +244,7 @@ class TeamBrand implements ArrayAccess
 
     /**
      * Sets team
-     * @param object $team
+     * @param \Swagger\Client\Model\Team $team
      * @return $this
      */
     public function setTeam($team)

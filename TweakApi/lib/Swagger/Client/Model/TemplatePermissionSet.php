@@ -74,7 +74,7 @@ class TemplatePermissionSet implements ArrayAccess
         'socialSharing' => 'bool',
         'id' => 'double',
         'templateId' => 'double',
-        'template' => 'object'
+        'template' => '\Swagger\Client\Model\Template'
     );
 
     public static function swaggerTypes()
@@ -365,7 +365,7 @@ class TemplatePermissionSet implements ArrayAccess
 
     /**
      * Gets template
-     * @return object
+     * @return \Swagger\Client\Model\Template
      */
     public function getTemplate()
     {
@@ -374,7 +374,7 @@ class TemplatePermissionSet implements ArrayAccess
 
     /**
      * Sets template
-     * @param object $template
+     * @param \Swagger\Client\Model\Template $template
      * @return $this
      */
     public function setTemplate($template)

@@ -71,8 +71,8 @@ class TemplateMember implements ArrayAccess
         'id' => 'double',
         'templateId' => 'double',
         'memberId' => 'double',
-        'template' => 'object',
-        'member' => 'object'
+        'template' => '\Swagger\Client\Model\Template',
+        'member' => '\Swagger\Client\Model\TeamMember'
     );
 
     public static function swaggerTypes()
@@ -292,7 +292,7 @@ class TemplateMember implements ArrayAccess
 
     /**
      * Gets template
-     * @return object
+     * @return \Swagger\Client\Model\Template
      */
     public function getTemplate()
     {
@@ -301,7 +301,7 @@ class TemplateMember implements ArrayAccess
 
     /**
      * Sets template
-     * @param object $template
+     * @param \Swagger\Client\Model\Template $template
      * @return $this
      */
     public function setTemplate($template)
@@ -313,7 +313,7 @@ class TemplateMember implements ArrayAccess
 
     /**
      * Gets member
-     * @return object
+     * @return \Swagger\Client\Model\TeamMember
      */
     public function getMember()
     {
@@ -322,7 +322,7 @@ class TemplateMember implements ArrayAccess
 
     /**
      * Sets member
-     * @param object $member
+     * @param \Swagger\Client\Model\TeamMember $member
      * @return $this
      */
     public function setMember($member)

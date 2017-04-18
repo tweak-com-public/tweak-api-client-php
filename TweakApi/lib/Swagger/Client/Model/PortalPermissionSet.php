@@ -71,7 +71,7 @@ class PortalPermissionSet implements ArrayAccess
         'approveDesignsByPortalAdmin' => 'bool',
         'id' => 'double',
         'portalId' => 'double',
-        'portal' => 'object'
+        'portal' => '\Swagger\Client\Model\Portal'
     );
 
     public static function swaggerTypes()
@@ -287,7 +287,7 @@ class PortalPermissionSet implements ArrayAccess
 
     /**
      * Gets portal
-     * @return object
+     * @return \Swagger\Client\Model\Portal
      */
     public function getPortal()
     {
@@ -296,7 +296,7 @@ class PortalPermissionSet implements ArrayAccess
 
     /**
      * Sets portal
-     * @param object $portal
+     * @param \Swagger\Client\Model\Portal $portal
      * @return $this
      */
     public function setPortal($portal)

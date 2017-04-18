@@ -18,14 +18,14 @@ Name | Type | Description | Notes
 **templateId** | **double** |  | [optional] 
 **portalId** | **double** |  | [optional] 
 **requesterId** | **double** |  | [optional] 
-**tags** | **object[]** |  | [optional] 
-**customer** | **object** |  | [optional] 
-**template** | **object** |  | [optional] 
-**portal** | **object** |  | [optional] 
-**requester** | **object** |  | [optional] 
-**commenters** | **object[]** |  | [optional] 
-**assignees** | **object[]** |  | [optional] 
-**reviewers** | **object[]** |  | [optional] 
+**tags** | [**\Swagger\Client\Model\Tag[]**](Tag.md) |  | [optional] 
+**customer** | [**\Swagger\Client\Model\Customer**](Customer.md) |  | [optional] 
+**template** | [**\Swagger\Client\Model\Template**](Template.md) |  | [optional] 
+**portal** | [**\Swagger\Client\Model\Portal**](Portal.md) |  | [optional] 
+**requester** | [**\Swagger\Client\Model\PortalMember**](PortalMember.md) |  | [optional] 
+**commenters** | [**\Swagger\Client\Model\PortalMember[]**](PortalMember.md) |  | [optional] 
+**assignees** | [**\Swagger\Client\Model\PortalMember[]**](PortalMember.md) |  | [optional] 
+**reviewers** | [**\Swagger\Client\Model\PortalMember[]**](PortalMember.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

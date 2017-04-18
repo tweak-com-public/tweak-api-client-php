@@ -10,12 +10,12 @@ Name | Type | Description | Notes
 **id** | **double** |  | [optional] 
 **teamId** | **string** |  | [optional] 
 **memberId** | **double** |  | [optional] 
-**portals** | **object[]** |  | [optional] 
-**team** | **object** |  | [optional] 
-**members** | **object[]** |  | [optional] 
-**permission** | **object** |  | [optional] 
-**designs** | **object[]** |  | [optional] 
-**tags** | **object[]** |  | [optional] 
+**portals** | [**\Swagger\Client\Model\Portal[]**](Portal.md) |  | [optional] 
+**team** | [**\Swagger\Client\Model\Team**](Team.md) |  | [optional] 
+**members** | [**\Swagger\Client\Model\TeamMember[]**](TeamMember.md) |  | [optional] 
+**permission** | [**\Swagger\Client\Model\TemplatePermissionSet**](TemplatePermissionSet.md) |  | [optional] 
+**designs** | [**\Swagger\Client\Model\Design[]**](Design.md) |  | [optional] 
+**tags** | [**\Swagger\Client\Model\Tag[]**](Tag.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

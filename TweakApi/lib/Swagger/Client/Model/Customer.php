@@ -78,10 +78,10 @@ class Customer implements ArrayAccess
         'email' => 'string',
         'emailVerified' => 'bool',
         'id' => 'double',
-        'designs' => 'object[]',
-        'teams' => 'object[]',
-        'invitationTickets' => 'object[]',
-        'accessTokens' => 'object[]'
+        'designs' => '\Swagger\Client\Model\Design[]',
+        'teams' => '\Swagger\Client\Model\Team[]',
+        'invitationTickets' => '\Swagger\Client\Model\InvitationTicket[]',
+        'accessTokens' => '\Swagger\Client\Model\TeamMemberAccessToken[]'
     );
 
     public static function swaggerTypes()
@@ -535,7 +535,7 @@ class Customer implements ArrayAccess
 
     /**
      * Gets designs
-     * @return object[]
+     * @return \Swagger\Client\Model\Design[]
      */
     public function getDesigns()
     {
@@ -544,7 +544,7 @@ class Customer implements ArrayAccess
 
     /**
      * Sets designs
-     * @param object[] $designs
+     * @param \Swagger\Client\Model\Design[] $designs
      * @return $this
      */
     public function setDesigns($designs)
@@ -556,7 +556,7 @@ class Customer implements ArrayAccess
 
     /**
      * Gets teams
-     * @return object[]
+     * @return \Swagger\Client\Model\Team[]
      */
     public function getTeams()
     {
@@ -565,7 +565,7 @@ class Customer implements ArrayAccess
 
     /**
      * Sets teams
-     * @param object[] $teams
+     * @param \Swagger\Client\Model\Team[] $teams
      * @return $this
      */
     public function setTeams($teams)
@@ -577,7 +577,7 @@ class Customer implements ArrayAccess
 
     /**
      * Gets invitationTickets
-     * @return object[]
+     * @return \Swagger\Client\Model\InvitationTicket[]
      */
     public function getInvitationTickets()
     {
@@ -586,7 +586,7 @@ class Customer implements ArrayAccess
 
     /**
      * Sets invitationTickets
-     * @param object[] $invitationTickets
+     * @param \Swagger\Client\Model\InvitationTicket[] $invitationTickets
      * @return $this
      */
     public function setInvitationTickets($invitationTickets)
@@ -598,7 +598,7 @@ class Customer implements ArrayAccess
 
     /**
      * Gets accessTokens
-     * @return object[]
+     * @return \Swagger\Client\Model\TeamMemberAccessToken[]
      */
     public function getAccessTokens()
     {
@@ -607,7 +607,7 @@ class Customer implements ArrayAccess
 
     /**
      * Sets accessTokens
-     * @param object[] $accessTokens
+     * @param \Swagger\Client\Model\TeamMemberAccessToken[] $accessTokens
      * @return $this
      */
     public function setAccessTokens($accessTokens)

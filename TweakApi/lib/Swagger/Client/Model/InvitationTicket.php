@@ -78,8 +78,8 @@ class InvitationTicket implements ArrayAccess
         'id' => 'double',
         'inviteeId' => 'double',
         'inviterId' => 'double',
-        'invitee' => 'object',
-        'inviter' => 'object'
+        'invitee' => '\Swagger\Client\Model\Customer',
+        'inviter' => '\Swagger\Client\Model\TeamMember'
     );
 
     public static function swaggerTypes()
@@ -171,7 +171,6 @@ class InvitationTicket implements ArrayAccess
     const TARGET_MODEL_DESIGN = 'Design';
     const STATUS_PENDING = 'pending';
     const STATUS_ACCEPTED = 'accepted';
-    const STATUS_REJECTED = 'rejected';
     
 
     
@@ -198,7 +197,6 @@ class InvitationTicket implements ArrayAccess
         return [
             self::STATUS_PENDING,
             self::STATUS_ACCEPTED,
-            self::STATUS_REJECTED,
         ];
     }
     
@@ -250,7 +248,7 @@ class InvitationTicket implements ArrayAccess
         if ($this->container['targetId'] === null) {
             $invalid_properties[] = "'targetId' can't be null";
         }
-        $allowed_values = array("pending", "accepted", "rejected");
+        $allowed_values = array("pending", "accepted");
         if (!in_array($this->container['status'], $allowed_values)) {
             $invalid_properties[] = "invalid value for 'status', must be one of #{allowed_values}.";
         }
@@ -276,7 +274,7 @@ class InvitationTicket implements ArrayAccess
         if ($this->container['targetId'] === null) {
             return false;
         }
-        $allowed_values = array("pending", "accepted", "rejected");
+        $allowed_values = array("pending", "accepted");
         if (!in_array($this->container['status'], $allowed_values)) {
             return false;
         }
@@ -430,9 +428,9 @@ class InvitationTicket implements ArrayAccess
      */
     public function setStatus($status)
     {
-        $allowed_values = array('pending', 'accepted', 'rejected');
+        $allowed_values = array('pending', 'accepted');
         if (!in_array($status, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'pending', 'accepted', 'rejected'");
+            throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'pending', 'accepted'");
         }
         $this->container['status'] = $status;
 
@@ -546,7 +544,7 @@ class InvitationTicket implements ArrayAccess
 
     /**
      * Gets invitee
-     * @return object
+     * @return \Swagger\Client\Model\Customer
      */
     public function getInvitee()
     {
@@ -555,7 +553,7 @@ class InvitationTicket implements ArrayAccess
 
     /**
      * Sets invitee
-     * @param object $invitee
+     * @param \Swagger\Client\Model\Customer $invitee
      * @return $this
      */
     public function setInvitee($invitee)
@@ -567,7 +565,7 @@ class InvitationTicket implements ArrayAccess
 
     /**
      * Gets inviter
-     * @return object
+     * @return \Swagger\Client\Model\TeamMember
      */
     public function getInviter()
     {
@@ -576,7 +574,7 @@ class InvitationTicket implements ArrayAccess
 
     /**
      * Sets inviter
-     * @param object $inviter
+     * @param \Swagger\Client\Model\TeamMember $inviter
      * @return $this
      */
     public function setInviter($inviter)

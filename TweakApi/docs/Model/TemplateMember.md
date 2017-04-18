@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **id** | **double** |  | [optional] 
 **templateId** | **double** |  | [optional] 
 **memberId** | **double** |  | [optional] 
-**template** | **object** |  | [optional] 
-**member** | **object** |  | [optional] 
+**template** | [**\Swagger\Client\Model\Template**](Template.md) |  | [optional] 
+**member** | [**\Swagger\Client\Model\TeamMember**](TeamMember.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

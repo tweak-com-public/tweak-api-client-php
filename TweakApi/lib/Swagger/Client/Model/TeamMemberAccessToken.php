@@ -72,9 +72,9 @@ class TeamMemberAccessToken implements ArrayAccess
         'userId' => 'double',
         'teamId' => 'string',
         'teamMemberId' => 'double',
-        'customer' => 'object',
-        'team' => 'object',
-        'teamMember' => 'object'
+        'customer' => '\Swagger\Client\Model\Customer',
+        'team' => '\Swagger\Client\Model\Team',
+        'teamMember' => '\Swagger\Client\Model\TeamMember'
     );
 
     public static function swaggerTypes()
@@ -329,7 +329,7 @@ class TeamMemberAccessToken implements ArrayAccess
 
     /**
      * Gets customer
-     * @return object
+     * @return \Swagger\Client\Model\Customer
      */
     public function getCustomer()
     {
@@ -338,7 +338,7 @@ class TeamMemberAccessToken implements ArrayAccess
 
     /**
      * Sets customer
-     * @param object $customer
+     * @param \Swagger\Client\Model\Customer $customer
      * @return $this
      */
     public function setCustomer($customer)
@@ -350,7 +350,7 @@ class TeamMemberAccessToken implements ArrayAccess
 
     /**
      * Gets team
-     * @return object
+     * @return \Swagger\Client\Model\Team
      */
     public function getTeam()
     {
@@ -359,7 +359,7 @@ class TeamMemberAccessToken implements ArrayAccess
 
     /**
      * Sets team
-     * @param object $team
+     * @param \Swagger\Client\Model\Team $team
      * @return $this
      */
     public function setTeam($team)
@@ -371,7 +371,7 @@ class TeamMemberAccessToken implements ArrayAccess
 
     /**
      * Gets teamMember
-     * @return object
+     * @return \Swagger\Client\Model\TeamMember
      */
     public function getTeamMember()
     {
@@ -380,7 +380,7 @@ class TeamMemberAccessToken implements ArrayAccess
 
     /**
      * Sets teamMember
-     * @param object $teamMember
+     * @param \Swagger\Client\Model\TeamMember $teamMember
      * @return $this
      */
     public function setTeamMember($teamMember)

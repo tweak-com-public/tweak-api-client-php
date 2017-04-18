@@ -15,10 +15,10 @@ Name | Type | Description | Notes
 **windowsKey** | **string** |  | [optional] 
 **masterKey** | **string** |  | [optional] 
 **status** | **string** | Status of the application, production/sandbox/disabled | [optional] [default to 'sandbox']
-**members** | **object[]** |  | [optional] 
-**portals** | **object[]** |  | [optional] 
-**templates** | **object[]** |  | [optional] 
-**brand** | **object** |  | [optional] 
+**members** | [**\Swagger\Client\Model\Customer[]**](Customer.md) |  | [optional] 
+**portals** | [**\Swagger\Client\Model\Portal[]**](Portal.md) |  | [optional] 
+**templates** | [**\Swagger\Client\Model\Template[]**](Template.md) |  | [optional] 
+**brand** | [**\Swagger\Client\Model\TeamBrand**](TeamBrand.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -9,9 +9,9 @@ Name | Type | Description | Notes
 **userId** | **double** |  | [optional] 
 **teamId** | **string** |  | [optional] 
 **teamMemberId** | **double** |  | [optional] 
-**customer** | **object** |  | [optional] 
-**team** | **object** |  | [optional] 
-**teamMember** | **object** |  | [optional] 
+**customer** | [**\Swagger\Client\Model\Customer**](Customer.md) |  | [optional] 
+**team** | [**\Swagger\Client\Model\Team**](Team.md) |  | [optional] 
+**teamMember** | [**\Swagger\Client\Model\TeamMember**](TeamMember.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

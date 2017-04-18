@@ -71,12 +71,12 @@ class PortalMember implements ArrayAccess
         'id' => 'double',
         'portalId' => 'double',
         'memberId' => 'double',
-        'portal' => 'object',
-        'member' => 'object',
-        'requesterDesigns' => 'object[]',
-        'assignedDesigns' => 'object[]',
-        'commentedDesigns' => 'object[]',
-        'reviewedDesigns' => 'object[]'
+        'portal' => '\Swagger\Client\Model\Portal',
+        'member' => '\Swagger\Client\Model\TeamMember',
+        'requesterDesigns' => '\Swagger\Client\Model\Design[]',
+        'assignedDesigns' => '\Swagger\Client\Model\Design[]',
+        'commentedDesigns' => '\Swagger\Client\Model\Design[]',
+        'reviewedDesigns' => '\Swagger\Client\Model\Design[]'
     );
 
     public static function swaggerTypes()
@@ -312,7 +312,7 @@ class PortalMember implements ArrayAccess
 
     /**
      * Gets portal
-     * @return object
+     * @return \Swagger\Client\Model\Portal
      */
     public function getPortal()
     {
@@ -321,7 +321,7 @@ class PortalMember implements ArrayAccess
 
     /**
      * Sets portal
-     * @param object $portal
+     * @param \Swagger\Client\Model\Portal $portal
      * @return $this
      */
     public function setPortal($portal)
@@ -333,7 +333,7 @@ class PortalMember implements ArrayAccess
 
     /**
      * Gets member
-     * @return object
+     * @return \Swagger\Client\Model\TeamMember
      */
     public function getMember()
     {
@@ -342,7 +342,7 @@ class PortalMember implements ArrayAccess
 
     /**
      * Sets member
-     * @param object $member
+     * @param \Swagger\Client\Model\TeamMember $member
      * @return $this
      */
     public function setMember($member)
@@ -354,7 +354,7 @@ class PortalMember implements ArrayAccess
 
     /**
      * Gets requesterDesigns
-     * @return object[]
+     * @return \Swagger\Client\Model\Design[]
      */
     public function getRequesterDesigns()
     {
@@ -363,7 +363,7 @@ class PortalMember implements ArrayAccess
 
     /**
      * Sets requesterDesigns
-     * @param object[] $requesterDesigns
+     * @param \Swagger\Client\Model\Design[] $requesterDesigns
      * @return $this
      */
     public function setRequesterDesigns($requesterDesigns)
@@ -375,7 +375,7 @@ class PortalMember implements ArrayAccess
 
     /**
      * Gets assignedDesigns
-     * @return object[]
+     * @return \Swagger\Client\Model\Design[]
      */
     public function getAssignedDesigns()
     {
@@ -384,7 +384,7 @@ class PortalMember implements ArrayAccess
 
     /**
      * Sets assignedDesigns
-     * @param object[] $assignedDesigns
+     * @param \Swagger\Client\Model\Design[] $assignedDesigns
      * @return $this
      */
     public function setAssignedDesigns($assignedDesigns)
@@ -396,7 +396,7 @@ class PortalMember implements ArrayAccess
 
     /**
      * Gets commentedDesigns
-     * @return object[]
+     * @return \Swagger\Client\Model\Design[]
      */
     public function getCommentedDesigns()
     {
@@ -405,7 +405,7 @@ class PortalMember implements ArrayAccess
 
     /**
      * Sets commentedDesigns
-     * @param object[] $commentedDesigns
+     * @param \Swagger\Client\Model\Design[] $commentedDesigns
      * @return $this
      */
     public function setCommentedDesigns($commentedDesigns)
@@ -417,7 +417,7 @@ class PortalMember implements ArrayAccess
 
     /**
      * Gets reviewedDesigns
-     * @return object[]
+     * @return \Swagger\Client\Model\Design[]
      */
     public function getReviewedDesigns()
     {
@@ -426,7 +426,7 @@ class PortalMember implements ArrayAccess
 
     /**
      * Sets reviewedDesigns
-     * @param object[] $reviewedDesigns
+     * @param \Swagger\Client\Model\Design[] $reviewedDesigns
      * @return $this
      */
     public function setReviewedDesigns($reviewedDesigns)

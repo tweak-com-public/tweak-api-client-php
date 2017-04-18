@@ -69,8 +69,8 @@ class PortalTemplate implements ArrayAccess
         'id' => 'double',
         'portalId' => 'double',
         'templateId' => 'double',
-        'portal' => 'object',
-        'template' => 'object'
+        'portal' => '\Swagger\Client\Model\Portal',
+        'template' => '\Swagger\Client\Model\Template'
     );
 
     public static function swaggerTypes()
@@ -240,7 +240,7 @@ class PortalTemplate implements ArrayAccess
 
     /**
      * Gets portal
-     * @return object
+     * @return \Swagger\Client\Model\Portal
      */
     public function getPortal()
     {
@@ -249,7 +249,7 @@ class PortalTemplate implements ArrayAccess
 
     /**
      * Sets portal
-     * @param object $portal
+     * @param \Swagger\Client\Model\Portal $portal
      * @return $this
      */
     public function setPortal($portal)
@@ -261,7 +261,7 @@ class PortalTemplate implements ArrayAccess
 
     /**
      * Gets template
-     * @return object
+     * @return \Swagger\Client\Model\Template
      */
     public function getTemplate()
     {
@@ -270,7 +270,7 @@ class PortalTemplate implements ArrayAccess
 
     /**
      * Sets template
-     * @param object $template
+     * @param \Swagger\Client\Model\Template $template
      * @return $this
      */
     public function setTemplate($template)

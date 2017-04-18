@@ -69,8 +69,8 @@ class DesignAssignee implements ArrayAccess
         'id' => 'double',
         'designId' => 'double',
         'assigneeId' => 'double',
-        'design' => 'object',
-        'assignee' => 'object'
+        'design' => '\Swagger\Client\Model\Design',
+        'assignee' => '\Swagger\Client\Model\PortalMember'
     );
 
     public static function swaggerTypes()
@@ -240,7 +240,7 @@ class DesignAssignee implements ArrayAccess
 
     /**
      * Gets design
-     * @return object
+     * @return \Swagger\Client\Model\Design
      */
     public function getDesign()
     {
@@ -249,7 +249,7 @@ class DesignAssignee implements ArrayAccess
 
     /**
      * Sets design
-     * @param object $design
+     * @param \Swagger\Client\Model\Design $design
      * @return $this
      */
     public function setDesign($design)
@@ -261,7 +261,7 @@ class DesignAssignee implements ArrayAccess
 
     /**
      * Gets assignee
-     * @return object
+     * @return \Swagger\Client\Model\PortalMember
      */
     public function getAssignee()
     {
@@ -270,7 +270,7 @@ class DesignAssignee implements ArrayAccess
 
     /**
      * Sets assignee
-     * @param object $assignee
+     * @param \Swagger\Client\Model\PortalMember $assignee
      * @return $this
      */
     public function setAssignee($assignee)

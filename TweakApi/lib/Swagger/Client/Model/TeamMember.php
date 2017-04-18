@@ -71,12 +71,12 @@ class TeamMember implements ArrayAccess
         'id' => 'double',
         'customerId' => 'double',
         'teamId' => 'string',
-        'customer' => 'object',
-        'team' => 'object',
-        'portals' => 'object[]',
-        'uploadedTemplates' => 'object[]',
-        'templates' => 'object[]',
-        'invitationTickets' => 'object[]'
+        'customer' => '\Swagger\Client\Model\Customer',
+        'team' => '\Swagger\Client\Model\Team',
+        'portals' => '\Swagger\Client\Model\Portal[]',
+        'uploadedTemplates' => '\Swagger\Client\Model\Template[]',
+        'templates' => '\Swagger\Client\Model\Template[]',
+        'invitationTickets' => '\Swagger\Client\Model\InvitationTicket[]'
     );
 
     public static function swaggerTypes()
@@ -312,7 +312,7 @@ class TeamMember implements ArrayAccess
 
     /**
      * Gets customer
-     * @return object
+     * @return \Swagger\Client\Model\Customer
      */
     public function getCustomer()
     {
@@ -321,7 +321,7 @@ class TeamMember implements ArrayAccess
 
     /**
      * Sets customer
-     * @param object $customer
+     * @param \Swagger\Client\Model\Customer $customer
      * @return $this
      */
     public function setCustomer($customer)
@@ -333,7 +333,7 @@ class TeamMember implements ArrayAccess
 
     /**
      * Gets team
-     * @return object
+     * @return \Swagger\Client\Model\Team
      */
     public function getTeam()
     {
@@ -342,7 +342,7 @@ class TeamMember implements ArrayAccess
 
     /**
      * Sets team
-     * @param object $team
+     * @param \Swagger\Client\Model\Team $team
      * @return $this
      */
     public function setTeam($team)
@@ -354,7 +354,7 @@ class TeamMember implements ArrayAccess
 
     /**
      * Gets portals
-     * @return object[]
+     * @return \Swagger\Client\Model\Portal[]
      */
     public function getPortals()
     {
@@ -363,7 +363,7 @@ class TeamMember implements ArrayAccess
 
     /**
      * Sets portals
-     * @param object[] $portals
+     * @param \Swagger\Client\Model\Portal[] $portals
      * @return $this
      */
     public function setPortals($portals)
@@ -375,7 +375,7 @@ class TeamMember implements ArrayAccess
 
     /**
      * Gets uploadedTemplates
-     * @return object[]
+     * @return \Swagger\Client\Model\Template[]
      */
     public function getUploadedTemplates()
     {
@@ -384,7 +384,7 @@ class TeamMember implements ArrayAccess
 
     /**
      * Sets uploadedTemplates
-     * @param object[] $uploadedTemplates
+     * @param \Swagger\Client\Model\Template[] $uploadedTemplates
      * @return $this
      */
     public function setUploadedTemplates($uploadedTemplates)
@@ -396,7 +396,7 @@ class TeamMember implements ArrayAccess
 
     /**
      * Gets templates
-     * @return object[]
+     * @return \Swagger\Client\Model\Template[]
      */
     public function getTemplates()
     {
@@ -405,7 +405,7 @@ class TeamMember implements ArrayAccess
 
     /**
      * Sets templates
-     * @param object[] $templates
+     * @param \Swagger\Client\Model\Template[] $templates
      * @return $this
      */
     public function setTemplates($templates)
@@ -417,7 +417,7 @@ class TeamMember implements ArrayAccess
 
     /**
      * Gets invitationTickets
-     * @return object[]
+     * @return \Swagger\Client\Model\InvitationTicket[]
      */
     public function getInvitationTickets()
     {
@@ -426,7 +426,7 @@ class TeamMember implements ArrayAccess
 
     /**
      * Sets invitationTickets
-     * @param object[] $invitationTickets
+     * @param \Swagger\Client\Model\InvitationTicket[] $invitationTickets
      * @return $this
      */
     public function setInvitationTickets($invitationTickets)

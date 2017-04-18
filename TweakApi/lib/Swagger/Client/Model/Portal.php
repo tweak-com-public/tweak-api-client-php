@@ -74,11 +74,11 @@ class Portal implements ArrayAccess
         'modified' => '\DateTime',
         'id' => 'double',
         'teamId' => 'string',
-        'templates' => 'object[]',
-        'members' => 'object[]',
-        'team' => 'object',
-        'permission' => 'object',
-        'designs' => 'object[]'
+        'templates' => '\Swagger\Client\Model\Template[]',
+        'members' => '\Swagger\Client\Model\TeamMember[]',
+        'team' => '\Swagger\Client\Model\Team',
+        'permission' => '\Swagger\Client\Model\PortalPermissionSet',
+        'designs' => '\Swagger\Client\Model\Design[]'
     );
 
     public static function swaggerTypes()
@@ -745,7 +745,7 @@ class Portal implements ArrayAccess
 
     /**
      * Gets templates
-     * @return object[]
+     * @return \Swagger\Client\Model\Template[]
      */
     public function getTemplates()
     {
@@ -754,7 +754,7 @@ class Portal implements ArrayAccess
 
     /**
      * Sets templates
-     * @param object[] $templates
+     * @param \Swagger\Client\Model\Template[] $templates
      * @return $this
      */
     public function setTemplates($templates)
@@ -766,7 +766,7 @@ class Portal implements ArrayAccess
 
     /**
      * Gets members
-     * @return object[]
+     * @return \Swagger\Client\Model\TeamMember[]
      */
     public function getMembers()
     {
@@ -775,7 +775,7 @@ class Portal implements ArrayAccess
 
     /**
      * Sets members
-     * @param object[] $members
+     * @param \Swagger\Client\Model\TeamMember[] $members
      * @return $this
      */
     public function setMembers($members)
@@ -787,7 +787,7 @@ class Portal implements ArrayAccess
 
     /**
      * Gets team
-     * @return object
+     * @return \Swagger\Client\Model\Team
      */
     public function getTeam()
     {
@@ -796,7 +796,7 @@ class Portal implements ArrayAccess
 
     /**
      * Sets team
-     * @param object $team
+     * @param \Swagger\Client\Model\Team $team
      * @return $this
      */
     public function setTeam($team)
@@ -808,7 +808,7 @@ class Portal implements ArrayAccess
 
     /**
      * Gets permission
-     * @return object
+     * @return \Swagger\Client\Model\PortalPermissionSet
      */
     public function getPermission()
     {
@@ -817,7 +817,7 @@ class Portal implements ArrayAccess
 
     /**
      * Sets permission
-     * @param object $permission
+     * @param \Swagger\Client\Model\PortalPermissionSet $permission
      * @return $this
      */
     public function setPermission($permission)
@@ -829,7 +829,7 @@ class Portal implements ArrayAccess
 
     /**
      * Gets designs
-     * @return object[]
+     * @return \Swagger\Client\Model\Design[]
      */
     public function getDesigns()
     {
@@ -838,7 +838,7 @@ class Portal implements ArrayAccess
 
     /**
      * Sets designs
-     * @param object[] $designs
+     * @param \Swagger\Client\Model\Design[] $designs
      * @return $this
      */
     public function setDesigns($designs)

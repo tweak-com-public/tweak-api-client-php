@@ -78,10 +78,10 @@ class Team implements ArrayAccess
         'windowsKey' => 'string',
         'masterKey' => 'string',
         'status' => 'string',
-        'members' => 'object[]',
-        'portals' => 'object[]',
-        'templates' => 'object[]',
-        'brand' => 'object'
+        'members' => '\Swagger\Client\Model\Customer[]',
+        'portals' => '\Swagger\Client\Model\Portal[]',
+        'templates' => '\Swagger\Client\Model\Template[]',
+        'brand' => '\Swagger\Client\Model\TeamBrand'
     );
 
     public static function swaggerTypes()
@@ -496,7 +496,7 @@ class Team implements ArrayAccess
 
     /**
      * Gets members
-     * @return object[]
+     * @return \Swagger\Client\Model\Customer[]
      */
     public function getMembers()
     {
@@ -505,7 +505,7 @@ class Team implements ArrayAccess
 
     /**
      * Sets members
-     * @param object[] $members
+     * @param \Swagger\Client\Model\Customer[] $members
      * @return $this
      */
     public function setMembers($members)
@@ -517,7 +517,7 @@ class Team implements ArrayAccess
 
     /**
      * Gets portals
-     * @return object[]
+     * @return \Swagger\Client\Model\Portal[]
      */
     public function getPortals()
     {
@@ -526,7 +526,7 @@ class Team implements ArrayAccess
 
     /**
      * Sets portals
-     * @param object[] $portals
+     * @param \Swagger\Client\Model\Portal[] $portals
      * @return $this
      */
     public function setPortals($portals)
@@ -538,7 +538,7 @@ class Team implements ArrayAccess
 
     /**
      * Gets templates
-     * @return object[]
+     * @return \Swagger\Client\Model\Template[]
      */
     public function getTemplates()
     {
@@ -547,7 +547,7 @@ class Team implements ArrayAccess
 
     /**
      * Sets templates
-     * @param object[] $templates
+     * @param \Swagger\Client\Model\Template[] $templates
      * @return $this
      */
     public function setTemplates($templates)
@@ -559,7 +559,7 @@ class Team implements ArrayAccess
 
     /**
      * Gets brand
-     * @return object
+     * @return \Swagger\Client\Model\TeamBrand
      */
     public function getBrand()
     {
@@ -568,7 +568,7 @@ class Team implements ArrayAccess
 
     /**
      * Sets brand
-     * @param object $brand
+     * @param \Swagger\Client\Model\TeamBrand $brand
      * @return $this
      */
     public function setBrand($brand)

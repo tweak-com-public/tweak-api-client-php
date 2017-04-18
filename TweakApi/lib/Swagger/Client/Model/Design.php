@@ -81,14 +81,14 @@ class Design implements ArrayAccess
         'templateId' => 'double',
         'portalId' => 'double',
         'requesterId' => 'double',
-        'tags' => 'object[]',
-        'customer' => 'object',
-        'template' => 'object',
-        'portal' => 'object',
-        'requester' => 'object',
-        'commenters' => 'object[]',
-        'assignees' => 'object[]',
-        'reviewers' => 'object[]'
+        'tags' => '\Swagger\Client\Model\Tag[]',
+        'customer' => '\Swagger\Client\Model\Customer',
+        'template' => '\Swagger\Client\Model\Template',
+        'portal' => '\Swagger\Client\Model\Portal',
+        'requester' => '\Swagger\Client\Model\PortalMember',
+        'commenters' => '\Swagger\Client\Model\PortalMember[]',
+        'assignees' => '\Swagger\Client\Model\PortalMember[]',
+        'reviewers' => '\Swagger\Client\Model\PortalMember[]'
     );
 
     public static function swaggerTypes()
@@ -621,7 +621,7 @@ class Design implements ArrayAccess
 
     /**
      * Gets tags
-     * @return object[]
+     * @return \Swagger\Client\Model\Tag[]
      */
     public function getTags()
     {
@@ -630,7 +630,7 @@ class Design implements ArrayAccess
 
     /**
      * Sets tags
-     * @param object[] $tags
+     * @param \Swagger\Client\Model\Tag[] $tags
      * @return $this
      */
     public function setTags($tags)
@@ -642,7 +642,7 @@ class Design implements ArrayAccess
 
     /**
      * Gets customer
-     * @return object
+     * @return \Swagger\Client\Model\Customer
      */
     public function getCustomer()
     {
@@ -651,7 +651,7 @@ class Design implements ArrayAccess
 
     /**
      * Sets customer
-     * @param object $customer
+     * @param \Swagger\Client\Model\Customer $customer
      * @return $this
      */
     public function setCustomer($customer)
@@ -663,7 +663,7 @@ class Design implements ArrayAccess
 
     /**
      * Gets template
-     * @return object
+     * @return \Swagger\Client\Model\Template
      */
     public function getTemplate()
     {
@@ -672,7 +672,7 @@ class Design implements ArrayAccess
 
     /**
      * Sets template
-     * @param object $template
+     * @param \Swagger\Client\Model\Template $template
      * @return $this
      */
     public function setTemplate($template)
@@ -684,7 +684,7 @@ class Design implements ArrayAccess
 
     /**
      * Gets portal
-     * @return object
+     * @return \Swagger\Client\Model\Portal
      */
     public function getPortal()
     {
@@ -693,7 +693,7 @@ class Design implements ArrayAccess
 
     /**
      * Sets portal
-     * @param object $portal
+     * @param \Swagger\Client\Model\Portal $portal
      * @return $this
      */
     public function setPortal($portal)
@@ -705,7 +705,7 @@ class Design implements ArrayAccess
 
     /**
      * Gets requester
-     * @return object
+     * @return \Swagger\Client\Model\PortalMember
      */
     public function getRequester()
     {
@@ -714,7 +714,7 @@ class Design implements ArrayAccess
 
     /**
      * Sets requester
-     * @param object $requester
+     * @param \Swagger\Client\Model\PortalMember $requester
      * @return $this
      */
     public function setRequester($requester)
@@ -726,7 +726,7 @@ class Design implements ArrayAccess
 
     /**
      * Gets commenters
-     * @return object[]
+     * @return \Swagger\Client\Model\PortalMember[]
      */
     public function getCommenters()
     {
@@ -735,7 +735,7 @@ class Design implements ArrayAccess
 
     /**
      * Sets commenters
-     * @param object[] $commenters
+     * @param \Swagger\Client\Model\PortalMember[] $commenters
      * @return $this
      */
     public function setCommenters($commenters)
@@ -747,7 +747,7 @@ class Design implements ArrayAccess
 
     /**
      * Gets assignees
-     * @return object[]
+     * @return \Swagger\Client\Model\PortalMember[]
      */
     public function getAssignees()
     {
@@ -756,7 +756,7 @@ class Design implements ArrayAccess
 
     /**
      * Sets assignees
-     * @param object[] $assignees
+     * @param \Swagger\Client\Model\PortalMember[] $assignees
      * @return $this
      */
     public function setAssignees($assignees)
@@ -768,7 +768,7 @@ class Design implements ArrayAccess
 
     /**
      * Gets reviewers
-     * @return object[]
+     * @return \Swagger\Client\Model\PortalMember[]
      */
     public function getReviewers()
     {
@@ -777,7 +777,7 @@ class Design implements ArrayAccess
 
     /**
      * Sets reviewers
-     * @param object[] $reviewers
+     * @param \Swagger\Client\Model\PortalMember[] $reviewers
      * @return $this
      */
     public function setReviewers($reviewers)

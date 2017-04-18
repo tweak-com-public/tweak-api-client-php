@@ -69,8 +69,8 @@ class TemplateTag implements ArrayAccess
         'id' => 'double',
         'tagId' => 'double',
         'templateId' => 'double',
-        'tag' => 'object',
-        'template' => 'object'
+        'tag' => '\Swagger\Client\Model\Tag',
+        'template' => '\Swagger\Client\Model\Template'
     );
 
     public static function swaggerTypes()
@@ -240,7 +240,7 @@ class TemplateTag implements ArrayAccess
 
     /**
      * Gets tag
-     * @return object
+     * @return \Swagger\Client\Model\Tag
      */
     public function getTag()
     {
@@ -249,7 +249,7 @@ class TemplateTag implements ArrayAccess
 
     /**
      * Sets tag
-     * @param object $tag
+     * @param \Swagger\Client\Model\Tag $tag
      * @return $this
      */
     public function setTag($tag)
@@ -261,7 +261,7 @@ class TemplateTag implements ArrayAccess
 
     /**
      * Gets template
-     * @return object
+     * @return \Swagger\Client\Model\Template
      */
     public function getTemplate()
     {
@@ -270,7 +270,7 @@ class TemplateTag implements ArrayAccess
 
     /**
      * Sets template
-     * @param object $template
+     * @param \Swagger\Client\Model\Template $template
      * @return $this
      */
     public function setTemplate($template)

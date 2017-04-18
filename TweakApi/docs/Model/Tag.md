@@ -7,8 +7,8 @@ Name | Type | Description | Notes
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **modified** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **id** | **double** |  | [optional] 
-**templates** | **object[]** |  | [optional] 
-**designs** | **object[]** |  | [optional] 
+**templates** | [**\Swagger\Client\Model\Template[]**](Template.md) |  | [optional] 
+**designs** | [**\Swagger\Client\Model\Design[]**](Design.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

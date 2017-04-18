@@ -69,8 +69,8 @@ class DesignTag implements ArrayAccess
         'id' => 'double',
         'designId' => 'double',
         'tagId' => 'double',
-        'design' => 'object',
-        'tag' => 'object'
+        'design' => '\Swagger\Client\Model\Design',
+        'tag' => '\Swagger\Client\Model\Tag'
     );
 
     public static function swaggerTypes()
@@ -240,7 +240,7 @@ class DesignTag implements ArrayAccess
 
     /**
      * Gets design
-     * @return object
+     * @return \Swagger\Client\Model\Design
      */
     public function getDesign()
     {
@@ -249,7 +249,7 @@ class DesignTag implements ArrayAccess
 
     /**
      * Sets design
-     * @param object $design
+     * @param \Swagger\Client\Model\Design $design
      * @return $this
      */
     public function setDesign($design)
@@ -261,7 +261,7 @@ class DesignTag implements ArrayAccess
 
     /**
      * Gets tag
-     * @return object
+     * @return \Swagger\Client\Model\Tag
      */
     public function getTag()
     {
@@ -270,7 +270,7 @@ class DesignTag implements ArrayAccess
 
     /**
      * Sets tag
-     * @param object $tag
+     * @param \Swagger\Client\Model\Tag $tag
      * @return $this
      */
     public function setTag($tag)

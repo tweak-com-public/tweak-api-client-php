@@ -15,10 +15,10 @@ Name | Type | Description | Notes
 **email** | **string** |  | 
 **emailVerified** | **bool** |  | [optional] 
 **id** | **double** |  | [optional] 
-**designs** | **object[]** |  | [optional] 
-**teams** | **object[]** |  | [optional] 
-**invitationTickets** | **object[]** |  | [optional] 
-**accessTokens** | **object[]** |  | [optional] 
+**designs** | [**\Swagger\Client\Model\Design[]**](Design.md) |  | [optional] 
+**teams** | [**\Swagger\Client\Model\Team[]**](Team.md) |  | [optional] 
+**invitationTickets** | [**\Swagger\Client\Model\InvitationTicket[]**](InvitationTicket.md) |  | [optional] 
+**accessTokens** | [**\Swagger\Client\Model\TeamMemberAccessToken[]**](TeamMemberAccessToken.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

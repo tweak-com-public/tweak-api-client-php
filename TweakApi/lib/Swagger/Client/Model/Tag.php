@@ -70,8 +70,8 @@ class Tag implements ArrayAccess
         'created' => '\DateTime',
         'modified' => '\DateTime',
         'id' => 'double',
-        'templates' => 'object[]',
-        'designs' => 'object[]'
+        'templates' => '\Swagger\Client\Model\Template[]',
+        'designs' => '\Swagger\Client\Model\Design[]'
     );
 
     public static function swaggerTypes()
@@ -272,7 +272,7 @@ class Tag implements ArrayAccess
 
     /**
      * Gets templates
-     * @return object[]
+     * @return \Swagger\Client\Model\Template[]
      */
     public function getTemplates()
     {
@@ -281,7 +281,7 @@ class Tag implements ArrayAccess
 
     /**
      * Sets templates
-     * @param object[] $templates
+     * @param \Swagger\Client\Model\Template[] $templates
      * @return $this
      */
     public function setTemplates($templates)
@@ -293,7 +293,7 @@ class Tag implements ArrayAccess
 
     /**
      * Gets designs
-     * @return object[]
+     * @return \Swagger\Client\Model\Design[]
      */
     public function getDesigns()
     {
@@ -302,7 +302,7 @@ class Tag implements ArrayAccess
 
     /**
      * Sets designs
-     * @param object[] $designs
+     * @param \Swagger\Client\Model\Design[] $designs
      * @return $this
      */
     public function setDesigns($designs)

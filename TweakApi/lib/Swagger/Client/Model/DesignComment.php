@@ -76,10 +76,10 @@ class DesignComment implements ArrayAccess
         'designId' => 'double',
         'commentId' => 'double',
         'commenterId' => 'double',
-        'design' => 'object',
-        'replies' => 'object[]',
-        'commenter' => 'object',
-        'replyOf' => 'object'
+        'design' => '\Swagger\Client\Model\Design',
+        'replies' => '\Swagger\Client\Model\DesignComment[]',
+        'commenter' => '\Swagger\Client\Model\PortalMember',
+        'replyOf' => '\Swagger\Client\Model\DesignComment'
     );
 
     public static function swaggerTypes()
@@ -476,7 +476,7 @@ class DesignComment implements ArrayAccess
 
     /**
      * Gets design
-     * @return object
+     * @return \Swagger\Client\Model\Design
      */
     public function getDesign()
     {
@@ -485,7 +485,7 @@ class DesignComment implements ArrayAccess
 
     /**
      * Sets design
-     * @param object $design
+     * @param \Swagger\Client\Model\Design $design
      * @return $this
      */
     public function setDesign($design)
@@ -497,7 +497,7 @@ class DesignComment implements ArrayAccess
 
     /**
      * Gets replies
-     * @return object[]
+     * @return \Swagger\Client\Model\DesignComment[]
      */
     public function getReplies()
     {
@@ -506,7 +506,7 @@ class DesignComment implements ArrayAccess
 
     /**
      * Sets replies
-     * @param object[] $replies
+     * @param \Swagger\Client\Model\DesignComment[] $replies
      * @return $this
      */
     public function setReplies($replies)
@@ -518,7 +518,7 @@ class DesignComment implements ArrayAccess
 
     /**
      * Gets commenter
-     * @return object
+     * @return \Swagger\Client\Model\PortalMember
      */
     public function getCommenter()
     {
@@ -527,7 +527,7 @@ class DesignComment implements ArrayAccess
 
     /**
      * Sets commenter
-     * @param object $commenter
+     * @param \Swagger\Client\Model\PortalMember $commenter
      * @return $this
      */
     public function setCommenter($commenter)
@@ -539,7 +539,7 @@ class DesignComment implements ArrayAccess
 
     /**
      * Gets replyOf
-     * @return object
+     * @return \Swagger\Client\Model\DesignComment
      */
     public function getReplyOf()
     {
@@ -548,7 +548,7 @@ class DesignComment implements ArrayAccess
 
     /**
      * Sets replyOf
-     * @param object $replyOf
+     * @param \Swagger\Client\Model\DesignComment $replyOf
      * @return $this
      */
     public function setReplyOf($replyOf)
