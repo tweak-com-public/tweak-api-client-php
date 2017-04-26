@@ -299,6 +299,17 @@ class TeamMemberApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for teamMembersIdPortalsAvailableGet
+     *
+     * Find all available Portals.
+     *
+     */
+    public function testTeamMembersIdPortalsAvailableGet()
+    {
+
+    }
+
+    /**
      * Test case for teamMembersIdPortalsCountGet
      *
      * Counts portals of TeamMember..

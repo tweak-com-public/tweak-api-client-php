@@ -3702,110 +3702,6 @@ class CustomerApi
     }
 
     /**
-     * Operation customersIdTeamsFkChangePost
-     *
-     * Change from a Team to another
-     *
-     * @param string $id Customer id (required)
-     * @param string $fk Team id (required)
-     * @return \Swagger\Client\Model\TeamMemberAccessToken
-     * @throws \Tweak\Api\ApiException on non-2xx response
-     */
-    public function customersIdTeamsFkChangePost($id, $fk)
-    {
-        list($response) = $this->customersIdTeamsFkChangePostWithHttpInfo($id, $fk);
-        return $response;
-    }
-
-    /**
-     * Operation customersIdTeamsFkChangePostWithHttpInfo
-     *
-     * Change from a Team to another
-     *
-     * @param string $id Customer id (required)
-     * @param string $fk Team id (required)
-     * @return array of \Swagger\Client\Model\TeamMemberAccessToken, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Tweak\Api\ApiException on non-2xx response
-     */
-    public function customersIdTeamsFkChangePostWithHttpInfo($id, $fk)
-    {
-        // verify the required parameter 'id' is set
-        if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling customersIdTeamsFkChangePost');
-        }
-        // verify the required parameter 'fk' is set
-        if ($fk === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $fk when calling customersIdTeamsFkChangePost');
-        }
-        // parse inputs
-        $resourcePath = "/Customers/{id}/teams/{fk}/change";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
-
-        // path params
-        if ($id !== null) {
-            $resourcePath = str_replace(
-                "{" . "id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($fk !== null) {
-            $resourcePath = str_replace(
-                "{" . "fk" . "}",
-                $this->apiClient->getSerializer()->toPathValue($fk),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $queryParams['access_token'] = $apiKey;
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'POST',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\Swagger\Client\Model\TeamMemberAccessToken',
-                '/Customers/{id}/teams/{fk}/change'
-            );
-
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TeamMemberAccessToken', $httpHeader), $statusCode, $httpHeader);
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TeamMemberAccessToken', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
      * Operation customersIdTeamsFkDelete
      *
      * Delete a related item by id for teams.
@@ -4620,6 +4516,318 @@ class CustomerApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TeamMember', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation customersIdTeamsTeamIdChangePost
+     *
+     * Move authentication to a Team
+     *
+     * @param string $id Customer id (required)
+     * @param string $teamId Team id (required)
+     * @return \Swagger\Client\Model\TeamMemberAccessToken
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function customersIdTeamsTeamIdChangePost($id, $teamId)
+    {
+        list($response) = $this->customersIdTeamsTeamIdChangePostWithHttpInfo($id, $teamId);
+        return $response;
+    }
+
+    /**
+     * Operation customersIdTeamsTeamIdChangePostWithHttpInfo
+     *
+     * Move authentication to a Team
+     *
+     * @param string $id Customer id (required)
+     * @param string $teamId Team id (required)
+     * @return array of \Swagger\Client\Model\TeamMemberAccessToken, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function customersIdTeamsTeamIdChangePostWithHttpInfo($id, $teamId)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling customersIdTeamsTeamIdChangePost');
+        }
+        // verify the required parameter 'teamId' is set
+        if ($teamId === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $teamId when calling customersIdTeamsTeamIdChangePost');
+        }
+        // parse inputs
+        $resourcePath = "/Customers/{id}/teams/{teamId}/change";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($teamId !== null) {
+            $resourcePath = str_replace(
+                "{" . "teamId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($teamId),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\TeamMemberAccessToken',
+                '/Customers/{id}/teams/{teamId}/change'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TeamMemberAccessToken', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TeamMemberAccessToken', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation customersIdTeamsTeamIdPortalsPortalIdChangePost
+     *
+     * Move authentication to a Portal
+     *
+     * @param string $id Customer id (required)
+     * @param string $teamId Team id (required)
+     * @param string $portalId Portal id (required)
+     * @return \Swagger\Client\Model\TeamMemberAccessToken
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function customersIdTeamsTeamIdPortalsPortalIdChangePost($id, $teamId, $portalId)
+    {
+        list($response) = $this->customersIdTeamsTeamIdPortalsPortalIdChangePostWithHttpInfo($id, $teamId, $portalId);
+        return $response;
+    }
+
+    /**
+     * Operation customersIdTeamsTeamIdPortalsPortalIdChangePostWithHttpInfo
+     *
+     * Move authentication to a Portal
+     *
+     * @param string $id Customer id (required)
+     * @param string $teamId Team id (required)
+     * @param string $portalId Portal id (required)
+     * @return array of \Swagger\Client\Model\TeamMemberAccessToken, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function customersIdTeamsTeamIdPortalsPortalIdChangePostWithHttpInfo($id, $teamId, $portalId)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling customersIdTeamsTeamIdPortalsPortalIdChangePost');
+        }
+        // verify the required parameter 'teamId' is set
+        if ($teamId === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $teamId when calling customersIdTeamsTeamIdPortalsPortalIdChangePost');
+        }
+        // verify the required parameter 'portalId' is set
+        if ($portalId === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $portalId when calling customersIdTeamsTeamIdPortalsPortalIdChangePost');
+        }
+        // parse inputs
+        $resourcePath = "/Customers/{id}/teams/{teamId}/portals/{portalId}/change";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($teamId !== null) {
+            $resourcePath = str_replace(
+                "{" . "teamId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($teamId),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($portalId !== null) {
+            $resourcePath = str_replace(
+                "{" . "portalId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($portalId),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\TeamMemberAccessToken',
+                '/Customers/{id}/teams/{teamId}/portals/{portalId}/change'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TeamMemberAccessToken', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TeamMemberAccessToken', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation customersIdTokenGet
+     *
+     * Get token info
+     *
+     * @param string $id Customer id (required)
+     * @return \Swagger\Client\Model\TeamMemberAccessToken
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function customersIdTokenGet($id)
+    {
+        list($response) = $this->customersIdTokenGetWithHttpInfo($id);
+        return $response;
+    }
+
+    /**
+     * Operation customersIdTokenGetWithHttpInfo
+     *
+     * Get token info
+     *
+     * @param string $id Customer id (required)
+     * @return array of \Swagger\Client\Model\TeamMemberAccessToken, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function customersIdTokenGetWithHttpInfo($id)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling customersIdTokenGet');
+        }
+        // parse inputs
+        $resourcePath = "/Customers/{id}/token";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\TeamMemberAccessToken',
+                '/Customers/{id}/token'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TeamMemberAccessToken', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TeamMemberAccessToken', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

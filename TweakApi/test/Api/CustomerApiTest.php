@@ -508,17 +508,6 @@ class CustomerApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for customersIdTeamsFkChangePost
-     *
-     * Change from a Team to another.
-     *
-     */
-    public function testCustomersIdTeamsFkChangePost()
-    {
-
-    }
-
-    /**
      * Test case for customersIdTeamsFkDelete
      *
      * Delete a related item by id for teams..
@@ -602,6 +591,39 @@ class CustomerApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testCustomersIdTeamsRelFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsTeamIdChangePost
+     *
+     * Move authentication to a Team.
+     *
+     */
+    public function testCustomersIdTeamsTeamIdChangePost()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsTeamIdPortalsPortalIdChangePost
+     *
+     * Move authentication to a Portal.
+     *
+     */
+    public function testCustomersIdTeamsTeamIdPortalsPortalIdChangePost()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTokenGet
+     *
+     * Get token info.
+     *
+     */
+    public function testCustomersIdTokenGet()
     {
 
     }

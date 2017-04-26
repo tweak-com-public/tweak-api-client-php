@@ -72,9 +72,13 @@ class TeamMemberAccessToken implements ArrayAccess
         'userId' => 'double',
         'teamId' => 'string',
         'teamMemberId' => 'double',
+        'portalId' => 'double',
+        'portalMemberId' => 'double',
         'customer' => '\Swagger\Client\Model\Customer',
         'team' => '\Swagger\Client\Model\Team',
-        'teamMember' => '\Swagger\Client\Model\TeamMember'
+        'teamMember' => '\Swagger\Client\Model\TeamMember',
+        'portal' => '\Swagger\Client\Model\Portal',
+        'portalMember' => '\Swagger\Client\Model\PortalMember'
     );
 
     public static function swaggerTypes()
@@ -93,9 +97,13 @@ class TeamMemberAccessToken implements ArrayAccess
         'userId' => 'userId',
         'teamId' => 'teamId',
         'teamMemberId' => 'teamMemberId',
+        'portalId' => 'portalId',
+        'portalMemberId' => 'portalMemberId',
         'customer' => 'customer',
         'team' => 'team',
-        'teamMember' => 'teamMember'
+        'teamMember' => 'teamMember',
+        'portal' => 'portal',
+        'portalMember' => 'portalMember'
     );
 
     public static function attributeMap()
@@ -114,9 +122,13 @@ class TeamMemberAccessToken implements ArrayAccess
         'userId' => 'setUserId',
         'teamId' => 'setTeamId',
         'teamMemberId' => 'setTeamMemberId',
+        'portalId' => 'setPortalId',
+        'portalMemberId' => 'setPortalMemberId',
         'customer' => 'setCustomer',
         'team' => 'setTeam',
-        'teamMember' => 'setTeamMember'
+        'teamMember' => 'setTeamMember',
+        'portal' => 'setPortal',
+        'portalMember' => 'setPortalMember'
     );
 
     public static function setters()
@@ -135,9 +147,13 @@ class TeamMemberAccessToken implements ArrayAccess
         'userId' => 'getUserId',
         'teamId' => 'getTeamId',
         'teamMemberId' => 'getTeamMemberId',
+        'portalId' => 'getPortalId',
+        'portalMemberId' => 'getPortalMemberId',
         'customer' => 'getCustomer',
         'team' => 'getTeam',
-        'teamMember' => 'getTeamMember'
+        'teamMember' => 'getTeamMember',
+        'portal' => 'getPortal',
+        'portalMember' => 'getPortalMember'
     );
 
     public static function getters()
@@ -167,9 +183,13 @@ class TeamMemberAccessToken implements ArrayAccess
         $this->container['userId'] = isset($data['userId']) ? $data['userId'] : null;
         $this->container['teamId'] = isset($data['teamId']) ? $data['teamId'] : null;
         $this->container['teamMemberId'] = isset($data['teamMemberId']) ? $data['teamMemberId'] : null;
+        $this->container['portalId'] = isset($data['portalId']) ? $data['portalId'] : null;
+        $this->container['portalMemberId'] = isset($data['portalMemberId']) ? $data['portalMemberId'] : null;
         $this->container['customer'] = isset($data['customer']) ? $data['customer'] : null;
         $this->container['team'] = isset($data['team']) ? $data['team'] : null;
         $this->container['teamMember'] = isset($data['teamMember']) ? $data['teamMember'] : null;
+        $this->container['portal'] = isset($data['portal']) ? $data['portal'] : null;
+        $this->container['portalMember'] = isset($data['portalMember']) ? $data['portalMember'] : null;
     }
 
     /**
@@ -328,6 +348,48 @@ class TeamMemberAccessToken implements ArrayAccess
     }
 
     /**
+     * Gets portalId
+     * @return double
+     */
+    public function getPortalId()
+    {
+        return $this->container['portalId'];
+    }
+
+    /**
+     * Sets portalId
+     * @param double $portalId
+     * @return $this
+     */
+    public function setPortalId($portalId)
+    {
+        $this->container['portalId'] = $portalId;
+
+        return $this;
+    }
+
+    /**
+     * Gets portalMemberId
+     * @return double
+     */
+    public function getPortalMemberId()
+    {
+        return $this->container['portalMemberId'];
+    }
+
+    /**
+     * Sets portalMemberId
+     * @param double $portalMemberId
+     * @return $this
+     */
+    public function setPortalMemberId($portalMemberId)
+    {
+        $this->container['portalMemberId'] = $portalMemberId;
+
+        return $this;
+    }
+
+    /**
      * Gets customer
      * @return \Swagger\Client\Model\Customer
      */
@@ -386,6 +448,48 @@ class TeamMemberAccessToken implements ArrayAccess
     public function setTeamMember($teamMember)
     {
         $this->container['teamMember'] = $teamMember;
+
+        return $this;
+    }
+
+    /**
+     * Gets portal
+     * @return \Swagger\Client\Model\Portal
+     */
+    public function getPortal()
+    {
+        return $this->container['portal'];
+    }
+
+    /**
+     * Sets portal
+     * @param \Swagger\Client\Model\Portal $portal
+     * @return $this
+     */
+    public function setPortal($portal)
+    {
+        $this->container['portal'] = $portal;
+
+        return $this;
+    }
+
+    /**
+     * Gets portalMember
+     * @return \Swagger\Client\Model\PortalMember
+     */
+    public function getPortalMember()
+    {
+        return $this->container['portalMember'];
+    }
+
+    /**
+     * Sets portalMember
+     * @param \Swagger\Client\Model\PortalMember $portalMember
+     * @return $this
+     */
+    public function setPortalMember($portalMember)
+    {
+        $this->container['portalMember'] = $portalMember;
 
         return $this;
     }

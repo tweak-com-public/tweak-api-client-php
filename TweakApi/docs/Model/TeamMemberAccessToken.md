@@ -9,9 +9,13 @@ Name | Type | Description | Notes
 **userId** | **double** |  | [optional] 
 **teamId** | **string** |  | [optional] 
 **teamMemberId** | **double** |  | [optional] 
+**portalId** | **double** |  | [optional] 
+**portalMemberId** | **double** |  | [optional] 
 **customer** | [**\Swagger\Client\Model\Customer**](Customer.md) |  | [optional] 
 **team** | [**\Swagger\Client\Model\Team**](Team.md) |  | [optional] 
 **teamMember** | [**\Swagger\Client\Model\TeamMember**](TeamMember.md) |  | [optional] 
+**portal** | [**\Swagger\Client\Model\Portal**](Portal.md) |  | [optional] 
+**portalMember** | [**\Swagger\Client\Model\PortalMember**](PortalMember.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

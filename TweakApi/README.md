@@ -119,7 +119,6 @@ Class | Method | HTTP request | Description
 *CustomerApi* | [**customersIdReplacePost**](docs/Api/CustomerApi.md#customersidreplacepost) | **POST** /Customers/{id}/replace | Replace attributes for a model instance and persist it into the data source.
 *CustomerApi* | [**customersIdTeamsCountGet**](docs/Api/CustomerApi.md#customersidteamscountget) | **GET** /Customers/{id}/teams/count | Counts teams of Customer.
 *CustomerApi* | [**customersIdTeamsDelete**](docs/Api/CustomerApi.md#customersidteamsdelete) | **DELETE** /Customers/{id}/teams | Deletes all teams of this model.
-*CustomerApi* | [**customersIdTeamsFkChangePost**](docs/Api/CustomerApi.md#customersidteamsfkchangepost) | **POST** /Customers/{id}/teams/{fk}/change | Change from a Team to another
 *CustomerApi* | [**customersIdTeamsFkDelete**](docs/Api/CustomerApi.md#customersidteamsfkdelete) | **DELETE** /Customers/{id}/teams/{fk} | Delete a related item by id for teams.
 *CustomerApi* | [**customersIdTeamsFkGet**](docs/Api/CustomerApi.md#customersidteamsfkget) | **GET** /Customers/{id}/teams/{fk} | Find a related item by id for teams.
 *CustomerApi* | [**customersIdTeamsFkPut**](docs/Api/CustomerApi.md#customersidteamsfkput) | **PUT** /Customers/{id}/teams/{fk} | Update a related item by id for teams.
@@ -128,6 +127,9 @@ Class | Method | HTTP request | Description
 *CustomerApi* | [**customersIdTeamsRelFkDelete**](docs/Api/CustomerApi.md#customersidteamsrelfkdelete) | **DELETE** /Customers/{id}/teams/rel/{fk} | Remove the teams relation to an item by id.
 *CustomerApi* | [**customersIdTeamsRelFkHead**](docs/Api/CustomerApi.md#customersidteamsrelfkhead) | **HEAD** /Customers/{id}/teams/rel/{fk} | Check the existence of teams relation to an item by id.
 *CustomerApi* | [**customersIdTeamsRelFkPut**](docs/Api/CustomerApi.md#customersidteamsrelfkput) | **PUT** /Customers/{id}/teams/rel/{fk} | Add a related item by id for teams.
+*CustomerApi* | [**customersIdTeamsTeamIdChangePost**](docs/Api/CustomerApi.md#customersidteamsteamidchangepost) | **POST** /Customers/{id}/teams/{teamId}/change | Move authentication to a Team
+*CustomerApi* | [**customersIdTeamsTeamIdPortalsPortalIdChangePost**](docs/Api/CustomerApi.md#customersidteamsteamidportalsportalidchangepost) | **POST** /Customers/{id}/teams/{teamId}/portals/{portalId}/change | Move authentication to a Portal
+*CustomerApi* | [**customersIdTokenGet**](docs/Api/CustomerApi.md#customersidtokenget) | **GET** /Customers/{id}/token | Get token info
 *CustomerApi* | [**customersInvitationTicketsAcceptPost**](docs/Api/CustomerApi.md#customersinvitationticketsacceptpost) | **POST** /Customers/invitationTickets/accept | Accept invitation with token
 *CustomerApi* | [**customersLoginPost**](docs/Api/CustomerApi.md#customersloginpost) | **POST** /Customers/login | Login a user with username/email and password.
 *CustomerApi* | [**customersLogoutPost**](docs/Api/CustomerApi.md#customerslogoutpost) | **POST** /Customers/logout | Logout a user with access token.
@@ -557,25 +559,6 @@ Class | Method | HTTP request | Description
 *TeamApi* | [**teamsReplaceOrCreatePost**](docs/Api/TeamApi.md#teamsreplaceorcreatepost) | **POST** /Teams/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
 *TeamApi* | [**teamsUpdatePost**](docs/Api/TeamApi.md#teamsupdatepost) | **POST** /Teams/update | Update instances of the model matched by {{where}} from the data source.
 *TeamApi* | [**teamsUpsertWithWherePost**](docs/Api/TeamApi.md#teamsupsertwithwherepost) | **POST** /Teams/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
-*TeamBrandApi* | [**teamBrandsChangeStreamGet**](docs/Api/TeamBrandApi.md#teambrandschangestreamget) | **GET** /TeamBrands/change-stream | Create a change stream.
-*TeamBrandApi* | [**teamBrandsChangeStreamPost**](docs/Api/TeamBrandApi.md#teambrandschangestreampost) | **POST** /TeamBrands/change-stream | Create a change stream.
-*TeamBrandApi* | [**teamBrandsCountGet**](docs/Api/TeamBrandApi.md#teambrandscountget) | **GET** /TeamBrands/count | Count instances of the model matched by where from the data source.
-*TeamBrandApi* | [**teamBrandsFindOneGet**](docs/Api/TeamBrandApi.md#teambrandsfindoneget) | **GET** /TeamBrands/findOne | Find first instance of the model matched by filter from the data source.
-*TeamBrandApi* | [**teamBrandsGet**](docs/Api/TeamBrandApi.md#teambrandsget) | **GET** /TeamBrands | Find all instances of the model matched by filter from the data source.
-*TeamBrandApi* | [**teamBrandsIdDelete**](docs/Api/TeamBrandApi.md#teambrandsiddelete) | **DELETE** /TeamBrands/{id} | Delete a model instance by {{id}} from the data source.
-*TeamBrandApi* | [**teamBrandsIdExistsGet**](docs/Api/TeamBrandApi.md#teambrandsidexistsget) | **GET** /TeamBrands/{id}/exists | Check whether a model instance exists in the data source.
-*TeamBrandApi* | [**teamBrandsIdGet**](docs/Api/TeamBrandApi.md#teambrandsidget) | **GET** /TeamBrands/{id} | Find a model instance by {{id}} from the data source.
-*TeamBrandApi* | [**teamBrandsIdHead**](docs/Api/TeamBrandApi.md#teambrandsidhead) | **HEAD** /TeamBrands/{id} | Check whether a model instance exists in the data source.
-*TeamBrandApi* | [**teamBrandsIdPatch**](docs/Api/TeamBrandApi.md#teambrandsidpatch) | **PATCH** /TeamBrands/{id} | Patch attributes for a model instance and persist it into the data source.
-*TeamBrandApi* | [**teamBrandsIdPut**](docs/Api/TeamBrandApi.md#teambrandsidput) | **PUT** /TeamBrands/{id} | Replace attributes for a model instance and persist it into the data source.
-*TeamBrandApi* | [**teamBrandsIdReplacePost**](docs/Api/TeamBrandApi.md#teambrandsidreplacepost) | **POST** /TeamBrands/{id}/replace | Replace attributes for a model instance and persist it into the data source.
-*TeamBrandApi* | [**teamBrandsIdTeamGet**](docs/Api/TeamBrandApi.md#teambrandsidteamget) | **GET** /TeamBrands/{id}/team | Fetches belongsTo relation team.
-*TeamBrandApi* | [**teamBrandsPatch**](docs/Api/TeamBrandApi.md#teambrandspatch) | **PATCH** /TeamBrands | Patch an existing model instance or insert a new one into the data source.
-*TeamBrandApi* | [**teamBrandsPost**](docs/Api/TeamBrandApi.md#teambrandspost) | **POST** /TeamBrands | Create a new instance of the model and persist it into the data source.
-*TeamBrandApi* | [**teamBrandsPut**](docs/Api/TeamBrandApi.md#teambrandsput) | **PUT** /TeamBrands | Replace an existing model instance or insert a new one into the data source.
-*TeamBrandApi* | [**teamBrandsReplaceOrCreatePost**](docs/Api/TeamBrandApi.md#teambrandsreplaceorcreatepost) | **POST** /TeamBrands/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
-*TeamBrandApi* | [**teamBrandsUpdatePost**](docs/Api/TeamBrandApi.md#teambrandsupdatepost) | **POST** /TeamBrands/update | Update instances of the model matched by {{where}} from the data source.
-*TeamBrandApi* | [**teamBrandsUpsertWithWherePost**](docs/Api/TeamBrandApi.md#teambrandsupsertwithwherepost) | **POST** /TeamBrands/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
 *TeamMemberApi* | [**teamMembersChangeStreamGet**](docs/Api/TeamMemberApi.md#teammemberschangestreamget) | **GET** /TeamMembers/change-stream | Create a change stream.
 *TeamMemberApi* | [**teamMembersChangeStreamPost**](docs/Api/TeamMemberApi.md#teammemberschangestreampost) | **POST** /TeamMembers/change-stream | Create a change stream.
 *TeamMemberApi* | [**teamMembersCountGet**](docs/Api/TeamMemberApi.md#teammemberscountget) | **GET** /TeamMembers/count | Count instances of the model matched by where from the data source.
@@ -595,6 +578,7 @@ Class | Method | HTTP request | Description
 *TeamMemberApi* | [**teamMembersIdInvitationTicketsPost**](docs/Api/TeamMemberApi.md#teammembersidinvitationticketspost) | **POST** /TeamMembers/{id}/invitationTickets | Creates a new instance in invitationTickets of this model.
 *TeamMemberApi* | [**teamMembersIdInviteInviteePost**](docs/Api/TeamMemberApi.md#teammembersidinviteinviteepost) | **POST** /TeamMembers/{id}/invite/{invitee} | Invite somebody to join the team
 *TeamMemberApi* | [**teamMembersIdPatch**](docs/Api/TeamMemberApi.md#teammembersidpatch) | **PATCH** /TeamMembers/{id} | Patch attributes for a model instance and persist it into the data source.
+*TeamMemberApi* | [**teamMembersIdPortalsAvailableGet**](docs/Api/TeamMemberApi.md#teammembersidportalsavailableget) | **GET** /TeamMembers/{id}/portals/available | Find all available Portals
 *TeamMemberApi* | [**teamMembersIdPortalsCountGet**](docs/Api/TeamMemberApi.md#teammembersidportalscountget) | **GET** /TeamMembers/{id}/portals/count | Counts portals of TeamMember.
 *TeamMemberApi* | [**teamMembersIdPortalsDelete**](docs/Api/TeamMemberApi.md#teammembersidportalsdelete) | **DELETE** /TeamMembers/{id}/portals | Deletes all portals of this model.
 *TeamMemberApi* | [**teamMembersIdPortalsFkDelete**](docs/Api/TeamMemberApi.md#teammembersidportalsfkdelete) | **DELETE** /TeamMembers/{id}/portals/{fk} | Delete a related item by id for portals.

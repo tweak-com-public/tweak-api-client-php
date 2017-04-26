@@ -66,6 +66,7 @@ class PortalMember implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
+        'roles' => 'string[]',
         'created' => '\DateTime',
         'modified' => '\DateTime',
         'id' => 'double',
@@ -89,6 +90,7 @@ class PortalMember implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
+        'roles' => 'roles',
         'created' => 'created',
         'modified' => 'modified',
         'id' => 'id',
@@ -112,6 +114,7 @@ class PortalMember implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
+        'roles' => 'setRoles',
         'created' => 'setCreated',
         'modified' => 'setModified',
         'id' => 'setId',
@@ -135,6 +138,7 @@ class PortalMember implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
+        'roles' => 'getRoles',
         'created' => 'getCreated',
         'modified' => 'getModified',
         'id' => 'getId',
@@ -169,6 +173,7 @@ class PortalMember implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['roles'] = isset($data['roles']) ? $data['roles'] : null;
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
         $this->container['modified'] = isset($data['modified']) ? $data['modified'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
@@ -190,6 +195,9 @@ class PortalMember implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
+        if ($this->container['roles'] === null) {
+            $invalid_properties[] = "'roles' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -201,9 +209,33 @@ class PortalMember implements ArrayAccess
      */
     public function valid()
     {
+        if ($this->container['roles'] === null) {
+            return false;
+        }
         return true;
     }
 
+
+    /**
+     * Gets roles
+     * @return string[]
+     */
+    public function getRoles()
+    {
+        return $this->container['roles'];
+    }
+
+    /**
+     * Sets roles
+     * @param string[] $roles
+     * @return $this
+     */
+    public function setRoles($roles)
+    {
+        $this->container['roles'] = $roles;
+
+        return $this;
+    }
 
     /**
      * Gets created

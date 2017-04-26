@@ -96,6 +96,14 @@ class PortalMemberTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "roles"
+     */
+    public function testPropertyRoles()
+    {
+
+    }
+
+    /**
      * Test attribute "created"
      */
     public function testPropertyCreated()

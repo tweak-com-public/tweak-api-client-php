@@ -42,7 +42,6 @@ Method | HTTP request | Description
 [**customersIdReplacePost**](CustomerApi.md#customersIdReplacePost) | **POST** /Customers/{id}/replace | Replace attributes for a model instance and persist it into the data source.
 [**customersIdTeamsCountGet**](CustomerApi.md#customersIdTeamsCountGet) | **GET** /Customers/{id}/teams/count | Counts teams of Customer.
 [**customersIdTeamsDelete**](CustomerApi.md#customersIdTeamsDelete) | **DELETE** /Customers/{id}/teams | Deletes all teams of this model.
-[**customersIdTeamsFkChangePost**](CustomerApi.md#customersIdTeamsFkChangePost) | **POST** /Customers/{id}/teams/{fk}/change | Change from a Team to another
 [**customersIdTeamsFkDelete**](CustomerApi.md#customersIdTeamsFkDelete) | **DELETE** /Customers/{id}/teams/{fk} | Delete a related item by id for teams.
 [**customersIdTeamsFkGet**](CustomerApi.md#customersIdTeamsFkGet) | **GET** /Customers/{id}/teams/{fk} | Find a related item by id for teams.
 [**customersIdTeamsFkPut**](CustomerApi.md#customersIdTeamsFkPut) | **PUT** /Customers/{id}/teams/{fk} | Update a related item by id for teams.
@@ -51,6 +50,9 @@ Method | HTTP request | Description
 [**customersIdTeamsRelFkDelete**](CustomerApi.md#customersIdTeamsRelFkDelete) | **DELETE** /Customers/{id}/teams/rel/{fk} | Remove the teams relation to an item by id.
 [**customersIdTeamsRelFkHead**](CustomerApi.md#customersIdTeamsRelFkHead) | **HEAD** /Customers/{id}/teams/rel/{fk} | Check the existence of teams relation to an item by id.
 [**customersIdTeamsRelFkPut**](CustomerApi.md#customersIdTeamsRelFkPut) | **PUT** /Customers/{id}/teams/rel/{fk} | Add a related item by id for teams.
+[**customersIdTeamsTeamIdChangePost**](CustomerApi.md#customersIdTeamsTeamIdChangePost) | **POST** /Customers/{id}/teams/{teamId}/change | Move authentication to a Team
+[**customersIdTeamsTeamIdPortalsPortalIdChangePost**](CustomerApi.md#customersIdTeamsTeamIdPortalsPortalIdChangePost) | **POST** /Customers/{id}/teams/{teamId}/portals/{portalId}/change | Move authentication to a Portal
+[**customersIdTokenGet**](CustomerApi.md#customersIdTokenGet) | **GET** /Customers/{id}/token | Get token info
 [**customersInvitationTicketsAcceptPost**](CustomerApi.md#customersInvitationTicketsAcceptPost) | **POST** /Customers/invitationTickets/accept | Accept invitation with token
 [**customersLoginPost**](CustomerApi.md#customersLoginPost) | **POST** /Customers/login | Login a user with username/email and password.
 [**customersLogoutPost**](CustomerApi.md#customersLogoutPost) | **POST** /Customers/logout | Logout a user with access token.
@@ -1937,56 +1939,6 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **customersIdTeamsFkChangePost**
-> \Swagger\Client\Model\TeamMemberAccessToken customersIdTeamsFkChangePost($id, $fk)
-
-Change from a Team to another
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\CustomerApi();
-$id = "id_example"; // string | Customer id
-$fk = "fk_example"; // string | Team id
-
-try {
-    $result = $api_instance->customersIdTeamsFkChangePost($id, $fk);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling CustomerApi->customersIdTeamsFkChangePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Customer id |
- **fk** | **string**| Team id |
-
-### Return type
-
-[**\Swagger\Client\Model\TeamMemberAccessToken**](../Model/TeamMemberAccessToken.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
 # **customersIdTeamsFkDelete**
 > customersIdTeamsFkDelete($id, $fk)
 
@@ -2377,6 +2329,156 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\TeamMember**](../Model/TeamMember.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **customersIdTeamsTeamIdChangePost**
+> \Swagger\Client\Model\TeamMemberAccessToken customersIdTeamsTeamIdChangePost($id, $teamId)
+
+Move authentication to a Team
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+$id = "id_example"; // string | Customer id
+$teamId = "teamId_example"; // string | Team id
+
+try {
+    $result = $api_instance->customersIdTeamsTeamIdChangePost($id, $teamId);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersIdTeamsTeamIdChangePost: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Customer id |
+ **teamId** | **string**| Team id |
+
+### Return type
+
+[**\Swagger\Client\Model\TeamMemberAccessToken**](../Model/TeamMemberAccessToken.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **customersIdTeamsTeamIdPortalsPortalIdChangePost**
+> \Swagger\Client\Model\TeamMemberAccessToken customersIdTeamsTeamIdPortalsPortalIdChangePost($id, $teamId, $portalId)
+
+Move authentication to a Portal
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+$id = "id_example"; // string | Customer id
+$teamId = "teamId_example"; // string | Team id
+$portalId = "portalId_example"; // string | Portal id
+
+try {
+    $result = $api_instance->customersIdTeamsTeamIdPortalsPortalIdChangePost($id, $teamId, $portalId);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersIdTeamsTeamIdPortalsPortalIdChangePost: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Customer id |
+ **teamId** | **string**| Team id |
+ **portalId** | **string**| Portal id |
+
+### Return type
+
+[**\Swagger\Client\Model\TeamMemberAccessToken**](../Model/TeamMemberAccessToken.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **customersIdTokenGet**
+> \Swagger\Client\Model\TeamMemberAccessToken customersIdTokenGet($id)
+
+Get token info
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+$id = "id_example"; // string | Customer id
+
+try {
+    $result = $api_instance->customersIdTokenGet($id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersIdTokenGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Customer id |
+
+### Return type
+
+[**\Swagger\Client\Model\TeamMemberAccessToken**](../Model/TeamMemberAccessToken.md)
 
 ### Authorization
 

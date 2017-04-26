@@ -144,6 +144,22 @@ class TeamMemberAccessTokenTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "portalId"
+     */
+    public function testPropertyPortalId()
+    {
+
+    }
+
+    /**
+     * Test attribute "portalMemberId"
+     */
+    public function testPropertyPortalMemberId()
+    {
+
+    }
+
+    /**
      * Test attribute "customer"
      */
     public function testPropertyCustomer()
@@ -163,6 +179,22 @@ class TeamMemberAccessTokenTest extends \PHPUnit_Framework_TestCase
      * Test attribute "teamMember"
      */
     public function testPropertyTeamMember()
+    {
+
+    }
+
+    /**
+     * Test attribute "portal"
+     */
+    public function testPropertyPortal()
+    {
+
+    }
+
+    /**
+     * Test attribute "portalMember"
+     */
+    public function testPropertyPortalMember()
     {
 
     }
