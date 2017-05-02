@@ -15,6 +15,7 @@ Method | HTTP request | Description
 [**templatesIdDesignsFkDelete**](TemplateApi.md#templatesIdDesignsFkDelete) | **DELETE** /Templates/{id}/designs/{fk} | Delete a related item by id for designs.
 [**templatesIdDesignsFkGet**](TemplateApi.md#templatesIdDesignsFkGet) | **GET** /Templates/{id}/designs/{fk} | Find a related item by id for designs.
 [**templatesIdDesignsFkPut**](TemplateApi.md#templatesIdDesignsFkPut) | **PUT** /Templates/{id}/designs/{fk} | Update a related item by id for designs.
+[**templatesIdDesignsGeneratePost**](TemplateApi.md#templatesIdDesignsGeneratePost) | **POST** /Templates/{id}/designs/generate | Generate design from template
 [**templatesIdDesignsGet**](TemplateApi.md#templatesIdDesignsGet) | **GET** /Templates/{id}/designs | Queries designs of Template.
 [**templatesIdDesignsPost**](TemplateApi.md#templatesIdDesignsPost) | **POST** /Templates/{id}/designs | Creates a new instance in designs of this model.
 [**templatesIdExistsGet**](TemplateApi.md#templatesIdExistsGet) | **GET** /Templates/{id}/exists | Check whether a model instance exists in the data source.
@@ -586,6 +587,56 @@ Name | Type | Description  | Notes
  **id** | **string**| Template id |
  **fk** | **string**| Foreign key for designs |
  **data** | [**\Swagger\Client\Model\Design**](../Model/\Swagger\Client\Model\Design.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\Design**](../Model/Design.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **templatesIdDesignsGeneratePost**
+> \Swagger\Client\Model\Design templatesIdDesignsGeneratePost($id, $data)
+
+Generate design from template
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TemplateApi();
+$id = "id_example"; // string | 
+$data = new \Swagger\Client\Model\Template(); // \Swagger\Client\Model\Template | 
+
+try {
+    $result = $api_instance->templatesIdDesignsGeneratePost($id, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TemplateApi->templatesIdDesignsGeneratePost: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**|  |
+ **data** | [**\Swagger\Client\Model\Template**](../Model/\Swagger\Client\Model\Template.md)|  | [optional]
 
 ### Return type
 

@@ -73,11 +73,7 @@ class PortalMember implements ArrayAccess
         'portalId' => 'double',
         'memberId' => 'double',
         'portal' => '\Swagger\Client\Model\Portal',
-        'member' => '\Swagger\Client\Model\TeamMember',
-        'requesterDesigns' => '\Swagger\Client\Model\Design[]',
-        'assignedDesigns' => '\Swagger\Client\Model\Design[]',
-        'commentedDesigns' => '\Swagger\Client\Model\Design[]',
-        'reviewedDesigns' => '\Swagger\Client\Model\Design[]'
+        'member' => '\Swagger\Client\Model\TeamMember'
     );
 
     public static function swaggerTypes()
@@ -97,11 +93,7 @@ class PortalMember implements ArrayAccess
         'portalId' => 'portalId',
         'memberId' => 'memberId',
         'portal' => 'portal',
-        'member' => 'member',
-        'requesterDesigns' => 'requesterDesigns',
-        'assignedDesigns' => 'assignedDesigns',
-        'commentedDesigns' => 'commentedDesigns',
-        'reviewedDesigns' => 'reviewedDesigns'
+        'member' => 'member'
     );
 
     public static function attributeMap()
@@ -121,11 +113,7 @@ class PortalMember implements ArrayAccess
         'portalId' => 'setPortalId',
         'memberId' => 'setMemberId',
         'portal' => 'setPortal',
-        'member' => 'setMember',
-        'requesterDesigns' => 'setRequesterDesigns',
-        'assignedDesigns' => 'setAssignedDesigns',
-        'commentedDesigns' => 'setCommentedDesigns',
-        'reviewedDesigns' => 'setReviewedDesigns'
+        'member' => 'setMember'
     );
 
     public static function setters()
@@ -145,11 +133,7 @@ class PortalMember implements ArrayAccess
         'portalId' => 'getPortalId',
         'memberId' => 'getMemberId',
         'portal' => 'getPortal',
-        'member' => 'getMember',
-        'requesterDesigns' => 'getRequesterDesigns',
-        'assignedDesigns' => 'getAssignedDesigns',
-        'commentedDesigns' => 'getCommentedDesigns',
-        'reviewedDesigns' => 'getReviewedDesigns'
+        'member' => 'getMember'
     );
 
     public static function getters()
@@ -181,10 +165,6 @@ class PortalMember implements ArrayAccess
         $this->container['memberId'] = isset($data['memberId']) ? $data['memberId'] : null;
         $this->container['portal'] = isset($data['portal']) ? $data['portal'] : null;
         $this->container['member'] = isset($data['member']) ? $data['member'] : null;
-        $this->container['requesterDesigns'] = isset($data['requesterDesigns']) ? $data['requesterDesigns'] : null;
-        $this->container['assignedDesigns'] = isset($data['assignedDesigns']) ? $data['assignedDesigns'] : null;
-        $this->container['commentedDesigns'] = isset($data['commentedDesigns']) ? $data['commentedDesigns'] : null;
-        $this->container['reviewedDesigns'] = isset($data['reviewedDesigns']) ? $data['reviewedDesigns'] : null;
     }
 
     /**
@@ -380,90 +360,6 @@ class PortalMember implements ArrayAccess
     public function setMember($member)
     {
         $this->container['member'] = $member;
-
-        return $this;
-    }
-
-    /**
-     * Gets requesterDesigns
-     * @return \Swagger\Client\Model\Design[]
-     */
-    public function getRequesterDesigns()
-    {
-        return $this->container['requesterDesigns'];
-    }
-
-    /**
-     * Sets requesterDesigns
-     * @param \Swagger\Client\Model\Design[] $requesterDesigns
-     * @return $this
-     */
-    public function setRequesterDesigns($requesterDesigns)
-    {
-        $this->container['requesterDesigns'] = $requesterDesigns;
-
-        return $this;
-    }
-
-    /**
-     * Gets assignedDesigns
-     * @return \Swagger\Client\Model\Design[]
-     */
-    public function getAssignedDesigns()
-    {
-        return $this->container['assignedDesigns'];
-    }
-
-    /**
-     * Sets assignedDesigns
-     * @param \Swagger\Client\Model\Design[] $assignedDesigns
-     * @return $this
-     */
-    public function setAssignedDesigns($assignedDesigns)
-    {
-        $this->container['assignedDesigns'] = $assignedDesigns;
-
-        return $this;
-    }
-
-    /**
-     * Gets commentedDesigns
-     * @return \Swagger\Client\Model\Design[]
-     */
-    public function getCommentedDesigns()
-    {
-        return $this->container['commentedDesigns'];
-    }
-
-    /**
-     * Sets commentedDesigns
-     * @param \Swagger\Client\Model\Design[] $commentedDesigns
-     * @return $this
-     */
-    public function setCommentedDesigns($commentedDesigns)
-    {
-        $this->container['commentedDesigns'] = $commentedDesigns;
-
-        return $this;
-    }
-
-    /**
-     * Gets reviewedDesigns
-     * @return \Swagger\Client\Model\Design[]
-     */
-    public function getReviewedDesigns()
-    {
-        return $this->container['reviewedDesigns'];
-    }
-
-    /**
-     * Sets reviewedDesigns
-     * @param \Swagger\Client\Model\Design[] $reviewedDesigns
-     * @return $this
-     */
-    public function setReviewedDesigns($reviewedDesigns)
-    {
-        $this->container['reviewedDesigns'] = $reviewedDesigns;
 
         return $this;
     }

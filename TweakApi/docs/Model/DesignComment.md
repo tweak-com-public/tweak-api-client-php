@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **commenterId** | **double** |  | [optional] 
 **design** | [**\Swagger\Client\Model\Design**](Design.md) |  | [optional] 
 **replies** | [**\Swagger\Client\Model\DesignComment[]**](DesignComment.md) |  | [optional] 
-**commenter** | [**\Swagger\Client\Model\PortalMember**](PortalMember.md) |  | [optional] 
+**commenter** | [**\Swagger\Client\Model\TeamMember**](TeamMember.md) |  | [optional] 
 **replyOf** | [**\Swagger\Client\Model\DesignComment**](DesignComment.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

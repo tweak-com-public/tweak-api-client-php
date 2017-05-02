@@ -9,16 +9,7 @@ Method | HTTP request | Description
 [**designsCountGet**](DesignApi.md#designsCountGet) | **GET** /Designs/count | Count instances of the model matched by where from the data source.
 [**designsFindOneGet**](DesignApi.md#designsFindOneGet) | **GET** /Designs/findOne | Find first instance of the model matched by filter from the data source.
 [**designsGet**](DesignApi.md#designsGet) | **GET** /Designs | Find all instances of the model matched by filter from the data source.
-[**designsIdAssigneesCountGet**](DesignApi.md#designsIdAssigneesCountGet) | **GET** /Designs/{id}/assignees/count | Counts assignees of Design.
-[**designsIdAssigneesDelete**](DesignApi.md#designsIdAssigneesDelete) | **DELETE** /Designs/{id}/assignees | Deletes all assignees of this model.
-[**designsIdAssigneesFkDelete**](DesignApi.md#designsIdAssigneesFkDelete) | **DELETE** /Designs/{id}/assignees/{fk} | Delete a related item by id for assignees.
-[**designsIdAssigneesFkGet**](DesignApi.md#designsIdAssigneesFkGet) | **GET** /Designs/{id}/assignees/{fk} | Find a related item by id for assignees.
-[**designsIdAssigneesFkPut**](DesignApi.md#designsIdAssigneesFkPut) | **PUT** /Designs/{id}/assignees/{fk} | Update a related item by id for assignees.
-[**designsIdAssigneesGet**](DesignApi.md#designsIdAssigneesGet) | **GET** /Designs/{id}/assignees | Queries assignees of Design.
-[**designsIdAssigneesPost**](DesignApi.md#designsIdAssigneesPost) | **POST** /Designs/{id}/assignees | Creates a new instance in assignees of this model.
-[**designsIdAssigneesRelFkDelete**](DesignApi.md#designsIdAssigneesRelFkDelete) | **DELETE** /Designs/{id}/assignees/rel/{fk} | Remove the assignees relation to an item by id.
-[**designsIdAssigneesRelFkHead**](DesignApi.md#designsIdAssigneesRelFkHead) | **HEAD** /Designs/{id}/assignees/rel/{fk} | Check the existence of assignees relation to an item by id.
-[**designsIdAssigneesRelFkPut**](DesignApi.md#designsIdAssigneesRelFkPut) | **PUT** /Designs/{id}/assignees/rel/{fk} | Add a related item by id for assignees.
+[**designsIdAssigneeGet**](DesignApi.md#designsIdAssigneeGet) | **GET** /Designs/{id}/assignee | Fetches belongsTo relation assignee.
 [**designsIdCommentersCountGet**](DesignApi.md#designsIdCommentersCountGet) | **GET** /Designs/{id}/commenters/count | Counts commenters of Design.
 [**designsIdCommentersDelete**](DesignApi.md#designsIdCommentersDelete) | **DELETE** /Designs/{id}/commenters | Deletes all commenters of this model.
 [**designsIdCommentersFkDelete**](DesignApi.md#designsIdCommentersFkDelete) | **DELETE** /Designs/{id}/commenters/{fk} | Delete a related item by id for commenters.
@@ -29,9 +20,23 @@ Method | HTTP request | Description
 [**designsIdCommentersRelFkDelete**](DesignApi.md#designsIdCommentersRelFkDelete) | **DELETE** /Designs/{id}/commenters/rel/{fk} | Remove the commenters relation to an item by id.
 [**designsIdCommentersRelFkHead**](DesignApi.md#designsIdCommentersRelFkHead) | **HEAD** /Designs/{id}/commenters/rel/{fk} | Check the existence of commenters relation to an item by id.
 [**designsIdCommentersRelFkPut**](DesignApi.md#designsIdCommentersRelFkPut) | **PUT** /Designs/{id}/commenters/rel/{fk} | Add a related item by id for commenters.
+[**designsIdCommentsCountGet**](DesignApi.md#designsIdCommentsCountGet) | **GET** /Designs/{id}/comments/count | Counts comments of Design.
+[**designsIdCommentsDelete**](DesignApi.md#designsIdCommentsDelete) | **DELETE** /Designs/{id}/comments | Deletes all comments of this model.
+[**designsIdCommentsFkDelete**](DesignApi.md#designsIdCommentsFkDelete) | **DELETE** /Designs/{id}/comments/{fk} | Delete a related item by id for comments.
+[**designsIdCommentsFkGet**](DesignApi.md#designsIdCommentsFkGet) | **GET** /Designs/{id}/comments/{fk} | Find a related item by id for comments.
+[**designsIdCommentsFkPut**](DesignApi.md#designsIdCommentsFkPut) | **PUT** /Designs/{id}/comments/{fk} | Update a related item by id for comments.
+[**designsIdCommentsGet**](DesignApi.md#designsIdCommentsGet) | **GET** /Designs/{id}/comments | Queries comments of Design.
+[**designsIdCommentsPost**](DesignApi.md#designsIdCommentsPost) | **POST** /Designs/{id}/comments | Creates a new instance in comments of this model.
 [**designsIdCustomerGet**](DesignApi.md#designsIdCustomerGet) | **GET** /Designs/{id}/customer | Fetches belongsTo relation customer.
 [**designsIdDelete**](DesignApi.md#designsIdDelete) | **DELETE** /Designs/{id} | Delete a model instance by {{id}} from the data source.
 [**designsIdExistsGet**](DesignApi.md#designsIdExistsGet) | **GET** /Designs/{id}/exists | Check whether a model instance exists in the data source.
+[**designsIdExportsCountGet**](DesignApi.md#designsIdExportsCountGet) | **GET** /Designs/{id}/exports/count | Counts exports of Design.
+[**designsIdExportsDelete**](DesignApi.md#designsIdExportsDelete) | **DELETE** /Designs/{id}/exports | Deletes all exports of this model.
+[**designsIdExportsFkDelete**](DesignApi.md#designsIdExportsFkDelete) | **DELETE** /Designs/{id}/exports/{fk} | Delete a related item by id for exports.
+[**designsIdExportsFkGet**](DesignApi.md#designsIdExportsFkGet) | **GET** /Designs/{id}/exports/{fk} | Find a related item by id for exports.
+[**designsIdExportsFkPut**](DesignApi.md#designsIdExportsFkPut) | **PUT** /Designs/{id}/exports/{fk} | Update a related item by id for exports.
+[**designsIdExportsGet**](DesignApi.md#designsIdExportsGet) | **GET** /Designs/{id}/exports | Queries exports of Design.
+[**designsIdExportsPost**](DesignApi.md#designsIdExportsPost) | **POST** /Designs/{id}/exports | Creates a new instance in exports of this model.
 [**designsIdGet**](DesignApi.md#designsIdGet) | **GET** /Designs/{id} | Find a model instance by {{id}} from the data source.
 [**designsIdHead**](DesignApi.md#designsIdHead) | **HEAD** /Designs/{id} | Check whether a model instance exists in the data source.
 [**designsIdPatch**](DesignApi.md#designsIdPatch) | **PATCH** /Designs/{id} | Patch attributes for a model instance and persist it into the data source.
@@ -39,16 +44,7 @@ Method | HTTP request | Description
 [**designsIdPut**](DesignApi.md#designsIdPut) | **PUT** /Designs/{id} | Replace attributes for a model instance and persist it into the data source.
 [**designsIdReplacePost**](DesignApi.md#designsIdReplacePost) | **POST** /Designs/{id}/replace | Replace attributes for a model instance and persist it into the data source.
 [**designsIdRequesterGet**](DesignApi.md#designsIdRequesterGet) | **GET** /Designs/{id}/requester | Fetches belongsTo relation requester.
-[**designsIdReviewersCountGet**](DesignApi.md#designsIdReviewersCountGet) | **GET** /Designs/{id}/reviewers/count | Counts reviewers of Design.
-[**designsIdReviewersDelete**](DesignApi.md#designsIdReviewersDelete) | **DELETE** /Designs/{id}/reviewers | Deletes all reviewers of this model.
-[**designsIdReviewersFkDelete**](DesignApi.md#designsIdReviewersFkDelete) | **DELETE** /Designs/{id}/reviewers/{fk} | Delete a related item by id for reviewers.
-[**designsIdReviewersFkGet**](DesignApi.md#designsIdReviewersFkGet) | **GET** /Designs/{id}/reviewers/{fk} | Find a related item by id for reviewers.
-[**designsIdReviewersFkPut**](DesignApi.md#designsIdReviewersFkPut) | **PUT** /Designs/{id}/reviewers/{fk} | Update a related item by id for reviewers.
-[**designsIdReviewersGet**](DesignApi.md#designsIdReviewersGet) | **GET** /Designs/{id}/reviewers | Queries reviewers of Design.
-[**designsIdReviewersPost**](DesignApi.md#designsIdReviewersPost) | **POST** /Designs/{id}/reviewers | Creates a new instance in reviewers of this model.
-[**designsIdReviewersRelFkDelete**](DesignApi.md#designsIdReviewersRelFkDelete) | **DELETE** /Designs/{id}/reviewers/rel/{fk} | Remove the reviewers relation to an item by id.
-[**designsIdReviewersRelFkHead**](DesignApi.md#designsIdReviewersRelFkHead) | **HEAD** /Designs/{id}/reviewers/rel/{fk} | Check the existence of reviewers relation to an item by id.
-[**designsIdReviewersRelFkPut**](DesignApi.md#designsIdReviewersRelFkPut) | **PUT** /Designs/{id}/reviewers/rel/{fk} | Add a related item by id for reviewers.
+[**designsIdReviewerGet**](DesignApi.md#designsIdReviewerGet) | **GET** /Designs/{id}/reviewer | Fetches belongsTo relation reviewer.
 [**designsIdTagsCountGet**](DesignApi.md#designsIdTagsCountGet) | **GET** /Designs/{id}/tags/count | Counts tags of Design.
 [**designsIdTagsDelete**](DesignApi.md#designsIdTagsDelete) | **DELETE** /Designs/{id}/tags | Deletes all tags of this model.
 [**designsIdTagsFkDelete**](DesignApi.md#designsIdTagsFkDelete) | **DELETE** /Designs/{id}/tags/{fk} | Delete a related item by id for tags.
@@ -308,10 +304,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **designsIdAssigneesCountGet**
-> \Swagger\Client\Model\InlineResponse200 designsIdAssigneesCountGet($id, $where)
+# **designsIdAssigneeGet**
+> \Swagger\Client\Model\TeamMember designsIdAssigneeGet($id, $refresh)
 
-Counts assignees of Design.
+Fetches belongsTo relation assignee.
 
 ### Example
 ```php
@@ -325,13 +321,13 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 
 $api_instance = new Tweak\Api\Api\DesignApi();
 $id = "id_example"; // string | Design id
-$where = "where_example"; // string | Criteria to match model instances
+$refresh = true; // bool | 
 
 try {
-    $result = $api_instance->designsIdAssigneesCountGet($id, $where);
+    $result = $api_instance->designsIdAssigneeGet($id, $refresh);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DesignApi->designsIdAssigneesCountGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DesignApi->designsIdAssigneeGet: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -341,460 +337,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| Design id |
- **where** | **string**| Criteria to match model instances | [optional]
+ **refresh** | **bool**|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **designsIdAssigneesDelete**
-> designsIdAssigneesDelete($id)
-
-Deletes all assignees of this model.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DesignApi();
-$id = "id_example"; // string | Design id
-
-try {
-    $api_instance->designsIdAssigneesDelete($id);
-} catch (Exception $e) {
-    echo 'Exception when calling DesignApi->designsIdAssigneesDelete: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Design id |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **designsIdAssigneesFkDelete**
-> designsIdAssigneesFkDelete($id, $fk)
-
-Delete a related item by id for assignees.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DesignApi();
-$id = "id_example"; // string | Design id
-$fk = "fk_example"; // string | Foreign key for assignees
-
-try {
-    $api_instance->designsIdAssigneesFkDelete($id, $fk);
-} catch (Exception $e) {
-    echo 'Exception when calling DesignApi->designsIdAssigneesFkDelete: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Design id |
- **fk** | **string**| Foreign key for assignees |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **designsIdAssigneesFkGet**
-> \Swagger\Client\Model\PortalMember designsIdAssigneesFkGet($id, $fk)
-
-Find a related item by id for assignees.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DesignApi();
-$id = "id_example"; // string | Design id
-$fk = "fk_example"; // string | Foreign key for assignees
-
-try {
-    $result = $api_instance->designsIdAssigneesFkGet($id, $fk);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling DesignApi->designsIdAssigneesFkGet: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Design id |
- **fk** | **string**| Foreign key for assignees |
-
-### Return type
-
-[**\Swagger\Client\Model\PortalMember**](../Model/PortalMember.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **designsIdAssigneesFkPut**
-> \Swagger\Client\Model\PortalMember designsIdAssigneesFkPut($id, $fk, $data)
-
-Update a related item by id for assignees.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DesignApi();
-$id = "id_example"; // string | Design id
-$fk = "fk_example"; // string | Foreign key for assignees
-$data = new \Swagger\Client\Model\PortalMember(); // \Swagger\Client\Model\PortalMember | 
-
-try {
-    $result = $api_instance->designsIdAssigneesFkPut($id, $fk, $data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling DesignApi->designsIdAssigneesFkPut: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Design id |
- **fk** | **string**| Foreign key for assignees |
- **data** | [**\Swagger\Client\Model\PortalMember**](../Model/\Swagger\Client\Model\PortalMember.md)|  | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\PortalMember**](../Model/PortalMember.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **designsIdAssigneesGet**
-> \Swagger\Client\Model\PortalMember[] designsIdAssigneesGet($id, $filter)
-
-Queries assignees of Design.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DesignApi();
-$id = "id_example"; // string | Design id
-$filter = "filter_example"; // string | 
-
-try {
-    $result = $api_instance->designsIdAssigneesGet($id, $filter);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling DesignApi->designsIdAssigneesGet: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Design id |
- **filter** | **string**|  | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\PortalMember[]**](../Model/PortalMember.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **designsIdAssigneesPost**
-> \Swagger\Client\Model\PortalMember designsIdAssigneesPost($id, $data)
-
-Creates a new instance in assignees of this model.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DesignApi();
-$id = "id_example"; // string | Design id
-$data = new \Swagger\Client\Model\PortalMember(); // \Swagger\Client\Model\PortalMember | 
-
-try {
-    $result = $api_instance->designsIdAssigneesPost($id, $data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling DesignApi->designsIdAssigneesPost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Design id |
- **data** | [**\Swagger\Client\Model\PortalMember**](../Model/\Swagger\Client\Model\PortalMember.md)|  | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\PortalMember**](../Model/PortalMember.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **designsIdAssigneesRelFkDelete**
-> designsIdAssigneesRelFkDelete($id, $fk)
-
-Remove the assignees relation to an item by id.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DesignApi();
-$id = "id_example"; // string | Design id
-$fk = "fk_example"; // string | Foreign key for assignees
-
-try {
-    $api_instance->designsIdAssigneesRelFkDelete($id, $fk);
-} catch (Exception $e) {
-    echo 'Exception when calling DesignApi->designsIdAssigneesRelFkDelete: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Design id |
- **fk** | **string**| Foreign key for assignees |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **designsIdAssigneesRelFkHead**
-> bool designsIdAssigneesRelFkHead($id, $fk)
-
-Check the existence of assignees relation to an item by id.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DesignApi();
-$id = "id_example"; // string | Design id
-$fk = "fk_example"; // string | Foreign key for assignees
-
-try {
-    $result = $api_instance->designsIdAssigneesRelFkHead($id, $fk);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling DesignApi->designsIdAssigneesRelFkHead: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Design id |
- **fk** | **string**| Foreign key for assignees |
-
-### Return type
-
-**bool**
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **designsIdAssigneesRelFkPut**
-> \Swagger\Client\Model\DesignAssignee designsIdAssigneesRelFkPut($id, $fk, $data)
-
-Add a related item by id for assignees.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DesignApi();
-$id = "id_example"; // string | Design id
-$fk = "fk_example"; // string | Foreign key for assignees
-$data = new \Swagger\Client\Model\DesignAssignee(); // \Swagger\Client\Model\DesignAssignee | 
-
-try {
-    $result = $api_instance->designsIdAssigneesRelFkPut($id, $fk, $data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling DesignApi->designsIdAssigneesRelFkPut: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Design id |
- **fk** | **string**| Foreign key for assignees |
- **data** | [**\Swagger\Client\Model\DesignAssignee**](../Model/\Swagger\Client\Model\DesignAssignee.md)|  | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\DesignAssignee**](../Model/DesignAssignee.md)
+[**\Swagger\Client\Model\TeamMember**](../Model/TeamMember.md)
 
 ### Authorization
 
@@ -954,7 +501,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **designsIdCommentersFkGet**
-> \Swagger\Client\Model\PortalMember designsIdCommentersFkGet($id, $fk)
+> \Swagger\Client\Model\TeamMember designsIdCommentersFkGet($id, $fk)
 
 Find a related item by id for commenters.
 
@@ -990,7 +537,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PortalMember**](../Model/PortalMember.md)
+[**\Swagger\Client\Model\TeamMember**](../Model/TeamMember.md)
 
 ### Authorization
 
@@ -1004,7 +551,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **designsIdCommentersFkPut**
-> \Swagger\Client\Model\PortalMember designsIdCommentersFkPut($id, $fk, $data)
+> \Swagger\Client\Model\TeamMember designsIdCommentersFkPut($id, $fk, $data)
 
 Update a related item by id for commenters.
 
@@ -1021,7 +568,7 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 $api_instance = new Tweak\Api\Api\DesignApi();
 $id = "id_example"; // string | Design id
 $fk = "fk_example"; // string | Foreign key for commenters
-$data = new \Swagger\Client\Model\PortalMember(); // \Swagger\Client\Model\PortalMember | 
+$data = new \Swagger\Client\Model\TeamMember(); // \Swagger\Client\Model\TeamMember | 
 
 try {
     $result = $api_instance->designsIdCommentersFkPut($id, $fk, $data);
@@ -1038,11 +585,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| Design id |
  **fk** | **string**| Foreign key for commenters |
- **data** | [**\Swagger\Client\Model\PortalMember**](../Model/\Swagger\Client\Model\PortalMember.md)|  | [optional]
+ **data** | [**\Swagger\Client\Model\TeamMember**](../Model/\Swagger\Client\Model\TeamMember.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\PortalMember**](../Model/PortalMember.md)
+[**\Swagger\Client\Model\TeamMember**](../Model/TeamMember.md)
 
 ### Authorization
 
@@ -1056,7 +603,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **designsIdCommentersGet**
-> \Swagger\Client\Model\PortalMember[] designsIdCommentersGet($id, $filter)
+> \Swagger\Client\Model\TeamMember[] designsIdCommentersGet($id, $filter)
 
 Queries commenters of Design.
 
@@ -1092,7 +639,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PortalMember[]**](../Model/PortalMember.md)
+[**\Swagger\Client\Model\TeamMember[]**](../Model/TeamMember.md)
 
 ### Authorization
 
@@ -1106,7 +653,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **designsIdCommentersPost**
-> \Swagger\Client\Model\PortalMember designsIdCommentersPost($id, $data)
+> \Swagger\Client\Model\TeamMember designsIdCommentersPost($id, $data)
 
 Creates a new instance in commenters of this model.
 
@@ -1122,7 +669,7 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 
 $api_instance = new Tweak\Api\Api\DesignApi();
 $id = "id_example"; // string | Design id
-$data = new \Swagger\Client\Model\PortalMember(); // \Swagger\Client\Model\PortalMember | 
+$data = new \Swagger\Client\Model\TeamMember(); // \Swagger\Client\Model\TeamMember | 
 
 try {
     $result = $api_instance->designsIdCommentersPost($id, $data);
@@ -1138,11 +685,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| Design id |
- **data** | [**\Swagger\Client\Model\PortalMember**](../Model/\Swagger\Client\Model\PortalMember.md)|  | [optional]
+ **data** | [**\Swagger\Client\Model\TeamMember**](../Model/\Swagger\Client\Model\TeamMember.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\PortalMember**](../Model/PortalMember.md)
+[**\Swagger\Client\Model\TeamMember**](../Model/TeamMember.md)
 
 ### Authorization
 
@@ -1306,6 +853,354 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **designsIdCommentsCountGet**
+> \Swagger\Client\Model\InlineResponse200 designsIdCommentsCountGet($id, $where)
+
+Counts comments of Design.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\DesignApi();
+$id = "id_example"; // string | Design id
+$where = "where_example"; // string | Criteria to match model instances
+
+try {
+    $result = $api_instance->designsIdCommentsCountGet($id, $where);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DesignApi->designsIdCommentsCountGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Design id |
+ **where** | **string**| Criteria to match model instances | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **designsIdCommentsDelete**
+> designsIdCommentsDelete($id)
+
+Deletes all comments of this model.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\DesignApi();
+$id = "id_example"; // string | Design id
+
+try {
+    $api_instance->designsIdCommentsDelete($id);
+} catch (Exception $e) {
+    echo 'Exception when calling DesignApi->designsIdCommentsDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Design id |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **designsIdCommentsFkDelete**
+> designsIdCommentsFkDelete($id, $fk)
+
+Delete a related item by id for comments.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\DesignApi();
+$id = "id_example"; // string | Design id
+$fk = "fk_example"; // string | Foreign key for comments
+
+try {
+    $api_instance->designsIdCommentsFkDelete($id, $fk);
+} catch (Exception $e) {
+    echo 'Exception when calling DesignApi->designsIdCommentsFkDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Design id |
+ **fk** | **string**| Foreign key for comments |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **designsIdCommentsFkGet**
+> \Swagger\Client\Model\DesignComment designsIdCommentsFkGet($id, $fk)
+
+Find a related item by id for comments.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\DesignApi();
+$id = "id_example"; // string | Design id
+$fk = "fk_example"; // string | Foreign key for comments
+
+try {
+    $result = $api_instance->designsIdCommentsFkGet($id, $fk);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DesignApi->designsIdCommentsFkGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Design id |
+ **fk** | **string**| Foreign key for comments |
+
+### Return type
+
+[**\Swagger\Client\Model\DesignComment**](../Model/DesignComment.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **designsIdCommentsFkPut**
+> \Swagger\Client\Model\DesignComment designsIdCommentsFkPut($id, $fk, $data)
+
+Update a related item by id for comments.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\DesignApi();
+$id = "id_example"; // string | Design id
+$fk = "fk_example"; // string | Foreign key for comments
+$data = new \Swagger\Client\Model\DesignComment(); // \Swagger\Client\Model\DesignComment | 
+
+try {
+    $result = $api_instance->designsIdCommentsFkPut($id, $fk, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DesignApi->designsIdCommentsFkPut: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Design id |
+ **fk** | **string**| Foreign key for comments |
+ **data** | [**\Swagger\Client\Model\DesignComment**](../Model/\Swagger\Client\Model\DesignComment.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\DesignComment**](../Model/DesignComment.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **designsIdCommentsGet**
+> \Swagger\Client\Model\DesignComment[] designsIdCommentsGet($id, $filter)
+
+Queries comments of Design.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\DesignApi();
+$id = "id_example"; // string | Design id
+$filter = "filter_example"; // string | 
+
+try {
+    $result = $api_instance->designsIdCommentsGet($id, $filter);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DesignApi->designsIdCommentsGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Design id |
+ **filter** | **string**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\DesignComment[]**](../Model/DesignComment.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **designsIdCommentsPost**
+> \Swagger\Client\Model\DesignComment designsIdCommentsPost($id, $data)
+
+Creates a new instance in comments of this model.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\DesignApi();
+$id = "id_example"; // string | Design id
+$data = new \Swagger\Client\Model\DesignComment(); // \Swagger\Client\Model\DesignComment | 
+
+try {
+    $result = $api_instance->designsIdCommentsPost($id, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DesignApi->designsIdCommentsPost: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Design id |
+ **data** | [**\Swagger\Client\Model\DesignComment**](../Model/\Swagger\Client\Model\DesignComment.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\DesignComment**](../Model/DesignComment.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **designsIdCustomerGet**
 > \Swagger\Client\Model\Customer designsIdCustomerGet($id, $refresh)
 
@@ -1440,6 +1335,354 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **designsIdExportsCountGet**
+> \Swagger\Client\Model\InlineResponse200 designsIdExportsCountGet($id, $where)
+
+Counts exports of Design.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\DesignApi();
+$id = "id_example"; // string | Design id
+$where = "where_example"; // string | Criteria to match model instances
+
+try {
+    $result = $api_instance->designsIdExportsCountGet($id, $where);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DesignApi->designsIdExportsCountGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Design id |
+ **where** | **string**| Criteria to match model instances | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **designsIdExportsDelete**
+> designsIdExportsDelete($id)
+
+Deletes all exports of this model.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\DesignApi();
+$id = "id_example"; // string | Design id
+
+try {
+    $api_instance->designsIdExportsDelete($id);
+} catch (Exception $e) {
+    echo 'Exception when calling DesignApi->designsIdExportsDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Design id |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **designsIdExportsFkDelete**
+> designsIdExportsFkDelete($id, $fk)
+
+Delete a related item by id for exports.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\DesignApi();
+$id = "id_example"; // string | Design id
+$fk = "fk_example"; // string | Foreign key for exports
+
+try {
+    $api_instance->designsIdExportsFkDelete($id, $fk);
+} catch (Exception $e) {
+    echo 'Exception when calling DesignApi->designsIdExportsFkDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Design id |
+ **fk** | **string**| Foreign key for exports |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **designsIdExportsFkGet**
+> \Swagger\Client\Model\DesignExport designsIdExportsFkGet($id, $fk)
+
+Find a related item by id for exports.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\DesignApi();
+$id = "id_example"; // string | Design id
+$fk = "fk_example"; // string | Foreign key for exports
+
+try {
+    $result = $api_instance->designsIdExportsFkGet($id, $fk);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DesignApi->designsIdExportsFkGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Design id |
+ **fk** | **string**| Foreign key for exports |
+
+### Return type
+
+[**\Swagger\Client\Model\DesignExport**](../Model/DesignExport.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **designsIdExportsFkPut**
+> \Swagger\Client\Model\DesignExport designsIdExportsFkPut($id, $fk, $data)
+
+Update a related item by id for exports.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\DesignApi();
+$id = "id_example"; // string | Design id
+$fk = "fk_example"; // string | Foreign key for exports
+$data = new \Swagger\Client\Model\DesignExport(); // \Swagger\Client\Model\DesignExport | 
+
+try {
+    $result = $api_instance->designsIdExportsFkPut($id, $fk, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DesignApi->designsIdExportsFkPut: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Design id |
+ **fk** | **string**| Foreign key for exports |
+ **data** | [**\Swagger\Client\Model\DesignExport**](../Model/\Swagger\Client\Model\DesignExport.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\DesignExport**](../Model/DesignExport.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **designsIdExportsGet**
+> \Swagger\Client\Model\DesignExport[] designsIdExportsGet($id, $filter)
+
+Queries exports of Design.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\DesignApi();
+$id = "id_example"; // string | Design id
+$filter = "filter_example"; // string | 
+
+try {
+    $result = $api_instance->designsIdExportsGet($id, $filter);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DesignApi->designsIdExportsGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Design id |
+ **filter** | **string**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\DesignExport[]**](../Model/DesignExport.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **designsIdExportsPost**
+> \Swagger\Client\Model\DesignExport designsIdExportsPost($id, $data)
+
+Creates a new instance in exports of this model.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\DesignApi();
+$id = "id_example"; // string | Design id
+$data = new \Swagger\Client\Model\DesignExport(); // \Swagger\Client\Model\DesignExport | 
+
+try {
+    $result = $api_instance->designsIdExportsPost($id, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DesignApi->designsIdExportsPost: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Design id |
+ **data** | [**\Swagger\Client\Model\DesignExport**](../Model/\Swagger\Client\Model\DesignExport.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\DesignExport**](../Model/DesignExport.md)
 
 ### Authorization
 
@@ -1751,7 +1994,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **designsIdRequesterGet**
-> \Swagger\Client\Model\PortalMember designsIdRequesterGet($id, $refresh)
+> \Swagger\Client\Model\TeamMember designsIdRequesterGet($id, $refresh)
 
 Fetches belongsTo relation requester.
 
@@ -1787,7 +2030,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PortalMember**](../Model/PortalMember.md)
+[**\Swagger\Client\Model\TeamMember**](../Model/TeamMember.md)
 
 ### Authorization
 
@@ -1800,10 +2043,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **designsIdReviewersCountGet**
-> \Swagger\Client\Model\InlineResponse200 designsIdReviewersCountGet($id, $where)
+# **designsIdReviewerGet**
+> \Swagger\Client\Model\TeamMember designsIdReviewerGet($id, $refresh)
 
-Counts reviewers of Design.
+Fetches belongsTo relation reviewer.
 
 ### Example
 ```php
@@ -1817,13 +2060,13 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 
 $api_instance = new Tweak\Api\Api\DesignApi();
 $id = "id_example"; // string | Design id
-$where = "where_example"; // string | Criteria to match model instances
+$refresh = true; // bool | 
 
 try {
-    $result = $api_instance->designsIdReviewersCountGet($id, $where);
+    $result = $api_instance->designsIdReviewerGet($id, $refresh);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DesignApi->designsIdReviewersCountGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DesignApi->designsIdReviewerGet: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1833,460 +2076,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| Design id |
- **where** | **string**| Criteria to match model instances | [optional]
+ **refresh** | **bool**|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **designsIdReviewersDelete**
-> designsIdReviewersDelete($id)
-
-Deletes all reviewers of this model.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DesignApi();
-$id = "id_example"; // string | Design id
-
-try {
-    $api_instance->designsIdReviewersDelete($id);
-} catch (Exception $e) {
-    echo 'Exception when calling DesignApi->designsIdReviewersDelete: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Design id |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **designsIdReviewersFkDelete**
-> designsIdReviewersFkDelete($id, $fk)
-
-Delete a related item by id for reviewers.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DesignApi();
-$id = "id_example"; // string | Design id
-$fk = "fk_example"; // string | Foreign key for reviewers
-
-try {
-    $api_instance->designsIdReviewersFkDelete($id, $fk);
-} catch (Exception $e) {
-    echo 'Exception when calling DesignApi->designsIdReviewersFkDelete: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Design id |
- **fk** | **string**| Foreign key for reviewers |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **designsIdReviewersFkGet**
-> \Swagger\Client\Model\PortalMember designsIdReviewersFkGet($id, $fk)
-
-Find a related item by id for reviewers.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DesignApi();
-$id = "id_example"; // string | Design id
-$fk = "fk_example"; // string | Foreign key for reviewers
-
-try {
-    $result = $api_instance->designsIdReviewersFkGet($id, $fk);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling DesignApi->designsIdReviewersFkGet: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Design id |
- **fk** | **string**| Foreign key for reviewers |
-
-### Return type
-
-[**\Swagger\Client\Model\PortalMember**](../Model/PortalMember.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **designsIdReviewersFkPut**
-> \Swagger\Client\Model\PortalMember designsIdReviewersFkPut($id, $fk, $data)
-
-Update a related item by id for reviewers.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DesignApi();
-$id = "id_example"; // string | Design id
-$fk = "fk_example"; // string | Foreign key for reviewers
-$data = new \Swagger\Client\Model\PortalMember(); // \Swagger\Client\Model\PortalMember | 
-
-try {
-    $result = $api_instance->designsIdReviewersFkPut($id, $fk, $data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling DesignApi->designsIdReviewersFkPut: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Design id |
- **fk** | **string**| Foreign key for reviewers |
- **data** | [**\Swagger\Client\Model\PortalMember**](../Model/\Swagger\Client\Model\PortalMember.md)|  | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\PortalMember**](../Model/PortalMember.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **designsIdReviewersGet**
-> \Swagger\Client\Model\PortalMember[] designsIdReviewersGet($id, $filter)
-
-Queries reviewers of Design.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DesignApi();
-$id = "id_example"; // string | Design id
-$filter = "filter_example"; // string | 
-
-try {
-    $result = $api_instance->designsIdReviewersGet($id, $filter);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling DesignApi->designsIdReviewersGet: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Design id |
- **filter** | **string**|  | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\PortalMember[]**](../Model/PortalMember.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **designsIdReviewersPost**
-> \Swagger\Client\Model\PortalMember designsIdReviewersPost($id, $data)
-
-Creates a new instance in reviewers of this model.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DesignApi();
-$id = "id_example"; // string | Design id
-$data = new \Swagger\Client\Model\PortalMember(); // \Swagger\Client\Model\PortalMember | 
-
-try {
-    $result = $api_instance->designsIdReviewersPost($id, $data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling DesignApi->designsIdReviewersPost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Design id |
- **data** | [**\Swagger\Client\Model\PortalMember**](../Model/\Swagger\Client\Model\PortalMember.md)|  | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\PortalMember**](../Model/PortalMember.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **designsIdReviewersRelFkDelete**
-> designsIdReviewersRelFkDelete($id, $fk)
-
-Remove the reviewers relation to an item by id.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DesignApi();
-$id = "id_example"; // string | Design id
-$fk = "fk_example"; // string | Foreign key for reviewers
-
-try {
-    $api_instance->designsIdReviewersRelFkDelete($id, $fk);
-} catch (Exception $e) {
-    echo 'Exception when calling DesignApi->designsIdReviewersRelFkDelete: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Design id |
- **fk** | **string**| Foreign key for reviewers |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **designsIdReviewersRelFkHead**
-> bool designsIdReviewersRelFkHead($id, $fk)
-
-Check the existence of reviewers relation to an item by id.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DesignApi();
-$id = "id_example"; // string | Design id
-$fk = "fk_example"; // string | Foreign key for reviewers
-
-try {
-    $result = $api_instance->designsIdReviewersRelFkHead($id, $fk);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling DesignApi->designsIdReviewersRelFkHead: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Design id |
- **fk** | **string**| Foreign key for reviewers |
-
-### Return type
-
-**bool**
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **designsIdReviewersRelFkPut**
-> \Swagger\Client\Model\DesignReview designsIdReviewersRelFkPut($id, $fk, $data)
-
-Add a related item by id for reviewers.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DesignApi();
-$id = "id_example"; // string | Design id
-$fk = "fk_example"; // string | Foreign key for reviewers
-$data = new \Swagger\Client\Model\DesignReview(); // \Swagger\Client\Model\DesignReview | 
-
-try {
-    $result = $api_instance->designsIdReviewersRelFkPut($id, $fk, $data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling DesignApi->designsIdReviewersRelFkPut: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Design id |
- **fk** | **string**| Foreign key for reviewers |
- **data** | [**\Swagger\Client\Model\DesignReview**](../Model/\Swagger\Client\Model\DesignReview.md)|  | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\DesignReview**](../Model/DesignReview.md)
+[**\Swagger\Client\Model\TeamMember**](../Model/TeamMember.md)
 
 ### Authorization
 

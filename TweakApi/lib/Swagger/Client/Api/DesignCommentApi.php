@@ -519,7 +519,7 @@ class DesignCommentApi
      *
      * @param string $id DesignComment id (required)
      * @param bool $refresh  (optional)
-     * @return \Swagger\Client\Model\PortalMember
+     * @return \Swagger\Client\Model\TeamMember
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
     public function designCommentsIdCommenterGet($id, $refresh = null)
@@ -535,7 +535,7 @@ class DesignCommentApi
      *
      * @param string $id DesignComment id (required)
      * @param bool $refresh  (optional)
-     * @return array of \Swagger\Client\Model\PortalMember, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\TeamMember, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
     public function designCommentsIdCommenterGetWithHttpInfo($id, $refresh = null)
@@ -591,15 +591,15 @@ class DesignCommentApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\PortalMember',
+                '\Swagger\Client\Model\TeamMember',
                 '/DesignComments/{id}/commenter'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\PortalMember', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TeamMember', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\PortalMember', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TeamMember', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

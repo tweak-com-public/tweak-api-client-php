@@ -145,111 +145,12 @@ class DesignApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for designsIdAssigneesCountGet
+     * Test case for designsIdAssigneeGet
      *
-     * Counts assignees of Design..
-     *
-     */
-    public function testDesignsIdAssigneesCountGet()
-    {
-
-    }
-
-    /**
-     * Test case for designsIdAssigneesDelete
-     *
-     * Deletes all assignees of this model..
+     * Fetches belongsTo relation assignee..
      *
      */
-    public function testDesignsIdAssigneesDelete()
-    {
-
-    }
-
-    /**
-     * Test case for designsIdAssigneesFkDelete
-     *
-     * Delete a related item by id for assignees..
-     *
-     */
-    public function testDesignsIdAssigneesFkDelete()
-    {
-
-    }
-
-    /**
-     * Test case for designsIdAssigneesFkGet
-     *
-     * Find a related item by id for assignees..
-     *
-     */
-    public function testDesignsIdAssigneesFkGet()
-    {
-
-    }
-
-    /**
-     * Test case for designsIdAssigneesFkPut
-     *
-     * Update a related item by id for assignees..
-     *
-     */
-    public function testDesignsIdAssigneesFkPut()
-    {
-
-    }
-
-    /**
-     * Test case for designsIdAssigneesGet
-     *
-     * Queries assignees of Design..
-     *
-     */
-    public function testDesignsIdAssigneesGet()
-    {
-
-    }
-
-    /**
-     * Test case for designsIdAssigneesPost
-     *
-     * Creates a new instance in assignees of this model..
-     *
-     */
-    public function testDesignsIdAssigneesPost()
-    {
-
-    }
-
-    /**
-     * Test case for designsIdAssigneesRelFkDelete
-     *
-     * Remove the assignees relation to an item by id..
-     *
-     */
-    public function testDesignsIdAssigneesRelFkDelete()
-    {
-
-    }
-
-    /**
-     * Test case for designsIdAssigneesRelFkHead
-     *
-     * Check the existence of assignees relation to an item by id..
-     *
-     */
-    public function testDesignsIdAssigneesRelFkHead()
-    {
-
-    }
-
-    /**
-     * Test case for designsIdAssigneesRelFkPut
-     *
-     * Add a related item by id for assignees..
-     *
-     */
-    public function testDesignsIdAssigneesRelFkPut()
+    public function testDesignsIdAssigneeGet()
     {
 
     }
@@ -365,6 +266,83 @@ class DesignApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for designsIdCommentsCountGet
+     *
+     * Counts comments of Design..
+     *
+     */
+    public function testDesignsIdCommentsCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdCommentsDelete
+     *
+     * Deletes all comments of this model..
+     *
+     */
+    public function testDesignsIdCommentsDelete()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdCommentsFkDelete
+     *
+     * Delete a related item by id for comments..
+     *
+     */
+    public function testDesignsIdCommentsFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdCommentsFkGet
+     *
+     * Find a related item by id for comments..
+     *
+     */
+    public function testDesignsIdCommentsFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdCommentsFkPut
+     *
+     * Update a related item by id for comments..
+     *
+     */
+    public function testDesignsIdCommentsFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdCommentsGet
+     *
+     * Queries comments of Design..
+     *
+     */
+    public function testDesignsIdCommentsGet()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdCommentsPost
+     *
+     * Creates a new instance in comments of this model..
+     *
+     */
+    public function testDesignsIdCommentsPost()
+    {
+
+    }
+
+    /**
      * Test case for designsIdCustomerGet
      *
      * Fetches belongsTo relation customer..
@@ -393,6 +371,83 @@ class DesignApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testDesignsIdExistsGet()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdExportsCountGet
+     *
+     * Counts exports of Design..
+     *
+     */
+    public function testDesignsIdExportsCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdExportsDelete
+     *
+     * Deletes all exports of this model..
+     *
+     */
+    public function testDesignsIdExportsDelete()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdExportsFkDelete
+     *
+     * Delete a related item by id for exports..
+     *
+     */
+    public function testDesignsIdExportsFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdExportsFkGet
+     *
+     * Find a related item by id for exports..
+     *
+     */
+    public function testDesignsIdExportsFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdExportsFkPut
+     *
+     * Update a related item by id for exports..
+     *
+     */
+    public function testDesignsIdExportsFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdExportsGet
+     *
+     * Queries exports of Design..
+     *
+     */
+    public function testDesignsIdExportsGet()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdExportsPost
+     *
+     * Creates a new instance in exports of this model..
+     *
+     */
+    public function testDesignsIdExportsPost()
     {
 
     }
@@ -475,111 +530,12 @@ class DesignApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for designsIdReviewersCountGet
+     * Test case for designsIdReviewerGet
      *
-     * Counts reviewers of Design..
-     *
-     */
-    public function testDesignsIdReviewersCountGet()
-    {
-
-    }
-
-    /**
-     * Test case for designsIdReviewersDelete
-     *
-     * Deletes all reviewers of this model..
+     * Fetches belongsTo relation reviewer..
      *
      */
-    public function testDesignsIdReviewersDelete()
-    {
-
-    }
-
-    /**
-     * Test case for designsIdReviewersFkDelete
-     *
-     * Delete a related item by id for reviewers..
-     *
-     */
-    public function testDesignsIdReviewersFkDelete()
-    {
-
-    }
-
-    /**
-     * Test case for designsIdReviewersFkGet
-     *
-     * Find a related item by id for reviewers..
-     *
-     */
-    public function testDesignsIdReviewersFkGet()
-    {
-
-    }
-
-    /**
-     * Test case for designsIdReviewersFkPut
-     *
-     * Update a related item by id for reviewers..
-     *
-     */
-    public function testDesignsIdReviewersFkPut()
-    {
-
-    }
-
-    /**
-     * Test case for designsIdReviewersGet
-     *
-     * Queries reviewers of Design..
-     *
-     */
-    public function testDesignsIdReviewersGet()
-    {
-
-    }
-
-    /**
-     * Test case for designsIdReviewersPost
-     *
-     * Creates a new instance in reviewers of this model..
-     *
-     */
-    public function testDesignsIdReviewersPost()
-    {
-
-    }
-
-    /**
-     * Test case for designsIdReviewersRelFkDelete
-     *
-     * Remove the reviewers relation to an item by id..
-     *
-     */
-    public function testDesignsIdReviewersRelFkDelete()
-    {
-
-    }
-
-    /**
-     * Test case for designsIdReviewersRelFkHead
-     *
-     * Check the existence of reviewers relation to an item by id..
-     *
-     */
-    public function testDesignsIdReviewersRelFkHead()
-    {
-
-    }
-
-    /**
-     * Test case for designsIdReviewersRelFkPut
-     *
-     * Add a related item by id for reviewers..
-     *
-     */
-    public function testDesignsIdReviewersRelFkPut()
+    public function testDesignsIdReviewerGet()
     {
 
     }

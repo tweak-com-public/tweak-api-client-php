@@ -68,6 +68,7 @@ class Team implements ArrayAccess
     protected static $swaggerTypes = array(
         'name' => 'string',
         'logo' => 'string',
+        'subdomain' => 'string',
         'created' => '\DateTime',
         'modified' => '\DateTime',
         'id' => 'string',
@@ -96,6 +97,7 @@ class Team implements ArrayAccess
     protected static $attributeMap = array(
         'name' => 'name',
         'logo' => 'logo',
+        'subdomain' => 'subdomain',
         'created' => 'created',
         'modified' => 'modified',
         'id' => 'id',
@@ -124,6 +126,7 @@ class Team implements ArrayAccess
     protected static $setters = array(
         'name' => 'setName',
         'logo' => 'setLogo',
+        'subdomain' => 'setSubdomain',
         'created' => 'setCreated',
         'modified' => 'setModified',
         'id' => 'setId',
@@ -152,6 +155,7 @@ class Team implements ArrayAccess
     protected static $getters = array(
         'name' => 'getName',
         'logo' => 'getLogo',
+        'subdomain' => 'getSubdomain',
         'created' => 'getCreated',
         'modified' => 'getModified',
         'id' => 'getId',
@@ -191,6 +195,7 @@ class Team implements ArrayAccess
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['logo'] = isset($data['logo']) ? $data['logo'] : null;
+        $this->container['subdomain'] = isset($data['subdomain']) ? $data['subdomain'] : null;
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
         $this->container['modified'] = isset($data['modified']) ? $data['modified'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
@@ -280,6 +285,27 @@ class Team implements ArrayAccess
     public function setLogo($logo)
     {
         $this->container['logo'] = $logo;
+
+        return $this;
+    }
+
+    /**
+     * Gets subdomain
+     * @return string
+     */
+    public function getSubdomain()
+    {
+        return $this->container['subdomain'];
+    }
+
+    /**
+     * Sets subdomain
+     * @param string $subdomain
+     * @return $this
+     */
+    public function setSubdomain($subdomain)
+    {
+        $this->container['subdomain'] = $subdomain;
 
         return $this;
     }

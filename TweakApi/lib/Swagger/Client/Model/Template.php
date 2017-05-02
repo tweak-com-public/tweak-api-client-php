@@ -68,6 +68,9 @@ class Template implements ArrayAccess
     protected static $swaggerTypes = array(
         'name' => 'string',
         'thumbnail' => 'string',
+        'object' => 'object',
+        'description' => 'string',
+        'edited' => '\DateTime',
         'created' => '\DateTime',
         'modified' => '\DateTime',
         'id' => 'double',
@@ -93,6 +96,9 @@ class Template implements ArrayAccess
     protected static $attributeMap = array(
         'name' => 'name',
         'thumbnail' => 'thumbnail',
+        'object' => 'object',
+        'description' => 'description',
+        'edited' => 'edited',
         'created' => 'created',
         'modified' => 'modified',
         'id' => 'id',
@@ -118,6 +124,9 @@ class Template implements ArrayAccess
     protected static $setters = array(
         'name' => 'setName',
         'thumbnail' => 'setThumbnail',
+        'object' => 'setObject',
+        'description' => 'setDescription',
+        'edited' => 'setEdited',
         'created' => 'setCreated',
         'modified' => 'setModified',
         'id' => 'setId',
@@ -143,6 +152,9 @@ class Template implements ArrayAccess
     protected static $getters = array(
         'name' => 'getName',
         'thumbnail' => 'getThumbnail',
+        'object' => 'getObject',
+        'description' => 'getDescription',
+        'edited' => 'getEdited',
         'created' => 'getCreated',
         'modified' => 'getModified',
         'id' => 'getId',
@@ -179,6 +191,9 @@ class Template implements ArrayAccess
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['thumbnail'] = isset($data['thumbnail']) ? $data['thumbnail'] : null;
+        $this->container['object'] = isset($data['object']) ? $data['object'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : '';
+        $this->container['edited'] = isset($data['edited']) ? $data['edited'] : null;
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
         $this->container['modified'] = isset($data['modified']) ? $data['modified'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
@@ -203,6 +218,9 @@ class Template implements ArrayAccess
         if ($this->container['name'] === null) {
             $invalid_properties[] = "'name' can't be null";
         }
+        if ($this->container['object'] === null) {
+            $invalid_properties[] = "'object' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -215,6 +233,9 @@ class Template implements ArrayAccess
     public function valid()
     {
         if ($this->container['name'] === null) {
+            return false;
+        }
+        if ($this->container['object'] === null) {
             return false;
         }
         return true;
@@ -259,6 +280,69 @@ class Template implements ArrayAccess
     public function setThumbnail($thumbnail)
     {
         $this->container['thumbnail'] = $thumbnail;
+
+        return $this;
+    }
+
+    /**
+     * Gets object
+     * @return object
+     */
+    public function getObject()
+    {
+        return $this->container['object'];
+    }
+
+    /**
+     * Sets object
+     * @param object $object
+     * @return $this
+     */
+    public function setObject($object)
+    {
+        $this->container['object'] = $object;
+
+        return $this;
+    }
+
+    /**
+     * Gets description
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+     * Sets description
+     * @param string $description
+     * @return $this
+     */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
+
+        return $this;
+    }
+
+    /**
+     * Gets edited
+     * @return \DateTime
+     */
+    public function getEdited()
+    {
+        return $this->container['edited'];
+    }
+
+    /**
+     * Sets edited
+     * @param \DateTime $edited
+     * @return $this
+     */
+    public function setEdited($edited)
+    {
+        $this->container['edited'] = $edited;
 
         return $this;
     }

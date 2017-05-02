@@ -159,36 +159,4 @@ class PortalMemberTest extends \PHPUnit_Framework_TestCase
 
     }
 
-    /**
-     * Test attribute "requesterDesigns"
-     */
-    public function testPropertyRequesterDesigns()
-    {
-
-    }
-
-    /**
-     * Test attribute "assignedDesigns"
-     */
-    public function testPropertyAssignedDesigns()
-    {
-
-    }
-
-    /**
-     * Test attribute "commentedDesigns"
-     */
-    public function testPropertyCommentedDesigns()
-    {
-
-    }
-
-    /**
-     * Test attribute "reviewedDesigns"
-     */
-    public function testPropertyReviewedDesigns()
-    {
-
-    }
-
 }

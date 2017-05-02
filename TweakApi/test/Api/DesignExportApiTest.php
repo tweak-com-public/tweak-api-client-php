@@ -1,6 +1,6 @@
 <?php
 /**
- * DesignAssigneeApiTest
+ * DesignExportApiTest
  * PHP version 5
  *
  * @category Class
@@ -46,7 +46,7 @@ use \Tweak\Api\ApiException;
 use \Tweak\Api\ObjectSerializer;
 
 /**
- * DesignAssigneeApiTest Class Doc Comment
+ * DesignExportApiTest Class Doc Comment
  *
  * @category Class
  * @package  Tweak\Api
@@ -54,7 +54,7 @@ use \Tweak\Api\ObjectSerializer;
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class DesignAssigneeApiTest extends \PHPUnit_Framework_TestCase
+class DesignExportApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -90,221 +90,221 @@ class DesignAssigneeApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for designAssigneesChangeStreamGet
+     * Test case for designExportsChangeStreamGet
      *
      * Create a change stream..
      *
      */
-    public function testDesignAssigneesChangeStreamGet()
+    public function testDesignExportsChangeStreamGet()
     {
 
     }
 
     /**
-     * Test case for designAssigneesChangeStreamPost
+     * Test case for designExportsChangeStreamPost
      *
      * Create a change stream..
      *
      */
-    public function testDesignAssigneesChangeStreamPost()
+    public function testDesignExportsChangeStreamPost()
     {
 
     }
 
     /**
-     * Test case for designAssigneesCountGet
+     * Test case for designExportsCountGet
      *
      * Count instances of the model matched by where from the data source..
      *
      */
-    public function testDesignAssigneesCountGet()
+    public function testDesignExportsCountGet()
     {
 
     }
 
     /**
-     * Test case for designAssigneesFindOneGet
+     * Test case for designExportsFindOneGet
      *
      * Find first instance of the model matched by filter from the data source..
      *
      */
-    public function testDesignAssigneesFindOneGet()
+    public function testDesignExportsFindOneGet()
     {
 
     }
 
     /**
-     * Test case for designAssigneesGet
+     * Test case for designExportsGet
      *
      * Find all instances of the model matched by filter from the data source..
      *
      */
-    public function testDesignAssigneesGet()
+    public function testDesignExportsGet()
     {
 
     }
 
     /**
-     * Test case for designAssigneesIdAssigneeGet
-     *
-     * Fetches belongsTo relation assignee..
-     *
-     */
-    public function testDesignAssigneesIdAssigneeGet()
-    {
-
-    }
-
-    /**
-     * Test case for designAssigneesIdDelete
+     * Test case for designExportsIdDelete
      *
      * Delete a model instance by {{id}} from the data source..
      *
      */
-    public function testDesignAssigneesIdDelete()
+    public function testDesignExportsIdDelete()
     {
 
     }
 
     /**
-     * Test case for designAssigneesIdDesignGet
+     * Test case for designExportsIdDesignsGet
      *
-     * Fetches belongsTo relation design..
+     * Fetches belongsTo relation designs..
      *
      */
-    public function testDesignAssigneesIdDesignGet()
+    public function testDesignExportsIdDesignsGet()
     {
 
     }
 
     /**
-     * Test case for designAssigneesIdExistsGet
+     * Test case for designExportsIdExistsGet
      *
      * Check whether a model instance exists in the data source..
      *
      */
-    public function testDesignAssigneesIdExistsGet()
+    public function testDesignExportsIdExistsGet()
     {
 
     }
 
     /**
-     * Test case for designAssigneesIdGet
+     * Test case for designExportsIdGet
      *
      * Find a model instance by {{id}} from the data source..
      *
      */
-    public function testDesignAssigneesIdGet()
+    public function testDesignExportsIdGet()
     {
 
     }
 
     /**
-     * Test case for designAssigneesIdHead
+     * Test case for designExportsIdHead
      *
      * Check whether a model instance exists in the data source..
      *
      */
-    public function testDesignAssigneesIdHead()
+    public function testDesignExportsIdHead()
     {
 
     }
 
     /**
-     * Test case for designAssigneesIdPatch
+     * Test case for designExportsIdPatch
      *
      * Patch attributes for a model instance and persist it into the data source..
      *
      */
-    public function testDesignAssigneesIdPatch()
+    public function testDesignExportsIdPatch()
     {
 
     }
 
     /**
-     * Test case for designAssigneesIdPut
+     * Test case for designExportsIdPut
      *
      * Replace attributes for a model instance and persist it into the data source..
      *
      */
-    public function testDesignAssigneesIdPut()
+    public function testDesignExportsIdPut()
     {
 
     }
 
     /**
-     * Test case for designAssigneesIdReplacePost
+     * Test case for designExportsIdReplacePost
      *
      * Replace attributes for a model instance and persist it into the data source..
      *
      */
-    public function testDesignAssigneesIdReplacePost()
+    public function testDesignExportsIdReplacePost()
     {
 
     }
 
     /**
-     * Test case for designAssigneesPatch
+     * Test case for designExportsIdRequesterGet
+     *
+     * Fetches belongsTo relation requester..
+     *
+     */
+    public function testDesignExportsIdRequesterGet()
+    {
+
+    }
+
+    /**
+     * Test case for designExportsPatch
      *
      * Patch an existing model instance or insert a new one into the data source..
      *
      */
-    public function testDesignAssigneesPatch()
+    public function testDesignExportsPatch()
     {
 
     }
 
     /**
-     * Test case for designAssigneesPost
+     * Test case for designExportsPost
      *
      * Create a new instance of the model and persist it into the data source..
      *
      */
-    public function testDesignAssigneesPost()
+    public function testDesignExportsPost()
     {
 
     }
 
     /**
-     * Test case for designAssigneesPut
+     * Test case for designExportsPut
      *
      * Replace an existing model instance or insert a new one into the data source..
      *
      */
-    public function testDesignAssigneesPut()
+    public function testDesignExportsPut()
     {
 
     }
 
     /**
-     * Test case for designAssigneesReplaceOrCreatePost
+     * Test case for designExportsReplaceOrCreatePost
      *
      * Replace an existing model instance or insert a new one into the data source..
      *
      */
-    public function testDesignAssigneesReplaceOrCreatePost()
+    public function testDesignExportsReplaceOrCreatePost()
     {
 
     }
 
     /**
-     * Test case for designAssigneesUpdatePost
+     * Test case for designExportsUpdatePost
      *
      * Update instances of the model matched by {{where}} from the data source..
      *
      */
-    public function testDesignAssigneesUpdatePost()
+    public function testDesignExportsUpdatePost()
     {
 
     }
 
     /**
-     * Test case for designAssigneesUpsertWithWherePost
+     * Test case for designExportsUpsertWithWherePost
      *
      * Update an existing model instance or insert a new one into the data source based on the where criteria..
      *
      */
-    public function testDesignAssigneesUpsertWithWherePost()
+    public function testDesignExportsUpsertWithWherePost()
     {
 
     }

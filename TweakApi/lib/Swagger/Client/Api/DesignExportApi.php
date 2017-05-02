@@ -1,6 +1,6 @@
 <?php
 /**
- * DesignAssigneeApi
+ * DesignExportApi
  * PHP version 5
  *
  * @category Class
@@ -46,7 +46,7 @@ use \Tweak\Api\ApiException;
 use \Tweak\Api\ObjectSerializer;
 
 /**
- * DesignAssigneeApi Class Doc Comment
+ * DesignExportApi Class Doc Comment
  *
  * @category Class
  * @package  Tweak\Api
@@ -54,7 +54,7 @@ use \Tweak\Api\ObjectSerializer;
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class DesignAssigneeApi
+class DesignExportApi
 {
 
     /**
@@ -94,7 +94,7 @@ class DesignAssigneeApi
      *
      * @param \Tweak\Api\ApiClient $apiClient set the API client
      *
-     * @return DesignAssigneeApi
+     * @return DesignExportApi
      */
     public function setApiClient(\Tweak\Api\ApiClient $apiClient)
     {
@@ -103,7 +103,7 @@ class DesignAssigneeApi
     }
 
     /**
-     * Operation designAssigneesChangeStreamGet
+     * Operation designExportsChangeStreamGet
      *
      * Create a change stream.
      *
@@ -111,14 +111,14 @@ class DesignAssigneeApi
      * @return \SplFileObject
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function designAssigneesChangeStreamGet($options = null)
+    public function designExportsChangeStreamGet($options = null)
     {
-        list($response) = $this->designAssigneesChangeStreamGetWithHttpInfo($options);
+        list($response) = $this->designExportsChangeStreamGetWithHttpInfo($options);
         return $response;
     }
 
     /**
-     * Operation designAssigneesChangeStreamGetWithHttpInfo
+     * Operation designExportsChangeStreamGetWithHttpInfo
      *
      * Create a change stream.
      *
@@ -126,10 +126,10 @@ class DesignAssigneeApi
      * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function designAssigneesChangeStreamGetWithHttpInfo($options = null)
+    public function designExportsChangeStreamGetWithHttpInfo($options = null)
     {
         // parse inputs
-        $resourcePath = "/DesignAssignees/change-stream";
+        $resourcePath = "/DesignExports/change-stream";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -168,7 +168,7 @@ class DesignAssigneeApi
                 $httpBody,
                 $headerParams,
                 '\SplFileObject',
-                '/DesignAssignees/change-stream'
+                '/DesignExports/change-stream'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\SplFileObject', $httpHeader), $statusCode, $httpHeader);
@@ -185,7 +185,7 @@ class DesignAssigneeApi
     }
 
     /**
-     * Operation designAssigneesChangeStreamPost
+     * Operation designExportsChangeStreamPost
      *
      * Create a change stream.
      *
@@ -193,14 +193,14 @@ class DesignAssigneeApi
      * @return \SplFileObject
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function designAssigneesChangeStreamPost($options = null)
+    public function designExportsChangeStreamPost($options = null)
     {
-        list($response) = $this->designAssigneesChangeStreamPostWithHttpInfo($options);
+        list($response) = $this->designExportsChangeStreamPostWithHttpInfo($options);
         return $response;
     }
 
     /**
-     * Operation designAssigneesChangeStreamPostWithHttpInfo
+     * Operation designExportsChangeStreamPostWithHttpInfo
      *
      * Create a change stream.
      *
@@ -208,10 +208,10 @@ class DesignAssigneeApi
      * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function designAssigneesChangeStreamPostWithHttpInfo($options = null)
+    public function designExportsChangeStreamPostWithHttpInfo($options = null)
     {
         // parse inputs
-        $resourcePath = "/DesignAssignees/change-stream";
+        $resourcePath = "/DesignExports/change-stream";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -250,7 +250,7 @@ class DesignAssigneeApi
                 $httpBody,
                 $headerParams,
                 '\SplFileObject',
-                '/DesignAssignees/change-stream'
+                '/DesignExports/change-stream'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\SplFileObject', $httpHeader), $statusCode, $httpHeader);
@@ -267,7 +267,7 @@ class DesignAssigneeApi
     }
 
     /**
-     * Operation designAssigneesCountGet
+     * Operation designExportsCountGet
      *
      * Count instances of the model matched by where from the data source.
      *
@@ -275,14 +275,14 @@ class DesignAssigneeApi
      * @return \Swagger\Client\Model\InlineResponse200
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function designAssigneesCountGet($where = null)
+    public function designExportsCountGet($where = null)
     {
-        list($response) = $this->designAssigneesCountGetWithHttpInfo($where);
+        list($response) = $this->designExportsCountGetWithHttpInfo($where);
         return $response;
     }
 
     /**
-     * Operation designAssigneesCountGetWithHttpInfo
+     * Operation designExportsCountGetWithHttpInfo
      *
      * Count instances of the model matched by where from the data source.
      *
@@ -290,10 +290,10 @@ class DesignAssigneeApi
      * @return array of \Swagger\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function designAssigneesCountGetWithHttpInfo($where = null)
+    public function designExportsCountGetWithHttpInfo($where = null)
     {
         // parse inputs
-        $resourcePath = "/DesignAssignees/count";
+        $resourcePath = "/DesignExports/count";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -332,7 +332,7 @@ class DesignAssigneeApi
                 $httpBody,
                 $headerParams,
                 '\Swagger\Client\Model\InlineResponse200',
-                '/DesignAssignees/count'
+                '/DesignExports/count'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader);
@@ -349,33 +349,33 @@ class DesignAssigneeApi
     }
 
     /**
-     * Operation designAssigneesFindOneGet
+     * Operation designExportsFindOneGet
      *
      * Find first instance of the model matched by filter from the data source.
      *
      * @param string $filter Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({\&quot;something\&quot;:\&quot;value\&quot;}) (optional)
-     * @return \Swagger\Client\Model\DesignAssignee
+     * @return \Swagger\Client\Model\DesignExport
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function designAssigneesFindOneGet($filter = null)
+    public function designExportsFindOneGet($filter = null)
     {
-        list($response) = $this->designAssigneesFindOneGetWithHttpInfo($filter);
+        list($response) = $this->designExportsFindOneGetWithHttpInfo($filter);
         return $response;
     }
 
     /**
-     * Operation designAssigneesFindOneGetWithHttpInfo
+     * Operation designExportsFindOneGetWithHttpInfo
      *
      * Find first instance of the model matched by filter from the data source.
      *
      * @param string $filter Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({\&quot;something\&quot;:\&quot;value\&quot;}) (optional)
-     * @return array of \Swagger\Client\Model\DesignAssignee, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\DesignExport, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function designAssigneesFindOneGetWithHttpInfo($filter = null)
+    public function designExportsFindOneGetWithHttpInfo($filter = null)
     {
         // parse inputs
-        $resourcePath = "/DesignAssignees/findOne";
+        $resourcePath = "/DesignExports/findOne";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -413,15 +413,15 @@ class DesignAssigneeApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\DesignAssignee',
-                '/DesignAssignees/findOne'
+                '\Swagger\Client\Model\DesignExport',
+                '/DesignExports/findOne'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\DesignAssignee', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\DesignExport', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\DesignAssignee', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\DesignExport', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -431,33 +431,33 @@ class DesignAssigneeApi
     }
 
     /**
-     * Operation designAssigneesGet
+     * Operation designExportsGet
      *
      * Find all instances of the model matched by filter from the data source.
      *
      * @param string $filter Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({\&quot;something\&quot;:\&quot;value\&quot;}) (optional)
-     * @return \Swagger\Client\Model\DesignAssignee[]
+     * @return \Swagger\Client\Model\DesignExport[]
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function designAssigneesGet($filter = null)
+    public function designExportsGet($filter = null)
     {
-        list($response) = $this->designAssigneesGetWithHttpInfo($filter);
+        list($response) = $this->designExportsGetWithHttpInfo($filter);
         return $response;
     }
 
     /**
-     * Operation designAssigneesGetWithHttpInfo
+     * Operation designExportsGetWithHttpInfo
      *
      * Find all instances of the model matched by filter from the data source.
      *
      * @param string $filter Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({\&quot;something\&quot;:\&quot;value\&quot;}) (optional)
-     * @return array of \Swagger\Client\Model\DesignAssignee[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\DesignExport[], HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function designAssigneesGetWithHttpInfo($filter = null)
+    public function designExportsGetWithHttpInfo($filter = null)
     {
         // parse inputs
-        $resourcePath = "/DesignAssignees";
+        $resourcePath = "/DesignExports";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -495,15 +495,15 @@ class DesignAssigneeApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\DesignAssignee[]',
-                '/DesignAssignees'
+                '\Swagger\Client\Model\DesignExport[]',
+                '/DesignExports'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\DesignAssignee[]', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\DesignExport[]', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\DesignAssignee[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\DesignExport[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -513,103 +513,7 @@ class DesignAssigneeApi
     }
 
     /**
-     * Operation designAssigneesIdAssigneeGet
-     *
-     * Fetches belongsTo relation assignee.
-     *
-     * @param string $id DesignAssignee id (required)
-     * @param bool $refresh  (optional)
-     * @return \Swagger\Client\Model\PortalMember
-     * @throws \Tweak\Api\ApiException on non-2xx response
-     */
-    public function designAssigneesIdAssigneeGet($id, $refresh = null)
-    {
-        list($response) = $this->designAssigneesIdAssigneeGetWithHttpInfo($id, $refresh);
-        return $response;
-    }
-
-    /**
-     * Operation designAssigneesIdAssigneeGetWithHttpInfo
-     *
-     * Fetches belongsTo relation assignee.
-     *
-     * @param string $id DesignAssignee id (required)
-     * @param bool $refresh  (optional)
-     * @return array of \Swagger\Client\Model\PortalMember, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Tweak\Api\ApiException on non-2xx response
-     */
-    public function designAssigneesIdAssigneeGetWithHttpInfo($id, $refresh = null)
-    {
-        // verify the required parameter 'id' is set
-        if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling designAssigneesIdAssigneeGet');
-        }
-        // parse inputs
-        $resourcePath = "/DesignAssignees/{id}/assignee";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
-
-        // query params
-        if ($refresh !== null) {
-            $queryParams['refresh'] = $this->apiClient->getSerializer()->toQueryValue($refresh);
-        }
-        // path params
-        if ($id !== null) {
-            $resourcePath = str_replace(
-                "{" . "id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $queryParams['access_token'] = $apiKey;
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'GET',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\Swagger\Client\Model\PortalMember',
-                '/DesignAssignees/{id}/assignee'
-            );
-
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\PortalMember', $httpHeader), $statusCode, $httpHeader);
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\PortalMember', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation designAssigneesIdDelete
+     * Operation designExportsIdDelete
      *
      * Delete a model instance by {{id}} from the data source.
      *
@@ -617,14 +521,14 @@ class DesignAssigneeApi
      * @return object
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function designAssigneesIdDelete($id)
+    public function designExportsIdDelete($id)
     {
-        list($response) = $this->designAssigneesIdDeleteWithHttpInfo($id);
+        list($response) = $this->designExportsIdDeleteWithHttpInfo($id);
         return $response;
     }
 
     /**
-     * Operation designAssigneesIdDeleteWithHttpInfo
+     * Operation designExportsIdDeleteWithHttpInfo
      *
      * Delete a model instance by {{id}} from the data source.
      *
@@ -632,14 +536,14 @@ class DesignAssigneeApi
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function designAssigneesIdDeleteWithHttpInfo($id)
+    public function designExportsIdDeleteWithHttpInfo($id)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling designAssigneesIdDelete');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling designExportsIdDelete');
         }
         // parse inputs
-        $resourcePath = "/DesignAssignees/{id}";
+        $resourcePath = "/DesignExports/{id}";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -682,7 +586,7 @@ class DesignAssigneeApi
                 $httpBody,
                 $headerParams,
                 'object',
-                '/DesignAssignees/{id}'
+                '/DesignExports/{id}'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, 'object', $httpHeader), $statusCode, $httpHeader);
@@ -699,39 +603,39 @@ class DesignAssigneeApi
     }
 
     /**
-     * Operation designAssigneesIdDesignGet
+     * Operation designExportsIdDesignsGet
      *
-     * Fetches belongsTo relation design.
+     * Fetches belongsTo relation designs.
      *
-     * @param string $id DesignAssignee id (required)
+     * @param string $id DesignExport id (required)
      * @param bool $refresh  (optional)
      * @return \Swagger\Client\Model\Design
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function designAssigneesIdDesignGet($id, $refresh = null)
+    public function designExportsIdDesignsGet($id, $refresh = null)
     {
-        list($response) = $this->designAssigneesIdDesignGetWithHttpInfo($id, $refresh);
+        list($response) = $this->designExportsIdDesignsGetWithHttpInfo($id, $refresh);
         return $response;
     }
 
     /**
-     * Operation designAssigneesIdDesignGetWithHttpInfo
+     * Operation designExportsIdDesignsGetWithHttpInfo
      *
-     * Fetches belongsTo relation design.
+     * Fetches belongsTo relation designs.
      *
-     * @param string $id DesignAssignee id (required)
+     * @param string $id DesignExport id (required)
      * @param bool $refresh  (optional)
      * @return array of \Swagger\Client\Model\Design, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function designAssigneesIdDesignGetWithHttpInfo($id, $refresh = null)
+    public function designExportsIdDesignsGetWithHttpInfo($id, $refresh = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling designAssigneesIdDesignGet');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling designExportsIdDesignsGet');
         }
         // parse inputs
-        $resourcePath = "/DesignAssignees/{id}/design";
+        $resourcePath = "/DesignExports/{id}/designs";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -778,7 +682,7 @@ class DesignAssigneeApi
                 $httpBody,
                 $headerParams,
                 '\Swagger\Client\Model\Design',
-                '/DesignAssignees/{id}/design'
+                '/DesignExports/{id}/designs'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Design', $httpHeader), $statusCode, $httpHeader);
@@ -795,7 +699,7 @@ class DesignAssigneeApi
     }
 
     /**
-     * Operation designAssigneesIdExistsGet
+     * Operation designExportsIdExistsGet
      *
      * Check whether a model instance exists in the data source.
      *
@@ -803,14 +707,14 @@ class DesignAssigneeApi
      * @return \Swagger\Client\Model\InlineResponse2002
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function designAssigneesIdExistsGet($id)
+    public function designExportsIdExistsGet($id)
     {
-        list($response) = $this->designAssigneesIdExistsGetWithHttpInfo($id);
+        list($response) = $this->designExportsIdExistsGetWithHttpInfo($id);
         return $response;
     }
 
     /**
-     * Operation designAssigneesIdExistsGetWithHttpInfo
+     * Operation designExportsIdExistsGetWithHttpInfo
      *
      * Check whether a model instance exists in the data source.
      *
@@ -818,14 +722,14 @@ class DesignAssigneeApi
      * @return array of \Swagger\Client\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function designAssigneesIdExistsGetWithHttpInfo($id)
+    public function designExportsIdExistsGetWithHttpInfo($id)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling designAssigneesIdExistsGet');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling designExportsIdExistsGet');
         }
         // parse inputs
-        $resourcePath = "/DesignAssignees/{id}/exists";
+        $resourcePath = "/DesignExports/{id}/exists";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -868,7 +772,7 @@ class DesignAssigneeApi
                 $httpBody,
                 $headerParams,
                 '\Swagger\Client\Model\InlineResponse2002',
-                '/DesignAssignees/{id}/exists'
+                '/DesignExports/{id}/exists'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse2002', $httpHeader), $statusCode, $httpHeader);
@@ -885,39 +789,39 @@ class DesignAssigneeApi
     }
 
     /**
-     * Operation designAssigneesIdGet
+     * Operation designExportsIdGet
      *
      * Find a model instance by {{id}} from the data source.
      *
      * @param string $id Model id (required)
      * @param string $filter Filter defining fields and include - must be a JSON-encoded string ({\&quot;something\&quot;:\&quot;value\&quot;}) (optional)
-     * @return \Swagger\Client\Model\DesignAssignee
+     * @return \Swagger\Client\Model\DesignExport
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function designAssigneesIdGet($id, $filter = null)
+    public function designExportsIdGet($id, $filter = null)
     {
-        list($response) = $this->designAssigneesIdGetWithHttpInfo($id, $filter);
+        list($response) = $this->designExportsIdGetWithHttpInfo($id, $filter);
         return $response;
     }
 
     /**
-     * Operation designAssigneesIdGetWithHttpInfo
+     * Operation designExportsIdGetWithHttpInfo
      *
      * Find a model instance by {{id}} from the data source.
      *
      * @param string $id Model id (required)
      * @param string $filter Filter defining fields and include - must be a JSON-encoded string ({\&quot;something\&quot;:\&quot;value\&quot;}) (optional)
-     * @return array of \Swagger\Client\Model\DesignAssignee, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\DesignExport, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function designAssigneesIdGetWithHttpInfo($id, $filter = null)
+    public function designExportsIdGetWithHttpInfo($id, $filter = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling designAssigneesIdGet');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling designExportsIdGet');
         }
         // parse inputs
-        $resourcePath = "/DesignAssignees/{id}";
+        $resourcePath = "/DesignExports/{id}";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -963,15 +867,15 @@ class DesignAssigneeApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\DesignAssignee',
-                '/DesignAssignees/{id}'
+                '\Swagger\Client\Model\DesignExport',
+                '/DesignExports/{id}'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\DesignAssignee', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\DesignExport', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\DesignAssignee', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\DesignExport', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -981,7 +885,7 @@ class DesignAssigneeApi
     }
 
     /**
-     * Operation designAssigneesIdHead
+     * Operation designExportsIdHead
      *
      * Check whether a model instance exists in the data source.
      *
@@ -989,14 +893,14 @@ class DesignAssigneeApi
      * @return \Swagger\Client\Model\InlineResponse2002
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function designAssigneesIdHead($id)
+    public function designExportsIdHead($id)
     {
-        list($response) = $this->designAssigneesIdHeadWithHttpInfo($id);
+        list($response) = $this->designExportsIdHeadWithHttpInfo($id);
         return $response;
     }
 
     /**
-     * Operation designAssigneesIdHeadWithHttpInfo
+     * Operation designExportsIdHeadWithHttpInfo
      *
      * Check whether a model instance exists in the data source.
      *
@@ -1004,14 +908,14 @@ class DesignAssigneeApi
      * @return array of \Swagger\Client\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function designAssigneesIdHeadWithHttpInfo($id)
+    public function designExportsIdHeadWithHttpInfo($id)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling designAssigneesIdHead');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling designExportsIdHead');
         }
         // parse inputs
-        $resourcePath = "/DesignAssignees/{id}";
+        $resourcePath = "/DesignExports/{id}";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -1054,7 +958,7 @@ class DesignAssigneeApi
                 $httpBody,
                 $headerParams,
                 '\Swagger\Client\Model\InlineResponse2002',
-                '/DesignAssignees/{id}'
+                '/DesignExports/{id}'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse2002', $httpHeader), $statusCode, $httpHeader);
@@ -1071,39 +975,39 @@ class DesignAssigneeApi
     }
 
     /**
-     * Operation designAssigneesIdPatch
+     * Operation designExportsIdPatch
      *
      * Patch attributes for a model instance and persist it into the data source.
      *
-     * @param string $id DesignAssignee id (required)
-     * @param \Swagger\Client\Model\DesignAssignee $data An object of model property name/value pairs (optional)
-     * @return \Swagger\Client\Model\DesignAssignee
+     * @param string $id DesignExport id (required)
+     * @param \Swagger\Client\Model\DesignExport $data An object of model property name/value pairs (optional)
+     * @return \Swagger\Client\Model\DesignExport
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function designAssigneesIdPatch($id, $data = null)
+    public function designExportsIdPatch($id, $data = null)
     {
-        list($response) = $this->designAssigneesIdPatchWithHttpInfo($id, $data);
+        list($response) = $this->designExportsIdPatchWithHttpInfo($id, $data);
         return $response;
     }
 
     /**
-     * Operation designAssigneesIdPatchWithHttpInfo
+     * Operation designExportsIdPatchWithHttpInfo
      *
      * Patch attributes for a model instance and persist it into the data source.
      *
-     * @param string $id DesignAssignee id (required)
-     * @param \Swagger\Client\Model\DesignAssignee $data An object of model property name/value pairs (optional)
-     * @return array of \Swagger\Client\Model\DesignAssignee, HTTP status code, HTTP response headers (array of strings)
+     * @param string $id DesignExport id (required)
+     * @param \Swagger\Client\Model\DesignExport $data An object of model property name/value pairs (optional)
+     * @return array of \Swagger\Client\Model\DesignExport, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function designAssigneesIdPatchWithHttpInfo($id, $data = null)
+    public function designExportsIdPatchWithHttpInfo($id, $data = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling designAssigneesIdPatch');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling designExportsIdPatch');
         }
         // parse inputs
-        $resourcePath = "/DesignAssignees/{id}";
+        $resourcePath = "/DesignExports/{id}";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -1150,15 +1054,15 @@ class DesignAssigneeApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\DesignAssignee',
-                '/DesignAssignees/{id}'
+                '\Swagger\Client\Model\DesignExport',
+                '/DesignExports/{id}'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\DesignAssignee', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\DesignExport', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\DesignAssignee', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\DesignExport', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1168,39 +1072,39 @@ class DesignAssigneeApi
     }
 
     /**
-     * Operation designAssigneesIdPut
+     * Operation designExportsIdPut
      *
      * Replace attributes for a model instance and persist it into the data source.
      *
      * @param string $id Model id (required)
-     * @param \Swagger\Client\Model\DesignAssignee $data Model instance data (optional)
-     * @return \Swagger\Client\Model\DesignAssignee
+     * @param \Swagger\Client\Model\DesignExport $data Model instance data (optional)
+     * @return \Swagger\Client\Model\DesignExport
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function designAssigneesIdPut($id, $data = null)
+    public function designExportsIdPut($id, $data = null)
     {
-        list($response) = $this->designAssigneesIdPutWithHttpInfo($id, $data);
+        list($response) = $this->designExportsIdPutWithHttpInfo($id, $data);
         return $response;
     }
 
     /**
-     * Operation designAssigneesIdPutWithHttpInfo
+     * Operation designExportsIdPutWithHttpInfo
      *
      * Replace attributes for a model instance and persist it into the data source.
      *
      * @param string $id Model id (required)
-     * @param \Swagger\Client\Model\DesignAssignee $data Model instance data (optional)
-     * @return array of \Swagger\Client\Model\DesignAssignee, HTTP status code, HTTP response headers (array of strings)
+     * @param \Swagger\Client\Model\DesignExport $data Model instance data (optional)
+     * @return array of \Swagger\Client\Model\DesignExport, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function designAssigneesIdPutWithHttpInfo($id, $data = null)
+    public function designExportsIdPutWithHttpInfo($id, $data = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling designAssigneesIdPut');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling designExportsIdPut');
         }
         // parse inputs
-        $resourcePath = "/DesignAssignees/{id}";
+        $resourcePath = "/DesignExports/{id}";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -1247,15 +1151,15 @@ class DesignAssigneeApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\DesignAssignee',
-                '/DesignAssignees/{id}'
+                '\Swagger\Client\Model\DesignExport',
+                '/DesignExports/{id}'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\DesignAssignee', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\DesignExport', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\DesignAssignee', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\DesignExport', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1265,39 +1169,39 @@ class DesignAssigneeApi
     }
 
     /**
-     * Operation designAssigneesIdReplacePost
+     * Operation designExportsIdReplacePost
      *
      * Replace attributes for a model instance and persist it into the data source.
      *
      * @param string $id Model id (required)
-     * @param \Swagger\Client\Model\DesignAssignee $data Model instance data (optional)
-     * @return \Swagger\Client\Model\DesignAssignee
+     * @param \Swagger\Client\Model\DesignExport $data Model instance data (optional)
+     * @return \Swagger\Client\Model\DesignExport
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function designAssigneesIdReplacePost($id, $data = null)
+    public function designExportsIdReplacePost($id, $data = null)
     {
-        list($response) = $this->designAssigneesIdReplacePostWithHttpInfo($id, $data);
+        list($response) = $this->designExportsIdReplacePostWithHttpInfo($id, $data);
         return $response;
     }
 
     /**
-     * Operation designAssigneesIdReplacePostWithHttpInfo
+     * Operation designExportsIdReplacePostWithHttpInfo
      *
      * Replace attributes for a model instance and persist it into the data source.
      *
      * @param string $id Model id (required)
-     * @param \Swagger\Client\Model\DesignAssignee $data Model instance data (optional)
-     * @return array of \Swagger\Client\Model\DesignAssignee, HTTP status code, HTTP response headers (array of strings)
+     * @param \Swagger\Client\Model\DesignExport $data Model instance data (optional)
+     * @return array of \Swagger\Client\Model\DesignExport, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function designAssigneesIdReplacePostWithHttpInfo($id, $data = null)
+    public function designExportsIdReplacePostWithHttpInfo($id, $data = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling designAssigneesIdReplacePost');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling designExportsIdReplacePost');
         }
         // parse inputs
-        $resourcePath = "/DesignAssignees/{id}/replace";
+        $resourcePath = "/DesignExports/{id}/replace";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -1344,15 +1248,15 @@ class DesignAssigneeApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\DesignAssignee',
-                '/DesignAssignees/{id}/replace'
+                '\Swagger\Client\Model\DesignExport',
+                '/DesignExports/{id}/replace'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\DesignAssignee', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\DesignExport', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\DesignAssignee', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\DesignExport', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1362,33 +1266,129 @@ class DesignAssigneeApi
     }
 
     /**
-     * Operation designAssigneesPatch
+     * Operation designExportsIdRequesterGet
      *
-     * Patch an existing model instance or insert a new one into the data source.
+     * Fetches belongsTo relation requester.
      *
-     * @param \Swagger\Client\Model\DesignAssignee $data Model instance data (optional)
-     * @return \Swagger\Client\Model\DesignAssignee
+     * @param string $id DesignExport id (required)
+     * @param bool $refresh  (optional)
+     * @return \Swagger\Client\Model\TeamMember
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function designAssigneesPatch($data = null)
+    public function designExportsIdRequesterGet($id, $refresh = null)
     {
-        list($response) = $this->designAssigneesPatchWithHttpInfo($data);
+        list($response) = $this->designExportsIdRequesterGetWithHttpInfo($id, $refresh);
         return $response;
     }
 
     /**
-     * Operation designAssigneesPatchWithHttpInfo
+     * Operation designExportsIdRequesterGetWithHttpInfo
+     *
+     * Fetches belongsTo relation requester.
+     *
+     * @param string $id DesignExport id (required)
+     * @param bool $refresh  (optional)
+     * @return array of \Swagger\Client\Model\TeamMember, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function designExportsIdRequesterGetWithHttpInfo($id, $refresh = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling designExportsIdRequesterGet');
+        }
+        // parse inputs
+        $resourcePath = "/DesignExports/{id}/requester";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($refresh !== null) {
+            $queryParams['refresh'] = $this->apiClient->getSerializer()->toQueryValue($refresh);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\TeamMember',
+                '/DesignExports/{id}/requester'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TeamMember', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TeamMember', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation designExportsPatch
      *
      * Patch an existing model instance or insert a new one into the data source.
      *
-     * @param \Swagger\Client\Model\DesignAssignee $data Model instance data (optional)
-     * @return array of \Swagger\Client\Model\DesignAssignee, HTTP status code, HTTP response headers (array of strings)
+     * @param \Swagger\Client\Model\DesignExport $data Model instance data (optional)
+     * @return \Swagger\Client\Model\DesignExport
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function designAssigneesPatchWithHttpInfo($data = null)
+    public function designExportsPatch($data = null)
+    {
+        list($response) = $this->designExportsPatchWithHttpInfo($data);
+        return $response;
+    }
+
+    /**
+     * Operation designExportsPatchWithHttpInfo
+     *
+     * Patch an existing model instance or insert a new one into the data source.
+     *
+     * @param \Swagger\Client\Model\DesignExport $data Model instance data (optional)
+     * @return array of \Swagger\Client\Model\DesignExport, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function designExportsPatchWithHttpInfo($data = null)
     {
         // parse inputs
-        $resourcePath = "/DesignAssignees";
+        $resourcePath = "/DesignExports";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -1427,15 +1427,15 @@ class DesignAssigneeApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\DesignAssignee',
-                '/DesignAssignees'
+                '\Swagger\Client\Model\DesignExport',
+                '/DesignExports'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\DesignAssignee', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\DesignExport', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\DesignAssignee', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\DesignExport', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1445,33 +1445,33 @@ class DesignAssigneeApi
     }
 
     /**
-     * Operation designAssigneesPost
+     * Operation designExportsPost
      *
      * Create a new instance of the model and persist it into the data source.
      *
-     * @param \Swagger\Client\Model\DesignAssignee $data Model instance data (optional)
-     * @return \Swagger\Client\Model\DesignAssignee
+     * @param \Swagger\Client\Model\DesignExport $data Model instance data (optional)
+     * @return \Swagger\Client\Model\DesignExport
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function designAssigneesPost($data = null)
+    public function designExportsPost($data = null)
     {
-        list($response) = $this->designAssigneesPostWithHttpInfo($data);
+        list($response) = $this->designExportsPostWithHttpInfo($data);
         return $response;
     }
 
     /**
-     * Operation designAssigneesPostWithHttpInfo
+     * Operation designExportsPostWithHttpInfo
      *
      * Create a new instance of the model and persist it into the data source.
      *
-     * @param \Swagger\Client\Model\DesignAssignee $data Model instance data (optional)
-     * @return array of \Swagger\Client\Model\DesignAssignee, HTTP status code, HTTP response headers (array of strings)
+     * @param \Swagger\Client\Model\DesignExport $data Model instance data (optional)
+     * @return array of \Swagger\Client\Model\DesignExport, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function designAssigneesPostWithHttpInfo($data = null)
+    public function designExportsPostWithHttpInfo($data = null)
     {
         // parse inputs
-        $resourcePath = "/DesignAssignees";
+        $resourcePath = "/DesignExports";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -1510,15 +1510,15 @@ class DesignAssigneeApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\DesignAssignee',
-                '/DesignAssignees'
+                '\Swagger\Client\Model\DesignExport',
+                '/DesignExports'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\DesignAssignee', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\DesignExport', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\DesignAssignee', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\DesignExport', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1528,33 +1528,33 @@ class DesignAssigneeApi
     }
 
     /**
-     * Operation designAssigneesPut
+     * Operation designExportsPut
      *
      * Replace an existing model instance or insert a new one into the data source.
      *
-     * @param \Swagger\Client\Model\DesignAssignee $data Model instance data (optional)
-     * @return \Swagger\Client\Model\DesignAssignee
+     * @param \Swagger\Client\Model\DesignExport $data Model instance data (optional)
+     * @return \Swagger\Client\Model\DesignExport
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function designAssigneesPut($data = null)
+    public function designExportsPut($data = null)
     {
-        list($response) = $this->designAssigneesPutWithHttpInfo($data);
+        list($response) = $this->designExportsPutWithHttpInfo($data);
         return $response;
     }
 
     /**
-     * Operation designAssigneesPutWithHttpInfo
+     * Operation designExportsPutWithHttpInfo
      *
      * Replace an existing model instance or insert a new one into the data source.
      *
-     * @param \Swagger\Client\Model\DesignAssignee $data Model instance data (optional)
-     * @return array of \Swagger\Client\Model\DesignAssignee, HTTP status code, HTTP response headers (array of strings)
+     * @param \Swagger\Client\Model\DesignExport $data Model instance data (optional)
+     * @return array of \Swagger\Client\Model\DesignExport, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function designAssigneesPutWithHttpInfo($data = null)
+    public function designExportsPutWithHttpInfo($data = null)
     {
         // parse inputs
-        $resourcePath = "/DesignAssignees";
+        $resourcePath = "/DesignExports";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -1593,15 +1593,15 @@ class DesignAssigneeApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\DesignAssignee',
-                '/DesignAssignees'
+                '\Swagger\Client\Model\DesignExport',
+                '/DesignExports'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\DesignAssignee', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\DesignExport', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\DesignAssignee', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\DesignExport', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1611,33 +1611,33 @@ class DesignAssigneeApi
     }
 
     /**
-     * Operation designAssigneesReplaceOrCreatePost
+     * Operation designExportsReplaceOrCreatePost
      *
      * Replace an existing model instance or insert a new one into the data source.
      *
-     * @param \Swagger\Client\Model\DesignAssignee $data Model instance data (optional)
-     * @return \Swagger\Client\Model\DesignAssignee
+     * @param \Swagger\Client\Model\DesignExport $data Model instance data (optional)
+     * @return \Swagger\Client\Model\DesignExport
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function designAssigneesReplaceOrCreatePost($data = null)
+    public function designExportsReplaceOrCreatePost($data = null)
     {
-        list($response) = $this->designAssigneesReplaceOrCreatePostWithHttpInfo($data);
+        list($response) = $this->designExportsReplaceOrCreatePostWithHttpInfo($data);
         return $response;
     }
 
     /**
-     * Operation designAssigneesReplaceOrCreatePostWithHttpInfo
+     * Operation designExportsReplaceOrCreatePostWithHttpInfo
      *
      * Replace an existing model instance or insert a new one into the data source.
      *
-     * @param \Swagger\Client\Model\DesignAssignee $data Model instance data (optional)
-     * @return array of \Swagger\Client\Model\DesignAssignee, HTTP status code, HTTP response headers (array of strings)
+     * @param \Swagger\Client\Model\DesignExport $data Model instance data (optional)
+     * @return array of \Swagger\Client\Model\DesignExport, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function designAssigneesReplaceOrCreatePostWithHttpInfo($data = null)
+    public function designExportsReplaceOrCreatePostWithHttpInfo($data = null)
     {
         // parse inputs
-        $resourcePath = "/DesignAssignees/replaceOrCreate";
+        $resourcePath = "/DesignExports/replaceOrCreate";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -1676,15 +1676,15 @@ class DesignAssigneeApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\DesignAssignee',
-                '/DesignAssignees/replaceOrCreate'
+                '\Swagger\Client\Model\DesignExport',
+                '/DesignExports/replaceOrCreate'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\DesignAssignee', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\DesignExport', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\DesignAssignee', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\DesignExport', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1694,35 +1694,35 @@ class DesignAssigneeApi
     }
 
     /**
-     * Operation designAssigneesUpdatePost
+     * Operation designExportsUpdatePost
      *
      * Update instances of the model matched by {{where}} from the data source.
      *
      * @param string $where Criteria to match model instances (optional)
-     * @param \Swagger\Client\Model\DesignAssignee $data An object of model property name/value pairs (optional)
+     * @param \Swagger\Client\Model\DesignExport $data An object of model property name/value pairs (optional)
      * @return \Swagger\Client\Model\InlineResponse2001
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function designAssigneesUpdatePost($where = null, $data = null)
+    public function designExportsUpdatePost($where = null, $data = null)
     {
-        list($response) = $this->designAssigneesUpdatePostWithHttpInfo($where, $data);
+        list($response) = $this->designExportsUpdatePostWithHttpInfo($where, $data);
         return $response;
     }
 
     /**
-     * Operation designAssigneesUpdatePostWithHttpInfo
+     * Operation designExportsUpdatePostWithHttpInfo
      *
      * Update instances of the model matched by {{where}} from the data source.
      *
      * @param string $where Criteria to match model instances (optional)
-     * @param \Swagger\Client\Model\DesignAssignee $data An object of model property name/value pairs (optional)
+     * @param \Swagger\Client\Model\DesignExport $data An object of model property name/value pairs (optional)
      * @return array of \Swagger\Client\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function designAssigneesUpdatePostWithHttpInfo($where = null, $data = null)
+    public function designExportsUpdatePostWithHttpInfo($where = null, $data = null)
     {
         // parse inputs
-        $resourcePath = "/DesignAssignees/update";
+        $resourcePath = "/DesignExports/update";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -1766,7 +1766,7 @@ class DesignAssigneeApi
                 $httpBody,
                 $headerParams,
                 '\Swagger\Client\Model\InlineResponse2001',
-                '/DesignAssignees/update'
+                '/DesignExports/update'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse2001', $httpHeader), $statusCode, $httpHeader);
@@ -1783,35 +1783,35 @@ class DesignAssigneeApi
     }
 
     /**
-     * Operation designAssigneesUpsertWithWherePost
+     * Operation designExportsUpsertWithWherePost
      *
      * Update an existing model instance or insert a new one into the data source based on the where criteria.
      *
      * @param string $where Criteria to match model instances (optional)
-     * @param \Swagger\Client\Model\DesignAssignee $data An object of model property name/value pairs (optional)
-     * @return \Swagger\Client\Model\DesignAssignee
+     * @param \Swagger\Client\Model\DesignExport $data An object of model property name/value pairs (optional)
+     * @return \Swagger\Client\Model\DesignExport
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function designAssigneesUpsertWithWherePost($where = null, $data = null)
+    public function designExportsUpsertWithWherePost($where = null, $data = null)
     {
-        list($response) = $this->designAssigneesUpsertWithWherePostWithHttpInfo($where, $data);
+        list($response) = $this->designExportsUpsertWithWherePostWithHttpInfo($where, $data);
         return $response;
     }
 
     /**
-     * Operation designAssigneesUpsertWithWherePostWithHttpInfo
+     * Operation designExportsUpsertWithWherePostWithHttpInfo
      *
      * Update an existing model instance or insert a new one into the data source based on the where criteria.
      *
      * @param string $where Criteria to match model instances (optional)
-     * @param \Swagger\Client\Model\DesignAssignee $data An object of model property name/value pairs (optional)
-     * @return array of \Swagger\Client\Model\DesignAssignee, HTTP status code, HTTP response headers (array of strings)
+     * @param \Swagger\Client\Model\DesignExport $data An object of model property name/value pairs (optional)
+     * @return array of \Swagger\Client\Model\DesignExport, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function designAssigneesUpsertWithWherePostWithHttpInfo($where = null, $data = null)
+    public function designExportsUpsertWithWherePostWithHttpInfo($where = null, $data = null)
     {
         // parse inputs
-        $resourcePath = "/DesignAssignees/upsertWithWhere";
+        $resourcePath = "/DesignExports/upsertWithWhere";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -1854,15 +1854,15 @@ class DesignAssigneeApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\DesignAssignee',
-                '/DesignAssignees/upsertWithWhere'
+                '\Swagger\Client\Model\DesignExport',
+                '/DesignExports/upsertWithWhere'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\DesignAssignee', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\DesignExport', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\DesignAssignee', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\DesignExport', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

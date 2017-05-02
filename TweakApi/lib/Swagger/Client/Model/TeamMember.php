@@ -77,7 +77,13 @@ class TeamMember implements ArrayAccess
         'portals' => '\Swagger\Client\Model\Portal[]',
         'uploadedTemplates' => '\Swagger\Client\Model\Template[]',
         'templates' => '\Swagger\Client\Model\Template[]',
-        'invitationTickets' => '\Swagger\Client\Model\InvitationTicket[]'
+        'invitationTickets' => '\Swagger\Client\Model\InvitationTicket[]',
+        'requestedDesigns' => '\Swagger\Client\Model\Design[]',
+        'requestedDesignExports' => '\Swagger\Client\Model\DesignExport[]',
+        'assignedDesigns' => '\Swagger\Client\Model\Design[]',
+        'reviewedDesigns' => '\Swagger\Client\Model\Design[]',
+        'commentedDesigns' => '\Swagger\Client\Model\Design[]',
+        'designComments' => '\Swagger\Client\Model\DesignComment[]'
     );
 
     public static function swaggerTypes()
@@ -101,7 +107,13 @@ class TeamMember implements ArrayAccess
         'portals' => 'portals',
         'uploadedTemplates' => 'uploadedTemplates',
         'templates' => 'templates',
-        'invitationTickets' => 'invitationTickets'
+        'invitationTickets' => 'invitationTickets',
+        'requestedDesigns' => 'requestedDesigns',
+        'requestedDesignExports' => 'requestedDesignExports',
+        'assignedDesigns' => 'assignedDesigns',
+        'reviewedDesigns' => 'reviewedDesigns',
+        'commentedDesigns' => 'commentedDesigns',
+        'designComments' => 'designComments'
     );
 
     public static function attributeMap()
@@ -125,7 +137,13 @@ class TeamMember implements ArrayAccess
         'portals' => 'setPortals',
         'uploadedTemplates' => 'setUploadedTemplates',
         'templates' => 'setTemplates',
-        'invitationTickets' => 'setInvitationTickets'
+        'invitationTickets' => 'setInvitationTickets',
+        'requestedDesigns' => 'setRequestedDesigns',
+        'requestedDesignExports' => 'setRequestedDesignExports',
+        'assignedDesigns' => 'setAssignedDesigns',
+        'reviewedDesigns' => 'setReviewedDesigns',
+        'commentedDesigns' => 'setCommentedDesigns',
+        'designComments' => 'setDesignComments'
     );
 
     public static function setters()
@@ -149,7 +167,13 @@ class TeamMember implements ArrayAccess
         'portals' => 'getPortals',
         'uploadedTemplates' => 'getUploadedTemplates',
         'templates' => 'getTemplates',
-        'invitationTickets' => 'getInvitationTickets'
+        'invitationTickets' => 'getInvitationTickets',
+        'requestedDesigns' => 'getRequestedDesigns',
+        'requestedDesignExports' => 'getRequestedDesignExports',
+        'assignedDesigns' => 'getAssignedDesigns',
+        'reviewedDesigns' => 'getReviewedDesigns',
+        'commentedDesigns' => 'getCommentedDesigns',
+        'designComments' => 'getDesignComments'
     );
 
     public static function getters()
@@ -185,6 +209,12 @@ class TeamMember implements ArrayAccess
         $this->container['uploadedTemplates'] = isset($data['uploadedTemplates']) ? $data['uploadedTemplates'] : null;
         $this->container['templates'] = isset($data['templates']) ? $data['templates'] : null;
         $this->container['invitationTickets'] = isset($data['invitationTickets']) ? $data['invitationTickets'] : null;
+        $this->container['requestedDesigns'] = isset($data['requestedDesigns']) ? $data['requestedDesigns'] : null;
+        $this->container['requestedDesignExports'] = isset($data['requestedDesignExports']) ? $data['requestedDesignExports'] : null;
+        $this->container['assignedDesigns'] = isset($data['assignedDesigns']) ? $data['assignedDesigns'] : null;
+        $this->container['reviewedDesigns'] = isset($data['reviewedDesigns']) ? $data['reviewedDesigns'] : null;
+        $this->container['commentedDesigns'] = isset($data['commentedDesigns']) ? $data['commentedDesigns'] : null;
+        $this->container['designComments'] = isset($data['designComments']) ? $data['designComments'] : null;
     }
 
     /**
@@ -464,6 +494,132 @@ class TeamMember implements ArrayAccess
     public function setInvitationTickets($invitationTickets)
     {
         $this->container['invitationTickets'] = $invitationTickets;
+
+        return $this;
+    }
+
+    /**
+     * Gets requestedDesigns
+     * @return \Swagger\Client\Model\Design[]
+     */
+    public function getRequestedDesigns()
+    {
+        return $this->container['requestedDesigns'];
+    }
+
+    /**
+     * Sets requestedDesigns
+     * @param \Swagger\Client\Model\Design[] $requestedDesigns
+     * @return $this
+     */
+    public function setRequestedDesigns($requestedDesigns)
+    {
+        $this->container['requestedDesigns'] = $requestedDesigns;
+
+        return $this;
+    }
+
+    /**
+     * Gets requestedDesignExports
+     * @return \Swagger\Client\Model\DesignExport[]
+     */
+    public function getRequestedDesignExports()
+    {
+        return $this->container['requestedDesignExports'];
+    }
+
+    /**
+     * Sets requestedDesignExports
+     * @param \Swagger\Client\Model\DesignExport[] $requestedDesignExports
+     * @return $this
+     */
+    public function setRequestedDesignExports($requestedDesignExports)
+    {
+        $this->container['requestedDesignExports'] = $requestedDesignExports;
+
+        return $this;
+    }
+
+    /**
+     * Gets assignedDesigns
+     * @return \Swagger\Client\Model\Design[]
+     */
+    public function getAssignedDesigns()
+    {
+        return $this->container['assignedDesigns'];
+    }
+
+    /**
+     * Sets assignedDesigns
+     * @param \Swagger\Client\Model\Design[] $assignedDesigns
+     * @return $this
+     */
+    public function setAssignedDesigns($assignedDesigns)
+    {
+        $this->container['assignedDesigns'] = $assignedDesigns;
+
+        return $this;
+    }
+
+    /**
+     * Gets reviewedDesigns
+     * @return \Swagger\Client\Model\Design[]
+     */
+    public function getReviewedDesigns()
+    {
+        return $this->container['reviewedDesigns'];
+    }
+
+    /**
+     * Sets reviewedDesigns
+     * @param \Swagger\Client\Model\Design[] $reviewedDesigns
+     * @return $this
+     */
+    public function setReviewedDesigns($reviewedDesigns)
+    {
+        $this->container['reviewedDesigns'] = $reviewedDesigns;
+
+        return $this;
+    }
+
+    /**
+     * Gets commentedDesigns
+     * @return \Swagger\Client\Model\Design[]
+     */
+    public function getCommentedDesigns()
+    {
+        return $this->container['commentedDesigns'];
+    }
+
+    /**
+     * Sets commentedDesigns
+     * @param \Swagger\Client\Model\Design[] $commentedDesigns
+     * @return $this
+     */
+    public function setCommentedDesigns($commentedDesigns)
+    {
+        $this->container['commentedDesigns'] = $commentedDesigns;
+
+        return $this;
+    }
+
+    /**
+     * Gets designComments
+     * @return \Swagger\Client\Model\DesignComment[]
+     */
+    public function getDesignComments()
+    {
+        return $this->container['designComments'];
+    }
+
+    /**
+     * Sets designComments
+     * @param \Swagger\Client\Model\DesignComment[] $designComments
+     * @return $this
+     */
+    public function setDesignComments($designComments)
+    {
+        $this->container['designComments'] = $designComments;
 
         return $this;
     }

@@ -112,6 +112,14 @@ class TeamTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "subdomain"
+     */
+    public function testPropertySubdomain()
+    {
+
+    }
+
+    /**
      * Test attribute "created"
      */
     public function testPropertyCreated()

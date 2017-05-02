@@ -71,24 +71,30 @@ class Design implements ArrayAccess
         'name' => 'string',
         'object' => 'object',
         'thumbnail' => 'string',
-        'expired' => '\DateTime',
         'description' => 'string',
         'purpose' => 'string',
+        'status' => 'string',
+        'edited' => '\DateTime',
+        'expired' => '\DateTime',
         'created' => '\DateTime',
         'modified' => '\DateTime',
         'id' => 'double',
         'customerId' => 'double',
+        'requesterId' => 'double',
+        'assigneeId' => 'double',
+        'reviewerId' => 'double',
         'templateId' => 'double',
         'portalId' => 'double',
-        'requesterId' => 'double',
         'tags' => '\Swagger\Client\Model\Tag[]',
         'customer' => '\Swagger\Client\Model\Customer',
         'template' => '\Swagger\Client\Model\Template',
         'portal' => '\Swagger\Client\Model\Portal',
-        'requester' => '\Swagger\Client\Model\PortalMember',
-        'commenters' => '\Swagger\Client\Model\PortalMember[]',
-        'assignees' => '\Swagger\Client\Model\PortalMember[]',
-        'reviewers' => '\Swagger\Client\Model\PortalMember[]'
+        'comments' => '\Swagger\Client\Model\DesignComment[]',
+        'exports' => '\Swagger\Client\Model\DesignExport[]',
+        'requester' => '\Swagger\Client\Model\TeamMember',
+        'assignee' => '\Swagger\Client\Model\TeamMember',
+        'reviewer' => '\Swagger\Client\Model\TeamMember',
+        'commenters' => '\Swagger\Client\Model\TeamMember[]'
     );
 
     public static function swaggerTypes()
@@ -106,24 +112,30 @@ class Design implements ArrayAccess
         'name' => 'name',
         'object' => 'object',
         'thumbnail' => 'thumbnail',
-        'expired' => 'expired',
         'description' => 'description',
         'purpose' => 'purpose',
+        'status' => 'status',
+        'edited' => 'edited',
+        'expired' => 'expired',
         'created' => 'created',
         'modified' => 'modified',
         'id' => 'id',
         'customerId' => 'customerId',
+        'requesterId' => 'requesterId',
+        'assigneeId' => 'assigneeId',
+        'reviewerId' => 'reviewerId',
         'templateId' => 'templateId',
         'portalId' => 'portalId',
-        'requesterId' => 'requesterId',
         'tags' => 'tags',
         'customer' => 'customer',
         'template' => 'template',
         'portal' => 'portal',
+        'comments' => 'comments',
+        'exports' => 'exports',
         'requester' => 'requester',
-        'commenters' => 'commenters',
-        'assignees' => 'assignees',
-        'reviewers' => 'reviewers'
+        'assignee' => 'assignee',
+        'reviewer' => 'reviewer',
+        'commenters' => 'commenters'
     );
 
     public static function attributeMap()
@@ -141,24 +153,30 @@ class Design implements ArrayAccess
         'name' => 'setName',
         'object' => 'setObject',
         'thumbnail' => 'setThumbnail',
-        'expired' => 'setExpired',
         'description' => 'setDescription',
         'purpose' => 'setPurpose',
+        'status' => 'setStatus',
+        'edited' => 'setEdited',
+        'expired' => 'setExpired',
         'created' => 'setCreated',
         'modified' => 'setModified',
         'id' => 'setId',
         'customerId' => 'setCustomerId',
+        'requesterId' => 'setRequesterId',
+        'assigneeId' => 'setAssigneeId',
+        'reviewerId' => 'setReviewerId',
         'templateId' => 'setTemplateId',
         'portalId' => 'setPortalId',
-        'requesterId' => 'setRequesterId',
         'tags' => 'setTags',
         'customer' => 'setCustomer',
         'template' => 'setTemplate',
         'portal' => 'setPortal',
+        'comments' => 'setComments',
+        'exports' => 'setExports',
         'requester' => 'setRequester',
-        'commenters' => 'setCommenters',
-        'assignees' => 'setAssignees',
-        'reviewers' => 'setReviewers'
+        'assignee' => 'setAssignee',
+        'reviewer' => 'setReviewer',
+        'commenters' => 'setCommenters'
     );
 
     public static function setters()
@@ -176,24 +194,30 @@ class Design implements ArrayAccess
         'name' => 'getName',
         'object' => 'getObject',
         'thumbnail' => 'getThumbnail',
-        'expired' => 'getExpired',
         'description' => 'getDescription',
         'purpose' => 'getPurpose',
+        'status' => 'getStatus',
+        'edited' => 'getEdited',
+        'expired' => 'getExpired',
         'created' => 'getCreated',
         'modified' => 'getModified',
         'id' => 'getId',
         'customerId' => 'getCustomerId',
+        'requesterId' => 'getRequesterId',
+        'assigneeId' => 'getAssigneeId',
+        'reviewerId' => 'getReviewerId',
         'templateId' => 'getTemplateId',
         'portalId' => 'getPortalId',
-        'requesterId' => 'getRequesterId',
         'tags' => 'getTags',
         'customer' => 'getCustomer',
         'template' => 'getTemplate',
         'portal' => 'getPortal',
+        'comments' => 'getComments',
+        'exports' => 'getExports',
         'requester' => 'getRequester',
-        'commenters' => 'getCommenters',
-        'assignees' => 'getAssignees',
-        'reviewers' => 'getReviewers'
+        'assignee' => 'getAssignee',
+        'reviewer' => 'getReviewer',
+        'commenters' => 'getCommenters'
     );
 
     public static function getters()
@@ -203,6 +227,10 @@ class Design implements ArrayAccess
 
     const PURPOSE_NONE = 'none';
     const PURPOSE_PRINT_ORDER = 'printOrder';
+    const STATUS_PENDING_ACTION = 'pendingAction';
+    const STATUS_PENDING_APPROVAL = 'pendingApproval';
+    const STATUS_APPROVED = 'approved';
+    const STATUS_REJECTED = 'rejected';
     
 
     
@@ -215,6 +243,20 @@ class Design implements ArrayAccess
         return [
             self::PURPOSE_NONE,
             self::PURPOSE_PRINT_ORDER,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getStatusAllowableValues()
+    {
+        return [
+            self::STATUS_PENDING_ACTION,
+            self::STATUS_PENDING_APPROVAL,
+            self::STATUS_APPROVED,
+            self::STATUS_REJECTED,
         ];
     }
     
@@ -236,24 +278,30 @@ class Design implements ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['object'] = isset($data['object']) ? $data['object'] : null;
         $this->container['thumbnail'] = isset($data['thumbnail']) ? $data['thumbnail'] : null;
-        $this->container['expired'] = isset($data['expired']) ? $data['expired'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : '';
         $this->container['purpose'] = isset($data['purpose']) ? $data['purpose'] : 'none';
+        $this->container['status'] = isset($data['status']) ? $data['status'] : 'pendingAction';
+        $this->container['edited'] = isset($data['edited']) ? $data['edited'] : null;
+        $this->container['expired'] = isset($data['expired']) ? $data['expired'] : null;
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
         $this->container['modified'] = isset($data['modified']) ? $data['modified'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['customerId'] = isset($data['customerId']) ? $data['customerId'] : null;
+        $this->container['requesterId'] = isset($data['requesterId']) ? $data['requesterId'] : null;
+        $this->container['assigneeId'] = isset($data['assigneeId']) ? $data['assigneeId'] : null;
+        $this->container['reviewerId'] = isset($data['reviewerId']) ? $data['reviewerId'] : null;
         $this->container['templateId'] = isset($data['templateId']) ? $data['templateId'] : null;
         $this->container['portalId'] = isset($data['portalId']) ? $data['portalId'] : null;
-        $this->container['requesterId'] = isset($data['requesterId']) ? $data['requesterId'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['customer'] = isset($data['customer']) ? $data['customer'] : null;
         $this->container['template'] = isset($data['template']) ? $data['template'] : null;
         $this->container['portal'] = isset($data['portal']) ? $data['portal'] : null;
+        $this->container['comments'] = isset($data['comments']) ? $data['comments'] : null;
+        $this->container['exports'] = isset($data['exports']) ? $data['exports'] : null;
         $this->container['requester'] = isset($data['requester']) ? $data['requester'] : null;
+        $this->container['assignee'] = isset($data['assignee']) ? $data['assignee'] : null;
+        $this->container['reviewer'] = isset($data['reviewer']) ? $data['reviewer'] : null;
         $this->container['commenters'] = isset($data['commenters']) ? $data['commenters'] : null;
-        $this->container['assignees'] = isset($data['assignees']) ? $data['assignees'] : null;
-        $this->container['reviewers'] = isset($data['reviewers']) ? $data['reviewers'] : null;
     }
 
     /**
@@ -275,6 +323,11 @@ class Design implements ArrayAccess
             $invalid_properties[] = "invalid value for 'purpose', must be one of #{allowed_values}.";
         }
 
+        $allowed_values = array("pendingAction", "pendingApproval", "approved", "rejected");
+        if (!in_array($this->container['status'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'status', must be one of #{allowed_values}.";
+        }
+
         return $invalid_properties;
     }
 
@@ -294,6 +347,10 @@ class Design implements ArrayAccess
         }
         $allowed_values = array("none", "printOrder");
         if (!in_array($this->container['purpose'], $allowed_values)) {
+            return false;
+        }
+        $allowed_values = array("pendingAction", "pendingApproval", "approved", "rejected");
+        if (!in_array($this->container['status'], $allowed_values)) {
             return false;
         }
         return true;
@@ -406,27 +463,6 @@ class Design implements ArrayAccess
     }
 
     /**
-     * Gets expired
-     * @return \DateTime
-     */
-    public function getExpired()
-    {
-        return $this->container['expired'];
-    }
-
-    /**
-     * Sets expired
-     * @param \DateTime $expired
-     * @return $this
-     */
-    public function setExpired($expired)
-    {
-        $this->container['expired'] = $expired;
-
-        return $this;
-    }
-
-    /**
      * Gets description
      * @return string
      */
@@ -468,6 +504,73 @@ class Design implements ArrayAccess
             throw new \InvalidArgumentException("Invalid value for 'purpose', must be one of 'none', 'printOrder'");
         }
         $this->container['purpose'] = $purpose;
+
+        return $this;
+    }
+
+    /**
+     * Gets status
+     * @return string
+     */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+     * Sets status
+     * @param string $status
+     * @return $this
+     */
+    public function setStatus($status)
+    {
+        $allowed_values = array('pendingAction', 'pendingApproval', 'approved', 'rejected');
+        if (!in_array($status, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'pendingAction', 'pendingApproval', 'approved', 'rejected'");
+        }
+        $this->container['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * Gets edited
+     * @return \DateTime
+     */
+    public function getEdited()
+    {
+        return $this->container['edited'];
+    }
+
+    /**
+     * Sets edited
+     * @param \DateTime $edited
+     * @return $this
+     */
+    public function setEdited($edited)
+    {
+        $this->container['edited'] = $edited;
+
+        return $this;
+    }
+
+    /**
+     * Gets expired
+     * @return \DateTime
+     */
+    public function getExpired()
+    {
+        return $this->container['expired'];
+    }
+
+    /**
+     * Sets expired
+     * @param \DateTime $expired
+     * @return $this
+     */
+    public function setExpired($expired)
+    {
+        $this->container['expired'] = $expired;
 
         return $this;
     }
@@ -557,6 +660,69 @@ class Design implements ArrayAccess
     }
 
     /**
+     * Gets requesterId
+     * @return double
+     */
+    public function getRequesterId()
+    {
+        return $this->container['requesterId'];
+    }
+
+    /**
+     * Sets requesterId
+     * @param double $requesterId
+     * @return $this
+     */
+    public function setRequesterId($requesterId)
+    {
+        $this->container['requesterId'] = $requesterId;
+
+        return $this;
+    }
+
+    /**
+     * Gets assigneeId
+     * @return double
+     */
+    public function getAssigneeId()
+    {
+        return $this->container['assigneeId'];
+    }
+
+    /**
+     * Sets assigneeId
+     * @param double $assigneeId
+     * @return $this
+     */
+    public function setAssigneeId($assigneeId)
+    {
+        $this->container['assigneeId'] = $assigneeId;
+
+        return $this;
+    }
+
+    /**
+     * Gets reviewerId
+     * @return double
+     */
+    public function getReviewerId()
+    {
+        return $this->container['reviewerId'];
+    }
+
+    /**
+     * Sets reviewerId
+     * @param double $reviewerId
+     * @return $this
+     */
+    public function setReviewerId($reviewerId)
+    {
+        $this->container['reviewerId'] = $reviewerId;
+
+        return $this;
+    }
+
+    /**
      * Gets templateId
      * @return double
      */
@@ -594,27 +760,6 @@ class Design implements ArrayAccess
     public function setPortalId($portalId)
     {
         $this->container['portalId'] = $portalId;
-
-        return $this;
-    }
-
-    /**
-     * Gets requesterId
-     * @return double
-     */
-    public function getRequesterId()
-    {
-        return $this->container['requesterId'];
-    }
-
-    /**
-     * Sets requesterId
-     * @param double $requesterId
-     * @return $this
-     */
-    public function setRequesterId($requesterId)
-    {
-        $this->container['requesterId'] = $requesterId;
 
         return $this;
     }
@@ -704,8 +849,50 @@ class Design implements ArrayAccess
     }
 
     /**
+     * Gets comments
+     * @return \Swagger\Client\Model\DesignComment[]
+     */
+    public function getComments()
+    {
+        return $this->container['comments'];
+    }
+
+    /**
+     * Sets comments
+     * @param \Swagger\Client\Model\DesignComment[] $comments
+     * @return $this
+     */
+    public function setComments($comments)
+    {
+        $this->container['comments'] = $comments;
+
+        return $this;
+    }
+
+    /**
+     * Gets exports
+     * @return \Swagger\Client\Model\DesignExport[]
+     */
+    public function getExports()
+    {
+        return $this->container['exports'];
+    }
+
+    /**
+     * Sets exports
+     * @param \Swagger\Client\Model\DesignExport[] $exports
+     * @return $this
+     */
+    public function setExports($exports)
+    {
+        $this->container['exports'] = $exports;
+
+        return $this;
+    }
+
+    /**
      * Gets requester
-     * @return \Swagger\Client\Model\PortalMember
+     * @return \Swagger\Client\Model\TeamMember
      */
     public function getRequester()
     {
@@ -714,7 +901,7 @@ class Design implements ArrayAccess
 
     /**
      * Sets requester
-     * @param \Swagger\Client\Model\PortalMember $requester
+     * @param \Swagger\Client\Model\TeamMember $requester
      * @return $this
      */
     public function setRequester($requester)
@@ -725,8 +912,50 @@ class Design implements ArrayAccess
     }
 
     /**
+     * Gets assignee
+     * @return \Swagger\Client\Model\TeamMember
+     */
+    public function getAssignee()
+    {
+        return $this->container['assignee'];
+    }
+
+    /**
+     * Sets assignee
+     * @param \Swagger\Client\Model\TeamMember $assignee
+     * @return $this
+     */
+    public function setAssignee($assignee)
+    {
+        $this->container['assignee'] = $assignee;
+
+        return $this;
+    }
+
+    /**
+     * Gets reviewer
+     * @return \Swagger\Client\Model\TeamMember
+     */
+    public function getReviewer()
+    {
+        return $this->container['reviewer'];
+    }
+
+    /**
+     * Sets reviewer
+     * @param \Swagger\Client\Model\TeamMember $reviewer
+     * @return $this
+     */
+    public function setReviewer($reviewer)
+    {
+        $this->container['reviewer'] = $reviewer;
+
+        return $this;
+    }
+
+    /**
      * Gets commenters
-     * @return \Swagger\Client\Model\PortalMember[]
+     * @return \Swagger\Client\Model\TeamMember[]
      */
     public function getCommenters()
     {
@@ -735,54 +964,12 @@ class Design implements ArrayAccess
 
     /**
      * Sets commenters
-     * @param \Swagger\Client\Model\PortalMember[] $commenters
+     * @param \Swagger\Client\Model\TeamMember[] $commenters
      * @return $this
      */
     public function setCommenters($commenters)
     {
         $this->container['commenters'] = $commenters;
-
-        return $this;
-    }
-
-    /**
-     * Gets assignees
-     * @return \Swagger\Client\Model\PortalMember[]
-     */
-    public function getAssignees()
-    {
-        return $this->container['assignees'];
-    }
-
-    /**
-     * Sets assignees
-     * @param \Swagger\Client\Model\PortalMember[] $assignees
-     * @return $this
-     */
-    public function setAssignees($assignees)
-    {
-        $this->container['assignees'] = $assignees;
-
-        return $this;
-    }
-
-    /**
-     * Gets reviewers
-     * @return \Swagger\Client\Model\PortalMember[]
-     */
-    public function getReviewers()
-    {
-        return $this->container['reviewers'];
-    }
-
-    /**
-     * Sets reviewers
-     * @param \Swagger\Client\Model\PortalMember[] $reviewers
-     * @return $this
-     */
-    public function setReviewers($reviewers)
-    {
-        $this->container['reviewers'] = $reviewers;
 
         return $this;
     }

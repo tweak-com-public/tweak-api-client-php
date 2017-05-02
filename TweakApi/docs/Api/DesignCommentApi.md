@@ -275,7 +275,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **designCommentsIdCommenterGet**
-> \Swagger\Client\Model\PortalMember designCommentsIdCommenterGet($id, $refresh)
+> \Swagger\Client\Model\TeamMember designCommentsIdCommenterGet($id, $refresh)
 
 Fetches belongsTo relation commenter.
 
@@ -311,7 +311,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PortalMember**](../Model/PortalMember.md)
+[**\Swagger\Client\Model\TeamMember**](../Model/TeamMember.md)
 
 ### Authorization
 

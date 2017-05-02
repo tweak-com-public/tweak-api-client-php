@@ -1,6 +1,6 @@
 <?php
 /**
- * DesignAssigneeTest
+ * DesignExportTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Tweak\Api;
 
 /**
- * DesignAssigneeTest Class Doc Comment
+ * DesignExportTest Class Doc Comment
  *
  * @category    Class */
-// * @description DesignAssignee
+// * @description DesignExport
 /**
  * @package     Tweak\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class DesignAssigneeTest extends \PHPUnit_Framework_TestCase
+class DesignExportTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,9 +88,25 @@ class DesignAssigneeTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "DesignAssignee"
+     * Test "DesignExport"
      */
-    public function testDesignAssignee()
+    public function testDesignExport()
+    {
+
+    }
+
+    /**
+     * Test attribute "type"
+     */
+    public function testPropertyType()
+    {
+
+    }
+
+    /**
+     * Test attribute "created"
+     */
+    public function testPropertyCreated()
     {
 
     }
@@ -112,25 +128,25 @@ class DesignAssigneeTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "assigneeId"
+     * Test attribute "requesterId"
      */
-    public function testPropertyAssigneeId()
+    public function testPropertyRequesterId()
     {
 
     }
 
     /**
-     * Test attribute "design"
+     * Test attribute "designs"
      */
-    public function testPropertyDesign()
+    public function testPropertyDesigns()
     {
 
     }
 
     /**
-     * Test attribute "assignee"
+     * Test attribute "requester"
      */
-    public function testPropertyAssignee()
+    public function testPropertyRequester()
     {
 
     }

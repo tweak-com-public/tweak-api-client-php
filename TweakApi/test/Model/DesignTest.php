@@ -136,14 +136,6 @@ class DesignTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "expired"
-     */
-    public function testPropertyExpired()
-    {
-
-    }
-
-    /**
      * Test attribute "description"
      */
     public function testPropertyDescription()
@@ -155,6 +147,30 @@ class DesignTest extends \PHPUnit_Framework_TestCase
      * Test attribute "purpose"
      */
     public function testPropertyPurpose()
+    {
+
+    }
+
+    /**
+     * Test attribute "status"
+     */
+    public function testPropertyStatus()
+    {
+
+    }
+
+    /**
+     * Test attribute "edited"
+     */
+    public function testPropertyEdited()
+    {
+
+    }
+
+    /**
+     * Test attribute "expired"
+     */
+    public function testPropertyExpired()
     {
 
     }
@@ -192,6 +208,30 @@ class DesignTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "requesterId"
+     */
+    public function testPropertyRequesterId()
+    {
+
+    }
+
+    /**
+     * Test attribute "assigneeId"
+     */
+    public function testPropertyAssigneeId()
+    {
+
+    }
+
+    /**
+     * Test attribute "reviewerId"
+     */
+    public function testPropertyReviewerId()
+    {
+
+    }
+
+    /**
      * Test attribute "templateId"
      */
     public function testPropertyTemplateId()
@@ -203,14 +243,6 @@ class DesignTest extends \PHPUnit_Framework_TestCase
      * Test attribute "portalId"
      */
     public function testPropertyPortalId()
-    {
-
-    }
-
-    /**
-     * Test attribute "requesterId"
-     */
-    public function testPropertyRequesterId()
     {
 
     }
@@ -248,6 +280,22 @@ class DesignTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "comments"
+     */
+    public function testPropertyComments()
+    {
+
+    }
+
+    /**
+     * Test attribute "exports"
+     */
+    public function testPropertyExports()
+    {
+
+    }
+
+    /**
      * Test attribute "requester"
      */
     public function testPropertyRequester()
@@ -256,25 +304,25 @@ class DesignTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "assignee"
+     */
+    public function testPropertyAssignee()
+    {
+
+    }
+
+    /**
+     * Test attribute "reviewer"
+     */
+    public function testPropertyReviewer()
+    {
+
+    }
+
+    /**
      * Test attribute "commenters"
      */
     public function testPropertyCommenters()
-    {
-
-    }
-
-    /**
-     * Test attribute "assignees"
-     */
-    public function testPropertyAssignees()
-    {
-
-    }
-
-    /**
-     * Test attribute "reviewers"
-     */
-    public function testPropertyReviewers()
     {
 
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * DesignReview
+ * CustomerPermissionSet
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * DesignReview Class Doc Comment
+ * CustomerPermissionSet Class Doc Comment
  *
  * @category    Class */
 /** 
@@ -53,25 +53,23 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class DesignReview implements ArrayAccess
+class CustomerPermissionSet implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'DesignReview';
+    protected static $swaggerModelName = 'CustomerPermissionSet';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'status' => 'string',
+        'tweakEmail' => 'bool',
         'id' => 'double',
-        'designId' => 'double',
-        'reviewerId' => 'double',
-        'design' => '\Swagger\Client\Model\Design',
-        'reviewer' => '\Swagger\Client\Model\PortalMember'
+        'customerId' => 'double',
+        'customer' => '\Swagger\Client\Model\Customer'
     );
 
     public static function swaggerTypes()
@@ -84,12 +82,10 @@ class DesignReview implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'status' => 'status',
+        'tweakEmail' => 'tweakEmail',
         'id' => 'id',
-        'designId' => 'designId',
-        'reviewerId' => 'reviewerId',
-        'design' => 'design',
-        'reviewer' => 'reviewer'
+        'customerId' => 'customerId',
+        'customer' => 'customer'
     );
 
     public static function attributeMap()
@@ -102,12 +98,10 @@ class DesignReview implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'status' => 'setStatus',
+        'tweakEmail' => 'setTweakEmail',
         'id' => 'setId',
-        'designId' => 'setDesignId',
-        'reviewerId' => 'setReviewerId',
-        'design' => 'setDesign',
-        'reviewer' => 'setReviewer'
+        'customerId' => 'setCustomerId',
+        'customer' => 'setCustomer'
     );
 
     public static function setters()
@@ -120,12 +114,10 @@ class DesignReview implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'status' => 'getStatus',
+        'tweakEmail' => 'getTweakEmail',
         'id' => 'getId',
-        'designId' => 'getDesignId',
-        'reviewerId' => 'getReviewerId',
-        'design' => 'getDesign',
-        'reviewer' => 'getReviewer'
+        'customerId' => 'getCustomerId',
+        'customer' => 'getCustomer'
     );
 
     public static function getters()
@@ -133,22 +125,8 @@ class DesignReview implements ArrayAccess
         return self::$getters;
     }
 
-    const STATUS_PENDING = 'pending';
-    const STATUS_REVIEWED = 'reviewed';
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     * @return string[]
-     */
-    public function getStatusAllowableValues()
-    {
-        return [
-            self::STATUS_PENDING,
-            self::STATUS_REVIEWED,
-        ];
-    }
     
 
     /**
@@ -163,12 +141,10 @@ class DesignReview implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['status'] = isset($data['status']) ? $data['status'] : 'pending';
+        $this->container['tweakEmail'] = isset($data['tweakEmail']) ? $data['tweakEmail'] : true;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['designId'] = isset($data['designId']) ? $data['designId'] : null;
-        $this->container['reviewerId'] = isset($data['reviewerId']) ? $data['reviewerId'] : null;
-        $this->container['design'] = isset($data['design']) ? $data['design'] : null;
-        $this->container['reviewer'] = isset($data['reviewer']) ? $data['reviewer'] : null;
+        $this->container['customerId'] = isset($data['customerId']) ? $data['customerId'] : null;
+        $this->container['customer'] = isset($data['customer']) ? $data['customer'] : null;
     }
 
     /**
@@ -179,11 +155,6 @@ class DesignReview implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
-        $allowed_values = array("pending", "reviewed");
-        if (!in_array($this->container['status'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'status', must be one of #{allowed_values}.";
-        }
-
         return $invalid_properties;
     }
 
@@ -195,35 +166,27 @@ class DesignReview implements ArrayAccess
      */
     public function valid()
     {
-        $allowed_values = array("pending", "reviewed");
-        if (!in_array($this->container['status'], $allowed_values)) {
-            return false;
-        }
         return true;
     }
 
 
     /**
-     * Gets status
-     * @return string
+     * Gets tweakEmail
+     * @return bool
      */
-    public function getStatus()
+    public function getTweakEmail()
     {
-        return $this->container['status'];
+        return $this->container['tweakEmail'];
     }
 
     /**
-     * Sets status
-     * @param string $status
+     * Sets tweakEmail
+     * @param bool $tweakEmail
      * @return $this
      */
-    public function setStatus($status)
+    public function setTweakEmail($tweakEmail)
     {
-        $allowed_values = array('pending', 'reviewed');
-        if (!in_array($status, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'pending', 'reviewed'");
-        }
-        $this->container['status'] = $status;
+        $this->container['tweakEmail'] = $tweakEmail;
 
         return $this;
     }
@@ -250,85 +213,43 @@ class DesignReview implements ArrayAccess
     }
 
     /**
-     * Gets designId
+     * Gets customerId
      * @return double
      */
-    public function getDesignId()
+    public function getCustomerId()
     {
-        return $this->container['designId'];
+        return $this->container['customerId'];
     }
 
     /**
-     * Sets designId
-     * @param double $designId
+     * Sets customerId
+     * @param double $customerId
      * @return $this
      */
-    public function setDesignId($designId)
+    public function setCustomerId($customerId)
     {
-        $this->container['designId'] = $designId;
+        $this->container['customerId'] = $customerId;
 
         return $this;
     }
 
     /**
-     * Gets reviewerId
-     * @return double
+     * Gets customer
+     * @return \Swagger\Client\Model\Customer
      */
-    public function getReviewerId()
+    public function getCustomer()
     {
-        return $this->container['reviewerId'];
+        return $this->container['customer'];
     }
 
     /**
-     * Sets reviewerId
-     * @param double $reviewerId
+     * Sets customer
+     * @param \Swagger\Client\Model\Customer $customer
      * @return $this
      */
-    public function setReviewerId($reviewerId)
+    public function setCustomer($customer)
     {
-        $this->container['reviewerId'] = $reviewerId;
-
-        return $this;
-    }
-
-    /**
-     * Gets design
-     * @return \Swagger\Client\Model\Design
-     */
-    public function getDesign()
-    {
-        return $this->container['design'];
-    }
-
-    /**
-     * Sets design
-     * @param \Swagger\Client\Model\Design $design
-     * @return $this
-     */
-    public function setDesign($design)
-    {
-        $this->container['design'] = $design;
-
-        return $this;
-    }
-
-    /**
-     * Gets reviewer
-     * @return \Swagger\Client\Model\PortalMember
-     */
-    public function getReviewer()
-    {
-        return $this->container['reviewer'];
-    }
-
-    /**
-     * Sets reviewer
-     * @param \Swagger\Client\Model\PortalMember $reviewer
-     * @return $this
-     */
-    public function setReviewer($reviewer)
-    {
-        $this->container['reviewer'] = $reviewer;
+        $this->container['customer'] = $customer;
 
         return $this;
     }

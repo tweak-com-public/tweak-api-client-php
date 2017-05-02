@@ -81,7 +81,8 @@ class Customer implements ArrayAccess
         'designs' => '\Swagger\Client\Model\Design[]',
         'teams' => '\Swagger\Client\Model\Team[]',
         'invitationTickets' => '\Swagger\Client\Model\InvitationTicket[]',
-        'accessTokens' => '\Swagger\Client\Model\TeamMemberAccessToken[]'
+        'accessTokens' => '\Swagger\Client\Model\TeamMemberAccessToken[]',
+        'permission' => '\Swagger\Client\Model\CustomerPermissionSet'
     );
 
     public static function swaggerTypes()
@@ -109,7 +110,8 @@ class Customer implements ArrayAccess
         'designs' => 'designs',
         'teams' => 'teams',
         'invitationTickets' => 'invitationTickets',
-        'accessTokens' => 'accessTokens'
+        'accessTokens' => 'accessTokens',
+        'permission' => 'permission'
     );
 
     public static function attributeMap()
@@ -137,7 +139,8 @@ class Customer implements ArrayAccess
         'designs' => 'setDesigns',
         'teams' => 'setTeams',
         'invitationTickets' => 'setInvitationTickets',
-        'accessTokens' => 'setAccessTokens'
+        'accessTokens' => 'setAccessTokens',
+        'permission' => 'setPermission'
     );
 
     public static function setters()
@@ -165,7 +168,8 @@ class Customer implements ArrayAccess
         'designs' => 'getDesigns',
         'teams' => 'getTeams',
         'invitationTickets' => 'getInvitationTickets',
-        'accessTokens' => 'getAccessTokens'
+        'accessTokens' => 'getAccessTokens',
+        'permission' => 'getPermission'
     );
 
     public static function getters()
@@ -219,6 +223,7 @@ class Customer implements ArrayAccess
         $this->container['teams'] = isset($data['teams']) ? $data['teams'] : null;
         $this->container['invitationTickets'] = isset($data['invitationTickets']) ? $data['invitationTickets'] : null;
         $this->container['accessTokens'] = isset($data['accessTokens']) ? $data['accessTokens'] : null;
+        $this->container['permission'] = isset($data['permission']) ? $data['permission'] : null;
     }
 
     /**
@@ -613,6 +618,27 @@ class Customer implements ArrayAccess
     public function setAccessTokens($accessTokens)
     {
         $this->container['accessTokens'] = $accessTokens;
+
+        return $this;
+    }
+
+    /**
+     * Gets permission
+     * @return \Swagger\Client\Model\CustomerPermissionSet
+     */
+    public function getPermission()
+    {
+        return $this->container['permission'];
+    }
+
+    /**
+     * Sets permission
+     * @param \Swagger\Client\Model\CustomerPermissionSet $permission
+     * @return $this
+     */
+    public function setPermission($permission)
+    {
+        $this->container['permission'] = $permission;
 
         return $this;
     }

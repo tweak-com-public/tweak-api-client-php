@@ -145,6 +145,193 @@ class TeamMemberApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for teamMembersIdAssignedDesignsCountGet
+     *
+     * Counts assignedDesigns of TeamMember..
+     *
+     */
+    public function testTeamMembersIdAssignedDesignsCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdAssignedDesignsDelete
+     *
+     * Deletes all assignedDesigns of this model..
+     *
+     */
+    public function testTeamMembersIdAssignedDesignsDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdAssignedDesignsFkDelete
+     *
+     * Delete a related item by id for assignedDesigns..
+     *
+     */
+    public function testTeamMembersIdAssignedDesignsFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdAssignedDesignsFkGet
+     *
+     * Find a related item by id for assignedDesigns..
+     *
+     */
+    public function testTeamMembersIdAssignedDesignsFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdAssignedDesignsFkPut
+     *
+     * Update a related item by id for assignedDesigns..
+     *
+     */
+    public function testTeamMembersIdAssignedDesignsFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdAssignedDesignsGet
+     *
+     * Queries assignedDesigns of TeamMember..
+     *
+     */
+    public function testTeamMembersIdAssignedDesignsGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdAssignedDesignsPost
+     *
+     * Creates a new instance in assignedDesigns of this model..
+     *
+     */
+    public function testTeamMembersIdAssignedDesignsPost()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdCommentedDesignsCountGet
+     *
+     * Counts commentedDesigns of TeamMember..
+     *
+     */
+    public function testTeamMembersIdCommentedDesignsCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdCommentedDesignsDelete
+     *
+     * Deletes all commentedDesigns of this model..
+     *
+     */
+    public function testTeamMembersIdCommentedDesignsDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdCommentedDesignsFkDelete
+     *
+     * Delete a related item by id for commentedDesigns..
+     *
+     */
+    public function testTeamMembersIdCommentedDesignsFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdCommentedDesignsFkGet
+     *
+     * Find a related item by id for commentedDesigns..
+     *
+     */
+    public function testTeamMembersIdCommentedDesignsFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdCommentedDesignsFkPut
+     *
+     * Update a related item by id for commentedDesigns..
+     *
+     */
+    public function testTeamMembersIdCommentedDesignsFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdCommentedDesignsGet
+     *
+     * Queries commentedDesigns of TeamMember..
+     *
+     */
+    public function testTeamMembersIdCommentedDesignsGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdCommentedDesignsPost
+     *
+     * Creates a new instance in commentedDesigns of this model..
+     *
+     */
+    public function testTeamMembersIdCommentedDesignsPost()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdCommentedDesignsRelFkDelete
+     *
+     * Remove the commentedDesigns relation to an item by id..
+     *
+     */
+    public function testTeamMembersIdCommentedDesignsRelFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdCommentedDesignsRelFkHead
+     *
+     * Check the existence of commentedDesigns relation to an item by id..
+     *
+     */
+    public function testTeamMembersIdCommentedDesignsRelFkHead()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdCommentedDesignsRelFkPut
+     *
+     * Add a related item by id for commentedDesigns..
+     *
+     */
+    public function testTeamMembersIdCommentedDesignsRelFkPut()
+    {
+
+    }
+
+    /**
      * Test case for teamMembersIdCustomerGet
      *
      * Fetches belongsTo relation customer..
@@ -162,6 +349,83 @@ class TeamMemberApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testTeamMembersIdDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdDesignCommentsCountGet
+     *
+     * Counts designComments of TeamMember..
+     *
+     */
+    public function testTeamMembersIdDesignCommentsCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdDesignCommentsDelete
+     *
+     * Deletes all designComments of this model..
+     *
+     */
+    public function testTeamMembersIdDesignCommentsDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdDesignCommentsFkDelete
+     *
+     * Delete a related item by id for designComments..
+     *
+     */
+    public function testTeamMembersIdDesignCommentsFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdDesignCommentsFkGet
+     *
+     * Find a related item by id for designComments..
+     *
+     */
+    public function testTeamMembersIdDesignCommentsFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdDesignCommentsFkPut
+     *
+     * Update a related item by id for designComments..
+     *
+     */
+    public function testTeamMembersIdDesignCommentsFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdDesignCommentsGet
+     *
+     * Queries designComments of TeamMember..
+     *
+     */
+    public function testTeamMembersIdDesignCommentsGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdDesignCommentsPost
+     *
+     * Creates a new instance in designComments of this model..
+     *
+     */
+    public function testTeamMembersIdDesignCommentsPost()
     {
 
     }
@@ -437,6 +701,237 @@ class TeamMemberApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testTeamMembersIdReplacePost()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdRequestedDesignExportsCountGet
+     *
+     * Counts requestedDesignExports of TeamMember..
+     *
+     */
+    public function testTeamMembersIdRequestedDesignExportsCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdRequestedDesignExportsDelete
+     *
+     * Deletes all requestedDesignExports of this model..
+     *
+     */
+    public function testTeamMembersIdRequestedDesignExportsDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdRequestedDesignExportsFkDelete
+     *
+     * Delete a related item by id for requestedDesignExports..
+     *
+     */
+    public function testTeamMembersIdRequestedDesignExportsFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdRequestedDesignExportsFkGet
+     *
+     * Find a related item by id for requestedDesignExports..
+     *
+     */
+    public function testTeamMembersIdRequestedDesignExportsFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdRequestedDesignExportsFkPut
+     *
+     * Update a related item by id for requestedDesignExports..
+     *
+     */
+    public function testTeamMembersIdRequestedDesignExportsFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdRequestedDesignExportsGet
+     *
+     * Queries requestedDesignExports of TeamMember..
+     *
+     */
+    public function testTeamMembersIdRequestedDesignExportsGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdRequestedDesignExportsPost
+     *
+     * Creates a new instance in requestedDesignExports of this model..
+     *
+     */
+    public function testTeamMembersIdRequestedDesignExportsPost()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdRequestedDesignsCountGet
+     *
+     * Counts requestedDesigns of TeamMember..
+     *
+     */
+    public function testTeamMembersIdRequestedDesignsCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdRequestedDesignsDelete
+     *
+     * Deletes all requestedDesigns of this model..
+     *
+     */
+    public function testTeamMembersIdRequestedDesignsDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdRequestedDesignsFkDelete
+     *
+     * Delete a related item by id for requestedDesigns..
+     *
+     */
+    public function testTeamMembersIdRequestedDesignsFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdRequestedDesignsFkGet
+     *
+     * Find a related item by id for requestedDesigns..
+     *
+     */
+    public function testTeamMembersIdRequestedDesignsFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdRequestedDesignsFkPut
+     *
+     * Update a related item by id for requestedDesigns..
+     *
+     */
+    public function testTeamMembersIdRequestedDesignsFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdRequestedDesignsGet
+     *
+     * Queries requestedDesigns of TeamMember..
+     *
+     */
+    public function testTeamMembersIdRequestedDesignsGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdRequestedDesignsPost
+     *
+     * Creates a new instance in requestedDesigns of this model..
+     *
+     */
+    public function testTeamMembersIdRequestedDesignsPost()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdReviewedDesignsCountGet
+     *
+     * Counts reviewedDesigns of TeamMember..
+     *
+     */
+    public function testTeamMembersIdReviewedDesignsCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdReviewedDesignsDelete
+     *
+     * Deletes all reviewedDesigns of this model..
+     *
+     */
+    public function testTeamMembersIdReviewedDesignsDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdReviewedDesignsFkDelete
+     *
+     * Delete a related item by id for reviewedDesigns..
+     *
+     */
+    public function testTeamMembersIdReviewedDesignsFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdReviewedDesignsFkGet
+     *
+     * Find a related item by id for reviewedDesigns..
+     *
+     */
+    public function testTeamMembersIdReviewedDesignsFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdReviewedDesignsFkPut
+     *
+     * Update a related item by id for reviewedDesigns..
+     *
+     */
+    public function testTeamMembersIdReviewedDesignsFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdReviewedDesignsGet
+     *
+     * Queries reviewedDesigns of TeamMember..
+     *
+     */
+    public function testTeamMembersIdReviewedDesignsGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdReviewedDesignsPost
+     *
+     * Creates a new instance in reviewedDesigns of this model..
+     *
+     */
+    public function testTeamMembersIdReviewedDesignsPost()
     {
 
     }

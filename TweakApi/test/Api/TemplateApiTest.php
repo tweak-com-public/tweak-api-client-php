@@ -211,6 +211,17 @@ class TemplateApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for templatesIdDesignsGeneratePost
+     *
+     * Generate design from template.
+     *
+     */
+    public function testTemplatesIdDesignsGeneratePost()
+    {
+
+    }
+
+    /**
      * Test case for templatesIdDesignsGet
      *
      * Queries designs of Template..

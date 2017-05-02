@@ -464,6 +464,50 @@ class CustomerApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for customersIdPermissionDelete
+     *
+     * Deletes permission of this model..
+     *
+     */
+    public function testCustomersIdPermissionDelete()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdPermissionGet
+     *
+     * Fetches hasOne relation permission..
+     *
+     */
+    public function testCustomersIdPermissionGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdPermissionPost
+     *
+     * Creates a new instance in permission of this model..
+     *
+     */
+    public function testCustomersIdPermissionPost()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdPermissionPut
+     *
+     * Update permission of this model..
+     *
+     */
+    public function testCustomersIdPermissionPut()
+    {
+
+    }
+
+    /**
      * Test case for customersIdPut
      *
      * Replace attributes for a model instance and persist it into the data source..

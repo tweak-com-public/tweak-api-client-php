@@ -5,6 +5,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **string** |  | 
 **thumbnail** | **string** |  | [optional] 
+**object** | **object** |  | 
+**description** | **string** |  | [optional] [default to '']
+**edited** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **modified** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **id** | **double** |  | [optional] 

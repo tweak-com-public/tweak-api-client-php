@@ -38,6 +38,10 @@ Method | HTTP request | Description
 [**customersIdInvitationTicketsGet**](CustomerApi.md#customersIdInvitationTicketsGet) | **GET** /Customers/{id}/invitationTickets | Queries invitationTickets of Customer.
 [**customersIdInvitationTicketsPost**](CustomerApi.md#customersIdInvitationTicketsPost) | **POST** /Customers/{id}/invitationTickets | Creates a new instance in invitationTickets of this model.
 [**customersIdPatch**](CustomerApi.md#customersIdPatch) | **PATCH** /Customers/{id} | Patch attributes for a model instance and persist it into the data source.
+[**customersIdPermissionDelete**](CustomerApi.md#customersIdPermissionDelete) | **DELETE** /Customers/{id}/permission | Deletes permission of this model.
+[**customersIdPermissionGet**](CustomerApi.md#customersIdPermissionGet) | **GET** /Customers/{id}/permission | Fetches hasOne relation permission.
+[**customersIdPermissionPost**](CustomerApi.md#customersIdPermissionPost) | **POST** /Customers/{id}/permission | Creates a new instance in permission of this model.
+[**customersIdPermissionPut**](CustomerApi.md#customersIdPermissionPut) | **PUT** /Customers/{id}/permission | Update permission of this model.
 [**customersIdPut**](CustomerApi.md#customersIdPut) | **PUT** /Customers/{id} | Replace attributes for a model instance and persist it into the data source.
 [**customersIdReplacePost**](CustomerApi.md#customersIdReplacePost) | **POST** /Customers/{id}/replace | Replace attributes for a model instance and persist it into the data source.
 [**customersIdTeamsCountGet**](CustomerApi.md#customersIdTeamsCountGet) | **GET** /Customers/{id}/teams/count | Counts teams of Customer.
@@ -1730,6 +1734,203 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\Customer**](../Model/Customer.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **customersIdPermissionDelete**
+> customersIdPermissionDelete($id)
+
+Deletes permission of this model.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+$id = "id_example"; // string | Customer id
+
+try {
+    $api_instance->customersIdPermissionDelete($id);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersIdPermissionDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Customer id |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **customersIdPermissionGet**
+> \Swagger\Client\Model\CustomerPermissionSet customersIdPermissionGet($id, $refresh)
+
+Fetches hasOne relation permission.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+$id = "id_example"; // string | Customer id
+$refresh = true; // bool | 
+
+try {
+    $result = $api_instance->customersIdPermissionGet($id, $refresh);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersIdPermissionGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Customer id |
+ **refresh** | **bool**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\CustomerPermissionSet**](../Model/CustomerPermissionSet.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **customersIdPermissionPost**
+> \Swagger\Client\Model\CustomerPermissionSet customersIdPermissionPost($id, $data)
+
+Creates a new instance in permission of this model.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+$id = "id_example"; // string | Customer id
+$data = new \Swagger\Client\Model\CustomerPermissionSet(); // \Swagger\Client\Model\CustomerPermissionSet | 
+
+try {
+    $result = $api_instance->customersIdPermissionPost($id, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersIdPermissionPost: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Customer id |
+ **data** | [**\Swagger\Client\Model\CustomerPermissionSet**](../Model/\Swagger\Client\Model\CustomerPermissionSet.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\CustomerPermissionSet**](../Model/CustomerPermissionSet.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **customersIdPermissionPut**
+> \Swagger\Client\Model\CustomerPermissionSet customersIdPermissionPut($id, $data)
+
+Update permission of this model.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+$id = "id_example"; // string | Customer id
+$data = new \Swagger\Client\Model\CustomerPermissionSet(); // \Swagger\Client\Model\CustomerPermissionSet | 
+
+try {
+    $result = $api_instance->customersIdPermissionPut($id, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersIdPermissionPut: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Customer id |
+ **data** | [**\Swagger\Client\Model\CustomerPermissionSet**](../Model/\Swagger\Client\Model\CustomerPermissionSet.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\CustomerPermissionSet**](../Model/CustomerPermissionSet.md)
 
 ### Authorization
 

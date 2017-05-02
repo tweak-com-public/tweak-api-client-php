@@ -1,6 +1,6 @@
 <?php
 /**
- * DesignReviewTest
+ * CustomerPermissionSetTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Tweak\Api;
 
 /**
- * DesignReviewTest Class Doc Comment
+ * CustomerPermissionSetTest Class Doc Comment
  *
  * @category    Class */
-// * @description DesignReview
+// * @description CustomerPermissionSet
 /**
  * @package     Tweak\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class DesignReviewTest extends \PHPUnit_Framework_TestCase
+class CustomerPermissionSetTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,17 +88,17 @@ class DesignReviewTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "DesignReview"
+     * Test "CustomerPermissionSet"
      */
-    public function testDesignReview()
+    public function testCustomerPermissionSet()
     {
 
     }
 
     /**
-     * Test attribute "status"
+     * Test attribute "tweakEmail"
      */
-    public function testPropertyStatus()
+    public function testPropertyTweakEmail()
     {
 
     }
@@ -112,33 +112,17 @@ class DesignReviewTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "designId"
+     * Test attribute "customerId"
      */
-    public function testPropertyDesignId()
+    public function testPropertyCustomerId()
     {
 
     }
 
     /**
-     * Test attribute "reviewerId"
+     * Test attribute "customer"
      */
-    public function testPropertyReviewerId()
-    {
-
-    }
-
-    /**
-     * Test attribute "design"
-     */
-    public function testPropertyDesign()
-    {
-
-    }
-
-    /**
-     * Test attribute "reviewer"
-     */
-    public function testPropertyReviewer()
+    public function testPropertyCustomer()
     {
 
     }

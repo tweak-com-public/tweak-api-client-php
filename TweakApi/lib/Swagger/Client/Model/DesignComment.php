@@ -78,7 +78,7 @@ class DesignComment implements ArrayAccess
         'commenterId' => 'double',
         'design' => '\Swagger\Client\Model\Design',
         'replies' => '\Swagger\Client\Model\DesignComment[]',
-        'commenter' => '\Swagger\Client\Model\PortalMember',
+        'commenter' => '\Swagger\Client\Model\TeamMember',
         'replyOf' => '\Swagger\Client\Model\DesignComment'
     );
 
@@ -518,7 +518,7 @@ class DesignComment implements ArrayAccess
 
     /**
      * Gets commenter
-     * @return \Swagger\Client\Model\PortalMember
+     * @return \Swagger\Client\Model\TeamMember
      */
     public function getCommenter()
     {
@@ -527,7 +527,7 @@ class DesignComment implements ArrayAccess
 
     /**
      * Sets commenter
-     * @param \Swagger\Client\Model\PortalMember $commenter
+     * @param \Swagger\Client\Model\TeamMember $commenter
      * @return $this
      */
     public function setCommenter($commenter)

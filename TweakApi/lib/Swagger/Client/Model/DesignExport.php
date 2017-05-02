@@ -1,6 +1,6 @@
 <?php
 /**
- * DesignAssignee
+ * DesignExport
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * DesignAssignee Class Doc Comment
+ * DesignExport Class Doc Comment
  *
  * @category    Class */
 /** 
@@ -53,24 +53,26 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class DesignAssignee implements ArrayAccess
+class DesignExport implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'DesignAssignee';
+    protected static $swaggerModelName = 'DesignExport';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = array(
+        'type' => 'string',
+        'created' => '\DateTime',
         'id' => 'double',
         'designId' => 'double',
-        'assigneeId' => 'double',
-        'design' => '\Swagger\Client\Model\Design',
-        'assignee' => '\Swagger\Client\Model\PortalMember'
+        'requesterId' => 'double',
+        'designs' => '\Swagger\Client\Model\Design',
+        'requester' => '\Swagger\Client\Model\TeamMember'
     );
 
     public static function swaggerTypes()
@@ -83,11 +85,13 @@ class DesignAssignee implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
+        'type' => 'type',
+        'created' => 'created',
         'id' => 'id',
         'designId' => 'designId',
-        'assigneeId' => 'assigneeId',
-        'design' => 'design',
-        'assignee' => 'assignee'
+        'requesterId' => 'requesterId',
+        'designs' => 'designs',
+        'requester' => 'requester'
     );
 
     public static function attributeMap()
@@ -100,11 +104,13 @@ class DesignAssignee implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
+        'type' => 'setType',
+        'created' => 'setCreated',
         'id' => 'setId',
         'designId' => 'setDesignId',
-        'assigneeId' => 'setAssigneeId',
-        'design' => 'setDesign',
-        'assignee' => 'setAssignee'
+        'requesterId' => 'setRequesterId',
+        'designs' => 'setDesigns',
+        'requester' => 'setRequester'
     );
 
     public static function setters()
@@ -117,11 +123,13 @@ class DesignAssignee implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
+        'type' => 'getType',
+        'created' => 'getCreated',
         'id' => 'getId',
         'designId' => 'getDesignId',
-        'assigneeId' => 'getAssigneeId',
-        'design' => 'getDesign',
-        'assignee' => 'getAssignee'
+        'requesterId' => 'getRequesterId',
+        'designs' => 'getDesigns',
+        'requester' => 'getRequester'
     );
 
     public static function getters()
@@ -129,8 +137,22 @@ class DesignAssignee implements ArrayAccess
         return self::$getters;
     }
 
+    const TYPE_PROOF = 'proof';
+    const TYPE_PDF = 'pdf';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_PROOF,
+            self::TYPE_PDF,
+        ];
+    }
     
 
     /**
@@ -145,11 +167,13 @@ class DesignAssignee implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['created'] = isset($data['created']) ? $data['created'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['designId'] = isset($data['designId']) ? $data['designId'] : null;
-        $this->container['assigneeId'] = isset($data['assigneeId']) ? $data['assigneeId'] : null;
-        $this->container['design'] = isset($data['design']) ? $data['design'] : null;
-        $this->container['assignee'] = isset($data['assignee']) ? $data['assignee'] : null;
+        $this->container['requesterId'] = isset($data['requesterId']) ? $data['requesterId'] : null;
+        $this->container['designs'] = isset($data['designs']) ? $data['designs'] : null;
+        $this->container['requester'] = isset($data['requester']) ? $data['requester'] : null;
     }
 
     /**
@@ -160,6 +184,14 @@ class DesignAssignee implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
+        if ($this->container['type'] === null) {
+            $invalid_properties[] = "'type' can't be null";
+        }
+        $allowed_values = array("proof", "pdf");
+        if (!in_array($this->container['type'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'type', must be one of #{allowed_values}.";
+        }
+
         return $invalid_properties;
     }
 
@@ -171,9 +203,62 @@ class DesignAssignee implements ArrayAccess
      */
     public function valid()
     {
+        if ($this->container['type'] === null) {
+            return false;
+        }
+        $allowed_values = array("proof", "pdf");
+        if (!in_array($this->container['type'], $allowed_values)) {
+            return false;
+        }
         return true;
     }
 
+
+    /**
+     * Gets type
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     * @param string $type
+     * @return $this
+     */
+    public function setType($type)
+    {
+        $allowed_values = array('proof', 'pdf');
+        if (!in_array($type, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'proof', 'pdf'");
+        }
+        $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
+     * Gets created
+     * @return \DateTime
+     */
+    public function getCreated()
+    {
+        return $this->container['created'];
+    }
+
+    /**
+     * Sets created
+     * @param \DateTime $created
+     * @return $this
+     */
+    public function setCreated($created)
+    {
+        $this->container['created'] = $created;
+
+        return $this;
+    }
 
     /**
      * Gets id
@@ -218,64 +303,64 @@ class DesignAssignee implements ArrayAccess
     }
 
     /**
-     * Gets assigneeId
+     * Gets requesterId
      * @return double
      */
-    public function getAssigneeId()
+    public function getRequesterId()
     {
-        return $this->container['assigneeId'];
+        return $this->container['requesterId'];
     }
 
     /**
-     * Sets assigneeId
-     * @param double $assigneeId
+     * Sets requesterId
+     * @param double $requesterId
      * @return $this
      */
-    public function setAssigneeId($assigneeId)
+    public function setRequesterId($requesterId)
     {
-        $this->container['assigneeId'] = $assigneeId;
+        $this->container['requesterId'] = $requesterId;
 
         return $this;
     }
 
     /**
-     * Gets design
+     * Gets designs
      * @return \Swagger\Client\Model\Design
      */
-    public function getDesign()
+    public function getDesigns()
     {
-        return $this->container['design'];
+        return $this->container['designs'];
     }
 
     /**
-     * Sets design
-     * @param \Swagger\Client\Model\Design $design
+     * Sets designs
+     * @param \Swagger\Client\Model\Design $designs
      * @return $this
      */
-    public function setDesign($design)
+    public function setDesigns($designs)
     {
-        $this->container['design'] = $design;
+        $this->container['designs'] = $designs;
 
         return $this;
     }
 
     /**
-     * Gets assignee
-     * @return \Swagger\Client\Model\PortalMember
+     * Gets requester
+     * @return \Swagger\Client\Model\TeamMember
      */
-    public function getAssignee()
+    public function getRequester()
     {
-        return $this->container['assignee'];
+        return $this->container['requester'];
     }
 
     /**
-     * Sets assignee
-     * @param \Swagger\Client\Model\PortalMember $assignee
+     * Sets requester
+     * @param \Swagger\Client\Model\TeamMember $requester
      * @return $this
      */
-    public function setAssignee($assignee)
+    public function setRequester($requester)
     {
-        $this->container['assignee'] = $assignee;
+        $this->container['requester'] = $requester;
 
         return $this;
     }

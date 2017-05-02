@@ -191,4 +191,52 @@ class TeamMemberTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "requestedDesigns"
+     */
+    public function testPropertyRequestedDesigns()
+    {
+
+    }
+
+    /**
+     * Test attribute "requestedDesignExports"
+     */
+    public function testPropertyRequestedDesignExports()
+    {
+
+    }
+
+    /**
+     * Test attribute "assignedDesigns"
+     */
+    public function testPropertyAssignedDesigns()
+    {
+
+    }
+
+    /**
+     * Test attribute "reviewedDesigns"
+     */
+    public function testPropertyReviewedDesigns()
+    {
+
+    }
+
+    /**
+     * Test attribute "commentedDesigns"
+     */
+    public function testPropertyCommentedDesigns()
+    {
+
+    }
+
+    /**
+     * Test attribute "designComments"
+     */
+    public function testPropertyDesignComments()
+    {
+
+    }
+
 }
