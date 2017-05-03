@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **double** |  | [optional] 
+**id** | **string** |  | [optional] 
 **portalId** | **double** |  | [optional] 
 **templateId** | **double** |  | [optional] 
 **portal** | [**\Swagger\Client\Model\Portal**](Portal.md) |  | [optional] 

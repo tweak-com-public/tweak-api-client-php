@@ -71,7 +71,7 @@ class Image implements ArrayAccess
         'link' => 'string',
         'created' => '\DateTime',
         'modified' => '\DateTime',
-        'id' => 'double'
+        'id' => 'string'
     );
 
     public static function swaggerTypes()
@@ -293,7 +293,7 @@ class Image implements ArrayAccess
 
     /**
      * Gets id
-     * @return double
+     * @return string
      */
     public function getId()
     {
@@ -302,7 +302,7 @@ class Image implements ArrayAccess
 
     /**
      * Sets id
-     * @param double $id
+     * @param string $id
      * @return $this
      */
     public function setId($id)

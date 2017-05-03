@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **edited** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **modified** | [**\DateTime**](\DateTime.md) |  | [optional] 
-**id** | **double** |  | [optional] 
+**id** | **string** |  | [optional] 
 **teamId** | **string** |  | [optional] 
 **memberId** | **double** |  | [optional] 
 **portals** | [**\Swagger\Client\Model\Portal[]**](Portal.md) |  | [optional] 

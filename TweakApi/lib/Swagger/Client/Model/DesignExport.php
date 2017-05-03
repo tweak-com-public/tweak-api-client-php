@@ -68,7 +68,7 @@ class DesignExport implements ArrayAccess
     protected static $swaggerTypes = array(
         'type' => 'string',
         'created' => '\DateTime',
-        'id' => 'double',
+        'id' => 'string',
         'designId' => 'double',
         'requesterId' => 'double',
         'designs' => '\Swagger\Client\Model\Design',
@@ -262,7 +262,7 @@ class DesignExport implements ArrayAccess
 
     /**
      * Gets id
-     * @return double
+     * @return string
      */
     public function getId()
     {
@@ -271,7 +271,7 @@ class DesignExport implements ArrayAccess
 
     /**
      * Sets id
-     * @param double $id
+     * @param string $id
      * @return $this
      */
     public function setId($id)

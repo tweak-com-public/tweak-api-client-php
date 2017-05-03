@@ -73,7 +73,7 @@ class Template implements ArrayAccess
         'edited' => '\DateTime',
         'created' => '\DateTime',
         'modified' => '\DateTime',
-        'id' => 'double',
+        'id' => 'string',
         'teamId' => 'string',
         'memberId' => 'double',
         'portals' => '\Swagger\Client\Model\Portal[]',
@@ -391,7 +391,7 @@ class Template implements ArrayAccess
 
     /**
      * Gets id
-     * @return double
+     * @return string
      */
     public function getId()
     {
@@ -400,7 +400,7 @@ class Template implements ArrayAccess
 
     /**
      * Sets id
-     * @param double $id
+     * @param string $id
      * @return $this
      */
     public function setId($id)

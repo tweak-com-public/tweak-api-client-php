@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **status** | **string** |  | [optional] [default to 'pending']
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **modified** | [**\DateTime**](\DateTime.md) |  | [optional] 
-**id** | **double** |  | [optional] 
+**id** | **string** |  | [optional] 
 **inviteeId** | **double** |  | [optional] 
 **inviterId** | **double** |  | [optional] 
 **invitee** | [**\Swagger\Client\Model\Customer**](Customer.md) |  | [optional] 

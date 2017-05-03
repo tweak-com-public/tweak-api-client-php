@@ -69,7 +69,7 @@ class TeamMember implements ArrayAccess
         'roles' => 'string[]',
         'created' => '\DateTime',
         'modified' => '\DateTime',
-        'id' => 'double',
+        'id' => 'string',
         'customerId' => 'double',
         'teamId' => 'string',
         'customer' => '\Swagger\Client\Model\Customer',
@@ -311,7 +311,7 @@ class TeamMember implements ArrayAccess
 
     /**
      * Gets id
-     * @return double
+     * @return string
      */
     public function getId()
     {
@@ -320,7 +320,7 @@ class TeamMember implements ArrayAccess
 
     /**
      * Sets id
-     * @param double $id
+     * @param string $id
      * @return $this
      */
     public function setId($id)

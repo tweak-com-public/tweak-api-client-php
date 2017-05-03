@@ -72,7 +72,7 @@ class DesignComment implements ArrayAccess
         'status' => 'string',
         'created' => '\DateTime',
         'modified' => '\DateTime',
-        'id' => 'double',
+        'id' => 'string',
         'designId' => 'double',
         'commentId' => 'double',
         'commenterId' => 'double',
@@ -392,7 +392,7 @@ class DesignComment implements ArrayAccess
 
     /**
      * Gets id
-     * @return double
+     * @return string
      */
     public function getId()
     {
@@ -401,7 +401,7 @@ class DesignComment implements ArrayAccess
 
     /**
      * Sets id
-     * @param double $id
+     * @param string $id
      * @return $this
      */
     public function setId($id)

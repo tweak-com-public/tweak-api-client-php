@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **language** | **string** |  | [optional] [default to 'en']
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **modified** | [**\DateTime**](\DateTime.md) |  | [optional] 
-**id** | **double** |  | [optional] 
+**id** | **string** |  | [optional] 
 **teamId** | **string** |  | [optional] 
 **templates** | [**\Swagger\Client\Model\Template[]**](Template.md) |  | [optional] 
 **members** | [**\Swagger\Client\Model\TeamMember[]**](TeamMember.md) |  | [optional] 

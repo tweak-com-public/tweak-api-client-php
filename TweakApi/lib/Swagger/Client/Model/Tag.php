@@ -69,7 +69,7 @@ class Tag implements ArrayAccess
         'name' => 'string',
         'created' => '\DateTime',
         'modified' => '\DateTime',
-        'id' => 'double',
+        'id' => 'string',
         'templates' => '\Swagger\Client\Model\Template[]',
         'designs' => '\Swagger\Client\Model\Design[]'
     );
@@ -251,7 +251,7 @@ class Tag implements ArrayAccess
 
     /**
      * Gets id
-     * @return double
+     * @return string
      */
     public function getId()
     {
@@ -260,7 +260,7 @@ class Tag implements ArrayAccess
 
     /**
      * Sets id
-     * @param double $id
+     * @param string $id
      * @return $this
      */
     public function setId($id)

@@ -75,7 +75,7 @@ class InvitationTicket implements ArrayAccess
         'status' => 'string',
         'created' => '\DateTime',
         'modified' => '\DateTime',
-        'id' => 'double',
+        'id' => 'string',
         'inviteeId' => 'double',
         'inviterId' => 'double',
         'invitee' => '\Swagger\Client\Model\Customer',
@@ -481,7 +481,7 @@ class InvitationTicket implements ArrayAccess
 
     /**
      * Gets id
-     * @return double
+     * @return string
      */
     public function getId()
     {
@@ -490,7 +490,7 @@ class InvitationTicket implements ArrayAccess
 
     /**
      * Sets id
-     * @param double $id
+     * @param string $id
      * @return $this
      */
     public function setId($id)

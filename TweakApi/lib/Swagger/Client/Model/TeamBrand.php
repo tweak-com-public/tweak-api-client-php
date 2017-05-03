@@ -67,7 +67,7 @@ class TeamBrand implements ArrayAccess
       */
     protected static $swaggerTypes = array(
         'name' => 'string',
-        'id' => 'double',
+        'id' => 'string',
         'teamId' => 'string',
         'team' => '\Swagger\Client\Model\Team'
     );
@@ -193,7 +193,7 @@ class TeamBrand implements ArrayAccess
 
     /**
      * Gets id
-     * @return double
+     * @return string
      */
     public function getId()
     {
@@ -202,7 +202,7 @@ class TeamBrand implements ArrayAccess
 
     /**
      * Sets id
-     * @param double $id
+     * @param string $id
      * @return $this
      */
     public function setId($id)

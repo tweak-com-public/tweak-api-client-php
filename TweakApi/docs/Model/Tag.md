@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **name** | **string** |  | 
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **modified** | [**\DateTime**](\DateTime.md) |  | [optional] 
-**id** | **double** |  | [optional] 
+**id** | **string** |  | [optional] 
 **templates** | [**\Swagger\Client\Model\Template[]**](Template.md) |  | [optional] 
 **designs** | [**\Swagger\Client\Model\Design[]**](Design.md) |  | [optional] 
 

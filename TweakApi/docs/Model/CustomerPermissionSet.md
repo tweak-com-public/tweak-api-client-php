@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **tweakEmail** | **bool** |  | [optional] [default to true]
-**id** | **double** |  | [optional] 
+**id** | **string** |  | [optional] 
 **customerId** | **double** |  | [optional] 
 **customer** | [**\Swagger\Client\Model\Customer**](Customer.md) |  | [optional] 
 

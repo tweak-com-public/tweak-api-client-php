@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **username** | **string** |  | [optional] 
 **email** | **string** |  | 
 **emailVerified** | **bool** |  | [optional] 
-**id** | **double** |  | [optional] 
+**id** | **string** |  | [optional] 
 **designs** | [**\Swagger\Client\Model\Design[]**](Design.md) |  | [optional] 
 **teams** | [**\Swagger\Client\Model\Team[]**](Team.md) |  | [optional] 
 **invitationTickets** | [**\Swagger\Client\Model\InvitationTicket[]**](InvitationTicket.md) |  | [optional] 

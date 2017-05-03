@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **printPdf** | **bool** |  | [optional] [default to false]
 **proofPdf** | **bool** |  | [optional] [default to false]
 **socialSharing** | **bool** |  | [optional] [default to false]
-**id** | **double** |  | [optional] 
+**id** | **string** |  | [optional] 
 **templateId** | **double** |  | [optional] 
 **template** | [**\Swagger\Client\Model\Template**](Template.md) |  | [optional] 
 

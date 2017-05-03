@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **string** |  | 
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 
-**id** | **double** |  | [optional] 
+**id** | **string** |  | [optional] 
 **designId** | **double** |  | [optional] 
 **requesterId** | **double** |  | [optional] 
 **designs** | [**\Swagger\Client\Model\Design**](Design.md) |  | [optional] 

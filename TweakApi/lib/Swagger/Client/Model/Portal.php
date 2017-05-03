@@ -72,7 +72,7 @@ class Portal implements ArrayAccess
         'language' => 'string',
         'created' => '\DateTime',
         'modified' => '\DateTime',
-        'id' => 'double',
+        'id' => 'string',
         'teamId' => 'string',
         'templates' => '\Swagger\Client\Model\Template[]',
         'members' => '\Swagger\Client\Model\TeamMember[]',
@@ -703,7 +703,7 @@ class Portal implements ArrayAccess
 
     /**
      * Gets id
-     * @return double
+     * @return string
      */
     public function getId()
     {
@@ -712,7 +712,7 @@ class Portal implements ArrayAccess
 
     /**
      * Sets id
-     * @param double $id
+     * @param string $id
      * @return $this
      */
     public function setId($id)

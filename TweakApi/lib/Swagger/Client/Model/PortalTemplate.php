@@ -66,7 +66,7 @@ class PortalTemplate implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'id' => 'double',
+        'id' => 'string',
         'portalId' => 'double',
         'templateId' => 'double',
         'portal' => '\Swagger\Client\Model\Portal',
@@ -177,7 +177,7 @@ class PortalTemplate implements ArrayAccess
 
     /**
      * Gets id
-     * @return double
+     * @return string
      */
     public function getId()
     {
@@ -186,7 +186,7 @@ class PortalTemplate implements ArrayAccess
 
     /**
      * Sets id
-     * @param double $id
+     * @param string $id
      * @return $this
      */
     public function setId($id)

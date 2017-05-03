@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **double** |  | [optional] 
+**id** | **string** |  | [optional] 
 **tagId** | **double** |  | [optional] 
 **templateId** | **double** |  | [optional] 
 **tag** | [**\Swagger\Client\Model\Tag**](Tag.md) |  | [optional] 

@@ -72,7 +72,7 @@ class TemplatePermissionSet implements ArrayAccess
         'printPdf' => 'bool',
         'proofPdf' => 'bool',
         'socialSharing' => 'bool',
-        'id' => 'double',
+        'id' => 'string',
         'templateId' => 'double',
         'template' => '\Swagger\Client\Model\Template'
     );
@@ -323,7 +323,7 @@ class TemplatePermissionSet implements ArrayAccess
 
     /**
      * Gets id
-     * @return double
+     * @return string
      */
     public function getId()
     {
@@ -332,7 +332,7 @@ class TemplatePermissionSet implements ArrayAccess
 
     /**
      * Sets id
-     * @param double $id
+     * @param string $id
      * @return $this
      */
     public function setId($id)

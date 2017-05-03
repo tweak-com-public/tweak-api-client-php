@@ -77,7 +77,7 @@ class Customer implements ArrayAccess
         'username' => 'string',
         'email' => 'string',
         'emailVerified' => 'bool',
-        'id' => 'double',
+        'id' => 'string',
         'designs' => '\Swagger\Client\Model\Design[]',
         'teams' => '\Swagger\Client\Model\Team[]',
         'invitationTickets' => '\Swagger\Client\Model\InvitationTicket[]',
@@ -519,7 +519,7 @@ class Customer implements ArrayAccess
 
     /**
      * Gets id
-     * @return double
+     * @return string
      */
     public function getId()
     {
@@ -528,7 +528,7 @@ class Customer implements ArrayAccess
 
     /**
      * Sets id
-     * @param double $id
+     * @param string $id
      * @return $this
      */
     public function setId($id)

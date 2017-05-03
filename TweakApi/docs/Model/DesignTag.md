@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **double** |  | [optional] 
+**id** | **string** |  | [optional] 
 **designId** | **double** |  | [optional] 
 **tagId** | **double** |  | [optional] 
 **design** | [**\Swagger\Client\Model\Design**](Design.md) |  | [optional] 

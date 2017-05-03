@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **highResPdf** | **bool** |  | [optional] [default to true]
 **approveOrdersByPortalAdmin** | **bool** |  | [optional] [default to true]
 **approveDesignsByPortalAdmin** | **bool** |  | [optional] [default to true]
-**id** | **double** |  | [optional] 
+**id** | **string** |  | [optional] 
 **portalId** | **double** |  | [optional] 
 **portal** | [**\Swagger\Client\Model\Portal**](Portal.md) |  | [optional] 
 

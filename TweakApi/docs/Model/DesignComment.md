@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **status** | **string** |  | [optional] [default to 'unsolved']
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **modified** | [**\DateTime**](\DateTime.md) |  | [optional] 
-**id** | **double** |  | [optional] 
+**id** | **string** |  | [optional] 
 **designId** | **double** |  | [optional] 
 **commentId** | **double** |  | [optional] 
 **commenterId** | **double** |  | [optional] 

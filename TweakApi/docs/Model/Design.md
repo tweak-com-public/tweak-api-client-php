@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **expired** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **modified** | [**\DateTime**](\DateTime.md) |  | [optional] 
-**id** | **double** |  | [optional] 
+**id** | **string** |  | [optional] 
 **customerId** | **double** |  | [optional] 
 **requesterId** | **double** |  | [optional] 
 **assigneeId** | **double** |  | [optional] 

@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **roles** | **string[]** |  | 
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **modified** | [**\DateTime**](\DateTime.md) |  | [optional] 
-**id** | **double** |  | [optional] 
+**id** | **string** |  | [optional] 
 **customerId** | **double** |  | [optional] 
 **teamId** | **string** |  | [optional] 
 **customer** | [**\Swagger\Client\Model\Customer**](Customer.md) |  | [optional] 

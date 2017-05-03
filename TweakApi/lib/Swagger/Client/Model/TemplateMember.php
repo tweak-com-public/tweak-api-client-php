@@ -68,7 +68,7 @@ class TemplateMember implements ArrayAccess
     protected static $swaggerTypes = array(
         'uploader' => 'bool',
         'viewOnly' => 'bool',
-        'id' => 'double',
+        'id' => 'string',
         'templateId' => 'double',
         'memberId' => 'double',
         'template' => '\Swagger\Client\Model\Template',
@@ -229,7 +229,7 @@ class TemplateMember implements ArrayAccess
 
     /**
      * Gets id
-     * @return double
+     * @return string
      */
     public function getId()
     {
@@ -238,7 +238,7 @@ class TemplateMember implements ArrayAccess
 
     /**
      * Sets id
-     * @param double $id
+     * @param string $id
      * @return $this
      */
     public function setId($id)

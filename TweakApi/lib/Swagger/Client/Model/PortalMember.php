@@ -69,7 +69,7 @@ class PortalMember implements ArrayAccess
         'roles' => 'string[]',
         'created' => '\DateTime',
         'modified' => '\DateTime',
-        'id' => 'double',
+        'id' => 'string',
         'portalId' => 'double',
         'memberId' => 'double',
         'portal' => '\Swagger\Client\Model\Portal',
@@ -261,7 +261,7 @@ class PortalMember implements ArrayAccess
 
     /**
      * Gets id
-     * @return double
+     * @return string
      */
     public function getId()
     {
@@ -270,7 +270,7 @@ class PortalMember implements ArrayAccess
 
     /**
      * Sets id
-     * @param double $id
+     * @param string $id
      * @return $this
      */
     public function setId($id)

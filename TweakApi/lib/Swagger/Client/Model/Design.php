@@ -78,7 +78,7 @@ class Design implements ArrayAccess
         'expired' => '\DateTime',
         'created' => '\DateTime',
         'modified' => '\DateTime',
-        'id' => 'double',
+        'id' => 'string',
         'customerId' => 'double',
         'requesterId' => 'double',
         'assigneeId' => 'double',
@@ -619,7 +619,7 @@ class Design implements ArrayAccess
 
     /**
      * Gets id
-     * @return double
+     * @return string
      */
     public function getId()
     {
@@ -628,7 +628,7 @@ class Design implements ArrayAccess
 
     /**
      * Sets id
-     * @param double $id
+     * @param string $id
      * @return $this
      */
     public function setId($id)

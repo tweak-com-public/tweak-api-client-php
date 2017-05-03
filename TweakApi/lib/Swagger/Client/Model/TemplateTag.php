@@ -66,7 +66,7 @@ class TemplateTag implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'id' => 'double',
+        'id' => 'string',
         'tagId' => 'double',
         'templateId' => 'double',
         'tag' => '\Swagger\Client\Model\Tag',
@@ -177,7 +177,7 @@ class TemplateTag implements ArrayAccess
 
     /**
      * Gets id
-     * @return double
+     * @return string
      */
     public function getId()
     {
@@ -186,7 +186,7 @@ class TemplateTag implements ArrayAccess
 
     /**
      * Sets id
-     * @param double $id
+     * @param string $id
      * @return $this
      */
     public function setId($id)
