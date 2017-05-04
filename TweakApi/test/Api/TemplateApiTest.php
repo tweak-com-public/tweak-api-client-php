@@ -442,6 +442,17 @@ class TemplateApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for templatesIdPortalFolderGet
+     *
+     * Fetches belongsTo relation portalFolder..
+     *
+     */
+    public function testTemplatesIdPortalFolderGet()
+    {
+
+    }
+
+    /**
      * Test case for templatesIdPortalsCountGet
      *
      * Counts portals of Template..
@@ -679,6 +690,17 @@ class TemplateApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testTemplatesIdTagsRelFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for templatesIdTeamFolderGet
+     *
+     * Fetches belongsTo relation teamFolder..
+     *
+     */
+    public function testTemplatesIdTeamFolderGet()
     {
 
     }

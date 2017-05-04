@@ -69,8 +69,8 @@ class TemplateMember implements ArrayAccess
         'uploader' => 'bool',
         'viewOnly' => 'bool',
         'id' => 'string',
-        'templateId' => 'double',
-        'memberId' => 'double',
+        'templateId' => 'string',
+        'memberId' => 'string',
         'template' => '\Swagger\Client\Model\Template',
         'member' => '\Swagger\Client\Model\TeamMember'
     );
@@ -250,7 +250,7 @@ class TemplateMember implements ArrayAccess
 
     /**
      * Gets templateId
-     * @return double
+     * @return string
      */
     public function getTemplateId()
     {
@@ -259,7 +259,7 @@ class TemplateMember implements ArrayAccess
 
     /**
      * Sets templateId
-     * @param double $templateId
+     * @param string $templateId
      * @return $this
      */
     public function setTemplateId($templateId)
@@ -271,7 +271,7 @@ class TemplateMember implements ArrayAccess
 
     /**
      * Gets memberId
-     * @return double
+     * @return string
      */
     public function getMemberId()
     {
@@ -280,7 +280,7 @@ class TemplateMember implements ArrayAccess
 
     /**
      * Sets memberId
-     * @param double $memberId
+     * @param string $memberId
      * @return $this
      */
     public function setMemberId($memberId)

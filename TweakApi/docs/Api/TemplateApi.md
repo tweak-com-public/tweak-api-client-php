@@ -36,6 +36,7 @@ Method | HTTP request | Description
 [**templatesIdPermissionGet**](TemplateApi.md#templatesIdPermissionGet) | **GET** /Templates/{id}/permission | Fetches hasOne relation permission.
 [**templatesIdPermissionPost**](TemplateApi.md#templatesIdPermissionPost) | **POST** /Templates/{id}/permission | Creates a new instance in permission of this model.
 [**templatesIdPermissionPut**](TemplateApi.md#templatesIdPermissionPut) | **PUT** /Templates/{id}/permission | Update permission of this model.
+[**templatesIdPortalFolderGet**](TemplateApi.md#templatesIdPortalFolderGet) | **GET** /Templates/{id}/portalFolder | Fetches belongsTo relation portalFolder.
 [**templatesIdPortalsCountGet**](TemplateApi.md#templatesIdPortalsCountGet) | **GET** /Templates/{id}/portals/count | Counts portals of Template.
 [**templatesIdPortalsDelete**](TemplateApi.md#templatesIdPortalsDelete) | **DELETE** /Templates/{id}/portals | Deletes all portals of this model.
 [**templatesIdPortalsFkDelete**](TemplateApi.md#templatesIdPortalsFkDelete) | **DELETE** /Templates/{id}/portals/{fk} | Delete a related item by id for portals.
@@ -58,6 +59,7 @@ Method | HTTP request | Description
 [**templatesIdTagsRelFkDelete**](TemplateApi.md#templatesIdTagsRelFkDelete) | **DELETE** /Templates/{id}/tags/rel/{fk} | Remove the tags relation to an item by id.
 [**templatesIdTagsRelFkHead**](TemplateApi.md#templatesIdTagsRelFkHead) | **HEAD** /Templates/{id}/tags/rel/{fk} | Check the existence of tags relation to an item by id.
 [**templatesIdTagsRelFkPut**](TemplateApi.md#templatesIdTagsRelFkPut) | **PUT** /Templates/{id}/tags/rel/{fk} | Add a related item by id for tags.
+[**templatesIdTeamFolderGet**](TemplateApi.md#templatesIdTeamFolderGet) | **GET** /Templates/{id}/teamFolder | Fetches belongsTo relation teamFolder.
 [**templatesIdTeamGet**](TemplateApi.md#templatesIdTeamGet) | **GET** /Templates/{id}/team | Fetches belongsTo relation team.
 [**templatesPatch**](TemplateApi.md#templatesPatch) | **PATCH** /Templates | Patch an existing model instance or insert a new one into the data source.
 [**templatesPost**](TemplateApi.md#templatesPost) | **POST** /Templates | Create a new instance of the model and persist it into the data source.
@@ -1645,6 +1647,56 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **templatesIdPortalFolderGet**
+> \Swagger\Client\Model\PortalTemplateFolder templatesIdPortalFolderGet($id, $refresh)
+
+Fetches belongsTo relation portalFolder.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TemplateApi();
+$id = "id_example"; // string | Template id
+$refresh = true; // bool | 
+
+try {
+    $result = $api_instance->templatesIdPortalFolderGet($id, $refresh);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TemplateApi->templatesIdPortalFolderGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Template id |
+ **refresh** | **bool**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\PortalTemplateFolder**](../Model/PortalTemplateFolder.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **templatesIdPortalsCountGet**
 > \Swagger\Client\Model\InlineResponse200 templatesIdPortalsCountGet($id, $where)
 
@@ -2731,6 +2783,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\TemplateTag**](../Model/TemplateTag.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **templatesIdTeamFolderGet**
+> \Swagger\Client\Model\TeamTemplateFolder templatesIdTeamFolderGet($id, $refresh)
+
+Fetches belongsTo relation teamFolder.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TemplateApi();
+$id = "id_example"; // string | Template id
+$refresh = true; // bool | 
+
+try {
+    $result = $api_instance->templatesIdTeamFolderGet($id, $refresh);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TemplateApi->templatesIdTeamFolderGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Template id |
+ **refresh** | **bool**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\TeamTemplateFolder**](../Model/TeamTemplateFolder.md)
 
 ### Authorization
 

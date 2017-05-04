@@ -1,6 +1,6 @@
 <?php
 /**
- * TemplateTag
+ * DesignFolder
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * TemplateTag Class Doc Comment
+ * DesignFolder Class Doc Comment
  *
  * @category    Class */
 /** 
@@ -53,24 +53,29 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class TemplateTag implements ArrayAccess
+class DesignFolder implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'TemplateTag';
+    protected static $swaggerModelName = 'DesignFolder';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = array(
+        'name' => 'string',
         'id' => 'string',
-        'tagId' => 'string',
-        'templateId' => 'string',
-        'tag' => '\Swagger\Client\Model\Tag',
-        'template' => '\Swagger\Client\Model\Template'
+        'memberId' => 'string',
+        'parentId' => 'string',
+        'portalId' => 'string',
+        'member' => '\Swagger\Client\Model\TeamMember',
+        'children' => '\Swagger\Client\Model\DesignFolder[]',
+        'parent' => '\Swagger\Client\Model\DesignFolder',
+        'designs' => '\Swagger\Client\Model\Design[]',
+        'portal' => '\Swagger\Client\Model\Portal'
     );
 
     public static function swaggerTypes()
@@ -83,11 +88,16 @@ class TemplateTag implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
+        'name' => 'name',
         'id' => 'id',
-        'tagId' => 'tagId',
-        'templateId' => 'templateId',
-        'tag' => 'tag',
-        'template' => 'template'
+        'memberId' => 'memberId',
+        'parentId' => 'parentId',
+        'portalId' => 'portalId',
+        'member' => 'member',
+        'children' => 'children',
+        'parent' => 'parent',
+        'designs' => 'designs',
+        'portal' => 'portal'
     );
 
     public static function attributeMap()
@@ -100,11 +110,16 @@ class TemplateTag implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
+        'name' => 'setName',
         'id' => 'setId',
-        'tagId' => 'setTagId',
-        'templateId' => 'setTemplateId',
-        'tag' => 'setTag',
-        'template' => 'setTemplate'
+        'memberId' => 'setMemberId',
+        'parentId' => 'setParentId',
+        'portalId' => 'setPortalId',
+        'member' => 'setMember',
+        'children' => 'setChildren',
+        'parent' => 'setParent',
+        'designs' => 'setDesigns',
+        'portal' => 'setPortal'
     );
 
     public static function setters()
@@ -117,11 +132,16 @@ class TemplateTag implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
+        'name' => 'getName',
         'id' => 'getId',
-        'tagId' => 'getTagId',
-        'templateId' => 'getTemplateId',
-        'tag' => 'getTag',
-        'template' => 'getTemplate'
+        'memberId' => 'getMemberId',
+        'parentId' => 'getParentId',
+        'portalId' => 'getPortalId',
+        'member' => 'getMember',
+        'children' => 'getChildren',
+        'parent' => 'getParent',
+        'designs' => 'getDesigns',
+        'portal' => 'getPortal'
     );
 
     public static function getters()
@@ -145,11 +165,16 @@ class TemplateTag implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['tagId'] = isset($data['tagId']) ? $data['tagId'] : null;
-        $this->container['templateId'] = isset($data['templateId']) ? $data['templateId'] : null;
-        $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
-        $this->container['template'] = isset($data['template']) ? $data['template'] : null;
+        $this->container['memberId'] = isset($data['memberId']) ? $data['memberId'] : null;
+        $this->container['parentId'] = isset($data['parentId']) ? $data['parentId'] : null;
+        $this->container['portalId'] = isset($data['portalId']) ? $data['portalId'] : null;
+        $this->container['member'] = isset($data['member']) ? $data['member'] : null;
+        $this->container['children'] = isset($data['children']) ? $data['children'] : null;
+        $this->container['parent'] = isset($data['parent']) ? $data['parent'] : null;
+        $this->container['designs'] = isset($data['designs']) ? $data['designs'] : null;
+        $this->container['portal'] = isset($data['portal']) ? $data['portal'] : null;
     }
 
     /**
@@ -160,6 +185,9 @@ class TemplateTag implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
+        if ($this->container['name'] === null) {
+            $invalid_properties[] = "'name' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -171,9 +199,33 @@ class TemplateTag implements ArrayAccess
      */
     public function valid()
     {
+        if ($this->container['name'] === null) {
+            return false;
+        }
         return true;
     }
 
+
+    /**
+     * Gets name
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+     * Sets name
+     * @param string $name
+     * @return $this
+     */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+
+        return $this;
+    }
 
     /**
      * Gets id
@@ -197,85 +249,169 @@ class TemplateTag implements ArrayAccess
     }
 
     /**
-     * Gets tagId
+     * Gets memberId
      * @return string
      */
-    public function getTagId()
+    public function getMemberId()
     {
-        return $this->container['tagId'];
+        return $this->container['memberId'];
     }
 
     /**
-     * Sets tagId
-     * @param string $tagId
+     * Sets memberId
+     * @param string $memberId
      * @return $this
      */
-    public function setTagId($tagId)
+    public function setMemberId($memberId)
     {
-        $this->container['tagId'] = $tagId;
+        $this->container['memberId'] = $memberId;
 
         return $this;
     }
 
     /**
-     * Gets templateId
+     * Gets parentId
      * @return string
      */
-    public function getTemplateId()
+    public function getParentId()
     {
-        return $this->container['templateId'];
+        return $this->container['parentId'];
     }
 
     /**
-     * Sets templateId
-     * @param string $templateId
+     * Sets parentId
+     * @param string $parentId
      * @return $this
      */
-    public function setTemplateId($templateId)
+    public function setParentId($parentId)
     {
-        $this->container['templateId'] = $templateId;
+        $this->container['parentId'] = $parentId;
 
         return $this;
     }
 
     /**
-     * Gets tag
-     * @return \Swagger\Client\Model\Tag
+     * Gets portalId
+     * @return string
      */
-    public function getTag()
+    public function getPortalId()
     {
-        return $this->container['tag'];
+        return $this->container['portalId'];
     }
 
     /**
-     * Sets tag
-     * @param \Swagger\Client\Model\Tag $tag
+     * Sets portalId
+     * @param string $portalId
      * @return $this
      */
-    public function setTag($tag)
+    public function setPortalId($portalId)
     {
-        $this->container['tag'] = $tag;
+        $this->container['portalId'] = $portalId;
 
         return $this;
     }
 
     /**
-     * Gets template
-     * @return \Swagger\Client\Model\Template
+     * Gets member
+     * @return \Swagger\Client\Model\TeamMember
      */
-    public function getTemplate()
+    public function getMember()
     {
-        return $this->container['template'];
+        return $this->container['member'];
     }
 
     /**
-     * Sets template
-     * @param \Swagger\Client\Model\Template $template
+     * Sets member
+     * @param \Swagger\Client\Model\TeamMember $member
      * @return $this
      */
-    public function setTemplate($template)
+    public function setMember($member)
     {
-        $this->container['template'] = $template;
+        $this->container['member'] = $member;
+
+        return $this;
+    }
+
+    /**
+     * Gets children
+     * @return \Swagger\Client\Model\DesignFolder[]
+     */
+    public function getChildren()
+    {
+        return $this->container['children'];
+    }
+
+    /**
+     * Sets children
+     * @param \Swagger\Client\Model\DesignFolder[] $children
+     * @return $this
+     */
+    public function setChildren($children)
+    {
+        $this->container['children'] = $children;
+
+        return $this;
+    }
+
+    /**
+     * Gets parent
+     * @return \Swagger\Client\Model\DesignFolder
+     */
+    public function getParent()
+    {
+        return $this->container['parent'];
+    }
+
+    /**
+     * Sets parent
+     * @param \Swagger\Client\Model\DesignFolder $parent
+     * @return $this
+     */
+    public function setParent($parent)
+    {
+        $this->container['parent'] = $parent;
+
+        return $this;
+    }
+
+    /**
+     * Gets designs
+     * @return \Swagger\Client\Model\Design[]
+     */
+    public function getDesigns()
+    {
+        return $this->container['designs'];
+    }
+
+    /**
+     * Sets designs
+     * @param \Swagger\Client\Model\Design[] $designs
+     * @return $this
+     */
+    public function setDesigns($designs)
+    {
+        $this->container['designs'] = $designs;
+
+        return $this;
+    }
+
+    /**
+     * Gets portal
+     * @return \Swagger\Client\Model\Portal
+     */
+    public function getPortal()
+    {
+        return $this->container['portal'];
+    }
+
+    /**
+     * Sets portal
+     * @param \Swagger\Client\Model\Portal $portal
+     * @return $this
+     */
+    public function setPortal($portal)
+    {
+        $this->container['portal'] = $portal;
 
         return $this;
     }

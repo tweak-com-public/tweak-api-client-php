@@ -453,6 +453,83 @@ class TeamApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for teamsIdTemplateFolderCountGet
+     *
+     * Counts templateFolder of Team..
+     *
+     */
+    public function testTeamsIdTemplateFolderCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamsIdTemplateFolderDelete
+     *
+     * Deletes all templateFolder of this model..
+     *
+     */
+    public function testTeamsIdTemplateFolderDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamsIdTemplateFolderFkDelete
+     *
+     * Delete a related item by id for templateFolder..
+     *
+     */
+    public function testTeamsIdTemplateFolderFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamsIdTemplateFolderFkGet
+     *
+     * Find a related item by id for templateFolder..
+     *
+     */
+    public function testTeamsIdTemplateFolderFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamsIdTemplateFolderFkPut
+     *
+     * Update a related item by id for templateFolder..
+     *
+     */
+    public function testTeamsIdTemplateFolderFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for teamsIdTemplateFolderGet
+     *
+     * Queries templateFolder of Team..
+     *
+     */
+    public function testTeamsIdTemplateFolderGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamsIdTemplateFolderPost
+     *
+     * Creates a new instance in templateFolder of this model..
+     *
+     */
+    public function testTeamsIdTemplateFolderPost()
+    {
+
+    }
+
+    /**
      * Test case for teamsIdTemplatesCountGet
      *
      * Counts templates of Team..

@@ -70,7 +70,7 @@ class TeamMember implements ArrayAccess
         'created' => '\DateTime',
         'modified' => '\DateTime',
         'id' => 'string',
-        'customerId' => 'double',
+        'customerId' => 'string',
         'teamId' => 'string',
         'customer' => '\Swagger\Client\Model\Customer',
         'team' => '\Swagger\Client\Model\Team',
@@ -83,7 +83,8 @@ class TeamMember implements ArrayAccess
         'assignedDesigns' => '\Swagger\Client\Model\Design[]',
         'reviewedDesigns' => '\Swagger\Client\Model\Design[]',
         'commentedDesigns' => '\Swagger\Client\Model\Design[]',
-        'designComments' => '\Swagger\Client\Model\DesignComment[]'
+        'designComments' => '\Swagger\Client\Model\DesignComment[]',
+        'designFolders' => '\Swagger\Client\Model\DesignFolder[]'
     );
 
     public static function swaggerTypes()
@@ -113,7 +114,8 @@ class TeamMember implements ArrayAccess
         'assignedDesigns' => 'assignedDesigns',
         'reviewedDesigns' => 'reviewedDesigns',
         'commentedDesigns' => 'commentedDesigns',
-        'designComments' => 'designComments'
+        'designComments' => 'designComments',
+        'designFolders' => 'designFolders'
     );
 
     public static function attributeMap()
@@ -143,7 +145,8 @@ class TeamMember implements ArrayAccess
         'assignedDesigns' => 'setAssignedDesigns',
         'reviewedDesigns' => 'setReviewedDesigns',
         'commentedDesigns' => 'setCommentedDesigns',
-        'designComments' => 'setDesignComments'
+        'designComments' => 'setDesignComments',
+        'designFolders' => 'setDesignFolders'
     );
 
     public static function setters()
@@ -173,7 +176,8 @@ class TeamMember implements ArrayAccess
         'assignedDesigns' => 'getAssignedDesigns',
         'reviewedDesigns' => 'getReviewedDesigns',
         'commentedDesigns' => 'getCommentedDesigns',
-        'designComments' => 'getDesignComments'
+        'designComments' => 'getDesignComments',
+        'designFolders' => 'getDesignFolders'
     );
 
     public static function getters()
@@ -215,6 +219,7 @@ class TeamMember implements ArrayAccess
         $this->container['reviewedDesigns'] = isset($data['reviewedDesigns']) ? $data['reviewedDesigns'] : null;
         $this->container['commentedDesigns'] = isset($data['commentedDesigns']) ? $data['commentedDesigns'] : null;
         $this->container['designComments'] = isset($data['designComments']) ? $data['designComments'] : null;
+        $this->container['designFolders'] = isset($data['designFolders']) ? $data['designFolders'] : null;
     }
 
     /**
@@ -332,7 +337,7 @@ class TeamMember implements ArrayAccess
 
     /**
      * Gets customerId
-     * @return double
+     * @return string
      */
     public function getCustomerId()
     {
@@ -341,7 +346,7 @@ class TeamMember implements ArrayAccess
 
     /**
      * Sets customerId
-     * @param double $customerId
+     * @param string $customerId
      * @return $this
      */
     public function setCustomerId($customerId)
@@ -620,6 +625,27 @@ class TeamMember implements ArrayAccess
     public function setDesignComments($designComments)
     {
         $this->container['designComments'] = $designComments;
+
+        return $this;
+    }
+
+    /**
+     * Gets designFolders
+     * @return \Swagger\Client\Model\DesignFolder[]
+     */
+    public function getDesignFolders()
+    {
+        return $this->container['designFolders'];
+    }
+
+    /**
+     * Sets designFolders
+     * @param \Swagger\Client\Model\DesignFolder[] $designFolders
+     * @return $this
+     */
+    public function setDesignFolders($designFolders)
+    {
+        $this->container['designFolders'] = $designFolders;
 
         return $this;
     }

@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** |  | [optional] 
-**tagId** | **double** |  | [optional] 
-**templateId** | **double** |  | [optional] 
+**tagId** | **string** |  | [optional] 
+**templateId** | **string** |  | [optional] 
 **tag** | [**\Swagger\Client\Model\Tag**](Tag.md) |  | [optional] 
 **template** | [**\Swagger\Client\Model\Template**](Template.md) |  | [optional] 
 

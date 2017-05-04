@@ -82,7 +82,8 @@ class Team implements ArrayAccess
         'members' => '\Swagger\Client\Model\Customer[]',
         'portals' => '\Swagger\Client\Model\Portal[]',
         'templates' => '\Swagger\Client\Model\Template[]',
-        'brand' => '\Swagger\Client\Model\TeamBrand'
+        'brand' => '\Swagger\Client\Model\TeamBrand',
+        'templateFolder' => '\Swagger\Client\Model\TeamTemplateFolder[]'
     );
 
     public static function swaggerTypes()
@@ -111,7 +112,8 @@ class Team implements ArrayAccess
         'members' => 'members',
         'portals' => 'portals',
         'templates' => 'templates',
-        'brand' => 'brand'
+        'brand' => 'brand',
+        'templateFolder' => 'templateFolder'
     );
 
     public static function attributeMap()
@@ -140,7 +142,8 @@ class Team implements ArrayAccess
         'members' => 'setMembers',
         'portals' => 'setPortals',
         'templates' => 'setTemplates',
-        'brand' => 'setBrand'
+        'brand' => 'setBrand',
+        'templateFolder' => 'setTemplateFolder'
     );
 
     public static function setters()
@@ -169,7 +172,8 @@ class Team implements ArrayAccess
         'members' => 'getMembers',
         'portals' => 'getPortals',
         'templates' => 'getTemplates',
-        'brand' => 'getBrand'
+        'brand' => 'getBrand',
+        'templateFolder' => 'getTemplateFolder'
     );
 
     public static function getters()
@@ -210,6 +214,7 @@ class Team implements ArrayAccess
         $this->container['portals'] = isset($data['portals']) ? $data['portals'] : null;
         $this->container['templates'] = isset($data['templates']) ? $data['templates'] : null;
         $this->container['brand'] = isset($data['brand']) ? $data['brand'] : null;
+        $this->container['templateFolder'] = isset($data['templateFolder']) ? $data['templateFolder'] : null;
     }
 
     /**
@@ -600,6 +605,27 @@ class Team implements ArrayAccess
     public function setBrand($brand)
     {
         $this->container['brand'] = $brand;
+
+        return $this;
+    }
+
+    /**
+     * Gets templateFolder
+     * @return \Swagger\Client\Model\TeamTemplateFolder[]
+     */
+    public function getTemplateFolder()
+    {
+        return $this->container['templateFolder'];
+    }
+
+    /**
+     * Sets templateFolder
+     * @param \Swagger\Client\Model\TeamTemplateFolder[] $templateFolder
+     * @return $this
+     */
+    public function setTemplateFolder($templateFolder)
+    {
+        $this->container['templateFolder'] = $templateFolder;
 
         return $this;
     }

@@ -73,9 +73,9 @@ class DesignComment implements ArrayAccess
         'created' => '\DateTime',
         'modified' => '\DateTime',
         'id' => 'string',
-        'designId' => 'double',
-        'commentId' => 'double',
-        'commenterId' => 'double',
+        'designId' => 'string',
+        'commentId' => 'string',
+        'commenterId' => 'string',
         'design' => '\Swagger\Client\Model\Design',
         'replies' => '\Swagger\Client\Model\DesignComment[]',
         'commenter' => '\Swagger\Client\Model\TeamMember',
@@ -413,7 +413,7 @@ class DesignComment implements ArrayAccess
 
     /**
      * Gets designId
-     * @return double
+     * @return string
      */
     public function getDesignId()
     {
@@ -422,7 +422,7 @@ class DesignComment implements ArrayAccess
 
     /**
      * Sets designId
-     * @param double $designId
+     * @param string $designId
      * @return $this
      */
     public function setDesignId($designId)
@@ -434,7 +434,7 @@ class DesignComment implements ArrayAccess
 
     /**
      * Gets commentId
-     * @return double
+     * @return string
      */
     public function getCommentId()
     {
@@ -443,7 +443,7 @@ class DesignComment implements ArrayAccess
 
     /**
      * Sets commentId
-     * @param double $commentId
+     * @param string $commentId
      * @return $this
      */
     public function setCommentId($commentId)
@@ -455,7 +455,7 @@ class DesignComment implements ArrayAccess
 
     /**
      * Gets commenterId
-     * @return double
+     * @return string
      */
     public function getCommenterId()
     {
@@ -464,7 +464,7 @@ class DesignComment implements ArrayAccess
 
     /**
      * Sets commenterId
-     * @param double $commenterId
+     * @param string $commenterId
      * @return $this
      */
     public function setCommenterId($commenterId)

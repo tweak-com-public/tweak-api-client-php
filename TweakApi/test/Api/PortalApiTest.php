@@ -156,6 +156,83 @@ class PortalApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for portalsIdDesignFoldersCountGet
+     *
+     * Counts designFolders of Portal..
+     *
+     */
+    public function testPortalsIdDesignFoldersCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for portalsIdDesignFoldersDelete
+     *
+     * Deletes all designFolders of this model..
+     *
+     */
+    public function testPortalsIdDesignFoldersDelete()
+    {
+
+    }
+
+    /**
+     * Test case for portalsIdDesignFoldersFkDelete
+     *
+     * Delete a related item by id for designFolders..
+     *
+     */
+    public function testPortalsIdDesignFoldersFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for portalsIdDesignFoldersFkGet
+     *
+     * Find a related item by id for designFolders..
+     *
+     */
+    public function testPortalsIdDesignFoldersFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for portalsIdDesignFoldersFkPut
+     *
+     * Update a related item by id for designFolders..
+     *
+     */
+    public function testPortalsIdDesignFoldersFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for portalsIdDesignFoldersGet
+     *
+     * Queries designFolders of Portal..
+     *
+     */
+    public function testPortalsIdDesignFoldersGet()
+    {
+
+    }
+
+    /**
+     * Test case for portalsIdDesignFoldersPost
+     *
+     * Creates a new instance in designFolders of this model..
+     *
+     */
+    public function testPortalsIdDesignFoldersPost()
+    {
+
+    }
+
+    /**
      * Test case for portalsIdDesignsCountGet
      *
      * Counts designs of Portal..
@@ -459,6 +536,83 @@ class PortalApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testPortalsIdTeamGet()
+    {
+
+    }
+
+    /**
+     * Test case for portalsIdTemplateFoldersCountGet
+     *
+     * Counts templateFolders of Portal..
+     *
+     */
+    public function testPortalsIdTemplateFoldersCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for portalsIdTemplateFoldersDelete
+     *
+     * Deletes all templateFolders of this model..
+     *
+     */
+    public function testPortalsIdTemplateFoldersDelete()
+    {
+
+    }
+
+    /**
+     * Test case for portalsIdTemplateFoldersFkDelete
+     *
+     * Delete a related item by id for templateFolders..
+     *
+     */
+    public function testPortalsIdTemplateFoldersFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for portalsIdTemplateFoldersFkGet
+     *
+     * Find a related item by id for templateFolders..
+     *
+     */
+    public function testPortalsIdTemplateFoldersFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for portalsIdTemplateFoldersFkPut
+     *
+     * Update a related item by id for templateFolders..
+     *
+     */
+    public function testPortalsIdTemplateFoldersFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for portalsIdTemplateFoldersGet
+     *
+     * Queries templateFolders of Portal..
+     *
+     */
+    public function testPortalsIdTemplateFoldersGet()
+    {
+
+    }
+
+    /**
+     * Test case for portalsIdTemplateFoldersPost
+     *
+     * Creates a new instance in templateFolders of this model..
+     *
+     */
+    public function testPortalsIdTemplateFoldersPost()
     {
 
     }

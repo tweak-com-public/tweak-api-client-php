@@ -248,6 +248,14 @@ class DesignTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "folderId"
+     */
+    public function testPropertyFolderId()
+    {
+
+    }
+
+    /**
      * Test attribute "tags"
      */
     public function testPropertyTags()
@@ -323,6 +331,14 @@ class DesignTest extends \PHPUnit_Framework_TestCase
      * Test attribute "commenters"
      */
     public function testPropertyCommenters()
+    {
+
+    }
+
+    /**
+     * Test attribute "folder"
+     */
+    public function testPropertyFolder()
     {
 
     }

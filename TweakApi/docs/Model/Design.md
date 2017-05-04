@@ -16,12 +16,13 @@ Name | Type | Description | Notes
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **modified** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **id** | **string** |  | [optional] 
-**customerId** | **double** |  | [optional] 
-**requesterId** | **double** |  | [optional] 
-**assigneeId** | **double** |  | [optional] 
-**reviewerId** | **double** |  | [optional] 
-**templateId** | **double** |  | [optional] 
-**portalId** | **double** |  | [optional] 
+**customerId** | **string** |  | [optional] 
+**requesterId** | **string** |  | [optional] 
+**assigneeId** | **string** |  | [optional] 
+**reviewerId** | **string** |  | [optional] 
+**templateId** | **string** |  | [optional] 
+**portalId** | **string** |  | [optional] 
+**folderId** | **string** |  | [optional] 
 **tags** | [**\Swagger\Client\Model\Tag[]**](Tag.md) |  | [optional] 
 **customer** | [**\Swagger\Client\Model\Customer**](Customer.md) |  | [optional] 
 **template** | [**\Swagger\Client\Model\Template**](Template.md) |  | [optional] 
@@ -32,6 +33,7 @@ Name | Type | Description | Notes
 **assignee** | [**\Swagger\Client\Model\TeamMember**](TeamMember.md) |  | [optional] 
 **reviewer** | [**\Swagger\Client\Model\TeamMember**](TeamMember.md) |  | [optional] 
 **commenters** | [**\Swagger\Client\Model\TeamMember[]**](TeamMember.md) |  | [optional] 
+**folder** | [**\Swagger\Client\Model\DesignFolder**](DesignFolder.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

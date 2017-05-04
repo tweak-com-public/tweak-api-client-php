@@ -199,4 +199,20 @@ class PortalTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "templateFolders"
+     */
+    public function testPropertyTemplateFolders()
+    {
+
+    }
+
+    /**
+     * Test attribute "designFolders"
+     */
+    public function testPropertyDesignFolders()
+    {
+
+    }
+
 }

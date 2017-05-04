@@ -79,12 +79,13 @@ class Design implements ArrayAccess
         'created' => '\DateTime',
         'modified' => '\DateTime',
         'id' => 'string',
-        'customerId' => 'double',
-        'requesterId' => 'double',
-        'assigneeId' => 'double',
-        'reviewerId' => 'double',
-        'templateId' => 'double',
-        'portalId' => 'double',
+        'customerId' => 'string',
+        'requesterId' => 'string',
+        'assigneeId' => 'string',
+        'reviewerId' => 'string',
+        'templateId' => 'string',
+        'portalId' => 'string',
+        'folderId' => 'string',
         'tags' => '\Swagger\Client\Model\Tag[]',
         'customer' => '\Swagger\Client\Model\Customer',
         'template' => '\Swagger\Client\Model\Template',
@@ -94,7 +95,8 @@ class Design implements ArrayAccess
         'requester' => '\Swagger\Client\Model\TeamMember',
         'assignee' => '\Swagger\Client\Model\TeamMember',
         'reviewer' => '\Swagger\Client\Model\TeamMember',
-        'commenters' => '\Swagger\Client\Model\TeamMember[]'
+        'commenters' => '\Swagger\Client\Model\TeamMember[]',
+        'folder' => '\Swagger\Client\Model\DesignFolder'
     );
 
     public static function swaggerTypes()
@@ -126,6 +128,7 @@ class Design implements ArrayAccess
         'reviewerId' => 'reviewerId',
         'templateId' => 'templateId',
         'portalId' => 'portalId',
+        'folderId' => 'folderId',
         'tags' => 'tags',
         'customer' => 'customer',
         'template' => 'template',
@@ -135,7 +138,8 @@ class Design implements ArrayAccess
         'requester' => 'requester',
         'assignee' => 'assignee',
         'reviewer' => 'reviewer',
-        'commenters' => 'commenters'
+        'commenters' => 'commenters',
+        'folder' => 'folder'
     );
 
     public static function attributeMap()
@@ -167,6 +171,7 @@ class Design implements ArrayAccess
         'reviewerId' => 'setReviewerId',
         'templateId' => 'setTemplateId',
         'portalId' => 'setPortalId',
+        'folderId' => 'setFolderId',
         'tags' => 'setTags',
         'customer' => 'setCustomer',
         'template' => 'setTemplate',
@@ -176,7 +181,8 @@ class Design implements ArrayAccess
         'requester' => 'setRequester',
         'assignee' => 'setAssignee',
         'reviewer' => 'setReviewer',
-        'commenters' => 'setCommenters'
+        'commenters' => 'setCommenters',
+        'folder' => 'setFolder'
     );
 
     public static function setters()
@@ -208,6 +214,7 @@ class Design implements ArrayAccess
         'reviewerId' => 'getReviewerId',
         'templateId' => 'getTemplateId',
         'portalId' => 'getPortalId',
+        'folderId' => 'getFolderId',
         'tags' => 'getTags',
         'customer' => 'getCustomer',
         'template' => 'getTemplate',
@@ -217,7 +224,8 @@ class Design implements ArrayAccess
         'requester' => 'getRequester',
         'assignee' => 'getAssignee',
         'reviewer' => 'getReviewer',
-        'commenters' => 'getCommenters'
+        'commenters' => 'getCommenters',
+        'folder' => 'getFolder'
     );
 
     public static function getters()
@@ -292,6 +300,7 @@ class Design implements ArrayAccess
         $this->container['reviewerId'] = isset($data['reviewerId']) ? $data['reviewerId'] : null;
         $this->container['templateId'] = isset($data['templateId']) ? $data['templateId'] : null;
         $this->container['portalId'] = isset($data['portalId']) ? $data['portalId'] : null;
+        $this->container['folderId'] = isset($data['folderId']) ? $data['folderId'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['customer'] = isset($data['customer']) ? $data['customer'] : null;
         $this->container['template'] = isset($data['template']) ? $data['template'] : null;
@@ -302,6 +311,7 @@ class Design implements ArrayAccess
         $this->container['assignee'] = isset($data['assignee']) ? $data['assignee'] : null;
         $this->container['reviewer'] = isset($data['reviewer']) ? $data['reviewer'] : null;
         $this->container['commenters'] = isset($data['commenters']) ? $data['commenters'] : null;
+        $this->container['folder'] = isset($data['folder']) ? $data['folder'] : null;
     }
 
     /**
@@ -640,7 +650,7 @@ class Design implements ArrayAccess
 
     /**
      * Gets customerId
-     * @return double
+     * @return string
      */
     public function getCustomerId()
     {
@@ -649,7 +659,7 @@ class Design implements ArrayAccess
 
     /**
      * Sets customerId
-     * @param double $customerId
+     * @param string $customerId
      * @return $this
      */
     public function setCustomerId($customerId)
@@ -661,7 +671,7 @@ class Design implements ArrayAccess
 
     /**
      * Gets requesterId
-     * @return double
+     * @return string
      */
     public function getRequesterId()
     {
@@ -670,7 +680,7 @@ class Design implements ArrayAccess
 
     /**
      * Sets requesterId
-     * @param double $requesterId
+     * @param string $requesterId
      * @return $this
      */
     public function setRequesterId($requesterId)
@@ -682,7 +692,7 @@ class Design implements ArrayAccess
 
     /**
      * Gets assigneeId
-     * @return double
+     * @return string
      */
     public function getAssigneeId()
     {
@@ -691,7 +701,7 @@ class Design implements ArrayAccess
 
     /**
      * Sets assigneeId
-     * @param double $assigneeId
+     * @param string $assigneeId
      * @return $this
      */
     public function setAssigneeId($assigneeId)
@@ -703,7 +713,7 @@ class Design implements ArrayAccess
 
     /**
      * Gets reviewerId
-     * @return double
+     * @return string
      */
     public function getReviewerId()
     {
@@ -712,7 +722,7 @@ class Design implements ArrayAccess
 
     /**
      * Sets reviewerId
-     * @param double $reviewerId
+     * @param string $reviewerId
      * @return $this
      */
     public function setReviewerId($reviewerId)
@@ -724,7 +734,7 @@ class Design implements ArrayAccess
 
     /**
      * Gets templateId
-     * @return double
+     * @return string
      */
     public function getTemplateId()
     {
@@ -733,7 +743,7 @@ class Design implements ArrayAccess
 
     /**
      * Sets templateId
-     * @param double $templateId
+     * @param string $templateId
      * @return $this
      */
     public function setTemplateId($templateId)
@@ -745,7 +755,7 @@ class Design implements ArrayAccess
 
     /**
      * Gets portalId
-     * @return double
+     * @return string
      */
     public function getPortalId()
     {
@@ -754,12 +764,33 @@ class Design implements ArrayAccess
 
     /**
      * Sets portalId
-     * @param double $portalId
+     * @param string $portalId
      * @return $this
      */
     public function setPortalId($portalId)
     {
         $this->container['portalId'] = $portalId;
+
+        return $this;
+    }
+
+    /**
+     * Gets folderId
+     * @return string
+     */
+    public function getFolderId()
+    {
+        return $this->container['folderId'];
+    }
+
+    /**
+     * Sets folderId
+     * @param string $folderId
+     * @return $this
+     */
+    public function setFolderId($folderId)
+    {
+        $this->container['folderId'] = $folderId;
 
         return $this;
     }
@@ -970,6 +1001,27 @@ class Design implements ArrayAccess
     public function setCommenters($commenters)
     {
         $this->container['commenters'] = $commenters;
+
+        return $this;
+    }
+
+    /**
+     * Gets folder
+     * @return \Swagger\Client\Model\DesignFolder
+     */
+    public function getFolder()
+    {
+        return $this->container['folder'];
+    }
+
+    /**
+     * Sets folder
+     * @param \Swagger\Client\Model\DesignFolder $folder
+     * @return $this
+     */
+    public function setFolder($folder)
+    {
+        $this->container['folder'] = $folder;
 
         return $this;
     }

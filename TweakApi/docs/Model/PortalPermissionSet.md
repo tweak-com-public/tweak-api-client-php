@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **approveOrdersByPortalAdmin** | **bool** |  | [optional] [default to true]
 **approveDesignsByPortalAdmin** | **bool** |  | [optional] [default to true]
 **id** | **string** |  | [optional] 
-**portalId** | **double** |  | [optional] 
+**portalId** | **string** |  | [optional] 
 **portal** | [**\Swagger\Client\Model\Portal**](Portal.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

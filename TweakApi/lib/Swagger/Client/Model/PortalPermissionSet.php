@@ -70,7 +70,7 @@ class PortalPermissionSet implements ArrayAccess
         'approveOrdersByPortalAdmin' => 'bool',
         'approveDesignsByPortalAdmin' => 'bool',
         'id' => 'string',
-        'portalId' => 'double',
+        'portalId' => 'string',
         'portal' => '\Swagger\Client\Model\Portal'
     );
 
@@ -266,7 +266,7 @@ class PortalPermissionSet implements ArrayAccess
 
     /**
      * Gets portalId
-     * @return double
+     * @return string
      */
     public function getPortalId()
     {
@@ -275,7 +275,7 @@ class PortalPermissionSet implements ArrayAccess
 
     /**
      * Sets portalId
-     * @param double $portalId
+     * @param string $portalId
      * @return $this
      */
     public function setPortalId($portalId)

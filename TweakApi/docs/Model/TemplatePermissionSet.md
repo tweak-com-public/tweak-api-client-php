@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **proofPdf** | **bool** |  | [optional] [default to false]
 **socialSharing** | **bool** |  | [optional] [default to false]
 **id** | **string** |  | [optional] 
-**templateId** | **double** |  | [optional] 
+**templateId** | **string** |  | [optional] 
 **template** | [**\Swagger\Client\Model\Template**](Template.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

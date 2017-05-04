@@ -176,6 +176,22 @@ class TemplateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "teamFolderId"
+     */
+    public function testPropertyTeamFolderId()
+    {
+
+    }
+
+    /**
+     * Test attribute "portalFolderId"
+     */
+    public function testPropertyPortalFolderId()
+    {
+
+    }
+
+    /**
      * Test attribute "portals"
      */
     public function testPropertyPortals()
@@ -219,6 +235,22 @@ class TemplateTest extends \PHPUnit_Framework_TestCase
      * Test attribute "tags"
      */
     public function testPropertyTags()
+    {
+
+    }
+
+    /**
+     * Test attribute "teamFolder"
+     */
+    public function testPropertyTeamFolder()
+    {
+
+    }
+
+    /**
+     * Test attribute "portalFolder"
+     */
+    public function testPropertyPortalFolder()
     {
 
     }

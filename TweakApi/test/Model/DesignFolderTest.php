@@ -1,6 +1,6 @@
 <?php
 /**
- * TeamMemberTest
+ * DesignFolderTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Tweak\Api;
 
 /**
- * TeamMemberTest Class Doc Comment
+ * DesignFolderTest Class Doc Comment
  *
  * @category    Class */
-// * @description TeamMember
+// * @description DesignFolder
 /**
  * @package     Tweak\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class TeamMemberTest extends \PHPUnit_Framework_TestCase
+class DesignFolderTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,33 +88,17 @@ class TeamMemberTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "TeamMember"
+     * Test "DesignFolder"
      */
-    public function testTeamMember()
+    public function testDesignFolder()
     {
 
     }
 
     /**
-     * Test attribute "roles"
+     * Test attribute "name"
      */
-    public function testPropertyRoles()
-    {
-
-    }
-
-    /**
-     * Test attribute "created"
-     */
-    public function testPropertyCreated()
-    {
-
-    }
-
-    /**
-     * Test attribute "modified"
-     */
-    public function testPropertyModified()
+    public function testPropertyName()
     {
 
     }
@@ -128,121 +112,65 @@ class TeamMemberTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "customerId"
+     * Test attribute "memberId"
      */
-    public function testPropertyCustomerId()
+    public function testPropertyMemberId()
     {
 
     }
 
     /**
-     * Test attribute "teamId"
+     * Test attribute "parentId"
      */
-    public function testPropertyTeamId()
+    public function testPropertyParentId()
     {
 
     }
 
     /**
-     * Test attribute "customer"
+     * Test attribute "portalId"
      */
-    public function testPropertyCustomer()
+    public function testPropertyPortalId()
     {
 
     }
 
     /**
-     * Test attribute "team"
+     * Test attribute "member"
      */
-    public function testPropertyTeam()
+    public function testPropertyMember()
     {
 
     }
 
     /**
-     * Test attribute "portals"
+     * Test attribute "children"
      */
-    public function testPropertyPortals()
+    public function testPropertyChildren()
     {
 
     }
 
     /**
-     * Test attribute "uploadedTemplates"
+     * Test attribute "parent"
      */
-    public function testPropertyUploadedTemplates()
+    public function testPropertyParent()
     {
 
     }
 
     /**
-     * Test attribute "templates"
+     * Test attribute "designs"
      */
-    public function testPropertyTemplates()
+    public function testPropertyDesigns()
     {
 
     }
 
     /**
-     * Test attribute "invitationTickets"
+     * Test attribute "portal"
      */
-    public function testPropertyInvitationTickets()
-    {
-
-    }
-
-    /**
-     * Test attribute "requestedDesigns"
-     */
-    public function testPropertyRequestedDesigns()
-    {
-
-    }
-
-    /**
-     * Test attribute "requestedDesignExports"
-     */
-    public function testPropertyRequestedDesignExports()
-    {
-
-    }
-
-    /**
-     * Test attribute "assignedDesigns"
-     */
-    public function testPropertyAssignedDesigns()
-    {
-
-    }
-
-    /**
-     * Test attribute "reviewedDesigns"
-     */
-    public function testPropertyReviewedDesigns()
-    {
-
-    }
-
-    /**
-     * Test attribute "commentedDesigns"
-     */
-    public function testPropertyCommentedDesigns()
-    {
-
-    }
-
-    /**
-     * Test attribute "designComments"
-     */
-    public function testPropertyDesignComments()
-    {
-
-    }
-
-    /**
-     * Test attribute "designFolders"
-     */
-    public function testPropertyDesignFolders()
+    public function testPropertyPortal()
     {
 
     }

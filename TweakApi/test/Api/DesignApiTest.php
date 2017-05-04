@@ -453,6 +453,17 @@ class DesignApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for designsIdFolderGet
+     *
+     * Fetches belongsTo relation folder..
+     *
+     */
+    public function testDesignsIdFolderGet()
+    {
+
+    }
+
+    /**
      * Test case for designsIdGet
      *
      * Find a model instance by {{id}} from the data source..

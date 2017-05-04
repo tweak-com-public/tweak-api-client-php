@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **modified** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **id** | **string** |  | [optional] 
-**customerId** | **double** |  | [optional] 
+**customerId** | **string** |  | [optional] 
 **teamId** | **string** |  | [optional] 
 **customer** | [**\Swagger\Client\Model\Customer**](Customer.md) |  | [optional] 
 **team** | [**\Swagger\Client\Model\Team**](Team.md) |  | [optional] 
@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **reviewedDesigns** | [**\Swagger\Client\Model\Design[]**](Design.md) |  | [optional] 
 **commentedDesigns** | [**\Swagger\Client\Model\Design[]**](Design.md) |  | [optional] 
 **designComments** | [**\Swagger\Client\Model\DesignComment[]**](DesignComment.md) |  | [optional] 
+**designFolders** | [**\Swagger\Client\Model\DesignFolder[]**](DesignFolder.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

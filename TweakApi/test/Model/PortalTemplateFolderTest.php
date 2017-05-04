@@ -1,6 +1,6 @@
 <?php
 /**
- * TeamMemberTest
+ * PortalTemplateFolderTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Tweak\Api;
 
 /**
- * TeamMemberTest Class Doc Comment
+ * PortalTemplateFolderTest Class Doc Comment
  *
  * @category    Class */
-// * @description TeamMember
+// * @description PortalTemplateFolder
 /**
  * @package     Tweak\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class TeamMemberTest extends \PHPUnit_Framework_TestCase
+class PortalTemplateFolderTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,17 +88,17 @@ class TeamMemberTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "TeamMember"
+     * Test "PortalTemplateFolder"
      */
-    public function testTeamMember()
+    public function testPortalTemplateFolder()
     {
 
     }
 
     /**
-     * Test attribute "roles"
+     * Test attribute "name"
      */
-    public function testPropertyRoles()
+    public function testPropertyName()
     {
 
     }
@@ -128,49 +128,41 @@ class TeamMemberTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "customerId"
+     * Test attribute "portalId"
      */
-    public function testPropertyCustomerId()
+    public function testPropertyPortalId()
     {
 
     }
 
     /**
-     * Test attribute "teamId"
+     * Test attribute "parentId"
      */
-    public function testPropertyTeamId()
+    public function testPropertyParentId()
     {
 
     }
 
     /**
-     * Test attribute "customer"
+     * Test attribute "portal"
      */
-    public function testPropertyCustomer()
+    public function testPropertyPortal()
     {
 
     }
 
     /**
-     * Test attribute "team"
+     * Test attribute "children"
      */
-    public function testPropertyTeam()
+    public function testPropertyChildren()
     {
 
     }
 
     /**
-     * Test attribute "portals"
+     * Test attribute "parent"
      */
-    public function testPropertyPortals()
-    {
-
-    }
-
-    /**
-     * Test attribute "uploadedTemplates"
-     */
-    public function testPropertyUploadedTemplates()
+    public function testPropertyParent()
     {
 
     }
@@ -179,70 +171,6 @@ class TeamMemberTest extends \PHPUnit_Framework_TestCase
      * Test attribute "templates"
      */
     public function testPropertyTemplates()
-    {
-
-    }
-
-    /**
-     * Test attribute "invitationTickets"
-     */
-    public function testPropertyInvitationTickets()
-    {
-
-    }
-
-    /**
-     * Test attribute "requestedDesigns"
-     */
-    public function testPropertyRequestedDesigns()
-    {
-
-    }
-
-    /**
-     * Test attribute "requestedDesignExports"
-     */
-    public function testPropertyRequestedDesignExports()
-    {
-
-    }
-
-    /**
-     * Test attribute "assignedDesigns"
-     */
-    public function testPropertyAssignedDesigns()
-    {
-
-    }
-
-    /**
-     * Test attribute "reviewedDesigns"
-     */
-    public function testPropertyReviewedDesigns()
-    {
-
-    }
-
-    /**
-     * Test attribute "commentedDesigns"
-     */
-    public function testPropertyCommentedDesigns()
-    {
-
-    }
-
-    /**
-     * Test attribute "designComments"
-     */
-    public function testPropertyDesignComments()
-    {
-
-    }
-
-    /**
-     * Test attribute "designFolders"
-     */
-    public function testPropertyDesignFolders()
     {
 
     }

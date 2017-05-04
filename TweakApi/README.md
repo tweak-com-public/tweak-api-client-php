@@ -178,6 +178,7 @@ Class | Method | HTTP request | Description
 *DesignApi* | [**designsIdExportsFkPut**](docs/Api/DesignApi.md#designsidexportsfkput) | **PUT** /Designs/{id}/exports/{fk} | Update a related item by id for exports.
 *DesignApi* | [**designsIdExportsGet**](docs/Api/DesignApi.md#designsidexportsget) | **GET** /Designs/{id}/exports | Queries exports of Design.
 *DesignApi* | [**designsIdExportsPost**](docs/Api/DesignApi.md#designsidexportspost) | **POST** /Designs/{id}/exports | Creates a new instance in exports of this model.
+*DesignApi* | [**designsIdFolderGet**](docs/Api/DesignApi.md#designsidfolderget) | **GET** /Designs/{id}/folder | Fetches belongsTo relation folder.
 *DesignApi* | [**designsIdGet**](docs/Api/DesignApi.md#designsidget) | **GET** /Designs/{id} | Find a model instance by {{id}} from the data source.
 *DesignApi* | [**designsIdHead**](docs/Api/DesignApi.md#designsidhead) | **HEAD** /Designs/{id} | Check whether a model instance exists in the data source.
 *DesignApi* | [**designsIdPatch**](docs/Api/DesignApi.md#designsidpatch) | **PATCH** /Designs/{id} | Patch attributes for a model instance and persist it into the data source.
@@ -251,6 +252,41 @@ Class | Method | HTTP request | Description
 *DesignExportApi* | [**designExportsReplaceOrCreatePost**](docs/Api/DesignExportApi.md#designexportsreplaceorcreatepost) | **POST** /DesignExports/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
 *DesignExportApi* | [**designExportsUpdatePost**](docs/Api/DesignExportApi.md#designexportsupdatepost) | **POST** /DesignExports/update | Update instances of the model matched by {{where}} from the data source.
 *DesignExportApi* | [**designExportsUpsertWithWherePost**](docs/Api/DesignExportApi.md#designexportsupsertwithwherepost) | **POST** /DesignExports/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
+*DesignFolderApi* | [**designFoldersChangeStreamGet**](docs/Api/DesignFolderApi.md#designfolderschangestreamget) | **GET** /DesignFolders/change-stream | Create a change stream.
+*DesignFolderApi* | [**designFoldersChangeStreamPost**](docs/Api/DesignFolderApi.md#designfolderschangestreampost) | **POST** /DesignFolders/change-stream | Create a change stream.
+*DesignFolderApi* | [**designFoldersCountGet**](docs/Api/DesignFolderApi.md#designfolderscountget) | **GET** /DesignFolders/count | Count instances of the model matched by where from the data source.
+*DesignFolderApi* | [**designFoldersFindOneGet**](docs/Api/DesignFolderApi.md#designfoldersfindoneget) | **GET** /DesignFolders/findOne | Find first instance of the model matched by filter from the data source.
+*DesignFolderApi* | [**designFoldersGet**](docs/Api/DesignFolderApi.md#designfoldersget) | **GET** /DesignFolders | Find all instances of the model matched by filter from the data source.
+*DesignFolderApi* | [**designFoldersIdChildrenCountGet**](docs/Api/DesignFolderApi.md#designfoldersidchildrencountget) | **GET** /DesignFolders/{id}/children/count | Counts children of DesignFolder.
+*DesignFolderApi* | [**designFoldersIdChildrenDelete**](docs/Api/DesignFolderApi.md#designfoldersidchildrendelete) | **DELETE** /DesignFolders/{id}/children | Deletes all children of this model.
+*DesignFolderApi* | [**designFoldersIdChildrenFkDelete**](docs/Api/DesignFolderApi.md#designfoldersidchildrenfkdelete) | **DELETE** /DesignFolders/{id}/children/{fk} | Delete a related item by id for children.
+*DesignFolderApi* | [**designFoldersIdChildrenFkGet**](docs/Api/DesignFolderApi.md#designfoldersidchildrenfkget) | **GET** /DesignFolders/{id}/children/{fk} | Find a related item by id for children.
+*DesignFolderApi* | [**designFoldersIdChildrenFkPut**](docs/Api/DesignFolderApi.md#designfoldersidchildrenfkput) | **PUT** /DesignFolders/{id}/children/{fk} | Update a related item by id for children.
+*DesignFolderApi* | [**designFoldersIdChildrenGet**](docs/Api/DesignFolderApi.md#designfoldersidchildrenget) | **GET** /DesignFolders/{id}/children | Queries children of DesignFolder.
+*DesignFolderApi* | [**designFoldersIdChildrenPost**](docs/Api/DesignFolderApi.md#designfoldersidchildrenpost) | **POST** /DesignFolders/{id}/children | Creates a new instance in children of this model.
+*DesignFolderApi* | [**designFoldersIdDelete**](docs/Api/DesignFolderApi.md#designfoldersiddelete) | **DELETE** /DesignFolders/{id} | Delete a model instance by {{id}} from the data source.
+*DesignFolderApi* | [**designFoldersIdDesignsCountGet**](docs/Api/DesignFolderApi.md#designfoldersiddesignscountget) | **GET** /DesignFolders/{id}/designs/count | Counts designs of DesignFolder.
+*DesignFolderApi* | [**designFoldersIdDesignsDelete**](docs/Api/DesignFolderApi.md#designfoldersiddesignsdelete) | **DELETE** /DesignFolders/{id}/designs | Deletes all designs of this model.
+*DesignFolderApi* | [**designFoldersIdDesignsFkDelete**](docs/Api/DesignFolderApi.md#designfoldersiddesignsfkdelete) | **DELETE** /DesignFolders/{id}/designs/{fk} | Delete a related item by id for designs.
+*DesignFolderApi* | [**designFoldersIdDesignsFkGet**](docs/Api/DesignFolderApi.md#designfoldersiddesignsfkget) | **GET** /DesignFolders/{id}/designs/{fk} | Find a related item by id for designs.
+*DesignFolderApi* | [**designFoldersIdDesignsFkPut**](docs/Api/DesignFolderApi.md#designfoldersiddesignsfkput) | **PUT** /DesignFolders/{id}/designs/{fk} | Update a related item by id for designs.
+*DesignFolderApi* | [**designFoldersIdDesignsGet**](docs/Api/DesignFolderApi.md#designfoldersiddesignsget) | **GET** /DesignFolders/{id}/designs | Queries designs of DesignFolder.
+*DesignFolderApi* | [**designFoldersIdDesignsPost**](docs/Api/DesignFolderApi.md#designfoldersiddesignspost) | **POST** /DesignFolders/{id}/designs | Creates a new instance in designs of this model.
+*DesignFolderApi* | [**designFoldersIdExistsGet**](docs/Api/DesignFolderApi.md#designfoldersidexistsget) | **GET** /DesignFolders/{id}/exists | Check whether a model instance exists in the data source.
+*DesignFolderApi* | [**designFoldersIdGet**](docs/Api/DesignFolderApi.md#designfoldersidget) | **GET** /DesignFolders/{id} | Find a model instance by {{id}} from the data source.
+*DesignFolderApi* | [**designFoldersIdHead**](docs/Api/DesignFolderApi.md#designfoldersidhead) | **HEAD** /DesignFolders/{id} | Check whether a model instance exists in the data source.
+*DesignFolderApi* | [**designFoldersIdMemberGet**](docs/Api/DesignFolderApi.md#designfoldersidmemberget) | **GET** /DesignFolders/{id}/member | Fetches belongsTo relation member.
+*DesignFolderApi* | [**designFoldersIdParentGet**](docs/Api/DesignFolderApi.md#designfoldersidparentget) | **GET** /DesignFolders/{id}/parent | Fetches belongsTo relation parent.
+*DesignFolderApi* | [**designFoldersIdPatch**](docs/Api/DesignFolderApi.md#designfoldersidpatch) | **PATCH** /DesignFolders/{id} | Patch attributes for a model instance and persist it into the data source.
+*DesignFolderApi* | [**designFoldersIdPortalGet**](docs/Api/DesignFolderApi.md#designfoldersidportalget) | **GET** /DesignFolders/{id}/portal | Fetches belongsTo relation portal.
+*DesignFolderApi* | [**designFoldersIdPut**](docs/Api/DesignFolderApi.md#designfoldersidput) | **PUT** /DesignFolders/{id} | Replace attributes for a model instance and persist it into the data source.
+*DesignFolderApi* | [**designFoldersIdReplacePost**](docs/Api/DesignFolderApi.md#designfoldersidreplacepost) | **POST** /DesignFolders/{id}/replace | Replace attributes for a model instance and persist it into the data source.
+*DesignFolderApi* | [**designFoldersPatch**](docs/Api/DesignFolderApi.md#designfolderspatch) | **PATCH** /DesignFolders | Patch an existing model instance or insert a new one into the data source.
+*DesignFolderApi* | [**designFoldersPost**](docs/Api/DesignFolderApi.md#designfolderspost) | **POST** /DesignFolders | Create a new instance of the model and persist it into the data source.
+*DesignFolderApi* | [**designFoldersPut**](docs/Api/DesignFolderApi.md#designfoldersput) | **PUT** /DesignFolders | Replace an existing model instance or insert a new one into the data source.
+*DesignFolderApi* | [**designFoldersReplaceOrCreatePost**](docs/Api/DesignFolderApi.md#designfoldersreplaceorcreatepost) | **POST** /DesignFolders/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
+*DesignFolderApi* | [**designFoldersUpdatePost**](docs/Api/DesignFolderApi.md#designfoldersupdatepost) | **POST** /DesignFolders/update | Update instances of the model matched by {{where}} from the data source.
+*DesignFolderApi* | [**designFoldersUpsertWithWherePost**](docs/Api/DesignFolderApi.md#designfoldersupsertwithwherepost) | **POST** /DesignFolders/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
 *DesignTagApi* | [**designTagsChangeStreamGet**](docs/Api/DesignTagApi.md#designtagschangestreamget) | **GET** /DesignTags/change-stream | Create a change stream.
 *DesignTagApi* | [**designTagsChangeStreamPost**](docs/Api/DesignTagApi.md#designtagschangestreampost) | **POST** /DesignTags/change-stream | Create a change stream.
 *DesignTagApi* | [**designTagsCountGet**](docs/Api/DesignTagApi.md#designtagscountget) | **GET** /DesignTags/count | Count instances of the model matched by where from the data source.
@@ -315,6 +351,13 @@ Class | Method | HTTP request | Description
 *PortalApi* | [**portalsFindOneGet**](docs/Api/PortalApi.md#portalsfindoneget) | **GET** /Portals/findOne | Find first instance of the model matched by filter from the data source.
 *PortalApi* | [**portalsGet**](docs/Api/PortalApi.md#portalsget) | **GET** /Portals | Find all instances of the model matched by filter from the data source.
 *PortalApi* | [**portalsIdDelete**](docs/Api/PortalApi.md#portalsiddelete) | **DELETE** /Portals/{id} | Delete a model instance by {{id}} from the data source.
+*PortalApi* | [**portalsIdDesignFoldersCountGet**](docs/Api/PortalApi.md#portalsiddesignfolderscountget) | **GET** /Portals/{id}/designFolders/count | Counts designFolders of Portal.
+*PortalApi* | [**portalsIdDesignFoldersDelete**](docs/Api/PortalApi.md#portalsiddesignfoldersdelete) | **DELETE** /Portals/{id}/designFolders | Deletes all designFolders of this model.
+*PortalApi* | [**portalsIdDesignFoldersFkDelete**](docs/Api/PortalApi.md#portalsiddesignfoldersfkdelete) | **DELETE** /Portals/{id}/designFolders/{fk} | Delete a related item by id for designFolders.
+*PortalApi* | [**portalsIdDesignFoldersFkGet**](docs/Api/PortalApi.md#portalsiddesignfoldersfkget) | **GET** /Portals/{id}/designFolders/{fk} | Find a related item by id for designFolders.
+*PortalApi* | [**portalsIdDesignFoldersFkPut**](docs/Api/PortalApi.md#portalsiddesignfoldersfkput) | **PUT** /Portals/{id}/designFolders/{fk} | Update a related item by id for designFolders.
+*PortalApi* | [**portalsIdDesignFoldersGet**](docs/Api/PortalApi.md#portalsiddesignfoldersget) | **GET** /Portals/{id}/designFolders | Queries designFolders of Portal.
+*PortalApi* | [**portalsIdDesignFoldersPost**](docs/Api/PortalApi.md#portalsiddesignfolderspost) | **POST** /Portals/{id}/designFolders | Creates a new instance in designFolders of this model.
 *PortalApi* | [**portalsIdDesignsCountGet**](docs/Api/PortalApi.md#portalsiddesignscountget) | **GET** /Portals/{id}/designs/count | Counts designs of Portal.
 *PortalApi* | [**portalsIdDesignsDelete**](docs/Api/PortalApi.md#portalsiddesignsdelete) | **DELETE** /Portals/{id}/designs | Deletes all designs of this model.
 *PortalApi* | [**portalsIdDesignsFkDelete**](docs/Api/PortalApi.md#portalsiddesignsfkdelete) | **DELETE** /Portals/{id}/designs/{fk} | Delete a related item by id for designs.
@@ -343,6 +386,13 @@ Class | Method | HTTP request | Description
 *PortalApi* | [**portalsIdPut**](docs/Api/PortalApi.md#portalsidput) | **PUT** /Portals/{id} | Replace attributes for a model instance and persist it into the data source.
 *PortalApi* | [**portalsIdReplacePost**](docs/Api/PortalApi.md#portalsidreplacepost) | **POST** /Portals/{id}/replace | Replace attributes for a model instance and persist it into the data source.
 *PortalApi* | [**portalsIdTeamGet**](docs/Api/PortalApi.md#portalsidteamget) | **GET** /Portals/{id}/team | Fetches belongsTo relation team.
+*PortalApi* | [**portalsIdTemplateFoldersCountGet**](docs/Api/PortalApi.md#portalsidtemplatefolderscountget) | **GET** /Portals/{id}/templateFolders/count | Counts templateFolders of Portal.
+*PortalApi* | [**portalsIdTemplateFoldersDelete**](docs/Api/PortalApi.md#portalsidtemplatefoldersdelete) | **DELETE** /Portals/{id}/templateFolders | Deletes all templateFolders of this model.
+*PortalApi* | [**portalsIdTemplateFoldersFkDelete**](docs/Api/PortalApi.md#portalsidtemplatefoldersfkdelete) | **DELETE** /Portals/{id}/templateFolders/{fk} | Delete a related item by id for templateFolders.
+*PortalApi* | [**portalsIdTemplateFoldersFkGet**](docs/Api/PortalApi.md#portalsidtemplatefoldersfkget) | **GET** /Portals/{id}/templateFolders/{fk} | Find a related item by id for templateFolders.
+*PortalApi* | [**portalsIdTemplateFoldersFkPut**](docs/Api/PortalApi.md#portalsidtemplatefoldersfkput) | **PUT** /Portals/{id}/templateFolders/{fk} | Update a related item by id for templateFolders.
+*PortalApi* | [**portalsIdTemplateFoldersGet**](docs/Api/PortalApi.md#portalsidtemplatefoldersget) | **GET** /Portals/{id}/templateFolders | Queries templateFolders of Portal.
+*PortalApi* | [**portalsIdTemplateFoldersPost**](docs/Api/PortalApi.md#portalsidtemplatefolderspost) | **POST** /Portals/{id}/templateFolders | Creates a new instance in templateFolders of this model.
 *PortalApi* | [**portalsIdTemplatesCountGet**](docs/Api/PortalApi.md#portalsidtemplatescountget) | **GET** /Portals/{id}/templates/count | Counts templates of Portal.
 *PortalApi* | [**portalsIdTemplatesDelete**](docs/Api/PortalApi.md#portalsidtemplatesdelete) | **DELETE** /Portals/{id}/templates | Deletes all templates of this model.
 *PortalApi* | [**portalsIdTemplatesFkDelete**](docs/Api/PortalApi.md#portalsidtemplatesfkdelete) | **DELETE** /Portals/{id}/templates/{fk} | Delete a related item by id for templates.
@@ -418,6 +468,40 @@ Class | Method | HTTP request | Description
 *PortalTemplateApi* | [**portalTemplatesReplaceOrCreatePost**](docs/Api/PortalTemplateApi.md#portaltemplatesreplaceorcreatepost) | **POST** /PortalTemplates/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
 *PortalTemplateApi* | [**portalTemplatesUpdatePost**](docs/Api/PortalTemplateApi.md#portaltemplatesupdatepost) | **POST** /PortalTemplates/update | Update instances of the model matched by {{where}} from the data source.
 *PortalTemplateApi* | [**portalTemplatesUpsertWithWherePost**](docs/Api/PortalTemplateApi.md#portaltemplatesupsertwithwherepost) | **POST** /PortalTemplates/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
+*PortalTemplateFolderApi* | [**portalTemplateFoldersChangeStreamGet**](docs/Api/PortalTemplateFolderApi.md#portaltemplatefolderschangestreamget) | **GET** /PortalTemplateFolders/change-stream | Create a change stream.
+*PortalTemplateFolderApi* | [**portalTemplateFoldersChangeStreamPost**](docs/Api/PortalTemplateFolderApi.md#portaltemplatefolderschangestreampost) | **POST** /PortalTemplateFolders/change-stream | Create a change stream.
+*PortalTemplateFolderApi* | [**portalTemplateFoldersCountGet**](docs/Api/PortalTemplateFolderApi.md#portaltemplatefolderscountget) | **GET** /PortalTemplateFolders/count | Count instances of the model matched by where from the data source.
+*PortalTemplateFolderApi* | [**portalTemplateFoldersFindOneGet**](docs/Api/PortalTemplateFolderApi.md#portaltemplatefoldersfindoneget) | **GET** /PortalTemplateFolders/findOne | Find first instance of the model matched by filter from the data source.
+*PortalTemplateFolderApi* | [**portalTemplateFoldersGet**](docs/Api/PortalTemplateFolderApi.md#portaltemplatefoldersget) | **GET** /PortalTemplateFolders | Find all instances of the model matched by filter from the data source.
+*PortalTemplateFolderApi* | [**portalTemplateFoldersIdChildrenCountGet**](docs/Api/PortalTemplateFolderApi.md#portaltemplatefoldersidchildrencountget) | **GET** /PortalTemplateFolders/{id}/children/count | Counts children of PortalTemplateFolder.
+*PortalTemplateFolderApi* | [**portalTemplateFoldersIdChildrenDelete**](docs/Api/PortalTemplateFolderApi.md#portaltemplatefoldersidchildrendelete) | **DELETE** /PortalTemplateFolders/{id}/children | Deletes all children of this model.
+*PortalTemplateFolderApi* | [**portalTemplateFoldersIdChildrenFkDelete**](docs/Api/PortalTemplateFolderApi.md#portaltemplatefoldersidchildrenfkdelete) | **DELETE** /PortalTemplateFolders/{id}/children/{fk} | Delete a related item by id for children.
+*PortalTemplateFolderApi* | [**portalTemplateFoldersIdChildrenFkGet**](docs/Api/PortalTemplateFolderApi.md#portaltemplatefoldersidchildrenfkget) | **GET** /PortalTemplateFolders/{id}/children/{fk} | Find a related item by id for children.
+*PortalTemplateFolderApi* | [**portalTemplateFoldersIdChildrenFkPut**](docs/Api/PortalTemplateFolderApi.md#portaltemplatefoldersidchildrenfkput) | **PUT** /PortalTemplateFolders/{id}/children/{fk} | Update a related item by id for children.
+*PortalTemplateFolderApi* | [**portalTemplateFoldersIdChildrenGet**](docs/Api/PortalTemplateFolderApi.md#portaltemplatefoldersidchildrenget) | **GET** /PortalTemplateFolders/{id}/children | Queries children of PortalTemplateFolder.
+*PortalTemplateFolderApi* | [**portalTemplateFoldersIdChildrenPost**](docs/Api/PortalTemplateFolderApi.md#portaltemplatefoldersidchildrenpost) | **POST** /PortalTemplateFolders/{id}/children | Creates a new instance in children of this model.
+*PortalTemplateFolderApi* | [**portalTemplateFoldersIdDelete**](docs/Api/PortalTemplateFolderApi.md#portaltemplatefoldersiddelete) | **DELETE** /PortalTemplateFolders/{id} | Delete a model instance by {{id}} from the data source.
+*PortalTemplateFolderApi* | [**portalTemplateFoldersIdExistsGet**](docs/Api/PortalTemplateFolderApi.md#portaltemplatefoldersidexistsget) | **GET** /PortalTemplateFolders/{id}/exists | Check whether a model instance exists in the data source.
+*PortalTemplateFolderApi* | [**portalTemplateFoldersIdGet**](docs/Api/PortalTemplateFolderApi.md#portaltemplatefoldersidget) | **GET** /PortalTemplateFolders/{id} | Find a model instance by {{id}} from the data source.
+*PortalTemplateFolderApi* | [**portalTemplateFoldersIdHead**](docs/Api/PortalTemplateFolderApi.md#portaltemplatefoldersidhead) | **HEAD** /PortalTemplateFolders/{id} | Check whether a model instance exists in the data source.
+*PortalTemplateFolderApi* | [**portalTemplateFoldersIdParentGet**](docs/Api/PortalTemplateFolderApi.md#portaltemplatefoldersidparentget) | **GET** /PortalTemplateFolders/{id}/parent | Fetches belongsTo relation parent.
+*PortalTemplateFolderApi* | [**portalTemplateFoldersIdPatch**](docs/Api/PortalTemplateFolderApi.md#portaltemplatefoldersidpatch) | **PATCH** /PortalTemplateFolders/{id} | Patch attributes for a model instance and persist it into the data source.
+*PortalTemplateFolderApi* | [**portalTemplateFoldersIdPortalGet**](docs/Api/PortalTemplateFolderApi.md#portaltemplatefoldersidportalget) | **GET** /PortalTemplateFolders/{id}/portal | Fetches belongsTo relation portal.
+*PortalTemplateFolderApi* | [**portalTemplateFoldersIdPut**](docs/Api/PortalTemplateFolderApi.md#portaltemplatefoldersidput) | **PUT** /PortalTemplateFolders/{id} | Replace attributes for a model instance and persist it into the data source.
+*PortalTemplateFolderApi* | [**portalTemplateFoldersIdReplacePost**](docs/Api/PortalTemplateFolderApi.md#portaltemplatefoldersidreplacepost) | **POST** /PortalTemplateFolders/{id}/replace | Replace attributes for a model instance and persist it into the data source.
+*PortalTemplateFolderApi* | [**portalTemplateFoldersIdTemplatesCountGet**](docs/Api/PortalTemplateFolderApi.md#portaltemplatefoldersidtemplatescountget) | **GET** /PortalTemplateFolders/{id}/templates/count | Counts templates of PortalTemplateFolder.
+*PortalTemplateFolderApi* | [**portalTemplateFoldersIdTemplatesDelete**](docs/Api/PortalTemplateFolderApi.md#portaltemplatefoldersidtemplatesdelete) | **DELETE** /PortalTemplateFolders/{id}/templates | Deletes all templates of this model.
+*PortalTemplateFolderApi* | [**portalTemplateFoldersIdTemplatesFkDelete**](docs/Api/PortalTemplateFolderApi.md#portaltemplatefoldersidtemplatesfkdelete) | **DELETE** /PortalTemplateFolders/{id}/templates/{fk} | Delete a related item by id for templates.
+*PortalTemplateFolderApi* | [**portalTemplateFoldersIdTemplatesFkGet**](docs/Api/PortalTemplateFolderApi.md#portaltemplatefoldersidtemplatesfkget) | **GET** /PortalTemplateFolders/{id}/templates/{fk} | Find a related item by id for templates.
+*PortalTemplateFolderApi* | [**portalTemplateFoldersIdTemplatesFkPut**](docs/Api/PortalTemplateFolderApi.md#portaltemplatefoldersidtemplatesfkput) | **PUT** /PortalTemplateFolders/{id}/templates/{fk} | Update a related item by id for templates.
+*PortalTemplateFolderApi* | [**portalTemplateFoldersIdTemplatesGet**](docs/Api/PortalTemplateFolderApi.md#portaltemplatefoldersidtemplatesget) | **GET** /PortalTemplateFolders/{id}/templates | Queries templates of PortalTemplateFolder.
+*PortalTemplateFolderApi* | [**portalTemplateFoldersIdTemplatesPost**](docs/Api/PortalTemplateFolderApi.md#portaltemplatefoldersidtemplatespost) | **POST** /PortalTemplateFolders/{id}/templates | Creates a new instance in templates of this model.
+*PortalTemplateFolderApi* | [**portalTemplateFoldersPatch**](docs/Api/PortalTemplateFolderApi.md#portaltemplatefolderspatch) | **PATCH** /PortalTemplateFolders | Patch an existing model instance or insert a new one into the data source.
+*PortalTemplateFolderApi* | [**portalTemplateFoldersPost**](docs/Api/PortalTemplateFolderApi.md#portaltemplatefolderspost) | **POST** /PortalTemplateFolders | Create a new instance of the model and persist it into the data source.
+*PortalTemplateFolderApi* | [**portalTemplateFoldersPut**](docs/Api/PortalTemplateFolderApi.md#portaltemplatefoldersput) | **PUT** /PortalTemplateFolders | Replace an existing model instance or insert a new one into the data source.
+*PortalTemplateFolderApi* | [**portalTemplateFoldersReplaceOrCreatePost**](docs/Api/PortalTemplateFolderApi.md#portaltemplatefoldersreplaceorcreatepost) | **POST** /PortalTemplateFolders/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
+*PortalTemplateFolderApi* | [**portalTemplateFoldersUpdatePost**](docs/Api/PortalTemplateFolderApi.md#portaltemplatefoldersupdatepost) | **POST** /PortalTemplateFolders/update | Update instances of the model matched by {{where}} from the data source.
+*PortalTemplateFolderApi* | [**portalTemplateFoldersUpsertWithWherePost**](docs/Api/PortalTemplateFolderApi.md#portaltemplatefoldersupsertwithwherepost) | **POST** /PortalTemplateFolders/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
 *TagApi* | [**tagsChangeStreamGet**](docs/Api/TagApi.md#tagschangestreamget) | **GET** /Tags/change-stream | Create a change stream.
 *TagApi* | [**tagsChangeStreamPost**](docs/Api/TagApi.md#tagschangestreampost) | **POST** /Tags/change-stream | Create a change stream.
 *TagApi* | [**tagsCountGet**](docs/Api/TagApi.md#tagscountget) | **GET** /Tags/count | Count instances of the model matched by where from the data source.
@@ -489,6 +573,13 @@ Class | Method | HTTP request | Description
 *TeamApi* | [**teamsIdPortalsPost**](docs/Api/TeamApi.md#teamsidportalspost) | **POST** /Teams/{id}/portals | Creates a new instance in portals of this model.
 *TeamApi* | [**teamsIdPut**](docs/Api/TeamApi.md#teamsidput) | **PUT** /Teams/{id} | Replace attributes for a model instance and persist it into the data source.
 *TeamApi* | [**teamsIdReplacePost**](docs/Api/TeamApi.md#teamsidreplacepost) | **POST** /Teams/{id}/replace | Replace attributes for a model instance and persist it into the data source.
+*TeamApi* | [**teamsIdTemplateFolderCountGet**](docs/Api/TeamApi.md#teamsidtemplatefoldercountget) | **GET** /Teams/{id}/templateFolder/count | Counts templateFolder of Team.
+*TeamApi* | [**teamsIdTemplateFolderDelete**](docs/Api/TeamApi.md#teamsidtemplatefolderdelete) | **DELETE** /Teams/{id}/templateFolder | Deletes all templateFolder of this model.
+*TeamApi* | [**teamsIdTemplateFolderFkDelete**](docs/Api/TeamApi.md#teamsidtemplatefolderfkdelete) | **DELETE** /Teams/{id}/templateFolder/{fk} | Delete a related item by id for templateFolder.
+*TeamApi* | [**teamsIdTemplateFolderFkGet**](docs/Api/TeamApi.md#teamsidtemplatefolderfkget) | **GET** /Teams/{id}/templateFolder/{fk} | Find a related item by id for templateFolder.
+*TeamApi* | [**teamsIdTemplateFolderFkPut**](docs/Api/TeamApi.md#teamsidtemplatefolderfkput) | **PUT** /Teams/{id}/templateFolder/{fk} | Update a related item by id for templateFolder.
+*TeamApi* | [**teamsIdTemplateFolderGet**](docs/Api/TeamApi.md#teamsidtemplatefolderget) | **GET** /Teams/{id}/templateFolder | Queries templateFolder of Team.
+*TeamApi* | [**teamsIdTemplateFolderPost**](docs/Api/TeamApi.md#teamsidtemplatefolderpost) | **POST** /Teams/{id}/templateFolder | Creates a new instance in templateFolder of this model.
 *TeamApi* | [**teamsIdTemplatesCountGet**](docs/Api/TeamApi.md#teamsidtemplatescountget) | **GET** /Teams/{id}/templates/count | Counts templates of Team.
 *TeamApi* | [**teamsIdTemplatesDelete**](docs/Api/TeamApi.md#teamsidtemplatesdelete) | **DELETE** /Teams/{id}/templates | Deletes all templates of this model.
 *TeamApi* | [**teamsIdTemplatesFkDelete**](docs/Api/TeamApi.md#teamsidtemplatesfkdelete) | **DELETE** /Teams/{id}/templates/{fk} | Delete a related item by id for templates.
@@ -533,6 +624,13 @@ Class | Method | HTTP request | Description
 *TeamMemberApi* | [**teamMembersIdDesignCommentsFkPut**](docs/Api/TeamMemberApi.md#teammembersiddesigncommentsfkput) | **PUT** /TeamMembers/{id}/designComments/{fk} | Update a related item by id for designComments.
 *TeamMemberApi* | [**teamMembersIdDesignCommentsGet**](docs/Api/TeamMemberApi.md#teammembersiddesigncommentsget) | **GET** /TeamMembers/{id}/designComments | Queries designComments of TeamMember.
 *TeamMemberApi* | [**teamMembersIdDesignCommentsPost**](docs/Api/TeamMemberApi.md#teammembersiddesigncommentspost) | **POST** /TeamMembers/{id}/designComments | Creates a new instance in designComments of this model.
+*TeamMemberApi* | [**teamMembersIdDesignFoldersCountGet**](docs/Api/TeamMemberApi.md#teammembersiddesignfolderscountget) | **GET** /TeamMembers/{id}/designFolders/count | Counts designFolders of TeamMember.
+*TeamMemberApi* | [**teamMembersIdDesignFoldersDelete**](docs/Api/TeamMemberApi.md#teammembersiddesignfoldersdelete) | **DELETE** /TeamMembers/{id}/designFolders | Deletes all designFolders of this model.
+*TeamMemberApi* | [**teamMembersIdDesignFoldersFkDelete**](docs/Api/TeamMemberApi.md#teammembersiddesignfoldersfkdelete) | **DELETE** /TeamMembers/{id}/designFolders/{fk} | Delete a related item by id for designFolders.
+*TeamMemberApi* | [**teamMembersIdDesignFoldersFkGet**](docs/Api/TeamMemberApi.md#teammembersiddesignfoldersfkget) | **GET** /TeamMembers/{id}/designFolders/{fk} | Find a related item by id for designFolders.
+*TeamMemberApi* | [**teamMembersIdDesignFoldersFkPut**](docs/Api/TeamMemberApi.md#teammembersiddesignfoldersfkput) | **PUT** /TeamMembers/{id}/designFolders/{fk} | Update a related item by id for designFolders.
+*TeamMemberApi* | [**teamMembersIdDesignFoldersGet**](docs/Api/TeamMemberApi.md#teammembersiddesignfoldersget) | **GET** /TeamMembers/{id}/designFolders | Queries designFolders of TeamMember.
+*TeamMemberApi* | [**teamMembersIdDesignFoldersPost**](docs/Api/TeamMemberApi.md#teammembersiddesignfolderspost) | **POST** /TeamMembers/{id}/designFolders | Creates a new instance in designFolders of this model.
 *TeamMemberApi* | [**teamMembersIdExistsGet**](docs/Api/TeamMemberApi.md#teammembersidexistsget) | **GET** /TeamMembers/{id}/exists | Check whether a model instance exists in the data source.
 *TeamMemberApi* | [**teamMembersIdGet**](docs/Api/TeamMemberApi.md#teammembersidget) | **GET** /TeamMembers/{id} | Find a model instance by {{id}} from the data source.
 *TeamMemberApi* | [**teamMembersIdHead**](docs/Api/TeamMemberApi.md#teammembersidhead) | **HEAD** /TeamMembers/{id} | Check whether a model instance exists in the data source.
@@ -605,6 +703,40 @@ Class | Method | HTTP request | Description
 *TeamMemberApi* | [**teamMembersReplaceOrCreatePost**](docs/Api/TeamMemberApi.md#teammembersreplaceorcreatepost) | **POST** /TeamMembers/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
 *TeamMemberApi* | [**teamMembersUpdatePost**](docs/Api/TeamMemberApi.md#teammembersupdatepost) | **POST** /TeamMembers/update | Update instances of the model matched by {{where}} from the data source.
 *TeamMemberApi* | [**teamMembersUpsertWithWherePost**](docs/Api/TeamMemberApi.md#teammembersupsertwithwherepost) | **POST** /TeamMembers/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
+*TeamTemplateFolderApi* | [**teamTemplateFoldersChangeStreamGet**](docs/Api/TeamTemplateFolderApi.md#teamtemplatefolderschangestreamget) | **GET** /TeamTemplateFolders/change-stream | Create a change stream.
+*TeamTemplateFolderApi* | [**teamTemplateFoldersChangeStreamPost**](docs/Api/TeamTemplateFolderApi.md#teamtemplatefolderschangestreampost) | **POST** /TeamTemplateFolders/change-stream | Create a change stream.
+*TeamTemplateFolderApi* | [**teamTemplateFoldersCountGet**](docs/Api/TeamTemplateFolderApi.md#teamtemplatefolderscountget) | **GET** /TeamTemplateFolders/count | Count instances of the model matched by where from the data source.
+*TeamTemplateFolderApi* | [**teamTemplateFoldersFindOneGet**](docs/Api/TeamTemplateFolderApi.md#teamtemplatefoldersfindoneget) | **GET** /TeamTemplateFolders/findOne | Find first instance of the model matched by filter from the data source.
+*TeamTemplateFolderApi* | [**teamTemplateFoldersGet**](docs/Api/TeamTemplateFolderApi.md#teamtemplatefoldersget) | **GET** /TeamTemplateFolders | Find all instances of the model matched by filter from the data source.
+*TeamTemplateFolderApi* | [**teamTemplateFoldersIdChildrenCountGet**](docs/Api/TeamTemplateFolderApi.md#teamtemplatefoldersidchildrencountget) | **GET** /TeamTemplateFolders/{id}/children/count | Counts children of TeamTemplateFolder.
+*TeamTemplateFolderApi* | [**teamTemplateFoldersIdChildrenDelete**](docs/Api/TeamTemplateFolderApi.md#teamtemplatefoldersidchildrendelete) | **DELETE** /TeamTemplateFolders/{id}/children | Deletes all children of this model.
+*TeamTemplateFolderApi* | [**teamTemplateFoldersIdChildrenFkDelete**](docs/Api/TeamTemplateFolderApi.md#teamtemplatefoldersidchildrenfkdelete) | **DELETE** /TeamTemplateFolders/{id}/children/{fk} | Delete a related item by id for children.
+*TeamTemplateFolderApi* | [**teamTemplateFoldersIdChildrenFkGet**](docs/Api/TeamTemplateFolderApi.md#teamtemplatefoldersidchildrenfkget) | **GET** /TeamTemplateFolders/{id}/children/{fk} | Find a related item by id for children.
+*TeamTemplateFolderApi* | [**teamTemplateFoldersIdChildrenFkPut**](docs/Api/TeamTemplateFolderApi.md#teamtemplatefoldersidchildrenfkput) | **PUT** /TeamTemplateFolders/{id}/children/{fk} | Update a related item by id for children.
+*TeamTemplateFolderApi* | [**teamTemplateFoldersIdChildrenGet**](docs/Api/TeamTemplateFolderApi.md#teamtemplatefoldersidchildrenget) | **GET** /TeamTemplateFolders/{id}/children | Queries children of TeamTemplateFolder.
+*TeamTemplateFolderApi* | [**teamTemplateFoldersIdChildrenPost**](docs/Api/TeamTemplateFolderApi.md#teamtemplatefoldersidchildrenpost) | **POST** /TeamTemplateFolders/{id}/children | Creates a new instance in children of this model.
+*TeamTemplateFolderApi* | [**teamTemplateFoldersIdDelete**](docs/Api/TeamTemplateFolderApi.md#teamtemplatefoldersiddelete) | **DELETE** /TeamTemplateFolders/{id} | Delete a model instance by {{id}} from the data source.
+*TeamTemplateFolderApi* | [**teamTemplateFoldersIdExistsGet**](docs/Api/TeamTemplateFolderApi.md#teamtemplatefoldersidexistsget) | **GET** /TeamTemplateFolders/{id}/exists | Check whether a model instance exists in the data source.
+*TeamTemplateFolderApi* | [**teamTemplateFoldersIdGet**](docs/Api/TeamTemplateFolderApi.md#teamtemplatefoldersidget) | **GET** /TeamTemplateFolders/{id} | Find a model instance by {{id}} from the data source.
+*TeamTemplateFolderApi* | [**teamTemplateFoldersIdHead**](docs/Api/TeamTemplateFolderApi.md#teamtemplatefoldersidhead) | **HEAD** /TeamTemplateFolders/{id} | Check whether a model instance exists in the data source.
+*TeamTemplateFolderApi* | [**teamTemplateFoldersIdParentGet**](docs/Api/TeamTemplateFolderApi.md#teamtemplatefoldersidparentget) | **GET** /TeamTemplateFolders/{id}/parent | Fetches belongsTo relation parent.
+*TeamTemplateFolderApi* | [**teamTemplateFoldersIdPatch**](docs/Api/TeamTemplateFolderApi.md#teamtemplatefoldersidpatch) | **PATCH** /TeamTemplateFolders/{id} | Patch attributes for a model instance and persist it into the data source.
+*TeamTemplateFolderApi* | [**teamTemplateFoldersIdPut**](docs/Api/TeamTemplateFolderApi.md#teamtemplatefoldersidput) | **PUT** /TeamTemplateFolders/{id} | Replace attributes for a model instance and persist it into the data source.
+*TeamTemplateFolderApi* | [**teamTemplateFoldersIdReplacePost**](docs/Api/TeamTemplateFolderApi.md#teamtemplatefoldersidreplacepost) | **POST** /TeamTemplateFolders/{id}/replace | Replace attributes for a model instance and persist it into the data source.
+*TeamTemplateFolderApi* | [**teamTemplateFoldersIdTeamGet**](docs/Api/TeamTemplateFolderApi.md#teamtemplatefoldersidteamget) | **GET** /TeamTemplateFolders/{id}/team | Fetches belongsTo relation team.
+*TeamTemplateFolderApi* | [**teamTemplateFoldersIdTemplatesCountGet**](docs/Api/TeamTemplateFolderApi.md#teamtemplatefoldersidtemplatescountget) | **GET** /TeamTemplateFolders/{id}/templates/count | Counts templates of TeamTemplateFolder.
+*TeamTemplateFolderApi* | [**teamTemplateFoldersIdTemplatesDelete**](docs/Api/TeamTemplateFolderApi.md#teamtemplatefoldersidtemplatesdelete) | **DELETE** /TeamTemplateFolders/{id}/templates | Deletes all templates of this model.
+*TeamTemplateFolderApi* | [**teamTemplateFoldersIdTemplatesFkDelete**](docs/Api/TeamTemplateFolderApi.md#teamtemplatefoldersidtemplatesfkdelete) | **DELETE** /TeamTemplateFolders/{id}/templates/{fk} | Delete a related item by id for templates.
+*TeamTemplateFolderApi* | [**teamTemplateFoldersIdTemplatesFkGet**](docs/Api/TeamTemplateFolderApi.md#teamtemplatefoldersidtemplatesfkget) | **GET** /TeamTemplateFolders/{id}/templates/{fk} | Find a related item by id for templates.
+*TeamTemplateFolderApi* | [**teamTemplateFoldersIdTemplatesFkPut**](docs/Api/TeamTemplateFolderApi.md#teamtemplatefoldersidtemplatesfkput) | **PUT** /TeamTemplateFolders/{id}/templates/{fk} | Update a related item by id for templates.
+*TeamTemplateFolderApi* | [**teamTemplateFoldersIdTemplatesGet**](docs/Api/TeamTemplateFolderApi.md#teamtemplatefoldersidtemplatesget) | **GET** /TeamTemplateFolders/{id}/templates | Queries templates of TeamTemplateFolder.
+*TeamTemplateFolderApi* | [**teamTemplateFoldersIdTemplatesPost**](docs/Api/TeamTemplateFolderApi.md#teamtemplatefoldersidtemplatespost) | **POST** /TeamTemplateFolders/{id}/templates | Creates a new instance in templates of this model.
+*TeamTemplateFolderApi* | [**teamTemplateFoldersPatch**](docs/Api/TeamTemplateFolderApi.md#teamtemplatefolderspatch) | **PATCH** /TeamTemplateFolders | Patch an existing model instance or insert a new one into the data source.
+*TeamTemplateFolderApi* | [**teamTemplateFoldersPost**](docs/Api/TeamTemplateFolderApi.md#teamtemplatefolderspost) | **POST** /TeamTemplateFolders | Create a new instance of the model and persist it into the data source.
+*TeamTemplateFolderApi* | [**teamTemplateFoldersPut**](docs/Api/TeamTemplateFolderApi.md#teamtemplatefoldersput) | **PUT** /TeamTemplateFolders | Replace an existing model instance or insert a new one into the data source.
+*TeamTemplateFolderApi* | [**teamTemplateFoldersReplaceOrCreatePost**](docs/Api/TeamTemplateFolderApi.md#teamtemplatefoldersreplaceorcreatepost) | **POST** /TeamTemplateFolders/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
+*TeamTemplateFolderApi* | [**teamTemplateFoldersUpdatePost**](docs/Api/TeamTemplateFolderApi.md#teamtemplatefoldersupdatepost) | **POST** /TeamTemplateFolders/update | Update instances of the model matched by {{where}} from the data source.
+*TeamTemplateFolderApi* | [**teamTemplateFoldersUpsertWithWherePost**](docs/Api/TeamTemplateFolderApi.md#teamtemplatefoldersupsertwithwherepost) | **POST** /TeamTemplateFolders/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
 *TemplateApi* | [**templatesChangeStreamGet**](docs/Api/TemplateApi.md#templateschangestreamget) | **GET** /Templates/change-stream | Create a change stream.
 *TemplateApi* | [**templatesChangeStreamPost**](docs/Api/TemplateApi.md#templateschangestreampost) | **POST** /Templates/change-stream | Create a change stream.
 *TemplateApi* | [**templatesCountGet**](docs/Api/TemplateApi.md#templatescountget) | **GET** /Templates/count | Count instances of the model matched by where from the data source.
@@ -637,6 +769,7 @@ Class | Method | HTTP request | Description
 *TemplateApi* | [**templatesIdPermissionGet**](docs/Api/TemplateApi.md#templatesidpermissionget) | **GET** /Templates/{id}/permission | Fetches hasOne relation permission.
 *TemplateApi* | [**templatesIdPermissionPost**](docs/Api/TemplateApi.md#templatesidpermissionpost) | **POST** /Templates/{id}/permission | Creates a new instance in permission of this model.
 *TemplateApi* | [**templatesIdPermissionPut**](docs/Api/TemplateApi.md#templatesidpermissionput) | **PUT** /Templates/{id}/permission | Update permission of this model.
+*TemplateApi* | [**templatesIdPortalFolderGet**](docs/Api/TemplateApi.md#templatesidportalfolderget) | **GET** /Templates/{id}/portalFolder | Fetches belongsTo relation portalFolder.
 *TemplateApi* | [**templatesIdPortalsCountGet**](docs/Api/TemplateApi.md#templatesidportalscountget) | **GET** /Templates/{id}/portals/count | Counts portals of Template.
 *TemplateApi* | [**templatesIdPortalsDelete**](docs/Api/TemplateApi.md#templatesidportalsdelete) | **DELETE** /Templates/{id}/portals | Deletes all portals of this model.
 *TemplateApi* | [**templatesIdPortalsFkDelete**](docs/Api/TemplateApi.md#templatesidportalsfkdelete) | **DELETE** /Templates/{id}/portals/{fk} | Delete a related item by id for portals.
@@ -659,6 +792,7 @@ Class | Method | HTTP request | Description
 *TemplateApi* | [**templatesIdTagsRelFkDelete**](docs/Api/TemplateApi.md#templatesidtagsrelfkdelete) | **DELETE** /Templates/{id}/tags/rel/{fk} | Remove the tags relation to an item by id.
 *TemplateApi* | [**templatesIdTagsRelFkHead**](docs/Api/TemplateApi.md#templatesidtagsrelfkhead) | **HEAD** /Templates/{id}/tags/rel/{fk} | Check the existence of tags relation to an item by id.
 *TemplateApi* | [**templatesIdTagsRelFkPut**](docs/Api/TemplateApi.md#templatesidtagsrelfkput) | **PUT** /Templates/{id}/tags/rel/{fk} | Add a related item by id for tags.
+*TemplateApi* | [**templatesIdTeamFolderGet**](docs/Api/TemplateApi.md#templatesidteamfolderget) | **GET** /Templates/{id}/teamFolder | Fetches belongsTo relation teamFolder.
 *TemplateApi* | [**templatesIdTeamGet**](docs/Api/TemplateApi.md#templatesidteamget) | **GET** /Templates/{id}/team | Fetches belongsTo relation team.
 *TemplateApi* | [**templatesPatch**](docs/Api/TemplateApi.md#templatespatch) | **PATCH** /Templates | Patch an existing model instance or insert a new one into the data source.
 *TemplateApi* | [**templatesPost**](docs/Api/TemplateApi.md#templatespost) | **POST** /Templates | Create a new instance of the model and persist it into the data source.
@@ -734,6 +868,7 @@ Class | Method | HTTP request | Description
  - [Design](docs/Model/Design.md)
  - [DesignComment](docs/Model/DesignComment.md)
  - [DesignExport](docs/Model/DesignExport.md)
+ - [DesignFolder](docs/Model/DesignFolder.md)
  - [DesignTag](docs/Model/DesignTag.md)
  - [GeoPoint](docs/Model/GeoPoint.md)
  - [Image](docs/Model/Image.md)
@@ -746,11 +881,13 @@ Class | Method | HTTP request | Description
  - [PortalMember](docs/Model/PortalMember.md)
  - [PortalPermissionSet](docs/Model/PortalPermissionSet.md)
  - [PortalTemplate](docs/Model/PortalTemplate.md)
+ - [PortalTemplateFolder](docs/Model/PortalTemplateFolder.md)
  - [Tag](docs/Model/Tag.md)
  - [Team](docs/Model/Team.md)
  - [TeamBrand](docs/Model/TeamBrand.md)
  - [TeamMember](docs/Model/TeamMember.md)
  - [TeamMemberAccessToken](docs/Model/TeamMemberAccessToken.md)
+ - [TeamTemplateFolder](docs/Model/TeamTemplateFolder.md)
  - [Template](docs/Model/Template.md)
  - [TemplateMember](docs/Model/TemplateMember.md)
  - [TemplatePermissionSet](docs/Model/TemplatePermissionSet.md)

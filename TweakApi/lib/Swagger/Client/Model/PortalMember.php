@@ -70,8 +70,8 @@ class PortalMember implements ArrayAccess
         'created' => '\DateTime',
         'modified' => '\DateTime',
         'id' => 'string',
-        'portalId' => 'double',
-        'memberId' => 'double',
+        'portalId' => 'string',
+        'memberId' => 'string',
         'portal' => '\Swagger\Client\Model\Portal',
         'member' => '\Swagger\Client\Model\TeamMember'
     );
@@ -282,7 +282,7 @@ class PortalMember implements ArrayAccess
 
     /**
      * Gets portalId
-     * @return double
+     * @return string
      */
     public function getPortalId()
     {
@@ -291,7 +291,7 @@ class PortalMember implements ArrayAccess
 
     /**
      * Sets portalId
-     * @param double $portalId
+     * @param string $portalId
      * @return $this
      */
     public function setPortalId($portalId)
@@ -303,7 +303,7 @@ class PortalMember implements ArrayAccess
 
     /**
      * Gets memberId
-     * @return double
+     * @return string
      */
     public function getMemberId()
     {
@@ -312,7 +312,7 @@ class PortalMember implements ArrayAccess
 
     /**
      * Sets memberId
-     * @param double $memberId
+     * @param string $memberId
      * @return $this
      */
     public function setMemberId($memberId)

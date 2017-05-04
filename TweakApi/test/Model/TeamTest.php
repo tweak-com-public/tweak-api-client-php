@@ -231,4 +231,12 @@ class TeamTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "templateFolder"
+     */
+    public function testPropertyTemplateFolder()
+    {
+
+    }
+
 }

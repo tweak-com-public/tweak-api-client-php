@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** |  | [optional] 
-**portalId** | **double** |  | [optional] 
-**templateId** | **double** |  | [optional] 
+**portalId** | **string** |  | [optional] 
+**templateId** | **string** |  | [optional] 
 **portal** | [**\Swagger\Client\Model\Portal**](Portal.md) |  | [optional] 
 **template** | [**\Swagger\Client\Model\Template**](Template.md) |  | [optional] 
 

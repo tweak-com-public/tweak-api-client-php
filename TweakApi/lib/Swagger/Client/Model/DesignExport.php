@@ -69,8 +69,8 @@ class DesignExport implements ArrayAccess
         'type' => 'string',
         'created' => '\DateTime',
         'id' => 'string',
-        'designId' => 'double',
-        'requesterId' => 'double',
+        'designId' => 'string',
+        'requesterId' => 'string',
         'designs' => '\Swagger\Client\Model\Design',
         'requester' => '\Swagger\Client\Model\TeamMember'
     );
@@ -283,7 +283,7 @@ class DesignExport implements ArrayAccess
 
     /**
      * Gets designId
-     * @return double
+     * @return string
      */
     public function getDesignId()
     {
@@ -292,7 +292,7 @@ class DesignExport implements ArrayAccess
 
     /**
      * Sets designId
-     * @param double $designId
+     * @param string $designId
      * @return $this
      */
     public function setDesignId($designId)
@@ -304,7 +304,7 @@ class DesignExport implements ArrayAccess
 
     /**
      * Gets requesterId
-     * @return double
+     * @return string
      */
     public function getRequesterId()
     {
@@ -313,7 +313,7 @@ class DesignExport implements ArrayAccess
 
     /**
      * Sets requesterId
-     * @param double $requesterId
+     * @param string $requesterId
      * @return $this
      */
     public function setRequesterId($requesterId)

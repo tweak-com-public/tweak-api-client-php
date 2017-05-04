@@ -75,13 +75,17 @@ class Template implements ArrayAccess
         'modified' => '\DateTime',
         'id' => 'string',
         'teamId' => 'string',
-        'memberId' => 'double',
+        'memberId' => 'string',
+        'teamFolderId' => 'string',
+        'portalFolderId' => 'string',
         'portals' => '\Swagger\Client\Model\Portal[]',
         'team' => '\Swagger\Client\Model\Team',
         'members' => '\Swagger\Client\Model\TeamMember[]',
         'permission' => '\Swagger\Client\Model\TemplatePermissionSet',
         'designs' => '\Swagger\Client\Model\Design[]',
-        'tags' => '\Swagger\Client\Model\Tag[]'
+        'tags' => '\Swagger\Client\Model\Tag[]',
+        'teamFolder' => '\Swagger\Client\Model\TeamTemplateFolder',
+        'portalFolder' => '\Swagger\Client\Model\PortalTemplateFolder'
     );
 
     public static function swaggerTypes()
@@ -104,12 +108,16 @@ class Template implements ArrayAccess
         'id' => 'id',
         'teamId' => 'teamId',
         'memberId' => 'memberId',
+        'teamFolderId' => 'teamFolderId',
+        'portalFolderId' => 'portalFolderId',
         'portals' => 'portals',
         'team' => 'team',
         'members' => 'members',
         'permission' => 'permission',
         'designs' => 'designs',
-        'tags' => 'tags'
+        'tags' => 'tags',
+        'teamFolder' => 'teamFolder',
+        'portalFolder' => 'portalFolder'
     );
 
     public static function attributeMap()
@@ -132,12 +140,16 @@ class Template implements ArrayAccess
         'id' => 'setId',
         'teamId' => 'setTeamId',
         'memberId' => 'setMemberId',
+        'teamFolderId' => 'setTeamFolderId',
+        'portalFolderId' => 'setPortalFolderId',
         'portals' => 'setPortals',
         'team' => 'setTeam',
         'members' => 'setMembers',
         'permission' => 'setPermission',
         'designs' => 'setDesigns',
-        'tags' => 'setTags'
+        'tags' => 'setTags',
+        'teamFolder' => 'setTeamFolder',
+        'portalFolder' => 'setPortalFolder'
     );
 
     public static function setters()
@@ -160,12 +172,16 @@ class Template implements ArrayAccess
         'id' => 'getId',
         'teamId' => 'getTeamId',
         'memberId' => 'getMemberId',
+        'teamFolderId' => 'getTeamFolderId',
+        'portalFolderId' => 'getPortalFolderId',
         'portals' => 'getPortals',
         'team' => 'getTeam',
         'members' => 'getMembers',
         'permission' => 'getPermission',
         'designs' => 'getDesigns',
-        'tags' => 'getTags'
+        'tags' => 'getTags',
+        'teamFolder' => 'getTeamFolder',
+        'portalFolder' => 'getPortalFolder'
     );
 
     public static function getters()
@@ -199,12 +215,16 @@ class Template implements ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['teamId'] = isset($data['teamId']) ? $data['teamId'] : null;
         $this->container['memberId'] = isset($data['memberId']) ? $data['memberId'] : null;
+        $this->container['teamFolderId'] = isset($data['teamFolderId']) ? $data['teamFolderId'] : null;
+        $this->container['portalFolderId'] = isset($data['portalFolderId']) ? $data['portalFolderId'] : null;
         $this->container['portals'] = isset($data['portals']) ? $data['portals'] : null;
         $this->container['team'] = isset($data['team']) ? $data['team'] : null;
         $this->container['members'] = isset($data['members']) ? $data['members'] : null;
         $this->container['permission'] = isset($data['permission']) ? $data['permission'] : null;
         $this->container['designs'] = isset($data['designs']) ? $data['designs'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['teamFolder'] = isset($data['teamFolder']) ? $data['teamFolder'] : null;
+        $this->container['portalFolder'] = isset($data['portalFolder']) ? $data['portalFolder'] : null;
     }
 
     /**
@@ -433,7 +453,7 @@ class Template implements ArrayAccess
 
     /**
      * Gets memberId
-     * @return double
+     * @return string
      */
     public function getMemberId()
     {
@@ -442,12 +462,54 @@ class Template implements ArrayAccess
 
     /**
      * Sets memberId
-     * @param double $memberId
+     * @param string $memberId
      * @return $this
      */
     public function setMemberId($memberId)
     {
         $this->container['memberId'] = $memberId;
+
+        return $this;
+    }
+
+    /**
+     * Gets teamFolderId
+     * @return string
+     */
+    public function getTeamFolderId()
+    {
+        return $this->container['teamFolderId'];
+    }
+
+    /**
+     * Sets teamFolderId
+     * @param string $teamFolderId
+     * @return $this
+     */
+    public function setTeamFolderId($teamFolderId)
+    {
+        $this->container['teamFolderId'] = $teamFolderId;
+
+        return $this;
+    }
+
+    /**
+     * Gets portalFolderId
+     * @return string
+     */
+    public function getPortalFolderId()
+    {
+        return $this->container['portalFolderId'];
+    }
+
+    /**
+     * Sets portalFolderId
+     * @param string $portalFolderId
+     * @return $this
+     */
+    public function setPortalFolderId($portalFolderId)
+    {
+        $this->container['portalFolderId'] = $portalFolderId;
 
         return $this;
     }
@@ -574,6 +636,48 @@ class Template implements ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+
+        return $this;
+    }
+
+    /**
+     * Gets teamFolder
+     * @return \Swagger\Client\Model\TeamTemplateFolder
+     */
+    public function getTeamFolder()
+    {
+        return $this->container['teamFolder'];
+    }
+
+    /**
+     * Sets teamFolder
+     * @param \Swagger\Client\Model\TeamTemplateFolder $teamFolder
+     * @return $this
+     */
+    public function setTeamFolder($teamFolder)
+    {
+        $this->container['teamFolder'] = $teamFolder;
+
+        return $this;
+    }
+
+    /**
+     * Gets portalFolder
+     * @return \Swagger\Client\Model\PortalTemplateFolder
+     */
+    public function getPortalFolder()
+    {
+        return $this->container['portalFolder'];
+    }
+
+    /**
+     * Sets portalFolder
+     * @param \Swagger\Client\Model\PortalTemplateFolder $portalFolder
+     * @return $this
+     */
+    public function setPortalFolder($portalFolder)
+    {
+        $this->container['portalFolder'] = $portalFolder;
 
         return $this;
     }

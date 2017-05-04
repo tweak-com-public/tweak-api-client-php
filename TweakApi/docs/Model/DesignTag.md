@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** |  | [optional] 
-**designId** | **double** |  | [optional] 
-**tagId** | **double** |  | [optional] 
+**designId** | **string** |  | [optional] 
+**tagId** | **string** |  | [optional] 
 **design** | [**\Swagger\Client\Model\Design**](Design.md) |  | [optional] 
 **tag** | [**\Swagger\Client\Model\Tag**](Tag.md) |  | [optional] 
 

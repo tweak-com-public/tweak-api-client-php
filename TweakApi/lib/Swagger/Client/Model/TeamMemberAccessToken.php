@@ -69,11 +69,11 @@ class TeamMemberAccessToken implements ArrayAccess
         'id' => 'string',
         'ttl' => 'double',
         'created' => '\DateTime',
-        'userId' => 'double',
+        'userId' => 'string',
         'teamId' => 'string',
-        'teamMemberId' => 'double',
-        'portalId' => 'double',
-        'portalMemberId' => 'double',
+        'teamMemberId' => 'string',
+        'portalId' => 'string',
+        'portalMemberId' => 'string',
         'customer' => '\Swagger\Client\Model\Customer',
         'team' => '\Swagger\Client\Model\Team',
         'teamMember' => '\Swagger\Client\Model\TeamMember',
@@ -286,7 +286,7 @@ class TeamMemberAccessToken implements ArrayAccess
 
     /**
      * Gets userId
-     * @return double
+     * @return string
      */
     public function getUserId()
     {
@@ -295,7 +295,7 @@ class TeamMemberAccessToken implements ArrayAccess
 
     /**
      * Sets userId
-     * @param double $userId
+     * @param string $userId
      * @return $this
      */
     public function setUserId($userId)
@@ -328,7 +328,7 @@ class TeamMemberAccessToken implements ArrayAccess
 
     /**
      * Gets teamMemberId
-     * @return double
+     * @return string
      */
     public function getTeamMemberId()
     {
@@ -337,7 +337,7 @@ class TeamMemberAccessToken implements ArrayAccess
 
     /**
      * Sets teamMemberId
-     * @param double $teamMemberId
+     * @param string $teamMemberId
      * @return $this
      */
     public function setTeamMemberId($teamMemberId)
@@ -349,7 +349,7 @@ class TeamMemberAccessToken implements ArrayAccess
 
     /**
      * Gets portalId
-     * @return double
+     * @return string
      */
     public function getPortalId()
     {
@@ -358,7 +358,7 @@ class TeamMemberAccessToken implements ArrayAccess
 
     /**
      * Sets portalId
-     * @param double $portalId
+     * @param string $portalId
      * @return $this
      */
     public function setPortalId($portalId)
@@ -370,7 +370,7 @@ class TeamMemberAccessToken implements ArrayAccess
 
     /**
      * Gets portalMemberId
-     * @return double
+     * @return string
      */
     public function getPortalMemberId()
     {
@@ -379,7 +379,7 @@ class TeamMemberAccessToken implements ArrayAccess
 
     /**
      * Sets portalMemberId
-     * @param double $portalMemberId
+     * @param string $portalMemberId
      * @return $this
      */
     public function setPortalMemberId($portalMemberId)

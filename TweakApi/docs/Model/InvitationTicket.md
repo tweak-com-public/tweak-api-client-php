@@ -13,8 +13,8 @@ Name | Type | Description | Notes
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **modified** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **id** | **string** |  | [optional] 
-**inviteeId** | **double** |  | [optional] 
-**inviterId** | **double** |  | [optional] 
+**inviteeId** | **string** |  | [optional] 
+**inviterId** | **string** |  | [optional] 
 **invitee** | [**\Swagger\Client\Model\Customer**](Customer.md) |  | [optional] 
 **inviter** | [**\Swagger\Client\Model\TeamMember**](TeamMember.md) |  | [optional] 
 

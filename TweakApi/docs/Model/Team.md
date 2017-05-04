@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **portals** | [**\Swagger\Client\Model\Portal[]**](Portal.md) |  | [optional] 
 **templates** | [**\Swagger\Client\Model\Template[]**](Template.md) |  | [optional] 
 **brand** | [**\Swagger\Client\Model\TeamBrand**](TeamBrand.md) |  | [optional] 
+**templateFolder** | [**\Swagger\Client\Model\TeamTemplateFolder[]**](TeamTemplateFolder.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

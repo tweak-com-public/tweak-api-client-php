@@ -68,7 +68,7 @@ class CustomerPermissionSet implements ArrayAccess
     protected static $swaggerTypes = array(
         'tweakEmail' => 'bool',
         'id' => 'string',
-        'customerId' => 'double',
+        'customerId' => 'string',
         'customer' => '\Swagger\Client\Model\Customer'
     );
 
@@ -214,7 +214,7 @@ class CustomerPermissionSet implements ArrayAccess
 
     /**
      * Gets customerId
-     * @return double
+     * @return string
      */
     public function getCustomerId()
     {
@@ -223,7 +223,7 @@ class CustomerPermissionSet implements ArrayAccess
 
     /**
      * Sets customerId
-     * @param double $customerId
+     * @param string $customerId
      * @return $this
      */
     public function setCustomerId($customerId)

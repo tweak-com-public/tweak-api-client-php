@@ -431,6 +431,83 @@ class TeamMemberApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for teamMembersIdDesignFoldersCountGet
+     *
+     * Counts designFolders of TeamMember..
+     *
+     */
+    public function testTeamMembersIdDesignFoldersCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdDesignFoldersDelete
+     *
+     * Deletes all designFolders of this model..
+     *
+     */
+    public function testTeamMembersIdDesignFoldersDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdDesignFoldersFkDelete
+     *
+     * Delete a related item by id for designFolders..
+     *
+     */
+    public function testTeamMembersIdDesignFoldersFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdDesignFoldersFkGet
+     *
+     * Find a related item by id for designFolders..
+     *
+     */
+    public function testTeamMembersIdDesignFoldersFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdDesignFoldersFkPut
+     *
+     * Update a related item by id for designFolders..
+     *
+     */
+    public function testTeamMembersIdDesignFoldersFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdDesignFoldersGet
+     *
+     * Queries designFolders of TeamMember..
+     *
+     */
+    public function testTeamMembersIdDesignFoldersGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdDesignFoldersPost
+     *
+     * Creates a new instance in designFolders of this model..
+     *
+     */
+    public function testTeamMembersIdDesignFoldersPost()
+    {
+
+    }
+
+    /**
      * Test case for teamMembersIdExistsGet
      *
      * Check whether a model instance exists in the data source..

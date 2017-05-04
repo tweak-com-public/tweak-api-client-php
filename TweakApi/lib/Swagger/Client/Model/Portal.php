@@ -78,7 +78,9 @@ class Portal implements ArrayAccess
         'members' => '\Swagger\Client\Model\TeamMember[]',
         'team' => '\Swagger\Client\Model\Team',
         'permission' => '\Swagger\Client\Model\PortalPermissionSet',
-        'designs' => '\Swagger\Client\Model\Design[]'
+        'designs' => '\Swagger\Client\Model\Design[]',
+        'templateFolders' => '\Swagger\Client\Model\PortalTemplateFolder[]',
+        'designFolders' => '\Swagger\Client\Model\DesignFolder[]'
     );
 
     public static function swaggerTypes()
@@ -103,7 +105,9 @@ class Portal implements ArrayAccess
         'members' => 'members',
         'team' => 'team',
         'permission' => 'permission',
-        'designs' => 'designs'
+        'designs' => 'designs',
+        'templateFolders' => 'templateFolders',
+        'designFolders' => 'designFolders'
     );
 
     public static function attributeMap()
@@ -128,7 +132,9 @@ class Portal implements ArrayAccess
         'members' => 'setMembers',
         'team' => 'setTeam',
         'permission' => 'setPermission',
-        'designs' => 'setDesigns'
+        'designs' => 'setDesigns',
+        'templateFolders' => 'setTemplateFolders',
+        'designFolders' => 'setDesignFolders'
     );
 
     public static function setters()
@@ -153,7 +159,9 @@ class Portal implements ArrayAccess
         'members' => 'getMembers',
         'team' => 'getTeam',
         'permission' => 'getPermission',
-        'designs' => 'getDesigns'
+        'designs' => 'getDesigns',
+        'templateFolders' => 'getTemplateFolders',
+        'designFolders' => 'getDesignFolders'
     );
 
     public static function getters()
@@ -518,6 +526,8 @@ class Portal implements ArrayAccess
         $this->container['team'] = isset($data['team']) ? $data['team'] : null;
         $this->container['permission'] = isset($data['permission']) ? $data['permission'] : null;
         $this->container['designs'] = isset($data['designs']) ? $data['designs'] : null;
+        $this->container['templateFolders'] = isset($data['templateFolders']) ? $data['templateFolders'] : null;
+        $this->container['designFolders'] = isset($data['designFolders']) ? $data['designFolders'] : null;
     }
 
     /**
@@ -844,6 +854,48 @@ class Portal implements ArrayAccess
     public function setDesigns($designs)
     {
         $this->container['designs'] = $designs;
+
+        return $this;
+    }
+
+    /**
+     * Gets templateFolders
+     * @return \Swagger\Client\Model\PortalTemplateFolder[]
+     */
+    public function getTemplateFolders()
+    {
+        return $this->container['templateFolders'];
+    }
+
+    /**
+     * Sets templateFolders
+     * @param \Swagger\Client\Model\PortalTemplateFolder[] $templateFolders
+     * @return $this
+     */
+    public function setTemplateFolders($templateFolders)
+    {
+        $this->container['templateFolders'] = $templateFolders;
+
+        return $this;
+    }
+
+    /**
+     * Gets designFolders
+     * @return \Swagger\Client\Model\DesignFolder[]
+     */
+    public function getDesignFolders()
+    {
+        return $this->container['designFolders'];
+    }
+
+    /**
+     * Sets designFolders
+     * @param \Swagger\Client\Model\DesignFolder[] $designFolders
+     * @return $this
+     */
+    public function setDesignFolders($designFolders)
+    {
+        $this->container['designFolders'] = $designFolders;
 
         return $this;
     }
