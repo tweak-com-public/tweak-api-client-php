@@ -4,6 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **string** |  | 
+**created** | [**\DateTime**](\DateTime.md) |  | [optional] 
+**modified** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **id** | **string** |  | [optional] 
 **memberId** | **string** |  | [optional] 
 **parentId** | **string** |  | [optional] 

@@ -67,6 +67,8 @@ class DesignFolder implements ArrayAccess
       */
     protected static $swaggerTypes = array(
         'name' => 'string',
+        'created' => '\DateTime',
+        'modified' => '\DateTime',
         'id' => 'string',
         'memberId' => 'string',
         'parentId' => 'string',
@@ -89,6 +91,8 @@ class DesignFolder implements ArrayAccess
      */
     protected static $attributeMap = array(
         'name' => 'name',
+        'created' => 'created',
+        'modified' => 'modified',
         'id' => 'id',
         'memberId' => 'memberId',
         'parentId' => 'parentId',
@@ -111,6 +115,8 @@ class DesignFolder implements ArrayAccess
      */
     protected static $setters = array(
         'name' => 'setName',
+        'created' => 'setCreated',
+        'modified' => 'setModified',
         'id' => 'setId',
         'memberId' => 'setMemberId',
         'parentId' => 'setParentId',
@@ -133,6 +139,8 @@ class DesignFolder implements ArrayAccess
      */
     protected static $getters = array(
         'name' => 'getName',
+        'created' => 'getCreated',
+        'modified' => 'getModified',
         'id' => 'getId',
         'memberId' => 'getMemberId',
         'parentId' => 'getParentId',
@@ -166,6 +174,8 @@ class DesignFolder implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['created'] = isset($data['created']) ? $data['created'] : null;
+        $this->container['modified'] = isset($data['modified']) ? $data['modified'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['memberId'] = isset($data['memberId']) ? $data['memberId'] : null;
         $this->container['parentId'] = isset($data['parentId']) ? $data['parentId'] : null;
@@ -223,6 +233,48 @@ class DesignFolder implements ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets created
+     * @return \DateTime
+     */
+    public function getCreated()
+    {
+        return $this->container['created'];
+    }
+
+    /**
+     * Sets created
+     * @param \DateTime $created
+     * @return $this
+     */
+    public function setCreated($created)
+    {
+        $this->container['created'] = $created;
+
+        return $this;
+    }
+
+    /**
+     * Gets modified
+     * @return \DateTime
+     */
+    public function getModified()
+    {
+        return $this->container['modified'];
+    }
+
+    /**
+     * Sets modified
+     * @param \DateTime $modified
+     * @return $this
+     */
+    public function setModified($modified)
+    {
+        $this->container['modified'] = $modified;
 
         return $this;
     }

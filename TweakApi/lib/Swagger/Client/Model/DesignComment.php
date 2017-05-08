@@ -67,7 +67,7 @@ class DesignComment implements ArrayAccess
       */
     protected static $swaggerTypes = array(
         'comment' => 'string',
-        'position' => '\Swagger\Client\Model\GeoPoint',
+        'position' => '\Swagger\Client\Model\Axes',
         'pageIndex' => 'double',
         'status' => 'string',
         'created' => '\DateTime',
@@ -279,7 +279,7 @@ class DesignComment implements ArrayAccess
 
     /**
      * Gets position
-     * @return \Swagger\Client\Model\GeoPoint
+     * @return \Swagger\Client\Model\Axes
      */
     public function getPosition()
     {
@@ -288,7 +288,7 @@ class DesignComment implements ArrayAccess
 
     /**
      * Sets position
-     * @param \Swagger\Client\Model\GeoPoint $position
+     * @param \Swagger\Client\Model\Axes $position
      * @return $this
      */
     public function setPosition($position)

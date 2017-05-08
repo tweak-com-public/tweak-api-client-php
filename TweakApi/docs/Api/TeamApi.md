@@ -37,13 +37,13 @@ Method | HTTP request | Description
 [**teamsIdPortalsPost**](TeamApi.md#teamsIdPortalsPost) | **POST** /Teams/{id}/portals | Creates a new instance in portals of this model.
 [**teamsIdPut**](TeamApi.md#teamsIdPut) | **PUT** /Teams/{id} | Replace attributes for a model instance and persist it into the data source.
 [**teamsIdReplacePost**](TeamApi.md#teamsIdReplacePost) | **POST** /Teams/{id}/replace | Replace attributes for a model instance and persist it into the data source.
-[**teamsIdTemplateFolderCountGet**](TeamApi.md#teamsIdTemplateFolderCountGet) | **GET** /Teams/{id}/templateFolder/count | Counts templateFolder of Team.
-[**teamsIdTemplateFolderDelete**](TeamApi.md#teamsIdTemplateFolderDelete) | **DELETE** /Teams/{id}/templateFolder | Deletes all templateFolder of this model.
-[**teamsIdTemplateFolderFkDelete**](TeamApi.md#teamsIdTemplateFolderFkDelete) | **DELETE** /Teams/{id}/templateFolder/{fk} | Delete a related item by id for templateFolder.
-[**teamsIdTemplateFolderFkGet**](TeamApi.md#teamsIdTemplateFolderFkGet) | **GET** /Teams/{id}/templateFolder/{fk} | Find a related item by id for templateFolder.
-[**teamsIdTemplateFolderFkPut**](TeamApi.md#teamsIdTemplateFolderFkPut) | **PUT** /Teams/{id}/templateFolder/{fk} | Update a related item by id for templateFolder.
-[**teamsIdTemplateFolderGet**](TeamApi.md#teamsIdTemplateFolderGet) | **GET** /Teams/{id}/templateFolder | Queries templateFolder of Team.
-[**teamsIdTemplateFolderPost**](TeamApi.md#teamsIdTemplateFolderPost) | **POST** /Teams/{id}/templateFolder | Creates a new instance in templateFolder of this model.
+[**teamsIdTemplateFoldersCountGet**](TeamApi.md#teamsIdTemplateFoldersCountGet) | **GET** /Teams/{id}/templateFolders/count | Counts templateFolders of Team.
+[**teamsIdTemplateFoldersDelete**](TeamApi.md#teamsIdTemplateFoldersDelete) | **DELETE** /Teams/{id}/templateFolders | Deletes all templateFolders of this model.
+[**teamsIdTemplateFoldersFkDelete**](TeamApi.md#teamsIdTemplateFoldersFkDelete) | **DELETE** /Teams/{id}/templateFolders/{fk} | Delete a related item by id for templateFolders.
+[**teamsIdTemplateFoldersFkGet**](TeamApi.md#teamsIdTemplateFoldersFkGet) | **GET** /Teams/{id}/templateFolders/{fk} | Find a related item by id for templateFolders.
+[**teamsIdTemplateFoldersFkPut**](TeamApi.md#teamsIdTemplateFoldersFkPut) | **PUT** /Teams/{id}/templateFolders/{fk} | Update a related item by id for templateFolders.
+[**teamsIdTemplateFoldersGet**](TeamApi.md#teamsIdTemplateFoldersGet) | **GET** /Teams/{id}/templateFolders | Queries templateFolders of Team.
+[**teamsIdTemplateFoldersPost**](TeamApi.md#teamsIdTemplateFoldersPost) | **POST** /Teams/{id}/templateFolders | Creates a new instance in templateFolders of this model.
 [**teamsIdTemplatesCountGet**](TeamApi.md#teamsIdTemplatesCountGet) | **GET** /Teams/{id}/templates/count | Counts templates of Team.
 [**teamsIdTemplatesDelete**](TeamApi.md#teamsIdTemplatesDelete) | **DELETE** /Teams/{id}/templates | Deletes all templates of this model.
 [**teamsIdTemplatesFkDelete**](TeamApi.md#teamsIdTemplatesFkDelete) | **DELETE** /Teams/{id}/templates/{fk} | Delete a related item by id for templates.
@@ -1687,10 +1687,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **teamsIdTemplateFolderCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamsIdTemplateFolderCountGet($id, $where)
+# **teamsIdTemplateFoldersCountGet**
+> \Swagger\Client\Model\InlineResponse200 teamsIdTemplateFoldersCountGet($id, $where)
 
-Counts templateFolder of Team.
+Counts templateFolders of Team.
 
 ### Example
 ```php
@@ -1707,10 +1707,10 @@ $id = "id_example"; // string | Team id
 $where = "where_example"; // string | Criteria to match model instances
 
 try {
-    $result = $api_instance->teamsIdTemplateFolderCountGet($id, $where);
+    $result = $api_instance->teamsIdTemplateFoldersCountGet($id, $where);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TeamApi->teamsIdTemplateFolderCountGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TeamApi->teamsIdTemplateFoldersCountGet: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1737,10 +1737,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **teamsIdTemplateFolderDelete**
-> teamsIdTemplateFolderDelete($id)
+# **teamsIdTemplateFoldersDelete**
+> teamsIdTemplateFoldersDelete($id)
 
-Deletes all templateFolder of this model.
+Deletes all templateFolders of this model.
 
 ### Example
 ```php
@@ -1756,9 +1756,9 @@ $api_instance = new Tweak\Api\Api\TeamApi();
 $id = "id_example"; // string | Team id
 
 try {
-    $api_instance->teamsIdTemplateFolderDelete($id);
+    $api_instance->teamsIdTemplateFoldersDelete($id);
 } catch (Exception $e) {
-    echo 'Exception when calling TeamApi->teamsIdTemplateFolderDelete: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TeamApi->teamsIdTemplateFoldersDelete: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1784,10 +1784,10 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **teamsIdTemplateFolderFkDelete**
-> teamsIdTemplateFolderFkDelete($id, $fk)
+# **teamsIdTemplateFoldersFkDelete**
+> teamsIdTemplateFoldersFkDelete($id, $fk)
 
-Delete a related item by id for templateFolder.
+Delete a related item by id for templateFolders.
 
 ### Example
 ```php
@@ -1801,12 +1801,12 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 
 $api_instance = new Tweak\Api\Api\TeamApi();
 $id = "id_example"; // string | Team id
-$fk = "fk_example"; // string | Foreign key for templateFolder
+$fk = "fk_example"; // string | Foreign key for templateFolders
 
 try {
-    $api_instance->teamsIdTemplateFolderFkDelete($id, $fk);
+    $api_instance->teamsIdTemplateFoldersFkDelete($id, $fk);
 } catch (Exception $e) {
-    echo 'Exception when calling TeamApi->teamsIdTemplateFolderFkDelete: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TeamApi->teamsIdTemplateFoldersFkDelete: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1816,7 +1816,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| Team id |
- **fk** | **string**| Foreign key for templateFolder |
+ **fk** | **string**| Foreign key for templateFolders |
 
 ### Return type
 
@@ -1833,10 +1833,10 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **teamsIdTemplateFolderFkGet**
-> \Swagger\Client\Model\TeamTemplateFolder teamsIdTemplateFolderFkGet($id, $fk)
+# **teamsIdTemplateFoldersFkGet**
+> \Swagger\Client\Model\TeamTemplateFolder teamsIdTemplateFoldersFkGet($id, $fk)
 
-Find a related item by id for templateFolder.
+Find a related item by id for templateFolders.
 
 ### Example
 ```php
@@ -1850,13 +1850,13 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 
 $api_instance = new Tweak\Api\Api\TeamApi();
 $id = "id_example"; // string | Team id
-$fk = "fk_example"; // string | Foreign key for templateFolder
+$fk = "fk_example"; // string | Foreign key for templateFolders
 
 try {
-    $result = $api_instance->teamsIdTemplateFolderFkGet($id, $fk);
+    $result = $api_instance->teamsIdTemplateFoldersFkGet($id, $fk);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TeamApi->teamsIdTemplateFolderFkGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TeamApi->teamsIdTemplateFoldersFkGet: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1866,7 +1866,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| Team id |
- **fk** | **string**| Foreign key for templateFolder |
+ **fk** | **string**| Foreign key for templateFolders |
 
 ### Return type
 
@@ -1883,10 +1883,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **teamsIdTemplateFolderFkPut**
-> \Swagger\Client\Model\TeamTemplateFolder teamsIdTemplateFolderFkPut($id, $fk, $data)
+# **teamsIdTemplateFoldersFkPut**
+> \Swagger\Client\Model\TeamTemplateFolder teamsIdTemplateFoldersFkPut($id, $fk, $data)
 
-Update a related item by id for templateFolder.
+Update a related item by id for templateFolders.
 
 ### Example
 ```php
@@ -1900,14 +1900,14 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 
 $api_instance = new Tweak\Api\Api\TeamApi();
 $id = "id_example"; // string | Team id
-$fk = "fk_example"; // string | Foreign key for templateFolder
+$fk = "fk_example"; // string | Foreign key for templateFolders
 $data = new \Swagger\Client\Model\TeamTemplateFolder(); // \Swagger\Client\Model\TeamTemplateFolder | 
 
 try {
-    $result = $api_instance->teamsIdTemplateFolderFkPut($id, $fk, $data);
+    $result = $api_instance->teamsIdTemplateFoldersFkPut($id, $fk, $data);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TeamApi->teamsIdTemplateFolderFkPut: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TeamApi->teamsIdTemplateFoldersFkPut: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1917,7 +1917,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| Team id |
- **fk** | **string**| Foreign key for templateFolder |
+ **fk** | **string**| Foreign key for templateFolders |
  **data** | [**\Swagger\Client\Model\TeamTemplateFolder**](../Model/\Swagger\Client\Model\TeamTemplateFolder.md)|  | [optional]
 
 ### Return type
@@ -1935,10 +1935,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **teamsIdTemplateFolderGet**
-> \Swagger\Client\Model\TeamTemplateFolder[] teamsIdTemplateFolderGet($id, $filter)
+# **teamsIdTemplateFoldersGet**
+> \Swagger\Client\Model\TeamTemplateFolder[] teamsIdTemplateFoldersGet($id, $filter)
 
-Queries templateFolder of Team.
+Queries templateFolders of Team.
 
 ### Example
 ```php
@@ -1955,10 +1955,10 @@ $id = "id_example"; // string | Team id
 $filter = "filter_example"; // string | 
 
 try {
-    $result = $api_instance->teamsIdTemplateFolderGet($id, $filter);
+    $result = $api_instance->teamsIdTemplateFoldersGet($id, $filter);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TeamApi->teamsIdTemplateFolderGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TeamApi->teamsIdTemplateFoldersGet: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1985,10 +1985,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **teamsIdTemplateFolderPost**
-> \Swagger\Client\Model\TeamTemplateFolder teamsIdTemplateFolderPost($id, $data)
+# **teamsIdTemplateFoldersPost**
+> \Swagger\Client\Model\TeamTemplateFolder teamsIdTemplateFoldersPost($id, $data)
 
-Creates a new instance in templateFolder of this model.
+Creates a new instance in templateFolders of this model.
 
 ### Example
 ```php
@@ -2005,10 +2005,10 @@ $id = "id_example"; // string | Team id
 $data = new \Swagger\Client\Model\TeamTemplateFolder(); // \Swagger\Client\Model\TeamTemplateFolder | 
 
 try {
-    $result = $api_instance->teamsIdTemplateFolderPost($id, $data);
+    $result = $api_instance->teamsIdTemplateFoldersPost($id, $data);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TeamApi->teamsIdTemplateFolderPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TeamApi->teamsIdTemplateFoldersPost: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

@@ -453,78 +453,78 @@ class TeamApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for teamsIdTemplateFolderCountGet
+     * Test case for teamsIdTemplateFoldersCountGet
      *
-     * Counts templateFolder of Team..
+     * Counts templateFolders of Team..
      *
      */
-    public function testTeamsIdTemplateFolderCountGet()
+    public function testTeamsIdTemplateFoldersCountGet()
     {
 
     }
 
     /**
-     * Test case for teamsIdTemplateFolderDelete
+     * Test case for teamsIdTemplateFoldersDelete
      *
-     * Deletes all templateFolder of this model..
+     * Deletes all templateFolders of this model..
      *
      */
-    public function testTeamsIdTemplateFolderDelete()
+    public function testTeamsIdTemplateFoldersDelete()
     {
 
     }
 
     /**
-     * Test case for teamsIdTemplateFolderFkDelete
+     * Test case for teamsIdTemplateFoldersFkDelete
      *
-     * Delete a related item by id for templateFolder..
+     * Delete a related item by id for templateFolders..
      *
      */
-    public function testTeamsIdTemplateFolderFkDelete()
+    public function testTeamsIdTemplateFoldersFkDelete()
     {
 
     }
 
     /**
-     * Test case for teamsIdTemplateFolderFkGet
+     * Test case for teamsIdTemplateFoldersFkGet
      *
-     * Find a related item by id for templateFolder..
+     * Find a related item by id for templateFolders..
      *
      */
-    public function testTeamsIdTemplateFolderFkGet()
+    public function testTeamsIdTemplateFoldersFkGet()
     {
 
     }
 
     /**
-     * Test case for teamsIdTemplateFolderFkPut
+     * Test case for teamsIdTemplateFoldersFkPut
      *
-     * Update a related item by id for templateFolder..
+     * Update a related item by id for templateFolders..
      *
      */
-    public function testTeamsIdTemplateFolderFkPut()
+    public function testTeamsIdTemplateFoldersFkPut()
     {
 
     }
 
     /**
-     * Test case for teamsIdTemplateFolderGet
+     * Test case for teamsIdTemplateFoldersGet
      *
-     * Queries templateFolder of Team..
+     * Queries templateFolders of Team..
      *
      */
-    public function testTeamsIdTemplateFolderGet()
+    public function testTeamsIdTemplateFoldersGet()
     {
 
     }
 
     /**
-     * Test case for teamsIdTemplateFolderPost
+     * Test case for teamsIdTemplateFoldersPost
      *
-     * Creates a new instance in templateFolder of this model..
+     * Creates a new instance in templateFolders of this model..
      *
      */
-    public function testTeamsIdTemplateFolderPost()
+    public function testTeamsIdTemplateFoldersPost()
     {
 
     }

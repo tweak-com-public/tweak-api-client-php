@@ -3241,39 +3241,39 @@ class TeamApi
     }
 
     /**
-     * Operation teamsIdTemplateFolderCountGet
+     * Operation teamsIdTemplateFoldersCountGet
      *
-     * Counts templateFolder of Team.
+     * Counts templateFolders of Team.
      *
      * @param string $id Team id (required)
      * @param string $where Criteria to match model instances (optional)
      * @return \Swagger\Client\Model\InlineResponse200
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function teamsIdTemplateFolderCountGet($id, $where = null)
+    public function teamsIdTemplateFoldersCountGet($id, $where = null)
     {
-        list($response) = $this->teamsIdTemplateFolderCountGetWithHttpInfo($id, $where);
+        list($response) = $this->teamsIdTemplateFoldersCountGetWithHttpInfo($id, $where);
         return $response;
     }
 
     /**
-     * Operation teamsIdTemplateFolderCountGetWithHttpInfo
+     * Operation teamsIdTemplateFoldersCountGetWithHttpInfo
      *
-     * Counts templateFolder of Team.
+     * Counts templateFolders of Team.
      *
      * @param string $id Team id (required)
      * @param string $where Criteria to match model instances (optional)
      * @return array of \Swagger\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function teamsIdTemplateFolderCountGetWithHttpInfo($id, $where = null)
+    public function teamsIdTemplateFoldersCountGetWithHttpInfo($id, $where = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamsIdTemplateFolderCountGet');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamsIdTemplateFoldersCountGet');
         }
         // parse inputs
-        $resourcePath = "/Teams/{id}/templateFolder/count";
+        $resourcePath = "/Teams/{id}/templateFolders/count";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -3320,7 +3320,7 @@ class TeamApi
                 $httpBody,
                 $headerParams,
                 '\Swagger\Client\Model\InlineResponse200',
-                '/Teams/{id}/templateFolder/count'
+                '/Teams/{id}/templateFolders/count'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader);
@@ -3337,37 +3337,37 @@ class TeamApi
     }
 
     /**
-     * Operation teamsIdTemplateFolderDelete
+     * Operation teamsIdTemplateFoldersDelete
      *
-     * Deletes all templateFolder of this model.
+     * Deletes all templateFolders of this model.
      *
      * @param string $id Team id (required)
      * @return void
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function teamsIdTemplateFolderDelete($id)
+    public function teamsIdTemplateFoldersDelete($id)
     {
-        list($response) = $this->teamsIdTemplateFolderDeleteWithHttpInfo($id);
+        list($response) = $this->teamsIdTemplateFoldersDeleteWithHttpInfo($id);
         return $response;
     }
 
     /**
-     * Operation teamsIdTemplateFolderDeleteWithHttpInfo
+     * Operation teamsIdTemplateFoldersDeleteWithHttpInfo
      *
-     * Deletes all templateFolder of this model.
+     * Deletes all templateFolders of this model.
      *
      * @param string $id Team id (required)
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function teamsIdTemplateFolderDeleteWithHttpInfo($id)
+    public function teamsIdTemplateFoldersDeleteWithHttpInfo($id)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamsIdTemplateFolderDelete');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamsIdTemplateFoldersDelete');
         }
         // parse inputs
-        $resourcePath = "/Teams/{id}/templateFolder";
+        $resourcePath = "/Teams/{id}/templateFolders";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -3410,7 +3410,7 @@ class TeamApi
                 $httpBody,
                 $headerParams,
                 null,
-                '/Teams/{id}/templateFolder'
+                '/Teams/{id}/templateFolders'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -3423,43 +3423,43 @@ class TeamApi
     }
 
     /**
-     * Operation teamsIdTemplateFolderFkDelete
+     * Operation teamsIdTemplateFoldersFkDelete
      *
-     * Delete a related item by id for templateFolder.
+     * Delete a related item by id for templateFolders.
      *
      * @param string $id Team id (required)
-     * @param string $fk Foreign key for templateFolder (required)
+     * @param string $fk Foreign key for templateFolders (required)
      * @return void
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function teamsIdTemplateFolderFkDelete($id, $fk)
+    public function teamsIdTemplateFoldersFkDelete($id, $fk)
     {
-        list($response) = $this->teamsIdTemplateFolderFkDeleteWithHttpInfo($id, $fk);
+        list($response) = $this->teamsIdTemplateFoldersFkDeleteWithHttpInfo($id, $fk);
         return $response;
     }
 
     /**
-     * Operation teamsIdTemplateFolderFkDeleteWithHttpInfo
+     * Operation teamsIdTemplateFoldersFkDeleteWithHttpInfo
      *
-     * Delete a related item by id for templateFolder.
+     * Delete a related item by id for templateFolders.
      *
      * @param string $id Team id (required)
-     * @param string $fk Foreign key for templateFolder (required)
+     * @param string $fk Foreign key for templateFolders (required)
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function teamsIdTemplateFolderFkDeleteWithHttpInfo($id, $fk)
+    public function teamsIdTemplateFoldersFkDeleteWithHttpInfo($id, $fk)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamsIdTemplateFolderFkDelete');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamsIdTemplateFoldersFkDelete');
         }
         // verify the required parameter 'fk' is set
         if ($fk === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $fk when calling teamsIdTemplateFolderFkDelete');
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling teamsIdTemplateFoldersFkDelete');
         }
         // parse inputs
-        $resourcePath = "/Teams/{id}/templateFolder/{fk}";
+        $resourcePath = "/Teams/{id}/templateFolders/{fk}";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -3510,7 +3510,7 @@ class TeamApi
                 $httpBody,
                 $headerParams,
                 null,
-                '/Teams/{id}/templateFolder/{fk}'
+                '/Teams/{id}/templateFolders/{fk}'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -3523,43 +3523,43 @@ class TeamApi
     }
 
     /**
-     * Operation teamsIdTemplateFolderFkGet
+     * Operation teamsIdTemplateFoldersFkGet
      *
-     * Find a related item by id for templateFolder.
+     * Find a related item by id for templateFolders.
      *
      * @param string $id Team id (required)
-     * @param string $fk Foreign key for templateFolder (required)
+     * @param string $fk Foreign key for templateFolders (required)
      * @return \Swagger\Client\Model\TeamTemplateFolder
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function teamsIdTemplateFolderFkGet($id, $fk)
+    public function teamsIdTemplateFoldersFkGet($id, $fk)
     {
-        list($response) = $this->teamsIdTemplateFolderFkGetWithHttpInfo($id, $fk);
+        list($response) = $this->teamsIdTemplateFoldersFkGetWithHttpInfo($id, $fk);
         return $response;
     }
 
     /**
-     * Operation teamsIdTemplateFolderFkGetWithHttpInfo
+     * Operation teamsIdTemplateFoldersFkGetWithHttpInfo
      *
-     * Find a related item by id for templateFolder.
+     * Find a related item by id for templateFolders.
      *
      * @param string $id Team id (required)
-     * @param string $fk Foreign key for templateFolder (required)
+     * @param string $fk Foreign key for templateFolders (required)
      * @return array of \Swagger\Client\Model\TeamTemplateFolder, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function teamsIdTemplateFolderFkGetWithHttpInfo($id, $fk)
+    public function teamsIdTemplateFoldersFkGetWithHttpInfo($id, $fk)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamsIdTemplateFolderFkGet');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamsIdTemplateFoldersFkGet');
         }
         // verify the required parameter 'fk' is set
         if ($fk === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $fk when calling teamsIdTemplateFolderFkGet');
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling teamsIdTemplateFoldersFkGet');
         }
         // parse inputs
-        $resourcePath = "/Teams/{id}/templateFolder/{fk}";
+        $resourcePath = "/Teams/{id}/templateFolders/{fk}";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -3610,7 +3610,7 @@ class TeamApi
                 $httpBody,
                 $headerParams,
                 '\Swagger\Client\Model\TeamTemplateFolder',
-                '/Teams/{id}/templateFolder/{fk}'
+                '/Teams/{id}/templateFolders/{fk}'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TeamTemplateFolder', $httpHeader), $statusCode, $httpHeader);
@@ -3627,45 +3627,45 @@ class TeamApi
     }
 
     /**
-     * Operation teamsIdTemplateFolderFkPut
+     * Operation teamsIdTemplateFoldersFkPut
      *
-     * Update a related item by id for templateFolder.
+     * Update a related item by id for templateFolders.
      *
      * @param string $id Team id (required)
-     * @param string $fk Foreign key for templateFolder (required)
+     * @param string $fk Foreign key for templateFolders (required)
      * @param \Swagger\Client\Model\TeamTemplateFolder $data  (optional)
      * @return \Swagger\Client\Model\TeamTemplateFolder
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function teamsIdTemplateFolderFkPut($id, $fk, $data = null)
+    public function teamsIdTemplateFoldersFkPut($id, $fk, $data = null)
     {
-        list($response) = $this->teamsIdTemplateFolderFkPutWithHttpInfo($id, $fk, $data);
+        list($response) = $this->teamsIdTemplateFoldersFkPutWithHttpInfo($id, $fk, $data);
         return $response;
     }
 
     /**
-     * Operation teamsIdTemplateFolderFkPutWithHttpInfo
+     * Operation teamsIdTemplateFoldersFkPutWithHttpInfo
      *
-     * Update a related item by id for templateFolder.
+     * Update a related item by id for templateFolders.
      *
      * @param string $id Team id (required)
-     * @param string $fk Foreign key for templateFolder (required)
+     * @param string $fk Foreign key for templateFolders (required)
      * @param \Swagger\Client\Model\TeamTemplateFolder $data  (optional)
      * @return array of \Swagger\Client\Model\TeamTemplateFolder, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function teamsIdTemplateFolderFkPutWithHttpInfo($id, $fk, $data = null)
+    public function teamsIdTemplateFoldersFkPutWithHttpInfo($id, $fk, $data = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamsIdTemplateFolderFkPut');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamsIdTemplateFoldersFkPut');
         }
         // verify the required parameter 'fk' is set
         if ($fk === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $fk when calling teamsIdTemplateFolderFkPut');
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling teamsIdTemplateFoldersFkPut');
         }
         // parse inputs
-        $resourcePath = "/Teams/{id}/templateFolder/{fk}";
+        $resourcePath = "/Teams/{id}/templateFolders/{fk}";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -3721,7 +3721,7 @@ class TeamApi
                 $httpBody,
                 $headerParams,
                 '\Swagger\Client\Model\TeamTemplateFolder',
-                '/Teams/{id}/templateFolder/{fk}'
+                '/Teams/{id}/templateFolders/{fk}'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TeamTemplateFolder', $httpHeader), $statusCode, $httpHeader);
@@ -3738,39 +3738,39 @@ class TeamApi
     }
 
     /**
-     * Operation teamsIdTemplateFolderGet
+     * Operation teamsIdTemplateFoldersGet
      *
-     * Queries templateFolder of Team.
+     * Queries templateFolders of Team.
      *
      * @param string $id Team id (required)
      * @param string $filter  (optional)
      * @return \Swagger\Client\Model\TeamTemplateFolder[]
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function teamsIdTemplateFolderGet($id, $filter = null)
+    public function teamsIdTemplateFoldersGet($id, $filter = null)
     {
-        list($response) = $this->teamsIdTemplateFolderGetWithHttpInfo($id, $filter);
+        list($response) = $this->teamsIdTemplateFoldersGetWithHttpInfo($id, $filter);
         return $response;
     }
 
     /**
-     * Operation teamsIdTemplateFolderGetWithHttpInfo
+     * Operation teamsIdTemplateFoldersGetWithHttpInfo
      *
-     * Queries templateFolder of Team.
+     * Queries templateFolders of Team.
      *
      * @param string $id Team id (required)
      * @param string $filter  (optional)
      * @return array of \Swagger\Client\Model\TeamTemplateFolder[], HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function teamsIdTemplateFolderGetWithHttpInfo($id, $filter = null)
+    public function teamsIdTemplateFoldersGetWithHttpInfo($id, $filter = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamsIdTemplateFolderGet');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamsIdTemplateFoldersGet');
         }
         // parse inputs
-        $resourcePath = "/Teams/{id}/templateFolder";
+        $resourcePath = "/Teams/{id}/templateFolders";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -3817,7 +3817,7 @@ class TeamApi
                 $httpBody,
                 $headerParams,
                 '\Swagger\Client\Model\TeamTemplateFolder[]',
-                '/Teams/{id}/templateFolder'
+                '/Teams/{id}/templateFolders'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TeamTemplateFolder[]', $httpHeader), $statusCode, $httpHeader);
@@ -3834,39 +3834,39 @@ class TeamApi
     }
 
     /**
-     * Operation teamsIdTemplateFolderPost
+     * Operation teamsIdTemplateFoldersPost
      *
-     * Creates a new instance in templateFolder of this model.
+     * Creates a new instance in templateFolders of this model.
      *
      * @param string $id Team id (required)
      * @param \Swagger\Client\Model\TeamTemplateFolder $data  (optional)
      * @return \Swagger\Client\Model\TeamTemplateFolder
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function teamsIdTemplateFolderPost($id, $data = null)
+    public function teamsIdTemplateFoldersPost($id, $data = null)
     {
-        list($response) = $this->teamsIdTemplateFolderPostWithHttpInfo($id, $data);
+        list($response) = $this->teamsIdTemplateFoldersPostWithHttpInfo($id, $data);
         return $response;
     }
 
     /**
-     * Operation teamsIdTemplateFolderPostWithHttpInfo
+     * Operation teamsIdTemplateFoldersPostWithHttpInfo
      *
-     * Creates a new instance in templateFolder of this model.
+     * Creates a new instance in templateFolders of this model.
      *
      * @param string $id Team id (required)
      * @param \Swagger\Client\Model\TeamTemplateFolder $data  (optional)
      * @return array of \Swagger\Client\Model\TeamTemplateFolder, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function teamsIdTemplateFolderPostWithHttpInfo($id, $data = null)
+    public function teamsIdTemplateFoldersPostWithHttpInfo($id, $data = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamsIdTemplateFolderPost');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamsIdTemplateFoldersPost');
         }
         // parse inputs
-        $resourcePath = "/Teams/{id}/templateFolder";
+        $resourcePath = "/Teams/{id}/templateFolders";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -3914,7 +3914,7 @@ class TeamApi
                 $httpBody,
                 $headerParams,
                 '\Swagger\Client\Model\TeamTemplateFolder',
-                '/Teams/{id}/templateFolder'
+                '/Teams/{id}/templateFolders'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TeamTemplateFolder', $httpHeader), $statusCode, $httpHeader);

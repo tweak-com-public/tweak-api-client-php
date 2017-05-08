@@ -1036,12 +1036,397 @@ class TeamMemberApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for teamMembersIdTeamBrandDelete
+     *
+     * Deletes brand of this model..
+     *
+     */
+    public function testTeamMembersIdTeamBrandDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamBrandGet
+     *
+     * Fetches hasOne relation brand..
+     *
+     */
+    public function testTeamMembersIdTeamBrandGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamBrandPost
+     *
+     * Creates a new instance in brand of this model..
+     *
+     */
+    public function testTeamMembersIdTeamBrandPost()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamBrandPut
+     *
+     * Update brand of this model..
+     *
+     */
+    public function testTeamMembersIdTeamBrandPut()
+    {
+
+    }
+
+    /**
      * Test case for teamMembersIdTeamGet
      *
      * Fetches belongsTo relation team..
      *
      */
     public function testTeamMembersIdTeamGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamMembersCountGet
+     *
+     * Counts members of Team..
+     *
+     */
+    public function testTeamMembersIdTeamMembersCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamMembersDelete
+     *
+     * Deletes all members of this model..
+     *
+     */
+    public function testTeamMembersIdTeamMembersDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamMembersFkDelete
+     *
+     * Delete a related item by id for members..
+     *
+     */
+    public function testTeamMembersIdTeamMembersFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamMembersFkGet
+     *
+     * Find a related item by id for members..
+     *
+     */
+    public function testTeamMembersIdTeamMembersFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamMembersFkPut
+     *
+     * Update a related item by id for members..
+     *
+     */
+    public function testTeamMembersIdTeamMembersFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamMembersGet
+     *
+     * Queries members of Team..
+     *
+     */
+    public function testTeamMembersIdTeamMembersGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamMembersPost
+     *
+     * Creates a new instance in members of this model..
+     *
+     */
+    public function testTeamMembersIdTeamMembersPost()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamMembersRelFkDelete
+     *
+     * Remove the members relation to an item by id..
+     *
+     */
+    public function testTeamMembersIdTeamMembersRelFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamMembersRelFkHead
+     *
+     * Check the existence of members relation to an item by id..
+     *
+     */
+    public function testTeamMembersIdTeamMembersRelFkHead()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamMembersRelFkPut
+     *
+     * Add a related item by id for members..
+     *
+     */
+    public function testTeamMembersIdTeamMembersRelFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamPortalsCountGet
+     *
+     * Counts portals of Team..
+     *
+     */
+    public function testTeamMembersIdTeamPortalsCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamPortalsDelete
+     *
+     * Deletes all portals of this model..
+     *
+     */
+    public function testTeamMembersIdTeamPortalsDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamPortalsFkDelete
+     *
+     * Delete a related item by id for portals..
+     *
+     */
+    public function testTeamMembersIdTeamPortalsFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamPortalsFkGet
+     *
+     * Find a related item by id for portals..
+     *
+     */
+    public function testTeamMembersIdTeamPortalsFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamPortalsFkPut
+     *
+     * Update a related item by id for portals..
+     *
+     */
+    public function testTeamMembersIdTeamPortalsFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamPortalsGet
+     *
+     * Queries portals of Team..
+     *
+     */
+    public function testTeamMembersIdTeamPortalsGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamPortalsPost
+     *
+     * Creates a new instance in portals of this model..
+     *
+     */
+    public function testTeamMembersIdTeamPortalsPost()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamTemplateFoldersCountGet
+     *
+     * Counts templateFolders of Team..
+     *
+     */
+    public function testTeamMembersIdTeamTemplateFoldersCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamTemplateFoldersDelete
+     *
+     * Deletes all templateFolders of this model..
+     *
+     */
+    public function testTeamMembersIdTeamTemplateFoldersDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamTemplateFoldersFkDelete
+     *
+     * Delete a related item by id for templateFolders..
+     *
+     */
+    public function testTeamMembersIdTeamTemplateFoldersFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamTemplateFoldersFkGet
+     *
+     * Find a related item by id for templateFolders..
+     *
+     */
+    public function testTeamMembersIdTeamTemplateFoldersFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamTemplateFoldersFkPut
+     *
+     * Update a related item by id for templateFolders..
+     *
+     */
+    public function testTeamMembersIdTeamTemplateFoldersFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamTemplateFoldersGet
+     *
+     * Queries templateFolders of Team..
+     *
+     */
+    public function testTeamMembersIdTeamTemplateFoldersGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamTemplateFoldersPost
+     *
+     * Creates a new instance in templateFolders of this model..
+     *
+     */
+    public function testTeamMembersIdTeamTemplateFoldersPost()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamTemplatesCountGet
+     *
+     * Counts templates of Team..
+     *
+     */
+    public function testTeamMembersIdTeamTemplatesCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamTemplatesDelete
+     *
+     * Deletes all templates of this model..
+     *
+     */
+    public function testTeamMembersIdTeamTemplatesDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamTemplatesFkDelete
+     *
+     * Delete a related item by id for templates..
+     *
+     */
+    public function testTeamMembersIdTeamTemplatesFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamTemplatesFkGet
+     *
+     * Find a related item by id for templates..
+     *
+     */
+    public function testTeamMembersIdTeamTemplatesFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamTemplatesFkPut
+     *
+     * Update a related item by id for templates..
+     *
+     */
+    public function testTeamMembersIdTeamTemplatesFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamTemplatesGet
+     *
+     * Queries templates of Team..
+     *
+     */
+    public function testTeamMembersIdTeamTemplatesGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamTemplatesPost
+     *
+     * Creates a new instance in templates of this model..
+     *
+     */
+    public function testTeamMembersIdTeamTemplatesPost()
     {
 
     }

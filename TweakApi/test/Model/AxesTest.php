@@ -1,6 +1,6 @@
 <?php
 /**
- * GeoPointTest
+ * AxesTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Tweak\Api;
 
 /**
- * GeoPointTest Class Doc Comment
+ * AxesTest Class Doc Comment
  *
  * @category    Class */
-// * @description GeoPoint
+// * @description Axes
 /**
  * @package     Tweak\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class GeoPointTest extends \PHPUnit_Framework_TestCase
+class AxesTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,25 +88,33 @@ class GeoPointTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "GeoPoint"
+     * Test "Axes"
      */
-    public function testGeoPoint()
+    public function testAxes()
     {
 
     }
 
     /**
-     * Test attribute "lat"
+     * Test attribute "x"
      */
-    public function testPropertyLat()
+    public function testPropertyX()
     {
 
     }
 
     /**
-     * Test attribute "lng"
+     * Test attribute "y"
      */
-    public function testPropertyLng()
+    public function testPropertyY()
+    {
+
+    }
+
+    /**
+     * Test attribute "id"
+     */
+    public function testPropertyId()
     {
 
     }

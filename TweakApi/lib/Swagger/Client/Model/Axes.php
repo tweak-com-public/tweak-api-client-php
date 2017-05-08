@@ -1,6 +1,6 @@
 <?php
 /**
- * GeoPoint
+ * Axes
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * GeoPoint Class Doc Comment
+ * Axes Class Doc Comment
  *
  * @category    Class */
 /** 
@@ -53,21 +53,22 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class GeoPoint implements ArrayAccess
+class Axes implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'GeoPoint';
+    protected static $swaggerModelName = 'Axes';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'lat' => 'float',
-        'lng' => 'float'
+        'x' => 'double',
+        'y' => 'double',
+        'id' => 'string'
     );
 
     public static function swaggerTypes()
@@ -80,8 +81,9 @@ class GeoPoint implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'lat' => 'lat',
-        'lng' => 'lng'
+        'x' => 'x',
+        'y' => 'y',
+        'id' => 'id'
     );
 
     public static function attributeMap()
@@ -94,8 +96,9 @@ class GeoPoint implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'lat' => 'setLat',
-        'lng' => 'setLng'
+        'x' => 'setX',
+        'y' => 'setY',
+        'id' => 'setId'
     );
 
     public static function setters()
@@ -108,8 +111,9 @@ class GeoPoint implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'lat' => 'getLat',
-        'lng' => 'getLng'
+        'x' => 'getX',
+        'y' => 'getY',
+        'id' => 'getId'
     );
 
     public static function getters()
@@ -133,8 +137,9 @@ class GeoPoint implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['lat'] = isset($data['lat']) ? $data['lat'] : null;
-        $this->container['lng'] = isset($data['lng']) ? $data['lng'] : null;
+        $this->container['x'] = isset($data['x']) ? $data['x'] : 0.0;
+        $this->container['y'] = isset($data['y']) ? $data['y'] : 0.0;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
     }
 
     /**
@@ -145,6 +150,12 @@ class GeoPoint implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
+        if ($this->container['x'] === null) {
+            $invalid_properties[] = "'x' can't be null";
+        }
+        if ($this->container['y'] === null) {
+            $invalid_properties[] = "'y' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -156,48 +167,75 @@ class GeoPoint implements ArrayAccess
      */
     public function valid()
     {
+        if ($this->container['x'] === null) {
+            return false;
+        }
+        if ($this->container['y'] === null) {
+            return false;
+        }
         return true;
     }
 
 
     /**
-     * Gets lat
-     * @return float
+     * Gets x
+     * @return double
      */
-    public function getLat()
+    public function getX()
     {
-        return $this->container['lat'];
+        return $this->container['x'];
     }
 
     /**
-     * Sets lat
-     * @param float $lat
+     * Sets x
+     * @param double $x
      * @return $this
      */
-    public function setLat($lat)
+    public function setX($x)
     {
-        $this->container['lat'] = $lat;
+        $this->container['x'] = $x;
 
         return $this;
     }
 
     /**
-     * Gets lng
-     * @return float
+     * Gets y
+     * @return double
      */
-    public function getLng()
+    public function getY()
     {
-        return $this->container['lng'];
+        return $this->container['y'];
     }
 
     /**
-     * Sets lng
-     * @param float $lng
+     * Sets y
+     * @param double $y
      * @return $this
      */
-    public function setLng($lng)
+    public function setY($y)
     {
-        $this->container['lng'] = $lng;
+        $this->container['y'] = $y;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     * @return string
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     * @param string $id
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
 
         return $this;
     }

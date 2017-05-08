@@ -1,10 +1,11 @@
-# GeoPoint
+# Axes
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**lat** | **float** |  | [optional] 
-**lng** | **float** |  | [optional] 
+**x** | **double** |  | [default to 0.0]
+**y** | **double** |  | [default to 0.0]
+**id** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

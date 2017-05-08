@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **comment** | **string** |  | 
-**position** | [**\Swagger\Client\Model\GeoPoint**](GeoPoint.md) |  | [optional] 
+**position** | [**\Swagger\Client\Model\Axes**](Axes.md) |  | [optional] 
 **pageIndex** | **double** |  | [optional] [default to 0.0]
 **status** | **string** |  | [optional] [default to 'unsolved']
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 

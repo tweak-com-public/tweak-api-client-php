@@ -104,6 +104,22 @@ class DesignFolderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "created"
+     */
+    public function testPropertyCreated()
+    {
+
+    }
+
+    /**
+     * Test attribute "modified"
+     */
+    public function testPropertyModified()
+    {
+
+    }
+
+    /**
      * Test attribute "id"
      */
     public function testPropertyId()

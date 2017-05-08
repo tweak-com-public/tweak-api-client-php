@@ -145,6 +145,17 @@ class DesignApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for designsIdApprovePost
+     *
+     * Approve design.
+     *
+     */
+    public function testDesignsIdApprovePost()
+    {
+
+    }
+
+    /**
      * Test case for designsIdAssigneeGet
      *
      * Fetches belongsTo relation assignee..
@@ -519,6 +530,17 @@ class DesignApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for designsIdRejectPost
+     *
+     * Reject design.
+     *
+     */
+    public function testDesignsIdRejectPost()
+    {
+
+    }
+
+    /**
      * Test case for designsIdReplacePost
      *
      * Replace attributes for a model instance and persist it into the data source..
@@ -547,6 +569,17 @@ class DesignApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testDesignsIdReviewerGet()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdSubmitPost
+     *
+     * Submit design for approval.
+     *
+     */
+    public function testDesignsIdSubmitPost()
     {
 
     }

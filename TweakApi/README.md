@@ -150,6 +150,7 @@ Class | Method | HTTP request | Description
 *DesignApi* | [**designsCountGet**](docs/Api/DesignApi.md#designscountget) | **GET** /Designs/count | Count instances of the model matched by where from the data source.
 *DesignApi* | [**designsFindOneGet**](docs/Api/DesignApi.md#designsfindoneget) | **GET** /Designs/findOne | Find first instance of the model matched by filter from the data source.
 *DesignApi* | [**designsGet**](docs/Api/DesignApi.md#designsget) | **GET** /Designs | Find all instances of the model matched by filter from the data source.
+*DesignApi* | [**designsIdApprovePost**](docs/Api/DesignApi.md#designsidapprovepost) | **POST** /Designs/{id}/approve | Approve design
 *DesignApi* | [**designsIdAssigneeGet**](docs/Api/DesignApi.md#designsidassigneeget) | **GET** /Designs/{id}/assignee | Fetches belongsTo relation assignee.
 *DesignApi* | [**designsIdCommentersCountGet**](docs/Api/DesignApi.md#designsidcommenterscountget) | **GET** /Designs/{id}/commenters/count | Counts commenters of Design.
 *DesignApi* | [**designsIdCommentersDelete**](docs/Api/DesignApi.md#designsidcommentersdelete) | **DELETE** /Designs/{id}/commenters | Deletes all commenters of this model.
@@ -184,9 +185,11 @@ Class | Method | HTTP request | Description
 *DesignApi* | [**designsIdPatch**](docs/Api/DesignApi.md#designsidpatch) | **PATCH** /Designs/{id} | Patch attributes for a model instance and persist it into the data source.
 *DesignApi* | [**designsIdPortalGet**](docs/Api/DesignApi.md#designsidportalget) | **GET** /Designs/{id}/portal | Fetches belongsTo relation portal.
 *DesignApi* | [**designsIdPut**](docs/Api/DesignApi.md#designsidput) | **PUT** /Designs/{id} | Replace attributes for a model instance and persist it into the data source.
+*DesignApi* | [**designsIdRejectPost**](docs/Api/DesignApi.md#designsidrejectpost) | **POST** /Designs/{id}/reject | Reject design
 *DesignApi* | [**designsIdReplacePost**](docs/Api/DesignApi.md#designsidreplacepost) | **POST** /Designs/{id}/replace | Replace attributes for a model instance and persist it into the data source.
 *DesignApi* | [**designsIdRequesterGet**](docs/Api/DesignApi.md#designsidrequesterget) | **GET** /Designs/{id}/requester | Fetches belongsTo relation requester.
 *DesignApi* | [**designsIdReviewerGet**](docs/Api/DesignApi.md#designsidreviewerget) | **GET** /Designs/{id}/reviewer | Fetches belongsTo relation reviewer.
+*DesignApi* | [**designsIdSubmitPost**](docs/Api/DesignApi.md#designsidsubmitpost) | **POST** /Designs/{id}/submit | Submit design for approval
 *DesignApi* | [**designsIdTagsCountGet**](docs/Api/DesignApi.md#designsidtagscountget) | **GET** /Designs/{id}/tags/count | Counts tags of Design.
 *DesignApi* | [**designsIdTagsDelete**](docs/Api/DesignApi.md#designsidtagsdelete) | **DELETE** /Designs/{id}/tags | Deletes all tags of this model.
 *DesignApi* | [**designsIdTagsFkDelete**](docs/Api/DesignApi.md#designsidtagsfkdelete) | **DELETE** /Designs/{id}/tags/{fk} | Delete a related item by id for tags.
@@ -573,13 +576,13 @@ Class | Method | HTTP request | Description
 *TeamApi* | [**teamsIdPortalsPost**](docs/Api/TeamApi.md#teamsidportalspost) | **POST** /Teams/{id}/portals | Creates a new instance in portals of this model.
 *TeamApi* | [**teamsIdPut**](docs/Api/TeamApi.md#teamsidput) | **PUT** /Teams/{id} | Replace attributes for a model instance and persist it into the data source.
 *TeamApi* | [**teamsIdReplacePost**](docs/Api/TeamApi.md#teamsidreplacepost) | **POST** /Teams/{id}/replace | Replace attributes for a model instance and persist it into the data source.
-*TeamApi* | [**teamsIdTemplateFolderCountGet**](docs/Api/TeamApi.md#teamsidtemplatefoldercountget) | **GET** /Teams/{id}/templateFolder/count | Counts templateFolder of Team.
-*TeamApi* | [**teamsIdTemplateFolderDelete**](docs/Api/TeamApi.md#teamsidtemplatefolderdelete) | **DELETE** /Teams/{id}/templateFolder | Deletes all templateFolder of this model.
-*TeamApi* | [**teamsIdTemplateFolderFkDelete**](docs/Api/TeamApi.md#teamsidtemplatefolderfkdelete) | **DELETE** /Teams/{id}/templateFolder/{fk} | Delete a related item by id for templateFolder.
-*TeamApi* | [**teamsIdTemplateFolderFkGet**](docs/Api/TeamApi.md#teamsidtemplatefolderfkget) | **GET** /Teams/{id}/templateFolder/{fk} | Find a related item by id for templateFolder.
-*TeamApi* | [**teamsIdTemplateFolderFkPut**](docs/Api/TeamApi.md#teamsidtemplatefolderfkput) | **PUT** /Teams/{id}/templateFolder/{fk} | Update a related item by id for templateFolder.
-*TeamApi* | [**teamsIdTemplateFolderGet**](docs/Api/TeamApi.md#teamsidtemplatefolderget) | **GET** /Teams/{id}/templateFolder | Queries templateFolder of Team.
-*TeamApi* | [**teamsIdTemplateFolderPost**](docs/Api/TeamApi.md#teamsidtemplatefolderpost) | **POST** /Teams/{id}/templateFolder | Creates a new instance in templateFolder of this model.
+*TeamApi* | [**teamsIdTemplateFoldersCountGet**](docs/Api/TeamApi.md#teamsidtemplatefolderscountget) | **GET** /Teams/{id}/templateFolders/count | Counts templateFolders of Team.
+*TeamApi* | [**teamsIdTemplateFoldersDelete**](docs/Api/TeamApi.md#teamsidtemplatefoldersdelete) | **DELETE** /Teams/{id}/templateFolders | Deletes all templateFolders of this model.
+*TeamApi* | [**teamsIdTemplateFoldersFkDelete**](docs/Api/TeamApi.md#teamsidtemplatefoldersfkdelete) | **DELETE** /Teams/{id}/templateFolders/{fk} | Delete a related item by id for templateFolders.
+*TeamApi* | [**teamsIdTemplateFoldersFkGet**](docs/Api/TeamApi.md#teamsidtemplatefoldersfkget) | **GET** /Teams/{id}/templateFolders/{fk} | Find a related item by id for templateFolders.
+*TeamApi* | [**teamsIdTemplateFoldersFkPut**](docs/Api/TeamApi.md#teamsidtemplatefoldersfkput) | **PUT** /Teams/{id}/templateFolders/{fk} | Update a related item by id for templateFolders.
+*TeamApi* | [**teamsIdTemplateFoldersGet**](docs/Api/TeamApi.md#teamsidtemplatefoldersget) | **GET** /Teams/{id}/templateFolders | Queries templateFolders of Team.
+*TeamApi* | [**teamsIdTemplateFoldersPost**](docs/Api/TeamApi.md#teamsidtemplatefolderspost) | **POST** /Teams/{id}/templateFolders | Creates a new instance in templateFolders of this model.
 *TeamApi* | [**teamsIdTemplatesCountGet**](docs/Api/TeamApi.md#teamsidtemplatescountget) | **GET** /Teams/{id}/templates/count | Counts templates of Team.
 *TeamApi* | [**teamsIdTemplatesDelete**](docs/Api/TeamApi.md#teamsidtemplatesdelete) | **DELETE** /Teams/{id}/templates | Deletes all templates of this model.
 *TeamApi* | [**teamsIdTemplatesFkDelete**](docs/Api/TeamApi.md#teamsidtemplatesfkdelete) | **DELETE** /Teams/{id}/templates/{fk} | Delete a related item by id for templates.
@@ -679,7 +682,42 @@ Class | Method | HTTP request | Description
 *TeamMemberApi* | [**teamMembersIdReviewedDesignsPost**](docs/Api/TeamMemberApi.md#teammembersidrevieweddesignspost) | **POST** /TeamMembers/{id}/reviewedDesigns | Creates a new instance in reviewedDesigns of this model.
 *TeamMemberApi* | [**teamMembersIdTargetModelTargetIdInviteInviteePost**](docs/Api/TeamMemberApi.md#teammembersidtargetmodeltargetidinviteinviteepost) | **POST** /TeamMembers/{id}/{targetModel}/{targetId}/invite/{invitee} | Invite somebody to join a team, portal or other targets
 *TeamMemberApi* | [**teamMembersIdTargetModelTargetIdInvitePost**](docs/Api/TeamMemberApi.md#teammembersidtargetmodeltargetidinvitepost) | **POST** /TeamMembers/{id}/{targetModel}/{targetId}/invite | Invite a group of people to join a team, portal or other targets
+*TeamMemberApi* | [**teamMembersIdTeamBrandDelete**](docs/Api/TeamMemberApi.md#teammembersidteambranddelete) | **DELETE** /TeamMembers/{id}/team/brand | Deletes brand of this model.
+*TeamMemberApi* | [**teamMembersIdTeamBrandGet**](docs/Api/TeamMemberApi.md#teammembersidteambrandget) | **GET** /TeamMembers/{id}/team/brand | Fetches hasOne relation brand.
+*TeamMemberApi* | [**teamMembersIdTeamBrandPost**](docs/Api/TeamMemberApi.md#teammembersidteambrandpost) | **POST** /TeamMembers/{id}/team/brand | Creates a new instance in brand of this model.
+*TeamMemberApi* | [**teamMembersIdTeamBrandPut**](docs/Api/TeamMemberApi.md#teammembersidteambrandput) | **PUT** /TeamMembers/{id}/team/brand | Update brand of this model.
 *TeamMemberApi* | [**teamMembersIdTeamGet**](docs/Api/TeamMemberApi.md#teammembersidteamget) | **GET** /TeamMembers/{id}/team | Fetches belongsTo relation team.
+*TeamMemberApi* | [**teamMembersIdTeamMembersCountGet**](docs/Api/TeamMemberApi.md#teammembersidteammemberscountget) | **GET** /TeamMembers/{id}/team/members/count | Counts members of Team.
+*TeamMemberApi* | [**teamMembersIdTeamMembersDelete**](docs/Api/TeamMemberApi.md#teammembersidteammembersdelete) | **DELETE** /TeamMembers/{id}/team/members | Deletes all members of this model.
+*TeamMemberApi* | [**teamMembersIdTeamMembersFkDelete**](docs/Api/TeamMemberApi.md#teammembersidteammembersfkdelete) | **DELETE** /TeamMembers/{id}/team/members/{fk} | Delete a related item by id for members.
+*TeamMemberApi* | [**teamMembersIdTeamMembersFkGet**](docs/Api/TeamMemberApi.md#teammembersidteammembersfkget) | **GET** /TeamMembers/{id}/team/members/{fk} | Find a related item by id for members.
+*TeamMemberApi* | [**teamMembersIdTeamMembersFkPut**](docs/Api/TeamMemberApi.md#teammembersidteammembersfkput) | **PUT** /TeamMembers/{id}/team/members/{fk} | Update a related item by id for members.
+*TeamMemberApi* | [**teamMembersIdTeamMembersGet**](docs/Api/TeamMemberApi.md#teammembersidteammembersget) | **GET** /TeamMembers/{id}/team/members | Queries members of Team.
+*TeamMemberApi* | [**teamMembersIdTeamMembersPost**](docs/Api/TeamMemberApi.md#teammembersidteammemberspost) | **POST** /TeamMembers/{id}/team/members | Creates a new instance in members of this model.
+*TeamMemberApi* | [**teamMembersIdTeamMembersRelFkDelete**](docs/Api/TeamMemberApi.md#teammembersidteammembersrelfkdelete) | **DELETE** /TeamMembers/{id}/team/members/rel/{fk} | Remove the members relation to an item by id.
+*TeamMemberApi* | [**teamMembersIdTeamMembersRelFkHead**](docs/Api/TeamMemberApi.md#teammembersidteammembersrelfkhead) | **HEAD** /TeamMembers/{id}/team/members/rel/{fk} | Check the existence of members relation to an item by id.
+*TeamMemberApi* | [**teamMembersIdTeamMembersRelFkPut**](docs/Api/TeamMemberApi.md#teammembersidteammembersrelfkput) | **PUT** /TeamMembers/{id}/team/members/rel/{fk} | Add a related item by id for members.
+*TeamMemberApi* | [**teamMembersIdTeamPortalsCountGet**](docs/Api/TeamMemberApi.md#teammembersidteamportalscountget) | **GET** /TeamMembers/{id}/team/portals/count | Counts portals of Team.
+*TeamMemberApi* | [**teamMembersIdTeamPortalsDelete**](docs/Api/TeamMemberApi.md#teammembersidteamportalsdelete) | **DELETE** /TeamMembers/{id}/team/portals | Deletes all portals of this model.
+*TeamMemberApi* | [**teamMembersIdTeamPortalsFkDelete**](docs/Api/TeamMemberApi.md#teammembersidteamportalsfkdelete) | **DELETE** /TeamMembers/{id}/team/portals/{fk} | Delete a related item by id for portals.
+*TeamMemberApi* | [**teamMembersIdTeamPortalsFkGet**](docs/Api/TeamMemberApi.md#teammembersidteamportalsfkget) | **GET** /TeamMembers/{id}/team/portals/{fk} | Find a related item by id for portals.
+*TeamMemberApi* | [**teamMembersIdTeamPortalsFkPut**](docs/Api/TeamMemberApi.md#teammembersidteamportalsfkput) | **PUT** /TeamMembers/{id}/team/portals/{fk} | Update a related item by id for portals.
+*TeamMemberApi* | [**teamMembersIdTeamPortalsGet**](docs/Api/TeamMemberApi.md#teammembersidteamportalsget) | **GET** /TeamMembers/{id}/team/portals | Queries portals of Team.
+*TeamMemberApi* | [**teamMembersIdTeamPortalsPost**](docs/Api/TeamMemberApi.md#teammembersidteamportalspost) | **POST** /TeamMembers/{id}/team/portals | Creates a new instance in portals of this model.
+*TeamMemberApi* | [**teamMembersIdTeamTemplateFoldersCountGet**](docs/Api/TeamMemberApi.md#teammembersidteamtemplatefolderscountget) | **GET** /TeamMembers/{id}/team/templateFolders/count | Counts templateFolders of Team.
+*TeamMemberApi* | [**teamMembersIdTeamTemplateFoldersDelete**](docs/Api/TeamMemberApi.md#teammembersidteamtemplatefoldersdelete) | **DELETE** /TeamMembers/{id}/team/templateFolders | Deletes all templateFolders of this model.
+*TeamMemberApi* | [**teamMembersIdTeamTemplateFoldersFkDelete**](docs/Api/TeamMemberApi.md#teammembersidteamtemplatefoldersfkdelete) | **DELETE** /TeamMembers/{id}/team/templateFolders/{fk} | Delete a related item by id for templateFolders.
+*TeamMemberApi* | [**teamMembersIdTeamTemplateFoldersFkGet**](docs/Api/TeamMemberApi.md#teammembersidteamtemplatefoldersfkget) | **GET** /TeamMembers/{id}/team/templateFolders/{fk} | Find a related item by id for templateFolders.
+*TeamMemberApi* | [**teamMembersIdTeamTemplateFoldersFkPut**](docs/Api/TeamMemberApi.md#teammembersidteamtemplatefoldersfkput) | **PUT** /TeamMembers/{id}/team/templateFolders/{fk} | Update a related item by id for templateFolders.
+*TeamMemberApi* | [**teamMembersIdTeamTemplateFoldersGet**](docs/Api/TeamMemberApi.md#teammembersidteamtemplatefoldersget) | **GET** /TeamMembers/{id}/team/templateFolders | Queries templateFolders of Team.
+*TeamMemberApi* | [**teamMembersIdTeamTemplateFoldersPost**](docs/Api/TeamMemberApi.md#teammembersidteamtemplatefolderspost) | **POST** /TeamMembers/{id}/team/templateFolders | Creates a new instance in templateFolders of this model.
+*TeamMemberApi* | [**teamMembersIdTeamTemplatesCountGet**](docs/Api/TeamMemberApi.md#teammembersidteamtemplatescountget) | **GET** /TeamMembers/{id}/team/templates/count | Counts templates of Team.
+*TeamMemberApi* | [**teamMembersIdTeamTemplatesDelete**](docs/Api/TeamMemberApi.md#teammembersidteamtemplatesdelete) | **DELETE** /TeamMembers/{id}/team/templates | Deletes all templates of this model.
+*TeamMemberApi* | [**teamMembersIdTeamTemplatesFkDelete**](docs/Api/TeamMemberApi.md#teammembersidteamtemplatesfkdelete) | **DELETE** /TeamMembers/{id}/team/templates/{fk} | Delete a related item by id for templates.
+*TeamMemberApi* | [**teamMembersIdTeamTemplatesFkGet**](docs/Api/TeamMemberApi.md#teammembersidteamtemplatesfkget) | **GET** /TeamMembers/{id}/team/templates/{fk} | Find a related item by id for templates.
+*TeamMemberApi* | [**teamMembersIdTeamTemplatesFkPut**](docs/Api/TeamMemberApi.md#teammembersidteamtemplatesfkput) | **PUT** /TeamMembers/{id}/team/templates/{fk} | Update a related item by id for templates.
+*TeamMemberApi* | [**teamMembersIdTeamTemplatesGet**](docs/Api/TeamMemberApi.md#teammembersidteamtemplatesget) | **GET** /TeamMembers/{id}/team/templates | Queries templates of Team.
+*TeamMemberApi* | [**teamMembersIdTeamTemplatesPost**](docs/Api/TeamMemberApi.md#teammembersidteamtemplatespost) | **POST** /TeamMembers/{id}/team/templates | Creates a new instance in templates of this model.
 *TeamMemberApi* | [**teamMembersIdTemplatesCountGet**](docs/Api/TeamMemberApi.md#teammembersidtemplatescountget) | **GET** /TeamMembers/{id}/templates/count | Counts templates of TeamMember.
 *TeamMemberApi* | [**teamMembersIdTemplatesDelete**](docs/Api/TeamMemberApi.md#teammembersidtemplatesdelete) | **DELETE** /TeamMembers/{id}/templates | Deletes all templates of this model.
 *TeamMemberApi* | [**teamMembersIdTemplatesFkDelete**](docs/Api/TeamMemberApi.md#teammembersidtemplatesfkdelete) | **DELETE** /TeamMembers/{id}/templates/{fk} | Delete a related item by id for templates.
@@ -863,6 +901,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [Axes](docs/Model/Axes.md)
  - [Customer](docs/Model/Customer.md)
  - [CustomerPermissionSet](docs/Model/CustomerPermissionSet.md)
  - [Design](docs/Model/Design.md)
@@ -870,7 +909,6 @@ Class | Method | HTTP request | Description
  - [DesignExport](docs/Model/DesignExport.md)
  - [DesignFolder](docs/Model/DesignFolder.md)
  - [DesignTag](docs/Model/DesignTag.md)
- - [GeoPoint](docs/Model/GeoPoint.md)
  - [Image](docs/Model/Image.md)
  - [InlineResponse200](docs/Model/InlineResponse200.md)
  - [InlineResponse2001](docs/Model/InlineResponse2001.md)

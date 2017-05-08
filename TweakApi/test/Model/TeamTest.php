@@ -232,9 +232,9 @@ class TeamTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "templateFolder"
+     * Test attribute "templateFolders"
      */
-    public function testPropertyTemplateFolder()
+    public function testPropertyTemplateFolders()
     {
 
     }
