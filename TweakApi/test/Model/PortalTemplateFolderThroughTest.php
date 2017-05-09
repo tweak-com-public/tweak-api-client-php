@@ -1,6 +1,6 @@
 <?php
 /**
- * TemplateTest
+ * PortalTemplateFolderThroughTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Tweak\Api;
 
 /**
- * TemplateTest Class Doc Comment
+ * PortalTemplateFolderThroughTest Class Doc Comment
  *
  * @category    Class */
-// * @description Template
+// * @description PortalTemplateFolderThrough
 /**
  * @package     Tweak\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class TemplateTest extends \PHPUnit_Framework_TestCase
+class PortalTemplateFolderThroughTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,65 +88,9 @@ class TemplateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "Template"
+     * Test "PortalTemplateFolderThrough"
      */
-    public function testTemplate()
-    {
-
-    }
-
-    /**
-     * Test attribute "name"
-     */
-    public function testPropertyName()
-    {
-
-    }
-
-    /**
-     * Test attribute "thumbnail"
-     */
-    public function testPropertyThumbnail()
-    {
-
-    }
-
-    /**
-     * Test attribute "object"
-     */
-    public function testPropertyObject()
-    {
-
-    }
-
-    /**
-     * Test attribute "description"
-     */
-    public function testPropertyDescription()
-    {
-
-    }
-
-    /**
-     * Test attribute "edited"
-     */
-    public function testPropertyEdited()
-    {
-
-    }
-
-    /**
-     * Test attribute "created"
-     */
-    public function testPropertyCreated()
-    {
-
-    }
-
-    /**
-     * Test attribute "modified"
-     */
-    public function testPropertyModified()
+    public function testPortalTemplateFolderThrough()
     {
 
     }
@@ -160,89 +104,33 @@ class TemplateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "teamId"
+     * Test attribute "portalFolderId"
      */
-    public function testPropertyTeamId()
+    public function testPropertyPortalFolderId()
     {
 
     }
 
     /**
-     * Test attribute "memberId"
+     * Test attribute "templateId"
      */
-    public function testPropertyMemberId()
+    public function testPropertyTemplateId()
     {
 
     }
 
     /**
-     * Test attribute "teamFolderId"
+     * Test attribute "portalFolder"
      */
-    public function testPropertyTeamFolderId()
+    public function testPropertyPortalFolder()
     {
 
     }
 
     /**
-     * Test attribute "portals"
+     * Test attribute "template"
      */
-    public function testPropertyPortals()
-    {
-
-    }
-
-    /**
-     * Test attribute "team"
-     */
-    public function testPropertyTeam()
-    {
-
-    }
-
-    /**
-     * Test attribute "members"
-     */
-    public function testPropertyMembers()
-    {
-
-    }
-
-    /**
-     * Test attribute "permission"
-     */
-    public function testPropertyPermission()
-    {
-
-    }
-
-    /**
-     * Test attribute "designs"
-     */
-    public function testPropertyDesigns()
-    {
-
-    }
-
-    /**
-     * Test attribute "tags"
-     */
-    public function testPropertyTags()
-    {
-
-    }
-
-    /**
-     * Test attribute "teamFolder"
-     */
-    public function testPropertyTeamFolder()
-    {
-
-    }
-
-    /**
-     * Test attribute "portalFolders"
-     */
-    public function testPropertyPortalFolders()
+    public function testPropertyTemplate()
     {
 
     }

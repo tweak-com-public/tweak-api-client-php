@@ -442,12 +442,111 @@ class TemplateApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for templatesIdPortalFolderGet
+     * Test case for templatesIdPortalFoldersCountGet
      *
-     * Fetches belongsTo relation portalFolder..
+     * Counts portalFolders of Template..
      *
      */
-    public function testTemplatesIdPortalFolderGet()
+    public function testTemplatesIdPortalFoldersCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for templatesIdPortalFoldersDelete
+     *
+     * Deletes all portalFolders of this model..
+     *
+     */
+    public function testTemplatesIdPortalFoldersDelete()
+    {
+
+    }
+
+    /**
+     * Test case for templatesIdPortalFoldersFkDelete
+     *
+     * Delete a related item by id for portalFolders..
+     *
+     */
+    public function testTemplatesIdPortalFoldersFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for templatesIdPortalFoldersFkGet
+     *
+     * Find a related item by id for portalFolders..
+     *
+     */
+    public function testTemplatesIdPortalFoldersFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for templatesIdPortalFoldersFkPut
+     *
+     * Update a related item by id for portalFolders..
+     *
+     */
+    public function testTemplatesIdPortalFoldersFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for templatesIdPortalFoldersGet
+     *
+     * Queries portalFolders of Template..
+     *
+     */
+    public function testTemplatesIdPortalFoldersGet()
+    {
+
+    }
+
+    /**
+     * Test case for templatesIdPortalFoldersPost
+     *
+     * Creates a new instance in portalFolders of this model..
+     *
+     */
+    public function testTemplatesIdPortalFoldersPost()
+    {
+
+    }
+
+    /**
+     * Test case for templatesIdPortalFoldersRelFkDelete
+     *
+     * Remove the portalFolders relation to an item by id..
+     *
+     */
+    public function testTemplatesIdPortalFoldersRelFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for templatesIdPortalFoldersRelFkHead
+     *
+     * Check the existence of portalFolders relation to an item by id..
+     *
+     */
+    public function testTemplatesIdPortalFoldersRelFkHead()
+    {
+
+    }
+
+    /**
+     * Test case for templatesIdPortalFoldersRelFkPut
+     *
+     * Add a related item by id for portalFolders..
+     *
+     */
+    public function testTemplatesIdPortalFoldersRelFkPut()
     {
 
     }

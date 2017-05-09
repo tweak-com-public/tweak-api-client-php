@@ -398,6 +398,39 @@ class PortalTemplateFolderApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for portalTemplateFoldersIdTemplatesRelFkDelete
+     *
+     * Remove the templates relation to an item by id..
+     *
+     */
+    public function testPortalTemplateFoldersIdTemplatesRelFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for portalTemplateFoldersIdTemplatesRelFkHead
+     *
+     * Check the existence of templates relation to an item by id..
+     *
+     */
+    public function testPortalTemplateFoldersIdTemplatesRelFkHead()
+    {
+
+    }
+
+    /**
+     * Test case for portalTemplateFoldersIdTemplatesRelFkPut
+     *
+     * Add a related item by id for templates..
+     *
+     */
+    public function testPortalTemplateFoldersIdTemplatesRelFkPut()
+    {
+
+    }
+
+    /**
      * Test case for portalTemplateFoldersPatch
      *
      * Patch an existing model instance or insert a new one into the data source..

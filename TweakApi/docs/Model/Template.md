@@ -14,7 +14,6 @@ Name | Type | Description | Notes
 **teamId** | **string** |  | [optional] 
 **memberId** | **string** |  | [optional] 
 **teamFolderId** | **string** |  | [optional] 
-**portalFolderId** | **string** |  | [optional] 
 **portals** | [**\Swagger\Client\Model\Portal[]**](Portal.md) |  | [optional] 
 **team** | [**\Swagger\Client\Model\Team**](Team.md) |  | [optional] 
 **members** | [**\Swagger\Client\Model\TeamMember[]**](TeamMember.md) |  | [optional] 
@@ -22,7 +21,7 @@ Name | Type | Description | Notes
 **designs** | [**\Swagger\Client\Model\Design[]**](Design.md) |  | [optional] 
 **tags** | [**\Swagger\Client\Model\Tag[]**](Tag.md) |  | [optional] 
 **teamFolder** | [**\Swagger\Client\Model\TeamTemplateFolder**](TeamTemplateFolder.md) |  | [optional] 
-**portalFolder** | [**\Swagger\Client\Model\PortalTemplateFolder**](PortalTemplateFolder.md) |  | [optional] 
+**portalFolders** | [**\Swagger\Client\Model\PortalTemplateFolder[]**](PortalTemplateFolder.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

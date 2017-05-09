@@ -32,6 +32,9 @@ Method | HTTP request | Description
 [**portalTemplateFoldersIdTemplatesFkPut**](PortalTemplateFolderApi.md#portalTemplateFoldersIdTemplatesFkPut) | **PUT** /PortalTemplateFolders/{id}/templates/{fk} | Update a related item by id for templates.
 [**portalTemplateFoldersIdTemplatesGet**](PortalTemplateFolderApi.md#portalTemplateFoldersIdTemplatesGet) | **GET** /PortalTemplateFolders/{id}/templates | Queries templates of PortalTemplateFolder.
 [**portalTemplateFoldersIdTemplatesPost**](PortalTemplateFolderApi.md#portalTemplateFoldersIdTemplatesPost) | **POST** /PortalTemplateFolders/{id}/templates | Creates a new instance in templates of this model.
+[**portalTemplateFoldersIdTemplatesRelFkDelete**](PortalTemplateFolderApi.md#portalTemplateFoldersIdTemplatesRelFkDelete) | **DELETE** /PortalTemplateFolders/{id}/templates/rel/{fk} | Remove the templates relation to an item by id.
+[**portalTemplateFoldersIdTemplatesRelFkHead**](PortalTemplateFolderApi.md#portalTemplateFoldersIdTemplatesRelFkHead) | **HEAD** /PortalTemplateFolders/{id}/templates/rel/{fk} | Check the existence of templates relation to an item by id.
+[**portalTemplateFoldersIdTemplatesRelFkPut**](PortalTemplateFolderApi.md#portalTemplateFoldersIdTemplatesRelFkPut) | **PUT** /PortalTemplateFolders/{id}/templates/rel/{fk} | Add a related item by id for templates.
 [**portalTemplateFoldersPatch**](PortalTemplateFolderApi.md#portalTemplateFoldersPatch) | **PATCH** /PortalTemplateFolders | Patch an existing model instance or insert a new one into the data source.
 [**portalTemplateFoldersPost**](PortalTemplateFolderApi.md#portalTemplateFoldersPost) | **POST** /PortalTemplateFolders | Create a new instance of the model and persist it into the data source.
 [**portalTemplateFoldersPut**](PortalTemplateFolderApi.md#portalTemplateFoldersPut) | **PUT** /PortalTemplateFolders | Replace an existing model instance or insert a new one into the data source.
@@ -1408,6 +1411,157 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\Template**](../Model/Template.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **portalTemplateFoldersIdTemplatesRelFkDelete**
+> portalTemplateFoldersIdTemplatesRelFkDelete($id, $fk)
+
+Remove the templates relation to an item by id.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\PortalTemplateFolderApi();
+$id = "id_example"; // string | PortalTemplateFolder id
+$fk = "fk_example"; // string | Foreign key for templates
+
+try {
+    $api_instance->portalTemplateFoldersIdTemplatesRelFkDelete($id, $fk);
+} catch (Exception $e) {
+    echo 'Exception when calling PortalTemplateFolderApi->portalTemplateFoldersIdTemplatesRelFkDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| PortalTemplateFolder id |
+ **fk** | **string**| Foreign key for templates |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **portalTemplateFoldersIdTemplatesRelFkHead**
+> bool portalTemplateFoldersIdTemplatesRelFkHead($id, $fk)
+
+Check the existence of templates relation to an item by id.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\PortalTemplateFolderApi();
+$id = "id_example"; // string | PortalTemplateFolder id
+$fk = "fk_example"; // string | Foreign key for templates
+
+try {
+    $result = $api_instance->portalTemplateFoldersIdTemplatesRelFkHead($id, $fk);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PortalTemplateFolderApi->portalTemplateFoldersIdTemplatesRelFkHead: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| PortalTemplateFolder id |
+ **fk** | **string**| Foreign key for templates |
+
+### Return type
+
+**bool**
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **portalTemplateFoldersIdTemplatesRelFkPut**
+> \Swagger\Client\Model\PortalTemplateFolderThrough portalTemplateFoldersIdTemplatesRelFkPut($id, $fk, $data)
+
+Add a related item by id for templates.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\PortalTemplateFolderApi();
+$id = "id_example"; // string | PortalTemplateFolder id
+$fk = "fk_example"; // string | Foreign key for templates
+$data = new \Swagger\Client\Model\PortalTemplateFolderThrough(); // \Swagger\Client\Model\PortalTemplateFolderThrough | 
+
+try {
+    $result = $api_instance->portalTemplateFoldersIdTemplatesRelFkPut($id, $fk, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PortalTemplateFolderApi->portalTemplateFoldersIdTemplatesRelFkPut: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| PortalTemplateFolder id |
+ **fk** | **string**| Foreign key for templates |
+ **data** | [**\Swagger\Client\Model\PortalTemplateFolderThrough**](../Model/\Swagger\Client\Model\PortalTemplateFolderThrough.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\PortalTemplateFolderThrough**](../Model/PortalTemplateFolderThrough.md)
 
 ### Authorization
 
