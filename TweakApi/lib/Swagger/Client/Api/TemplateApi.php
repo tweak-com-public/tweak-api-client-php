@@ -6545,6 +6545,102 @@ class TemplateApi
     }
 
     /**
+     * Operation templatesIdUploaderGet
+     *
+     * Fetches belongsTo relation uploader.
+     *
+     * @param string $id Template id (required)
+     * @param bool $refresh  (optional)
+     * @return \Swagger\Client\Model\TeamMember
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function templatesIdUploaderGet($id, $refresh = null)
+    {
+        list($response) = $this->templatesIdUploaderGetWithHttpInfo($id, $refresh);
+        return $response;
+    }
+
+    /**
+     * Operation templatesIdUploaderGetWithHttpInfo
+     *
+     * Fetches belongsTo relation uploader.
+     *
+     * @param string $id Template id (required)
+     * @param bool $refresh  (optional)
+     * @return array of \Swagger\Client\Model\TeamMember, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function templatesIdUploaderGetWithHttpInfo($id, $refresh = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling templatesIdUploaderGet');
+        }
+        // parse inputs
+        $resourcePath = "/Templates/{id}/uploader";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($refresh !== null) {
+            $queryParams['refresh'] = $this->apiClient->getSerializer()->toQueryValue($refresh);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\TeamMember',
+                '/Templates/{id}/uploader'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TeamMember', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TeamMember', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation templatesIdWorkflowGet
      *
      * Fetches belongsTo relation workflow.

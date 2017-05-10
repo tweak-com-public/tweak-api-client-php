@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **modified** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **id** | **string** |  | [optional] 
 **teamId** | **string** |  | [optional] 
-**memberId** | **string** |  | [optional] 
+**uploaderId** | **string** |  | [optional] 
 **teamFolderId** | **string** |  | [optional] 
 **workflowId** | **string** |  | [optional] 
 **portals** | [**\Swagger\Client\Model\Portal[]**](Portal.md) |  | [optional] 
@@ -24,6 +24,7 @@ Name | Type | Description | Notes
 **teamFolder** | [**\Swagger\Client\Model\TeamTemplateFolder**](TeamTemplateFolder.md) |  | [optional] 
 **portalFolders** | [**\Swagger\Client\Model\PortalTemplateFolder[]**](PortalTemplateFolder.md) |  | [optional] 
 **workflow** | [**\Swagger\Client\Model\Workflow**](Workflow.md) |  | [optional] 
+**uploader** | [**\Swagger\Client\Model\TeamMember**](TeamMember.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

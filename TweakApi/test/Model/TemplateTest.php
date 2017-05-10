@@ -168,9 +168,9 @@ class TemplateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "memberId"
+     * Test attribute "uploaderId"
      */
-    public function testPropertyMemberId()
+    public function testPropertyUploaderId()
     {
 
     }
@@ -259,6 +259,14 @@ class TemplateTest extends \PHPUnit_Framework_TestCase
      * Test attribute "workflow"
      */
     public function testPropertyWorkflow()
+    {
+
+    }
+
+    /**
+     * Test attribute "uploader"
+     */
+    public function testPropertyUploader()
     {
 
     }

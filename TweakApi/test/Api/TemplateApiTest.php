@@ -816,6 +816,17 @@ class TemplateApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for templatesIdUploaderGet
+     *
+     * Fetches belongsTo relation uploader..
+     *
+     */
+    public function testTemplatesIdUploaderGet()
+    {
+
+    }
+
+    /**
      * Test case for templatesIdWorkflowGet
      *
      * Fetches belongsTo relation workflow..

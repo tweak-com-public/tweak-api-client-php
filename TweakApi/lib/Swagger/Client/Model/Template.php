@@ -75,7 +75,7 @@ class Template implements ArrayAccess
         'modified' => '\DateTime',
         'id' => 'string',
         'teamId' => 'string',
-        'memberId' => 'string',
+        'uploaderId' => 'string',
         'teamFolderId' => 'string',
         'workflowId' => 'string',
         'portals' => '\Swagger\Client\Model\Portal[]',
@@ -86,7 +86,8 @@ class Template implements ArrayAccess
         'tags' => '\Swagger\Client\Model\Tag[]',
         'teamFolder' => '\Swagger\Client\Model\TeamTemplateFolder',
         'portalFolders' => '\Swagger\Client\Model\PortalTemplateFolder[]',
-        'workflow' => '\Swagger\Client\Model\Workflow'
+        'workflow' => '\Swagger\Client\Model\Workflow',
+        'uploader' => '\Swagger\Client\Model\TeamMember'
     );
 
     public static function swaggerTypes()
@@ -108,7 +109,7 @@ class Template implements ArrayAccess
         'modified' => 'modified',
         'id' => 'id',
         'teamId' => 'teamId',
-        'memberId' => 'memberId',
+        'uploaderId' => 'uploaderId',
         'teamFolderId' => 'teamFolderId',
         'workflowId' => 'workflowId',
         'portals' => 'portals',
@@ -119,7 +120,8 @@ class Template implements ArrayAccess
         'tags' => 'tags',
         'teamFolder' => 'teamFolder',
         'portalFolders' => 'portalFolders',
-        'workflow' => 'workflow'
+        'workflow' => 'workflow',
+        'uploader' => 'uploader'
     );
 
     public static function attributeMap()
@@ -141,7 +143,7 @@ class Template implements ArrayAccess
         'modified' => 'setModified',
         'id' => 'setId',
         'teamId' => 'setTeamId',
-        'memberId' => 'setMemberId',
+        'uploaderId' => 'setUploaderId',
         'teamFolderId' => 'setTeamFolderId',
         'workflowId' => 'setWorkflowId',
         'portals' => 'setPortals',
@@ -152,7 +154,8 @@ class Template implements ArrayAccess
         'tags' => 'setTags',
         'teamFolder' => 'setTeamFolder',
         'portalFolders' => 'setPortalFolders',
-        'workflow' => 'setWorkflow'
+        'workflow' => 'setWorkflow',
+        'uploader' => 'setUploader'
     );
 
     public static function setters()
@@ -174,7 +177,7 @@ class Template implements ArrayAccess
         'modified' => 'getModified',
         'id' => 'getId',
         'teamId' => 'getTeamId',
-        'memberId' => 'getMemberId',
+        'uploaderId' => 'getUploaderId',
         'teamFolderId' => 'getTeamFolderId',
         'workflowId' => 'getWorkflowId',
         'portals' => 'getPortals',
@@ -185,7 +188,8 @@ class Template implements ArrayAccess
         'tags' => 'getTags',
         'teamFolder' => 'getTeamFolder',
         'portalFolders' => 'getPortalFolders',
-        'workflow' => 'getWorkflow'
+        'workflow' => 'getWorkflow',
+        'uploader' => 'getUploader'
     );
 
     public static function getters()
@@ -218,7 +222,7 @@ class Template implements ArrayAccess
         $this->container['modified'] = isset($data['modified']) ? $data['modified'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['teamId'] = isset($data['teamId']) ? $data['teamId'] : null;
-        $this->container['memberId'] = isset($data['memberId']) ? $data['memberId'] : null;
+        $this->container['uploaderId'] = isset($data['uploaderId']) ? $data['uploaderId'] : null;
         $this->container['teamFolderId'] = isset($data['teamFolderId']) ? $data['teamFolderId'] : null;
         $this->container['workflowId'] = isset($data['workflowId']) ? $data['workflowId'] : null;
         $this->container['portals'] = isset($data['portals']) ? $data['portals'] : null;
@@ -230,6 +234,7 @@ class Template implements ArrayAccess
         $this->container['teamFolder'] = isset($data['teamFolder']) ? $data['teamFolder'] : null;
         $this->container['portalFolders'] = isset($data['portalFolders']) ? $data['portalFolders'] : null;
         $this->container['workflow'] = isset($data['workflow']) ? $data['workflow'] : null;
+        $this->container['uploader'] = isset($data['uploader']) ? $data['uploader'] : null;
     }
 
     /**
@@ -457,22 +462,22 @@ class Template implements ArrayAccess
     }
 
     /**
-     * Gets memberId
+     * Gets uploaderId
      * @return string
      */
-    public function getMemberId()
+    public function getUploaderId()
     {
-        return $this->container['memberId'];
+        return $this->container['uploaderId'];
     }
 
     /**
-     * Sets memberId
-     * @param string $memberId
+     * Sets uploaderId
+     * @param string $uploaderId
      * @return $this
      */
-    public function setMemberId($memberId)
+    public function setUploaderId($uploaderId)
     {
-        $this->container['memberId'] = $memberId;
+        $this->container['uploaderId'] = $uploaderId;
 
         return $this;
     }
@@ -704,6 +709,27 @@ class Template implements ArrayAccess
     public function setWorkflow($workflow)
     {
         $this->container['workflow'] = $workflow;
+
+        return $this;
+    }
+
+    /**
+     * Gets uploader
+     * @return \Swagger\Client\Model\TeamMember
+     */
+    public function getUploader()
+    {
+        return $this->container['uploader'];
+    }
+
+    /**
+     * Sets uploader
+     * @param \Swagger\Client\Model\TeamMember $uploader
+     * @return $this
+     */
+    public function setUploader($uploader)
+    {
+        $this->container['uploader'] = $uploader;
 
         return $this;
     }

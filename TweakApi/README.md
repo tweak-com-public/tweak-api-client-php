@@ -885,6 +885,7 @@ Class | Method | HTTP request | Description
 *TemplateApi* | [**templatesIdTagsRelFkPut**](docs/Api/TemplateApi.md#templatesidtagsrelfkput) | **PUT** /Templates/{id}/tags/rel/{fk} | Add a related item by id for tags.
 *TemplateApi* | [**templatesIdTeamFolderGet**](docs/Api/TemplateApi.md#templatesidteamfolderget) | **GET** /Templates/{id}/teamFolder | Fetches belongsTo relation teamFolder.
 *TemplateApi* | [**templatesIdTeamGet**](docs/Api/TemplateApi.md#templatesidteamget) | **GET** /Templates/{id}/team | Fetches belongsTo relation team.
+*TemplateApi* | [**templatesIdUploaderGet**](docs/Api/TemplateApi.md#templatesiduploaderget) | **GET** /Templates/{id}/uploader | Fetches belongsTo relation uploader.
 *TemplateApi* | [**templatesIdWorkflowGet**](docs/Api/TemplateApi.md#templatesidworkflowget) | **GET** /Templates/{id}/workflow | Fetches belongsTo relation workflow.
 *TemplateApi* | [**templatesPatch**](docs/Api/TemplateApi.md#templatespatch) | **PATCH** /Templates | Patch an existing model instance or insert a new one into the data source.
 *TemplateApi* | [**templatesPost**](docs/Api/TemplateApi.md#templatespost) | **POST** /Templates | Create a new instance of the model and persist it into the data source.
