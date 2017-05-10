@@ -607,6 +607,83 @@ class TeamApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for teamsIdWorkflowsCountGet
+     *
+     * Counts workflows of Team..
+     *
+     */
+    public function testTeamsIdWorkflowsCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamsIdWorkflowsDelete
+     *
+     * Deletes all workflows of this model..
+     *
+     */
+    public function testTeamsIdWorkflowsDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamsIdWorkflowsFkDelete
+     *
+     * Delete a related item by id for workflows..
+     *
+     */
+    public function testTeamsIdWorkflowsFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamsIdWorkflowsFkGet
+     *
+     * Find a related item by id for workflows..
+     *
+     */
+    public function testTeamsIdWorkflowsFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamsIdWorkflowsFkPut
+     *
+     * Update a related item by id for workflows..
+     *
+     */
+    public function testTeamsIdWorkflowsFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for teamsIdWorkflowsGet
+     *
+     * Queries workflows of Team..
+     *
+     */
+    public function testTeamsIdWorkflowsGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamsIdWorkflowsPost
+     *
+     * Creates a new instance in workflows of this model..
+     *
+     */
+    public function testTeamsIdWorkflowsPost()
+    {
+
+    }
+
+    /**
      * Test case for teamsPatch
      *
      * Patch an existing model instance or insert a new one into the data source..

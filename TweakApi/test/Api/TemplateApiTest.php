@@ -816,6 +816,17 @@ class TemplateApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for templatesIdWorkflowGet
+     *
+     * Fetches belongsTo relation workflow..
+     *
+     */
+    public function testTemplatesIdWorkflowGet()
+    {
+
+    }
+
+    /**
      * Test case for templatesPatch
      *
      * Patch an existing model instance or insert a new one into the data source..

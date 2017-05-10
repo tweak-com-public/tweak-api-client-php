@@ -1,6 +1,6 @@
 <?php
 /**
- * TeamMemberTest
+ * WorkflowTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Tweak\Api;
 
 /**
- * TeamMemberTest Class Doc Comment
+ * WorkflowTest Class Doc Comment
  *
  * @category    Class */
-// * @description TeamMember
+// * @description Workflow
 /**
  * @package     Tweak\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class TeamMemberTest extends \PHPUnit_Framework_TestCase
+class WorkflowTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,17 +88,33 @@ class TeamMemberTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "TeamMember"
+     * Test "Workflow"
      */
-    public function testTeamMember()
+    public function testWorkflow()
     {
 
     }
 
     /**
-     * Test attribute "roles"
+     * Test attribute "name"
      */
-    public function testPropertyRoles()
+    public function testPropertyName()
+    {
+
+    }
+
+    /**
+     * Test attribute "form"
+     */
+    public function testPropertyForm()
+    {
+
+    }
+
+    /**
+     * Test attribute "edited"
+     */
+    public function testPropertyEdited()
     {
 
     }
@@ -128,14 +144,6 @@ class TeamMemberTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "customerId"
-     */
-    public function testPropertyCustomerId()
-    {
-
-    }
-
-    /**
      * Test attribute "teamId"
      */
     public function testPropertyTeamId()
@@ -144,9 +152,9 @@ class TeamMemberTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "customer"
+     * Test attribute "creatorId"
      */
-    public function testPropertyCustomer()
+    public function testPropertyCreatorId()
     {
 
     }
@@ -160,22 +168,6 @@ class TeamMemberTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "portals"
-     */
-    public function testPropertyPortals()
-    {
-
-    }
-
-    /**
-     * Test attribute "uploadedTemplates"
-     */
-    public function testPropertyUploadedTemplates()
-    {
-
-    }
-
-    /**
      * Test attribute "templates"
      */
     public function testPropertyTemplates()
@@ -184,73 +176,9 @@ class TeamMemberTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "invitationTickets"
+     * Test attribute "creator"
      */
-    public function testPropertyInvitationTickets()
-    {
-
-    }
-
-    /**
-     * Test attribute "requestedDesigns"
-     */
-    public function testPropertyRequestedDesigns()
-    {
-
-    }
-
-    /**
-     * Test attribute "requestedDesignExports"
-     */
-    public function testPropertyRequestedDesignExports()
-    {
-
-    }
-
-    /**
-     * Test attribute "assignedDesigns"
-     */
-    public function testPropertyAssignedDesigns()
-    {
-
-    }
-
-    /**
-     * Test attribute "reviewedDesigns"
-     */
-    public function testPropertyReviewedDesigns()
-    {
-
-    }
-
-    /**
-     * Test attribute "commentedDesigns"
-     */
-    public function testPropertyCommentedDesigns()
-    {
-
-    }
-
-    /**
-     * Test attribute "designComments"
-     */
-    public function testPropertyDesignComments()
-    {
-
-    }
-
-    /**
-     * Test attribute "designFolders"
-     */
-    public function testPropertyDesignFolders()
-    {
-
-    }
-
-    /**
-     * Test attribute "workflows"
-     */
-    public function testPropertyWorkflows()
+    public function testPropertyCreator()
     {
 
     }

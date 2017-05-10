@@ -1,6 +1,6 @@
 <?php
 /**
- * Team
+ * Workflow
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * Team Class Doc Comment
+ * Workflow Class Doc Comment
  *
  * @category    Class */
 /** 
@@ -53,13 +53,13 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Team implements ArrayAccess
+class Workflow implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'Team';
+    protected static $swaggerModelName = 'Workflow';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -67,24 +67,16 @@ class Team implements ArrayAccess
       */
     protected static $swaggerTypes = array(
         'name' => 'string',
-        'logo' => 'string',
-        'subdomain' => 'string',
+        'form' => 'object',
+        'edited' => '\DateTime',
         'created' => '\DateTime',
         'modified' => '\DateTime',
         'id' => 'string',
-        'icon' => 'string',
-        'clientKey' => 'string',
-        'javaScriptKey' => 'string',
-        'restApiKey' => 'string',
-        'windowsKey' => 'string',
-        'masterKey' => 'string',
-        'status' => 'string',
-        'members' => '\Swagger\Client\Model\Customer[]',
-        'portals' => '\Swagger\Client\Model\Portal[]',
+        'teamId' => 'string',
+        'creatorId' => 'string',
+        'team' => '\Swagger\Client\Model\Team',
         'templates' => '\Swagger\Client\Model\Template[]',
-        'brand' => '\Swagger\Client\Model\TeamBrand',
-        'templateFolders' => '\Swagger\Client\Model\TeamTemplateFolder[]',
-        'workflows' => '\Swagger\Client\Model\Workflow[]'
+        'creator' => '\Swagger\Client\Model\TeamMember'
     );
 
     public static function swaggerTypes()
@@ -98,24 +90,16 @@ class Team implements ArrayAccess
      */
     protected static $attributeMap = array(
         'name' => 'name',
-        'logo' => 'logo',
-        'subdomain' => 'subdomain',
+        'form' => 'form',
+        'edited' => 'edited',
         'created' => 'created',
         'modified' => 'modified',
         'id' => 'id',
-        'icon' => 'icon',
-        'clientKey' => 'clientKey',
-        'javaScriptKey' => 'javaScriptKey',
-        'restApiKey' => 'restApiKey',
-        'windowsKey' => 'windowsKey',
-        'masterKey' => 'masterKey',
-        'status' => 'status',
-        'members' => 'members',
-        'portals' => 'portals',
+        'teamId' => 'teamId',
+        'creatorId' => 'creatorId',
+        'team' => 'team',
         'templates' => 'templates',
-        'brand' => 'brand',
-        'templateFolders' => 'templateFolders',
-        'workflows' => 'workflows'
+        'creator' => 'creator'
     );
 
     public static function attributeMap()
@@ -129,24 +113,16 @@ class Team implements ArrayAccess
      */
     protected static $setters = array(
         'name' => 'setName',
-        'logo' => 'setLogo',
-        'subdomain' => 'setSubdomain',
+        'form' => 'setForm',
+        'edited' => 'setEdited',
         'created' => 'setCreated',
         'modified' => 'setModified',
         'id' => 'setId',
-        'icon' => 'setIcon',
-        'clientKey' => 'setClientKey',
-        'javaScriptKey' => 'setJavaScriptKey',
-        'restApiKey' => 'setRestApiKey',
-        'windowsKey' => 'setWindowsKey',
-        'masterKey' => 'setMasterKey',
-        'status' => 'setStatus',
-        'members' => 'setMembers',
-        'portals' => 'setPortals',
+        'teamId' => 'setTeamId',
+        'creatorId' => 'setCreatorId',
+        'team' => 'setTeam',
         'templates' => 'setTemplates',
-        'brand' => 'setBrand',
-        'templateFolders' => 'setTemplateFolders',
-        'workflows' => 'setWorkflows'
+        'creator' => 'setCreator'
     );
 
     public static function setters()
@@ -160,24 +136,16 @@ class Team implements ArrayAccess
      */
     protected static $getters = array(
         'name' => 'getName',
-        'logo' => 'getLogo',
-        'subdomain' => 'getSubdomain',
+        'form' => 'getForm',
+        'edited' => 'getEdited',
         'created' => 'getCreated',
         'modified' => 'getModified',
         'id' => 'getId',
-        'icon' => 'getIcon',
-        'clientKey' => 'getClientKey',
-        'javaScriptKey' => 'getJavaScriptKey',
-        'restApiKey' => 'getRestApiKey',
-        'windowsKey' => 'getWindowsKey',
-        'masterKey' => 'getMasterKey',
-        'status' => 'getStatus',
-        'members' => 'getMembers',
-        'portals' => 'getPortals',
+        'teamId' => 'getTeamId',
+        'creatorId' => 'getCreatorId',
+        'team' => 'getTeam',
         'templates' => 'getTemplates',
-        'brand' => 'getBrand',
-        'templateFolders' => 'getTemplateFolders',
-        'workflows' => 'getWorkflows'
+        'creator' => 'getCreator'
     );
 
     public static function getters()
@@ -202,24 +170,16 @@ class Team implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['logo'] = isset($data['logo']) ? $data['logo'] : null;
-        $this->container['subdomain'] = isset($data['subdomain']) ? $data['subdomain'] : null;
+        $this->container['form'] = isset($data['form']) ? $data['form'] : null;
+        $this->container['edited'] = isset($data['edited']) ? $data['edited'] : null;
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
         $this->container['modified'] = isset($data['modified']) ? $data['modified'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['icon'] = isset($data['icon']) ? $data['icon'] : null;
-        $this->container['clientKey'] = isset($data['clientKey']) ? $data['clientKey'] : null;
-        $this->container['javaScriptKey'] = isset($data['javaScriptKey']) ? $data['javaScriptKey'] : null;
-        $this->container['restApiKey'] = isset($data['restApiKey']) ? $data['restApiKey'] : null;
-        $this->container['windowsKey'] = isset($data['windowsKey']) ? $data['windowsKey'] : null;
-        $this->container['masterKey'] = isset($data['masterKey']) ? $data['masterKey'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : 'sandbox';
-        $this->container['members'] = isset($data['members']) ? $data['members'] : null;
-        $this->container['portals'] = isset($data['portals']) ? $data['portals'] : null;
+        $this->container['teamId'] = isset($data['teamId']) ? $data['teamId'] : null;
+        $this->container['creatorId'] = isset($data['creatorId']) ? $data['creatorId'] : null;
+        $this->container['team'] = isset($data['team']) ? $data['team'] : null;
         $this->container['templates'] = isset($data['templates']) ? $data['templates'] : null;
-        $this->container['brand'] = isset($data['brand']) ? $data['brand'] : null;
-        $this->container['templateFolders'] = isset($data['templateFolders']) ? $data['templateFolders'] : null;
-        $this->container['workflows'] = isset($data['workflows']) ? $data['workflows'] : null;
+        $this->container['creator'] = isset($data['creator']) ? $data['creator'] : null;
     }
 
     /**
@@ -233,8 +193,8 @@ class Team implements ArrayAccess
         if ($this->container['name'] === null) {
             $invalid_properties[] = "'name' can't be null";
         }
-        if ($this->container['id'] === null) {
-            $invalid_properties[] = "'id' can't be null";
+        if ($this->container['form'] === null) {
+            $invalid_properties[] = "'form' can't be null";
         }
         return $invalid_properties;
     }
@@ -250,7 +210,7 @@ class Team implements ArrayAccess
         if ($this->container['name'] === null) {
             return false;
         }
-        if ($this->container['id'] === null) {
+        if ($this->container['form'] === null) {
             return false;
         }
         return true;
@@ -279,43 +239,43 @@ class Team implements ArrayAccess
     }
 
     /**
-     * Gets logo
-     * @return string
+     * Gets form
+     * @return object
      */
-    public function getLogo()
+    public function getForm()
     {
-        return $this->container['logo'];
+        return $this->container['form'];
     }
 
     /**
-     * Sets logo
-     * @param string $logo
+     * Sets form
+     * @param object $form
      * @return $this
      */
-    public function setLogo($logo)
+    public function setForm($form)
     {
-        $this->container['logo'] = $logo;
+        $this->container['form'] = $form;
 
         return $this;
     }
 
     /**
-     * Gets subdomain
-     * @return string
+     * Gets edited
+     * @return \DateTime
      */
-    public function getSubdomain()
+    public function getEdited()
     {
-        return $this->container['subdomain'];
+        return $this->container['edited'];
     }
 
     /**
-     * Sets subdomain
-     * @param string $subdomain
+     * Sets edited
+     * @param \DateTime $edited
      * @return $this
      */
-    public function setSubdomain($subdomain)
+    public function setEdited($edited)
     {
-        $this->container['subdomain'] = $subdomain;
+        $this->container['edited'] = $edited;
 
         return $this;
     }
@@ -384,190 +344,64 @@ class Team implements ArrayAccess
     }
 
     /**
-     * Gets icon
+     * Gets teamId
      * @return string
      */
-    public function getIcon()
+    public function getTeamId()
     {
-        return $this->container['icon'];
+        return $this->container['teamId'];
     }
 
     /**
-     * Sets icon
-     * @param string $icon The icon image url
+     * Sets teamId
+     * @param string $teamId
      * @return $this
      */
-    public function setIcon($icon)
+    public function setTeamId($teamId)
     {
-        $this->container['icon'] = $icon;
+        $this->container['teamId'] = $teamId;
 
         return $this;
     }
 
     /**
-     * Gets clientKey
+     * Gets creatorId
      * @return string
      */
-    public function getClientKey()
+    public function getCreatorId()
     {
-        return $this->container['clientKey'];
+        return $this->container['creatorId'];
     }
 
     /**
-     * Sets clientKey
-     * @param string $clientKey
+     * Sets creatorId
+     * @param string $creatorId
      * @return $this
      */
-    public function setClientKey($clientKey)
+    public function setCreatorId($creatorId)
     {
-        $this->container['clientKey'] = $clientKey;
+        $this->container['creatorId'] = $creatorId;
 
         return $this;
     }
 
     /**
-     * Gets javaScriptKey
-     * @return string
+     * Gets team
+     * @return \Swagger\Client\Model\Team
      */
-    public function getJavaScriptKey()
+    public function getTeam()
     {
-        return $this->container['javaScriptKey'];
+        return $this->container['team'];
     }
 
     /**
-     * Sets javaScriptKey
-     * @param string $javaScriptKey
+     * Sets team
+     * @param \Swagger\Client\Model\Team $team
      * @return $this
      */
-    public function setJavaScriptKey($javaScriptKey)
+    public function setTeam($team)
     {
-        $this->container['javaScriptKey'] = $javaScriptKey;
-
-        return $this;
-    }
-
-    /**
-     * Gets restApiKey
-     * @return string
-     */
-    public function getRestApiKey()
-    {
-        return $this->container['restApiKey'];
-    }
-
-    /**
-     * Sets restApiKey
-     * @param string $restApiKey
-     * @return $this
-     */
-    public function setRestApiKey($restApiKey)
-    {
-        $this->container['restApiKey'] = $restApiKey;
-
-        return $this;
-    }
-
-    /**
-     * Gets windowsKey
-     * @return string
-     */
-    public function getWindowsKey()
-    {
-        return $this->container['windowsKey'];
-    }
-
-    /**
-     * Sets windowsKey
-     * @param string $windowsKey
-     * @return $this
-     */
-    public function setWindowsKey($windowsKey)
-    {
-        $this->container['windowsKey'] = $windowsKey;
-
-        return $this;
-    }
-
-    /**
-     * Gets masterKey
-     * @return string
-     */
-    public function getMasterKey()
-    {
-        return $this->container['masterKey'];
-    }
-
-    /**
-     * Sets masterKey
-     * @param string $masterKey
-     * @return $this
-     */
-    public function setMasterKey($masterKey)
-    {
-        $this->container['masterKey'] = $masterKey;
-
-        return $this;
-    }
-
-    /**
-     * Gets status
-     * @return string
-     */
-    public function getStatus()
-    {
-        return $this->container['status'];
-    }
-
-    /**
-     * Sets status
-     * @param string $status Status of the application, production/sandbox/disabled
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        $this->container['status'] = $status;
-
-        return $this;
-    }
-
-    /**
-     * Gets members
-     * @return \Swagger\Client\Model\Customer[]
-     */
-    public function getMembers()
-    {
-        return $this->container['members'];
-    }
-
-    /**
-     * Sets members
-     * @param \Swagger\Client\Model\Customer[] $members
-     * @return $this
-     */
-    public function setMembers($members)
-    {
-        $this->container['members'] = $members;
-
-        return $this;
-    }
-
-    /**
-     * Gets portals
-     * @return \Swagger\Client\Model\Portal[]
-     */
-    public function getPortals()
-    {
-        return $this->container['portals'];
-    }
-
-    /**
-     * Sets portals
-     * @param \Swagger\Client\Model\Portal[] $portals
-     * @return $this
-     */
-    public function setPortals($portals)
-    {
-        $this->container['portals'] = $portals;
+        $this->container['team'] = $team;
 
         return $this;
     }
@@ -594,64 +428,22 @@ class Team implements ArrayAccess
     }
 
     /**
-     * Gets brand
-     * @return \Swagger\Client\Model\TeamBrand
+     * Gets creator
+     * @return \Swagger\Client\Model\TeamMember
      */
-    public function getBrand()
+    public function getCreator()
     {
-        return $this->container['brand'];
+        return $this->container['creator'];
     }
 
     /**
-     * Sets brand
-     * @param \Swagger\Client\Model\TeamBrand $brand
+     * Sets creator
+     * @param \Swagger\Client\Model\TeamMember $creator
      * @return $this
      */
-    public function setBrand($brand)
+    public function setCreator($creator)
     {
-        $this->container['brand'] = $brand;
-
-        return $this;
-    }
-
-    /**
-     * Gets templateFolders
-     * @return \Swagger\Client\Model\TeamTemplateFolder[]
-     */
-    public function getTemplateFolders()
-    {
-        return $this->container['templateFolders'];
-    }
-
-    /**
-     * Sets templateFolders
-     * @param \Swagger\Client\Model\TeamTemplateFolder[] $templateFolders
-     * @return $this
-     */
-    public function setTemplateFolders($templateFolders)
-    {
-        $this->container['templateFolders'] = $templateFolders;
-
-        return $this;
-    }
-
-    /**
-     * Gets workflows
-     * @return \Swagger\Client\Model\Workflow[]
-     */
-    public function getWorkflows()
-    {
-        return $this->container['workflows'];
-    }
-
-    /**
-     * Sets workflows
-     * @param \Swagger\Client\Model\Workflow[] $workflows
-     * @return $this
-     */
-    public function setWorkflows($workflows)
-    {
-        $this->container['workflows'] = $workflows;
+        $this->container['creator'] = $creator;
 
         return $this;
     }

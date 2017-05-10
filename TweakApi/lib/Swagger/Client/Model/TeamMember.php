@@ -84,7 +84,8 @@ class TeamMember implements ArrayAccess
         'reviewedDesigns' => '\Swagger\Client\Model\Design[]',
         'commentedDesigns' => '\Swagger\Client\Model\Design[]',
         'designComments' => '\Swagger\Client\Model\DesignComment[]',
-        'designFolders' => '\Swagger\Client\Model\DesignFolder[]'
+        'designFolders' => '\Swagger\Client\Model\DesignFolder[]',
+        'workflows' => '\Swagger\Client\Model\Workflow[]'
     );
 
     public static function swaggerTypes()
@@ -115,7 +116,8 @@ class TeamMember implements ArrayAccess
         'reviewedDesigns' => 'reviewedDesigns',
         'commentedDesigns' => 'commentedDesigns',
         'designComments' => 'designComments',
-        'designFolders' => 'designFolders'
+        'designFolders' => 'designFolders',
+        'workflows' => 'workflows'
     );
 
     public static function attributeMap()
@@ -146,7 +148,8 @@ class TeamMember implements ArrayAccess
         'reviewedDesigns' => 'setReviewedDesigns',
         'commentedDesigns' => 'setCommentedDesigns',
         'designComments' => 'setDesignComments',
-        'designFolders' => 'setDesignFolders'
+        'designFolders' => 'setDesignFolders',
+        'workflows' => 'setWorkflows'
     );
 
     public static function setters()
@@ -177,7 +180,8 @@ class TeamMember implements ArrayAccess
         'reviewedDesigns' => 'getReviewedDesigns',
         'commentedDesigns' => 'getCommentedDesigns',
         'designComments' => 'getDesignComments',
-        'designFolders' => 'getDesignFolders'
+        'designFolders' => 'getDesignFolders',
+        'workflows' => 'getWorkflows'
     );
 
     public static function getters()
@@ -220,6 +224,7 @@ class TeamMember implements ArrayAccess
         $this->container['commentedDesigns'] = isset($data['commentedDesigns']) ? $data['commentedDesigns'] : null;
         $this->container['designComments'] = isset($data['designComments']) ? $data['designComments'] : null;
         $this->container['designFolders'] = isset($data['designFolders']) ? $data['designFolders'] : null;
+        $this->container['workflows'] = isset($data['workflows']) ? $data['workflows'] : null;
     }
 
     /**
@@ -646,6 +651,27 @@ class TeamMember implements ArrayAccess
     public function setDesignFolders($designFolders)
     {
         $this->container['designFolders'] = $designFolders;
+
+        return $this;
+    }
+
+    /**
+     * Gets workflows
+     * @return \Swagger\Client\Model\Workflow[]
+     */
+    public function getWorkflows()
+    {
+        return $this->container['workflows'];
+    }
+
+    /**
+     * Sets workflows
+     * @param \Swagger\Client\Model\Workflow[] $workflows
+     * @return $this
+     */
+    public function setWorkflows($workflows)
+    {
+        $this->container['workflows'] = $workflows;
 
         return $this;
     }

@@ -184,6 +184,14 @@ class TemplateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "workflowId"
+     */
+    public function testPropertyWorkflowId()
+    {
+
+    }
+
+    /**
      * Test attribute "portals"
      */
     public function testPropertyPortals()
@@ -243,6 +251,14 @@ class TemplateTest extends \PHPUnit_Framework_TestCase
      * Test attribute "portalFolders"
      */
     public function testPropertyPortalFolders()
+    {
+
+    }
+
+    /**
+     * Test attribute "workflow"
+     */
+    public function testPropertyWorkflow()
     {
 
     }

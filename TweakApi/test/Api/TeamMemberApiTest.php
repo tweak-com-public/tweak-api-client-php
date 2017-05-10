@@ -1432,6 +1432,83 @@ class TeamMemberApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for teamMembersIdTeamWorkflowsCountGet
+     *
+     * Counts workflows of Team..
+     *
+     */
+    public function testTeamMembersIdTeamWorkflowsCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamWorkflowsDelete
+     *
+     * Deletes all workflows of this model..
+     *
+     */
+    public function testTeamMembersIdTeamWorkflowsDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamWorkflowsFkDelete
+     *
+     * Delete a related item by id for workflows..
+     *
+     */
+    public function testTeamMembersIdTeamWorkflowsFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamWorkflowsFkGet
+     *
+     * Find a related item by id for workflows..
+     *
+     */
+    public function testTeamMembersIdTeamWorkflowsFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamWorkflowsFkPut
+     *
+     * Update a related item by id for workflows..
+     *
+     */
+    public function testTeamMembersIdTeamWorkflowsFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamWorkflowsGet
+     *
+     * Queries workflows of Team..
+     *
+     */
+    public function testTeamMembersIdTeamWorkflowsGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamWorkflowsPost
+     *
+     * Creates a new instance in workflows of this model..
+     *
+     */
+    public function testTeamMembersIdTeamWorkflowsPost()
+    {
+
+    }
+
+    /**
      * Test case for teamMembersIdTemplatesCountGet
      *
      * Counts templates of TeamMember..
@@ -1614,6 +1691,83 @@ class TeamMemberApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testTeamMembersIdUploadedTemplatesPost()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdWorkflowsCountGet
+     *
+     * Counts workflows of TeamMember..
+     *
+     */
+    public function testTeamMembersIdWorkflowsCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdWorkflowsDelete
+     *
+     * Deletes all workflows of this model..
+     *
+     */
+    public function testTeamMembersIdWorkflowsDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdWorkflowsFkDelete
+     *
+     * Delete a related item by id for workflows..
+     *
+     */
+    public function testTeamMembersIdWorkflowsFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdWorkflowsFkGet
+     *
+     * Find a related item by id for workflows..
+     *
+     */
+    public function testTeamMembersIdWorkflowsFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdWorkflowsFkPut
+     *
+     * Update a related item by id for workflows..
+     *
+     */
+    public function testTeamMembersIdWorkflowsFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdWorkflowsGet
+     *
+     * Queries workflows of TeamMember..
+     *
+     */
+    public function testTeamMembersIdWorkflowsGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdWorkflowsPost
+     *
+     * Creates a new instance in workflows of this model..
+     *
+     */
+    public function testTeamMembersIdWorkflowsPost()
     {
 
     }

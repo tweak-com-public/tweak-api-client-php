@@ -77,6 +77,7 @@ class Template implements ArrayAccess
         'teamId' => 'string',
         'memberId' => 'string',
         'teamFolderId' => 'string',
+        'workflowId' => 'string',
         'portals' => '\Swagger\Client\Model\Portal[]',
         'team' => '\Swagger\Client\Model\Team',
         'members' => '\Swagger\Client\Model\TeamMember[]',
@@ -84,7 +85,8 @@ class Template implements ArrayAccess
         'designs' => '\Swagger\Client\Model\Design[]',
         'tags' => '\Swagger\Client\Model\Tag[]',
         'teamFolder' => '\Swagger\Client\Model\TeamTemplateFolder',
-        'portalFolders' => '\Swagger\Client\Model\PortalTemplateFolder[]'
+        'portalFolders' => '\Swagger\Client\Model\PortalTemplateFolder[]',
+        'workflow' => '\Swagger\Client\Model\Workflow'
     );
 
     public static function swaggerTypes()
@@ -108,6 +110,7 @@ class Template implements ArrayAccess
         'teamId' => 'teamId',
         'memberId' => 'memberId',
         'teamFolderId' => 'teamFolderId',
+        'workflowId' => 'workflowId',
         'portals' => 'portals',
         'team' => 'team',
         'members' => 'members',
@@ -115,7 +118,8 @@ class Template implements ArrayAccess
         'designs' => 'designs',
         'tags' => 'tags',
         'teamFolder' => 'teamFolder',
-        'portalFolders' => 'portalFolders'
+        'portalFolders' => 'portalFolders',
+        'workflow' => 'workflow'
     );
 
     public static function attributeMap()
@@ -139,6 +143,7 @@ class Template implements ArrayAccess
         'teamId' => 'setTeamId',
         'memberId' => 'setMemberId',
         'teamFolderId' => 'setTeamFolderId',
+        'workflowId' => 'setWorkflowId',
         'portals' => 'setPortals',
         'team' => 'setTeam',
         'members' => 'setMembers',
@@ -146,7 +151,8 @@ class Template implements ArrayAccess
         'designs' => 'setDesigns',
         'tags' => 'setTags',
         'teamFolder' => 'setTeamFolder',
-        'portalFolders' => 'setPortalFolders'
+        'portalFolders' => 'setPortalFolders',
+        'workflow' => 'setWorkflow'
     );
 
     public static function setters()
@@ -170,6 +176,7 @@ class Template implements ArrayAccess
         'teamId' => 'getTeamId',
         'memberId' => 'getMemberId',
         'teamFolderId' => 'getTeamFolderId',
+        'workflowId' => 'getWorkflowId',
         'portals' => 'getPortals',
         'team' => 'getTeam',
         'members' => 'getMembers',
@@ -177,7 +184,8 @@ class Template implements ArrayAccess
         'designs' => 'getDesigns',
         'tags' => 'getTags',
         'teamFolder' => 'getTeamFolder',
-        'portalFolders' => 'getPortalFolders'
+        'portalFolders' => 'getPortalFolders',
+        'workflow' => 'getWorkflow'
     );
 
     public static function getters()
@@ -212,6 +220,7 @@ class Template implements ArrayAccess
         $this->container['teamId'] = isset($data['teamId']) ? $data['teamId'] : null;
         $this->container['memberId'] = isset($data['memberId']) ? $data['memberId'] : null;
         $this->container['teamFolderId'] = isset($data['teamFolderId']) ? $data['teamFolderId'] : null;
+        $this->container['workflowId'] = isset($data['workflowId']) ? $data['workflowId'] : null;
         $this->container['portals'] = isset($data['portals']) ? $data['portals'] : null;
         $this->container['team'] = isset($data['team']) ? $data['team'] : null;
         $this->container['members'] = isset($data['members']) ? $data['members'] : null;
@@ -220,6 +229,7 @@ class Template implements ArrayAccess
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['teamFolder'] = isset($data['teamFolder']) ? $data['teamFolder'] : null;
         $this->container['portalFolders'] = isset($data['portalFolders']) ? $data['portalFolders'] : null;
+        $this->container['workflow'] = isset($data['workflow']) ? $data['workflow'] : null;
     }
 
     /**
@@ -489,6 +499,27 @@ class Template implements ArrayAccess
     }
 
     /**
+     * Gets workflowId
+     * @return string
+     */
+    public function getWorkflowId()
+    {
+        return $this->container['workflowId'];
+    }
+
+    /**
+     * Sets workflowId
+     * @param string $workflowId
+     * @return $this
+     */
+    public function setWorkflowId($workflowId)
+    {
+        $this->container['workflowId'] = $workflowId;
+
+        return $this;
+    }
+
+    /**
      * Gets portals
      * @return \Swagger\Client\Model\Portal[]
      */
@@ -652,6 +683,27 @@ class Template implements ArrayAccess
     public function setPortalFolders($portalFolders)
     {
         $this->container['portalFolders'] = $portalFolders;
+
+        return $this;
+    }
+
+    /**
+     * Gets workflow
+     * @return \Swagger\Client\Model\Workflow
+     */
+    public function getWorkflow()
+    {
+        return $this->container['workflow'];
+    }
+
+    /**
+     * Sets workflow
+     * @param \Swagger\Client\Model\Workflow $workflow
+     * @return $this
+     */
+    public function setWorkflow($workflow)
+    {
+        $this->container['workflow'] = $workflow;
 
         return $this;
     }

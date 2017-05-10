@@ -239,4 +239,12 @@ class TeamTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "workflows"
+     */
+    public function testPropertyWorkflows()
+    {
+
+    }
+
 }

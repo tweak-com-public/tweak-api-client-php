@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **commentedDesigns** | [**\Swagger\Client\Model\Design[]**](Design.md) |  | [optional] 
 **designComments** | [**\Swagger\Client\Model\DesignComment[]**](DesignComment.md) |  | [optional] 
 **designFolders** | [**\Swagger\Client\Model\DesignFolder[]**](DesignFolder.md) |  | [optional] 
+**workflows** | [**\Swagger\Client\Model\Workflow[]**](Workflow.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

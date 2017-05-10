@@ -613,6 +613,13 @@ Class | Method | HTTP request | Description
 *TeamApi* | [**teamsIdTemplatesFkPut**](docs/Api/TeamApi.md#teamsidtemplatesfkput) | **PUT** /Teams/{id}/templates/{fk} | Update a related item by id for templates.
 *TeamApi* | [**teamsIdTemplatesGet**](docs/Api/TeamApi.md#teamsidtemplatesget) | **GET** /Teams/{id}/templates | Queries templates of Team.
 *TeamApi* | [**teamsIdTemplatesPost**](docs/Api/TeamApi.md#teamsidtemplatespost) | **POST** /Teams/{id}/templates | Creates a new instance in templates of this model.
+*TeamApi* | [**teamsIdWorkflowsCountGet**](docs/Api/TeamApi.md#teamsidworkflowscountget) | **GET** /Teams/{id}/workflows/count | Counts workflows of Team.
+*TeamApi* | [**teamsIdWorkflowsDelete**](docs/Api/TeamApi.md#teamsidworkflowsdelete) | **DELETE** /Teams/{id}/workflows | Deletes all workflows of this model.
+*TeamApi* | [**teamsIdWorkflowsFkDelete**](docs/Api/TeamApi.md#teamsidworkflowsfkdelete) | **DELETE** /Teams/{id}/workflows/{fk} | Delete a related item by id for workflows.
+*TeamApi* | [**teamsIdWorkflowsFkGet**](docs/Api/TeamApi.md#teamsidworkflowsfkget) | **GET** /Teams/{id}/workflows/{fk} | Find a related item by id for workflows.
+*TeamApi* | [**teamsIdWorkflowsFkPut**](docs/Api/TeamApi.md#teamsidworkflowsfkput) | **PUT** /Teams/{id}/workflows/{fk} | Update a related item by id for workflows.
+*TeamApi* | [**teamsIdWorkflowsGet**](docs/Api/TeamApi.md#teamsidworkflowsget) | **GET** /Teams/{id}/workflows | Queries workflows of Team.
+*TeamApi* | [**teamsIdWorkflowsPost**](docs/Api/TeamApi.md#teamsidworkflowspost) | **POST** /Teams/{id}/workflows | Creates a new instance in workflows of this model.
 *TeamApi* | [**teamsPatch**](docs/Api/TeamApi.md#teamspatch) | **PATCH** /Teams | Patch an existing model instance or insert a new one into the data source.
 *TeamApi* | [**teamsPost**](docs/Api/TeamApi.md#teamspost) | **POST** /Teams | Create a new instance of the model and persist it into the data source.
 *TeamApi* | [**teamsPut**](docs/Api/TeamApi.md#teamsput) | **PUT** /Teams | Replace an existing model instance or insert a new one into the data source.
@@ -741,6 +748,13 @@ Class | Method | HTTP request | Description
 *TeamMemberApi* | [**teamMembersIdTeamTemplatesFkPut**](docs/Api/TeamMemberApi.md#teammembersidteamtemplatesfkput) | **PUT** /TeamMembers/{id}/team/templates/{fk} | Update a related item by id for templates.
 *TeamMemberApi* | [**teamMembersIdTeamTemplatesGet**](docs/Api/TeamMemberApi.md#teammembersidteamtemplatesget) | **GET** /TeamMembers/{id}/team/templates | Queries templates of Team.
 *TeamMemberApi* | [**teamMembersIdTeamTemplatesPost**](docs/Api/TeamMemberApi.md#teammembersidteamtemplatespost) | **POST** /TeamMembers/{id}/team/templates | Creates a new instance in templates of this model.
+*TeamMemberApi* | [**teamMembersIdTeamWorkflowsCountGet**](docs/Api/TeamMemberApi.md#teammembersidteamworkflowscountget) | **GET** /TeamMembers/{id}/team/workflows/count | Counts workflows of Team.
+*TeamMemberApi* | [**teamMembersIdTeamWorkflowsDelete**](docs/Api/TeamMemberApi.md#teammembersidteamworkflowsdelete) | **DELETE** /TeamMembers/{id}/team/workflows | Deletes all workflows of this model.
+*TeamMemberApi* | [**teamMembersIdTeamWorkflowsFkDelete**](docs/Api/TeamMemberApi.md#teammembersidteamworkflowsfkdelete) | **DELETE** /TeamMembers/{id}/team/workflows/{fk} | Delete a related item by id for workflows.
+*TeamMemberApi* | [**teamMembersIdTeamWorkflowsFkGet**](docs/Api/TeamMemberApi.md#teammembersidteamworkflowsfkget) | **GET** /TeamMembers/{id}/team/workflows/{fk} | Find a related item by id for workflows.
+*TeamMemberApi* | [**teamMembersIdTeamWorkflowsFkPut**](docs/Api/TeamMemberApi.md#teammembersidteamworkflowsfkput) | **PUT** /TeamMembers/{id}/team/workflows/{fk} | Update a related item by id for workflows.
+*TeamMemberApi* | [**teamMembersIdTeamWorkflowsGet**](docs/Api/TeamMemberApi.md#teammembersidteamworkflowsget) | **GET** /TeamMembers/{id}/team/workflows | Queries workflows of Team.
+*TeamMemberApi* | [**teamMembersIdTeamWorkflowsPost**](docs/Api/TeamMemberApi.md#teammembersidteamworkflowspost) | **POST** /TeamMembers/{id}/team/workflows | Creates a new instance in workflows of this model.
 *TeamMemberApi* | [**teamMembersIdTemplatesCountGet**](docs/Api/TeamMemberApi.md#teammembersidtemplatescountget) | **GET** /TeamMembers/{id}/templates/count | Counts templates of TeamMember.
 *TeamMemberApi* | [**teamMembersIdTemplatesDelete**](docs/Api/TeamMemberApi.md#teammembersidtemplatesdelete) | **DELETE** /TeamMembers/{id}/templates | Deletes all templates of this model.
 *TeamMemberApi* | [**teamMembersIdTemplatesFkDelete**](docs/Api/TeamMemberApi.md#teammembersidtemplatesfkdelete) | **DELETE** /TeamMembers/{id}/templates/{fk} | Delete a related item by id for templates.
@@ -758,6 +772,13 @@ Class | Method | HTTP request | Description
 *TeamMemberApi* | [**teamMembersIdUploadedTemplatesFkPut**](docs/Api/TeamMemberApi.md#teammembersiduploadedtemplatesfkput) | **PUT** /TeamMembers/{id}/uploadedTemplates/{fk} | Update a related item by id for uploadedTemplates.
 *TeamMemberApi* | [**teamMembersIdUploadedTemplatesGet**](docs/Api/TeamMemberApi.md#teammembersiduploadedtemplatesget) | **GET** /TeamMembers/{id}/uploadedTemplates | Queries uploadedTemplates of TeamMember.
 *TeamMemberApi* | [**teamMembersIdUploadedTemplatesPost**](docs/Api/TeamMemberApi.md#teammembersiduploadedtemplatespost) | **POST** /TeamMembers/{id}/uploadedTemplates | Creates a new instance in uploadedTemplates of this model.
+*TeamMemberApi* | [**teamMembersIdWorkflowsCountGet**](docs/Api/TeamMemberApi.md#teammembersidworkflowscountget) | **GET** /TeamMembers/{id}/workflows/count | Counts workflows of TeamMember.
+*TeamMemberApi* | [**teamMembersIdWorkflowsDelete**](docs/Api/TeamMemberApi.md#teammembersidworkflowsdelete) | **DELETE** /TeamMembers/{id}/workflows | Deletes all workflows of this model.
+*TeamMemberApi* | [**teamMembersIdWorkflowsFkDelete**](docs/Api/TeamMemberApi.md#teammembersidworkflowsfkdelete) | **DELETE** /TeamMembers/{id}/workflows/{fk} | Delete a related item by id for workflows.
+*TeamMemberApi* | [**teamMembersIdWorkflowsFkGet**](docs/Api/TeamMemberApi.md#teammembersidworkflowsfkget) | **GET** /TeamMembers/{id}/workflows/{fk} | Find a related item by id for workflows.
+*TeamMemberApi* | [**teamMembersIdWorkflowsFkPut**](docs/Api/TeamMemberApi.md#teammembersidworkflowsfkput) | **PUT** /TeamMembers/{id}/workflows/{fk} | Update a related item by id for workflows.
+*TeamMemberApi* | [**teamMembersIdWorkflowsGet**](docs/Api/TeamMemberApi.md#teammembersidworkflowsget) | **GET** /TeamMembers/{id}/workflows | Queries workflows of TeamMember.
+*TeamMemberApi* | [**teamMembersIdWorkflowsPost**](docs/Api/TeamMemberApi.md#teammembersidworkflowspost) | **POST** /TeamMembers/{id}/workflows | Creates a new instance in workflows of this model.
 *TeamMemberApi* | [**teamMembersPatch**](docs/Api/TeamMemberApi.md#teammemberspatch) | **PATCH** /TeamMembers | Patch an existing model instance or insert a new one into the data source.
 *TeamMemberApi* | [**teamMembersPost**](docs/Api/TeamMemberApi.md#teammemberspost) | **POST** /TeamMembers | Create a new instance of the model and persist it into the data source.
 *TeamMemberApi* | [**teamMembersPut**](docs/Api/TeamMemberApi.md#teammembersput) | **PUT** /TeamMembers | Replace an existing model instance or insert a new one into the data source.
@@ -864,6 +885,7 @@ Class | Method | HTTP request | Description
 *TemplateApi* | [**templatesIdTagsRelFkPut**](docs/Api/TemplateApi.md#templatesidtagsrelfkput) | **PUT** /Templates/{id}/tags/rel/{fk} | Add a related item by id for tags.
 *TemplateApi* | [**templatesIdTeamFolderGet**](docs/Api/TemplateApi.md#templatesidteamfolderget) | **GET** /Templates/{id}/teamFolder | Fetches belongsTo relation teamFolder.
 *TemplateApi* | [**templatesIdTeamGet**](docs/Api/TemplateApi.md#templatesidteamget) | **GET** /Templates/{id}/team | Fetches belongsTo relation team.
+*TemplateApi* | [**templatesIdWorkflowGet**](docs/Api/TemplateApi.md#templatesidworkflowget) | **GET** /Templates/{id}/workflow | Fetches belongsTo relation workflow.
 *TemplateApi* | [**templatesPatch**](docs/Api/TemplateApi.md#templatespatch) | **PATCH** /Templates | Patch an existing model instance or insert a new one into the data source.
 *TemplateApi* | [**templatesPost**](docs/Api/TemplateApi.md#templatespost) | **POST** /Templates | Create a new instance of the model and persist it into the data source.
 *TemplateApi* | [**templatesPut**](docs/Api/TemplateApi.md#templatesput) | **PUT** /Templates | Replace an existing model instance or insert a new one into the data source.
@@ -929,6 +951,33 @@ Class | Method | HTTP request | Description
 *TemplateTagApi* | [**templateTagsReplaceOrCreatePost**](docs/Api/TemplateTagApi.md#templatetagsreplaceorcreatepost) | **POST** /TemplateTags/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
 *TemplateTagApi* | [**templateTagsUpdatePost**](docs/Api/TemplateTagApi.md#templatetagsupdatepost) | **POST** /TemplateTags/update | Update instances of the model matched by {{where}} from the data source.
 *TemplateTagApi* | [**templateTagsUpsertWithWherePost**](docs/Api/TemplateTagApi.md#templatetagsupsertwithwherepost) | **POST** /TemplateTags/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
+*WorkflowApi* | [**workflowsChangeStreamGet**](docs/Api/WorkflowApi.md#workflowschangestreamget) | **GET** /Workflows/change-stream | Create a change stream.
+*WorkflowApi* | [**workflowsChangeStreamPost**](docs/Api/WorkflowApi.md#workflowschangestreampost) | **POST** /Workflows/change-stream | Create a change stream.
+*WorkflowApi* | [**workflowsCountGet**](docs/Api/WorkflowApi.md#workflowscountget) | **GET** /Workflows/count | Count instances of the model matched by where from the data source.
+*WorkflowApi* | [**workflowsFindOneGet**](docs/Api/WorkflowApi.md#workflowsfindoneget) | **GET** /Workflows/findOne | Find first instance of the model matched by filter from the data source.
+*WorkflowApi* | [**workflowsGet**](docs/Api/WorkflowApi.md#workflowsget) | **GET** /Workflows | Find all instances of the model matched by filter from the data source.
+*WorkflowApi* | [**workflowsIdCreatorGet**](docs/Api/WorkflowApi.md#workflowsidcreatorget) | **GET** /Workflows/{id}/creator | Fetches belongsTo relation creator.
+*WorkflowApi* | [**workflowsIdDelete**](docs/Api/WorkflowApi.md#workflowsiddelete) | **DELETE** /Workflows/{id} | Delete a model instance by {{id}} from the data source.
+*WorkflowApi* | [**workflowsIdExistsGet**](docs/Api/WorkflowApi.md#workflowsidexistsget) | **GET** /Workflows/{id}/exists | Check whether a model instance exists in the data source.
+*WorkflowApi* | [**workflowsIdGet**](docs/Api/WorkflowApi.md#workflowsidget) | **GET** /Workflows/{id} | Find a model instance by {{id}} from the data source.
+*WorkflowApi* | [**workflowsIdHead**](docs/Api/WorkflowApi.md#workflowsidhead) | **HEAD** /Workflows/{id} | Check whether a model instance exists in the data source.
+*WorkflowApi* | [**workflowsIdPatch**](docs/Api/WorkflowApi.md#workflowsidpatch) | **PATCH** /Workflows/{id} | Patch attributes for a model instance and persist it into the data source.
+*WorkflowApi* | [**workflowsIdPut**](docs/Api/WorkflowApi.md#workflowsidput) | **PUT** /Workflows/{id} | Replace attributes for a model instance and persist it into the data source.
+*WorkflowApi* | [**workflowsIdReplacePost**](docs/Api/WorkflowApi.md#workflowsidreplacepost) | **POST** /Workflows/{id}/replace | Replace attributes for a model instance and persist it into the data source.
+*WorkflowApi* | [**workflowsIdTeamGet**](docs/Api/WorkflowApi.md#workflowsidteamget) | **GET** /Workflows/{id}/team | Fetches belongsTo relation team.
+*WorkflowApi* | [**workflowsIdTemplatesCountGet**](docs/Api/WorkflowApi.md#workflowsidtemplatescountget) | **GET** /Workflows/{id}/templates/count | Counts templates of Workflow.
+*WorkflowApi* | [**workflowsIdTemplatesDelete**](docs/Api/WorkflowApi.md#workflowsidtemplatesdelete) | **DELETE** /Workflows/{id}/templates | Deletes all templates of this model.
+*WorkflowApi* | [**workflowsIdTemplatesFkDelete**](docs/Api/WorkflowApi.md#workflowsidtemplatesfkdelete) | **DELETE** /Workflows/{id}/templates/{fk} | Delete a related item by id for templates.
+*WorkflowApi* | [**workflowsIdTemplatesFkGet**](docs/Api/WorkflowApi.md#workflowsidtemplatesfkget) | **GET** /Workflows/{id}/templates/{fk} | Find a related item by id for templates.
+*WorkflowApi* | [**workflowsIdTemplatesFkPut**](docs/Api/WorkflowApi.md#workflowsidtemplatesfkput) | **PUT** /Workflows/{id}/templates/{fk} | Update a related item by id for templates.
+*WorkflowApi* | [**workflowsIdTemplatesGet**](docs/Api/WorkflowApi.md#workflowsidtemplatesget) | **GET** /Workflows/{id}/templates | Queries templates of Workflow.
+*WorkflowApi* | [**workflowsIdTemplatesPost**](docs/Api/WorkflowApi.md#workflowsidtemplatespost) | **POST** /Workflows/{id}/templates | Creates a new instance in templates of this model.
+*WorkflowApi* | [**workflowsPatch**](docs/Api/WorkflowApi.md#workflowspatch) | **PATCH** /Workflows | Patch an existing model instance or insert a new one into the data source.
+*WorkflowApi* | [**workflowsPost**](docs/Api/WorkflowApi.md#workflowspost) | **POST** /Workflows | Create a new instance of the model and persist it into the data source.
+*WorkflowApi* | [**workflowsPut**](docs/Api/WorkflowApi.md#workflowsput) | **PUT** /Workflows | Replace an existing model instance or insert a new one into the data source.
+*WorkflowApi* | [**workflowsReplaceOrCreatePost**](docs/Api/WorkflowApi.md#workflowsreplaceorcreatepost) | **POST** /Workflows/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
+*WorkflowApi* | [**workflowsUpdatePost**](docs/Api/WorkflowApi.md#workflowsupdatepost) | **POST** /Workflows/update | Update instances of the model matched by {{where}} from the data source.
+*WorkflowApi* | [**workflowsUpsertWithWherePost**](docs/Api/WorkflowApi.md#workflowsupsertwithwherepost) | **POST** /Workflows/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
 
 
 ## Documentation For Models
@@ -963,6 +1012,7 @@ Class | Method | HTTP request | Description
  - [TemplateMember](docs/Model/TemplateMember.md)
  - [TemplatePermissionSet](docs/Model/TemplatePermissionSet.md)
  - [TemplateTag](docs/Model/TemplateTag.md)
+ - [Workflow](docs/Model/Workflow.md)
 
 
 ## Documentation For Authorization

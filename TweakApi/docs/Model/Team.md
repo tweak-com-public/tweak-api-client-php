@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **templates** | [**\Swagger\Client\Model\Template[]**](Template.md) |  | [optional] 
 **brand** | [**\Swagger\Client\Model\TeamBrand**](TeamBrand.md) |  | [optional] 
 **templateFolders** | [**\Swagger\Client\Model\TeamTemplateFolder[]**](TeamTemplateFolder.md) |  | [optional] 
+**workflows** | [**\Swagger\Client\Model\Workflow[]**](Workflow.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
