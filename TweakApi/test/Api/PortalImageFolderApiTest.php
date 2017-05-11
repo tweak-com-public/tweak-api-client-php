@@ -1,6 +1,6 @@
 <?php
 /**
- * ImageApiTest
+ * PortalImageFolderApiTest
  * PHP version 5
  *
  * @category Class
@@ -46,7 +46,7 @@ use \Tweak\Api\ApiException;
 use \Tweak\Api\ObjectSerializer;
 
 /**
- * ImageApiTest Class Doc Comment
+ * PortalImageFolderApiTest Class Doc Comment
  *
  * @category Class
  * @package  Tweak\Api
@@ -54,7 +54,7 @@ use \Tweak\Api\ObjectSerializer;
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ImageApiTest extends \PHPUnit_Framework_TestCase
+class PortalImageFolderApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -90,221 +90,221 @@ class ImageApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for imagesChangeStreamGet
+     * Test case for portalImageFoldersChangeStreamGet
      *
      * Create a change stream..
      *
      */
-    public function testImagesChangeStreamGet()
+    public function testPortalImageFoldersChangeStreamGet()
     {
 
     }
 
     /**
-     * Test case for imagesChangeStreamPost
+     * Test case for portalImageFoldersChangeStreamPost
      *
      * Create a change stream..
      *
      */
-    public function testImagesChangeStreamPost()
+    public function testPortalImageFoldersChangeStreamPost()
     {
 
     }
 
     /**
-     * Test case for imagesCountGet
+     * Test case for portalImageFoldersCountGet
      *
      * Count instances of the model matched by where from the data source..
      *
      */
-    public function testImagesCountGet()
+    public function testPortalImageFoldersCountGet()
     {
 
     }
 
     /**
-     * Test case for imagesFindOneGet
+     * Test case for portalImageFoldersFindOneGet
      *
      * Find first instance of the model matched by filter from the data source..
      *
      */
-    public function testImagesFindOneGet()
+    public function testPortalImageFoldersFindOneGet()
     {
 
     }
 
     /**
-     * Test case for imagesGet
+     * Test case for portalImageFoldersGet
      *
      * Find all instances of the model matched by filter from the data source..
      *
      */
-    public function testImagesGet()
+    public function testPortalImageFoldersGet()
     {
 
     }
 
     /**
-     * Test case for imagesIdDelete
+     * Test case for portalImageFoldersIdDelete
      *
      * Delete a model instance by {{id}} from the data source..
      *
      */
-    public function testImagesIdDelete()
+    public function testPortalImageFoldersIdDelete()
     {
 
     }
 
     /**
-     * Test case for imagesIdExistsGet
+     * Test case for portalImageFoldersIdExistsGet
      *
      * Check whether a model instance exists in the data source..
      *
      */
-    public function testImagesIdExistsGet()
+    public function testPortalImageFoldersIdExistsGet()
     {
 
     }
 
     /**
-     * Test case for imagesIdFolderGet
+     * Test case for portalImageFoldersIdFolderGet
      *
      * Fetches belongsTo relation folder..
      *
      */
-    public function testImagesIdFolderGet()
+    public function testPortalImageFoldersIdFolderGet()
     {
 
     }
 
     /**
-     * Test case for imagesIdGet
+     * Test case for portalImageFoldersIdGet
      *
      * Find a model instance by {{id}} from the data source..
      *
      */
-    public function testImagesIdGet()
+    public function testPortalImageFoldersIdGet()
     {
 
     }
 
     /**
-     * Test case for imagesIdHead
+     * Test case for portalImageFoldersIdHead
      *
      * Check whether a model instance exists in the data source..
      *
      */
-    public function testImagesIdHead()
+    public function testPortalImageFoldersIdHead()
     {
 
     }
 
     /**
-     * Test case for imagesIdPatch
+     * Test case for portalImageFoldersIdPatch
      *
      * Patch attributes for a model instance and persist it into the data source..
      *
      */
-    public function testImagesIdPatch()
+    public function testPortalImageFoldersIdPatch()
     {
 
     }
 
     /**
-     * Test case for imagesIdPut
+     * Test case for portalImageFoldersIdPortalGet
+     *
+     * Fetches belongsTo relation portal..
+     *
+     */
+    public function testPortalImageFoldersIdPortalGet()
+    {
+
+    }
+
+    /**
+     * Test case for portalImageFoldersIdPut
      *
      * Replace attributes for a model instance and persist it into the data source..
      *
      */
-    public function testImagesIdPut()
+    public function testPortalImageFoldersIdPut()
     {
 
     }
 
     /**
-     * Test case for imagesIdReplacePost
+     * Test case for portalImageFoldersIdReplacePost
      *
      * Replace attributes for a model instance and persist it into the data source..
      *
      */
-    public function testImagesIdReplacePost()
+    public function testPortalImageFoldersIdReplacePost()
     {
 
     }
 
     /**
-     * Test case for imagesIdTeamGet
-     *
-     * Fetches belongsTo relation team..
-     *
-     */
-    public function testImagesIdTeamGet()
-    {
-
-    }
-
-    /**
-     * Test case for imagesPatch
+     * Test case for portalImageFoldersPatch
      *
      * Patch an existing model instance or insert a new one into the data source..
      *
      */
-    public function testImagesPatch()
+    public function testPortalImageFoldersPatch()
     {
 
     }
 
     /**
-     * Test case for imagesPost
+     * Test case for portalImageFoldersPost
      *
      * Create a new instance of the model and persist it into the data source..
      *
      */
-    public function testImagesPost()
+    public function testPortalImageFoldersPost()
     {
 
     }
 
     /**
-     * Test case for imagesPut
+     * Test case for portalImageFoldersPut
      *
      * Replace an existing model instance or insert a new one into the data source..
      *
      */
-    public function testImagesPut()
+    public function testPortalImageFoldersPut()
     {
 
     }
 
     /**
-     * Test case for imagesReplaceOrCreatePost
+     * Test case for portalImageFoldersReplaceOrCreatePost
      *
      * Replace an existing model instance or insert a new one into the data source..
      *
      */
-    public function testImagesReplaceOrCreatePost()
+    public function testPortalImageFoldersReplaceOrCreatePost()
     {
 
     }
 
     /**
-     * Test case for imagesUpdatePost
+     * Test case for portalImageFoldersUpdatePost
      *
      * Update instances of the model matched by {{where}} from the data source..
      *
      */
-    public function testImagesUpdatePost()
+    public function testPortalImageFoldersUpdatePost()
     {
 
     }
 
     /**
-     * Test case for imagesUpsertWithWherePost
+     * Test case for portalImageFoldersUpsertWithWherePost
      *
      * Update an existing model instance or insert a new one into the data source based on the where criteria..
      *
      */
-    public function testImagesUpsertWithWherePost()
+    public function testPortalImageFoldersUpsertWithWherePost()
     {
 
     }

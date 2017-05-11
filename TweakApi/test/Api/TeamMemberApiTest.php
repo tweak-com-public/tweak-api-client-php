@@ -541,6 +541,116 @@ class TeamMemberApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for teamMembersIdImageFoldersCountGet
+     *
+     * Counts imageFolders of TeamMember..
+     *
+     */
+    public function testTeamMembersIdImageFoldersCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdImageFoldersDelete
+     *
+     * Deletes all imageFolders of this model..
+     *
+     */
+    public function testTeamMembersIdImageFoldersDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdImageFoldersFkDelete
+     *
+     * Delete a related item by id for imageFolders..
+     *
+     */
+    public function testTeamMembersIdImageFoldersFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdImageFoldersFkGet
+     *
+     * Find a related item by id for imageFolders..
+     *
+     */
+    public function testTeamMembersIdImageFoldersFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdImageFoldersFkPut
+     *
+     * Update a related item by id for imageFolders..
+     *
+     */
+    public function testTeamMembersIdImageFoldersFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdImageFoldersGet
+     *
+     * Queries imageFolders of TeamMember..
+     *
+     */
+    public function testTeamMembersIdImageFoldersGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdImageFoldersPost
+     *
+     * Creates a new instance in imageFolders of this model..
+     *
+     */
+    public function testTeamMembersIdImageFoldersPost()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdImageFoldersRelFkDelete
+     *
+     * Remove the imageFolders relation to an item by id..
+     *
+     */
+    public function testTeamMembersIdImageFoldersRelFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdImageFoldersRelFkHead
+     *
+     * Check the existence of imageFolders relation to an item by id..
+     *
+     */
+    public function testTeamMembersIdImageFoldersRelFkHead()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdImageFoldersRelFkPut
+     *
+     * Add a related item by id for imageFolders..
+     *
+     */
+    public function testTeamMembersIdImageFoldersRelFkPut()
+    {
+
+    }
+
+    /**
      * Test case for teamMembersIdInvitationTicketsCountGet
      *
      * Counts invitationTickets of TeamMember..
@@ -1091,6 +1201,160 @@ class TeamMemberApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for teamMembersIdTeamImageFoldersCountGet
+     *
+     * Counts imageFolders of Team..
+     *
+     */
+    public function testTeamMembersIdTeamImageFoldersCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamImageFoldersDelete
+     *
+     * Deletes all imageFolders of this model..
+     *
+     */
+    public function testTeamMembersIdTeamImageFoldersDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamImageFoldersFkDelete
+     *
+     * Delete a related item by id for imageFolders..
+     *
+     */
+    public function testTeamMembersIdTeamImageFoldersFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamImageFoldersFkGet
+     *
+     * Find a related item by id for imageFolders..
+     *
+     */
+    public function testTeamMembersIdTeamImageFoldersFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamImageFoldersFkPut
+     *
+     * Update a related item by id for imageFolders..
+     *
+     */
+    public function testTeamMembersIdTeamImageFoldersFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamImageFoldersGet
+     *
+     * Queries imageFolders of Team..
+     *
+     */
+    public function testTeamMembersIdTeamImageFoldersGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamImageFoldersPost
+     *
+     * Creates a new instance in imageFolders of this model..
+     *
+     */
+    public function testTeamMembersIdTeamImageFoldersPost()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamImagesCountGet
+     *
+     * Counts images of Team..
+     *
+     */
+    public function testTeamMembersIdTeamImagesCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamImagesDelete
+     *
+     * Deletes all images of this model..
+     *
+     */
+    public function testTeamMembersIdTeamImagesDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamImagesFkDelete
+     *
+     * Delete a related item by id for images..
+     *
+     */
+    public function testTeamMembersIdTeamImagesFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamImagesFkGet
+     *
+     * Find a related item by id for images..
+     *
+     */
+    public function testTeamMembersIdTeamImagesFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamImagesFkPut
+     *
+     * Update a related item by id for images..
+     *
+     */
+    public function testTeamMembersIdTeamImagesFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamImagesGet
+     *
+     * Queries images of Team..
+     *
+     */
+    public function testTeamMembersIdTeamImagesGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamImagesPost
+     *
+     * Creates a new instance in images of this model..
+     *
+     */
+    public function testTeamMembersIdTeamImagesPost()
+    {
+
+    }
+
+    /**
      * Test case for teamMembersIdTeamMembersCountGet
      *
      * Counts members of Team..
@@ -1273,6 +1537,83 @@ class TeamMemberApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testTeamMembersIdTeamPortalsPost()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamTeamMembersCountGet
+     *
+     * Counts teamMembers of Team..
+     *
+     */
+    public function testTeamMembersIdTeamTeamMembersCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamTeamMembersDelete
+     *
+     * Deletes all teamMembers of this model..
+     *
+     */
+    public function testTeamMembersIdTeamTeamMembersDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamTeamMembersFkDelete
+     *
+     * Delete a related item by id for teamMembers..
+     *
+     */
+    public function testTeamMembersIdTeamTeamMembersFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamTeamMembersFkGet
+     *
+     * Find a related item by id for teamMembers..
+     *
+     */
+    public function testTeamMembersIdTeamTeamMembersFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamTeamMembersFkPut
+     *
+     * Update a related item by id for teamMembers..
+     *
+     */
+    public function testTeamMembersIdTeamTeamMembersFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamTeamMembersGet
+     *
+     * Queries teamMembers of Team..
+     *
+     */
+    public function testTeamMembersIdTeamTeamMembersGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamTeamMembersPost
+     *
+     * Creates a new instance in teamMembers of this model..
+     *
+     */
+    public function testTeamMembersIdTeamTeamMembersPost()
     {
 
     }

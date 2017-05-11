@@ -1,33 +1,33 @@
-# Tweak\Api\ImageApi
+# Tweak\Api\PortalImageFolderApi
 
 All URIs are relative to *https://apidevcdn.tweak.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**imagesChangeStreamGet**](ImageApi.md#imagesChangeStreamGet) | **GET** /Images/change-stream | Create a change stream.
-[**imagesChangeStreamPost**](ImageApi.md#imagesChangeStreamPost) | **POST** /Images/change-stream | Create a change stream.
-[**imagesCountGet**](ImageApi.md#imagesCountGet) | **GET** /Images/count | Count instances of the model matched by where from the data source.
-[**imagesFindOneGet**](ImageApi.md#imagesFindOneGet) | **GET** /Images/findOne | Find first instance of the model matched by filter from the data source.
-[**imagesGet**](ImageApi.md#imagesGet) | **GET** /Images | Find all instances of the model matched by filter from the data source.
-[**imagesIdDelete**](ImageApi.md#imagesIdDelete) | **DELETE** /Images/{id} | Delete a model instance by {{id}} from the data source.
-[**imagesIdExistsGet**](ImageApi.md#imagesIdExistsGet) | **GET** /Images/{id}/exists | Check whether a model instance exists in the data source.
-[**imagesIdFolderGet**](ImageApi.md#imagesIdFolderGet) | **GET** /Images/{id}/folder | Fetches belongsTo relation folder.
-[**imagesIdGet**](ImageApi.md#imagesIdGet) | **GET** /Images/{id} | Find a model instance by {{id}} from the data source.
-[**imagesIdHead**](ImageApi.md#imagesIdHead) | **HEAD** /Images/{id} | Check whether a model instance exists in the data source.
-[**imagesIdPatch**](ImageApi.md#imagesIdPatch) | **PATCH** /Images/{id} | Patch attributes for a model instance and persist it into the data source.
-[**imagesIdPut**](ImageApi.md#imagesIdPut) | **PUT** /Images/{id} | Replace attributes for a model instance and persist it into the data source.
-[**imagesIdReplacePost**](ImageApi.md#imagesIdReplacePost) | **POST** /Images/{id}/replace | Replace attributes for a model instance and persist it into the data source.
-[**imagesIdTeamGet**](ImageApi.md#imagesIdTeamGet) | **GET** /Images/{id}/team | Fetches belongsTo relation team.
-[**imagesPatch**](ImageApi.md#imagesPatch) | **PATCH** /Images | Patch an existing model instance or insert a new one into the data source.
-[**imagesPost**](ImageApi.md#imagesPost) | **POST** /Images | Create a new instance of the model and persist it into the data source.
-[**imagesPut**](ImageApi.md#imagesPut) | **PUT** /Images | Replace an existing model instance or insert a new one into the data source.
-[**imagesReplaceOrCreatePost**](ImageApi.md#imagesReplaceOrCreatePost) | **POST** /Images/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
-[**imagesUpdatePost**](ImageApi.md#imagesUpdatePost) | **POST** /Images/update | Update instances of the model matched by {{where}} from the data source.
-[**imagesUpsertWithWherePost**](ImageApi.md#imagesUpsertWithWherePost) | **POST** /Images/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
+[**portalImageFoldersChangeStreamGet**](PortalImageFolderApi.md#portalImageFoldersChangeStreamGet) | **GET** /PortalImageFolders/change-stream | Create a change stream.
+[**portalImageFoldersChangeStreamPost**](PortalImageFolderApi.md#portalImageFoldersChangeStreamPost) | **POST** /PortalImageFolders/change-stream | Create a change stream.
+[**portalImageFoldersCountGet**](PortalImageFolderApi.md#portalImageFoldersCountGet) | **GET** /PortalImageFolders/count | Count instances of the model matched by where from the data source.
+[**portalImageFoldersFindOneGet**](PortalImageFolderApi.md#portalImageFoldersFindOneGet) | **GET** /PortalImageFolders/findOne | Find first instance of the model matched by filter from the data source.
+[**portalImageFoldersGet**](PortalImageFolderApi.md#portalImageFoldersGet) | **GET** /PortalImageFolders | Find all instances of the model matched by filter from the data source.
+[**portalImageFoldersIdDelete**](PortalImageFolderApi.md#portalImageFoldersIdDelete) | **DELETE** /PortalImageFolders/{id} | Delete a model instance by {{id}} from the data source.
+[**portalImageFoldersIdExistsGet**](PortalImageFolderApi.md#portalImageFoldersIdExistsGet) | **GET** /PortalImageFolders/{id}/exists | Check whether a model instance exists in the data source.
+[**portalImageFoldersIdFolderGet**](PortalImageFolderApi.md#portalImageFoldersIdFolderGet) | **GET** /PortalImageFolders/{id}/folder | Fetches belongsTo relation folder.
+[**portalImageFoldersIdGet**](PortalImageFolderApi.md#portalImageFoldersIdGet) | **GET** /PortalImageFolders/{id} | Find a model instance by {{id}} from the data source.
+[**portalImageFoldersIdHead**](PortalImageFolderApi.md#portalImageFoldersIdHead) | **HEAD** /PortalImageFolders/{id} | Check whether a model instance exists in the data source.
+[**portalImageFoldersIdPatch**](PortalImageFolderApi.md#portalImageFoldersIdPatch) | **PATCH** /PortalImageFolders/{id} | Patch attributes for a model instance and persist it into the data source.
+[**portalImageFoldersIdPortalGet**](PortalImageFolderApi.md#portalImageFoldersIdPortalGet) | **GET** /PortalImageFolders/{id}/portal | Fetches belongsTo relation portal.
+[**portalImageFoldersIdPut**](PortalImageFolderApi.md#portalImageFoldersIdPut) | **PUT** /PortalImageFolders/{id} | Replace attributes for a model instance and persist it into the data source.
+[**portalImageFoldersIdReplacePost**](PortalImageFolderApi.md#portalImageFoldersIdReplacePost) | **POST** /PortalImageFolders/{id}/replace | Replace attributes for a model instance and persist it into the data source.
+[**portalImageFoldersPatch**](PortalImageFolderApi.md#portalImageFoldersPatch) | **PATCH** /PortalImageFolders | Patch an existing model instance or insert a new one into the data source.
+[**portalImageFoldersPost**](PortalImageFolderApi.md#portalImageFoldersPost) | **POST** /PortalImageFolders | Create a new instance of the model and persist it into the data source.
+[**portalImageFoldersPut**](PortalImageFolderApi.md#portalImageFoldersPut) | **PUT** /PortalImageFolders | Replace an existing model instance or insert a new one into the data source.
+[**portalImageFoldersReplaceOrCreatePost**](PortalImageFolderApi.md#portalImageFoldersReplaceOrCreatePost) | **POST** /PortalImageFolders/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
+[**portalImageFoldersUpdatePost**](PortalImageFolderApi.md#portalImageFoldersUpdatePost) | **POST** /PortalImageFolders/update | Update instances of the model matched by {{where}} from the data source.
+[**portalImageFoldersUpsertWithWherePost**](PortalImageFolderApi.md#portalImageFoldersUpsertWithWherePost) | **POST** /PortalImageFolders/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
 
 
-# **imagesChangeStreamGet**
-> \SplFileObject imagesChangeStreamGet($options)
+# **portalImageFoldersChangeStreamGet**
+> \SplFileObject portalImageFoldersChangeStreamGet($options)
 
 Create a change stream.
 
@@ -41,14 +41,14 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
-$api_instance = new Tweak\Api\Api\ImageApi();
+$api_instance = new Tweak\Api\Api\PortalImageFolderApi();
 $options = "options_example"; // string | 
 
 try {
-    $result = $api_instance->imagesChangeStreamGet($options);
+    $result = $api_instance->portalImageFoldersChangeStreamGet($options);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImageApi->imagesChangeStreamGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PortalImageFolderApi->portalImageFoldersChangeStreamGet: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -74,8 +74,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **imagesChangeStreamPost**
-> \SplFileObject imagesChangeStreamPost($options)
+# **portalImageFoldersChangeStreamPost**
+> \SplFileObject portalImageFoldersChangeStreamPost($options)
 
 Create a change stream.
 
@@ -89,14 +89,14 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
-$api_instance = new Tweak\Api\Api\ImageApi();
+$api_instance = new Tweak\Api\Api\PortalImageFolderApi();
 $options = "options_example"; // string | 
 
 try {
-    $result = $api_instance->imagesChangeStreamPost($options);
+    $result = $api_instance->portalImageFoldersChangeStreamPost($options);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImageApi->imagesChangeStreamPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PortalImageFolderApi->portalImageFoldersChangeStreamPost: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -122,8 +122,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **imagesCountGet**
-> \Swagger\Client\Model\InlineResponse200 imagesCountGet($where)
+# **portalImageFoldersCountGet**
+> \Swagger\Client\Model\InlineResponse200 portalImageFoldersCountGet($where)
 
 Count instances of the model matched by where from the data source.
 
@@ -137,14 +137,14 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
-$api_instance = new Tweak\Api\Api\ImageApi();
+$api_instance = new Tweak\Api\Api\PortalImageFolderApi();
 $where = "where_example"; // string | Criteria to match model instances
 
 try {
-    $result = $api_instance->imagesCountGet($where);
+    $result = $api_instance->portalImageFoldersCountGet($where);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImageApi->imagesCountGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PortalImageFolderApi->portalImageFoldersCountGet: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -170,8 +170,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **imagesFindOneGet**
-> \Swagger\Client\Model\Image imagesFindOneGet($filter)
+# **portalImageFoldersFindOneGet**
+> \Swagger\Client\Model\PortalImageFolder portalImageFoldersFindOneGet($filter)
 
 Find first instance of the model matched by filter from the data source.
 
@@ -185,14 +185,14 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
-$api_instance = new Tweak\Api\Api\ImageApi();
+$api_instance = new Tweak\Api\Api\PortalImageFolderApi();
 $filter = "filter_example"; // string | Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({\"something\":\"value\"})
 
 try {
-    $result = $api_instance->imagesFindOneGet($filter);
+    $result = $api_instance->portalImageFoldersFindOneGet($filter);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImageApi->imagesFindOneGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PortalImageFolderApi->portalImageFoldersFindOneGet: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -205,7 +205,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Image**](../Model/Image.md)
+[**\Swagger\Client\Model\PortalImageFolder**](../Model/PortalImageFolder.md)
 
 ### Authorization
 
@@ -218,8 +218,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **imagesGet**
-> \Swagger\Client\Model\Image[] imagesGet($filter)
+# **portalImageFoldersGet**
+> \Swagger\Client\Model\PortalImageFolder[] portalImageFoldersGet($filter)
 
 Find all instances of the model matched by filter from the data source.
 
@@ -233,14 +233,14 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
-$api_instance = new Tweak\Api\Api\ImageApi();
+$api_instance = new Tweak\Api\Api\PortalImageFolderApi();
 $filter = "filter_example"; // string | Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({\"something\":\"value\"})
 
 try {
-    $result = $api_instance->imagesGet($filter);
+    $result = $api_instance->portalImageFoldersGet($filter);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImageApi->imagesGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PortalImageFolderApi->portalImageFoldersGet: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -253,7 +253,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Image[]**](../Model/Image.md)
+[**\Swagger\Client\Model\PortalImageFolder[]**](../Model/PortalImageFolder.md)
 
 ### Authorization
 
@@ -266,8 +266,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **imagesIdDelete**
-> object imagesIdDelete($id)
+# **portalImageFoldersIdDelete**
+> object portalImageFoldersIdDelete($id)
 
 Delete a model instance by {{id}} from the data source.
 
@@ -281,14 +281,14 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
-$api_instance = new Tweak\Api\Api\ImageApi();
+$api_instance = new Tweak\Api\Api\PortalImageFolderApi();
 $id = "id_example"; // string | Model id
 
 try {
-    $result = $api_instance->imagesIdDelete($id);
+    $result = $api_instance->portalImageFoldersIdDelete($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImageApi->imagesIdDelete: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PortalImageFolderApi->portalImageFoldersIdDelete: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -314,8 +314,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **imagesIdExistsGet**
-> \Swagger\Client\Model\InlineResponse2002 imagesIdExistsGet($id)
+# **portalImageFoldersIdExistsGet**
+> \Swagger\Client\Model\InlineResponse2002 portalImageFoldersIdExistsGet($id)
 
 Check whether a model instance exists in the data source.
 
@@ -329,14 +329,14 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
-$api_instance = new Tweak\Api\Api\ImageApi();
+$api_instance = new Tweak\Api\Api\PortalImageFolderApi();
 $id = "id_example"; // string | Model id
 
 try {
-    $result = $api_instance->imagesIdExistsGet($id);
+    $result = $api_instance->portalImageFoldersIdExistsGet($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImageApi->imagesIdExistsGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PortalImageFolderApi->portalImageFoldersIdExistsGet: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -362,8 +362,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **imagesIdFolderGet**
-> \Swagger\Client\Model\ImageFolder imagesIdFolderGet($id, $refresh)
+# **portalImageFoldersIdFolderGet**
+> \Swagger\Client\Model\ImageFolder portalImageFoldersIdFolderGet($id, $refresh)
 
 Fetches belongsTo relation folder.
 
@@ -377,15 +377,15 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
-$api_instance = new Tweak\Api\Api\ImageApi();
-$id = "id_example"; // string | Image id
+$api_instance = new Tweak\Api\Api\PortalImageFolderApi();
+$id = "id_example"; // string | PortalImageFolder id
 $refresh = true; // bool | 
 
 try {
-    $result = $api_instance->imagesIdFolderGet($id, $refresh);
+    $result = $api_instance->portalImageFoldersIdFolderGet($id, $refresh);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImageApi->imagesIdFolderGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PortalImageFolderApi->portalImageFoldersIdFolderGet: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -394,7 +394,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **string**| Image id |
+ **id** | **string**| PortalImageFolder id |
  **refresh** | **bool**|  | [optional]
 
 ### Return type
@@ -412,8 +412,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **imagesIdGet**
-> \Swagger\Client\Model\Image imagesIdGet($id, $filter)
+# **portalImageFoldersIdGet**
+> \Swagger\Client\Model\PortalImageFolder portalImageFoldersIdGet($id, $filter)
 
 Find a model instance by {{id}} from the data source.
 
@@ -427,15 +427,15 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
-$api_instance = new Tweak\Api\Api\ImageApi();
+$api_instance = new Tweak\Api\Api\PortalImageFolderApi();
 $id = "id_example"; // string | Model id
 $filter = "filter_example"; // string | Filter defining fields and include - must be a JSON-encoded string ({\"something\":\"value\"})
 
 try {
-    $result = $api_instance->imagesIdGet($id, $filter);
+    $result = $api_instance->portalImageFoldersIdGet($id, $filter);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImageApi->imagesIdGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PortalImageFolderApi->portalImageFoldersIdGet: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -449,7 +449,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Image**](../Model/Image.md)
+[**\Swagger\Client\Model\PortalImageFolder**](../Model/PortalImageFolder.md)
 
 ### Authorization
 
@@ -462,8 +462,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **imagesIdHead**
-> \Swagger\Client\Model\InlineResponse2002 imagesIdHead($id)
+# **portalImageFoldersIdHead**
+> \Swagger\Client\Model\InlineResponse2002 portalImageFoldersIdHead($id)
 
 Check whether a model instance exists in the data source.
 
@@ -477,14 +477,14 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
-$api_instance = new Tweak\Api\Api\ImageApi();
+$api_instance = new Tweak\Api\Api\PortalImageFolderApi();
 $id = "id_example"; // string | Model id
 
 try {
-    $result = $api_instance->imagesIdHead($id);
+    $result = $api_instance->portalImageFoldersIdHead($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImageApi->imagesIdHead: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PortalImageFolderApi->portalImageFoldersIdHead: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -510,8 +510,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **imagesIdPatch**
-> \Swagger\Client\Model\Image imagesIdPatch($id, $data)
+# **portalImageFoldersIdPatch**
+> \Swagger\Client\Model\PortalImageFolder portalImageFoldersIdPatch($id, $data)
 
 Patch attributes for a model instance and persist it into the data source.
 
@@ -525,15 +525,15 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
-$api_instance = new Tweak\Api\Api\ImageApi();
-$id = "id_example"; // string | Image id
-$data = new \Swagger\Client\Model\Image(); // \Swagger\Client\Model\Image | An object of model property name/value pairs
+$api_instance = new Tweak\Api\Api\PortalImageFolderApi();
+$id = "id_example"; // string | PortalImageFolder id
+$data = new \Swagger\Client\Model\PortalImageFolder(); // \Swagger\Client\Model\PortalImageFolder | An object of model property name/value pairs
 
 try {
-    $result = $api_instance->imagesIdPatch($id, $data);
+    $result = $api_instance->portalImageFoldersIdPatch($id, $data);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImageApi->imagesIdPatch: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PortalImageFolderApi->portalImageFoldersIdPatch: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -542,12 +542,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **string**| Image id |
- **data** | [**\Swagger\Client\Model\Image**](../Model/\Swagger\Client\Model\Image.md)| An object of model property name/value pairs | [optional]
+ **id** | **string**| PortalImageFolder id |
+ **data** | [**\Swagger\Client\Model\PortalImageFolder**](../Model/\Swagger\Client\Model\PortalImageFolder.md)| An object of model property name/value pairs | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\Image**](../Model/Image.md)
+[**\Swagger\Client\Model\PortalImageFolder**](../Model/PortalImageFolder.md)
 
 ### Authorization
 
@@ -560,60 +560,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **imagesIdPut**
-> \Swagger\Client\Model\Image imagesIdPut($id, $data)
+# **portalImageFoldersIdPortalGet**
+> \Swagger\Client\Model\Portal portalImageFoldersIdPortalGet($id, $refresh)
 
-Replace attributes for a model instance and persist it into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\ImageApi();
-$id = "id_example"; // string | Model id
-$data = new \Swagger\Client\Model\Image(); // \Swagger\Client\Model\Image | Model instance data
-
-try {
-    $result = $api_instance->imagesIdPut($id, $data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ImageApi->imagesIdPut: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Model id |
- **data** | [**\Swagger\Client\Model\Image**](../Model/\Swagger\Client\Model\Image.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\Image**](../Model/Image.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **imagesIdReplacePost**
-> \Swagger\Client\Model\Image imagesIdReplacePost($id, $data)
-
-Replace attributes for a model instance and persist it into the data source.
+Fetches belongsTo relation portal.
 
 ### Example
 ```php
@@ -625,65 +575,15 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
-$api_instance = new Tweak\Api\Api\ImageApi();
-$id = "id_example"; // string | Model id
-$data = new \Swagger\Client\Model\Image(); // \Swagger\Client\Model\Image | Model instance data
-
-try {
-    $result = $api_instance->imagesIdReplacePost($id, $data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ImageApi->imagesIdReplacePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Model id |
- **data** | [**\Swagger\Client\Model\Image**](../Model/\Swagger\Client\Model\Image.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\Image**](../Model/Image.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **imagesIdTeamGet**
-> \Swagger\Client\Model\Team imagesIdTeamGet($id, $refresh)
-
-Fetches belongsTo relation team.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\ImageApi();
-$id = "id_example"; // string | Image id
+$api_instance = new Tweak\Api\Api\PortalImageFolderApi();
+$id = "id_example"; // string | PortalImageFolder id
 $refresh = true; // bool | 
 
 try {
-    $result = $api_instance->imagesIdTeamGet($id, $refresh);
+    $result = $api_instance->portalImageFoldersIdPortalGet($id, $refresh);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImageApi->imagesIdTeamGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PortalImageFolderApi->portalImageFoldersIdPortalGet: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -692,12 +592,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **string**| Image id |
+ **id** | **string**| PortalImageFolder id |
  **refresh** | **bool**|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\Team**](../Model/Team.md)
+[**\Swagger\Client\Model\Portal**](../Model/Portal.md)
 
 ### Authorization
 
@@ -710,8 +610,108 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **imagesPatch**
-> \Swagger\Client\Model\Image imagesPatch($data)
+# **portalImageFoldersIdPut**
+> \Swagger\Client\Model\PortalImageFolder portalImageFoldersIdPut($id, $data)
+
+Replace attributes for a model instance and persist it into the data source.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\PortalImageFolderApi();
+$id = "id_example"; // string | Model id
+$data = new \Swagger\Client\Model\PortalImageFolder(); // \Swagger\Client\Model\PortalImageFolder | Model instance data
+
+try {
+    $result = $api_instance->portalImageFoldersIdPut($id, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PortalImageFolderApi->portalImageFoldersIdPut: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Model id |
+ **data** | [**\Swagger\Client\Model\PortalImageFolder**](../Model/\Swagger\Client\Model\PortalImageFolder.md)| Model instance data | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\PortalImageFolder**](../Model/PortalImageFolder.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **portalImageFoldersIdReplacePost**
+> \Swagger\Client\Model\PortalImageFolder portalImageFoldersIdReplacePost($id, $data)
+
+Replace attributes for a model instance and persist it into the data source.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\PortalImageFolderApi();
+$id = "id_example"; // string | Model id
+$data = new \Swagger\Client\Model\PortalImageFolder(); // \Swagger\Client\Model\PortalImageFolder | Model instance data
+
+try {
+    $result = $api_instance->portalImageFoldersIdReplacePost($id, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PortalImageFolderApi->portalImageFoldersIdReplacePost: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Model id |
+ **data** | [**\Swagger\Client\Model\PortalImageFolder**](../Model/\Swagger\Client\Model\PortalImageFolder.md)| Model instance data | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\PortalImageFolder**](../Model/PortalImageFolder.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **portalImageFoldersPatch**
+> \Swagger\Client\Model\PortalImageFolder portalImageFoldersPatch($data)
 
 Patch an existing model instance or insert a new one into the data source.
 
@@ -725,14 +725,14 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
-$api_instance = new Tweak\Api\Api\ImageApi();
-$data = new \Swagger\Client\Model\Image(); // \Swagger\Client\Model\Image | Model instance data
+$api_instance = new Tweak\Api\Api\PortalImageFolderApi();
+$data = new \Swagger\Client\Model\PortalImageFolder(); // \Swagger\Client\Model\PortalImageFolder | Model instance data
 
 try {
-    $result = $api_instance->imagesPatch($data);
+    $result = $api_instance->portalImageFoldersPatch($data);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImageApi->imagesPatch: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PortalImageFolderApi->portalImageFoldersPatch: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -741,11 +741,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\Image**](../Model/\Swagger\Client\Model\Image.md)| Model instance data | [optional]
+ **data** | [**\Swagger\Client\Model\PortalImageFolder**](../Model/\Swagger\Client\Model\PortalImageFolder.md)| Model instance data | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\Image**](../Model/Image.md)
+[**\Swagger\Client\Model\PortalImageFolder**](../Model/PortalImageFolder.md)
 
 ### Authorization
 
@@ -758,8 +758,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **imagesPost**
-> \Swagger\Client\Model\Image imagesPost($data)
+# **portalImageFoldersPost**
+> \Swagger\Client\Model\PortalImageFolder portalImageFoldersPost($data)
 
 Create a new instance of the model and persist it into the data source.
 
@@ -773,14 +773,14 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
-$api_instance = new Tweak\Api\Api\ImageApi();
-$data = new \Swagger\Client\Model\Image(); // \Swagger\Client\Model\Image | Model instance data
+$api_instance = new Tweak\Api\Api\PortalImageFolderApi();
+$data = new \Swagger\Client\Model\PortalImageFolder(); // \Swagger\Client\Model\PortalImageFolder | Model instance data
 
 try {
-    $result = $api_instance->imagesPost($data);
+    $result = $api_instance->portalImageFoldersPost($data);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImageApi->imagesPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PortalImageFolderApi->portalImageFoldersPost: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -789,11 +789,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\Image**](../Model/\Swagger\Client\Model\Image.md)| Model instance data | [optional]
+ **data** | [**\Swagger\Client\Model\PortalImageFolder**](../Model/\Swagger\Client\Model\PortalImageFolder.md)| Model instance data | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\Image**](../Model/Image.md)
+[**\Swagger\Client\Model\PortalImageFolder**](../Model/PortalImageFolder.md)
 
 ### Authorization
 
@@ -806,8 +806,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **imagesPut**
-> \Swagger\Client\Model\Image imagesPut($data)
+# **portalImageFoldersPut**
+> \Swagger\Client\Model\PortalImageFolder portalImageFoldersPut($data)
 
 Replace an existing model instance or insert a new one into the data source.
 
@@ -821,14 +821,14 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
-$api_instance = new Tweak\Api\Api\ImageApi();
-$data = new \Swagger\Client\Model\Image(); // \Swagger\Client\Model\Image | Model instance data
+$api_instance = new Tweak\Api\Api\PortalImageFolderApi();
+$data = new \Swagger\Client\Model\PortalImageFolder(); // \Swagger\Client\Model\PortalImageFolder | Model instance data
 
 try {
-    $result = $api_instance->imagesPut($data);
+    $result = $api_instance->portalImageFoldersPut($data);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImageApi->imagesPut: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PortalImageFolderApi->portalImageFoldersPut: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -837,11 +837,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\Image**](../Model/\Swagger\Client\Model\Image.md)| Model instance data | [optional]
+ **data** | [**\Swagger\Client\Model\PortalImageFolder**](../Model/\Swagger\Client\Model\PortalImageFolder.md)| Model instance data | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\Image**](../Model/Image.md)
+[**\Swagger\Client\Model\PortalImageFolder**](../Model/PortalImageFolder.md)
 
 ### Authorization
 
@@ -854,8 +854,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **imagesReplaceOrCreatePost**
-> \Swagger\Client\Model\Image imagesReplaceOrCreatePost($data)
+# **portalImageFoldersReplaceOrCreatePost**
+> \Swagger\Client\Model\PortalImageFolder portalImageFoldersReplaceOrCreatePost($data)
 
 Replace an existing model instance or insert a new one into the data source.
 
@@ -869,14 +869,14 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
-$api_instance = new Tweak\Api\Api\ImageApi();
-$data = new \Swagger\Client\Model\Image(); // \Swagger\Client\Model\Image | Model instance data
+$api_instance = new Tweak\Api\Api\PortalImageFolderApi();
+$data = new \Swagger\Client\Model\PortalImageFolder(); // \Swagger\Client\Model\PortalImageFolder | Model instance data
 
 try {
-    $result = $api_instance->imagesReplaceOrCreatePost($data);
+    $result = $api_instance->portalImageFoldersReplaceOrCreatePost($data);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImageApi->imagesReplaceOrCreatePost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PortalImageFolderApi->portalImageFoldersReplaceOrCreatePost: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -885,11 +885,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\Image**](../Model/\Swagger\Client\Model\Image.md)| Model instance data | [optional]
+ **data** | [**\Swagger\Client\Model\PortalImageFolder**](../Model/\Swagger\Client\Model\PortalImageFolder.md)| Model instance data | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\Image**](../Model/Image.md)
+[**\Swagger\Client\Model\PortalImageFolder**](../Model/PortalImageFolder.md)
 
 ### Authorization
 
@@ -902,8 +902,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **imagesUpdatePost**
-> \Swagger\Client\Model\InlineResponse2001 imagesUpdatePost($where, $data)
+# **portalImageFoldersUpdatePost**
+> \Swagger\Client\Model\InlineResponse2001 portalImageFoldersUpdatePost($where, $data)
 
 Update instances of the model matched by {{where}} from the data source.
 
@@ -917,15 +917,15 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
-$api_instance = new Tweak\Api\Api\ImageApi();
+$api_instance = new Tweak\Api\Api\PortalImageFolderApi();
 $where = "where_example"; // string | Criteria to match model instances
-$data = new \Swagger\Client\Model\Image(); // \Swagger\Client\Model\Image | An object of model property name/value pairs
+$data = new \Swagger\Client\Model\PortalImageFolder(); // \Swagger\Client\Model\PortalImageFolder | An object of model property name/value pairs
 
 try {
-    $result = $api_instance->imagesUpdatePost($where, $data);
+    $result = $api_instance->portalImageFoldersUpdatePost($where, $data);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImageApi->imagesUpdatePost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PortalImageFolderApi->portalImageFoldersUpdatePost: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -935,7 +935,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **where** | **string**| Criteria to match model instances | [optional]
- **data** | [**\Swagger\Client\Model\Image**](../Model/\Swagger\Client\Model\Image.md)| An object of model property name/value pairs | [optional]
+ **data** | [**\Swagger\Client\Model\PortalImageFolder**](../Model/\Swagger\Client\Model\PortalImageFolder.md)| An object of model property name/value pairs | [optional]
 
 ### Return type
 
@@ -952,8 +952,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **imagesUpsertWithWherePost**
-> \Swagger\Client\Model\Image imagesUpsertWithWherePost($where, $data)
+# **portalImageFoldersUpsertWithWherePost**
+> \Swagger\Client\Model\PortalImageFolder portalImageFoldersUpsertWithWherePost($where, $data)
 
 Update an existing model instance or insert a new one into the data source based on the where criteria.
 
@@ -967,15 +967,15 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
-$api_instance = new Tweak\Api\Api\ImageApi();
+$api_instance = new Tweak\Api\Api\PortalImageFolderApi();
 $where = "where_example"; // string | Criteria to match model instances
-$data = new \Swagger\Client\Model\Image(); // \Swagger\Client\Model\Image | An object of model property name/value pairs
+$data = new \Swagger\Client\Model\PortalImageFolder(); // \Swagger\Client\Model\PortalImageFolder | An object of model property name/value pairs
 
 try {
-    $result = $api_instance->imagesUpsertWithWherePost($where, $data);
+    $result = $api_instance->portalImageFoldersUpsertWithWherePost($where, $data);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImageApi->imagesUpsertWithWherePost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PortalImageFolderApi->portalImageFoldersUpsertWithWherePost: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -985,11 +985,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **where** | **string**| Criteria to match model instances | [optional]
- **data** | [**\Swagger\Client\Model\Image**](../Model/\Swagger\Client\Model\Image.md)| An object of model property name/value pairs | [optional]
+ **data** | [**\Swagger\Client\Model\PortalImageFolder**](../Model/\Swagger\Client\Model\PortalImageFolder.md)| An object of model property name/value pairs | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\Image**](../Model/Image.md)
+[**\Swagger\Client\Model\PortalImageFolder**](../Model/PortalImageFolder.md)
 
 ### Authorization
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * Image
+ * ImageFolder
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * Image Class Doc Comment
+ * ImageFolder Class Doc Comment
  *
  * @category    Class */
 /** 
@@ -53,13 +53,13 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Image implements ArrayAccess
+class ImageFolder implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'Image';
+    protected static $swaggerModelName = 'ImageFolder';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -67,16 +67,18 @@ class Image implements ArrayAccess
       */
     protected static $swaggerTypes = array(
         'name' => 'string',
-        'fileName' => 'string',
-        'link' => 'string',
         'path' => 'string',
         'created' => '\DateTime',
         'modified' => '\DateTime',
         'id' => 'string',
         'teamId' => 'string',
-        'folderId' => 'string',
-        'folder' => '\Swagger\Client\Model\ImageFolder',
-        'team' => '\Swagger\Client\Model\Team'
+        'parentId' => 'string',
+        'images' => '\Swagger\Client\Model\Image[]',
+        'team' => '\Swagger\Client\Model\Team',
+        'portals' => '\Swagger\Client\Model\Portal[]',
+        'members' => '\Swagger\Client\Model\TeamMember[]',
+        'parent' => '\Swagger\Client\Model\ImageFolder',
+        'children' => '\Swagger\Client\Model\ImageFolder[]'
     );
 
     public static function swaggerTypes()
@@ -90,16 +92,18 @@ class Image implements ArrayAccess
      */
     protected static $attributeMap = array(
         'name' => 'name',
-        'fileName' => 'fileName',
-        'link' => 'link',
         'path' => 'path',
         'created' => 'created',
         'modified' => 'modified',
         'id' => 'id',
         'teamId' => 'teamId',
-        'folderId' => 'folderId',
-        'folder' => 'folder',
-        'team' => 'team'
+        'parentId' => 'parentId',
+        'images' => 'images',
+        'team' => 'team',
+        'portals' => 'portals',
+        'members' => 'members',
+        'parent' => 'parent',
+        'children' => 'children'
     );
 
     public static function attributeMap()
@@ -113,16 +117,18 @@ class Image implements ArrayAccess
      */
     protected static $setters = array(
         'name' => 'setName',
-        'fileName' => 'setFileName',
-        'link' => 'setLink',
         'path' => 'setPath',
         'created' => 'setCreated',
         'modified' => 'setModified',
         'id' => 'setId',
         'teamId' => 'setTeamId',
-        'folderId' => 'setFolderId',
-        'folder' => 'setFolder',
-        'team' => 'setTeam'
+        'parentId' => 'setParentId',
+        'images' => 'setImages',
+        'team' => 'setTeam',
+        'portals' => 'setPortals',
+        'members' => 'setMembers',
+        'parent' => 'setParent',
+        'children' => 'setChildren'
     );
 
     public static function setters()
@@ -136,16 +142,18 @@ class Image implements ArrayAccess
      */
     protected static $getters = array(
         'name' => 'getName',
-        'fileName' => 'getFileName',
-        'link' => 'getLink',
         'path' => 'getPath',
         'created' => 'getCreated',
         'modified' => 'getModified',
         'id' => 'getId',
         'teamId' => 'getTeamId',
-        'folderId' => 'getFolderId',
-        'folder' => 'getFolder',
-        'team' => 'getTeam'
+        'parentId' => 'getParentId',
+        'images' => 'getImages',
+        'team' => 'getTeam',
+        'portals' => 'getPortals',
+        'members' => 'getMembers',
+        'parent' => 'getParent',
+        'children' => 'getChildren'
     );
 
     public static function getters()
@@ -170,16 +178,18 @@ class Image implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['fileName'] = isset($data['fileName']) ? $data['fileName'] : null;
-        $this->container['link'] = isset($data['link']) ? $data['link'] : null;
         $this->container['path'] = isset($data['path']) ? $data['path'] : '/';
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
         $this->container['modified'] = isset($data['modified']) ? $data['modified'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['teamId'] = isset($data['teamId']) ? $data['teamId'] : null;
-        $this->container['folderId'] = isset($data['folderId']) ? $data['folderId'] : null;
-        $this->container['folder'] = isset($data['folder']) ? $data['folder'] : null;
+        $this->container['parentId'] = isset($data['parentId']) ? $data['parentId'] : null;
+        $this->container['images'] = isset($data['images']) ? $data['images'] : null;
         $this->container['team'] = isset($data['team']) ? $data['team'] : null;
+        $this->container['portals'] = isset($data['portals']) ? $data['portals'] : null;
+        $this->container['members'] = isset($data['members']) ? $data['members'] : null;
+        $this->container['parent'] = isset($data['parent']) ? $data['parent'] : null;
+        $this->container['children'] = isset($data['children']) ? $data['children'] : null;
     }
 
     /**
@@ -228,48 +238,6 @@ class Image implements ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets fileName
-     * @return string
-     */
-    public function getFileName()
-    {
-        return $this->container['fileName'];
-    }
-
-    /**
-     * Sets fileName
-     * @param string $fileName
-     * @return $this
-     */
-    public function setFileName($fileName)
-    {
-        $this->container['fileName'] = $fileName;
-
-        return $this;
-    }
-
-    /**
-     * Gets link
-     * @return string
-     */
-    public function getLink()
-    {
-        return $this->container['link'];
-    }
-
-    /**
-     * Sets link
-     * @param string $link
-     * @return $this
-     */
-    public function setLink($link)
-    {
-        $this->container['link'] = $link;
 
         return $this;
     }
@@ -380,43 +348,43 @@ class Image implements ArrayAccess
     }
 
     /**
-     * Gets folderId
+     * Gets parentId
      * @return string
      */
-    public function getFolderId()
+    public function getParentId()
     {
-        return $this->container['folderId'];
+        return $this->container['parentId'];
     }
 
     /**
-     * Sets folderId
-     * @param string $folderId
+     * Sets parentId
+     * @param string $parentId
      * @return $this
      */
-    public function setFolderId($folderId)
+    public function setParentId($parentId)
     {
-        $this->container['folderId'] = $folderId;
+        $this->container['parentId'] = $parentId;
 
         return $this;
     }
 
     /**
-     * Gets folder
-     * @return \Swagger\Client\Model\ImageFolder
+     * Gets images
+     * @return \Swagger\Client\Model\Image[]
      */
-    public function getFolder()
+    public function getImages()
     {
-        return $this->container['folder'];
+        return $this->container['images'];
     }
 
     /**
-     * Sets folder
-     * @param \Swagger\Client\Model\ImageFolder $folder
+     * Sets images
+     * @param \Swagger\Client\Model\Image[] $images
      * @return $this
      */
-    public function setFolder($folder)
+    public function setImages($images)
     {
-        $this->container['folder'] = $folder;
+        $this->container['images'] = $images;
 
         return $this;
     }
@@ -438,6 +406,90 @@ class Image implements ArrayAccess
     public function setTeam($team)
     {
         $this->container['team'] = $team;
+
+        return $this;
+    }
+
+    /**
+     * Gets portals
+     * @return \Swagger\Client\Model\Portal[]
+     */
+    public function getPortals()
+    {
+        return $this->container['portals'];
+    }
+
+    /**
+     * Sets portals
+     * @param \Swagger\Client\Model\Portal[] $portals
+     * @return $this
+     */
+    public function setPortals($portals)
+    {
+        $this->container['portals'] = $portals;
+
+        return $this;
+    }
+
+    /**
+     * Gets members
+     * @return \Swagger\Client\Model\TeamMember[]
+     */
+    public function getMembers()
+    {
+        return $this->container['members'];
+    }
+
+    /**
+     * Sets members
+     * @param \Swagger\Client\Model\TeamMember[] $members
+     * @return $this
+     */
+    public function setMembers($members)
+    {
+        $this->container['members'] = $members;
+
+        return $this;
+    }
+
+    /**
+     * Gets parent
+     * @return \Swagger\Client\Model\ImageFolder
+     */
+    public function getParent()
+    {
+        return $this->container['parent'];
+    }
+
+    /**
+     * Sets parent
+     * @param \Swagger\Client\Model\ImageFolder $parent
+     * @return $this
+     */
+    public function setParent($parent)
+    {
+        $this->container['parent'] = $parent;
+
+        return $this;
+    }
+
+    /**
+     * Gets children
+     * @return \Swagger\Client\Model\ImageFolder[]
+     */
+    public function getChildren()
+    {
+        return $this->container['children'];
+    }
+
+    /**
+     * Sets children
+     * @param \Swagger\Client\Model\ImageFolder[] $children
+     * @return $this
+     */
+    public function setChildren($children)
+    {
+        $this->container['children'] = $children;
 
         return $this;
     }

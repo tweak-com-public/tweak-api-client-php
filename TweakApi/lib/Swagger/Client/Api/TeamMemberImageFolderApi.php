@@ -1,6 +1,6 @@
 <?php
 /**
- * ImageApi
+ * TeamMemberImageFolderApi
  * PHP version 5
  *
  * @category Class
@@ -46,7 +46,7 @@ use \Tweak\Api\ApiException;
 use \Tweak\Api\ObjectSerializer;
 
 /**
- * ImageApi Class Doc Comment
+ * TeamMemberImageFolderApi Class Doc Comment
  *
  * @category Class
  * @package  Tweak\Api
@@ -54,7 +54,7 @@ use \Tweak\Api\ObjectSerializer;
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ImageApi
+class TeamMemberImageFolderApi
 {
 
     /**
@@ -94,7 +94,7 @@ class ImageApi
      *
      * @param \Tweak\Api\ApiClient $apiClient set the API client
      *
-     * @return ImageApi
+     * @return TeamMemberImageFolderApi
      */
     public function setApiClient(\Tweak\Api\ApiClient $apiClient)
     {
@@ -103,7 +103,7 @@ class ImageApi
     }
 
     /**
-     * Operation imagesChangeStreamGet
+     * Operation teamMemberImageFoldersChangeStreamGet
      *
      * Create a change stream.
      *
@@ -111,14 +111,14 @@ class ImageApi
      * @return \SplFileObject
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function imagesChangeStreamGet($options = null)
+    public function teamMemberImageFoldersChangeStreamGet($options = null)
     {
-        list($response) = $this->imagesChangeStreamGetWithHttpInfo($options);
+        list($response) = $this->teamMemberImageFoldersChangeStreamGetWithHttpInfo($options);
         return $response;
     }
 
     /**
-     * Operation imagesChangeStreamGetWithHttpInfo
+     * Operation teamMemberImageFoldersChangeStreamGetWithHttpInfo
      *
      * Create a change stream.
      *
@@ -126,10 +126,10 @@ class ImageApi
      * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function imagesChangeStreamGetWithHttpInfo($options = null)
+    public function teamMemberImageFoldersChangeStreamGetWithHttpInfo($options = null)
     {
         // parse inputs
-        $resourcePath = "/Images/change-stream";
+        $resourcePath = "/TeamMemberImageFolders/change-stream";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -168,7 +168,7 @@ class ImageApi
                 $httpBody,
                 $headerParams,
                 '\SplFileObject',
-                '/Images/change-stream'
+                '/TeamMemberImageFolders/change-stream'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\SplFileObject', $httpHeader), $statusCode, $httpHeader);
@@ -185,7 +185,7 @@ class ImageApi
     }
 
     /**
-     * Operation imagesChangeStreamPost
+     * Operation teamMemberImageFoldersChangeStreamPost
      *
      * Create a change stream.
      *
@@ -193,14 +193,14 @@ class ImageApi
      * @return \SplFileObject
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function imagesChangeStreamPost($options = null)
+    public function teamMemberImageFoldersChangeStreamPost($options = null)
     {
-        list($response) = $this->imagesChangeStreamPostWithHttpInfo($options);
+        list($response) = $this->teamMemberImageFoldersChangeStreamPostWithHttpInfo($options);
         return $response;
     }
 
     /**
-     * Operation imagesChangeStreamPostWithHttpInfo
+     * Operation teamMemberImageFoldersChangeStreamPostWithHttpInfo
      *
      * Create a change stream.
      *
@@ -208,10 +208,10 @@ class ImageApi
      * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function imagesChangeStreamPostWithHttpInfo($options = null)
+    public function teamMemberImageFoldersChangeStreamPostWithHttpInfo($options = null)
     {
         // parse inputs
-        $resourcePath = "/Images/change-stream";
+        $resourcePath = "/TeamMemberImageFolders/change-stream";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -250,7 +250,7 @@ class ImageApi
                 $httpBody,
                 $headerParams,
                 '\SplFileObject',
-                '/Images/change-stream'
+                '/TeamMemberImageFolders/change-stream'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\SplFileObject', $httpHeader), $statusCode, $httpHeader);
@@ -267,7 +267,7 @@ class ImageApi
     }
 
     /**
-     * Operation imagesCountGet
+     * Operation teamMemberImageFoldersCountGet
      *
      * Count instances of the model matched by where from the data source.
      *
@@ -275,14 +275,14 @@ class ImageApi
      * @return \Swagger\Client\Model\InlineResponse200
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function imagesCountGet($where = null)
+    public function teamMemberImageFoldersCountGet($where = null)
     {
-        list($response) = $this->imagesCountGetWithHttpInfo($where);
+        list($response) = $this->teamMemberImageFoldersCountGetWithHttpInfo($where);
         return $response;
     }
 
     /**
-     * Operation imagesCountGetWithHttpInfo
+     * Operation teamMemberImageFoldersCountGetWithHttpInfo
      *
      * Count instances of the model matched by where from the data source.
      *
@@ -290,10 +290,10 @@ class ImageApi
      * @return array of \Swagger\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function imagesCountGetWithHttpInfo($where = null)
+    public function teamMemberImageFoldersCountGetWithHttpInfo($where = null)
     {
         // parse inputs
-        $resourcePath = "/Images/count";
+        $resourcePath = "/TeamMemberImageFolders/count";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -332,7 +332,7 @@ class ImageApi
                 $httpBody,
                 $headerParams,
                 '\Swagger\Client\Model\InlineResponse200',
-                '/Images/count'
+                '/TeamMemberImageFolders/count'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader);
@@ -349,33 +349,33 @@ class ImageApi
     }
 
     /**
-     * Operation imagesFindOneGet
+     * Operation teamMemberImageFoldersFindOneGet
      *
      * Find first instance of the model matched by filter from the data source.
      *
      * @param string $filter Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({\&quot;something\&quot;:\&quot;value\&quot;}) (optional)
-     * @return \Swagger\Client\Model\Image
+     * @return \Swagger\Client\Model\TeamMemberImageFolder
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function imagesFindOneGet($filter = null)
+    public function teamMemberImageFoldersFindOneGet($filter = null)
     {
-        list($response) = $this->imagesFindOneGetWithHttpInfo($filter);
+        list($response) = $this->teamMemberImageFoldersFindOneGetWithHttpInfo($filter);
         return $response;
     }
 
     /**
-     * Operation imagesFindOneGetWithHttpInfo
+     * Operation teamMemberImageFoldersFindOneGetWithHttpInfo
      *
      * Find first instance of the model matched by filter from the data source.
      *
      * @param string $filter Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({\&quot;something\&quot;:\&quot;value\&quot;}) (optional)
-     * @return array of \Swagger\Client\Model\Image, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\TeamMemberImageFolder, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function imagesFindOneGetWithHttpInfo($filter = null)
+    public function teamMemberImageFoldersFindOneGetWithHttpInfo($filter = null)
     {
         // parse inputs
-        $resourcePath = "/Images/findOne";
+        $resourcePath = "/TeamMemberImageFolders/findOne";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -413,15 +413,15 @@ class ImageApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\Image',
-                '/Images/findOne'
+                '\Swagger\Client\Model\TeamMemberImageFolder',
+                '/TeamMemberImageFolders/findOne'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Image', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TeamMemberImageFolder', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Image', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TeamMemberImageFolder', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -431,33 +431,33 @@ class ImageApi
     }
 
     /**
-     * Operation imagesGet
+     * Operation teamMemberImageFoldersGet
      *
      * Find all instances of the model matched by filter from the data source.
      *
      * @param string $filter Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({\&quot;something\&quot;:\&quot;value\&quot;}) (optional)
-     * @return \Swagger\Client\Model\Image[]
+     * @return \Swagger\Client\Model\TeamMemberImageFolder[]
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function imagesGet($filter = null)
+    public function teamMemberImageFoldersGet($filter = null)
     {
-        list($response) = $this->imagesGetWithHttpInfo($filter);
+        list($response) = $this->teamMemberImageFoldersGetWithHttpInfo($filter);
         return $response;
     }
 
     /**
-     * Operation imagesGetWithHttpInfo
+     * Operation teamMemberImageFoldersGetWithHttpInfo
      *
      * Find all instances of the model matched by filter from the data source.
      *
      * @param string $filter Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({\&quot;something\&quot;:\&quot;value\&quot;}) (optional)
-     * @return array of \Swagger\Client\Model\Image[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\TeamMemberImageFolder[], HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function imagesGetWithHttpInfo($filter = null)
+    public function teamMemberImageFoldersGetWithHttpInfo($filter = null)
     {
         // parse inputs
-        $resourcePath = "/Images";
+        $resourcePath = "/TeamMemberImageFolders";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -495,15 +495,15 @@ class ImageApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\Image[]',
-                '/Images'
+                '\Swagger\Client\Model\TeamMemberImageFolder[]',
+                '/TeamMemberImageFolders'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Image[]', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TeamMemberImageFolder[]', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Image[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TeamMemberImageFolder[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -513,7 +513,7 @@ class ImageApi
     }
 
     /**
-     * Operation imagesIdDelete
+     * Operation teamMemberImageFoldersIdDelete
      *
      * Delete a model instance by {{id}} from the data source.
      *
@@ -521,14 +521,14 @@ class ImageApi
      * @return object
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function imagesIdDelete($id)
+    public function teamMemberImageFoldersIdDelete($id)
     {
-        list($response) = $this->imagesIdDeleteWithHttpInfo($id);
+        list($response) = $this->teamMemberImageFoldersIdDeleteWithHttpInfo($id);
         return $response;
     }
 
     /**
-     * Operation imagesIdDeleteWithHttpInfo
+     * Operation teamMemberImageFoldersIdDeleteWithHttpInfo
      *
      * Delete a model instance by {{id}} from the data source.
      *
@@ -536,14 +536,14 @@ class ImageApi
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function imagesIdDeleteWithHttpInfo($id)
+    public function teamMemberImageFoldersIdDeleteWithHttpInfo($id)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling imagesIdDelete');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMemberImageFoldersIdDelete');
         }
         // parse inputs
-        $resourcePath = "/Images/{id}";
+        $resourcePath = "/TeamMemberImageFolders/{id}";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -586,7 +586,7 @@ class ImageApi
                 $httpBody,
                 $headerParams,
                 'object',
-                '/Images/{id}'
+                '/TeamMemberImageFolders/{id}'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, 'object', $httpHeader), $statusCode, $httpHeader);
@@ -603,7 +603,7 @@ class ImageApi
     }
 
     /**
-     * Operation imagesIdExistsGet
+     * Operation teamMemberImageFoldersIdExistsGet
      *
      * Check whether a model instance exists in the data source.
      *
@@ -611,14 +611,14 @@ class ImageApi
      * @return \Swagger\Client\Model\InlineResponse2002
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function imagesIdExistsGet($id)
+    public function teamMemberImageFoldersIdExistsGet($id)
     {
-        list($response) = $this->imagesIdExistsGetWithHttpInfo($id);
+        list($response) = $this->teamMemberImageFoldersIdExistsGetWithHttpInfo($id);
         return $response;
     }
 
     /**
-     * Operation imagesIdExistsGetWithHttpInfo
+     * Operation teamMemberImageFoldersIdExistsGetWithHttpInfo
      *
      * Check whether a model instance exists in the data source.
      *
@@ -626,14 +626,14 @@ class ImageApi
      * @return array of \Swagger\Client\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function imagesIdExistsGetWithHttpInfo($id)
+    public function teamMemberImageFoldersIdExistsGetWithHttpInfo($id)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling imagesIdExistsGet');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMemberImageFoldersIdExistsGet');
         }
         // parse inputs
-        $resourcePath = "/Images/{id}/exists";
+        $resourcePath = "/TeamMemberImageFolders/{id}/exists";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -676,7 +676,7 @@ class ImageApi
                 $httpBody,
                 $headerParams,
                 '\Swagger\Client\Model\InlineResponse2002',
-                '/Images/{id}/exists'
+                '/TeamMemberImageFolders/{id}/exists'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse2002', $httpHeader), $statusCode, $httpHeader);
@@ -693,39 +693,39 @@ class ImageApi
     }
 
     /**
-     * Operation imagesIdFolderGet
+     * Operation teamMemberImageFoldersIdFolderGet
      *
      * Fetches belongsTo relation folder.
      *
-     * @param string $id Image id (required)
+     * @param string $id TeamMemberImageFolder id (required)
      * @param bool $refresh  (optional)
      * @return \Swagger\Client\Model\ImageFolder
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function imagesIdFolderGet($id, $refresh = null)
+    public function teamMemberImageFoldersIdFolderGet($id, $refresh = null)
     {
-        list($response) = $this->imagesIdFolderGetWithHttpInfo($id, $refresh);
+        list($response) = $this->teamMemberImageFoldersIdFolderGetWithHttpInfo($id, $refresh);
         return $response;
     }
 
     /**
-     * Operation imagesIdFolderGetWithHttpInfo
+     * Operation teamMemberImageFoldersIdFolderGetWithHttpInfo
      *
      * Fetches belongsTo relation folder.
      *
-     * @param string $id Image id (required)
+     * @param string $id TeamMemberImageFolder id (required)
      * @param bool $refresh  (optional)
      * @return array of \Swagger\Client\Model\ImageFolder, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function imagesIdFolderGetWithHttpInfo($id, $refresh = null)
+    public function teamMemberImageFoldersIdFolderGetWithHttpInfo($id, $refresh = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling imagesIdFolderGet');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMemberImageFoldersIdFolderGet');
         }
         // parse inputs
-        $resourcePath = "/Images/{id}/folder";
+        $resourcePath = "/TeamMemberImageFolders/{id}/folder";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -772,7 +772,7 @@ class ImageApi
                 $httpBody,
                 $headerParams,
                 '\Swagger\Client\Model\ImageFolder',
-                '/Images/{id}/folder'
+                '/TeamMemberImageFolders/{id}/folder'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\ImageFolder', $httpHeader), $statusCode, $httpHeader);
@@ -789,39 +789,39 @@ class ImageApi
     }
 
     /**
-     * Operation imagesIdGet
+     * Operation teamMemberImageFoldersIdGet
      *
      * Find a model instance by {{id}} from the data source.
      *
      * @param string $id Model id (required)
      * @param string $filter Filter defining fields and include - must be a JSON-encoded string ({\&quot;something\&quot;:\&quot;value\&quot;}) (optional)
-     * @return \Swagger\Client\Model\Image
+     * @return \Swagger\Client\Model\TeamMemberImageFolder
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function imagesIdGet($id, $filter = null)
+    public function teamMemberImageFoldersIdGet($id, $filter = null)
     {
-        list($response) = $this->imagesIdGetWithHttpInfo($id, $filter);
+        list($response) = $this->teamMemberImageFoldersIdGetWithHttpInfo($id, $filter);
         return $response;
     }
 
     /**
-     * Operation imagesIdGetWithHttpInfo
+     * Operation teamMemberImageFoldersIdGetWithHttpInfo
      *
      * Find a model instance by {{id}} from the data source.
      *
      * @param string $id Model id (required)
      * @param string $filter Filter defining fields and include - must be a JSON-encoded string ({\&quot;something\&quot;:\&quot;value\&quot;}) (optional)
-     * @return array of \Swagger\Client\Model\Image, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\TeamMemberImageFolder, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function imagesIdGetWithHttpInfo($id, $filter = null)
+    public function teamMemberImageFoldersIdGetWithHttpInfo($id, $filter = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling imagesIdGet');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMemberImageFoldersIdGet');
         }
         // parse inputs
-        $resourcePath = "/Images/{id}";
+        $resourcePath = "/TeamMemberImageFolders/{id}";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -867,15 +867,15 @@ class ImageApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\Image',
-                '/Images/{id}'
+                '\Swagger\Client\Model\TeamMemberImageFolder',
+                '/TeamMemberImageFolders/{id}'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Image', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TeamMemberImageFolder', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Image', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TeamMemberImageFolder', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -885,7 +885,7 @@ class ImageApi
     }
 
     /**
-     * Operation imagesIdHead
+     * Operation teamMemberImageFoldersIdHead
      *
      * Check whether a model instance exists in the data source.
      *
@@ -893,14 +893,14 @@ class ImageApi
      * @return \Swagger\Client\Model\InlineResponse2002
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function imagesIdHead($id)
+    public function teamMemberImageFoldersIdHead($id)
     {
-        list($response) = $this->imagesIdHeadWithHttpInfo($id);
+        list($response) = $this->teamMemberImageFoldersIdHeadWithHttpInfo($id);
         return $response;
     }
 
     /**
-     * Operation imagesIdHeadWithHttpInfo
+     * Operation teamMemberImageFoldersIdHeadWithHttpInfo
      *
      * Check whether a model instance exists in the data source.
      *
@@ -908,14 +908,14 @@ class ImageApi
      * @return array of \Swagger\Client\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function imagesIdHeadWithHttpInfo($id)
+    public function teamMemberImageFoldersIdHeadWithHttpInfo($id)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling imagesIdHead');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMemberImageFoldersIdHead');
         }
         // parse inputs
-        $resourcePath = "/Images/{id}";
+        $resourcePath = "/TeamMemberImageFolders/{id}";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -958,7 +958,7 @@ class ImageApi
                 $httpBody,
                 $headerParams,
                 '\Swagger\Client\Model\InlineResponse2002',
-                '/Images/{id}'
+                '/TeamMemberImageFolders/{id}'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse2002', $httpHeader), $statusCode, $httpHeader);
@@ -975,330 +975,39 @@ class ImageApi
     }
 
     /**
-     * Operation imagesIdPatch
+     * Operation teamMemberImageFoldersIdMemberGet
      *
-     * Patch attributes for a model instance and persist it into the data source.
+     * Fetches belongsTo relation member.
      *
-     * @param string $id Image id (required)
-     * @param \Swagger\Client\Model\Image $data An object of model property name/value pairs (optional)
-     * @return \Swagger\Client\Model\Image
-     * @throws \Tweak\Api\ApiException on non-2xx response
-     */
-    public function imagesIdPatch($id, $data = null)
-    {
-        list($response) = $this->imagesIdPatchWithHttpInfo($id, $data);
-        return $response;
-    }
-
-    /**
-     * Operation imagesIdPatchWithHttpInfo
-     *
-     * Patch attributes for a model instance and persist it into the data source.
-     *
-     * @param string $id Image id (required)
-     * @param \Swagger\Client\Model\Image $data An object of model property name/value pairs (optional)
-     * @return array of \Swagger\Client\Model\Image, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Tweak\Api\ApiException on non-2xx response
-     */
-    public function imagesIdPatchWithHttpInfo($id, $data = null)
-    {
-        // verify the required parameter 'id' is set
-        if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling imagesIdPatch');
-        }
-        // parse inputs
-        $resourcePath = "/Images/{id}";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
-
-        // path params
-        if ($id !== null) {
-            $resourcePath = str_replace(
-                "{" . "id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        // body params
-        $_tempBody = null;
-        if (isset($data)) {
-            $_tempBody = $data;
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $queryParams['access_token'] = $apiKey;
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'PATCH',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\Swagger\Client\Model\Image',
-                '/Images/{id}'
-            );
-
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Image', $httpHeader), $statusCode, $httpHeader);
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Image', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation imagesIdPut
-     *
-     * Replace attributes for a model instance and persist it into the data source.
-     *
-     * @param string $id Model id (required)
-     * @param \Swagger\Client\Model\Image $data Model instance data (optional)
-     * @return \Swagger\Client\Model\Image
-     * @throws \Tweak\Api\ApiException on non-2xx response
-     */
-    public function imagesIdPut($id, $data = null)
-    {
-        list($response) = $this->imagesIdPutWithHttpInfo($id, $data);
-        return $response;
-    }
-
-    /**
-     * Operation imagesIdPutWithHttpInfo
-     *
-     * Replace attributes for a model instance and persist it into the data source.
-     *
-     * @param string $id Model id (required)
-     * @param \Swagger\Client\Model\Image $data Model instance data (optional)
-     * @return array of \Swagger\Client\Model\Image, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Tweak\Api\ApiException on non-2xx response
-     */
-    public function imagesIdPutWithHttpInfo($id, $data = null)
-    {
-        // verify the required parameter 'id' is set
-        if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling imagesIdPut');
-        }
-        // parse inputs
-        $resourcePath = "/Images/{id}";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
-
-        // path params
-        if ($id !== null) {
-            $resourcePath = str_replace(
-                "{" . "id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        // body params
-        $_tempBody = null;
-        if (isset($data)) {
-            $_tempBody = $data;
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $queryParams['access_token'] = $apiKey;
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'PUT',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\Swagger\Client\Model\Image',
-                '/Images/{id}'
-            );
-
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Image', $httpHeader), $statusCode, $httpHeader);
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Image', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation imagesIdReplacePost
-     *
-     * Replace attributes for a model instance and persist it into the data source.
-     *
-     * @param string $id Model id (required)
-     * @param \Swagger\Client\Model\Image $data Model instance data (optional)
-     * @return \Swagger\Client\Model\Image
-     * @throws \Tweak\Api\ApiException on non-2xx response
-     */
-    public function imagesIdReplacePost($id, $data = null)
-    {
-        list($response) = $this->imagesIdReplacePostWithHttpInfo($id, $data);
-        return $response;
-    }
-
-    /**
-     * Operation imagesIdReplacePostWithHttpInfo
-     *
-     * Replace attributes for a model instance and persist it into the data source.
-     *
-     * @param string $id Model id (required)
-     * @param \Swagger\Client\Model\Image $data Model instance data (optional)
-     * @return array of \Swagger\Client\Model\Image, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Tweak\Api\ApiException on non-2xx response
-     */
-    public function imagesIdReplacePostWithHttpInfo($id, $data = null)
-    {
-        // verify the required parameter 'id' is set
-        if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling imagesIdReplacePost');
-        }
-        // parse inputs
-        $resourcePath = "/Images/{id}/replace";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
-
-        // path params
-        if ($id !== null) {
-            $resourcePath = str_replace(
-                "{" . "id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        // body params
-        $_tempBody = null;
-        if (isset($data)) {
-            $_tempBody = $data;
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $queryParams['access_token'] = $apiKey;
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'POST',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\Swagger\Client\Model\Image',
-                '/Images/{id}/replace'
-            );
-
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Image', $httpHeader), $statusCode, $httpHeader);
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Image', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation imagesIdTeamGet
-     *
-     * Fetches belongsTo relation team.
-     *
-     * @param string $id Image id (required)
+     * @param string $id TeamMemberImageFolder id (required)
      * @param bool $refresh  (optional)
-     * @return \Swagger\Client\Model\Team
+     * @return \Swagger\Client\Model\TeamMember
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function imagesIdTeamGet($id, $refresh = null)
+    public function teamMemberImageFoldersIdMemberGet($id, $refresh = null)
     {
-        list($response) = $this->imagesIdTeamGetWithHttpInfo($id, $refresh);
+        list($response) = $this->teamMemberImageFoldersIdMemberGetWithHttpInfo($id, $refresh);
         return $response;
     }
 
     /**
-     * Operation imagesIdTeamGetWithHttpInfo
+     * Operation teamMemberImageFoldersIdMemberGetWithHttpInfo
      *
-     * Fetches belongsTo relation team.
+     * Fetches belongsTo relation member.
      *
-     * @param string $id Image id (required)
+     * @param string $id TeamMemberImageFolder id (required)
      * @param bool $refresh  (optional)
-     * @return array of \Swagger\Client\Model\Team, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\TeamMember, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function imagesIdTeamGetWithHttpInfo($id, $refresh = null)
+    public function teamMemberImageFoldersIdMemberGetWithHttpInfo($id, $refresh = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling imagesIdTeamGet');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMemberImageFoldersIdMemberGet');
         }
         // parse inputs
-        $resourcePath = "/Images/{id}/team";
+        $resourcePath = "/TeamMemberImageFolders/{id}/member";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -1344,15 +1053,15 @@ class ImageApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\Team',
-                '/Images/{id}/team'
+                '\Swagger\Client\Model\TeamMember',
+                '/TeamMemberImageFolders/{id}/member'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Team', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TeamMember', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Team', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TeamMember', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1362,33 +1071,324 @@ class ImageApi
     }
 
     /**
-     * Operation imagesPatch
+     * Operation teamMemberImageFoldersIdPatch
      *
-     * Patch an existing model instance or insert a new one into the data source.
+     * Patch attributes for a model instance and persist it into the data source.
      *
-     * @param \Swagger\Client\Model\Image $data Model instance data (optional)
-     * @return \Swagger\Client\Model\Image
+     * @param string $id TeamMemberImageFolder id (required)
+     * @param \Swagger\Client\Model\TeamMemberImageFolder $data An object of model property name/value pairs (optional)
+     * @return \Swagger\Client\Model\TeamMemberImageFolder
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function imagesPatch($data = null)
+    public function teamMemberImageFoldersIdPatch($id, $data = null)
     {
-        list($response) = $this->imagesPatchWithHttpInfo($data);
+        list($response) = $this->teamMemberImageFoldersIdPatchWithHttpInfo($id, $data);
         return $response;
     }
 
     /**
-     * Operation imagesPatchWithHttpInfo
+     * Operation teamMemberImageFoldersIdPatchWithHttpInfo
+     *
+     * Patch attributes for a model instance and persist it into the data source.
+     *
+     * @param string $id TeamMemberImageFolder id (required)
+     * @param \Swagger\Client\Model\TeamMemberImageFolder $data An object of model property name/value pairs (optional)
+     * @return array of \Swagger\Client\Model\TeamMemberImageFolder, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMemberImageFoldersIdPatchWithHttpInfo($id, $data = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMemberImageFoldersIdPatch');
+        }
+        // parse inputs
+        $resourcePath = "/TeamMemberImageFolders/{id}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PATCH',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\TeamMemberImageFolder',
+                '/TeamMemberImageFolders/{id}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TeamMemberImageFolder', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TeamMemberImageFolder', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamMemberImageFoldersIdPut
+     *
+     * Replace attributes for a model instance and persist it into the data source.
+     *
+     * @param string $id Model id (required)
+     * @param \Swagger\Client\Model\TeamMemberImageFolder $data Model instance data (optional)
+     * @return \Swagger\Client\Model\TeamMemberImageFolder
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMemberImageFoldersIdPut($id, $data = null)
+    {
+        list($response) = $this->teamMemberImageFoldersIdPutWithHttpInfo($id, $data);
+        return $response;
+    }
+
+    /**
+     * Operation teamMemberImageFoldersIdPutWithHttpInfo
+     *
+     * Replace attributes for a model instance and persist it into the data source.
+     *
+     * @param string $id Model id (required)
+     * @param \Swagger\Client\Model\TeamMemberImageFolder $data Model instance data (optional)
+     * @return array of \Swagger\Client\Model\TeamMemberImageFolder, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMemberImageFoldersIdPutWithHttpInfo($id, $data = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMemberImageFoldersIdPut');
+        }
+        // parse inputs
+        $resourcePath = "/TeamMemberImageFolders/{id}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\TeamMemberImageFolder',
+                '/TeamMemberImageFolders/{id}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TeamMemberImageFolder', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TeamMemberImageFolder', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamMemberImageFoldersIdReplacePost
+     *
+     * Replace attributes for a model instance and persist it into the data source.
+     *
+     * @param string $id Model id (required)
+     * @param \Swagger\Client\Model\TeamMemberImageFolder $data Model instance data (optional)
+     * @return \Swagger\Client\Model\TeamMemberImageFolder
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMemberImageFoldersIdReplacePost($id, $data = null)
+    {
+        list($response) = $this->teamMemberImageFoldersIdReplacePostWithHttpInfo($id, $data);
+        return $response;
+    }
+
+    /**
+     * Operation teamMemberImageFoldersIdReplacePostWithHttpInfo
+     *
+     * Replace attributes for a model instance and persist it into the data source.
+     *
+     * @param string $id Model id (required)
+     * @param \Swagger\Client\Model\TeamMemberImageFolder $data Model instance data (optional)
+     * @return array of \Swagger\Client\Model\TeamMemberImageFolder, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMemberImageFoldersIdReplacePostWithHttpInfo($id, $data = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMemberImageFoldersIdReplacePost');
+        }
+        // parse inputs
+        $resourcePath = "/TeamMemberImageFolders/{id}/replace";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\TeamMemberImageFolder',
+                '/TeamMemberImageFolders/{id}/replace'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TeamMemberImageFolder', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TeamMemberImageFolder', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamMemberImageFoldersPatch
      *
      * Patch an existing model instance or insert a new one into the data source.
      *
-     * @param \Swagger\Client\Model\Image $data Model instance data (optional)
-     * @return array of \Swagger\Client\Model\Image, HTTP status code, HTTP response headers (array of strings)
+     * @param \Swagger\Client\Model\TeamMemberImageFolder $data Model instance data (optional)
+     * @return \Swagger\Client\Model\TeamMemberImageFolder
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function imagesPatchWithHttpInfo($data = null)
+    public function teamMemberImageFoldersPatch($data = null)
+    {
+        list($response) = $this->teamMemberImageFoldersPatchWithHttpInfo($data);
+        return $response;
+    }
+
+    /**
+     * Operation teamMemberImageFoldersPatchWithHttpInfo
+     *
+     * Patch an existing model instance or insert a new one into the data source.
+     *
+     * @param \Swagger\Client\Model\TeamMemberImageFolder $data Model instance data (optional)
+     * @return array of \Swagger\Client\Model\TeamMemberImageFolder, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMemberImageFoldersPatchWithHttpInfo($data = null)
     {
         // parse inputs
-        $resourcePath = "/Images";
+        $resourcePath = "/TeamMemberImageFolders";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -1427,15 +1427,15 @@ class ImageApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\Image',
-                '/Images'
+                '\Swagger\Client\Model\TeamMemberImageFolder',
+                '/TeamMemberImageFolders'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Image', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TeamMemberImageFolder', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Image', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TeamMemberImageFolder', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1445,33 +1445,33 @@ class ImageApi
     }
 
     /**
-     * Operation imagesPost
+     * Operation teamMemberImageFoldersPost
      *
      * Create a new instance of the model and persist it into the data source.
      *
-     * @param \Swagger\Client\Model\Image $data Model instance data (optional)
-     * @return \Swagger\Client\Model\Image
+     * @param \Swagger\Client\Model\TeamMemberImageFolder $data Model instance data (optional)
+     * @return \Swagger\Client\Model\TeamMemberImageFolder
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function imagesPost($data = null)
+    public function teamMemberImageFoldersPost($data = null)
     {
-        list($response) = $this->imagesPostWithHttpInfo($data);
+        list($response) = $this->teamMemberImageFoldersPostWithHttpInfo($data);
         return $response;
     }
 
     /**
-     * Operation imagesPostWithHttpInfo
+     * Operation teamMemberImageFoldersPostWithHttpInfo
      *
      * Create a new instance of the model and persist it into the data source.
      *
-     * @param \Swagger\Client\Model\Image $data Model instance data (optional)
-     * @return array of \Swagger\Client\Model\Image, HTTP status code, HTTP response headers (array of strings)
+     * @param \Swagger\Client\Model\TeamMemberImageFolder $data Model instance data (optional)
+     * @return array of \Swagger\Client\Model\TeamMemberImageFolder, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function imagesPostWithHttpInfo($data = null)
+    public function teamMemberImageFoldersPostWithHttpInfo($data = null)
     {
         // parse inputs
-        $resourcePath = "/Images";
+        $resourcePath = "/TeamMemberImageFolders";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -1510,15 +1510,15 @@ class ImageApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\Image',
-                '/Images'
+                '\Swagger\Client\Model\TeamMemberImageFolder',
+                '/TeamMemberImageFolders'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Image', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TeamMemberImageFolder', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Image', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TeamMemberImageFolder', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1528,33 +1528,33 @@ class ImageApi
     }
 
     /**
-     * Operation imagesPut
+     * Operation teamMemberImageFoldersPut
      *
      * Replace an existing model instance or insert a new one into the data source.
      *
-     * @param \Swagger\Client\Model\Image $data Model instance data (optional)
-     * @return \Swagger\Client\Model\Image
+     * @param \Swagger\Client\Model\TeamMemberImageFolder $data Model instance data (optional)
+     * @return \Swagger\Client\Model\TeamMemberImageFolder
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function imagesPut($data = null)
+    public function teamMemberImageFoldersPut($data = null)
     {
-        list($response) = $this->imagesPutWithHttpInfo($data);
+        list($response) = $this->teamMemberImageFoldersPutWithHttpInfo($data);
         return $response;
     }
 
     /**
-     * Operation imagesPutWithHttpInfo
+     * Operation teamMemberImageFoldersPutWithHttpInfo
      *
      * Replace an existing model instance or insert a new one into the data source.
      *
-     * @param \Swagger\Client\Model\Image $data Model instance data (optional)
-     * @return array of \Swagger\Client\Model\Image, HTTP status code, HTTP response headers (array of strings)
+     * @param \Swagger\Client\Model\TeamMemberImageFolder $data Model instance data (optional)
+     * @return array of \Swagger\Client\Model\TeamMemberImageFolder, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function imagesPutWithHttpInfo($data = null)
+    public function teamMemberImageFoldersPutWithHttpInfo($data = null)
     {
         // parse inputs
-        $resourcePath = "/Images";
+        $resourcePath = "/TeamMemberImageFolders";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -1593,15 +1593,15 @@ class ImageApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\Image',
-                '/Images'
+                '\Swagger\Client\Model\TeamMemberImageFolder',
+                '/TeamMemberImageFolders'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Image', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TeamMemberImageFolder', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Image', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TeamMemberImageFolder', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1611,33 +1611,33 @@ class ImageApi
     }
 
     /**
-     * Operation imagesReplaceOrCreatePost
+     * Operation teamMemberImageFoldersReplaceOrCreatePost
      *
      * Replace an existing model instance or insert a new one into the data source.
      *
-     * @param \Swagger\Client\Model\Image $data Model instance data (optional)
-     * @return \Swagger\Client\Model\Image
+     * @param \Swagger\Client\Model\TeamMemberImageFolder $data Model instance data (optional)
+     * @return \Swagger\Client\Model\TeamMemberImageFolder
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function imagesReplaceOrCreatePost($data = null)
+    public function teamMemberImageFoldersReplaceOrCreatePost($data = null)
     {
-        list($response) = $this->imagesReplaceOrCreatePostWithHttpInfo($data);
+        list($response) = $this->teamMemberImageFoldersReplaceOrCreatePostWithHttpInfo($data);
         return $response;
     }
 
     /**
-     * Operation imagesReplaceOrCreatePostWithHttpInfo
+     * Operation teamMemberImageFoldersReplaceOrCreatePostWithHttpInfo
      *
      * Replace an existing model instance or insert a new one into the data source.
      *
-     * @param \Swagger\Client\Model\Image $data Model instance data (optional)
-     * @return array of \Swagger\Client\Model\Image, HTTP status code, HTTP response headers (array of strings)
+     * @param \Swagger\Client\Model\TeamMemberImageFolder $data Model instance data (optional)
+     * @return array of \Swagger\Client\Model\TeamMemberImageFolder, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function imagesReplaceOrCreatePostWithHttpInfo($data = null)
+    public function teamMemberImageFoldersReplaceOrCreatePostWithHttpInfo($data = null)
     {
         // parse inputs
-        $resourcePath = "/Images/replaceOrCreate";
+        $resourcePath = "/TeamMemberImageFolders/replaceOrCreate";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -1676,15 +1676,15 @@ class ImageApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\Image',
-                '/Images/replaceOrCreate'
+                '\Swagger\Client\Model\TeamMemberImageFolder',
+                '/TeamMemberImageFolders/replaceOrCreate'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Image', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TeamMemberImageFolder', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Image', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TeamMemberImageFolder', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1694,35 +1694,35 @@ class ImageApi
     }
 
     /**
-     * Operation imagesUpdatePost
+     * Operation teamMemberImageFoldersUpdatePost
      *
      * Update instances of the model matched by {{where}} from the data source.
      *
      * @param string $where Criteria to match model instances (optional)
-     * @param \Swagger\Client\Model\Image $data An object of model property name/value pairs (optional)
+     * @param \Swagger\Client\Model\TeamMemberImageFolder $data An object of model property name/value pairs (optional)
      * @return \Swagger\Client\Model\InlineResponse2001
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function imagesUpdatePost($where = null, $data = null)
+    public function teamMemberImageFoldersUpdatePost($where = null, $data = null)
     {
-        list($response) = $this->imagesUpdatePostWithHttpInfo($where, $data);
+        list($response) = $this->teamMemberImageFoldersUpdatePostWithHttpInfo($where, $data);
         return $response;
     }
 
     /**
-     * Operation imagesUpdatePostWithHttpInfo
+     * Operation teamMemberImageFoldersUpdatePostWithHttpInfo
      *
      * Update instances of the model matched by {{where}} from the data source.
      *
      * @param string $where Criteria to match model instances (optional)
-     * @param \Swagger\Client\Model\Image $data An object of model property name/value pairs (optional)
+     * @param \Swagger\Client\Model\TeamMemberImageFolder $data An object of model property name/value pairs (optional)
      * @return array of \Swagger\Client\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function imagesUpdatePostWithHttpInfo($where = null, $data = null)
+    public function teamMemberImageFoldersUpdatePostWithHttpInfo($where = null, $data = null)
     {
         // parse inputs
-        $resourcePath = "/Images/update";
+        $resourcePath = "/TeamMemberImageFolders/update";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -1766,7 +1766,7 @@ class ImageApi
                 $httpBody,
                 $headerParams,
                 '\Swagger\Client\Model\InlineResponse2001',
-                '/Images/update'
+                '/TeamMemberImageFolders/update'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse2001', $httpHeader), $statusCode, $httpHeader);
@@ -1783,35 +1783,35 @@ class ImageApi
     }
 
     /**
-     * Operation imagesUpsertWithWherePost
+     * Operation teamMemberImageFoldersUpsertWithWherePost
      *
      * Update an existing model instance or insert a new one into the data source based on the where criteria.
      *
      * @param string $where Criteria to match model instances (optional)
-     * @param \Swagger\Client\Model\Image $data An object of model property name/value pairs (optional)
-     * @return \Swagger\Client\Model\Image
+     * @param \Swagger\Client\Model\TeamMemberImageFolder $data An object of model property name/value pairs (optional)
+     * @return \Swagger\Client\Model\TeamMemberImageFolder
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function imagesUpsertWithWherePost($where = null, $data = null)
+    public function teamMemberImageFoldersUpsertWithWherePost($where = null, $data = null)
     {
-        list($response) = $this->imagesUpsertWithWherePostWithHttpInfo($where, $data);
+        list($response) = $this->teamMemberImageFoldersUpsertWithWherePostWithHttpInfo($where, $data);
         return $response;
     }
 
     /**
-     * Operation imagesUpsertWithWherePostWithHttpInfo
+     * Operation teamMemberImageFoldersUpsertWithWherePostWithHttpInfo
      *
      * Update an existing model instance or insert a new one into the data source based on the where criteria.
      *
      * @param string $where Criteria to match model instances (optional)
-     * @param \Swagger\Client\Model\Image $data An object of model property name/value pairs (optional)
-     * @return array of \Swagger\Client\Model\Image, HTTP status code, HTTP response headers (array of strings)
+     * @param \Swagger\Client\Model\TeamMemberImageFolder $data An object of model property name/value pairs (optional)
+     * @return array of \Swagger\Client\Model\TeamMemberImageFolder, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function imagesUpsertWithWherePostWithHttpInfo($where = null, $data = null)
+    public function teamMemberImageFoldersUpsertWithWherePostWithHttpInfo($where = null, $data = null)
     {
         // parse inputs
-        $resourcePath = "/Images/upsertWithWhere";
+        $resourcePath = "/TeamMemberImageFolders/upsertWithWhere";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -1854,15 +1854,15 @@ class ImageApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\Image',
-                '/Images/upsertWithWhere'
+                '\Swagger\Client\Model\TeamMemberImageFolder',
+                '/TeamMemberImageFolders/upsertWithWhere'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Image', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TeamMemberImageFolder', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Image', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TeamMemberImageFolder', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

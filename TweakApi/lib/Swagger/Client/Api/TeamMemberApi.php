@@ -4050,6 +4050,1011 @@ class TeamMemberApi
     }
 
     /**
+     * Operation teamMembersIdImageFoldersCountGet
+     *
+     * Counts imageFolders of TeamMember.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $where Criteria to match model instances (optional)
+     * @return \Swagger\Client\Model\InlineResponse200
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdImageFoldersCountGet($id, $where = null)
+    {
+        list($response) = $this->teamMembersIdImageFoldersCountGetWithHttpInfo($id, $where);
+        return $response;
+    }
+
+    /**
+     * Operation teamMembersIdImageFoldersCountGetWithHttpInfo
+     *
+     * Counts imageFolders of TeamMember.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $where Criteria to match model instances (optional)
+     * @return array of \Swagger\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdImageFoldersCountGetWithHttpInfo($id, $where = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdImageFoldersCountGet');
+        }
+        // parse inputs
+        $resourcePath = "/TeamMembers/{id}/imageFolders/count";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($where !== null) {
+            $queryParams['where'] = $this->apiClient->getSerializer()->toQueryValue($where);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\InlineResponse200',
+                '/TeamMembers/{id}/imageFolders/count'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse200', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamMembersIdImageFoldersDelete
+     *
+     * Deletes all imageFolders of this model.
+     *
+     * @param string $id TeamMember id (required)
+     * @return void
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdImageFoldersDelete($id)
+    {
+        list($response) = $this->teamMembersIdImageFoldersDeleteWithHttpInfo($id);
+        return $response;
+    }
+
+    /**
+     * Operation teamMembersIdImageFoldersDeleteWithHttpInfo
+     *
+     * Deletes all imageFolders of this model.
+     *
+     * @param string $id TeamMember id (required)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdImageFoldersDeleteWithHttpInfo($id)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdImageFoldersDelete');
+        }
+        // parse inputs
+        $resourcePath = "/TeamMembers/{id}/imageFolders";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/TeamMembers/{id}/imageFolders'
+            );
+
+            return array(null, $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamMembersIdImageFoldersFkDelete
+     *
+     * Delete a related item by id for imageFolders.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $fk Foreign key for imageFolders (required)
+     * @return void
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdImageFoldersFkDelete($id, $fk)
+    {
+        list($response) = $this->teamMembersIdImageFoldersFkDeleteWithHttpInfo($id, $fk);
+        return $response;
+    }
+
+    /**
+     * Operation teamMembersIdImageFoldersFkDeleteWithHttpInfo
+     *
+     * Delete a related item by id for imageFolders.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $fk Foreign key for imageFolders (required)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdImageFoldersFkDeleteWithHttpInfo($id, $fk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdImageFoldersFkDelete');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling teamMembersIdImageFoldersFkDelete');
+        }
+        // parse inputs
+        $resourcePath = "/TeamMembers/{id}/imageFolders/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/TeamMembers/{id}/imageFolders/{fk}'
+            );
+
+            return array(null, $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamMembersIdImageFoldersFkGet
+     *
+     * Find a related item by id for imageFolders.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $fk Foreign key for imageFolders (required)
+     * @return \Swagger\Client\Model\Image
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdImageFoldersFkGet($id, $fk)
+    {
+        list($response) = $this->teamMembersIdImageFoldersFkGetWithHttpInfo($id, $fk);
+        return $response;
+    }
+
+    /**
+     * Operation teamMembersIdImageFoldersFkGetWithHttpInfo
+     *
+     * Find a related item by id for imageFolders.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $fk Foreign key for imageFolders (required)
+     * @return array of \Swagger\Client\Model\Image, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdImageFoldersFkGetWithHttpInfo($id, $fk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdImageFoldersFkGet');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling teamMembersIdImageFoldersFkGet');
+        }
+        // parse inputs
+        $resourcePath = "/TeamMembers/{id}/imageFolders/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\Image',
+                '/TeamMembers/{id}/imageFolders/{fk}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Image', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Image', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamMembersIdImageFoldersFkPut
+     *
+     * Update a related item by id for imageFolders.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $fk Foreign key for imageFolders (required)
+     * @param \Swagger\Client\Model\Image $data  (optional)
+     * @return \Swagger\Client\Model\Image
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdImageFoldersFkPut($id, $fk, $data = null)
+    {
+        list($response) = $this->teamMembersIdImageFoldersFkPutWithHttpInfo($id, $fk, $data);
+        return $response;
+    }
+
+    /**
+     * Operation teamMembersIdImageFoldersFkPutWithHttpInfo
+     *
+     * Update a related item by id for imageFolders.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $fk Foreign key for imageFolders (required)
+     * @param \Swagger\Client\Model\Image $data  (optional)
+     * @return array of \Swagger\Client\Model\Image, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdImageFoldersFkPutWithHttpInfo($id, $fk, $data = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdImageFoldersFkPut');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling teamMembersIdImageFoldersFkPut');
+        }
+        // parse inputs
+        $resourcePath = "/TeamMembers/{id}/imageFolders/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\Image',
+                '/TeamMembers/{id}/imageFolders/{fk}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Image', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Image', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamMembersIdImageFoldersGet
+     *
+     * Queries imageFolders of TeamMember.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $filter  (optional)
+     * @return \Swagger\Client\Model\Image[]
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdImageFoldersGet($id, $filter = null)
+    {
+        list($response) = $this->teamMembersIdImageFoldersGetWithHttpInfo($id, $filter);
+        return $response;
+    }
+
+    /**
+     * Operation teamMembersIdImageFoldersGetWithHttpInfo
+     *
+     * Queries imageFolders of TeamMember.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $filter  (optional)
+     * @return array of \Swagger\Client\Model\Image[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdImageFoldersGetWithHttpInfo($id, $filter = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdImageFoldersGet');
+        }
+        // parse inputs
+        $resourcePath = "/TeamMembers/{id}/imageFolders";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($filter !== null) {
+            $queryParams['filter'] = $this->apiClient->getSerializer()->toQueryValue($filter);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\Image[]',
+                '/TeamMembers/{id}/imageFolders'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Image[]', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Image[]', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamMembersIdImageFoldersPost
+     *
+     * Creates a new instance in imageFolders of this model.
+     *
+     * @param string $id TeamMember id (required)
+     * @param \Swagger\Client\Model\Image $data  (optional)
+     * @return \Swagger\Client\Model\Image
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdImageFoldersPost($id, $data = null)
+    {
+        list($response) = $this->teamMembersIdImageFoldersPostWithHttpInfo($id, $data);
+        return $response;
+    }
+
+    /**
+     * Operation teamMembersIdImageFoldersPostWithHttpInfo
+     *
+     * Creates a new instance in imageFolders of this model.
+     *
+     * @param string $id TeamMember id (required)
+     * @param \Swagger\Client\Model\Image $data  (optional)
+     * @return array of \Swagger\Client\Model\Image, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdImageFoldersPostWithHttpInfo($id, $data = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdImageFoldersPost');
+        }
+        // parse inputs
+        $resourcePath = "/TeamMembers/{id}/imageFolders";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\Image',
+                '/TeamMembers/{id}/imageFolders'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Image', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Image', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamMembersIdImageFoldersRelFkDelete
+     *
+     * Remove the imageFolders relation to an item by id.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $fk Foreign key for imageFolders (required)
+     * @return void
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdImageFoldersRelFkDelete($id, $fk)
+    {
+        list($response) = $this->teamMembersIdImageFoldersRelFkDeleteWithHttpInfo($id, $fk);
+        return $response;
+    }
+
+    /**
+     * Operation teamMembersIdImageFoldersRelFkDeleteWithHttpInfo
+     *
+     * Remove the imageFolders relation to an item by id.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $fk Foreign key for imageFolders (required)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdImageFoldersRelFkDeleteWithHttpInfo($id, $fk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdImageFoldersRelFkDelete');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling teamMembersIdImageFoldersRelFkDelete');
+        }
+        // parse inputs
+        $resourcePath = "/TeamMembers/{id}/imageFolders/rel/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/TeamMembers/{id}/imageFolders/rel/{fk}'
+            );
+
+            return array(null, $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamMembersIdImageFoldersRelFkHead
+     *
+     * Check the existence of imageFolders relation to an item by id.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $fk Foreign key for imageFolders (required)
+     * @return bool
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdImageFoldersRelFkHead($id, $fk)
+    {
+        list($response) = $this->teamMembersIdImageFoldersRelFkHeadWithHttpInfo($id, $fk);
+        return $response;
+    }
+
+    /**
+     * Operation teamMembersIdImageFoldersRelFkHeadWithHttpInfo
+     *
+     * Check the existence of imageFolders relation to an item by id.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $fk Foreign key for imageFolders (required)
+     * @return array of bool, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdImageFoldersRelFkHeadWithHttpInfo($id, $fk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdImageFoldersRelFkHead');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling teamMembersIdImageFoldersRelFkHead');
+        }
+        // parse inputs
+        $resourcePath = "/TeamMembers/{id}/imageFolders/rel/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'HEAD',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                'bool',
+                '/TeamMembers/{id}/imageFolders/rel/{fk}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, 'bool', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), 'bool', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamMembersIdImageFoldersRelFkPut
+     *
+     * Add a related item by id for imageFolders.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $fk Foreign key for imageFolders (required)
+     * @param \Swagger\Client\Model\TeamMemberImageFolder $data  (optional)
+     * @return \Swagger\Client\Model\TeamMemberImageFolder
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdImageFoldersRelFkPut($id, $fk, $data = null)
+    {
+        list($response) = $this->teamMembersIdImageFoldersRelFkPutWithHttpInfo($id, $fk, $data);
+        return $response;
+    }
+
+    /**
+     * Operation teamMembersIdImageFoldersRelFkPutWithHttpInfo
+     *
+     * Add a related item by id for imageFolders.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $fk Foreign key for imageFolders (required)
+     * @param \Swagger\Client\Model\TeamMemberImageFolder $data  (optional)
+     * @return array of \Swagger\Client\Model\TeamMemberImageFolder, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdImageFoldersRelFkPutWithHttpInfo($id, $fk, $data = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdImageFoldersRelFkPut');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling teamMembersIdImageFoldersRelFkPut');
+        }
+        // parse inputs
+        $resourcePath = "/TeamMembers/{id}/imageFolders/rel/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\TeamMemberImageFolder',
+                '/TeamMembers/{id}/imageFolders/rel/{fk}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TeamMemberImageFolder', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TeamMemberImageFolder', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation teamMembersIdInvitationTicketsCountGet
      *
      * Counts invitationTickets of TeamMember.
@@ -4744,15 +5749,16 @@ class TeamMemberApi
      *
      * Invite somebody to join the team
      *
-     * @param string $id  (required)
+     * @param string $id TeamMember id (required)
+     * @param string $id2  (required)
      * @param string $invitee  (required)
      * @param \Swagger\Client\Model\TeamMember $data  (optional)
      * @return \Swagger\Client\Model\InvitationTicket
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function teamMembersIdInviteInviteePost($id, $invitee, $data = null)
+    public function teamMembersIdInviteInviteePost($id, $id2, $invitee, $data = null)
     {
-        list($response) = $this->teamMembersIdInviteInviteePostWithHttpInfo($id, $invitee, $data);
+        list($response) = $this->teamMembersIdInviteInviteePostWithHttpInfo($id, $id2, $invitee, $data);
         return $response;
     }
 
@@ -4761,17 +5767,22 @@ class TeamMemberApi
      *
      * Invite somebody to join the team
      *
-     * @param string $id  (required)
+     * @param string $id TeamMember id (required)
+     * @param string $id2  (required)
      * @param string $invitee  (required)
      * @param \Swagger\Client\Model\TeamMember $data  (optional)
      * @return array of \Swagger\Client\Model\InvitationTicket, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function teamMembersIdInviteInviteePostWithHttpInfo($id, $invitee, $data = null)
+    public function teamMembersIdInviteInviteePostWithHttpInfo($id, $id2, $invitee, $data = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdInviteInviteePost');
+        }
+        // verify the required parameter 'id2' is set
+        if ($id2 === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id2 when calling teamMembersIdInviteInviteePost');
         }
         // verify the required parameter 'invitee' is set
         if ($invitee === null) {
@@ -4794,6 +5805,14 @@ class TeamMemberApi
             $resourcePath = str_replace(
                 "{" . "id" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($id2 !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id2),
                 $resourcePath
             );
         }
@@ -4952,14 +5971,15 @@ class TeamMemberApi
      *
      * Find all available Portals
      *
-     * @param string $id  (required)
+     * @param string $id TeamMember id (required)
+     * @param string $id2  (required)
      * @param string $filter Filter defining fields and include - must be a JSON-encoded string ({\&quot;something\&quot;:\&quot;value\&quot;}) (optional)
      * @return \Swagger\Client\Model\Portal[]
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function teamMembersIdPortalsAvailableGet($id, $filter = null)
+    public function teamMembersIdPortalsAvailableGet($id, $id2, $filter = null)
     {
-        list($response) = $this->teamMembersIdPortalsAvailableGetWithHttpInfo($id, $filter);
+        list($response) = $this->teamMembersIdPortalsAvailableGetWithHttpInfo($id, $id2, $filter);
         return $response;
     }
 
@@ -4968,16 +5988,21 @@ class TeamMemberApi
      *
      * Find all available Portals
      *
-     * @param string $id  (required)
+     * @param string $id TeamMember id (required)
+     * @param string $id2  (required)
      * @param string $filter Filter defining fields and include - must be a JSON-encoded string ({\&quot;something\&quot;:\&quot;value\&quot;}) (optional)
      * @return array of \Swagger\Client\Model\Portal[], HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function teamMembersIdPortalsAvailableGetWithHttpInfo($id, $filter = null)
+    public function teamMembersIdPortalsAvailableGetWithHttpInfo($id, $id2, $filter = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdPortalsAvailableGet');
+        }
+        // verify the required parameter 'id2' is set
+        if ($id2 === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id2 when calling teamMembersIdPortalsAvailableGet');
         }
         // parse inputs
         $resourcePath = "/TeamMembers/{id}/portals/available";
@@ -5000,6 +6025,14 @@ class TeamMemberApi
             $resourcePath = str_replace(
                 "{" . "id" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($id2 !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id2),
                 $resourcePath
             );
         }
@@ -8317,7 +9350,8 @@ class TeamMemberApi
      *
      * Invite somebody to join a team, portal or other targets
      *
-     * @param string $id  (required)
+     * @param string $id TeamMember id (required)
+     * @param string $id2  (required)
      * @param string $targetModel  (required)
      * @param string $targetId  (required)
      * @param string $invitee  (required)
@@ -8325,9 +9359,9 @@ class TeamMemberApi
      * @return \Swagger\Client\Model\InvitationTicket
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function teamMembersIdTargetModelTargetIdInviteInviteePost($id, $targetModel, $targetId, $invitee, $data = null)
+    public function teamMembersIdTargetModelTargetIdInviteInviteePost($id, $id2, $targetModel, $targetId, $invitee, $data = null)
     {
-        list($response) = $this->teamMembersIdTargetModelTargetIdInviteInviteePostWithHttpInfo($id, $targetModel, $targetId, $invitee, $data);
+        list($response) = $this->teamMembersIdTargetModelTargetIdInviteInviteePostWithHttpInfo($id, $id2, $targetModel, $targetId, $invitee, $data);
         return $response;
     }
 
@@ -8336,7 +9370,8 @@ class TeamMemberApi
      *
      * Invite somebody to join a team, portal or other targets
      *
-     * @param string $id  (required)
+     * @param string $id TeamMember id (required)
+     * @param string $id2  (required)
      * @param string $targetModel  (required)
      * @param string $targetId  (required)
      * @param string $invitee  (required)
@@ -8344,11 +9379,15 @@ class TeamMemberApi
      * @return array of \Swagger\Client\Model\InvitationTicket, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function teamMembersIdTargetModelTargetIdInviteInviteePostWithHttpInfo($id, $targetModel, $targetId, $invitee, $data = null)
+    public function teamMembersIdTargetModelTargetIdInviteInviteePostWithHttpInfo($id, $id2, $targetModel, $targetId, $invitee, $data = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdTargetModelTargetIdInviteInviteePost');
+        }
+        // verify the required parameter 'id2' is set
+        if ($id2 === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id2 when calling teamMembersIdTargetModelTargetIdInviteInviteePost');
         }
         // verify the required parameter 'targetModel' is set
         if ($targetModel === null) {
@@ -8379,6 +9418,14 @@ class TeamMemberApi
             $resourcePath = str_replace(
                 "{" . "id" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($id2 !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id2),
                 $resourcePath
             );
         }
@@ -8456,16 +9503,17 @@ class TeamMemberApi
      *
      * Invite a group of people to join a team, portal or other targets
      *
-     * @param string $id  (required)
+     * @param string $id TeamMember id (required)
+     * @param string $id2  (required)
      * @param string $targetModel  (required)
      * @param string $targetId  (required)
      * @param \Swagger\Client\Model\XAny[] $data  (optional)
      * @return \Swagger\Client\Model\XAny[]
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function teamMembersIdTargetModelTargetIdInvitePost($id, $targetModel, $targetId, $data = null)
+    public function teamMembersIdTargetModelTargetIdInvitePost($id, $id2, $targetModel, $targetId, $data = null)
     {
-        list($response) = $this->teamMembersIdTargetModelTargetIdInvitePostWithHttpInfo($id, $targetModel, $targetId, $data);
+        list($response) = $this->teamMembersIdTargetModelTargetIdInvitePostWithHttpInfo($id, $id2, $targetModel, $targetId, $data);
         return $response;
     }
 
@@ -8474,18 +9522,23 @@ class TeamMemberApi
      *
      * Invite a group of people to join a team, portal or other targets
      *
-     * @param string $id  (required)
+     * @param string $id TeamMember id (required)
+     * @param string $id2  (required)
      * @param string $targetModel  (required)
      * @param string $targetId  (required)
      * @param \Swagger\Client\Model\XAny[] $data  (optional)
      * @return array of \Swagger\Client\Model\XAny[], HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function teamMembersIdTargetModelTargetIdInvitePostWithHttpInfo($id, $targetModel, $targetId, $data = null)
+    public function teamMembersIdTargetModelTargetIdInvitePostWithHttpInfo($id, $id2, $targetModel, $targetId, $data = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdTargetModelTargetIdInvitePost');
+        }
+        // verify the required parameter 'id2' is set
+        if ($id2 === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id2 when calling teamMembersIdTargetModelTargetIdInvitePost');
         }
         // verify the required parameter 'targetModel' is set
         if ($targetModel === null) {
@@ -8512,6 +9565,14 @@ class TeamMemberApi
             $resourcePath = str_replace(
                 "{" . "id" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($id2 !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id2),
                 $resourcePath
             );
         }
@@ -9040,6 +10101,1386 @@ class TeamMemberApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Team', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamMembersIdTeamImageFoldersCountGet
+     *
+     * Counts imageFolders of Team.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $where Criteria to match model instances (optional)
+     * @return \Swagger\Client\Model\InlineResponse200
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamImageFoldersCountGet($id, $where = null)
+    {
+        list($response) = $this->teamMembersIdTeamImageFoldersCountGetWithHttpInfo($id, $where);
+        return $response;
+    }
+
+    /**
+     * Operation teamMembersIdTeamImageFoldersCountGetWithHttpInfo
+     *
+     * Counts imageFolders of Team.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $where Criteria to match model instances (optional)
+     * @return array of \Swagger\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamImageFoldersCountGetWithHttpInfo($id, $where = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdTeamImageFoldersCountGet');
+        }
+        // parse inputs
+        $resourcePath = "/TeamMembers/{id}/team/imageFolders/count";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($where !== null) {
+            $queryParams['where'] = $this->apiClient->getSerializer()->toQueryValue($where);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\InlineResponse200',
+                '/TeamMembers/{id}/team/imageFolders/count'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse200', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamMembersIdTeamImageFoldersDelete
+     *
+     * Deletes all imageFolders of this model.
+     *
+     * @param string $id TeamMember id (required)
+     * @return void
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamImageFoldersDelete($id)
+    {
+        list($response) = $this->teamMembersIdTeamImageFoldersDeleteWithHttpInfo($id);
+        return $response;
+    }
+
+    /**
+     * Operation teamMembersIdTeamImageFoldersDeleteWithHttpInfo
+     *
+     * Deletes all imageFolders of this model.
+     *
+     * @param string $id TeamMember id (required)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamImageFoldersDeleteWithHttpInfo($id)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdTeamImageFoldersDelete');
+        }
+        // parse inputs
+        $resourcePath = "/TeamMembers/{id}/team/imageFolders";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/TeamMembers/{id}/team/imageFolders'
+            );
+
+            return array(null, $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamMembersIdTeamImageFoldersFkDelete
+     *
+     * Delete a related item by id for imageFolders.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $fk Foreign key for imageFolders (required)
+     * @return void
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamImageFoldersFkDelete($id, $fk)
+    {
+        list($response) = $this->teamMembersIdTeamImageFoldersFkDeleteWithHttpInfo($id, $fk);
+        return $response;
+    }
+
+    /**
+     * Operation teamMembersIdTeamImageFoldersFkDeleteWithHttpInfo
+     *
+     * Delete a related item by id for imageFolders.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $fk Foreign key for imageFolders (required)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamImageFoldersFkDeleteWithHttpInfo($id, $fk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdTeamImageFoldersFkDelete');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling teamMembersIdTeamImageFoldersFkDelete');
+        }
+        // parse inputs
+        $resourcePath = "/TeamMembers/{id}/team/imageFolders/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/TeamMembers/{id}/team/imageFolders/{fk}'
+            );
+
+            return array(null, $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamMembersIdTeamImageFoldersFkGet
+     *
+     * Find a related item by id for imageFolders.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $fk Foreign key for imageFolders (required)
+     * @return \Swagger\Client\Model\ImageFolder
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamImageFoldersFkGet($id, $fk)
+    {
+        list($response) = $this->teamMembersIdTeamImageFoldersFkGetWithHttpInfo($id, $fk);
+        return $response;
+    }
+
+    /**
+     * Operation teamMembersIdTeamImageFoldersFkGetWithHttpInfo
+     *
+     * Find a related item by id for imageFolders.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $fk Foreign key for imageFolders (required)
+     * @return array of \Swagger\Client\Model\ImageFolder, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamImageFoldersFkGetWithHttpInfo($id, $fk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdTeamImageFoldersFkGet');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling teamMembersIdTeamImageFoldersFkGet');
+        }
+        // parse inputs
+        $resourcePath = "/TeamMembers/{id}/team/imageFolders/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\ImageFolder',
+                '/TeamMembers/{id}/team/imageFolders/{fk}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\ImageFolder', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ImageFolder', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamMembersIdTeamImageFoldersFkPut
+     *
+     * Update a related item by id for imageFolders.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $fk Foreign key for imageFolders (required)
+     * @param \Swagger\Client\Model\ImageFolder $data  (optional)
+     * @return \Swagger\Client\Model\ImageFolder
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamImageFoldersFkPut($id, $fk, $data = null)
+    {
+        list($response) = $this->teamMembersIdTeamImageFoldersFkPutWithHttpInfo($id, $fk, $data);
+        return $response;
+    }
+
+    /**
+     * Operation teamMembersIdTeamImageFoldersFkPutWithHttpInfo
+     *
+     * Update a related item by id for imageFolders.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $fk Foreign key for imageFolders (required)
+     * @param \Swagger\Client\Model\ImageFolder $data  (optional)
+     * @return array of \Swagger\Client\Model\ImageFolder, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamImageFoldersFkPutWithHttpInfo($id, $fk, $data = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdTeamImageFoldersFkPut');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling teamMembersIdTeamImageFoldersFkPut');
+        }
+        // parse inputs
+        $resourcePath = "/TeamMembers/{id}/team/imageFolders/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\ImageFolder',
+                '/TeamMembers/{id}/team/imageFolders/{fk}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\ImageFolder', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ImageFolder', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamMembersIdTeamImageFoldersGet
+     *
+     * Queries imageFolders of Team.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $filter  (optional)
+     * @return \Swagger\Client\Model\ImageFolder[]
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamImageFoldersGet($id, $filter = null)
+    {
+        list($response) = $this->teamMembersIdTeamImageFoldersGetWithHttpInfo($id, $filter);
+        return $response;
+    }
+
+    /**
+     * Operation teamMembersIdTeamImageFoldersGetWithHttpInfo
+     *
+     * Queries imageFolders of Team.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $filter  (optional)
+     * @return array of \Swagger\Client\Model\ImageFolder[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamImageFoldersGetWithHttpInfo($id, $filter = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdTeamImageFoldersGet');
+        }
+        // parse inputs
+        $resourcePath = "/TeamMembers/{id}/team/imageFolders";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($filter !== null) {
+            $queryParams['filter'] = $this->apiClient->getSerializer()->toQueryValue($filter);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\ImageFolder[]',
+                '/TeamMembers/{id}/team/imageFolders'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\ImageFolder[]', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ImageFolder[]', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamMembersIdTeamImageFoldersPost
+     *
+     * Creates a new instance in imageFolders of this model.
+     *
+     * @param string $id TeamMember id (required)
+     * @param \Swagger\Client\Model\ImageFolder $data  (optional)
+     * @return \Swagger\Client\Model\ImageFolder
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamImageFoldersPost($id, $data = null)
+    {
+        list($response) = $this->teamMembersIdTeamImageFoldersPostWithHttpInfo($id, $data);
+        return $response;
+    }
+
+    /**
+     * Operation teamMembersIdTeamImageFoldersPostWithHttpInfo
+     *
+     * Creates a new instance in imageFolders of this model.
+     *
+     * @param string $id TeamMember id (required)
+     * @param \Swagger\Client\Model\ImageFolder $data  (optional)
+     * @return array of \Swagger\Client\Model\ImageFolder, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamImageFoldersPostWithHttpInfo($id, $data = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdTeamImageFoldersPost');
+        }
+        // parse inputs
+        $resourcePath = "/TeamMembers/{id}/team/imageFolders";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\ImageFolder',
+                '/TeamMembers/{id}/team/imageFolders'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\ImageFolder', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ImageFolder', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamMembersIdTeamImagesCountGet
+     *
+     * Counts images of Team.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $where Criteria to match model instances (optional)
+     * @return \Swagger\Client\Model\InlineResponse200
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamImagesCountGet($id, $where = null)
+    {
+        list($response) = $this->teamMembersIdTeamImagesCountGetWithHttpInfo($id, $where);
+        return $response;
+    }
+
+    /**
+     * Operation teamMembersIdTeamImagesCountGetWithHttpInfo
+     *
+     * Counts images of Team.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $where Criteria to match model instances (optional)
+     * @return array of \Swagger\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamImagesCountGetWithHttpInfo($id, $where = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdTeamImagesCountGet');
+        }
+        // parse inputs
+        $resourcePath = "/TeamMembers/{id}/team/images/count";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($where !== null) {
+            $queryParams['where'] = $this->apiClient->getSerializer()->toQueryValue($where);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\InlineResponse200',
+                '/TeamMembers/{id}/team/images/count'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse200', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamMembersIdTeamImagesDelete
+     *
+     * Deletes all images of this model.
+     *
+     * @param string $id TeamMember id (required)
+     * @return void
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamImagesDelete($id)
+    {
+        list($response) = $this->teamMembersIdTeamImagesDeleteWithHttpInfo($id);
+        return $response;
+    }
+
+    /**
+     * Operation teamMembersIdTeamImagesDeleteWithHttpInfo
+     *
+     * Deletes all images of this model.
+     *
+     * @param string $id TeamMember id (required)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamImagesDeleteWithHttpInfo($id)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdTeamImagesDelete');
+        }
+        // parse inputs
+        $resourcePath = "/TeamMembers/{id}/team/images";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/TeamMembers/{id}/team/images'
+            );
+
+            return array(null, $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamMembersIdTeamImagesFkDelete
+     *
+     * Delete a related item by id for images.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $fk Foreign key for images (required)
+     * @return void
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamImagesFkDelete($id, $fk)
+    {
+        list($response) = $this->teamMembersIdTeamImagesFkDeleteWithHttpInfo($id, $fk);
+        return $response;
+    }
+
+    /**
+     * Operation teamMembersIdTeamImagesFkDeleteWithHttpInfo
+     *
+     * Delete a related item by id for images.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $fk Foreign key for images (required)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamImagesFkDeleteWithHttpInfo($id, $fk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdTeamImagesFkDelete');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling teamMembersIdTeamImagesFkDelete');
+        }
+        // parse inputs
+        $resourcePath = "/TeamMembers/{id}/team/images/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/TeamMembers/{id}/team/images/{fk}'
+            );
+
+            return array(null, $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamMembersIdTeamImagesFkGet
+     *
+     * Find a related item by id for images.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $fk Foreign key for images (required)
+     * @return \Swagger\Client\Model\Image
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamImagesFkGet($id, $fk)
+    {
+        list($response) = $this->teamMembersIdTeamImagesFkGetWithHttpInfo($id, $fk);
+        return $response;
+    }
+
+    /**
+     * Operation teamMembersIdTeamImagesFkGetWithHttpInfo
+     *
+     * Find a related item by id for images.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $fk Foreign key for images (required)
+     * @return array of \Swagger\Client\Model\Image, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamImagesFkGetWithHttpInfo($id, $fk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdTeamImagesFkGet');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling teamMembersIdTeamImagesFkGet');
+        }
+        // parse inputs
+        $resourcePath = "/TeamMembers/{id}/team/images/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\Image',
+                '/TeamMembers/{id}/team/images/{fk}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Image', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Image', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamMembersIdTeamImagesFkPut
+     *
+     * Update a related item by id for images.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $fk Foreign key for images (required)
+     * @param \Swagger\Client\Model\Image $data  (optional)
+     * @return \Swagger\Client\Model\Image
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamImagesFkPut($id, $fk, $data = null)
+    {
+        list($response) = $this->teamMembersIdTeamImagesFkPutWithHttpInfo($id, $fk, $data);
+        return $response;
+    }
+
+    /**
+     * Operation teamMembersIdTeamImagesFkPutWithHttpInfo
+     *
+     * Update a related item by id for images.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $fk Foreign key for images (required)
+     * @param \Swagger\Client\Model\Image $data  (optional)
+     * @return array of \Swagger\Client\Model\Image, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamImagesFkPutWithHttpInfo($id, $fk, $data = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdTeamImagesFkPut');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling teamMembersIdTeamImagesFkPut');
+        }
+        // parse inputs
+        $resourcePath = "/TeamMembers/{id}/team/images/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\Image',
+                '/TeamMembers/{id}/team/images/{fk}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Image', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Image', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamMembersIdTeamImagesGet
+     *
+     * Queries images of Team.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $filter  (optional)
+     * @return \Swagger\Client\Model\Image[]
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamImagesGet($id, $filter = null)
+    {
+        list($response) = $this->teamMembersIdTeamImagesGetWithHttpInfo($id, $filter);
+        return $response;
+    }
+
+    /**
+     * Operation teamMembersIdTeamImagesGetWithHttpInfo
+     *
+     * Queries images of Team.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $filter  (optional)
+     * @return array of \Swagger\Client\Model\Image[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamImagesGetWithHttpInfo($id, $filter = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdTeamImagesGet');
+        }
+        // parse inputs
+        $resourcePath = "/TeamMembers/{id}/team/images";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($filter !== null) {
+            $queryParams['filter'] = $this->apiClient->getSerializer()->toQueryValue($filter);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\Image[]',
+                '/TeamMembers/{id}/team/images'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Image[]', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Image[]', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamMembersIdTeamImagesPost
+     *
+     * Creates a new instance in images of this model.
+     *
+     * @param string $id TeamMember id (required)
+     * @param \Swagger\Client\Model\Image $data  (optional)
+     * @return \Swagger\Client\Model\Image
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamImagesPost($id, $data = null)
+    {
+        list($response) = $this->teamMembersIdTeamImagesPostWithHttpInfo($id, $data);
+        return $response;
+    }
+
+    /**
+     * Operation teamMembersIdTeamImagesPostWithHttpInfo
+     *
+     * Creates a new instance in images of this model.
+     *
+     * @param string $id TeamMember id (required)
+     * @param \Swagger\Client\Model\Image $data  (optional)
+     * @return array of \Swagger\Client\Model\Image, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamImagesPostWithHttpInfo($id, $data = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdTeamImagesPost');
+        }
+        // parse inputs
+        $resourcePath = "/TeamMembers/{id}/team/images";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\Image',
+                '/TeamMembers/{id}/team/images'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Image', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Image', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -10735,6 +13176,696 @@ class TeamMemberApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Portal', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamMembersIdTeamTeamMembersCountGet
+     *
+     * Counts teamMembers of Team.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $where Criteria to match model instances (optional)
+     * @return \Swagger\Client\Model\InlineResponse200
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamTeamMembersCountGet($id, $where = null)
+    {
+        list($response) = $this->teamMembersIdTeamTeamMembersCountGetWithHttpInfo($id, $where);
+        return $response;
+    }
+
+    /**
+     * Operation teamMembersIdTeamTeamMembersCountGetWithHttpInfo
+     *
+     * Counts teamMembers of Team.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $where Criteria to match model instances (optional)
+     * @return array of \Swagger\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamTeamMembersCountGetWithHttpInfo($id, $where = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdTeamTeamMembersCountGet');
+        }
+        // parse inputs
+        $resourcePath = "/TeamMembers/{id}/team/teamMembers/count";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($where !== null) {
+            $queryParams['where'] = $this->apiClient->getSerializer()->toQueryValue($where);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\InlineResponse200',
+                '/TeamMembers/{id}/team/teamMembers/count'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse200', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamMembersIdTeamTeamMembersDelete
+     *
+     * Deletes all teamMembers of this model.
+     *
+     * @param string $id TeamMember id (required)
+     * @return void
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamTeamMembersDelete($id)
+    {
+        list($response) = $this->teamMembersIdTeamTeamMembersDeleteWithHttpInfo($id);
+        return $response;
+    }
+
+    /**
+     * Operation teamMembersIdTeamTeamMembersDeleteWithHttpInfo
+     *
+     * Deletes all teamMembers of this model.
+     *
+     * @param string $id TeamMember id (required)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamTeamMembersDeleteWithHttpInfo($id)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdTeamTeamMembersDelete');
+        }
+        // parse inputs
+        $resourcePath = "/TeamMembers/{id}/team/teamMembers";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/TeamMembers/{id}/team/teamMembers'
+            );
+
+            return array(null, $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamMembersIdTeamTeamMembersFkDelete
+     *
+     * Delete a related item by id for teamMembers.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $fk Foreign key for teamMembers (required)
+     * @return void
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamTeamMembersFkDelete($id, $fk)
+    {
+        list($response) = $this->teamMembersIdTeamTeamMembersFkDeleteWithHttpInfo($id, $fk);
+        return $response;
+    }
+
+    /**
+     * Operation teamMembersIdTeamTeamMembersFkDeleteWithHttpInfo
+     *
+     * Delete a related item by id for teamMembers.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $fk Foreign key for teamMembers (required)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamTeamMembersFkDeleteWithHttpInfo($id, $fk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdTeamTeamMembersFkDelete');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling teamMembersIdTeamTeamMembersFkDelete');
+        }
+        // parse inputs
+        $resourcePath = "/TeamMembers/{id}/team/teamMembers/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/TeamMembers/{id}/team/teamMembers/{fk}'
+            );
+
+            return array(null, $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamMembersIdTeamTeamMembersFkGet
+     *
+     * Find a related item by id for teamMembers.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $fk Foreign key for teamMembers (required)
+     * @return \Swagger\Client\Model\TeamMember
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamTeamMembersFkGet($id, $fk)
+    {
+        list($response) = $this->teamMembersIdTeamTeamMembersFkGetWithHttpInfo($id, $fk);
+        return $response;
+    }
+
+    /**
+     * Operation teamMembersIdTeamTeamMembersFkGetWithHttpInfo
+     *
+     * Find a related item by id for teamMembers.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $fk Foreign key for teamMembers (required)
+     * @return array of \Swagger\Client\Model\TeamMember, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamTeamMembersFkGetWithHttpInfo($id, $fk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdTeamTeamMembersFkGet');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling teamMembersIdTeamTeamMembersFkGet');
+        }
+        // parse inputs
+        $resourcePath = "/TeamMembers/{id}/team/teamMembers/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\TeamMember',
+                '/TeamMembers/{id}/team/teamMembers/{fk}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TeamMember', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TeamMember', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamMembersIdTeamTeamMembersFkPut
+     *
+     * Update a related item by id for teamMembers.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $fk Foreign key for teamMembers (required)
+     * @param \Swagger\Client\Model\TeamMember $data  (optional)
+     * @return \Swagger\Client\Model\TeamMember
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamTeamMembersFkPut($id, $fk, $data = null)
+    {
+        list($response) = $this->teamMembersIdTeamTeamMembersFkPutWithHttpInfo($id, $fk, $data);
+        return $response;
+    }
+
+    /**
+     * Operation teamMembersIdTeamTeamMembersFkPutWithHttpInfo
+     *
+     * Update a related item by id for teamMembers.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $fk Foreign key for teamMembers (required)
+     * @param \Swagger\Client\Model\TeamMember $data  (optional)
+     * @return array of \Swagger\Client\Model\TeamMember, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamTeamMembersFkPutWithHttpInfo($id, $fk, $data = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdTeamTeamMembersFkPut');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling teamMembersIdTeamTeamMembersFkPut');
+        }
+        // parse inputs
+        $resourcePath = "/TeamMembers/{id}/team/teamMembers/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\TeamMember',
+                '/TeamMembers/{id}/team/teamMembers/{fk}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TeamMember', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TeamMember', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamMembersIdTeamTeamMembersGet
+     *
+     * Queries teamMembers of Team.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $filter  (optional)
+     * @return \Swagger\Client\Model\TeamMember[]
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamTeamMembersGet($id, $filter = null)
+    {
+        list($response) = $this->teamMembersIdTeamTeamMembersGetWithHttpInfo($id, $filter);
+        return $response;
+    }
+
+    /**
+     * Operation teamMembersIdTeamTeamMembersGetWithHttpInfo
+     *
+     * Queries teamMembers of Team.
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $filter  (optional)
+     * @return array of \Swagger\Client\Model\TeamMember[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamTeamMembersGetWithHttpInfo($id, $filter = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdTeamTeamMembersGet');
+        }
+        // parse inputs
+        $resourcePath = "/TeamMembers/{id}/team/teamMembers";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($filter !== null) {
+            $queryParams['filter'] = $this->apiClient->getSerializer()->toQueryValue($filter);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\TeamMember[]',
+                '/TeamMembers/{id}/team/teamMembers'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TeamMember[]', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TeamMember[]', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamMembersIdTeamTeamMembersPost
+     *
+     * Creates a new instance in teamMembers of this model.
+     *
+     * @param string $id TeamMember id (required)
+     * @param \Swagger\Client\Model\TeamMember $data  (optional)
+     * @return \Swagger\Client\Model\TeamMember
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamTeamMembersPost($id, $data = null)
+    {
+        list($response) = $this->teamMembersIdTeamTeamMembersPostWithHttpInfo($id, $data);
+        return $response;
+    }
+
+    /**
+     * Operation teamMembersIdTeamTeamMembersPostWithHttpInfo
+     *
+     * Creates a new instance in teamMembers of this model.
+     *
+     * @param string $id TeamMember id (required)
+     * @param \Swagger\Client\Model\TeamMember $data  (optional)
+     * @return array of \Swagger\Client\Model\TeamMember, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamTeamMembersPostWithHttpInfo($id, $data = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdTeamTeamMembersPost');
+        }
+        // parse inputs
+        $resourcePath = "/TeamMembers/{id}/team/teamMembers";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\TeamMember',
+                '/TeamMembers/{id}/team/teamMembers'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TeamMember', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TeamMember', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

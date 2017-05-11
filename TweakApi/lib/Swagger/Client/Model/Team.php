@@ -80,11 +80,14 @@ class Team implements ArrayAccess
         'masterKey' => 'string',
         'status' => 'string',
         'members' => '\Swagger\Client\Model\Customer[]',
+        'teamMembers' => '\Swagger\Client\Model\TeamMember[]',
         'portals' => '\Swagger\Client\Model\Portal[]',
         'templates' => '\Swagger\Client\Model\Template[]',
         'brand' => '\Swagger\Client\Model\TeamBrand',
         'templateFolders' => '\Swagger\Client\Model\TeamTemplateFolder[]',
-        'workflows' => '\Swagger\Client\Model\Workflow[]'
+        'workflows' => '\Swagger\Client\Model\Workflow[]',
+        'images' => '\Swagger\Client\Model\Image[]',
+        'imageFolders' => '\Swagger\Client\Model\ImageFolder[]'
     );
 
     public static function swaggerTypes()
@@ -111,11 +114,14 @@ class Team implements ArrayAccess
         'masterKey' => 'masterKey',
         'status' => 'status',
         'members' => 'members',
+        'teamMembers' => 'teamMembers',
         'portals' => 'portals',
         'templates' => 'templates',
         'brand' => 'brand',
         'templateFolders' => 'templateFolders',
-        'workflows' => 'workflows'
+        'workflows' => 'workflows',
+        'images' => 'images',
+        'imageFolders' => 'imageFolders'
     );
 
     public static function attributeMap()
@@ -142,11 +148,14 @@ class Team implements ArrayAccess
         'masterKey' => 'setMasterKey',
         'status' => 'setStatus',
         'members' => 'setMembers',
+        'teamMembers' => 'setTeamMembers',
         'portals' => 'setPortals',
         'templates' => 'setTemplates',
         'brand' => 'setBrand',
         'templateFolders' => 'setTemplateFolders',
-        'workflows' => 'setWorkflows'
+        'workflows' => 'setWorkflows',
+        'images' => 'setImages',
+        'imageFolders' => 'setImageFolders'
     );
 
     public static function setters()
@@ -173,11 +182,14 @@ class Team implements ArrayAccess
         'masterKey' => 'getMasterKey',
         'status' => 'getStatus',
         'members' => 'getMembers',
+        'teamMembers' => 'getTeamMembers',
         'portals' => 'getPortals',
         'templates' => 'getTemplates',
         'brand' => 'getBrand',
         'templateFolders' => 'getTemplateFolders',
-        'workflows' => 'getWorkflows'
+        'workflows' => 'getWorkflows',
+        'images' => 'getImages',
+        'imageFolders' => 'getImageFolders'
     );
 
     public static function getters()
@@ -215,11 +227,14 @@ class Team implements ArrayAccess
         $this->container['masterKey'] = isset($data['masterKey']) ? $data['masterKey'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : 'sandbox';
         $this->container['members'] = isset($data['members']) ? $data['members'] : null;
+        $this->container['teamMembers'] = isset($data['teamMembers']) ? $data['teamMembers'] : null;
         $this->container['portals'] = isset($data['portals']) ? $data['portals'] : null;
         $this->container['templates'] = isset($data['templates']) ? $data['templates'] : null;
         $this->container['brand'] = isset($data['brand']) ? $data['brand'] : null;
         $this->container['templateFolders'] = isset($data['templateFolders']) ? $data['templateFolders'] : null;
         $this->container['workflows'] = isset($data['workflows']) ? $data['workflows'] : null;
+        $this->container['images'] = isset($data['images']) ? $data['images'] : null;
+        $this->container['imageFolders'] = isset($data['imageFolders']) ? $data['imageFolders'] : null;
     }
 
     /**
@@ -552,6 +567,27 @@ class Team implements ArrayAccess
     }
 
     /**
+     * Gets teamMembers
+     * @return \Swagger\Client\Model\TeamMember[]
+     */
+    public function getTeamMembers()
+    {
+        return $this->container['teamMembers'];
+    }
+
+    /**
+     * Sets teamMembers
+     * @param \Swagger\Client\Model\TeamMember[] $teamMembers
+     * @return $this
+     */
+    public function setTeamMembers($teamMembers)
+    {
+        $this->container['teamMembers'] = $teamMembers;
+
+        return $this;
+    }
+
+    /**
      * Gets portals
      * @return \Swagger\Client\Model\Portal[]
      */
@@ -652,6 +688,48 @@ class Team implements ArrayAccess
     public function setWorkflows($workflows)
     {
         $this->container['workflows'] = $workflows;
+
+        return $this;
+    }
+
+    /**
+     * Gets images
+     * @return \Swagger\Client\Model\Image[]
+     */
+    public function getImages()
+    {
+        return $this->container['images'];
+    }
+
+    /**
+     * Sets images
+     * @param \Swagger\Client\Model\Image[] $images
+     * @return $this
+     */
+    public function setImages($images)
+    {
+        $this->container['images'] = $images;
+
+        return $this;
+    }
+
+    /**
+     * Gets imageFolders
+     * @return \Swagger\Client\Model\ImageFolder[]
+     */
+    public function getImageFolders()
+    {
+        return $this->container['imageFolders'];
+    }
+
+    /**
+     * Sets imageFolders
+     * @param \Swagger\Client\Model\ImageFolder[] $imageFolders
+     * @return $this
+     */
+    public function setImageFolders($imageFolders)
+    {
+        $this->container['imageFolders'] = $imageFolders;
 
         return $this;
     }

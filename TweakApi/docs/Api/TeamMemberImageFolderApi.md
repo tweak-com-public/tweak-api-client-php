@@ -1,33 +1,33 @@
-# Tweak\Api\ImageApi
+# Tweak\Api\TeamMemberImageFolderApi
 
 All URIs are relative to *https://apidevcdn.tweak.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**imagesChangeStreamGet**](ImageApi.md#imagesChangeStreamGet) | **GET** /Images/change-stream | Create a change stream.
-[**imagesChangeStreamPost**](ImageApi.md#imagesChangeStreamPost) | **POST** /Images/change-stream | Create a change stream.
-[**imagesCountGet**](ImageApi.md#imagesCountGet) | **GET** /Images/count | Count instances of the model matched by where from the data source.
-[**imagesFindOneGet**](ImageApi.md#imagesFindOneGet) | **GET** /Images/findOne | Find first instance of the model matched by filter from the data source.
-[**imagesGet**](ImageApi.md#imagesGet) | **GET** /Images | Find all instances of the model matched by filter from the data source.
-[**imagesIdDelete**](ImageApi.md#imagesIdDelete) | **DELETE** /Images/{id} | Delete a model instance by {{id}} from the data source.
-[**imagesIdExistsGet**](ImageApi.md#imagesIdExistsGet) | **GET** /Images/{id}/exists | Check whether a model instance exists in the data source.
-[**imagesIdFolderGet**](ImageApi.md#imagesIdFolderGet) | **GET** /Images/{id}/folder | Fetches belongsTo relation folder.
-[**imagesIdGet**](ImageApi.md#imagesIdGet) | **GET** /Images/{id} | Find a model instance by {{id}} from the data source.
-[**imagesIdHead**](ImageApi.md#imagesIdHead) | **HEAD** /Images/{id} | Check whether a model instance exists in the data source.
-[**imagesIdPatch**](ImageApi.md#imagesIdPatch) | **PATCH** /Images/{id} | Patch attributes for a model instance and persist it into the data source.
-[**imagesIdPut**](ImageApi.md#imagesIdPut) | **PUT** /Images/{id} | Replace attributes for a model instance and persist it into the data source.
-[**imagesIdReplacePost**](ImageApi.md#imagesIdReplacePost) | **POST** /Images/{id}/replace | Replace attributes for a model instance and persist it into the data source.
-[**imagesIdTeamGet**](ImageApi.md#imagesIdTeamGet) | **GET** /Images/{id}/team | Fetches belongsTo relation team.
-[**imagesPatch**](ImageApi.md#imagesPatch) | **PATCH** /Images | Patch an existing model instance or insert a new one into the data source.
-[**imagesPost**](ImageApi.md#imagesPost) | **POST** /Images | Create a new instance of the model and persist it into the data source.
-[**imagesPut**](ImageApi.md#imagesPut) | **PUT** /Images | Replace an existing model instance or insert a new one into the data source.
-[**imagesReplaceOrCreatePost**](ImageApi.md#imagesReplaceOrCreatePost) | **POST** /Images/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
-[**imagesUpdatePost**](ImageApi.md#imagesUpdatePost) | **POST** /Images/update | Update instances of the model matched by {{where}} from the data source.
-[**imagesUpsertWithWherePost**](ImageApi.md#imagesUpsertWithWherePost) | **POST** /Images/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
+[**teamMemberImageFoldersChangeStreamGet**](TeamMemberImageFolderApi.md#teamMemberImageFoldersChangeStreamGet) | **GET** /TeamMemberImageFolders/change-stream | Create a change stream.
+[**teamMemberImageFoldersChangeStreamPost**](TeamMemberImageFolderApi.md#teamMemberImageFoldersChangeStreamPost) | **POST** /TeamMemberImageFolders/change-stream | Create a change stream.
+[**teamMemberImageFoldersCountGet**](TeamMemberImageFolderApi.md#teamMemberImageFoldersCountGet) | **GET** /TeamMemberImageFolders/count | Count instances of the model matched by where from the data source.
+[**teamMemberImageFoldersFindOneGet**](TeamMemberImageFolderApi.md#teamMemberImageFoldersFindOneGet) | **GET** /TeamMemberImageFolders/findOne | Find first instance of the model matched by filter from the data source.
+[**teamMemberImageFoldersGet**](TeamMemberImageFolderApi.md#teamMemberImageFoldersGet) | **GET** /TeamMemberImageFolders | Find all instances of the model matched by filter from the data source.
+[**teamMemberImageFoldersIdDelete**](TeamMemberImageFolderApi.md#teamMemberImageFoldersIdDelete) | **DELETE** /TeamMemberImageFolders/{id} | Delete a model instance by {{id}} from the data source.
+[**teamMemberImageFoldersIdExistsGet**](TeamMemberImageFolderApi.md#teamMemberImageFoldersIdExistsGet) | **GET** /TeamMemberImageFolders/{id}/exists | Check whether a model instance exists in the data source.
+[**teamMemberImageFoldersIdFolderGet**](TeamMemberImageFolderApi.md#teamMemberImageFoldersIdFolderGet) | **GET** /TeamMemberImageFolders/{id}/folder | Fetches belongsTo relation folder.
+[**teamMemberImageFoldersIdGet**](TeamMemberImageFolderApi.md#teamMemberImageFoldersIdGet) | **GET** /TeamMemberImageFolders/{id} | Find a model instance by {{id}} from the data source.
+[**teamMemberImageFoldersIdHead**](TeamMemberImageFolderApi.md#teamMemberImageFoldersIdHead) | **HEAD** /TeamMemberImageFolders/{id} | Check whether a model instance exists in the data source.
+[**teamMemberImageFoldersIdMemberGet**](TeamMemberImageFolderApi.md#teamMemberImageFoldersIdMemberGet) | **GET** /TeamMemberImageFolders/{id}/member | Fetches belongsTo relation member.
+[**teamMemberImageFoldersIdPatch**](TeamMemberImageFolderApi.md#teamMemberImageFoldersIdPatch) | **PATCH** /TeamMemberImageFolders/{id} | Patch attributes for a model instance and persist it into the data source.
+[**teamMemberImageFoldersIdPut**](TeamMemberImageFolderApi.md#teamMemberImageFoldersIdPut) | **PUT** /TeamMemberImageFolders/{id} | Replace attributes for a model instance and persist it into the data source.
+[**teamMemberImageFoldersIdReplacePost**](TeamMemberImageFolderApi.md#teamMemberImageFoldersIdReplacePost) | **POST** /TeamMemberImageFolders/{id}/replace | Replace attributes for a model instance and persist it into the data source.
+[**teamMemberImageFoldersPatch**](TeamMemberImageFolderApi.md#teamMemberImageFoldersPatch) | **PATCH** /TeamMemberImageFolders | Patch an existing model instance or insert a new one into the data source.
+[**teamMemberImageFoldersPost**](TeamMemberImageFolderApi.md#teamMemberImageFoldersPost) | **POST** /TeamMemberImageFolders | Create a new instance of the model and persist it into the data source.
+[**teamMemberImageFoldersPut**](TeamMemberImageFolderApi.md#teamMemberImageFoldersPut) | **PUT** /TeamMemberImageFolders | Replace an existing model instance or insert a new one into the data source.
+[**teamMemberImageFoldersReplaceOrCreatePost**](TeamMemberImageFolderApi.md#teamMemberImageFoldersReplaceOrCreatePost) | **POST** /TeamMemberImageFolders/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
+[**teamMemberImageFoldersUpdatePost**](TeamMemberImageFolderApi.md#teamMemberImageFoldersUpdatePost) | **POST** /TeamMemberImageFolders/update | Update instances of the model matched by {{where}} from the data source.
+[**teamMemberImageFoldersUpsertWithWherePost**](TeamMemberImageFolderApi.md#teamMemberImageFoldersUpsertWithWherePost) | **POST** /TeamMemberImageFolders/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
 
 
-# **imagesChangeStreamGet**
-> \SplFileObject imagesChangeStreamGet($options)
+# **teamMemberImageFoldersChangeStreamGet**
+> \SplFileObject teamMemberImageFoldersChangeStreamGet($options)
 
 Create a change stream.
 
@@ -41,14 +41,14 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
-$api_instance = new Tweak\Api\Api\ImageApi();
+$api_instance = new Tweak\Api\Api\TeamMemberImageFolderApi();
 $options = "options_example"; // string | 
 
 try {
-    $result = $api_instance->imagesChangeStreamGet($options);
+    $result = $api_instance->teamMemberImageFoldersChangeStreamGet($options);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImageApi->imagesChangeStreamGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TeamMemberImageFolderApi->teamMemberImageFoldersChangeStreamGet: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -74,8 +74,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **imagesChangeStreamPost**
-> \SplFileObject imagesChangeStreamPost($options)
+# **teamMemberImageFoldersChangeStreamPost**
+> \SplFileObject teamMemberImageFoldersChangeStreamPost($options)
 
 Create a change stream.
 
@@ -89,14 +89,14 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
-$api_instance = new Tweak\Api\Api\ImageApi();
+$api_instance = new Tweak\Api\Api\TeamMemberImageFolderApi();
 $options = "options_example"; // string | 
 
 try {
-    $result = $api_instance->imagesChangeStreamPost($options);
+    $result = $api_instance->teamMemberImageFoldersChangeStreamPost($options);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImageApi->imagesChangeStreamPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TeamMemberImageFolderApi->teamMemberImageFoldersChangeStreamPost: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -122,8 +122,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **imagesCountGet**
-> \Swagger\Client\Model\InlineResponse200 imagesCountGet($where)
+# **teamMemberImageFoldersCountGet**
+> \Swagger\Client\Model\InlineResponse200 teamMemberImageFoldersCountGet($where)
 
 Count instances of the model matched by where from the data source.
 
@@ -137,14 +137,14 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
-$api_instance = new Tweak\Api\Api\ImageApi();
+$api_instance = new Tweak\Api\Api\TeamMemberImageFolderApi();
 $where = "where_example"; // string | Criteria to match model instances
 
 try {
-    $result = $api_instance->imagesCountGet($where);
+    $result = $api_instance->teamMemberImageFoldersCountGet($where);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImageApi->imagesCountGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TeamMemberImageFolderApi->teamMemberImageFoldersCountGet: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -170,8 +170,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **imagesFindOneGet**
-> \Swagger\Client\Model\Image imagesFindOneGet($filter)
+# **teamMemberImageFoldersFindOneGet**
+> \Swagger\Client\Model\TeamMemberImageFolder teamMemberImageFoldersFindOneGet($filter)
 
 Find first instance of the model matched by filter from the data source.
 
@@ -185,14 +185,14 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
-$api_instance = new Tweak\Api\Api\ImageApi();
+$api_instance = new Tweak\Api\Api\TeamMemberImageFolderApi();
 $filter = "filter_example"; // string | Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({\"something\":\"value\"})
 
 try {
-    $result = $api_instance->imagesFindOneGet($filter);
+    $result = $api_instance->teamMemberImageFoldersFindOneGet($filter);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImageApi->imagesFindOneGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TeamMemberImageFolderApi->teamMemberImageFoldersFindOneGet: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -205,7 +205,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Image**](../Model/Image.md)
+[**\Swagger\Client\Model\TeamMemberImageFolder**](../Model/TeamMemberImageFolder.md)
 
 ### Authorization
 
@@ -218,8 +218,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **imagesGet**
-> \Swagger\Client\Model\Image[] imagesGet($filter)
+# **teamMemberImageFoldersGet**
+> \Swagger\Client\Model\TeamMemberImageFolder[] teamMemberImageFoldersGet($filter)
 
 Find all instances of the model matched by filter from the data source.
 
@@ -233,14 +233,14 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
-$api_instance = new Tweak\Api\Api\ImageApi();
+$api_instance = new Tweak\Api\Api\TeamMemberImageFolderApi();
 $filter = "filter_example"; // string | Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({\"something\":\"value\"})
 
 try {
-    $result = $api_instance->imagesGet($filter);
+    $result = $api_instance->teamMemberImageFoldersGet($filter);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImageApi->imagesGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TeamMemberImageFolderApi->teamMemberImageFoldersGet: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -253,7 +253,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Image[]**](../Model/Image.md)
+[**\Swagger\Client\Model\TeamMemberImageFolder[]**](../Model/TeamMemberImageFolder.md)
 
 ### Authorization
 
@@ -266,8 +266,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **imagesIdDelete**
-> object imagesIdDelete($id)
+# **teamMemberImageFoldersIdDelete**
+> object teamMemberImageFoldersIdDelete($id)
 
 Delete a model instance by {{id}} from the data source.
 
@@ -281,14 +281,14 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
-$api_instance = new Tweak\Api\Api\ImageApi();
+$api_instance = new Tweak\Api\Api\TeamMemberImageFolderApi();
 $id = "id_example"; // string | Model id
 
 try {
-    $result = $api_instance->imagesIdDelete($id);
+    $result = $api_instance->teamMemberImageFoldersIdDelete($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImageApi->imagesIdDelete: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TeamMemberImageFolderApi->teamMemberImageFoldersIdDelete: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -314,8 +314,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **imagesIdExistsGet**
-> \Swagger\Client\Model\InlineResponse2002 imagesIdExistsGet($id)
+# **teamMemberImageFoldersIdExistsGet**
+> \Swagger\Client\Model\InlineResponse2002 teamMemberImageFoldersIdExistsGet($id)
 
 Check whether a model instance exists in the data source.
 
@@ -329,14 +329,14 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
-$api_instance = new Tweak\Api\Api\ImageApi();
+$api_instance = new Tweak\Api\Api\TeamMemberImageFolderApi();
 $id = "id_example"; // string | Model id
 
 try {
-    $result = $api_instance->imagesIdExistsGet($id);
+    $result = $api_instance->teamMemberImageFoldersIdExistsGet($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImageApi->imagesIdExistsGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TeamMemberImageFolderApi->teamMemberImageFoldersIdExistsGet: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -362,8 +362,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **imagesIdFolderGet**
-> \Swagger\Client\Model\ImageFolder imagesIdFolderGet($id, $refresh)
+# **teamMemberImageFoldersIdFolderGet**
+> \Swagger\Client\Model\ImageFolder teamMemberImageFoldersIdFolderGet($id, $refresh)
 
 Fetches belongsTo relation folder.
 
@@ -377,15 +377,15 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
-$api_instance = new Tweak\Api\Api\ImageApi();
-$id = "id_example"; // string | Image id
+$api_instance = new Tweak\Api\Api\TeamMemberImageFolderApi();
+$id = "id_example"; // string | TeamMemberImageFolder id
 $refresh = true; // bool | 
 
 try {
-    $result = $api_instance->imagesIdFolderGet($id, $refresh);
+    $result = $api_instance->teamMemberImageFoldersIdFolderGet($id, $refresh);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImageApi->imagesIdFolderGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TeamMemberImageFolderApi->teamMemberImageFoldersIdFolderGet: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -394,7 +394,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **string**| Image id |
+ **id** | **string**| TeamMemberImageFolder id |
  **refresh** | **bool**|  | [optional]
 
 ### Return type
@@ -412,8 +412,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **imagesIdGet**
-> \Swagger\Client\Model\Image imagesIdGet($id, $filter)
+# **teamMemberImageFoldersIdGet**
+> \Swagger\Client\Model\TeamMemberImageFolder teamMemberImageFoldersIdGet($id, $filter)
 
 Find a model instance by {{id}} from the data source.
 
@@ -427,15 +427,15 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
-$api_instance = new Tweak\Api\Api\ImageApi();
+$api_instance = new Tweak\Api\Api\TeamMemberImageFolderApi();
 $id = "id_example"; // string | Model id
 $filter = "filter_example"; // string | Filter defining fields and include - must be a JSON-encoded string ({\"something\":\"value\"})
 
 try {
-    $result = $api_instance->imagesIdGet($id, $filter);
+    $result = $api_instance->teamMemberImageFoldersIdGet($id, $filter);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImageApi->imagesIdGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TeamMemberImageFolderApi->teamMemberImageFoldersIdGet: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -449,7 +449,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Image**](../Model/Image.md)
+[**\Swagger\Client\Model\TeamMemberImageFolder**](../Model/TeamMemberImageFolder.md)
 
 ### Authorization
 
@@ -462,8 +462,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **imagesIdHead**
-> \Swagger\Client\Model\InlineResponse2002 imagesIdHead($id)
+# **teamMemberImageFoldersIdHead**
+> \Swagger\Client\Model\InlineResponse2002 teamMemberImageFoldersIdHead($id)
 
 Check whether a model instance exists in the data source.
 
@@ -477,14 +477,14 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
-$api_instance = new Tweak\Api\Api\ImageApi();
+$api_instance = new Tweak\Api\Api\TeamMemberImageFolderApi();
 $id = "id_example"; // string | Model id
 
 try {
-    $result = $api_instance->imagesIdHead($id);
+    $result = $api_instance->teamMemberImageFoldersIdHead($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImageApi->imagesIdHead: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TeamMemberImageFolderApi->teamMemberImageFoldersIdHead: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -510,8 +510,58 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **imagesIdPatch**
-> \Swagger\Client\Model\Image imagesIdPatch($id, $data)
+# **teamMemberImageFoldersIdMemberGet**
+> \Swagger\Client\Model\TeamMember teamMemberImageFoldersIdMemberGet($id, $refresh)
+
+Fetches belongsTo relation member.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberImageFolderApi();
+$id = "id_example"; // string | TeamMemberImageFolder id
+$refresh = true; // bool | 
+
+try {
+    $result = $api_instance->teamMemberImageFoldersIdMemberGet($id, $refresh);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberImageFolderApi->teamMemberImageFoldersIdMemberGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMemberImageFolder id |
+ **refresh** | **bool**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\TeamMember**](../Model/TeamMember.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMemberImageFoldersIdPatch**
+> \Swagger\Client\Model\TeamMemberImageFolder teamMemberImageFoldersIdPatch($id, $data)
 
 Patch attributes for a model instance and persist it into the data source.
 
@@ -525,15 +575,15 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
-$api_instance = new Tweak\Api\Api\ImageApi();
-$id = "id_example"; // string | Image id
-$data = new \Swagger\Client\Model\Image(); // \Swagger\Client\Model\Image | An object of model property name/value pairs
+$api_instance = new Tweak\Api\Api\TeamMemberImageFolderApi();
+$id = "id_example"; // string | TeamMemberImageFolder id
+$data = new \Swagger\Client\Model\TeamMemberImageFolder(); // \Swagger\Client\Model\TeamMemberImageFolder | An object of model property name/value pairs
 
 try {
-    $result = $api_instance->imagesIdPatch($id, $data);
+    $result = $api_instance->teamMemberImageFoldersIdPatch($id, $data);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImageApi->imagesIdPatch: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TeamMemberImageFolderApi->teamMemberImageFoldersIdPatch: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -542,12 +592,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **string**| Image id |
- **data** | [**\Swagger\Client\Model\Image**](../Model/\Swagger\Client\Model\Image.md)| An object of model property name/value pairs | [optional]
+ **id** | **string**| TeamMemberImageFolder id |
+ **data** | [**\Swagger\Client\Model\TeamMemberImageFolder**](../Model/\Swagger\Client\Model\TeamMemberImageFolder.md)| An object of model property name/value pairs | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\Image**](../Model/Image.md)
+[**\Swagger\Client\Model\TeamMemberImageFolder**](../Model/TeamMemberImageFolder.md)
 
 ### Authorization
 
@@ -560,8 +610,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **imagesIdPut**
-> \Swagger\Client\Model\Image imagesIdPut($id, $data)
+# **teamMemberImageFoldersIdPut**
+> \Swagger\Client\Model\TeamMemberImageFolder teamMemberImageFoldersIdPut($id, $data)
 
 Replace attributes for a model instance and persist it into the data source.
 
@@ -575,15 +625,15 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
-$api_instance = new Tweak\Api\Api\ImageApi();
+$api_instance = new Tweak\Api\Api\TeamMemberImageFolderApi();
 $id = "id_example"; // string | Model id
-$data = new \Swagger\Client\Model\Image(); // \Swagger\Client\Model\Image | Model instance data
+$data = new \Swagger\Client\Model\TeamMemberImageFolder(); // \Swagger\Client\Model\TeamMemberImageFolder | Model instance data
 
 try {
-    $result = $api_instance->imagesIdPut($id, $data);
+    $result = $api_instance->teamMemberImageFoldersIdPut($id, $data);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImageApi->imagesIdPut: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TeamMemberImageFolderApi->teamMemberImageFoldersIdPut: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -593,11 +643,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| Model id |
- **data** | [**\Swagger\Client\Model\Image**](../Model/\Swagger\Client\Model\Image.md)| Model instance data | [optional]
+ **data** | [**\Swagger\Client\Model\TeamMemberImageFolder**](../Model/\Swagger\Client\Model\TeamMemberImageFolder.md)| Model instance data | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\Image**](../Model/Image.md)
+[**\Swagger\Client\Model\TeamMemberImageFolder**](../Model/TeamMemberImageFolder.md)
 
 ### Authorization
 
@@ -610,8 +660,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **imagesIdReplacePost**
-> \Swagger\Client\Model\Image imagesIdReplacePost($id, $data)
+# **teamMemberImageFoldersIdReplacePost**
+> \Swagger\Client\Model\TeamMemberImageFolder teamMemberImageFoldersIdReplacePost($id, $data)
 
 Replace attributes for a model instance and persist it into the data source.
 
@@ -625,15 +675,15 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
-$api_instance = new Tweak\Api\Api\ImageApi();
+$api_instance = new Tweak\Api\Api\TeamMemberImageFolderApi();
 $id = "id_example"; // string | Model id
-$data = new \Swagger\Client\Model\Image(); // \Swagger\Client\Model\Image | Model instance data
+$data = new \Swagger\Client\Model\TeamMemberImageFolder(); // \Swagger\Client\Model\TeamMemberImageFolder | Model instance data
 
 try {
-    $result = $api_instance->imagesIdReplacePost($id, $data);
+    $result = $api_instance->teamMemberImageFoldersIdReplacePost($id, $data);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImageApi->imagesIdReplacePost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TeamMemberImageFolderApi->teamMemberImageFoldersIdReplacePost: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -643,11 +693,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| Model id |
- **data** | [**\Swagger\Client\Model\Image**](../Model/\Swagger\Client\Model\Image.md)| Model instance data | [optional]
+ **data** | [**\Swagger\Client\Model\TeamMemberImageFolder**](../Model/\Swagger\Client\Model\TeamMemberImageFolder.md)| Model instance data | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\Image**](../Model/Image.md)
+[**\Swagger\Client\Model\TeamMemberImageFolder**](../Model/TeamMemberImageFolder.md)
 
 ### Authorization
 
@@ -660,58 +710,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **imagesIdTeamGet**
-> \Swagger\Client\Model\Team imagesIdTeamGet($id, $refresh)
-
-Fetches belongsTo relation team.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\ImageApi();
-$id = "id_example"; // string | Image id
-$refresh = true; // bool | 
-
-try {
-    $result = $api_instance->imagesIdTeamGet($id, $refresh);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ImageApi->imagesIdTeamGet: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Image id |
- **refresh** | **bool**|  | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\Team**](../Model/Team.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **imagesPatch**
-> \Swagger\Client\Model\Image imagesPatch($data)
+# **teamMemberImageFoldersPatch**
+> \Swagger\Client\Model\TeamMemberImageFolder teamMemberImageFoldersPatch($data)
 
 Patch an existing model instance or insert a new one into the data source.
 
@@ -725,14 +725,14 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
-$api_instance = new Tweak\Api\Api\ImageApi();
-$data = new \Swagger\Client\Model\Image(); // \Swagger\Client\Model\Image | Model instance data
+$api_instance = new Tweak\Api\Api\TeamMemberImageFolderApi();
+$data = new \Swagger\Client\Model\TeamMemberImageFolder(); // \Swagger\Client\Model\TeamMemberImageFolder | Model instance data
 
 try {
-    $result = $api_instance->imagesPatch($data);
+    $result = $api_instance->teamMemberImageFoldersPatch($data);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImageApi->imagesPatch: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TeamMemberImageFolderApi->teamMemberImageFoldersPatch: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -741,11 +741,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\Image**](../Model/\Swagger\Client\Model\Image.md)| Model instance data | [optional]
+ **data** | [**\Swagger\Client\Model\TeamMemberImageFolder**](../Model/\Swagger\Client\Model\TeamMemberImageFolder.md)| Model instance data | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\Image**](../Model/Image.md)
+[**\Swagger\Client\Model\TeamMemberImageFolder**](../Model/TeamMemberImageFolder.md)
 
 ### Authorization
 
@@ -758,8 +758,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **imagesPost**
-> \Swagger\Client\Model\Image imagesPost($data)
+# **teamMemberImageFoldersPost**
+> \Swagger\Client\Model\TeamMemberImageFolder teamMemberImageFoldersPost($data)
 
 Create a new instance of the model and persist it into the data source.
 
@@ -773,14 +773,14 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
-$api_instance = new Tweak\Api\Api\ImageApi();
-$data = new \Swagger\Client\Model\Image(); // \Swagger\Client\Model\Image | Model instance data
+$api_instance = new Tweak\Api\Api\TeamMemberImageFolderApi();
+$data = new \Swagger\Client\Model\TeamMemberImageFolder(); // \Swagger\Client\Model\TeamMemberImageFolder | Model instance data
 
 try {
-    $result = $api_instance->imagesPost($data);
+    $result = $api_instance->teamMemberImageFoldersPost($data);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImageApi->imagesPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TeamMemberImageFolderApi->teamMemberImageFoldersPost: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -789,11 +789,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\Image**](../Model/\Swagger\Client\Model\Image.md)| Model instance data | [optional]
+ **data** | [**\Swagger\Client\Model\TeamMemberImageFolder**](../Model/\Swagger\Client\Model\TeamMemberImageFolder.md)| Model instance data | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\Image**](../Model/Image.md)
+[**\Swagger\Client\Model\TeamMemberImageFolder**](../Model/TeamMemberImageFolder.md)
 
 ### Authorization
 
@@ -806,8 +806,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **imagesPut**
-> \Swagger\Client\Model\Image imagesPut($data)
+# **teamMemberImageFoldersPut**
+> \Swagger\Client\Model\TeamMemberImageFolder teamMemberImageFoldersPut($data)
 
 Replace an existing model instance or insert a new one into the data source.
 
@@ -821,14 +821,14 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
-$api_instance = new Tweak\Api\Api\ImageApi();
-$data = new \Swagger\Client\Model\Image(); // \Swagger\Client\Model\Image | Model instance data
+$api_instance = new Tweak\Api\Api\TeamMemberImageFolderApi();
+$data = new \Swagger\Client\Model\TeamMemberImageFolder(); // \Swagger\Client\Model\TeamMemberImageFolder | Model instance data
 
 try {
-    $result = $api_instance->imagesPut($data);
+    $result = $api_instance->teamMemberImageFoldersPut($data);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImageApi->imagesPut: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TeamMemberImageFolderApi->teamMemberImageFoldersPut: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -837,11 +837,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\Image**](../Model/\Swagger\Client\Model\Image.md)| Model instance data | [optional]
+ **data** | [**\Swagger\Client\Model\TeamMemberImageFolder**](../Model/\Swagger\Client\Model\TeamMemberImageFolder.md)| Model instance data | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\Image**](../Model/Image.md)
+[**\Swagger\Client\Model\TeamMemberImageFolder**](../Model/TeamMemberImageFolder.md)
 
 ### Authorization
 
@@ -854,8 +854,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **imagesReplaceOrCreatePost**
-> \Swagger\Client\Model\Image imagesReplaceOrCreatePost($data)
+# **teamMemberImageFoldersReplaceOrCreatePost**
+> \Swagger\Client\Model\TeamMemberImageFolder teamMemberImageFoldersReplaceOrCreatePost($data)
 
 Replace an existing model instance or insert a new one into the data source.
 
@@ -869,14 +869,14 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
-$api_instance = new Tweak\Api\Api\ImageApi();
-$data = new \Swagger\Client\Model\Image(); // \Swagger\Client\Model\Image | Model instance data
+$api_instance = new Tweak\Api\Api\TeamMemberImageFolderApi();
+$data = new \Swagger\Client\Model\TeamMemberImageFolder(); // \Swagger\Client\Model\TeamMemberImageFolder | Model instance data
 
 try {
-    $result = $api_instance->imagesReplaceOrCreatePost($data);
+    $result = $api_instance->teamMemberImageFoldersReplaceOrCreatePost($data);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImageApi->imagesReplaceOrCreatePost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TeamMemberImageFolderApi->teamMemberImageFoldersReplaceOrCreatePost: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -885,11 +885,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\Image**](../Model/\Swagger\Client\Model\Image.md)| Model instance data | [optional]
+ **data** | [**\Swagger\Client\Model\TeamMemberImageFolder**](../Model/\Swagger\Client\Model\TeamMemberImageFolder.md)| Model instance data | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\Image**](../Model/Image.md)
+[**\Swagger\Client\Model\TeamMemberImageFolder**](../Model/TeamMemberImageFolder.md)
 
 ### Authorization
 
@@ -902,8 +902,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **imagesUpdatePost**
-> \Swagger\Client\Model\InlineResponse2001 imagesUpdatePost($where, $data)
+# **teamMemberImageFoldersUpdatePost**
+> \Swagger\Client\Model\InlineResponse2001 teamMemberImageFoldersUpdatePost($where, $data)
 
 Update instances of the model matched by {{where}} from the data source.
 
@@ -917,15 +917,15 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
-$api_instance = new Tweak\Api\Api\ImageApi();
+$api_instance = new Tweak\Api\Api\TeamMemberImageFolderApi();
 $where = "where_example"; // string | Criteria to match model instances
-$data = new \Swagger\Client\Model\Image(); // \Swagger\Client\Model\Image | An object of model property name/value pairs
+$data = new \Swagger\Client\Model\TeamMemberImageFolder(); // \Swagger\Client\Model\TeamMemberImageFolder | An object of model property name/value pairs
 
 try {
-    $result = $api_instance->imagesUpdatePost($where, $data);
+    $result = $api_instance->teamMemberImageFoldersUpdatePost($where, $data);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImageApi->imagesUpdatePost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TeamMemberImageFolderApi->teamMemberImageFoldersUpdatePost: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -935,7 +935,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **where** | **string**| Criteria to match model instances | [optional]
- **data** | [**\Swagger\Client\Model\Image**](../Model/\Swagger\Client\Model\Image.md)| An object of model property name/value pairs | [optional]
+ **data** | [**\Swagger\Client\Model\TeamMemberImageFolder**](../Model/\Swagger\Client\Model\TeamMemberImageFolder.md)| An object of model property name/value pairs | [optional]
 
 ### Return type
 
@@ -952,8 +952,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **imagesUpsertWithWherePost**
-> \Swagger\Client\Model\Image imagesUpsertWithWherePost($where, $data)
+# **teamMemberImageFoldersUpsertWithWherePost**
+> \Swagger\Client\Model\TeamMemberImageFolder teamMemberImageFoldersUpsertWithWherePost($where, $data)
 
 Update an existing model instance or insert a new one into the data source based on the where criteria.
 
@@ -967,15 +967,15 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
-$api_instance = new Tweak\Api\Api\ImageApi();
+$api_instance = new Tweak\Api\Api\TeamMemberImageFolderApi();
 $where = "where_example"; // string | Criteria to match model instances
-$data = new \Swagger\Client\Model\Image(); // \Swagger\Client\Model\Image | An object of model property name/value pairs
+$data = new \Swagger\Client\Model\TeamMemberImageFolder(); // \Swagger\Client\Model\TeamMemberImageFolder | An object of model property name/value pairs
 
 try {
-    $result = $api_instance->imagesUpsertWithWherePost($where, $data);
+    $result = $api_instance->teamMemberImageFoldersUpsertWithWherePost($where, $data);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImageApi->imagesUpsertWithWherePost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TeamMemberImageFolderApi->teamMemberImageFoldersUpsertWithWherePost: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -985,11 +985,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **where** | **string**| Criteria to match model instances | [optional]
- **data** | [**\Swagger\Client\Model\Image**](../Model/\Swagger\Client\Model\Image.md)| An object of model property name/value pairs | [optional]
+ **data** | [**\Swagger\Client\Model\TeamMemberImageFolder**](../Model/\Swagger\Client\Model\TeamMemberImageFolder.md)| An object of model property name/value pairs | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\Image**](../Model/Image.md)
+[**\Swagger\Client\Model\TeamMemberImageFolder**](../Model/TeamMemberImageFolder.md)
 
 ### Authorization
 

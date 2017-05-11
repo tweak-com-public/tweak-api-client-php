@@ -1,6 +1,6 @@
 <?php
 /**
- * TeamTest
+ * ImageFolderTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Tweak\Api;
 
 /**
- * TeamTest Class Doc Comment
+ * ImageFolderTest Class Doc Comment
  *
  * @category    Class */
-// * @description Team
+// * @description ImageFolder
 /**
  * @package     Tweak\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class TeamTest extends \PHPUnit_Framework_TestCase
+class ImageFolderTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,9 +88,9 @@ class TeamTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "Team"
+     * Test "ImageFolder"
      */
-    public function testTeam()
+    public function testImageFolder()
     {
 
     }
@@ -104,17 +104,9 @@ class TeamTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "logo"
+     * Test attribute "path"
      */
-    public function testPropertyLogo()
-    {
-
-    }
-
-    /**
-     * Test attribute "subdomain"
-     */
-    public function testPropertySubdomain()
+    public function testPropertyPath()
     {
 
     }
@@ -144,113 +136,17 @@ class TeamTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "icon"
+     * Test attribute "teamId"
      */
-    public function testPropertyIcon()
+    public function testPropertyTeamId()
     {
 
     }
 
     /**
-     * Test attribute "clientKey"
+     * Test attribute "parentId"
      */
-    public function testPropertyClientKey()
-    {
-
-    }
-
-    /**
-     * Test attribute "javaScriptKey"
-     */
-    public function testPropertyJavaScriptKey()
-    {
-
-    }
-
-    /**
-     * Test attribute "restApiKey"
-     */
-    public function testPropertyRestApiKey()
-    {
-
-    }
-
-    /**
-     * Test attribute "windowsKey"
-     */
-    public function testPropertyWindowsKey()
-    {
-
-    }
-
-    /**
-     * Test attribute "masterKey"
-     */
-    public function testPropertyMasterKey()
-    {
-
-    }
-
-    /**
-     * Test attribute "status"
-     */
-    public function testPropertyStatus()
-    {
-
-    }
-
-    /**
-     * Test attribute "members"
-     */
-    public function testPropertyMembers()
-    {
-
-    }
-
-    /**
-     * Test attribute "teamMembers"
-     */
-    public function testPropertyTeamMembers()
-    {
-
-    }
-
-    /**
-     * Test attribute "portals"
-     */
-    public function testPropertyPortals()
-    {
-
-    }
-
-    /**
-     * Test attribute "templates"
-     */
-    public function testPropertyTemplates()
-    {
-
-    }
-
-    /**
-     * Test attribute "brand"
-     */
-    public function testPropertyBrand()
-    {
-
-    }
-
-    /**
-     * Test attribute "templateFolders"
-     */
-    public function testPropertyTemplateFolders()
-    {
-
-    }
-
-    /**
-     * Test attribute "workflows"
-     */
-    public function testPropertyWorkflows()
+    public function testPropertyParentId()
     {
 
     }
@@ -264,9 +160,41 @@ class TeamTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "imageFolders"
+     * Test attribute "team"
      */
-    public function testPropertyImageFolders()
+    public function testPropertyTeam()
+    {
+
+    }
+
+    /**
+     * Test attribute "portals"
+     */
+    public function testPropertyPortals()
+    {
+
+    }
+
+    /**
+     * Test attribute "members"
+     */
+    public function testPropertyMembers()
+    {
+
+    }
+
+    /**
+     * Test attribute "parent"
+     */
+    public function testPropertyParent()
+    {
+
+    }
+
+    /**
+     * Test attribute "children"
+     */
+    public function testPropertyChildren()
     {
 
     }

@@ -120,6 +120,14 @@ class ImageTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "path"
+     */
+    public function testPropertyPath()
+    {
+
+    }
+
+    /**
      * Test attribute "created"
      */
     public function testPropertyCreated()
@@ -139,6 +147,38 @@ class ImageTest extends \PHPUnit_Framework_TestCase
      * Test attribute "id"
      */
     public function testPropertyId()
+    {
+
+    }
+
+    /**
+     * Test attribute "teamId"
+     */
+    public function testPropertyTeamId()
+    {
+
+    }
+
+    /**
+     * Test attribute "folderId"
+     */
+    public function testPropertyFolderId()
+    {
+
+    }
+
+    /**
+     * Test attribute "folder"
+     */
+    public function testPropertyFolder()
+    {
+
+    }
+
+    /**
+     * Test attribute "team"
+     */
+    public function testPropertyTeam()
     {
 
     }

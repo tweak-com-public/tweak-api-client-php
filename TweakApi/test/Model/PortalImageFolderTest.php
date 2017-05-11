@@ -1,6 +1,6 @@
 <?php
 /**
- * TeamTest
+ * PortalImageFolderTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Tweak\Api;
 
 /**
- * TeamTest Class Doc Comment
+ * PortalImageFolderTest Class Doc Comment
  *
  * @category    Class */
-// * @description Team
+// * @description PortalImageFolder
 /**
  * @package     Tweak\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class TeamTest extends \PHPUnit_Framework_TestCase
+class PortalImageFolderTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,49 +88,9 @@ class TeamTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "Team"
+     * Test "PortalImageFolder"
      */
-    public function testTeam()
-    {
-
-    }
-
-    /**
-     * Test attribute "name"
-     */
-    public function testPropertyName()
-    {
-
-    }
-
-    /**
-     * Test attribute "logo"
-     */
-    public function testPropertyLogo()
-    {
-
-    }
-
-    /**
-     * Test attribute "subdomain"
-     */
-    public function testPropertySubdomain()
-    {
-
-    }
-
-    /**
-     * Test attribute "created"
-     */
-    public function testPropertyCreated()
-    {
-
-    }
-
-    /**
-     * Test attribute "modified"
-     */
-    public function testPropertyModified()
+    public function testPortalImageFolder()
     {
 
     }
@@ -144,129 +104,33 @@ class TeamTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "icon"
+     * Test attribute "portalId"
      */
-    public function testPropertyIcon()
+    public function testPropertyPortalId()
     {
 
     }
 
     /**
-     * Test attribute "clientKey"
+     * Test attribute "folderId"
      */
-    public function testPropertyClientKey()
+    public function testPropertyFolderId()
     {
 
     }
 
     /**
-     * Test attribute "javaScriptKey"
+     * Test attribute "portal"
      */
-    public function testPropertyJavaScriptKey()
+    public function testPropertyPortal()
     {
 
     }
 
     /**
-     * Test attribute "restApiKey"
+     * Test attribute "folder"
      */
-    public function testPropertyRestApiKey()
-    {
-
-    }
-
-    /**
-     * Test attribute "windowsKey"
-     */
-    public function testPropertyWindowsKey()
-    {
-
-    }
-
-    /**
-     * Test attribute "masterKey"
-     */
-    public function testPropertyMasterKey()
-    {
-
-    }
-
-    /**
-     * Test attribute "status"
-     */
-    public function testPropertyStatus()
-    {
-
-    }
-
-    /**
-     * Test attribute "members"
-     */
-    public function testPropertyMembers()
-    {
-
-    }
-
-    /**
-     * Test attribute "teamMembers"
-     */
-    public function testPropertyTeamMembers()
-    {
-
-    }
-
-    /**
-     * Test attribute "portals"
-     */
-    public function testPropertyPortals()
-    {
-
-    }
-
-    /**
-     * Test attribute "templates"
-     */
-    public function testPropertyTemplates()
-    {
-
-    }
-
-    /**
-     * Test attribute "brand"
-     */
-    public function testPropertyBrand()
-    {
-
-    }
-
-    /**
-     * Test attribute "templateFolders"
-     */
-    public function testPropertyTemplateFolders()
-    {
-
-    }
-
-    /**
-     * Test attribute "workflows"
-     */
-    public function testPropertyWorkflows()
-    {
-
-    }
-
-    /**
-     * Test attribute "images"
-     */
-    public function testPropertyImages()
-    {
-
-    }
-
-    /**
-     * Test attribute "imageFolders"
-     */
-    public function testPropertyImageFolders()
+    public function testPropertyFolder()
     {
 
     }
