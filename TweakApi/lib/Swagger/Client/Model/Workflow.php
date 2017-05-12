@@ -67,7 +67,7 @@ class Workflow implements ArrayAccess
       */
     protected static $swaggerTypes = array(
         'name' => 'string',
-        'form' => 'object',
+        'form' => 'object[]',
         'edited' => '\DateTime',
         'created' => '\DateTime',
         'modified' => '\DateTime',
@@ -240,7 +240,7 @@ class Workflow implements ArrayAccess
 
     /**
      * Gets form
-     * @return object
+     * @return object[]
      */
     public function getForm()
     {
@@ -249,7 +249,7 @@ class Workflow implements ArrayAccess
 
     /**
      * Sets form
-     * @param object $form
+     * @param object[] $form
      * @return $this
      */
     public function setForm($form)
