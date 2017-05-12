@@ -96,6 +96,30 @@ class PortalTemplateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "path"
+     */
+    public function testPropertyPath()
+    {
+
+    }
+
+    /**
+     * Test attribute "created"
+     */
+    public function testPropertyCreated()
+    {
+
+    }
+
+    /**
+     * Test attribute "modified"
+     */
+    public function testPropertyModified()
+    {
+
+    }
+
+    /**
      * Test attribute "id"
      */
     public function testPropertyId()
@@ -120,6 +144,14 @@ class PortalTemplateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "folderId"
+     */
+    public function testPropertyFolderId()
+    {
+
+    }
+
+    /**
      * Test attribute "portal"
      */
     public function testPropertyPortal()
@@ -131,6 +163,14 @@ class PortalTemplateTest extends \PHPUnit_Framework_TestCase
      * Test attribute "template"
      */
     public function testPropertyTemplate()
+    {
+
+    }
+
+    /**
+     * Test attribute "folder"
+     */
+    public function testPropertyFolder()
     {
 
     }

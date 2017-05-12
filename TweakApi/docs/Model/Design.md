@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **status** | **string** |  | [optional] [default to 'pendingAction']
 **edited** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **expired** | [**\DateTime**](\DateTime.md) |  | [optional] 
+**path** | **string** |  | [optional] [default to '/']
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **modified** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **id** | **string** |  | [optional] 

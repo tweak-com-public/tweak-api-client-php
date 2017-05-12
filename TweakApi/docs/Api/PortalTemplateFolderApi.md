@@ -1523,7 +1523,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **portalTemplateFoldersIdTemplatesRelFkPut**
-> \Swagger\Client\Model\PortalTemplateFolderThrough portalTemplateFoldersIdTemplatesRelFkPut($id, $fk, $data)
+> \Swagger\Client\Model\PortalTemplate portalTemplateFoldersIdTemplatesRelFkPut($id, $fk, $data)
 
 Add a related item by id for templates.
 
@@ -1540,7 +1540,7 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 $api_instance = new Tweak\Api\Api\PortalTemplateFolderApi();
 $id = "id_example"; // string | PortalTemplateFolder id
 $fk = "fk_example"; // string | Foreign key for templates
-$data = new \Swagger\Client\Model\PortalTemplateFolderThrough(); // \Swagger\Client\Model\PortalTemplateFolderThrough | 
+$data = new \Swagger\Client\Model\PortalTemplate(); // \Swagger\Client\Model\PortalTemplate | 
 
 try {
     $result = $api_instance->portalTemplateFoldersIdTemplatesRelFkPut($id, $fk, $data);
@@ -1557,11 +1557,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| PortalTemplateFolder id |
  **fk** | **string**| Foreign key for templates |
- **data** | [**\Swagger\Client\Model\PortalTemplateFolderThrough**](../Model/\Swagger\Client\Model\PortalTemplateFolderThrough.md)|  | [optional]
+ **data** | [**\Swagger\Client\Model\PortalTemplate**](../Model/\Swagger\Client\Model\PortalTemplate.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\PortalTemplateFolderThrough**](../Model/PortalTemplateFolderThrough.md)
+[**\Swagger\Client\Model\PortalTemplate**](../Model/PortalTemplate.md)
 
 ### Authorization
 

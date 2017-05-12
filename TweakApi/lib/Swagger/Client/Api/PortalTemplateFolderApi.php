@@ -2952,8 +2952,8 @@ class PortalTemplateFolderApi
      *
      * @param string $id PortalTemplateFolder id (required)
      * @param string $fk Foreign key for templates (required)
-     * @param \Swagger\Client\Model\PortalTemplateFolderThrough $data  (optional)
-     * @return \Swagger\Client\Model\PortalTemplateFolderThrough
+     * @param \Swagger\Client\Model\PortalTemplate $data  (optional)
+     * @return \Swagger\Client\Model\PortalTemplate
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
     public function portalTemplateFoldersIdTemplatesRelFkPut($id, $fk, $data = null)
@@ -2969,8 +2969,8 @@ class PortalTemplateFolderApi
      *
      * @param string $id PortalTemplateFolder id (required)
      * @param string $fk Foreign key for templates (required)
-     * @param \Swagger\Client\Model\PortalTemplateFolderThrough $data  (optional)
-     * @return array of \Swagger\Client\Model\PortalTemplateFolderThrough, HTTP status code, HTTP response headers (array of strings)
+     * @param \Swagger\Client\Model\PortalTemplate $data  (optional)
+     * @return array of \Swagger\Client\Model\PortalTemplate, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
     public function portalTemplateFoldersIdTemplatesRelFkPutWithHttpInfo($id, $fk, $data = null)
@@ -3039,15 +3039,15 @@ class PortalTemplateFolderApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\PortalTemplateFolderThrough',
+                '\Swagger\Client\Model\PortalTemplate',
                 '/PortalTemplateFolders/{id}/templates/rel/{fk}'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\PortalTemplateFolderThrough', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\PortalTemplate', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\PortalTemplateFolderThrough', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\PortalTemplate', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

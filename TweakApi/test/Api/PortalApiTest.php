@@ -1168,12 +1168,122 @@ class PortalApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for portalsIdTemplateFoldersNkTemplatesFkRelDelete
+     *
+     * Unlink folder with Template and Portal.
+     *
+     */
+    public function testPortalsIdTemplateFoldersNkTemplatesFkRelDelete()
+    {
+
+    }
+
+    /**
+     * Test case for portalsIdTemplateFoldersNkTemplatesFkRelPut
+     *
+     * Link folder with Template and Portal.
+     *
+     */
+    public function testPortalsIdTemplateFoldersNkTemplatesFkRelPut()
+    {
+
+    }
+
+    /**
      * Test case for portalsIdTemplateFoldersPost
      *
      * Creates a new instance in templateFolders of this model..
      *
      */
     public function testPortalsIdTemplateFoldersPost()
+    {
+
+    }
+
+    /**
+     * Test case for portalsIdTemplateFoldersRootTemplatesGet
+     *
+     * List templates on root folder.
+     *
+     */
+    public function testPortalsIdTemplateFoldersRootTemplatesGet()
+    {
+
+    }
+
+    /**
+     * Test case for portalsIdTemplateRelsCountGet
+     *
+     * Counts templateRels of Portal..
+     *
+     */
+    public function testPortalsIdTemplateRelsCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for portalsIdTemplateRelsDelete
+     *
+     * Deletes all templateRels of this model..
+     *
+     */
+    public function testPortalsIdTemplateRelsDelete()
+    {
+
+    }
+
+    /**
+     * Test case for portalsIdTemplateRelsFkDelete
+     *
+     * Delete a related item by id for templateRels..
+     *
+     */
+    public function testPortalsIdTemplateRelsFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for portalsIdTemplateRelsFkGet
+     *
+     * Find a related item by id for templateRels..
+     *
+     */
+    public function testPortalsIdTemplateRelsFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for portalsIdTemplateRelsFkPut
+     *
+     * Update a related item by id for templateRels..
+     *
+     */
+    public function testPortalsIdTemplateRelsFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for portalsIdTemplateRelsGet
+     *
+     * Queries templateRels of Portal..
+     *
+     */
+    public function testPortalsIdTemplateRelsGet()
+    {
+
+    }
+
+    /**
+     * Test case for portalsIdTemplateRelsPost
+     *
+     * Creates a new instance in templateRels of this model..
+     *
+     */
+    public function testPortalsIdTemplateRelsPost()
     {
 
     }

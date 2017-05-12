@@ -14142,6 +14142,794 @@ class TeamApi
     }
 
     /**
+     * Operation teamsIdPortalsNkTemplateRelsCountGet
+     *
+     * Counts templateRels of Portal.
+     *
+     * @param string $id Team id (required)
+     * @param string $nk Foreign key for portals. (required)
+     * @param string $where Criteria to match model instances (optional)
+     * @return \Swagger\Client\Model\InlineResponse200
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamsIdPortalsNkTemplateRelsCountGet($id, $nk, $where = null)
+    {
+        list($response) = $this->teamsIdPortalsNkTemplateRelsCountGetWithHttpInfo($id, $nk, $where);
+        return $response;
+    }
+
+    /**
+     * Operation teamsIdPortalsNkTemplateRelsCountGetWithHttpInfo
+     *
+     * Counts templateRels of Portal.
+     *
+     * @param string $id Team id (required)
+     * @param string $nk Foreign key for portals. (required)
+     * @param string $where Criteria to match model instances (optional)
+     * @return array of \Swagger\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamsIdPortalsNkTemplateRelsCountGetWithHttpInfo($id, $nk, $where = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamsIdPortalsNkTemplateRelsCountGet');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling teamsIdPortalsNkTemplateRelsCountGet');
+        }
+        // parse inputs
+        $resourcePath = "/Teams/{id}/portals/{nk}/templateRels/count";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($where !== null) {
+            $queryParams['where'] = $this->apiClient->getSerializer()->toQueryValue($where);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\InlineResponse200',
+                '/Teams/{id}/portals/{nk}/templateRels/count'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse200', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamsIdPortalsNkTemplateRelsDelete
+     *
+     * Deletes all templateRels of this model.
+     *
+     * @param string $id Team id (required)
+     * @param string $nk Foreign key for portals. (required)
+     * @return void
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamsIdPortalsNkTemplateRelsDelete($id, $nk)
+    {
+        list($response) = $this->teamsIdPortalsNkTemplateRelsDeleteWithHttpInfo($id, $nk);
+        return $response;
+    }
+
+    /**
+     * Operation teamsIdPortalsNkTemplateRelsDeleteWithHttpInfo
+     *
+     * Deletes all templateRels of this model.
+     *
+     * @param string $id Team id (required)
+     * @param string $nk Foreign key for portals. (required)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamsIdPortalsNkTemplateRelsDeleteWithHttpInfo($id, $nk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamsIdPortalsNkTemplateRelsDelete');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling teamsIdPortalsNkTemplateRelsDelete');
+        }
+        // parse inputs
+        $resourcePath = "/Teams/{id}/portals/{nk}/templateRels";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/Teams/{id}/portals/{nk}/templateRels'
+            );
+
+            return array(null, $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamsIdPortalsNkTemplateRelsFkDelete
+     *
+     * Delete a related item by id for templateRels.
+     *
+     * @param string $id Team id (required)
+     * @param string $nk Foreign key for portals. (required)
+     * @param string $fk Foreign key for templateRels (required)
+     * @return void
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamsIdPortalsNkTemplateRelsFkDelete($id, $nk, $fk)
+    {
+        list($response) = $this->teamsIdPortalsNkTemplateRelsFkDeleteWithHttpInfo($id, $nk, $fk);
+        return $response;
+    }
+
+    /**
+     * Operation teamsIdPortalsNkTemplateRelsFkDeleteWithHttpInfo
+     *
+     * Delete a related item by id for templateRels.
+     *
+     * @param string $id Team id (required)
+     * @param string $nk Foreign key for portals. (required)
+     * @param string $fk Foreign key for templateRels (required)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamsIdPortalsNkTemplateRelsFkDeleteWithHttpInfo($id, $nk, $fk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamsIdPortalsNkTemplateRelsFkDelete');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling teamsIdPortalsNkTemplateRelsFkDelete');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling teamsIdPortalsNkTemplateRelsFkDelete');
+        }
+        // parse inputs
+        $resourcePath = "/Teams/{id}/portals/{nk}/templateRels/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/Teams/{id}/portals/{nk}/templateRels/{fk}'
+            );
+
+            return array(null, $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamsIdPortalsNkTemplateRelsFkGet
+     *
+     * Find a related item by id for templateRels.
+     *
+     * @param string $id Team id (required)
+     * @param string $nk Foreign key for portals. (required)
+     * @param string $fk Foreign key for templateRels (required)
+     * @return \Swagger\Client\Model\PortalTemplate
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamsIdPortalsNkTemplateRelsFkGet($id, $nk, $fk)
+    {
+        list($response) = $this->teamsIdPortalsNkTemplateRelsFkGetWithHttpInfo($id, $nk, $fk);
+        return $response;
+    }
+
+    /**
+     * Operation teamsIdPortalsNkTemplateRelsFkGetWithHttpInfo
+     *
+     * Find a related item by id for templateRels.
+     *
+     * @param string $id Team id (required)
+     * @param string $nk Foreign key for portals. (required)
+     * @param string $fk Foreign key for templateRels (required)
+     * @return array of \Swagger\Client\Model\PortalTemplate, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamsIdPortalsNkTemplateRelsFkGetWithHttpInfo($id, $nk, $fk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamsIdPortalsNkTemplateRelsFkGet');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling teamsIdPortalsNkTemplateRelsFkGet');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling teamsIdPortalsNkTemplateRelsFkGet');
+        }
+        // parse inputs
+        $resourcePath = "/Teams/{id}/portals/{nk}/templateRels/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\PortalTemplate',
+                '/Teams/{id}/portals/{nk}/templateRels/{fk}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\PortalTemplate', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\PortalTemplate', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamsIdPortalsNkTemplateRelsFkPut
+     *
+     * Update a related item by id for templateRels.
+     *
+     * @param string $id Team id (required)
+     * @param string $nk Foreign key for portals. (required)
+     * @param string $fk Foreign key for templateRels (required)
+     * @param \Swagger\Client\Model\PortalTemplate $data  (optional)
+     * @return \Swagger\Client\Model\PortalTemplate
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamsIdPortalsNkTemplateRelsFkPut($id, $nk, $fk, $data = null)
+    {
+        list($response) = $this->teamsIdPortalsNkTemplateRelsFkPutWithHttpInfo($id, $nk, $fk, $data);
+        return $response;
+    }
+
+    /**
+     * Operation teamsIdPortalsNkTemplateRelsFkPutWithHttpInfo
+     *
+     * Update a related item by id for templateRels.
+     *
+     * @param string $id Team id (required)
+     * @param string $nk Foreign key for portals. (required)
+     * @param string $fk Foreign key for templateRels (required)
+     * @param \Swagger\Client\Model\PortalTemplate $data  (optional)
+     * @return array of \Swagger\Client\Model\PortalTemplate, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamsIdPortalsNkTemplateRelsFkPutWithHttpInfo($id, $nk, $fk, $data = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamsIdPortalsNkTemplateRelsFkPut');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling teamsIdPortalsNkTemplateRelsFkPut');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling teamsIdPortalsNkTemplateRelsFkPut');
+        }
+        // parse inputs
+        $resourcePath = "/Teams/{id}/portals/{nk}/templateRels/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\PortalTemplate',
+                '/Teams/{id}/portals/{nk}/templateRels/{fk}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\PortalTemplate', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\PortalTemplate', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamsIdPortalsNkTemplateRelsGet
+     *
+     * Queries templateRels of Portal.
+     *
+     * @param string $id Team id (required)
+     * @param string $nk Foreign key for portals. (required)
+     * @param string $filter  (optional)
+     * @return \Swagger\Client\Model\PortalTemplate[]
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamsIdPortalsNkTemplateRelsGet($id, $nk, $filter = null)
+    {
+        list($response) = $this->teamsIdPortalsNkTemplateRelsGetWithHttpInfo($id, $nk, $filter);
+        return $response;
+    }
+
+    /**
+     * Operation teamsIdPortalsNkTemplateRelsGetWithHttpInfo
+     *
+     * Queries templateRels of Portal.
+     *
+     * @param string $id Team id (required)
+     * @param string $nk Foreign key for portals. (required)
+     * @param string $filter  (optional)
+     * @return array of \Swagger\Client\Model\PortalTemplate[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamsIdPortalsNkTemplateRelsGetWithHttpInfo($id, $nk, $filter = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamsIdPortalsNkTemplateRelsGet');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling teamsIdPortalsNkTemplateRelsGet');
+        }
+        // parse inputs
+        $resourcePath = "/Teams/{id}/portals/{nk}/templateRels";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($filter !== null) {
+            $queryParams['filter'] = $this->apiClient->getSerializer()->toQueryValue($filter);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\PortalTemplate[]',
+                '/Teams/{id}/portals/{nk}/templateRels'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\PortalTemplate[]', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\PortalTemplate[]', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamsIdPortalsNkTemplateRelsPost
+     *
+     * Creates a new instance in templateRels of this model.
+     *
+     * @param string $id Team id (required)
+     * @param string $nk Foreign key for portals. (required)
+     * @param \Swagger\Client\Model\PortalTemplate $data  (optional)
+     * @return \Swagger\Client\Model\PortalTemplate
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamsIdPortalsNkTemplateRelsPost($id, $nk, $data = null)
+    {
+        list($response) = $this->teamsIdPortalsNkTemplateRelsPostWithHttpInfo($id, $nk, $data);
+        return $response;
+    }
+
+    /**
+     * Operation teamsIdPortalsNkTemplateRelsPostWithHttpInfo
+     *
+     * Creates a new instance in templateRels of this model.
+     *
+     * @param string $id Team id (required)
+     * @param string $nk Foreign key for portals. (required)
+     * @param \Swagger\Client\Model\PortalTemplate $data  (optional)
+     * @return array of \Swagger\Client\Model\PortalTemplate, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamsIdPortalsNkTemplateRelsPostWithHttpInfo($id, $nk, $data = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamsIdPortalsNkTemplateRelsPost');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling teamsIdPortalsNkTemplateRelsPost');
+        }
+        // parse inputs
+        $resourcePath = "/Teams/{id}/portals/{nk}/templateRels";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\PortalTemplate',
+                '/Teams/{id}/portals/{nk}/templateRels'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\PortalTemplate', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\PortalTemplate', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation teamsIdPortalsNkTemplatesCountGet
      *
      * Counts templates of Portal.

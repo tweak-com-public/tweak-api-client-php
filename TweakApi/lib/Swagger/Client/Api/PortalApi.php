@@ -10261,6 +10261,270 @@ class PortalApi
     }
 
     /**
+     * Operation portalsIdTemplateFoldersNkTemplatesFkRelDelete
+     *
+     * Unlink folder with Template and Portal
+     *
+     * @param string $id Portal id (required)
+     * @param string $id2 Portal id (required)
+     * @param string $nk PortalTemplateFolder id (required)
+     * @param string $fk Template id (required)
+     * @return \Swagger\Client\Model\PortalTemplate
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdTemplateFoldersNkTemplatesFkRelDelete($id, $id2, $nk, $fk)
+    {
+        list($response) = $this->portalsIdTemplateFoldersNkTemplatesFkRelDeleteWithHttpInfo($id, $id2, $nk, $fk);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdTemplateFoldersNkTemplatesFkRelDeleteWithHttpInfo
+     *
+     * Unlink folder with Template and Portal
+     *
+     * @param string $id Portal id (required)
+     * @param string $id2 Portal id (required)
+     * @param string $nk PortalTemplateFolder id (required)
+     * @param string $fk Template id (required)
+     * @return array of \Swagger\Client\Model\PortalTemplate, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdTemplateFoldersNkTemplatesFkRelDeleteWithHttpInfo($id, $id2, $nk, $fk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdTemplateFoldersNkTemplatesFkRelDelete');
+        }
+        // verify the required parameter 'id2' is set
+        if ($id2 === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id2 when calling portalsIdTemplateFoldersNkTemplatesFkRelDelete');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdTemplateFoldersNkTemplatesFkRelDelete');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling portalsIdTemplateFoldersNkTemplatesFkRelDelete');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/templateFolders/{nk}/templates/{fk}/rel";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($id2 !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id2),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\PortalTemplate',
+                '/Portals/{id}/templateFolders/{nk}/templates/{fk}/rel'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\PortalTemplate', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\PortalTemplate', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdTemplateFoldersNkTemplatesFkRelPut
+     *
+     * Link folder with Template and Portal
+     *
+     * @param string $id Portal id (required)
+     * @param string $id2 Portal id (required)
+     * @param string $nk PortalTemplateFolder id (required)
+     * @param string $fk Template id (required)
+     * @return \Swagger\Client\Model\PortalTemplate
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdTemplateFoldersNkTemplatesFkRelPut($id, $id2, $nk, $fk)
+    {
+        list($response) = $this->portalsIdTemplateFoldersNkTemplatesFkRelPutWithHttpInfo($id, $id2, $nk, $fk);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdTemplateFoldersNkTemplatesFkRelPutWithHttpInfo
+     *
+     * Link folder with Template and Portal
+     *
+     * @param string $id Portal id (required)
+     * @param string $id2 Portal id (required)
+     * @param string $nk PortalTemplateFolder id (required)
+     * @param string $fk Template id (required)
+     * @return array of \Swagger\Client\Model\PortalTemplate, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdTemplateFoldersNkTemplatesFkRelPutWithHttpInfo($id, $id2, $nk, $fk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdTemplateFoldersNkTemplatesFkRelPut');
+        }
+        // verify the required parameter 'id2' is set
+        if ($id2 === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id2 when calling portalsIdTemplateFoldersNkTemplatesFkRelPut');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdTemplateFoldersNkTemplatesFkRelPut');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling portalsIdTemplateFoldersNkTemplatesFkRelPut');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/templateFolders/{nk}/templates/{fk}/rel";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($id2 !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id2),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\PortalTemplate',
+                '/Portals/{id}/templateFolders/{nk}/templates/{fk}/rel'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\PortalTemplate', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\PortalTemplate', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation portalsIdTemplateFoldersPost
      *
      * Creates a new instance in templateFolders of this model.
@@ -10349,6 +10613,806 @@ class PortalApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\PortalTemplateFolder', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdTemplateFoldersRootTemplatesGet
+     *
+     * List templates on root folder
+     *
+     * @param string $id Portal id (required)
+     * @param string $id2 Portal id (required)
+     * @param string $filter Only include changes that match this filter (optional)
+     * @return \Swagger\Client\Model\PortalTemplate[]
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdTemplateFoldersRootTemplatesGet($id, $id2, $filter = null)
+    {
+        list($response) = $this->portalsIdTemplateFoldersRootTemplatesGetWithHttpInfo($id, $id2, $filter);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdTemplateFoldersRootTemplatesGetWithHttpInfo
+     *
+     * List templates on root folder
+     *
+     * @param string $id Portal id (required)
+     * @param string $id2 Portal id (required)
+     * @param string $filter Only include changes that match this filter (optional)
+     * @return array of \Swagger\Client\Model\PortalTemplate[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdTemplateFoldersRootTemplatesGetWithHttpInfo($id, $id2, $filter = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdTemplateFoldersRootTemplatesGet');
+        }
+        // verify the required parameter 'id2' is set
+        if ($id2 === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id2 when calling portalsIdTemplateFoldersRootTemplatesGet');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/templateFolders/root/templates";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($filter !== null) {
+            $queryParams['filter'] = $this->apiClient->getSerializer()->toQueryValue($filter);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($id2 !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id2),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\PortalTemplate[]',
+                '/Portals/{id}/templateFolders/root/templates'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\PortalTemplate[]', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\PortalTemplate[]', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdTemplateRelsCountGet
+     *
+     * Counts templateRels of Portal.
+     *
+     * @param string $id Portal id (required)
+     * @param string $where Criteria to match model instances (optional)
+     * @return \Swagger\Client\Model\InlineResponse200
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdTemplateRelsCountGet($id, $where = null)
+    {
+        list($response) = $this->portalsIdTemplateRelsCountGetWithHttpInfo($id, $where);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdTemplateRelsCountGetWithHttpInfo
+     *
+     * Counts templateRels of Portal.
+     *
+     * @param string $id Portal id (required)
+     * @param string $where Criteria to match model instances (optional)
+     * @return array of \Swagger\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdTemplateRelsCountGetWithHttpInfo($id, $where = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdTemplateRelsCountGet');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/templateRels/count";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($where !== null) {
+            $queryParams['where'] = $this->apiClient->getSerializer()->toQueryValue($where);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\InlineResponse200',
+                '/Portals/{id}/templateRels/count'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse200', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdTemplateRelsDelete
+     *
+     * Deletes all templateRels of this model.
+     *
+     * @param string $id Portal id (required)
+     * @return void
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdTemplateRelsDelete($id)
+    {
+        list($response) = $this->portalsIdTemplateRelsDeleteWithHttpInfo($id);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdTemplateRelsDeleteWithHttpInfo
+     *
+     * Deletes all templateRels of this model.
+     *
+     * @param string $id Portal id (required)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdTemplateRelsDeleteWithHttpInfo($id)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdTemplateRelsDelete');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/templateRels";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/Portals/{id}/templateRels'
+            );
+
+            return array(null, $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdTemplateRelsFkDelete
+     *
+     * Delete a related item by id for templateRels.
+     *
+     * @param string $id Portal id (required)
+     * @param string $fk Foreign key for templateRels (required)
+     * @return void
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdTemplateRelsFkDelete($id, $fk)
+    {
+        list($response) = $this->portalsIdTemplateRelsFkDeleteWithHttpInfo($id, $fk);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdTemplateRelsFkDeleteWithHttpInfo
+     *
+     * Delete a related item by id for templateRels.
+     *
+     * @param string $id Portal id (required)
+     * @param string $fk Foreign key for templateRels (required)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdTemplateRelsFkDeleteWithHttpInfo($id, $fk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdTemplateRelsFkDelete');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling portalsIdTemplateRelsFkDelete');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/templateRels/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/Portals/{id}/templateRels/{fk}'
+            );
+
+            return array(null, $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdTemplateRelsFkGet
+     *
+     * Find a related item by id for templateRels.
+     *
+     * @param string $id Portal id (required)
+     * @param string $fk Foreign key for templateRels (required)
+     * @return \Swagger\Client\Model\PortalTemplate
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdTemplateRelsFkGet($id, $fk)
+    {
+        list($response) = $this->portalsIdTemplateRelsFkGetWithHttpInfo($id, $fk);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdTemplateRelsFkGetWithHttpInfo
+     *
+     * Find a related item by id for templateRels.
+     *
+     * @param string $id Portal id (required)
+     * @param string $fk Foreign key for templateRels (required)
+     * @return array of \Swagger\Client\Model\PortalTemplate, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdTemplateRelsFkGetWithHttpInfo($id, $fk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdTemplateRelsFkGet');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling portalsIdTemplateRelsFkGet');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/templateRels/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\PortalTemplate',
+                '/Portals/{id}/templateRels/{fk}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\PortalTemplate', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\PortalTemplate', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdTemplateRelsFkPut
+     *
+     * Update a related item by id for templateRels.
+     *
+     * @param string $id Portal id (required)
+     * @param string $fk Foreign key for templateRels (required)
+     * @param \Swagger\Client\Model\PortalTemplate $data  (optional)
+     * @return \Swagger\Client\Model\PortalTemplate
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdTemplateRelsFkPut($id, $fk, $data = null)
+    {
+        list($response) = $this->portalsIdTemplateRelsFkPutWithHttpInfo($id, $fk, $data);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdTemplateRelsFkPutWithHttpInfo
+     *
+     * Update a related item by id for templateRels.
+     *
+     * @param string $id Portal id (required)
+     * @param string $fk Foreign key for templateRels (required)
+     * @param \Swagger\Client\Model\PortalTemplate $data  (optional)
+     * @return array of \Swagger\Client\Model\PortalTemplate, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdTemplateRelsFkPutWithHttpInfo($id, $fk, $data = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdTemplateRelsFkPut');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling portalsIdTemplateRelsFkPut');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/templateRels/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\PortalTemplate',
+                '/Portals/{id}/templateRels/{fk}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\PortalTemplate', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\PortalTemplate', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdTemplateRelsGet
+     *
+     * Queries templateRels of Portal.
+     *
+     * @param string $id Portal id (required)
+     * @param string $filter  (optional)
+     * @return \Swagger\Client\Model\PortalTemplate[]
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdTemplateRelsGet($id, $filter = null)
+    {
+        list($response) = $this->portalsIdTemplateRelsGetWithHttpInfo($id, $filter);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdTemplateRelsGetWithHttpInfo
+     *
+     * Queries templateRels of Portal.
+     *
+     * @param string $id Portal id (required)
+     * @param string $filter  (optional)
+     * @return array of \Swagger\Client\Model\PortalTemplate[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdTemplateRelsGetWithHttpInfo($id, $filter = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdTemplateRelsGet');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/templateRels";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($filter !== null) {
+            $queryParams['filter'] = $this->apiClient->getSerializer()->toQueryValue($filter);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\PortalTemplate[]',
+                '/Portals/{id}/templateRels'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\PortalTemplate[]', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\PortalTemplate[]', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdTemplateRelsPost
+     *
+     * Creates a new instance in templateRels of this model.
+     *
+     * @param string $id Portal id (required)
+     * @param \Swagger\Client\Model\PortalTemplate $data  (optional)
+     * @return \Swagger\Client\Model\PortalTemplate
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdTemplateRelsPost($id, $data = null)
+    {
+        list($response) = $this->portalsIdTemplateRelsPostWithHttpInfo($id, $data);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdTemplateRelsPostWithHttpInfo
+     *
+     * Creates a new instance in templateRels of this model.
+     *
+     * @param string $id Portal id (required)
+     * @param \Swagger\Client\Model\PortalTemplate $data  (optional)
+     * @return array of \Swagger\Client\Model\PortalTemplate, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdTemplateRelsPostWithHttpInfo($id, $data = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdTemplateRelsPost');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/templateRels";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\PortalTemplate',
+                '/Portals/{id}/templateRels'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\PortalTemplate', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\PortalTemplate', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

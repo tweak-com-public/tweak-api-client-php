@@ -168,6 +168,14 @@ class PortalTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "templateRels"
+     */
+    public function testPropertyTemplateRels()
+    {
+
+    }
+
+    /**
      * Test attribute "members"
      */
     public function testPropertyMembers()

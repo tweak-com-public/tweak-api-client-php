@@ -135,6 +135,13 @@ Method | HTTP request | Description
 [**teamsIdPortalsNkTemplateFoldersFkPut**](TeamApi.md#teamsIdPortalsNkTemplateFoldersFkPut) | **PUT** /Teams/{id}/portals/{nk}/templateFolders/{fk} | Update a related item by id for templateFolders.
 [**teamsIdPortalsNkTemplateFoldersGet**](TeamApi.md#teamsIdPortalsNkTemplateFoldersGet) | **GET** /Teams/{id}/portals/{nk}/templateFolders | Queries templateFolders of Portal.
 [**teamsIdPortalsNkTemplateFoldersPost**](TeamApi.md#teamsIdPortalsNkTemplateFoldersPost) | **POST** /Teams/{id}/portals/{nk}/templateFolders | Creates a new instance in templateFolders of this model.
+[**teamsIdPortalsNkTemplateRelsCountGet**](TeamApi.md#teamsIdPortalsNkTemplateRelsCountGet) | **GET** /Teams/{id}/portals/{nk}/templateRels/count | Counts templateRels of Portal.
+[**teamsIdPortalsNkTemplateRelsDelete**](TeamApi.md#teamsIdPortalsNkTemplateRelsDelete) | **DELETE** /Teams/{id}/portals/{nk}/templateRels | Deletes all templateRels of this model.
+[**teamsIdPortalsNkTemplateRelsFkDelete**](TeamApi.md#teamsIdPortalsNkTemplateRelsFkDelete) | **DELETE** /Teams/{id}/portals/{nk}/templateRels/{fk} | Delete a related item by id for templateRels.
+[**teamsIdPortalsNkTemplateRelsFkGet**](TeamApi.md#teamsIdPortalsNkTemplateRelsFkGet) | **GET** /Teams/{id}/portals/{nk}/templateRels/{fk} | Find a related item by id for templateRels.
+[**teamsIdPortalsNkTemplateRelsFkPut**](TeamApi.md#teamsIdPortalsNkTemplateRelsFkPut) | **PUT** /Teams/{id}/portals/{nk}/templateRels/{fk} | Update a related item by id for templateRels.
+[**teamsIdPortalsNkTemplateRelsGet**](TeamApi.md#teamsIdPortalsNkTemplateRelsGet) | **GET** /Teams/{id}/portals/{nk}/templateRels | Queries templateRels of Portal.
+[**teamsIdPortalsNkTemplateRelsPost**](TeamApi.md#teamsIdPortalsNkTemplateRelsPost) | **POST** /Teams/{id}/portals/{nk}/templateRels | Creates a new instance in templateRels of this model.
 [**teamsIdPortalsNkTemplatesCountGet**](TeamApi.md#teamsIdPortalsNkTemplatesCountGet) | **GET** /Teams/{id}/portals/{nk}/templates/count | Counts templates of Portal.
 [**teamsIdPortalsNkTemplatesDelete**](TeamApi.md#teamsIdPortalsNkTemplatesDelete) | **DELETE** /Teams/{id}/portals/{nk}/templates | Deletes all templates of this model.
 [**teamsIdPortalsNkTemplatesFkDelete**](TeamApi.md#teamsIdPortalsNkTemplatesFkDelete) | **DELETE** /Teams/{id}/portals/{nk}/templates/{fk} | Delete a related item by id for templates.
@@ -6849,6 +6856,368 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\PortalTemplateFolder**](../Model/PortalTemplateFolder.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamsIdPortalsNkTemplateRelsCountGet**
+> \Swagger\Client\Model\InlineResponse200 teamsIdPortalsNkTemplateRelsCountGet($id, $nk, $where)
+
+Counts templateRels of Portal.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamApi();
+$id = "id_example"; // string | Team id
+$nk = "nk_example"; // string | Foreign key for portals.
+$where = "where_example"; // string | Criteria to match model instances
+
+try {
+    $result = $api_instance->teamsIdPortalsNkTemplateRelsCountGet($id, $nk, $where);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamApi->teamsIdPortalsNkTemplateRelsCountGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Team id |
+ **nk** | **string**| Foreign key for portals. |
+ **where** | **string**| Criteria to match model instances | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamsIdPortalsNkTemplateRelsDelete**
+> teamsIdPortalsNkTemplateRelsDelete($id, $nk)
+
+Deletes all templateRels of this model.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamApi();
+$id = "id_example"; // string | Team id
+$nk = "nk_example"; // string | Foreign key for portals.
+
+try {
+    $api_instance->teamsIdPortalsNkTemplateRelsDelete($id, $nk);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamApi->teamsIdPortalsNkTemplateRelsDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Team id |
+ **nk** | **string**| Foreign key for portals. |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamsIdPortalsNkTemplateRelsFkDelete**
+> teamsIdPortalsNkTemplateRelsFkDelete($id, $nk, $fk)
+
+Delete a related item by id for templateRels.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamApi();
+$id = "id_example"; // string | Team id
+$nk = "nk_example"; // string | Foreign key for portals.
+$fk = "fk_example"; // string | Foreign key for templateRels
+
+try {
+    $api_instance->teamsIdPortalsNkTemplateRelsFkDelete($id, $nk, $fk);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamApi->teamsIdPortalsNkTemplateRelsFkDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Team id |
+ **nk** | **string**| Foreign key for portals. |
+ **fk** | **string**| Foreign key for templateRels |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamsIdPortalsNkTemplateRelsFkGet**
+> \Swagger\Client\Model\PortalTemplate teamsIdPortalsNkTemplateRelsFkGet($id, $nk, $fk)
+
+Find a related item by id for templateRels.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamApi();
+$id = "id_example"; // string | Team id
+$nk = "nk_example"; // string | Foreign key for portals.
+$fk = "fk_example"; // string | Foreign key for templateRels
+
+try {
+    $result = $api_instance->teamsIdPortalsNkTemplateRelsFkGet($id, $nk, $fk);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamApi->teamsIdPortalsNkTemplateRelsFkGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Team id |
+ **nk** | **string**| Foreign key for portals. |
+ **fk** | **string**| Foreign key for templateRels |
+
+### Return type
+
+[**\Swagger\Client\Model\PortalTemplate**](../Model/PortalTemplate.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamsIdPortalsNkTemplateRelsFkPut**
+> \Swagger\Client\Model\PortalTemplate teamsIdPortalsNkTemplateRelsFkPut($id, $nk, $fk, $data)
+
+Update a related item by id for templateRels.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamApi();
+$id = "id_example"; // string | Team id
+$nk = "nk_example"; // string | Foreign key for portals.
+$fk = "fk_example"; // string | Foreign key for templateRels
+$data = new \Swagger\Client\Model\PortalTemplate(); // \Swagger\Client\Model\PortalTemplate | 
+
+try {
+    $result = $api_instance->teamsIdPortalsNkTemplateRelsFkPut($id, $nk, $fk, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamApi->teamsIdPortalsNkTemplateRelsFkPut: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Team id |
+ **nk** | **string**| Foreign key for portals. |
+ **fk** | **string**| Foreign key for templateRels |
+ **data** | [**\Swagger\Client\Model\PortalTemplate**](../Model/\Swagger\Client\Model\PortalTemplate.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\PortalTemplate**](../Model/PortalTemplate.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamsIdPortalsNkTemplateRelsGet**
+> \Swagger\Client\Model\PortalTemplate[] teamsIdPortalsNkTemplateRelsGet($id, $nk, $filter)
+
+Queries templateRels of Portal.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamApi();
+$id = "id_example"; // string | Team id
+$nk = "nk_example"; // string | Foreign key for portals.
+$filter = "filter_example"; // string | 
+
+try {
+    $result = $api_instance->teamsIdPortalsNkTemplateRelsGet($id, $nk, $filter);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamApi->teamsIdPortalsNkTemplateRelsGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Team id |
+ **nk** | **string**| Foreign key for portals. |
+ **filter** | **string**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\PortalTemplate[]**](../Model/PortalTemplate.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamsIdPortalsNkTemplateRelsPost**
+> \Swagger\Client\Model\PortalTemplate teamsIdPortalsNkTemplateRelsPost($id, $nk, $data)
+
+Creates a new instance in templateRels of this model.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamApi();
+$id = "id_example"; // string | Team id
+$nk = "nk_example"; // string | Foreign key for portals.
+$data = new \Swagger\Client\Model\PortalTemplate(); // \Swagger\Client\Model\PortalTemplate | 
+
+try {
+    $result = $api_instance->teamsIdPortalsNkTemplateRelsPost($id, $nk, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamApi->teamsIdPortalsNkTemplateRelsPost: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Team id |
+ **nk** | **string**| Foreign key for portals. |
+ **data** | [**\Swagger\Client\Model\PortalTemplate**](../Model/\Swagger\Client\Model\PortalTemplate.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\PortalTemplate**](../Model/PortalTemplate.md)
 
 ### Authorization
 

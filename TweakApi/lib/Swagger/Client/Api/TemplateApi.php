@@ -1104,14 +1104,15 @@ class TemplateApi
      *
      * Generate design from template
      *
-     * @param string $id  (required)
+     * @param string $id Template id (required)
+     * @param string $id2  (required)
      * @param \Swagger\Client\Model\Template $data  (optional)
      * @return \Swagger\Client\Model\Design
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function templatesIdDesignsGeneratePost($id, $data = null)
+    public function templatesIdDesignsGeneratePost($id, $id2, $data = null)
     {
-        list($response) = $this->templatesIdDesignsGeneratePostWithHttpInfo($id, $data);
+        list($response) = $this->templatesIdDesignsGeneratePostWithHttpInfo($id, $id2, $data);
         return $response;
     }
 
@@ -1120,16 +1121,21 @@ class TemplateApi
      *
      * Generate design from template
      *
-     * @param string $id  (required)
+     * @param string $id Template id (required)
+     * @param string $id2  (required)
      * @param \Swagger\Client\Model\Template $data  (optional)
      * @return array of \Swagger\Client\Model\Design, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function templatesIdDesignsGeneratePostWithHttpInfo($id, $data = null)
+    public function templatesIdDesignsGeneratePostWithHttpInfo($id, $id2, $data = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id when calling templatesIdDesignsGeneratePost');
+        }
+        // verify the required parameter 'id2' is set
+        if ($id2 === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id2 when calling templatesIdDesignsGeneratePost');
         }
         // parse inputs
         $resourcePath = "/Templates/{id}/designs/generate";
@@ -1148,6 +1154,14 @@ class TemplateApi
             $resourcePath = str_replace(
                 "{" . "id" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($id2 !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id2),
                 $resourcePath
             );
         }
@@ -4044,8 +4058,8 @@ class TemplateApi
      *
      * @param string $id Template id (required)
      * @param string $fk Foreign key for portalFolders (required)
-     * @param \Swagger\Client\Model\PortalTemplateFolderThrough $data  (optional)
-     * @return \Swagger\Client\Model\PortalTemplateFolderThrough
+     * @param \Swagger\Client\Model\PortalTemplate $data  (optional)
+     * @return \Swagger\Client\Model\PortalTemplate
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
     public function templatesIdPortalFoldersRelFkPut($id, $fk, $data = null)
@@ -4061,8 +4075,8 @@ class TemplateApi
      *
      * @param string $id Template id (required)
      * @param string $fk Foreign key for portalFolders (required)
-     * @param \Swagger\Client\Model\PortalTemplateFolderThrough $data  (optional)
-     * @return array of \Swagger\Client\Model\PortalTemplateFolderThrough, HTTP status code, HTTP response headers (array of strings)
+     * @param \Swagger\Client\Model\PortalTemplate $data  (optional)
+     * @return array of \Swagger\Client\Model\PortalTemplate, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
     public function templatesIdPortalFoldersRelFkPutWithHttpInfo($id, $fk, $data = null)
@@ -4131,15 +4145,15 @@ class TemplateApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\PortalTemplateFolderThrough',
+                '\Swagger\Client\Model\PortalTemplate',
                 '/Templates/{id}/portalFolders/rel/{fk}'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\PortalTemplateFolderThrough', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\PortalTemplate', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\PortalTemplateFolderThrough', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\PortalTemplate', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

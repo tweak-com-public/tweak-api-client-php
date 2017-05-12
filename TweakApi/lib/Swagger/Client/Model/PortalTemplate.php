@@ -66,11 +66,16 @@ class PortalTemplate implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
+        'path' => 'string',
+        'created' => '\DateTime',
+        'modified' => '\DateTime',
         'id' => 'string',
         'portalId' => 'string',
         'templateId' => 'string',
+        'folderId' => 'string',
         'portal' => '\Swagger\Client\Model\Portal',
-        'template' => '\Swagger\Client\Model\Template'
+        'template' => '\Swagger\Client\Model\Template',
+        'folder' => '\Swagger\Client\Model\PortalTemplateFolder'
     );
 
     public static function swaggerTypes()
@@ -83,11 +88,16 @@ class PortalTemplate implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
+        'path' => 'path',
+        'created' => 'created',
+        'modified' => 'modified',
         'id' => 'id',
         'portalId' => 'portalId',
         'templateId' => 'templateId',
+        'folderId' => 'folderId',
         'portal' => 'portal',
-        'template' => 'template'
+        'template' => 'template',
+        'folder' => 'folder'
     );
 
     public static function attributeMap()
@@ -100,11 +110,16 @@ class PortalTemplate implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
+        'path' => 'setPath',
+        'created' => 'setCreated',
+        'modified' => 'setModified',
         'id' => 'setId',
         'portalId' => 'setPortalId',
         'templateId' => 'setTemplateId',
+        'folderId' => 'setFolderId',
         'portal' => 'setPortal',
-        'template' => 'setTemplate'
+        'template' => 'setTemplate',
+        'folder' => 'setFolder'
     );
 
     public static function setters()
@@ -117,11 +132,16 @@ class PortalTemplate implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
+        'path' => 'getPath',
+        'created' => 'getCreated',
+        'modified' => 'getModified',
         'id' => 'getId',
         'portalId' => 'getPortalId',
         'templateId' => 'getTemplateId',
+        'folderId' => 'getFolderId',
         'portal' => 'getPortal',
-        'template' => 'getTemplate'
+        'template' => 'getTemplate',
+        'folder' => 'getFolder'
     );
 
     public static function getters()
@@ -145,11 +165,16 @@ class PortalTemplate implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['path'] = isset($data['path']) ? $data['path'] : '/';
+        $this->container['created'] = isset($data['created']) ? $data['created'] : null;
+        $this->container['modified'] = isset($data['modified']) ? $data['modified'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['portalId'] = isset($data['portalId']) ? $data['portalId'] : null;
         $this->container['templateId'] = isset($data['templateId']) ? $data['templateId'] : null;
+        $this->container['folderId'] = isset($data['folderId']) ? $data['folderId'] : null;
         $this->container['portal'] = isset($data['portal']) ? $data['portal'] : null;
         $this->container['template'] = isset($data['template']) ? $data['template'] : null;
+        $this->container['folder'] = isset($data['folder']) ? $data['folder'] : null;
     }
 
     /**
@@ -174,6 +199,69 @@ class PortalTemplate implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets path
+     * @return string
+     */
+    public function getPath()
+    {
+        return $this->container['path'];
+    }
+
+    /**
+     * Sets path
+     * @param string $path
+     * @return $this
+     */
+    public function setPath($path)
+    {
+        $this->container['path'] = $path;
+
+        return $this;
+    }
+
+    /**
+     * Gets created
+     * @return \DateTime
+     */
+    public function getCreated()
+    {
+        return $this->container['created'];
+    }
+
+    /**
+     * Sets created
+     * @param \DateTime $created
+     * @return $this
+     */
+    public function setCreated($created)
+    {
+        $this->container['created'] = $created;
+
+        return $this;
+    }
+
+    /**
+     * Gets modified
+     * @return \DateTime
+     */
+    public function getModified()
+    {
+        return $this->container['modified'];
+    }
+
+    /**
+     * Sets modified
+     * @param \DateTime $modified
+     * @return $this
+     */
+    public function setModified($modified)
+    {
+        $this->container['modified'] = $modified;
+
+        return $this;
+    }
 
     /**
      * Gets id
@@ -239,6 +327,27 @@ class PortalTemplate implements ArrayAccess
     }
 
     /**
+     * Gets folderId
+     * @return string
+     */
+    public function getFolderId()
+    {
+        return $this->container['folderId'];
+    }
+
+    /**
+     * Sets folderId
+     * @param string $folderId
+     * @return $this
+     */
+    public function setFolderId($folderId)
+    {
+        $this->container['folderId'] = $folderId;
+
+        return $this;
+    }
+
+    /**
      * Gets portal
      * @return \Swagger\Client\Model\Portal
      */
@@ -276,6 +385,27 @@ class PortalTemplate implements ArrayAccess
     public function setTemplate($template)
     {
         $this->container['template'] = $template;
+
+        return $this;
+    }
+
+    /**
+     * Gets folder
+     * @return \Swagger\Client\Model\PortalTemplateFolder
+     */
+    public function getFolder()
+    {
+        return $this->container['folder'];
+    }
+
+    /**
+     * Sets folder
+     * @param \Swagger\Client\Model\PortalTemplateFolder $folder
+     * @return $this
+     */
+    public function setFolder($folder)
+    {
+        $this->container['folder'] = $folder;
 
         return $this;
     }

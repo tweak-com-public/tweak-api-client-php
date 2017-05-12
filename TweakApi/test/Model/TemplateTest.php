@@ -136,6 +136,14 @@ class TemplateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "teamPath"
+     */
+    public function testPropertyTeamPath()
+    {
+
+    }
+
+    /**
      * Test attribute "created"
      */
     public function testPropertyCreated()

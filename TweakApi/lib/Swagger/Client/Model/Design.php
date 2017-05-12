@@ -76,6 +76,7 @@ class Design implements ArrayAccess
         'status' => 'string',
         'edited' => '\DateTime',
         'expired' => '\DateTime',
+        'path' => 'string',
         'created' => '\DateTime',
         'modified' => '\DateTime',
         'id' => 'string',
@@ -119,6 +120,7 @@ class Design implements ArrayAccess
         'status' => 'status',
         'edited' => 'edited',
         'expired' => 'expired',
+        'path' => 'path',
         'created' => 'created',
         'modified' => 'modified',
         'id' => 'id',
@@ -162,6 +164,7 @@ class Design implements ArrayAccess
         'status' => 'setStatus',
         'edited' => 'setEdited',
         'expired' => 'setExpired',
+        'path' => 'setPath',
         'created' => 'setCreated',
         'modified' => 'setModified',
         'id' => 'setId',
@@ -205,6 +208,7 @@ class Design implements ArrayAccess
         'status' => 'getStatus',
         'edited' => 'getEdited',
         'expired' => 'getExpired',
+        'path' => 'getPath',
         'created' => 'getCreated',
         'modified' => 'getModified',
         'id' => 'getId',
@@ -291,6 +295,7 @@ class Design implements ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : 'pendingAction';
         $this->container['edited'] = isset($data['edited']) ? $data['edited'] : null;
         $this->container['expired'] = isset($data['expired']) ? $data['expired'] : null;
+        $this->container['path'] = isset($data['path']) ? $data['path'] : '/';
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
         $this->container['modified'] = isset($data['modified']) ? $data['modified'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
@@ -581,6 +586,27 @@ class Design implements ArrayAccess
     public function setExpired($expired)
     {
         $this->container['expired'] = $expired;
+
+        return $this;
+    }
+
+    /**
+     * Gets path
+     * @return string
+     */
+    public function getPath()
+    {
+        return $this->container['path'];
+    }
+
+    /**
+     * Sets path
+     * @param string $path
+     * @return $this
+     */
+    public function setPath($path)
+    {
+        $this->container['path'] = $path;
 
         return $this;
     }

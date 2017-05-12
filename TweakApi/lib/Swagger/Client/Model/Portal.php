@@ -75,6 +75,7 @@ class Portal implements ArrayAccess
         'id' => 'string',
         'teamId' => 'string',
         'templates' => '\Swagger\Client\Model\Template[]',
+        'templateRels' => '\Swagger\Client\Model\PortalTemplate[]',
         'members' => '\Swagger\Client\Model\TeamMember[]',
         'team' => '\Swagger\Client\Model\Team',
         'permission' => '\Swagger\Client\Model\PortalPermissionSet',
@@ -103,6 +104,7 @@ class Portal implements ArrayAccess
         'id' => 'id',
         'teamId' => 'teamId',
         'templates' => 'templates',
+        'templateRels' => 'templateRels',
         'members' => 'members',
         'team' => 'team',
         'permission' => 'permission',
@@ -131,6 +133,7 @@ class Portal implements ArrayAccess
         'id' => 'setId',
         'teamId' => 'setTeamId',
         'templates' => 'setTemplates',
+        'templateRels' => 'setTemplateRels',
         'members' => 'setMembers',
         'team' => 'setTeam',
         'permission' => 'setPermission',
@@ -159,6 +162,7 @@ class Portal implements ArrayAccess
         'id' => 'getId',
         'teamId' => 'getTeamId',
         'templates' => 'getTemplates',
+        'templateRels' => 'getTemplateRels',
         'members' => 'getMembers',
         'team' => 'getTeam',
         'permission' => 'getPermission',
@@ -526,6 +530,7 @@ class Portal implements ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['teamId'] = isset($data['teamId']) ? $data['teamId'] : null;
         $this->container['templates'] = isset($data['templates']) ? $data['templates'] : null;
+        $this->container['templateRels'] = isset($data['templateRels']) ? $data['templateRels'] : null;
         $this->container['members'] = isset($data['members']) ? $data['members'] : null;
         $this->container['team'] = isset($data['team']) ? $data['team'] : null;
         $this->container['permission'] = isset($data['permission']) ? $data['permission'] : null;
@@ -775,6 +780,27 @@ class Portal implements ArrayAccess
     public function setTemplates($templates)
     {
         $this->container['templates'] = $templates;
+
+        return $this;
+    }
+
+    /**
+     * Gets templateRels
+     * @return \Swagger\Client\Model\PortalTemplate[]
+     */
+    public function getTemplateRels()
+    {
+        return $this->container['templateRels'];
+    }
+
+    /**
+     * Sets templateRels
+     * @param \Swagger\Client\Model\PortalTemplate[] $templateRels
+     * @return $this
+     */
+    public function setTemplateRels($templateRels)
+    {
+        $this->container['templateRels'] = $templateRels;
 
         return $this;
     }

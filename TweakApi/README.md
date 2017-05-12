@@ -575,7 +575,17 @@ Class | Method | HTTP request | Description
 *PortalApi* | [**portalsIdTemplateFoldersFkGet**](docs/Api/PortalApi.md#portalsidtemplatefoldersfkget) | **GET** /Portals/{id}/templateFolders/{fk} | Find a related item by id for templateFolders.
 *PortalApi* | [**portalsIdTemplateFoldersFkPut**](docs/Api/PortalApi.md#portalsidtemplatefoldersfkput) | **PUT** /Portals/{id}/templateFolders/{fk} | Update a related item by id for templateFolders.
 *PortalApi* | [**portalsIdTemplateFoldersGet**](docs/Api/PortalApi.md#portalsidtemplatefoldersget) | **GET** /Portals/{id}/templateFolders | Queries templateFolders of Portal.
+*PortalApi* | [**portalsIdTemplateFoldersNkTemplatesFkRelDelete**](docs/Api/PortalApi.md#portalsidtemplatefoldersnktemplatesfkreldelete) | **DELETE** /Portals/{id}/templateFolders/{nk}/templates/{fk}/rel | Unlink folder with Template and Portal
+*PortalApi* | [**portalsIdTemplateFoldersNkTemplatesFkRelPut**](docs/Api/PortalApi.md#portalsidtemplatefoldersnktemplatesfkrelput) | **PUT** /Portals/{id}/templateFolders/{nk}/templates/{fk}/rel | Link folder with Template and Portal
 *PortalApi* | [**portalsIdTemplateFoldersPost**](docs/Api/PortalApi.md#portalsidtemplatefolderspost) | **POST** /Portals/{id}/templateFolders | Creates a new instance in templateFolders of this model.
+*PortalApi* | [**portalsIdTemplateFoldersRootTemplatesGet**](docs/Api/PortalApi.md#portalsidtemplatefoldersroottemplatesget) | **GET** /Portals/{id}/templateFolders/root/templates | List templates on root folder
+*PortalApi* | [**portalsIdTemplateRelsCountGet**](docs/Api/PortalApi.md#portalsidtemplaterelscountget) | **GET** /Portals/{id}/templateRels/count | Counts templateRels of Portal.
+*PortalApi* | [**portalsIdTemplateRelsDelete**](docs/Api/PortalApi.md#portalsidtemplaterelsdelete) | **DELETE** /Portals/{id}/templateRels | Deletes all templateRels of this model.
+*PortalApi* | [**portalsIdTemplateRelsFkDelete**](docs/Api/PortalApi.md#portalsidtemplaterelsfkdelete) | **DELETE** /Portals/{id}/templateRels/{fk} | Delete a related item by id for templateRels.
+*PortalApi* | [**portalsIdTemplateRelsFkGet**](docs/Api/PortalApi.md#portalsidtemplaterelsfkget) | **GET** /Portals/{id}/templateRels/{fk} | Find a related item by id for templateRels.
+*PortalApi* | [**portalsIdTemplateRelsFkPut**](docs/Api/PortalApi.md#portalsidtemplaterelsfkput) | **PUT** /Portals/{id}/templateRels/{fk} | Update a related item by id for templateRels.
+*PortalApi* | [**portalsIdTemplateRelsGet**](docs/Api/PortalApi.md#portalsidtemplaterelsget) | **GET** /Portals/{id}/templateRels | Queries templateRels of Portal.
+*PortalApi* | [**portalsIdTemplateRelsPost**](docs/Api/PortalApi.md#portalsidtemplaterelspost) | **POST** /Portals/{id}/templateRels | Creates a new instance in templateRels of this model.
 *PortalApi* | [**portalsIdTemplatesCountGet**](docs/Api/PortalApi.md#portalsidtemplatescountget) | **GET** /Portals/{id}/templates/count | Counts templates of Portal.
 *PortalApi* | [**portalsIdTemplatesDelete**](docs/Api/PortalApi.md#portalsidtemplatesdelete) | **DELETE** /Portals/{id}/templates | Deletes all templates of this model.
 *PortalApi* | [**portalsIdTemplatesFkDelete**](docs/Api/PortalApi.md#portalsidtemplatesfkdelete) | **DELETE** /Portals/{id}/templates/{fk} | Delete a related item by id for templates.
@@ -658,6 +668,7 @@ Class | Method | HTTP request | Description
 *PortalTemplateApi* | [**portalTemplatesGet**](docs/Api/PortalTemplateApi.md#portaltemplatesget) | **GET** /PortalTemplates | Find all instances of the model matched by filter from the data source.
 *PortalTemplateApi* | [**portalTemplatesIdDelete**](docs/Api/PortalTemplateApi.md#portaltemplatesiddelete) | **DELETE** /PortalTemplates/{id} | Delete a model instance by {{id}} from the data source.
 *PortalTemplateApi* | [**portalTemplatesIdExistsGet**](docs/Api/PortalTemplateApi.md#portaltemplatesidexistsget) | **GET** /PortalTemplates/{id}/exists | Check whether a model instance exists in the data source.
+*PortalTemplateApi* | [**portalTemplatesIdFolderGet**](docs/Api/PortalTemplateApi.md#portaltemplatesidfolderget) | **GET** /PortalTemplates/{id}/folder | Fetches belongsTo relation folder.
 *PortalTemplateApi* | [**portalTemplatesIdGet**](docs/Api/PortalTemplateApi.md#portaltemplatesidget) | **GET** /PortalTemplates/{id} | Find a model instance by {{id}} from the data source.
 *PortalTemplateApi* | [**portalTemplatesIdHead**](docs/Api/PortalTemplateApi.md#portaltemplatesidhead) | **HEAD** /PortalTemplates/{id} | Check whether a model instance exists in the data source.
 *PortalTemplateApi* | [**portalTemplatesIdPatch**](docs/Api/PortalTemplateApi.md#portaltemplatesidpatch) | **PATCH** /PortalTemplates/{id} | Patch attributes for a model instance and persist it into the data source.
@@ -708,26 +719,6 @@ Class | Method | HTTP request | Description
 *PortalTemplateFolderApi* | [**portalTemplateFoldersReplaceOrCreatePost**](docs/Api/PortalTemplateFolderApi.md#portaltemplatefoldersreplaceorcreatepost) | **POST** /PortalTemplateFolders/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
 *PortalTemplateFolderApi* | [**portalTemplateFoldersUpdatePost**](docs/Api/PortalTemplateFolderApi.md#portaltemplatefoldersupdatepost) | **POST** /PortalTemplateFolders/update | Update instances of the model matched by {{where}} from the data source.
 *PortalTemplateFolderApi* | [**portalTemplateFoldersUpsertWithWherePost**](docs/Api/PortalTemplateFolderApi.md#portaltemplatefoldersupsertwithwherepost) | **POST** /PortalTemplateFolders/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
-*PortalTemplateFolderThroughApi* | [**portalTemplateFolderThroughsChangeStreamGet**](docs/Api/PortalTemplateFolderThroughApi.md#portaltemplatefolderthroughschangestreamget) | **GET** /PortalTemplateFolderThroughs/change-stream | Create a change stream.
-*PortalTemplateFolderThroughApi* | [**portalTemplateFolderThroughsChangeStreamPost**](docs/Api/PortalTemplateFolderThroughApi.md#portaltemplatefolderthroughschangestreampost) | **POST** /PortalTemplateFolderThroughs/change-stream | Create a change stream.
-*PortalTemplateFolderThroughApi* | [**portalTemplateFolderThroughsCountGet**](docs/Api/PortalTemplateFolderThroughApi.md#portaltemplatefolderthroughscountget) | **GET** /PortalTemplateFolderThroughs/count | Count instances of the model matched by where from the data source.
-*PortalTemplateFolderThroughApi* | [**portalTemplateFolderThroughsFindOneGet**](docs/Api/PortalTemplateFolderThroughApi.md#portaltemplatefolderthroughsfindoneget) | **GET** /PortalTemplateFolderThroughs/findOne | Find first instance of the model matched by filter from the data source.
-*PortalTemplateFolderThroughApi* | [**portalTemplateFolderThroughsGet**](docs/Api/PortalTemplateFolderThroughApi.md#portaltemplatefolderthroughsget) | **GET** /PortalTemplateFolderThroughs | Find all instances of the model matched by filter from the data source.
-*PortalTemplateFolderThroughApi* | [**portalTemplateFolderThroughsIdDelete**](docs/Api/PortalTemplateFolderThroughApi.md#portaltemplatefolderthroughsiddelete) | **DELETE** /PortalTemplateFolderThroughs/{id} | Delete a model instance by {{id}} from the data source.
-*PortalTemplateFolderThroughApi* | [**portalTemplateFolderThroughsIdExistsGet**](docs/Api/PortalTemplateFolderThroughApi.md#portaltemplatefolderthroughsidexistsget) | **GET** /PortalTemplateFolderThroughs/{id}/exists | Check whether a model instance exists in the data source.
-*PortalTemplateFolderThroughApi* | [**portalTemplateFolderThroughsIdGet**](docs/Api/PortalTemplateFolderThroughApi.md#portaltemplatefolderthroughsidget) | **GET** /PortalTemplateFolderThroughs/{id} | Find a model instance by {{id}} from the data source.
-*PortalTemplateFolderThroughApi* | [**portalTemplateFolderThroughsIdHead**](docs/Api/PortalTemplateFolderThroughApi.md#portaltemplatefolderthroughsidhead) | **HEAD** /PortalTemplateFolderThroughs/{id} | Check whether a model instance exists in the data source.
-*PortalTemplateFolderThroughApi* | [**portalTemplateFolderThroughsIdPatch**](docs/Api/PortalTemplateFolderThroughApi.md#portaltemplatefolderthroughsidpatch) | **PATCH** /PortalTemplateFolderThroughs/{id} | Patch attributes for a model instance and persist it into the data source.
-*PortalTemplateFolderThroughApi* | [**portalTemplateFolderThroughsIdPortalFolderGet**](docs/Api/PortalTemplateFolderThroughApi.md#portaltemplatefolderthroughsidportalfolderget) | **GET** /PortalTemplateFolderThroughs/{id}/portalFolder | Fetches belongsTo relation portalFolder.
-*PortalTemplateFolderThroughApi* | [**portalTemplateFolderThroughsIdPut**](docs/Api/PortalTemplateFolderThroughApi.md#portaltemplatefolderthroughsidput) | **PUT** /PortalTemplateFolderThroughs/{id} | Replace attributes for a model instance and persist it into the data source.
-*PortalTemplateFolderThroughApi* | [**portalTemplateFolderThroughsIdReplacePost**](docs/Api/PortalTemplateFolderThroughApi.md#portaltemplatefolderthroughsidreplacepost) | **POST** /PortalTemplateFolderThroughs/{id}/replace | Replace attributes for a model instance and persist it into the data source.
-*PortalTemplateFolderThroughApi* | [**portalTemplateFolderThroughsIdTemplateGet**](docs/Api/PortalTemplateFolderThroughApi.md#portaltemplatefolderthroughsidtemplateget) | **GET** /PortalTemplateFolderThroughs/{id}/template | Fetches belongsTo relation template.
-*PortalTemplateFolderThroughApi* | [**portalTemplateFolderThroughsPatch**](docs/Api/PortalTemplateFolderThroughApi.md#portaltemplatefolderthroughspatch) | **PATCH** /PortalTemplateFolderThroughs | Patch an existing model instance or insert a new one into the data source.
-*PortalTemplateFolderThroughApi* | [**portalTemplateFolderThroughsPost**](docs/Api/PortalTemplateFolderThroughApi.md#portaltemplatefolderthroughspost) | **POST** /PortalTemplateFolderThroughs | Create a new instance of the model and persist it into the data source.
-*PortalTemplateFolderThroughApi* | [**portalTemplateFolderThroughsPut**](docs/Api/PortalTemplateFolderThroughApi.md#portaltemplatefolderthroughsput) | **PUT** /PortalTemplateFolderThroughs | Replace an existing model instance or insert a new one into the data source.
-*PortalTemplateFolderThroughApi* | [**portalTemplateFolderThroughsReplaceOrCreatePost**](docs/Api/PortalTemplateFolderThroughApi.md#portaltemplatefolderthroughsreplaceorcreatepost) | **POST** /PortalTemplateFolderThroughs/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
-*PortalTemplateFolderThroughApi* | [**portalTemplateFolderThroughsUpdatePost**](docs/Api/PortalTemplateFolderThroughApi.md#portaltemplatefolderthroughsupdatepost) | **POST** /PortalTemplateFolderThroughs/update | Update instances of the model matched by {{where}} from the data source.
-*PortalTemplateFolderThroughApi* | [**portalTemplateFolderThroughsUpsertWithWherePost**](docs/Api/PortalTemplateFolderThroughApi.md#portaltemplatefolderthroughsupsertwithwherepost) | **POST** /PortalTemplateFolderThroughs/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
 *TagApi* | [**tagsChangeStreamGet**](docs/Api/TagApi.md#tagschangestreamget) | **GET** /Tags/change-stream | Create a change stream.
 *TagApi* | [**tagsChangeStreamPost**](docs/Api/TagApi.md#tagschangestreampost) | **POST** /Tags/change-stream | Create a change stream.
 *TagApi* | [**tagsCountGet**](docs/Api/TagApi.md#tagscountget) | **GET** /Tags/count | Count instances of the model matched by where from the data source.
@@ -897,6 +888,13 @@ Class | Method | HTTP request | Description
 *TeamApi* | [**teamsIdPortalsNkTemplateFoldersFkPut**](docs/Api/TeamApi.md#teamsidportalsnktemplatefoldersfkput) | **PUT** /Teams/{id}/portals/{nk}/templateFolders/{fk} | Update a related item by id for templateFolders.
 *TeamApi* | [**teamsIdPortalsNkTemplateFoldersGet**](docs/Api/TeamApi.md#teamsidportalsnktemplatefoldersget) | **GET** /Teams/{id}/portals/{nk}/templateFolders | Queries templateFolders of Portal.
 *TeamApi* | [**teamsIdPortalsNkTemplateFoldersPost**](docs/Api/TeamApi.md#teamsidportalsnktemplatefolderspost) | **POST** /Teams/{id}/portals/{nk}/templateFolders | Creates a new instance in templateFolders of this model.
+*TeamApi* | [**teamsIdPortalsNkTemplateRelsCountGet**](docs/Api/TeamApi.md#teamsidportalsnktemplaterelscountget) | **GET** /Teams/{id}/portals/{nk}/templateRels/count | Counts templateRels of Portal.
+*TeamApi* | [**teamsIdPortalsNkTemplateRelsDelete**](docs/Api/TeamApi.md#teamsidportalsnktemplaterelsdelete) | **DELETE** /Teams/{id}/portals/{nk}/templateRels | Deletes all templateRels of this model.
+*TeamApi* | [**teamsIdPortalsNkTemplateRelsFkDelete**](docs/Api/TeamApi.md#teamsidportalsnktemplaterelsfkdelete) | **DELETE** /Teams/{id}/portals/{nk}/templateRels/{fk} | Delete a related item by id for templateRels.
+*TeamApi* | [**teamsIdPortalsNkTemplateRelsFkGet**](docs/Api/TeamApi.md#teamsidportalsnktemplaterelsfkget) | **GET** /Teams/{id}/portals/{nk}/templateRels/{fk} | Find a related item by id for templateRels.
+*TeamApi* | [**teamsIdPortalsNkTemplateRelsFkPut**](docs/Api/TeamApi.md#teamsidportalsnktemplaterelsfkput) | **PUT** /Teams/{id}/portals/{nk}/templateRels/{fk} | Update a related item by id for templateRels.
+*TeamApi* | [**teamsIdPortalsNkTemplateRelsGet**](docs/Api/TeamApi.md#teamsidportalsnktemplaterelsget) | **GET** /Teams/{id}/portals/{nk}/templateRels | Queries templateRels of Portal.
+*TeamApi* | [**teamsIdPortalsNkTemplateRelsPost**](docs/Api/TeamApi.md#teamsidportalsnktemplaterelspost) | **POST** /Teams/{id}/portals/{nk}/templateRels | Creates a new instance in templateRels of this model.
 *TeamApi* | [**teamsIdPortalsNkTemplatesCountGet**](docs/Api/TeamApi.md#teamsidportalsnktemplatescountget) | **GET** /Teams/{id}/portals/{nk}/templates/count | Counts templates of Portal.
 *TeamApi* | [**teamsIdPortalsNkTemplatesDelete**](docs/Api/TeamApi.md#teamsidportalsnktemplatesdelete) | **DELETE** /Teams/{id}/portals/{nk}/templates | Deletes all templates of this model.
 *TeamApi* | [**teamsIdPortalsNkTemplatesFkDelete**](docs/Api/TeamApi.md#teamsidportalsnktemplatesfkdelete) | **DELETE** /Teams/{id}/portals/{nk}/templates/{fk} | Delete a related item by id for templates.
@@ -1373,7 +1371,6 @@ Class | Method | HTTP request | Description
  - [PortalPermissionSet](docs/Model/PortalPermissionSet.md)
  - [PortalTemplate](docs/Model/PortalTemplate.md)
  - [PortalTemplateFolder](docs/Model/PortalTemplateFolder.md)
- - [PortalTemplateFolderThrough](docs/Model/PortalTemplateFolderThrough.md)
  - [Tag](docs/Model/Tag.md)
  - [Team](docs/Model/Team.md)
  - [TeamBrand](docs/Model/TeamBrand.md)

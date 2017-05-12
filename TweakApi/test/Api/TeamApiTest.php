@@ -1531,6 +1531,83 @@ class TeamApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for teamsIdPortalsNkTemplateRelsCountGet
+     *
+     * Counts templateRels of Portal..
+     *
+     */
+    public function testTeamsIdPortalsNkTemplateRelsCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamsIdPortalsNkTemplateRelsDelete
+     *
+     * Deletes all templateRels of this model..
+     *
+     */
+    public function testTeamsIdPortalsNkTemplateRelsDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamsIdPortalsNkTemplateRelsFkDelete
+     *
+     * Delete a related item by id for templateRels..
+     *
+     */
+    public function testTeamsIdPortalsNkTemplateRelsFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamsIdPortalsNkTemplateRelsFkGet
+     *
+     * Find a related item by id for templateRels..
+     *
+     */
+    public function testTeamsIdPortalsNkTemplateRelsFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamsIdPortalsNkTemplateRelsFkPut
+     *
+     * Update a related item by id for templateRels..
+     *
+     */
+    public function testTeamsIdPortalsNkTemplateRelsFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for teamsIdPortalsNkTemplateRelsGet
+     *
+     * Queries templateRels of Portal..
+     *
+     */
+    public function testTeamsIdPortalsNkTemplateRelsGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamsIdPortalsNkTemplateRelsPost
+     *
+     * Creates a new instance in templateRels of this model..
+     *
+     */
+    public function testTeamsIdPortalsNkTemplateRelsPost()
+    {
+
+    }
+
+    /**
      * Test case for teamsIdPortalsNkTemplatesCountGet
      *
      * Counts templates of Portal..

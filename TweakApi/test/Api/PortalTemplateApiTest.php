@@ -167,6 +167,17 @@ class PortalTemplateApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for portalTemplatesIdFolderGet
+     *
+     * Fetches belongsTo relation folder..
+     *
+     */
+    public function testPortalTemplatesIdFolderGet()
+    {
+
+    }
+
+    /**
      * Test case for portalTemplatesIdGet
      *
      * Find a model instance by {{id}} from the data source..

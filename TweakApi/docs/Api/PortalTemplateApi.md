@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**portalTemplatesGet**](PortalTemplateApi.md#portalTemplatesGet) | **GET** /PortalTemplates | Find all instances of the model matched by filter from the data source.
 [**portalTemplatesIdDelete**](PortalTemplateApi.md#portalTemplatesIdDelete) | **DELETE** /PortalTemplates/{id} | Delete a model instance by {{id}} from the data source.
 [**portalTemplatesIdExistsGet**](PortalTemplateApi.md#portalTemplatesIdExistsGet) | **GET** /PortalTemplates/{id}/exists | Check whether a model instance exists in the data source.
+[**portalTemplatesIdFolderGet**](PortalTemplateApi.md#portalTemplatesIdFolderGet) | **GET** /PortalTemplates/{id}/folder | Fetches belongsTo relation folder.
 [**portalTemplatesIdGet**](PortalTemplateApi.md#portalTemplatesIdGet) | **GET** /PortalTemplates/{id} | Find a model instance by {{id}} from the data source.
 [**portalTemplatesIdHead**](PortalTemplateApi.md#portalTemplatesIdHead) | **HEAD** /PortalTemplates/{id} | Check whether a model instance exists in the data source.
 [**portalTemplatesIdPatch**](PortalTemplateApi.md#portalTemplatesIdPatch) | **PATCH** /PortalTemplates/{id} | Patch attributes for a model instance and persist it into the data source.
@@ -350,6 +351,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **portalTemplatesIdFolderGet**
+> \Swagger\Client\Model\PortalTemplateFolder portalTemplatesIdFolderGet($id, $refresh)
+
+Fetches belongsTo relation folder.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\PortalTemplateApi();
+$id = "id_example"; // string | PortalTemplate id
+$refresh = true; // bool | 
+
+try {
+    $result = $api_instance->portalTemplatesIdFolderGet($id, $refresh);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PortalTemplateApi->portalTemplatesIdFolderGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| PortalTemplate id |
+ **refresh** | **bool**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\PortalTemplateFolder**](../Model/PortalTemplateFolder.md)
 
 ### Authorization
 

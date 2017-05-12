@@ -71,6 +71,7 @@ class Template implements ArrayAccess
         'object' => 'object',
         'description' => 'string',
         'edited' => '\DateTime',
+        'teamPath' => 'string',
         'created' => '\DateTime',
         'modified' => '\DateTime',
         'id' => 'string',
@@ -105,6 +106,7 @@ class Template implements ArrayAccess
         'object' => 'object',
         'description' => 'description',
         'edited' => 'edited',
+        'teamPath' => 'teamPath',
         'created' => 'created',
         'modified' => 'modified',
         'id' => 'id',
@@ -139,6 +141,7 @@ class Template implements ArrayAccess
         'object' => 'setObject',
         'description' => 'setDescription',
         'edited' => 'setEdited',
+        'teamPath' => 'setTeamPath',
         'created' => 'setCreated',
         'modified' => 'setModified',
         'id' => 'setId',
@@ -173,6 +176,7 @@ class Template implements ArrayAccess
         'object' => 'getObject',
         'description' => 'getDescription',
         'edited' => 'getEdited',
+        'teamPath' => 'getTeamPath',
         'created' => 'getCreated',
         'modified' => 'getModified',
         'id' => 'getId',
@@ -218,6 +222,7 @@ class Template implements ArrayAccess
         $this->container['object'] = isset($data['object']) ? $data['object'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : '';
         $this->container['edited'] = isset($data['edited']) ? $data['edited'] : null;
+        $this->container['teamPath'] = isset($data['teamPath']) ? $data['teamPath'] : '/';
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
         $this->container['modified'] = isset($data['modified']) ? $data['modified'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
@@ -373,6 +378,27 @@ class Template implements ArrayAccess
     public function setEdited($edited)
     {
         $this->container['edited'] = $edited;
+
+        return $this;
+    }
+
+    /**
+     * Gets teamPath
+     * @return string
+     */
+    public function getTeamPath()
+    {
+        return $this->container['teamPath'];
+    }
+
+    /**
+     * Sets teamPath
+     * @param string $teamPath
+     * @return $this
+     */
+    public function setTeamPath($teamPath)
+    {
+        $this->container['teamPath'] = $teamPath;
 
         return $this;
     }

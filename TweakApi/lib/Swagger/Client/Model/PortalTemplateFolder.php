@@ -67,6 +67,7 @@ class PortalTemplateFolder implements ArrayAccess
       */
     protected static $swaggerTypes = array(
         'name' => 'string',
+        'path' => 'string',
         'created' => '\DateTime',
         'modified' => '\DateTime',
         'id' => 'string',
@@ -89,6 +90,7 @@ class PortalTemplateFolder implements ArrayAccess
      */
     protected static $attributeMap = array(
         'name' => 'name',
+        'path' => 'path',
         'created' => 'created',
         'modified' => 'modified',
         'id' => 'id',
@@ -111,6 +113,7 @@ class PortalTemplateFolder implements ArrayAccess
      */
     protected static $setters = array(
         'name' => 'setName',
+        'path' => 'setPath',
         'created' => 'setCreated',
         'modified' => 'setModified',
         'id' => 'setId',
@@ -133,6 +136,7 @@ class PortalTemplateFolder implements ArrayAccess
      */
     protected static $getters = array(
         'name' => 'getName',
+        'path' => 'getPath',
         'created' => 'getCreated',
         'modified' => 'getModified',
         'id' => 'getId',
@@ -166,6 +170,7 @@ class PortalTemplateFolder implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['path'] = isset($data['path']) ? $data['path'] : '/';
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
         $this->container['modified'] = isset($data['modified']) ? $data['modified'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
@@ -223,6 +228,27 @@ class PortalTemplateFolder implements ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets path
+     * @return string
+     */
+    public function getPath()
+    {
+        return $this->container['path'];
+    }
+
+    /**
+     * Sets path
+     * @param string $path
+     * @return $this
+     */
+    public function setPath($path)
+    {
+        $this->container['path'] = $path;
 
         return $this;
     }

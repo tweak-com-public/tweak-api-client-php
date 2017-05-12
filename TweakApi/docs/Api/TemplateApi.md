@@ -617,7 +617,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **templatesIdDesignsGeneratePost**
-> \Swagger\Client\Model\Design templatesIdDesignsGeneratePost($id, $data)
+> \Swagger\Client\Model\Design templatesIdDesignsGeneratePost($id, $id2, $data)
 
 Generate design from template
 
@@ -632,11 +632,12 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
 $api_instance = new Tweak\Api\Api\TemplateApi();
-$id = "id_example"; // string | 
+$id = "id_example"; // string | Template id
+$id2 = "id_example"; // string | 
 $data = new \Swagger\Client\Model\Template(); // \Swagger\Client\Model\Template | 
 
 try {
-    $result = $api_instance->templatesIdDesignsGeneratePost($id, $data);
+    $result = $api_instance->templatesIdDesignsGeneratePost($id, $id2, $data);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TemplateApi->templatesIdDesignsGeneratePost: ', $e->getMessage(), PHP_EOL;
@@ -648,7 +649,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **string**|  |
+ **id** | **string**| Template id |
+ **id2** | **string**|  |
  **data** | [**\Swagger\Client\Model\Template**](../Model/\Swagger\Client\Model\Template.md)|  | [optional]
 
 ### Return type
@@ -2106,7 +2108,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **templatesIdPortalFoldersRelFkPut**
-> \Swagger\Client\Model\PortalTemplateFolderThrough templatesIdPortalFoldersRelFkPut($id, $fk, $data)
+> \Swagger\Client\Model\PortalTemplate templatesIdPortalFoldersRelFkPut($id, $fk, $data)
 
 Add a related item by id for portalFolders.
 
@@ -2123,7 +2125,7 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 $api_instance = new Tweak\Api\Api\TemplateApi();
 $id = "id_example"; // string | Template id
 $fk = "fk_example"; // string | Foreign key for portalFolders
-$data = new \Swagger\Client\Model\PortalTemplateFolderThrough(); // \Swagger\Client\Model\PortalTemplateFolderThrough | 
+$data = new \Swagger\Client\Model\PortalTemplate(); // \Swagger\Client\Model\PortalTemplate | 
 
 try {
     $result = $api_instance->templatesIdPortalFoldersRelFkPut($id, $fk, $data);
@@ -2140,11 +2142,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| Template id |
  **fk** | **string**| Foreign key for portalFolders |
- **data** | [**\Swagger\Client\Model\PortalTemplateFolderThrough**](../Model/\Swagger\Client\Model\PortalTemplateFolderThrough.md)|  | [optional]
+ **data** | [**\Swagger\Client\Model\PortalTemplate**](../Model/\Swagger\Client\Model\PortalTemplate.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\PortalTemplateFolderThrough**](../Model/PortalTemplateFolderThrough.md)
+[**\Swagger\Client\Model\PortalTemplate**](../Model/PortalTemplate.md)
 
 ### Authorization
 
