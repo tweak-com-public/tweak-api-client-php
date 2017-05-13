@@ -71,6 +71,7 @@ class TemplatePermissionSet implements ArrayAccess
         'canBeOrdered' => 'bool',
         'printPdf' => 'bool',
         'proofPdf' => 'bool',
+        'jpegs' => 'bool',
         'socialSharing' => 'bool',
         'id' => 'string',
         'templateId' => 'string',
@@ -92,6 +93,7 @@ class TemplatePermissionSet implements ArrayAccess
         'canBeOrdered' => 'canBeOrdered',
         'printPdf' => 'printPdf',
         'proofPdf' => 'proofPdf',
+        'jpegs' => 'jpegs',
         'socialSharing' => 'socialSharing',
         'id' => 'id',
         'templateId' => 'templateId',
@@ -113,6 +115,7 @@ class TemplatePermissionSet implements ArrayAccess
         'canBeOrdered' => 'setCanBeOrdered',
         'printPdf' => 'setPrintPdf',
         'proofPdf' => 'setProofPdf',
+        'jpegs' => 'setJpegs',
         'socialSharing' => 'setSocialSharing',
         'id' => 'setId',
         'templateId' => 'setTemplateId',
@@ -134,6 +137,7 @@ class TemplatePermissionSet implements ArrayAccess
         'canBeOrdered' => 'getCanBeOrdered',
         'printPdf' => 'getPrintPdf',
         'proofPdf' => 'getProofPdf',
+        'jpegs' => 'getJpegs',
         'socialSharing' => 'getSocialSharing',
         'id' => 'getId',
         'templateId' => 'getTemplateId',
@@ -166,6 +170,7 @@ class TemplatePermissionSet implements ArrayAccess
         $this->container['canBeOrdered'] = isset($data['canBeOrdered']) ? $data['canBeOrdered'] : false;
         $this->container['printPdf'] = isset($data['printPdf']) ? $data['printPdf'] : false;
         $this->container['proofPdf'] = isset($data['proofPdf']) ? $data['proofPdf'] : false;
+        $this->container['jpegs'] = isset($data['jpegs']) ? $data['jpegs'] : false;
         $this->container['socialSharing'] = isset($data['socialSharing']) ? $data['socialSharing'] : false;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['templateId'] = isset($data['templateId']) ? $data['templateId'] : null;
@@ -296,6 +301,27 @@ class TemplatePermissionSet implements ArrayAccess
     public function setProofPdf($proofPdf)
     {
         $this->container['proofPdf'] = $proofPdf;
+
+        return $this;
+    }
+
+    /**
+     * Gets jpegs
+     * @return bool
+     */
+    public function getJpegs()
+    {
+        return $this->container['jpegs'];
+    }
+
+    /**
+     * Sets jpegs
+     * @param bool $jpegs
+     * @return $this
+     */
+    public function setJpegs($jpegs)
+    {
+        $this->container['jpegs'] = $jpegs;
 
         return $this;
     }

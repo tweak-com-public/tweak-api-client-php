@@ -184,6 +184,14 @@ class PortalTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "portalMembers"
+     */
+    public function testPropertyPortalMembers()
+    {
+
+    }
+
+    /**
      * Test attribute "team"
      */
     public function testPropertyTeam()

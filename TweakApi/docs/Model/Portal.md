@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **templates** | [**\Swagger\Client\Model\Template[]**](Template.md) |  | [optional] 
 **templateRels** | [**\Swagger\Client\Model\PortalTemplate[]**](PortalTemplate.md) |  | [optional] 
 **members** | [**\Swagger\Client\Model\TeamMember[]**](TeamMember.md) |  | [optional] 
+**portalMembers** | [**\Swagger\Client\Model\PortalMember[]**](PortalMember.md) |  | [optional] 
 **team** | [**\Swagger\Client\Model\Team**](Team.md) |  | [optional] 
 **permission** | [**\Swagger\Client\Model\PortalPermissionSet**](PortalPermissionSet.md) |  | [optional] 
 **designs** | [**\Swagger\Client\Model\Design[]**](Design.md) |  | [optional] 

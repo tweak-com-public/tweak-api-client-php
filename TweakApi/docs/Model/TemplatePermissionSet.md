@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **canBeOrdered** | **bool** |  | [optional] [default to false]
 **printPdf** | **bool** |  | [optional] [default to false]
 **proofPdf** | **bool** |  | [optional] [default to false]
+**jpegs** | **bool** |  | [optional] [default to false]
 **socialSharing** | **bool** |  | [optional] [default to false]
 **id** | **string** |  | [optional] 
 **templateId** | **string** |  | [optional] 

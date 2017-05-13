@@ -136,6 +136,14 @@ class TemplatePermissionSetTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "jpegs"
+     */
+    public function testPropertyJpegs()
+    {
+
+    }
+
+    /**
      * Test attribute "socialSharing"
      */
     public function testPropertySocialSharing()

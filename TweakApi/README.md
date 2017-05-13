@@ -566,6 +566,13 @@ Class | Method | HTTP request | Description
 *PortalApi* | [**portalsIdPermissionGet**](docs/Api/PortalApi.md#portalsidpermissionget) | **GET** /Portals/{id}/permission | Fetches hasOne relation permission.
 *PortalApi* | [**portalsIdPermissionPost**](docs/Api/PortalApi.md#portalsidpermissionpost) | **POST** /Portals/{id}/permission | Creates a new instance in permission of this model.
 *PortalApi* | [**portalsIdPermissionPut**](docs/Api/PortalApi.md#portalsidpermissionput) | **PUT** /Portals/{id}/permission | Update permission of this model.
+*PortalApi* | [**portalsIdPortalMembersCountGet**](docs/Api/PortalApi.md#portalsidportalmemberscountget) | **GET** /Portals/{id}/portalMembers/count | Counts portalMembers of Portal.
+*PortalApi* | [**portalsIdPortalMembersDelete**](docs/Api/PortalApi.md#portalsidportalmembersdelete) | **DELETE** /Portals/{id}/portalMembers | Deletes all portalMembers of this model.
+*PortalApi* | [**portalsIdPortalMembersFkDelete**](docs/Api/PortalApi.md#portalsidportalmembersfkdelete) | **DELETE** /Portals/{id}/portalMembers/{fk} | Delete a related item by id for portalMembers.
+*PortalApi* | [**portalsIdPortalMembersFkGet**](docs/Api/PortalApi.md#portalsidportalmembersfkget) | **GET** /Portals/{id}/portalMembers/{fk} | Find a related item by id for portalMembers.
+*PortalApi* | [**portalsIdPortalMembersFkPut**](docs/Api/PortalApi.md#portalsidportalmembersfkput) | **PUT** /Portals/{id}/portalMembers/{fk} | Update a related item by id for portalMembers.
+*PortalApi* | [**portalsIdPortalMembersGet**](docs/Api/PortalApi.md#portalsidportalmembersget) | **GET** /Portals/{id}/portalMembers | Queries portalMembers of Portal.
+*PortalApi* | [**portalsIdPortalMembersPost**](docs/Api/PortalApi.md#portalsidportalmemberspost) | **POST** /Portals/{id}/portalMembers | Creates a new instance in portalMembers of this model.
 *PortalApi* | [**portalsIdPut**](docs/Api/PortalApi.md#portalsidput) | **PUT** /Portals/{id} | Replace attributes for a model instance and persist it into the data source.
 *PortalApi* | [**portalsIdReplacePost**](docs/Api/PortalApi.md#portalsidreplacepost) | **POST** /Portals/{id}/replace | Replace attributes for a model instance and persist it into the data source.
 *PortalApi* | [**portalsIdTeamGet**](docs/Api/PortalApi.md#portalsidteamget) | **GET** /Portals/{id}/team | Fetches belongsTo relation team.
@@ -589,6 +596,8 @@ Class | Method | HTTP request | Description
 *PortalApi* | [**portalsIdTemplatesCountGet**](docs/Api/PortalApi.md#portalsidtemplatescountget) | **GET** /Portals/{id}/templates/count | Counts templates of Portal.
 *PortalApi* | [**portalsIdTemplatesDelete**](docs/Api/PortalApi.md#portalsidtemplatesdelete) | **DELETE** /Portals/{id}/templates | Deletes all templates of this model.
 *PortalApi* | [**portalsIdTemplatesFkDelete**](docs/Api/PortalApi.md#portalsidtemplatesfkdelete) | **DELETE** /Portals/{id}/templates/{fk} | Delete a related item by id for templates.
+*PortalApi* | [**portalsIdTemplatesFkDesignsGenerateBulkPost**](docs/Api/PortalApi.md#portalsidtemplatesfkdesignsgeneratebulkpost) | **POST** /Portals/{id}/templates/{fk}/designs/generate/bulk | Generate Design from Template
+*PortalApi* | [**portalsIdTemplatesFkDesignsGeneratePost**](docs/Api/PortalApi.md#portalsidtemplatesfkdesignsgeneratepost) | **POST** /Portals/{id}/templates/{fk}/designs/generate | Generate Design from Template
 *PortalApi* | [**portalsIdTemplatesFkGet**](docs/Api/PortalApi.md#portalsidtemplatesfkget) | **GET** /Portals/{id}/templates/{fk} | Find a related item by id for templates.
 *PortalApi* | [**portalsIdTemplatesFkPut**](docs/Api/PortalApi.md#portalsidtemplatesfkput) | **PUT** /Portals/{id}/templates/{fk} | Update a related item by id for templates.
 *PortalApi* | [**portalsIdTemplatesGet**](docs/Api/PortalApi.md#portalsidtemplatesget) | **GET** /Portals/{id}/templates | Queries templates of Portal.
@@ -880,6 +889,13 @@ Class | Method | HTTP request | Description
 *TeamApi* | [**teamsIdPortalsNkPermissionGet**](docs/Api/TeamApi.md#teamsidportalsnkpermissionget) | **GET** /Teams/{id}/portals/{nk}/permission | Fetches hasOne relation permission.
 *TeamApi* | [**teamsIdPortalsNkPermissionPost**](docs/Api/TeamApi.md#teamsidportalsnkpermissionpost) | **POST** /Teams/{id}/portals/{nk}/permission | Creates a new instance in permission of this model.
 *TeamApi* | [**teamsIdPortalsNkPermissionPut**](docs/Api/TeamApi.md#teamsidportalsnkpermissionput) | **PUT** /Teams/{id}/portals/{nk}/permission | Update permission of this model.
+*TeamApi* | [**teamsIdPortalsNkPortalMembersCountGet**](docs/Api/TeamApi.md#teamsidportalsnkportalmemberscountget) | **GET** /Teams/{id}/portals/{nk}/portalMembers/count | Counts portalMembers of Portal.
+*TeamApi* | [**teamsIdPortalsNkPortalMembersDelete**](docs/Api/TeamApi.md#teamsidportalsnkportalmembersdelete) | **DELETE** /Teams/{id}/portals/{nk}/portalMembers | Deletes all portalMembers of this model.
+*TeamApi* | [**teamsIdPortalsNkPortalMembersFkDelete**](docs/Api/TeamApi.md#teamsidportalsnkportalmembersfkdelete) | **DELETE** /Teams/{id}/portals/{nk}/portalMembers/{fk} | Delete a related item by id for portalMembers.
+*TeamApi* | [**teamsIdPortalsNkPortalMembersFkGet**](docs/Api/TeamApi.md#teamsidportalsnkportalmembersfkget) | **GET** /Teams/{id}/portals/{nk}/portalMembers/{fk} | Find a related item by id for portalMembers.
+*TeamApi* | [**teamsIdPortalsNkPortalMembersFkPut**](docs/Api/TeamApi.md#teamsidportalsnkportalmembersfkput) | **PUT** /Teams/{id}/portals/{nk}/portalMembers/{fk} | Update a related item by id for portalMembers.
+*TeamApi* | [**teamsIdPortalsNkPortalMembersGet**](docs/Api/TeamApi.md#teamsidportalsnkportalmembersget) | **GET** /Teams/{id}/portals/{nk}/portalMembers | Queries portalMembers of Portal.
+*TeamApi* | [**teamsIdPortalsNkPortalMembersPost**](docs/Api/TeamApi.md#teamsidportalsnkportalmemberspost) | **POST** /Teams/{id}/portals/{nk}/portalMembers | Creates a new instance in portalMembers of this model.
 *TeamApi* | [**teamsIdPortalsNkTeamGet**](docs/Api/TeamApi.md#teamsidportalsnkteamget) | **GET** /Teams/{id}/portals/{nk}/team | Fetches belongsTo relation team.
 *TeamApi* | [**teamsIdPortalsNkTemplateFoldersCountGet**](docs/Api/TeamApi.md#teamsidportalsnktemplatefolderscountget) | **GET** /Teams/{id}/portals/{nk}/templateFolders/count | Counts templateFolders of Portal.
 *TeamApi* | [**teamsIdPortalsNkTemplateFoldersDelete**](docs/Api/TeamApi.md#teamsidportalsnktemplatefoldersdelete) | **DELETE** /Teams/{id}/portals/{nk}/templateFolders | Deletes all templateFolders of this model.

@@ -1443,6 +1443,83 @@ class TeamApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for teamsIdPortalsNkPortalMembersCountGet
+     *
+     * Counts portalMembers of Portal..
+     *
+     */
+    public function testTeamsIdPortalsNkPortalMembersCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamsIdPortalsNkPortalMembersDelete
+     *
+     * Deletes all portalMembers of this model..
+     *
+     */
+    public function testTeamsIdPortalsNkPortalMembersDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamsIdPortalsNkPortalMembersFkDelete
+     *
+     * Delete a related item by id for portalMembers..
+     *
+     */
+    public function testTeamsIdPortalsNkPortalMembersFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamsIdPortalsNkPortalMembersFkGet
+     *
+     * Find a related item by id for portalMembers..
+     *
+     */
+    public function testTeamsIdPortalsNkPortalMembersFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamsIdPortalsNkPortalMembersFkPut
+     *
+     * Update a related item by id for portalMembers..
+     *
+     */
+    public function testTeamsIdPortalsNkPortalMembersFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for teamsIdPortalsNkPortalMembersGet
+     *
+     * Queries portalMembers of Portal..
+     *
+     */
+    public function testTeamsIdPortalsNkPortalMembersGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamsIdPortalsNkPortalMembersPost
+     *
+     * Creates a new instance in portalMembers of this model..
+     *
+     */
+    public function testTeamsIdPortalsNkPortalMembersPost()
+    {
+
+    }
+
+    /**
      * Test case for teamsIdPortalsNkTeamGet
      *
      * Fetches belongsTo relation team..

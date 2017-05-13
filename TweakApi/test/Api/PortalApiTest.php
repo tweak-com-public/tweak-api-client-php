@@ -1069,6 +1069,83 @@ class PortalApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for portalsIdPortalMembersCountGet
+     *
+     * Counts portalMembers of Portal..
+     *
+     */
+    public function testPortalsIdPortalMembersCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for portalsIdPortalMembersDelete
+     *
+     * Deletes all portalMembers of this model..
+     *
+     */
+    public function testPortalsIdPortalMembersDelete()
+    {
+
+    }
+
+    /**
+     * Test case for portalsIdPortalMembersFkDelete
+     *
+     * Delete a related item by id for portalMembers..
+     *
+     */
+    public function testPortalsIdPortalMembersFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for portalsIdPortalMembersFkGet
+     *
+     * Find a related item by id for portalMembers..
+     *
+     */
+    public function testPortalsIdPortalMembersFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for portalsIdPortalMembersFkPut
+     *
+     * Update a related item by id for portalMembers..
+     *
+     */
+    public function testPortalsIdPortalMembersFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for portalsIdPortalMembersGet
+     *
+     * Queries portalMembers of Portal..
+     *
+     */
+    public function testPortalsIdPortalMembersGet()
+    {
+
+    }
+
+    /**
+     * Test case for portalsIdPortalMembersPost
+     *
+     * Creates a new instance in portalMembers of this model..
+     *
+     */
+    public function testPortalsIdPortalMembersPost()
+    {
+
+    }
+
+    /**
      * Test case for portalsIdPut
      *
      * Replace attributes for a model instance and persist it into the data source..
@@ -1317,6 +1394,28 @@ class PortalApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testPortalsIdTemplatesFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for portalsIdTemplatesFkDesignsGenerateBulkPost
+     *
+     * Generate Design from Template.
+     *
+     */
+    public function testPortalsIdTemplatesFkDesignsGenerateBulkPost()
+    {
+
+    }
+
+    /**
+     * Test case for portalsIdTemplatesFkDesignsGeneratePost
+     *
+     * Generate Design from Template.
+     *
+     */
+    public function testPortalsIdTemplatesFkDesignsGeneratePost()
     {
 
     }
