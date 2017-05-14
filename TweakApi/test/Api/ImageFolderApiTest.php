@@ -244,6 +244,83 @@ class ImageFolderApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for imageFoldersIdFolderMembersCountGet
+     *
+     * Counts folderMembers of ImageFolder..
+     *
+     */
+    public function testImageFoldersIdFolderMembersCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for imageFoldersIdFolderMembersDelete
+     *
+     * Deletes all folderMembers of this model..
+     *
+     */
+    public function testImageFoldersIdFolderMembersDelete()
+    {
+
+    }
+
+    /**
+     * Test case for imageFoldersIdFolderMembersFkDelete
+     *
+     * Delete a related item by id for folderMembers..
+     *
+     */
+    public function testImageFoldersIdFolderMembersFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for imageFoldersIdFolderMembersFkGet
+     *
+     * Find a related item by id for folderMembers..
+     *
+     */
+    public function testImageFoldersIdFolderMembersFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for imageFoldersIdFolderMembersFkPut
+     *
+     * Update a related item by id for folderMembers..
+     *
+     */
+    public function testImageFoldersIdFolderMembersFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for imageFoldersIdFolderMembersGet
+     *
+     * Queries folderMembers of ImageFolder..
+     *
+     */
+    public function testImageFoldersIdFolderMembersGet()
+    {
+
+    }
+
+    /**
+     * Test case for imageFoldersIdFolderMembersPost
+     *
+     * Creates a new instance in folderMembers of this model..
+     *
+     */
+    public function testImageFoldersIdFolderMembersPost()
+    {
+
+    }
+
+    /**
      * Test case for imageFoldersIdGet
      *
      * Find a model instance by {{id}} from the data source..
@@ -338,6 +415,39 @@ class ImageFolderApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testImageFoldersIdImagesPost()
+    {
+
+    }
+
+    /**
+     * Test case for imageFoldersIdInvitationTicketsFkDelete
+     *
+     * Delete InvitationTickets for this ImageFolder.
+     *
+     */
+    public function testImageFoldersIdInvitationTicketsFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for imageFoldersIdInvitationTicketsFkGet
+     *
+     * Get InvitationTicket by Id for this ImageFolder.
+     *
+     */
+    public function testImageFoldersIdInvitationTicketsFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for imageFoldersIdInvitationTicketsGet
+     *
+     * List InvitationTickets for this ImageFolder.
+     *
+     */
+    public function testImageFoldersIdInvitationTicketsGet()
     {
 
     }

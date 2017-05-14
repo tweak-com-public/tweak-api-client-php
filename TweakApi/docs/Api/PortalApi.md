@@ -78,6 +78,9 @@ Method | HTTP request | Description
 [**portalsIdImageFoldersRelFkDelete**](PortalApi.md#portalsIdImageFoldersRelFkDelete) | **DELETE** /Portals/{id}/imageFolders/rel/{fk} | Remove the imageFolders relation to an item by id.
 [**portalsIdImageFoldersRelFkHead**](PortalApi.md#portalsIdImageFoldersRelFkHead) | **HEAD** /Portals/{id}/imageFolders/rel/{fk} | Check the existence of imageFolders relation to an item by id.
 [**portalsIdImageFoldersRelFkPut**](PortalApi.md#portalsIdImageFoldersRelFkPut) | **PUT** /Portals/{id}/imageFolders/rel/{fk} | Add a related item by id for imageFolders.
+[**portalsIdInvitationTicketsFkDelete**](PortalApi.md#portalsIdInvitationTicketsFkDelete) | **DELETE** /Portals/{id}/invitationTickets/{fk} | Delete InvitationTickets for this Portal
+[**portalsIdInvitationTicketsFkGet**](PortalApi.md#portalsIdInvitationTicketsFkGet) | **GET** /Portals/{id}/invitationTickets/{fk} | Get InvitationTicket by Id for this Portal
+[**portalsIdInvitationTicketsGet**](PortalApi.md#portalsIdInvitationTicketsGet) | **GET** /Portals/{id}/invitationTickets | List InvitationTickets for this Portal
 [**portalsIdMembersCountGet**](PortalApi.md#portalsIdMembersCountGet) | **GET** /Portals/{id}/members/count | Counts members of Portal.
 [**portalsIdMembersDelete**](PortalApi.md#portalsIdMembersDelete) | **DELETE** /Portals/{id}/members | Deletes all members of this model.
 [**portalsIdMembersFkDelete**](PortalApi.md#portalsIdMembersFkDelete) | **DELETE** /Portals/{id}/members/{fk} | Delete a related item by id for members.
@@ -3883,6 +3886,164 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\PortalImageFolder**](../Model/PortalImageFolder.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **portalsIdInvitationTicketsFkDelete**
+> object portalsIdInvitationTicketsFkDelete($id, $id2, $fk)
+
+Delete InvitationTickets for this Portal
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\PortalApi();
+$id = "id_example"; // string | Portal id
+$id2 = "id_example"; // string | Portal id
+$fk = "fk_example"; // string | InvitationTicket id
+
+try {
+    $result = $api_instance->portalsIdInvitationTicketsFkDelete($id, $id2, $fk);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PortalApi->portalsIdInvitationTicketsFkDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Portal id |
+ **id2** | **string**| Portal id |
+ **fk** | **string**| InvitationTicket id |
+
+### Return type
+
+**object**
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **portalsIdInvitationTicketsFkGet**
+> \Swagger\Client\Model\InvitationTicket portalsIdInvitationTicketsFkGet($id, $id2, $fk, $filter)
+
+Get InvitationTicket by Id for this Portal
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\PortalApi();
+$id = "id_example"; // string | Portal id
+$id2 = "id_example"; // string | Portal id
+$fk = "fk_example"; // string | InvitationTicket id
+$filter = "filter_example"; // string | Only include changes that match this filter
+
+try {
+    $result = $api_instance->portalsIdInvitationTicketsFkGet($id, $id2, $fk, $filter);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PortalApi->portalsIdInvitationTicketsFkGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Portal id |
+ **id2** | **string**| Portal id |
+ **fk** | **string**| InvitationTicket id |
+ **filter** | **string**| Only include changes that match this filter | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\InvitationTicket**](../Model/InvitationTicket.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **portalsIdInvitationTicketsGet**
+> \Swagger\Client\Model\InvitationTicket[] portalsIdInvitationTicketsGet($id, $id2, $filter)
+
+List InvitationTickets for this Portal
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\PortalApi();
+$id = "id_example"; // string | Portal id
+$id2 = "id_example"; // string | Portal id
+$filter = "filter_example"; // string | Filter defining fields and include - must be a JSON-encoded string ({\"something\":\"value\"})
+
+try {
+    $result = $api_instance->portalsIdInvitationTicketsGet($id, $id2, $filter);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PortalApi->portalsIdInvitationTicketsGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Portal id |
+ **id2** | **string**| Portal id |
+ **filter** | **string**| Filter defining fields and include - must be a JSON-encoded string ({\&quot;something\&quot;:\&quot;value\&quot;}) | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\InvitationTicket[]**](../Model/InvitationTicket.md)
 
 ### Authorization
 

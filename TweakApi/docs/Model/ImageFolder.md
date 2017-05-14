@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **team** | [**\Swagger\Client\Model\Team**](Team.md) |  | [optional] 
 **portals** | [**\Swagger\Client\Model\Portal[]**](Portal.md) |  | [optional] 
 **members** | [**\Swagger\Client\Model\TeamMember[]**](TeamMember.md) |  | [optional] 
+**folderMembers** | [**\Swagger\Client\Model\ImageFolderMember[]**](ImageFolderMember.md) |  | [optional] 
 **parent** | [**\Swagger\Client\Model\ImageFolder**](ImageFolder.md) |  | [optional] 
 **children** | [**\Swagger\Client\Model\ImageFolder[]**](ImageFolder.md) |  | [optional] 
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * TeamMemberImageFolderApiTest
+ * ImageFolderMemberApiTest
  * PHP version 5
  *
  * @category Class
@@ -46,7 +46,7 @@ use \Tweak\Api\ApiException;
 use \Tweak\Api\ObjectSerializer;
 
 /**
- * TeamMemberImageFolderApiTest Class Doc Comment
+ * ImageFolderMemberApiTest Class Doc Comment
  *
  * @category Class
  * @package  Tweak\Api
@@ -54,7 +54,7 @@ use \Tweak\Api\ObjectSerializer;
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class TeamMemberImageFolderApiTest extends \PHPUnit_Framework_TestCase
+class ImageFolderMemberApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -90,221 +90,221 @@ class TeamMemberImageFolderApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for teamMemberImageFoldersChangeStreamGet
+     * Test case for imageFolderMembersChangeStreamGet
      *
      * Create a change stream..
      *
      */
-    public function testTeamMemberImageFoldersChangeStreamGet()
+    public function testImageFolderMembersChangeStreamGet()
     {
 
     }
 
     /**
-     * Test case for teamMemberImageFoldersChangeStreamPost
+     * Test case for imageFolderMembersChangeStreamPost
      *
      * Create a change stream..
      *
      */
-    public function testTeamMemberImageFoldersChangeStreamPost()
+    public function testImageFolderMembersChangeStreamPost()
     {
 
     }
 
     /**
-     * Test case for teamMemberImageFoldersCountGet
+     * Test case for imageFolderMembersCountGet
      *
      * Count instances of the model matched by where from the data source..
      *
      */
-    public function testTeamMemberImageFoldersCountGet()
+    public function testImageFolderMembersCountGet()
     {
 
     }
 
     /**
-     * Test case for teamMemberImageFoldersFindOneGet
+     * Test case for imageFolderMembersFindOneGet
      *
      * Find first instance of the model matched by filter from the data source..
      *
      */
-    public function testTeamMemberImageFoldersFindOneGet()
+    public function testImageFolderMembersFindOneGet()
     {
 
     }
 
     /**
-     * Test case for teamMemberImageFoldersGet
+     * Test case for imageFolderMembersGet
      *
      * Find all instances of the model matched by filter from the data source..
      *
      */
-    public function testTeamMemberImageFoldersGet()
+    public function testImageFolderMembersGet()
     {
 
     }
 
     /**
-     * Test case for teamMemberImageFoldersIdDelete
+     * Test case for imageFolderMembersIdDelete
      *
      * Delete a model instance by {{id}} from the data source..
      *
      */
-    public function testTeamMemberImageFoldersIdDelete()
+    public function testImageFolderMembersIdDelete()
     {
 
     }
 
     /**
-     * Test case for teamMemberImageFoldersIdExistsGet
+     * Test case for imageFolderMembersIdExistsGet
      *
      * Check whether a model instance exists in the data source..
      *
      */
-    public function testTeamMemberImageFoldersIdExistsGet()
+    public function testImageFolderMembersIdExistsGet()
     {
 
     }
 
     /**
-     * Test case for teamMemberImageFoldersIdFolderGet
+     * Test case for imageFolderMembersIdFolderGet
      *
      * Fetches belongsTo relation folder..
      *
      */
-    public function testTeamMemberImageFoldersIdFolderGet()
+    public function testImageFolderMembersIdFolderGet()
     {
 
     }
 
     /**
-     * Test case for teamMemberImageFoldersIdGet
+     * Test case for imageFolderMembersIdGet
      *
      * Find a model instance by {{id}} from the data source..
      *
      */
-    public function testTeamMemberImageFoldersIdGet()
+    public function testImageFolderMembersIdGet()
     {
 
     }
 
     /**
-     * Test case for teamMemberImageFoldersIdHead
+     * Test case for imageFolderMembersIdHead
      *
      * Check whether a model instance exists in the data source..
      *
      */
-    public function testTeamMemberImageFoldersIdHead()
+    public function testImageFolderMembersIdHead()
     {
 
     }
 
     /**
-     * Test case for teamMemberImageFoldersIdMemberGet
+     * Test case for imageFolderMembersIdMemberGet
      *
      * Fetches belongsTo relation member..
      *
      */
-    public function testTeamMemberImageFoldersIdMemberGet()
+    public function testImageFolderMembersIdMemberGet()
     {
 
     }
 
     /**
-     * Test case for teamMemberImageFoldersIdPatch
+     * Test case for imageFolderMembersIdPatch
      *
      * Patch attributes for a model instance and persist it into the data source..
      *
      */
-    public function testTeamMemberImageFoldersIdPatch()
+    public function testImageFolderMembersIdPatch()
     {
 
     }
 
     /**
-     * Test case for teamMemberImageFoldersIdPut
+     * Test case for imageFolderMembersIdPut
      *
      * Replace attributes for a model instance and persist it into the data source..
      *
      */
-    public function testTeamMemberImageFoldersIdPut()
+    public function testImageFolderMembersIdPut()
     {
 
     }
 
     /**
-     * Test case for teamMemberImageFoldersIdReplacePost
+     * Test case for imageFolderMembersIdReplacePost
      *
      * Replace attributes for a model instance and persist it into the data source..
      *
      */
-    public function testTeamMemberImageFoldersIdReplacePost()
+    public function testImageFolderMembersIdReplacePost()
     {
 
     }
 
     /**
-     * Test case for teamMemberImageFoldersPatch
+     * Test case for imageFolderMembersPatch
      *
      * Patch an existing model instance or insert a new one into the data source..
      *
      */
-    public function testTeamMemberImageFoldersPatch()
+    public function testImageFolderMembersPatch()
     {
 
     }
 
     /**
-     * Test case for teamMemberImageFoldersPost
+     * Test case for imageFolderMembersPost
      *
      * Create a new instance of the model and persist it into the data source..
      *
      */
-    public function testTeamMemberImageFoldersPost()
+    public function testImageFolderMembersPost()
     {
 
     }
 
     /**
-     * Test case for teamMemberImageFoldersPut
+     * Test case for imageFolderMembersPut
      *
      * Replace an existing model instance or insert a new one into the data source..
      *
      */
-    public function testTeamMemberImageFoldersPut()
+    public function testImageFolderMembersPut()
     {
 
     }
 
     /**
-     * Test case for teamMemberImageFoldersReplaceOrCreatePost
+     * Test case for imageFolderMembersReplaceOrCreatePost
      *
      * Replace an existing model instance or insert a new one into the data source..
      *
      */
-    public function testTeamMemberImageFoldersReplaceOrCreatePost()
+    public function testImageFolderMembersReplaceOrCreatePost()
     {
 
     }
 
     /**
-     * Test case for teamMemberImageFoldersUpdatePost
+     * Test case for imageFolderMembersUpdatePost
      *
      * Update instances of the model matched by {{where}} from the data source..
      *
      */
-    public function testTeamMemberImageFoldersUpdatePost()
+    public function testImageFolderMembersUpdatePost()
     {
 
     }
 
     /**
-     * Test case for teamMemberImageFoldersUpsertWithWherePost
+     * Test case for imageFolderMembersUpsertWithWherePost
      *
      * Update an existing model instance or insert a new one into the data source based on the where criteria..
      *
      */
-    public function testTeamMemberImageFoldersUpsertWithWherePost()
+    public function testImageFolderMembersUpsertWithWherePost()
     {
 
     }

@@ -82,6 +82,7 @@ class Template implements ArrayAccess
         'portals' => '\Swagger\Client\Model\Portal[]',
         'team' => '\Swagger\Client\Model\Team',
         'members' => '\Swagger\Client\Model\TeamMember[]',
+        'templateMembers' => '\Swagger\Client\Model\TemplateMember[]',
         'permission' => '\Swagger\Client\Model\TemplatePermissionSet',
         'designs' => '\Swagger\Client\Model\Design[]',
         'tags' => '\Swagger\Client\Model\Tag[]',
@@ -117,6 +118,7 @@ class Template implements ArrayAccess
         'portals' => 'portals',
         'team' => 'team',
         'members' => 'members',
+        'templateMembers' => 'templateMembers',
         'permission' => 'permission',
         'designs' => 'designs',
         'tags' => 'tags',
@@ -152,6 +154,7 @@ class Template implements ArrayAccess
         'portals' => 'setPortals',
         'team' => 'setTeam',
         'members' => 'setMembers',
+        'templateMembers' => 'setTemplateMembers',
         'permission' => 'setPermission',
         'designs' => 'setDesigns',
         'tags' => 'setTags',
@@ -187,6 +190,7 @@ class Template implements ArrayAccess
         'portals' => 'getPortals',
         'team' => 'getTeam',
         'members' => 'getMembers',
+        'templateMembers' => 'getTemplateMembers',
         'permission' => 'getPermission',
         'designs' => 'getDesigns',
         'tags' => 'getTags',
@@ -233,6 +237,7 @@ class Template implements ArrayAccess
         $this->container['portals'] = isset($data['portals']) ? $data['portals'] : null;
         $this->container['team'] = isset($data['team']) ? $data['team'] : null;
         $this->container['members'] = isset($data['members']) ? $data['members'] : null;
+        $this->container['templateMembers'] = isset($data['templateMembers']) ? $data['templateMembers'] : null;
         $this->container['permission'] = isset($data['permission']) ? $data['permission'] : null;
         $this->container['designs'] = isset($data['designs']) ? $data['designs'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
@@ -609,6 +614,27 @@ class Template implements ArrayAccess
     public function setMembers($members)
     {
         $this->container['members'] = $members;
+
+        return $this;
+    }
+
+    /**
+     * Gets templateMembers
+     * @return \Swagger\Client\Model\TemplateMember[]
+     */
+    public function getTemplateMembers()
+    {
+        return $this->container['templateMembers'];
+    }
+
+    /**
+     * Sets templateMembers
+     * @param \Swagger\Client\Model\TemplateMember[] $templateMembers
+     * @return $this
+     */
+    public function setTemplateMembers($templateMembers)
+    {
+        $this->container['templateMembers'] = $templateMembers;
 
         return $this;
     }

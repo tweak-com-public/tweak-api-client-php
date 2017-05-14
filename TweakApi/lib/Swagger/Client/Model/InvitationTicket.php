@@ -168,6 +168,7 @@ class InvitationTicket implements ArrayAccess
     const TARGET_MODEL_TEAM = 'Team';
     const TARGET_MODEL_PORTAL = 'Portal';
     const TARGET_MODEL_TEMPLATE = 'Template';
+    const TARGET_MODEL_IMAGE_FOLDER = 'ImageFolder';
     const TARGET_MODEL_DESIGN = 'Design';
     const STATUS_PENDING = 'pending';
     const STATUS_ACCEPTED = 'accepted';
@@ -184,6 +185,7 @@ class InvitationTicket implements ArrayAccess
             self::TARGET_MODEL_TEAM,
             self::TARGET_MODEL_PORTAL,
             self::TARGET_MODEL_TEMPLATE,
+            self::TARGET_MODEL_IMAGE_FOLDER,
             self::TARGET_MODEL_DESIGN,
         ];
     }
@@ -240,7 +242,7 @@ class InvitationTicket implements ArrayAccess
         if ($this->container['targetModel'] === null) {
             $invalid_properties[] = "'targetModel' can't be null";
         }
-        $allowed_values = array("Team", "Portal", "Template", "Design");
+        $allowed_values = array("Team", "Portal", "Template", "ImageFolder", "Design");
         if (!in_array($this->container['targetModel'], $allowed_values)) {
             $invalid_properties[] = "invalid value for 'targetModel', must be one of #{allowed_values}.";
         }
@@ -267,7 +269,7 @@ class InvitationTicket implements ArrayAccess
         if ($this->container['targetModel'] === null) {
             return false;
         }
-        $allowed_values = array("Team", "Portal", "Template", "Design");
+        $allowed_values = array("Team", "Portal", "Template", "ImageFolder", "Design");
         if (!in_array($this->container['targetModel'], $allowed_values)) {
             return false;
         }
@@ -361,9 +363,9 @@ class InvitationTicket implements ArrayAccess
      */
     public function setTargetModel($targetModel)
     {
-        $allowed_values = array('Team', 'Portal', 'Template', 'Design');
+        $allowed_values = array('Team', 'Portal', 'Template', 'ImageFolder', 'Design');
         if (!in_array($targetModel, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'targetModel', must be one of 'Team', 'Portal', 'Template', 'Design'");
+            throw new \InvalidArgumentException("Invalid value for 'targetModel', must be one of 'Team', 'Portal', 'Template', 'ImageFolder', 'Design'");
         }
         $this->container['targetModel'] = $targetModel;
 

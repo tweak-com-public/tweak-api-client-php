@@ -4338,7 +4338,7 @@ class TeamMemberApi
      *
      * @param string $id TeamMember id (required)
      * @param string $fk Foreign key for imageFolders (required)
-     * @return \Swagger\Client\Model\Image
+     * @return \Swagger\Client\Model\ImageFolder
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
     public function teamMembersIdImageFoldersFkGet($id, $fk)
@@ -4354,7 +4354,7 @@ class TeamMemberApi
      *
      * @param string $id TeamMember id (required)
      * @param string $fk Foreign key for imageFolders (required)
-     * @return array of \Swagger\Client\Model\Image, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\ImageFolder, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
     public function teamMembersIdImageFoldersFkGetWithHttpInfo($id, $fk)
@@ -4418,15 +4418,15 @@ class TeamMemberApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\Image',
+                '\Swagger\Client\Model\ImageFolder',
                 '/TeamMembers/{id}/imageFolders/{fk}'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Image', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\ImageFolder', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Image', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ImageFolder', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -4442,8 +4442,8 @@ class TeamMemberApi
      *
      * @param string $id TeamMember id (required)
      * @param string $fk Foreign key for imageFolders (required)
-     * @param \Swagger\Client\Model\Image $data  (optional)
-     * @return \Swagger\Client\Model\Image
+     * @param \Swagger\Client\Model\ImageFolder $data  (optional)
+     * @return \Swagger\Client\Model\ImageFolder
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
     public function teamMembersIdImageFoldersFkPut($id, $fk, $data = null)
@@ -4459,8 +4459,8 @@ class TeamMemberApi
      *
      * @param string $id TeamMember id (required)
      * @param string $fk Foreign key for imageFolders (required)
-     * @param \Swagger\Client\Model\Image $data  (optional)
-     * @return array of \Swagger\Client\Model\Image, HTTP status code, HTTP response headers (array of strings)
+     * @param \Swagger\Client\Model\ImageFolder $data  (optional)
+     * @return array of \Swagger\Client\Model\ImageFolder, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
     public function teamMembersIdImageFoldersFkPutWithHttpInfo($id, $fk, $data = null)
@@ -4529,15 +4529,15 @@ class TeamMemberApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\Image',
+                '\Swagger\Client\Model\ImageFolder',
                 '/TeamMembers/{id}/imageFolders/{fk}'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Image', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\ImageFolder', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Image', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ImageFolder', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -4553,7 +4553,7 @@ class TeamMemberApi
      *
      * @param string $id TeamMember id (required)
      * @param string $filter  (optional)
-     * @return \Swagger\Client\Model\Image[]
+     * @return \Swagger\Client\Model\ImageFolder[]
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
     public function teamMembersIdImageFoldersGet($id, $filter = null)
@@ -4569,7 +4569,7 @@ class TeamMemberApi
      *
      * @param string $id TeamMember id (required)
      * @param string $filter  (optional)
-     * @return array of \Swagger\Client\Model\Image[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\ImageFolder[], HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
     public function teamMembersIdImageFoldersGetWithHttpInfo($id, $filter = null)
@@ -4625,15 +4625,15 @@ class TeamMemberApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\Image[]',
+                '\Swagger\Client\Model\ImageFolder[]',
                 '/TeamMembers/{id}/imageFolders'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Image[]', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\ImageFolder[]', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Image[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ImageFolder[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -4648,8 +4648,8 @@ class TeamMemberApi
      * Creates a new instance in imageFolders of this model.
      *
      * @param string $id TeamMember id (required)
-     * @param \Swagger\Client\Model\Image $data  (optional)
-     * @return \Swagger\Client\Model\Image
+     * @param \Swagger\Client\Model\ImageFolder $data  (optional)
+     * @return \Swagger\Client\Model\ImageFolder
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
     public function teamMembersIdImageFoldersPost($id, $data = null)
@@ -4664,8 +4664,8 @@ class TeamMemberApi
      * Creates a new instance in imageFolders of this model.
      *
      * @param string $id TeamMember id (required)
-     * @param \Swagger\Client\Model\Image $data  (optional)
-     * @return array of \Swagger\Client\Model\Image, HTTP status code, HTTP response headers (array of strings)
+     * @param \Swagger\Client\Model\ImageFolder $data  (optional)
+     * @return array of \Swagger\Client\Model\ImageFolder, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
     public function teamMembersIdImageFoldersPostWithHttpInfo($id, $data = null)
@@ -4722,15 +4722,15 @@ class TeamMemberApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\Image',
+                '\Swagger\Client\Model\ImageFolder',
                 '/TeamMembers/{id}/imageFolders'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Image', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\ImageFolder', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Image', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ImageFolder', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -4950,8 +4950,8 @@ class TeamMemberApi
      *
      * @param string $id TeamMember id (required)
      * @param string $fk Foreign key for imageFolders (required)
-     * @param \Swagger\Client\Model\TeamMemberImageFolder $data  (optional)
-     * @return \Swagger\Client\Model\TeamMemberImageFolder
+     * @param \Swagger\Client\Model\ImageFolderMember $data  (optional)
+     * @return \Swagger\Client\Model\ImageFolderMember
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
     public function teamMembersIdImageFoldersRelFkPut($id, $fk, $data = null)
@@ -4967,8 +4967,8 @@ class TeamMemberApi
      *
      * @param string $id TeamMember id (required)
      * @param string $fk Foreign key for imageFolders (required)
-     * @param \Swagger\Client\Model\TeamMemberImageFolder $data  (optional)
-     * @return array of \Swagger\Client\Model\TeamMemberImageFolder, HTTP status code, HTTP response headers (array of strings)
+     * @param \Swagger\Client\Model\ImageFolderMember $data  (optional)
+     * @return array of \Swagger\Client\Model\ImageFolderMember, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
     public function teamMembersIdImageFoldersRelFkPutWithHttpInfo($id, $fk, $data = null)
@@ -5037,15 +5037,15 @@ class TeamMemberApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\TeamMemberImageFolder',
+                '\Swagger\Client\Model\ImageFolderMember',
                 '/TeamMembers/{id}/imageFolders/rel/{fk}'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TeamMemberImageFolder', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\ImageFolderMember', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TeamMemberImageFolder', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ImageFolderMember', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

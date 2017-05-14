@@ -77,6 +77,7 @@ class ImageFolder implements ArrayAccess
         'team' => '\Swagger\Client\Model\Team',
         'portals' => '\Swagger\Client\Model\Portal[]',
         'members' => '\Swagger\Client\Model\TeamMember[]',
+        'folderMembers' => '\Swagger\Client\Model\ImageFolderMember[]',
         'parent' => '\Swagger\Client\Model\ImageFolder',
         'children' => '\Swagger\Client\Model\ImageFolder[]'
     );
@@ -102,6 +103,7 @@ class ImageFolder implements ArrayAccess
         'team' => 'team',
         'portals' => 'portals',
         'members' => 'members',
+        'folderMembers' => 'folderMembers',
         'parent' => 'parent',
         'children' => 'children'
     );
@@ -127,6 +129,7 @@ class ImageFolder implements ArrayAccess
         'team' => 'setTeam',
         'portals' => 'setPortals',
         'members' => 'setMembers',
+        'folderMembers' => 'setFolderMembers',
         'parent' => 'setParent',
         'children' => 'setChildren'
     );
@@ -152,6 +155,7 @@ class ImageFolder implements ArrayAccess
         'team' => 'getTeam',
         'portals' => 'getPortals',
         'members' => 'getMembers',
+        'folderMembers' => 'getFolderMembers',
         'parent' => 'getParent',
         'children' => 'getChildren'
     );
@@ -188,6 +192,7 @@ class ImageFolder implements ArrayAccess
         $this->container['team'] = isset($data['team']) ? $data['team'] : null;
         $this->container['portals'] = isset($data['portals']) ? $data['portals'] : null;
         $this->container['members'] = isset($data['members']) ? $data['members'] : null;
+        $this->container['folderMembers'] = isset($data['folderMembers']) ? $data['folderMembers'] : null;
         $this->container['parent'] = isset($data['parent']) ? $data['parent'] : null;
         $this->container['children'] = isset($data['children']) ? $data['children'] : null;
     }
@@ -448,6 +453,27 @@ class ImageFolder implements ArrayAccess
     public function setMembers($members)
     {
         $this->container['members'] = $members;
+
+        return $this;
+    }
+
+    /**
+     * Gets folderMembers
+     * @return \Swagger\Client\Model\ImageFolderMember[]
+     */
+    public function getFolderMembers()
+    {
+        return $this->container['folderMembers'];
+    }
+
+    /**
+     * Sets folderMembers
+     * @param \Swagger\Client\Model\ImageFolderMember[] $folderMembers
+     * @return $this
+     */
+    public function setFolderMembers($folderMembers)
+    {
+        $this->container['folderMembers'] = $folderMembers;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * TeamMemberImageFolder
+ * ImageFolderMember
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * TeamMemberImageFolder Class Doc Comment
+ * ImageFolderMember Class Doc Comment
  *
  * @category    Class */
 /** 
@@ -53,19 +53,21 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class TeamMemberImageFolder implements ArrayAccess
+class ImageFolderMember implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'TeamMemberImageFolder';
+    protected static $swaggerModelName = 'ImageFolderMember';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = array(
+        'created' => '\DateTime',
+        'modified' => '\DateTime',
         'id' => 'string',
         'memberId' => 'string',
         'folderId' => 'string',
@@ -83,6 +85,8 @@ class TeamMemberImageFolder implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
+        'created' => 'created',
+        'modified' => 'modified',
         'id' => 'id',
         'memberId' => 'memberId',
         'folderId' => 'folderId',
@@ -100,6 +104,8 @@ class TeamMemberImageFolder implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
+        'created' => 'setCreated',
+        'modified' => 'setModified',
         'id' => 'setId',
         'memberId' => 'setMemberId',
         'folderId' => 'setFolderId',
@@ -117,6 +123,8 @@ class TeamMemberImageFolder implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
+        'created' => 'getCreated',
+        'modified' => 'getModified',
         'id' => 'getId',
         'memberId' => 'getMemberId',
         'folderId' => 'getFolderId',
@@ -145,6 +153,8 @@ class TeamMemberImageFolder implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['created'] = isset($data['created']) ? $data['created'] : null;
+        $this->container['modified'] = isset($data['modified']) ? $data['modified'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['memberId'] = isset($data['memberId']) ? $data['memberId'] : null;
         $this->container['folderId'] = isset($data['folderId']) ? $data['folderId'] : null;
@@ -174,6 +184,48 @@ class TeamMemberImageFolder implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets created
+     * @return \DateTime
+     */
+    public function getCreated()
+    {
+        return $this->container['created'];
+    }
+
+    /**
+     * Sets created
+     * @param \DateTime $created
+     * @return $this
+     */
+    public function setCreated($created)
+    {
+        $this->container['created'] = $created;
+
+        return $this;
+    }
+
+    /**
+     * Gets modified
+     * @return \DateTime
+     */
+    public function getModified()
+    {
+        return $this->container['modified'];
+    }
+
+    /**
+     * Sets modified
+     * @param \DateTime $modified
+     * @return $this
+     */
+    public function setModified($modified)
+    {
+        $this->container['modified'] = $modified;
+
+        return $this;
+    }
 
     /**
      * Gets id

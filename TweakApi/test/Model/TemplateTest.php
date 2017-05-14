@@ -224,6 +224,14 @@ class TemplateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "templateMembers"
+     */
+    public function testPropertyTemplateMembers()
+    {
+
+    }
+
+    /**
      * Test attribute "permission"
      */
     public function testPropertyPermission()

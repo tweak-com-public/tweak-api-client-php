@@ -904,6 +904,39 @@ class PortalApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for portalsIdInvitationTicketsFkDelete
+     *
+     * Delete InvitationTickets for this Portal.
+     *
+     */
+    public function testPortalsIdInvitationTicketsFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for portalsIdInvitationTicketsFkGet
+     *
+     * Get InvitationTicket by Id for this Portal.
+     *
+     */
+    public function testPortalsIdInvitationTicketsFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for portalsIdInvitationTicketsGet
+     *
+     * List InvitationTickets for this Portal.
+     *
+     */
+    public function testPortalsIdInvitationTicketsGet()
+    {
+
+    }
+
+    /**
      * Test case for portalsIdMembersCountGet
      *
      * Counts members of Portal..

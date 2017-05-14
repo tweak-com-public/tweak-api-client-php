@@ -86,7 +86,7 @@ class TeamMember implements ArrayAccess
         'designComments' => '\Swagger\Client\Model\DesignComment[]',
         'designFolders' => '\Swagger\Client\Model\DesignFolder[]',
         'workflows' => '\Swagger\Client\Model\Workflow[]',
-        'imageFolders' => '\Swagger\Client\Model\Image[]'
+        'imageFolders' => '\Swagger\Client\Model\ImageFolder[]'
     );
 
     public static function swaggerTypes()
@@ -683,7 +683,7 @@ class TeamMember implements ArrayAccess
 
     /**
      * Gets imageFolders
-     * @return \Swagger\Client\Model\Image[]
+     * @return \Swagger\Client\Model\ImageFolder[]
      */
     public function getImageFolders()
     {
@@ -692,7 +692,7 @@ class TeamMember implements ArrayAccess
 
     /**
      * Sets imageFolders
-     * @param \Swagger\Client\Model\Image[] $imageFolders
+     * @param \Swagger\Client\Model\ImageFolder[] $imageFolders
      * @return $this
      */
     public function setImageFolders($imageFolders)

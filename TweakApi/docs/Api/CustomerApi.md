@@ -5864,7 +5864,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **customersIdTeamsTeamIdChangePost**
-> \Swagger\Client\Model\TeamMemberAccessToken customersIdTeamsTeamIdChangePost($id, $teamId)
+> \Swagger\Client\Model\TeamMemberAccessToken customersIdTeamsTeamIdChangePost($id, $id2, $teamId)
 
 Move authentication to a Team
 
@@ -5880,10 +5880,11 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 
 $api_instance = new Tweak\Api\Api\CustomerApi();
 $id = "id_example"; // string | Customer id
+$id2 = "id_example"; // string | Customer id
 $teamId = "teamId_example"; // string | Team id
 
 try {
-    $result = $api_instance->customersIdTeamsTeamIdChangePost($id, $teamId);
+    $result = $api_instance->customersIdTeamsTeamIdChangePost($id, $id2, $teamId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomerApi->customersIdTeamsTeamIdChangePost: ', $e->getMessage(), PHP_EOL;
@@ -5896,6 +5897,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| Customer id |
+ **id2** | **string**| Customer id |
  **teamId** | **string**| Team id |
 
 ### Return type
@@ -5914,7 +5916,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **customersIdTeamsTeamIdPortalsPortalIdChangePost**
-> \Swagger\Client\Model\TeamMemberAccessToken customersIdTeamsTeamIdPortalsPortalIdChangePost($id, $teamId, $portalId)
+> \Swagger\Client\Model\TeamMemberAccessToken customersIdTeamsTeamIdPortalsPortalIdChangePost($id, $id2, $teamId, $portalId)
 
 Move authentication to a Portal
 
@@ -5930,11 +5932,12 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 
 $api_instance = new Tweak\Api\Api\CustomerApi();
 $id = "id_example"; // string | Customer id
+$id2 = "id_example"; // string | Customer id
 $teamId = "teamId_example"; // string | Team id
 $portalId = "portalId_example"; // string | Portal id
 
 try {
-    $result = $api_instance->customersIdTeamsTeamIdPortalsPortalIdChangePost($id, $teamId, $portalId);
+    $result = $api_instance->customersIdTeamsTeamIdPortalsPortalIdChangePost($id, $id2, $teamId, $portalId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomerApi->customersIdTeamsTeamIdPortalsPortalIdChangePost: ', $e->getMessage(), PHP_EOL;
@@ -5947,6 +5950,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| Customer id |
+ **id2** | **string**| Customer id |
  **teamId** | **string**| Team id |
  **portalId** | **string**| Portal id |
 
@@ -5966,7 +5970,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **customersIdTokenGet**
-> \Swagger\Client\Model\TeamMemberAccessToken customersIdTokenGet($id)
+> \Swagger\Client\Model\TeamMemberAccessToken customersIdTokenGet($id, $id2)
 
 Get token info
 
@@ -5982,9 +5986,10 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 
 $api_instance = new Tweak\Api\Api\CustomerApi();
 $id = "id_example"; // string | Customer id
+$id2 = "id_example"; // string | Customer id
 
 try {
-    $result = $api_instance->customersIdTokenGet($id);
+    $result = $api_instance->customersIdTokenGet($id, $id2);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomerApi->customersIdTokenGet: ', $e->getMessage(), PHP_EOL;
@@ -5997,6 +6002,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| Customer id |
+ **id2** | **string**| Customer id |
 
 ### Return type
 

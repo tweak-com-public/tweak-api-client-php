@@ -21,6 +21,9 @@ Method | HTTP request | Description
 [**templatesIdExistsGet**](TemplateApi.md#templatesIdExistsGet) | **GET** /Templates/{id}/exists | Check whether a model instance exists in the data source.
 [**templatesIdGet**](TemplateApi.md#templatesIdGet) | **GET** /Templates/{id} | Find a model instance by {{id}} from the data source.
 [**templatesIdHead**](TemplateApi.md#templatesIdHead) | **HEAD** /Templates/{id} | Check whether a model instance exists in the data source.
+[**templatesIdInvitationTicketsFkDelete**](TemplateApi.md#templatesIdInvitationTicketsFkDelete) | **DELETE** /Templates/{id}/invitationTickets/{fk} | Delete InvitationTickets for this Template
+[**templatesIdInvitationTicketsFkGet**](TemplateApi.md#templatesIdInvitationTicketsFkGet) | **GET** /Templates/{id}/invitationTickets/{fk} | Get InvitationTicket by Id for this Template
+[**templatesIdInvitationTicketsGet**](TemplateApi.md#templatesIdInvitationTicketsGet) | **GET** /Templates/{id}/invitationTickets | List InvitationTickets for this Template
 [**templatesIdMembersCountGet**](TemplateApi.md#templatesIdMembersCountGet) | **GET** /Templates/{id}/members/count | Counts members of Template.
 [**templatesIdMembersDelete**](TemplateApi.md#templatesIdMembersDelete) | **DELETE** /Templates/{id}/members | Deletes all members of this model.
 [**templatesIdMembersFkDelete**](TemplateApi.md#templatesIdMembersFkDelete) | **DELETE** /Templates/{id}/members/{fk} | Delete a related item by id for members.
@@ -70,6 +73,13 @@ Method | HTTP request | Description
 [**templatesIdTagsRelFkPut**](TemplateApi.md#templatesIdTagsRelFkPut) | **PUT** /Templates/{id}/tags/rel/{fk} | Add a related item by id for tags.
 [**templatesIdTeamFolderGet**](TemplateApi.md#templatesIdTeamFolderGet) | **GET** /Templates/{id}/teamFolder | Fetches belongsTo relation teamFolder.
 [**templatesIdTeamGet**](TemplateApi.md#templatesIdTeamGet) | **GET** /Templates/{id}/team | Fetches belongsTo relation team.
+[**templatesIdTemplateMembersCountGet**](TemplateApi.md#templatesIdTemplateMembersCountGet) | **GET** /Templates/{id}/templateMembers/count | Counts templateMembers of Template.
+[**templatesIdTemplateMembersDelete**](TemplateApi.md#templatesIdTemplateMembersDelete) | **DELETE** /Templates/{id}/templateMembers | Deletes all templateMembers of this model.
+[**templatesIdTemplateMembersFkDelete**](TemplateApi.md#templatesIdTemplateMembersFkDelete) | **DELETE** /Templates/{id}/templateMembers/{fk} | Delete a related item by id for templateMembers.
+[**templatesIdTemplateMembersFkGet**](TemplateApi.md#templatesIdTemplateMembersFkGet) | **GET** /Templates/{id}/templateMembers/{fk} | Find a related item by id for templateMembers.
+[**templatesIdTemplateMembersFkPut**](TemplateApi.md#templatesIdTemplateMembersFkPut) | **PUT** /Templates/{id}/templateMembers/{fk} | Update a related item by id for templateMembers.
+[**templatesIdTemplateMembersGet**](TemplateApi.md#templatesIdTemplateMembersGet) | **GET** /Templates/{id}/templateMembers | Queries templateMembers of Template.
+[**templatesIdTemplateMembersPost**](TemplateApi.md#templatesIdTemplateMembersPost) | **POST** /Templates/{id}/templateMembers | Creates a new instance in templateMembers of this model.
 [**templatesIdUploaderGet**](TemplateApi.md#templatesIdUploaderGet) | **GET** /Templates/{id}/uploader | Fetches belongsTo relation uploader.
 [**templatesIdWorkflowGet**](TemplateApi.md#templatesIdWorkflowGet) | **GET** /Templates/{id}/workflow | Fetches belongsTo relation workflow.
 [**templatesPatch**](TemplateApi.md#templatesPatch) | **PATCH** /Templates | Patch an existing model instance or insert a new one into the data source.
@@ -902,6 +912,164 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **templatesIdInvitationTicketsFkDelete**
+> object templatesIdInvitationTicketsFkDelete($id, $id2, $fk)
+
+Delete InvitationTickets for this Template
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TemplateApi();
+$id = "id_example"; // string | Template id
+$id2 = "id_example"; // string | Template id
+$fk = "fk_example"; // string | InvitationTicket id
+
+try {
+    $result = $api_instance->templatesIdInvitationTicketsFkDelete($id, $id2, $fk);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TemplateApi->templatesIdInvitationTicketsFkDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Template id |
+ **id2** | **string**| Template id |
+ **fk** | **string**| InvitationTicket id |
+
+### Return type
+
+**object**
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **templatesIdInvitationTicketsFkGet**
+> \Swagger\Client\Model\InvitationTicket templatesIdInvitationTicketsFkGet($id, $id2, $fk, $filter)
+
+Get InvitationTicket by Id for this Template
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TemplateApi();
+$id = "id_example"; // string | Template id
+$id2 = "id_example"; // string | Template id
+$fk = "fk_example"; // string | InvitationTicket id
+$filter = "filter_example"; // string | Only include changes that match this filter
+
+try {
+    $result = $api_instance->templatesIdInvitationTicketsFkGet($id, $id2, $fk, $filter);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TemplateApi->templatesIdInvitationTicketsFkGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Template id |
+ **id2** | **string**| Template id |
+ **fk** | **string**| InvitationTicket id |
+ **filter** | **string**| Only include changes that match this filter | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\InvitationTicket**](../Model/InvitationTicket.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **templatesIdInvitationTicketsGet**
+> \Swagger\Client\Model\InvitationTicket[] templatesIdInvitationTicketsGet($id, $id2, $filter)
+
+List InvitationTickets for this Template
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TemplateApi();
+$id = "id_example"; // string | Template id
+$id2 = "id_example"; // string | Template id
+$filter = "filter_example"; // string | Filter defining fields and include - must be a JSON-encoded string ({\"something\":\"value\"})
+
+try {
+    $result = $api_instance->templatesIdInvitationTicketsGet($id, $id2, $filter);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TemplateApi->templatesIdInvitationTicketsGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Template id |
+ **id2** | **string**| Template id |
+ **filter** | **string**| Filter defining fields and include - must be a JSON-encoded string ({\&quot;something\&quot;:\&quot;value\&quot;}) | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\InvitationTicket[]**](../Model/InvitationTicket.md)
 
 ### Authorization
 
@@ -3345,6 +3513,354 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\Team**](../Model/Team.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **templatesIdTemplateMembersCountGet**
+> \Swagger\Client\Model\InlineResponse200 templatesIdTemplateMembersCountGet($id, $where)
+
+Counts templateMembers of Template.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TemplateApi();
+$id = "id_example"; // string | Template id
+$where = "where_example"; // string | Criteria to match model instances
+
+try {
+    $result = $api_instance->templatesIdTemplateMembersCountGet($id, $where);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TemplateApi->templatesIdTemplateMembersCountGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Template id |
+ **where** | **string**| Criteria to match model instances | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **templatesIdTemplateMembersDelete**
+> templatesIdTemplateMembersDelete($id)
+
+Deletes all templateMembers of this model.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TemplateApi();
+$id = "id_example"; // string | Template id
+
+try {
+    $api_instance->templatesIdTemplateMembersDelete($id);
+} catch (Exception $e) {
+    echo 'Exception when calling TemplateApi->templatesIdTemplateMembersDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Template id |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **templatesIdTemplateMembersFkDelete**
+> templatesIdTemplateMembersFkDelete($id, $fk)
+
+Delete a related item by id for templateMembers.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TemplateApi();
+$id = "id_example"; // string | Template id
+$fk = "fk_example"; // string | Foreign key for templateMembers
+
+try {
+    $api_instance->templatesIdTemplateMembersFkDelete($id, $fk);
+} catch (Exception $e) {
+    echo 'Exception when calling TemplateApi->templatesIdTemplateMembersFkDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Template id |
+ **fk** | **string**| Foreign key for templateMembers |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **templatesIdTemplateMembersFkGet**
+> \Swagger\Client\Model\TemplateMember templatesIdTemplateMembersFkGet($id, $fk)
+
+Find a related item by id for templateMembers.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TemplateApi();
+$id = "id_example"; // string | Template id
+$fk = "fk_example"; // string | Foreign key for templateMembers
+
+try {
+    $result = $api_instance->templatesIdTemplateMembersFkGet($id, $fk);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TemplateApi->templatesIdTemplateMembersFkGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Template id |
+ **fk** | **string**| Foreign key for templateMembers |
+
+### Return type
+
+[**\Swagger\Client\Model\TemplateMember**](../Model/TemplateMember.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **templatesIdTemplateMembersFkPut**
+> \Swagger\Client\Model\TemplateMember templatesIdTemplateMembersFkPut($id, $fk, $data)
+
+Update a related item by id for templateMembers.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TemplateApi();
+$id = "id_example"; // string | Template id
+$fk = "fk_example"; // string | Foreign key for templateMembers
+$data = new \Swagger\Client\Model\TemplateMember(); // \Swagger\Client\Model\TemplateMember | 
+
+try {
+    $result = $api_instance->templatesIdTemplateMembersFkPut($id, $fk, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TemplateApi->templatesIdTemplateMembersFkPut: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Template id |
+ **fk** | **string**| Foreign key for templateMembers |
+ **data** | [**\Swagger\Client\Model\TemplateMember**](../Model/\Swagger\Client\Model\TemplateMember.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\TemplateMember**](../Model/TemplateMember.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **templatesIdTemplateMembersGet**
+> \Swagger\Client\Model\TemplateMember[] templatesIdTemplateMembersGet($id, $filter)
+
+Queries templateMembers of Template.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TemplateApi();
+$id = "id_example"; // string | Template id
+$filter = "filter_example"; // string | 
+
+try {
+    $result = $api_instance->templatesIdTemplateMembersGet($id, $filter);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TemplateApi->templatesIdTemplateMembersGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Template id |
+ **filter** | **string**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\TemplateMember[]**](../Model/TemplateMember.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **templatesIdTemplateMembersPost**
+> \Swagger\Client\Model\TemplateMember templatesIdTemplateMembersPost($id, $data)
+
+Creates a new instance in templateMembers of this model.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TemplateApi();
+$id = "id_example"; // string | Template id
+$data = new \Swagger\Client\Model\TemplateMember(); // \Swagger\Client\Model\TemplateMember | 
+
+try {
+    $result = $api_instance->templatesIdTemplateMembersPost($id, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TemplateApi->templatesIdTemplateMembersPost: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Template id |
+ **data** | [**\Swagger\Client\Model\TemplateMember**](../Model/\Swagger\Client\Model\TemplateMember.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\TemplateMember**](../Model/TemplateMember.md)
 
 ### Authorization
 

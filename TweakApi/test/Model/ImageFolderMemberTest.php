@@ -1,6 +1,6 @@
 <?php
 /**
- * TeamMemberImageFolderTest
+ * ImageFolderMemberTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Tweak\Api;
 
 /**
- * TeamMemberImageFolderTest Class Doc Comment
+ * ImageFolderMemberTest Class Doc Comment
  *
  * @category    Class */
-// * @description TeamMemberImageFolder
+// * @description ImageFolderMember
 /**
  * @package     Tweak\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class TeamMemberImageFolderTest extends \PHPUnit_Framework_TestCase
+class ImageFolderMemberTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,9 +88,25 @@ class TeamMemberImageFolderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "TeamMemberImageFolder"
+     * Test "ImageFolderMember"
      */
-    public function testTeamMemberImageFolder()
+    public function testImageFolderMember()
+    {
+
+    }
+
+    /**
+     * Test attribute "created"
+     */
+    public function testPropertyCreated()
+    {
+
+    }
+
+    /**
+     * Test attribute "modified"
+     */
+    public function testPropertyModified()
     {
 
     }

@@ -184,6 +184,14 @@ class ImageFolderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "folderMembers"
+     */
+    public function testPropertyFolderMembers()
+    {
+
+    }
+
+    /**
      * Test attribute "parent"
      */
     public function testPropertyParent()

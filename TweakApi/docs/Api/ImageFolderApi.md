@@ -18,6 +18,13 @@ Method | HTTP request | Description
 [**imageFoldersIdChildrenPost**](ImageFolderApi.md#imageFoldersIdChildrenPost) | **POST** /ImageFolders/{id}/children | Creates a new instance in children of this model.
 [**imageFoldersIdDelete**](ImageFolderApi.md#imageFoldersIdDelete) | **DELETE** /ImageFolders/{id} | Delete a model instance by {{id}} from the data source.
 [**imageFoldersIdExistsGet**](ImageFolderApi.md#imageFoldersIdExistsGet) | **GET** /ImageFolders/{id}/exists | Check whether a model instance exists in the data source.
+[**imageFoldersIdFolderMembersCountGet**](ImageFolderApi.md#imageFoldersIdFolderMembersCountGet) | **GET** /ImageFolders/{id}/folderMembers/count | Counts folderMembers of ImageFolder.
+[**imageFoldersIdFolderMembersDelete**](ImageFolderApi.md#imageFoldersIdFolderMembersDelete) | **DELETE** /ImageFolders/{id}/folderMembers | Deletes all folderMembers of this model.
+[**imageFoldersIdFolderMembersFkDelete**](ImageFolderApi.md#imageFoldersIdFolderMembersFkDelete) | **DELETE** /ImageFolders/{id}/folderMembers/{fk} | Delete a related item by id for folderMembers.
+[**imageFoldersIdFolderMembersFkGet**](ImageFolderApi.md#imageFoldersIdFolderMembersFkGet) | **GET** /ImageFolders/{id}/folderMembers/{fk} | Find a related item by id for folderMembers.
+[**imageFoldersIdFolderMembersFkPut**](ImageFolderApi.md#imageFoldersIdFolderMembersFkPut) | **PUT** /ImageFolders/{id}/folderMembers/{fk} | Update a related item by id for folderMembers.
+[**imageFoldersIdFolderMembersGet**](ImageFolderApi.md#imageFoldersIdFolderMembersGet) | **GET** /ImageFolders/{id}/folderMembers | Queries folderMembers of ImageFolder.
+[**imageFoldersIdFolderMembersPost**](ImageFolderApi.md#imageFoldersIdFolderMembersPost) | **POST** /ImageFolders/{id}/folderMembers | Creates a new instance in folderMembers of this model.
 [**imageFoldersIdGet**](ImageFolderApi.md#imageFoldersIdGet) | **GET** /ImageFolders/{id} | Find a model instance by {{id}} from the data source.
 [**imageFoldersIdHead**](ImageFolderApi.md#imageFoldersIdHead) | **HEAD** /ImageFolders/{id} | Check whether a model instance exists in the data source.
 [**imageFoldersIdImagesCountGet**](ImageFolderApi.md#imageFoldersIdImagesCountGet) | **GET** /ImageFolders/{id}/images/count | Counts images of ImageFolder.
@@ -27,6 +34,9 @@ Method | HTTP request | Description
 [**imageFoldersIdImagesFkPut**](ImageFolderApi.md#imageFoldersIdImagesFkPut) | **PUT** /ImageFolders/{id}/images/{fk} | Update a related item by id for images.
 [**imageFoldersIdImagesGet**](ImageFolderApi.md#imageFoldersIdImagesGet) | **GET** /ImageFolders/{id}/images | Queries images of ImageFolder.
 [**imageFoldersIdImagesPost**](ImageFolderApi.md#imageFoldersIdImagesPost) | **POST** /ImageFolders/{id}/images | Creates a new instance in images of this model.
+[**imageFoldersIdInvitationTicketsFkDelete**](ImageFolderApi.md#imageFoldersIdInvitationTicketsFkDelete) | **DELETE** /ImageFolders/{id}/invitationTickets/{fk} | Delete InvitationTickets for this ImageFolder
+[**imageFoldersIdInvitationTicketsFkGet**](ImageFolderApi.md#imageFoldersIdInvitationTicketsFkGet) | **GET** /ImageFolders/{id}/invitationTickets/{fk} | Get InvitationTicket by Id for this ImageFolder
+[**imageFoldersIdInvitationTicketsGet**](ImageFolderApi.md#imageFoldersIdInvitationTicketsGet) | **GET** /ImageFolders/{id}/invitationTickets | List InvitationTickets for this ImageFolder
 [**imageFoldersIdMembersCountGet**](ImageFolderApi.md#imageFoldersIdMembersCountGet) | **GET** /ImageFolders/{id}/members/count | Counts members of ImageFolder.
 [**imageFoldersIdMembersDelete**](ImageFolderApi.md#imageFoldersIdMembersDelete) | **DELETE** /ImageFolders/{id}/members | Deletes all members of this model.
 [**imageFoldersIdMembersFkDelete**](ImageFolderApi.md#imageFoldersIdMembersFkDelete) | **DELETE** /ImageFolders/{id}/members/{fk} | Delete a related item by id for members.
@@ -744,6 +754,354 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **imageFoldersIdFolderMembersCountGet**
+> \Swagger\Client\Model\InlineResponse200 imageFoldersIdFolderMembersCountGet($id, $where)
+
+Counts folderMembers of ImageFolder.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\ImageFolderApi();
+$id = "id_example"; // string | ImageFolder id
+$where = "where_example"; // string | Criteria to match model instances
+
+try {
+    $result = $api_instance->imageFoldersIdFolderMembersCountGet($id, $where);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ImageFolderApi->imageFoldersIdFolderMembersCountGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| ImageFolder id |
+ **where** | **string**| Criteria to match model instances | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **imageFoldersIdFolderMembersDelete**
+> imageFoldersIdFolderMembersDelete($id)
+
+Deletes all folderMembers of this model.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\ImageFolderApi();
+$id = "id_example"; // string | ImageFolder id
+
+try {
+    $api_instance->imageFoldersIdFolderMembersDelete($id);
+} catch (Exception $e) {
+    echo 'Exception when calling ImageFolderApi->imageFoldersIdFolderMembersDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| ImageFolder id |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **imageFoldersIdFolderMembersFkDelete**
+> imageFoldersIdFolderMembersFkDelete($id, $fk)
+
+Delete a related item by id for folderMembers.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\ImageFolderApi();
+$id = "id_example"; // string | ImageFolder id
+$fk = "fk_example"; // string | Foreign key for folderMembers
+
+try {
+    $api_instance->imageFoldersIdFolderMembersFkDelete($id, $fk);
+} catch (Exception $e) {
+    echo 'Exception when calling ImageFolderApi->imageFoldersIdFolderMembersFkDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| ImageFolder id |
+ **fk** | **string**| Foreign key for folderMembers |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **imageFoldersIdFolderMembersFkGet**
+> \Swagger\Client\Model\ImageFolderMember imageFoldersIdFolderMembersFkGet($id, $fk)
+
+Find a related item by id for folderMembers.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\ImageFolderApi();
+$id = "id_example"; // string | ImageFolder id
+$fk = "fk_example"; // string | Foreign key for folderMembers
+
+try {
+    $result = $api_instance->imageFoldersIdFolderMembersFkGet($id, $fk);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ImageFolderApi->imageFoldersIdFolderMembersFkGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| ImageFolder id |
+ **fk** | **string**| Foreign key for folderMembers |
+
+### Return type
+
+[**\Swagger\Client\Model\ImageFolderMember**](../Model/ImageFolderMember.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **imageFoldersIdFolderMembersFkPut**
+> \Swagger\Client\Model\ImageFolderMember imageFoldersIdFolderMembersFkPut($id, $fk, $data)
+
+Update a related item by id for folderMembers.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\ImageFolderApi();
+$id = "id_example"; // string | ImageFolder id
+$fk = "fk_example"; // string | Foreign key for folderMembers
+$data = new \Swagger\Client\Model\ImageFolderMember(); // \Swagger\Client\Model\ImageFolderMember | 
+
+try {
+    $result = $api_instance->imageFoldersIdFolderMembersFkPut($id, $fk, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ImageFolderApi->imageFoldersIdFolderMembersFkPut: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| ImageFolder id |
+ **fk** | **string**| Foreign key for folderMembers |
+ **data** | [**\Swagger\Client\Model\ImageFolderMember**](../Model/\Swagger\Client\Model\ImageFolderMember.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\ImageFolderMember**](../Model/ImageFolderMember.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **imageFoldersIdFolderMembersGet**
+> \Swagger\Client\Model\ImageFolderMember[] imageFoldersIdFolderMembersGet($id, $filter)
+
+Queries folderMembers of ImageFolder.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\ImageFolderApi();
+$id = "id_example"; // string | ImageFolder id
+$filter = "filter_example"; // string | 
+
+try {
+    $result = $api_instance->imageFoldersIdFolderMembersGet($id, $filter);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ImageFolderApi->imageFoldersIdFolderMembersGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| ImageFolder id |
+ **filter** | **string**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\ImageFolderMember[]**](../Model/ImageFolderMember.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **imageFoldersIdFolderMembersPost**
+> \Swagger\Client\Model\ImageFolderMember imageFoldersIdFolderMembersPost($id, $data)
+
+Creates a new instance in folderMembers of this model.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\ImageFolderApi();
+$id = "id_example"; // string | ImageFolder id
+$data = new \Swagger\Client\Model\ImageFolderMember(); // \Swagger\Client\Model\ImageFolderMember | 
+
+try {
+    $result = $api_instance->imageFoldersIdFolderMembersPost($id, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ImageFolderApi->imageFoldersIdFolderMembersPost: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| ImageFolder id |
+ **data** | [**\Swagger\Client\Model\ImageFolderMember**](../Model/\Swagger\Client\Model\ImageFolderMember.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\ImageFolderMember**](../Model/ImageFolderMember.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **imageFoldersIdGet**
 > \Swagger\Client\Model\ImageFolder imageFoldersIdGet($id, $filter)
 
@@ -1178,6 +1536,164 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\Image**](../Model/Image.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **imageFoldersIdInvitationTicketsFkDelete**
+> object imageFoldersIdInvitationTicketsFkDelete($id, $id2, $fk)
+
+Delete InvitationTickets for this ImageFolder
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\ImageFolderApi();
+$id = "id_example"; // string | ImageFolder id
+$id2 = "id_example"; // string | ImageFolder id
+$fk = "fk_example"; // string | InvitationTicket id
+
+try {
+    $result = $api_instance->imageFoldersIdInvitationTicketsFkDelete($id, $id2, $fk);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ImageFolderApi->imageFoldersIdInvitationTicketsFkDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| ImageFolder id |
+ **id2** | **string**| ImageFolder id |
+ **fk** | **string**| InvitationTicket id |
+
+### Return type
+
+**object**
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **imageFoldersIdInvitationTicketsFkGet**
+> \Swagger\Client\Model\InvitationTicket imageFoldersIdInvitationTicketsFkGet($id, $id2, $fk, $filter)
+
+Get InvitationTicket by Id for this ImageFolder
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\ImageFolderApi();
+$id = "id_example"; // string | ImageFolder id
+$id2 = "id_example"; // string | ImageFolder id
+$fk = "fk_example"; // string | InvitationTicket id
+$filter = "filter_example"; // string | Only include changes that match this filter
+
+try {
+    $result = $api_instance->imageFoldersIdInvitationTicketsFkGet($id, $id2, $fk, $filter);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ImageFolderApi->imageFoldersIdInvitationTicketsFkGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| ImageFolder id |
+ **id2** | **string**| ImageFolder id |
+ **fk** | **string**| InvitationTicket id |
+ **filter** | **string**| Only include changes that match this filter | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\InvitationTicket**](../Model/InvitationTicket.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **imageFoldersIdInvitationTicketsGet**
+> \Swagger\Client\Model\InvitationTicket[] imageFoldersIdInvitationTicketsGet($id, $id2, $filter)
+
+List InvitationTickets for this ImageFolder
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\ImageFolderApi();
+$id = "id_example"; // string | ImageFolder id
+$id2 = "id_example"; // string | ImageFolder id
+$filter = "filter_example"; // string | Filter defining fields and include - must be a JSON-encoded string ({\"something\":\"value\"})
+
+try {
+    $result = $api_instance->imageFoldersIdInvitationTicketsGet($id, $id2, $filter);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ImageFolderApi->imageFoldersIdInvitationTicketsGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| ImageFolder id |
+ **id2** | **string**| ImageFolder id |
+ **filter** | **string**| Filter defining fields and include - must be a JSON-encoded string ({\&quot;something\&quot;:\&quot;value\&quot;}) | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\InvitationTicket[]**](../Model/InvitationTicket.md)
 
 ### Authorization
 
@@ -1638,7 +2154,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **imageFoldersIdMembersRelFkPut**
-> \Swagger\Client\Model\TeamMemberImageFolder imageFoldersIdMembersRelFkPut($id, $fk, $data)
+> \Swagger\Client\Model\ImageFolderMember imageFoldersIdMembersRelFkPut($id, $fk, $data)
 
 Add a related item by id for members.
 
@@ -1655,7 +2171,7 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 $api_instance = new Tweak\Api\Api\ImageFolderApi();
 $id = "id_example"; // string | ImageFolder id
 $fk = "fk_example"; // string | Foreign key for members
-$data = new \Swagger\Client\Model\TeamMemberImageFolder(); // \Swagger\Client\Model\TeamMemberImageFolder | 
+$data = new \Swagger\Client\Model\ImageFolderMember(); // \Swagger\Client\Model\ImageFolderMember | 
 
 try {
     $result = $api_instance->imageFoldersIdMembersRelFkPut($id, $fk, $data);
@@ -1672,11 +2188,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ImageFolder id |
  **fk** | **string**| Foreign key for members |
- **data** | [**\Swagger\Client\Model\TeamMemberImageFolder**](../Model/\Swagger\Client\Model\TeamMemberImageFolder.md)|  | [optional]
+ **data** | [**\Swagger\Client\Model\ImageFolderMember**](../Model/\Swagger\Client\Model\ImageFolderMember.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\TeamMemberImageFolder**](../Model/TeamMemberImageFolder.md)
+[**\Swagger\Client\Model\ImageFolderMember**](../Model/ImageFolderMember.md)
 
 ### Authorization
 

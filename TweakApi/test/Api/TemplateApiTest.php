@@ -277,6 +277,39 @@ class TemplateApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for templatesIdInvitationTicketsFkDelete
+     *
+     * Delete InvitationTickets for this Template.
+     *
+     */
+    public function testTemplatesIdInvitationTicketsFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for templatesIdInvitationTicketsFkGet
+     *
+     * Get InvitationTicket by Id for this Template.
+     *
+     */
+    public function testTemplatesIdInvitationTicketsFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for templatesIdInvitationTicketsGet
+     *
+     * List InvitationTickets for this Template.
+     *
+     */
+    public function testTemplatesIdInvitationTicketsGet()
+    {
+
+    }
+
+    /**
      * Test case for templatesIdMembersCountGet
      *
      * Counts members of Template..
@@ -811,6 +844,83 @@ class TemplateApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testTemplatesIdTeamGet()
+    {
+
+    }
+
+    /**
+     * Test case for templatesIdTemplateMembersCountGet
+     *
+     * Counts templateMembers of Template..
+     *
+     */
+    public function testTemplatesIdTemplateMembersCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for templatesIdTemplateMembersDelete
+     *
+     * Deletes all templateMembers of this model..
+     *
+     */
+    public function testTemplatesIdTemplateMembersDelete()
+    {
+
+    }
+
+    /**
+     * Test case for templatesIdTemplateMembersFkDelete
+     *
+     * Delete a related item by id for templateMembers..
+     *
+     */
+    public function testTemplatesIdTemplateMembersFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for templatesIdTemplateMembersFkGet
+     *
+     * Find a related item by id for templateMembers..
+     *
+     */
+    public function testTemplatesIdTemplateMembersFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for templatesIdTemplateMembersFkPut
+     *
+     * Update a related item by id for templateMembers..
+     *
+     */
+    public function testTemplatesIdTemplateMembersFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for templatesIdTemplateMembersGet
+     *
+     * Queries templateMembers of Template..
+     *
+     */
+    public function testTemplatesIdTemplateMembersGet()
+    {
+
+    }
+
+    /**
+     * Test case for templatesIdTemplateMembersPost
+     *
+     * Creates a new instance in templateMembers of this model..
+     *
+     */
+    public function testTemplatesIdTemplateMembersPost()
     {
 
     }

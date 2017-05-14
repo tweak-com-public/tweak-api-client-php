@@ -2370,7 +2370,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamMembersIdImageFoldersFkGet**
-> \Swagger\Client\Model\Image teamMembersIdImageFoldersFkGet($id, $fk)
+> \Swagger\Client\Model\ImageFolder teamMembersIdImageFoldersFkGet($id, $fk)
 
 Find a related item by id for imageFolders.
 
@@ -2406,7 +2406,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Image**](../Model/Image.md)
+[**\Swagger\Client\Model\ImageFolder**](../Model/ImageFolder.md)
 
 ### Authorization
 
@@ -2420,7 +2420,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamMembersIdImageFoldersFkPut**
-> \Swagger\Client\Model\Image teamMembersIdImageFoldersFkPut($id, $fk, $data)
+> \Swagger\Client\Model\ImageFolder teamMembersIdImageFoldersFkPut($id, $fk, $data)
 
 Update a related item by id for imageFolders.
 
@@ -2437,7 +2437,7 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 $api_instance = new Tweak\Api\Api\TeamMemberApi();
 $id = "id_example"; // string | TeamMember id
 $fk = "fk_example"; // string | Foreign key for imageFolders
-$data = new \Swagger\Client\Model\Image(); // \Swagger\Client\Model\Image | 
+$data = new \Swagger\Client\Model\ImageFolder(); // \Swagger\Client\Model\ImageFolder | 
 
 try {
     $result = $api_instance->teamMembersIdImageFoldersFkPut($id, $fk, $data);
@@ -2454,11 +2454,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| TeamMember id |
  **fk** | **string**| Foreign key for imageFolders |
- **data** | [**\Swagger\Client\Model\Image**](../Model/\Swagger\Client\Model\Image.md)|  | [optional]
+ **data** | [**\Swagger\Client\Model\ImageFolder**](../Model/\Swagger\Client\Model\ImageFolder.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\Image**](../Model/Image.md)
+[**\Swagger\Client\Model\ImageFolder**](../Model/ImageFolder.md)
 
 ### Authorization
 
@@ -2472,7 +2472,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamMembersIdImageFoldersGet**
-> \Swagger\Client\Model\Image[] teamMembersIdImageFoldersGet($id, $filter)
+> \Swagger\Client\Model\ImageFolder[] teamMembersIdImageFoldersGet($id, $filter)
 
 Queries imageFolders of TeamMember.
 
@@ -2508,7 +2508,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Image[]**](../Model/Image.md)
+[**\Swagger\Client\Model\ImageFolder[]**](../Model/ImageFolder.md)
 
 ### Authorization
 
@@ -2522,7 +2522,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamMembersIdImageFoldersPost**
-> \Swagger\Client\Model\Image teamMembersIdImageFoldersPost($id, $data)
+> \Swagger\Client\Model\ImageFolder teamMembersIdImageFoldersPost($id, $data)
 
 Creates a new instance in imageFolders of this model.
 
@@ -2538,7 +2538,7 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 
 $api_instance = new Tweak\Api\Api\TeamMemberApi();
 $id = "id_example"; // string | TeamMember id
-$data = new \Swagger\Client\Model\Image(); // \Swagger\Client\Model\Image | 
+$data = new \Swagger\Client\Model\ImageFolder(); // \Swagger\Client\Model\ImageFolder | 
 
 try {
     $result = $api_instance->teamMembersIdImageFoldersPost($id, $data);
@@ -2554,11 +2554,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| TeamMember id |
- **data** | [**\Swagger\Client\Model\Image**](../Model/\Swagger\Client\Model\Image.md)|  | [optional]
+ **data** | [**\Swagger\Client\Model\ImageFolder**](../Model/\Swagger\Client\Model\ImageFolder.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\Image**](../Model/Image.md)
+[**\Swagger\Client\Model\ImageFolder**](../Model/ImageFolder.md)
 
 ### Authorization
 
@@ -2671,7 +2671,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamMembersIdImageFoldersRelFkPut**
-> \Swagger\Client\Model\TeamMemberImageFolder teamMembersIdImageFoldersRelFkPut($id, $fk, $data)
+> \Swagger\Client\Model\ImageFolderMember teamMembersIdImageFoldersRelFkPut($id, $fk, $data)
 
 Add a related item by id for imageFolders.
 
@@ -2688,7 +2688,7 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 $api_instance = new Tweak\Api\Api\TeamMemberApi();
 $id = "id_example"; // string | TeamMember id
 $fk = "fk_example"; // string | Foreign key for imageFolders
-$data = new \Swagger\Client\Model\TeamMemberImageFolder(); // \Swagger\Client\Model\TeamMemberImageFolder | 
+$data = new \Swagger\Client\Model\ImageFolderMember(); // \Swagger\Client\Model\ImageFolderMember | 
 
 try {
     $result = $api_instance->teamMembersIdImageFoldersRelFkPut($id, $fk, $data);
@@ -2705,11 +2705,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| TeamMember id |
  **fk** | **string**| Foreign key for imageFolders |
- **data** | [**\Swagger\Client\Model\TeamMemberImageFolder**](../Model/\Swagger\Client\Model\TeamMemberImageFolder.md)|  | [optional]
+ **data** | [**\Swagger\Client\Model\ImageFolderMember**](../Model/\Swagger\Client\Model\ImageFolderMember.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\TeamMemberImageFolder**](../Model/TeamMemberImageFolder.md)
+[**\Swagger\Client\Model\ImageFolderMember**](../Model/ImageFolderMember.md)
 
 ### Authorization
 

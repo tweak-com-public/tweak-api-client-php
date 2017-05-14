@@ -11999,13 +11999,14 @@ class CustomerApi
      * Move authentication to a Team
      *
      * @param string $id Customer id (required)
+     * @param string $id2 Customer id (required)
      * @param string $teamId Team id (required)
      * @return \Swagger\Client\Model\TeamMemberAccessToken
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function customersIdTeamsTeamIdChangePost($id, $teamId)
+    public function customersIdTeamsTeamIdChangePost($id, $id2, $teamId)
     {
-        list($response) = $this->customersIdTeamsTeamIdChangePostWithHttpInfo($id, $teamId);
+        list($response) = $this->customersIdTeamsTeamIdChangePostWithHttpInfo($id, $id2, $teamId);
         return $response;
     }
 
@@ -12015,15 +12016,20 @@ class CustomerApi
      * Move authentication to a Team
      *
      * @param string $id Customer id (required)
+     * @param string $id2 Customer id (required)
      * @param string $teamId Team id (required)
      * @return array of \Swagger\Client\Model\TeamMemberAccessToken, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function customersIdTeamsTeamIdChangePostWithHttpInfo($id, $teamId)
+    public function customersIdTeamsTeamIdChangePostWithHttpInfo($id, $id2, $teamId)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id when calling customersIdTeamsTeamIdChangePost');
+        }
+        // verify the required parameter 'id2' is set
+        if ($id2 === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id2 when calling customersIdTeamsTeamIdChangePost');
         }
         // verify the required parameter 'teamId' is set
         if ($teamId === null) {
@@ -12046,6 +12052,14 @@ class CustomerApi
             $resourcePath = str_replace(
                 "{" . "id" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($id2 !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id2),
                 $resourcePath
             );
         }
@@ -12103,14 +12117,15 @@ class CustomerApi
      * Move authentication to a Portal
      *
      * @param string $id Customer id (required)
+     * @param string $id2 Customer id (required)
      * @param string $teamId Team id (required)
      * @param string $portalId Portal id (required)
      * @return \Swagger\Client\Model\TeamMemberAccessToken
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function customersIdTeamsTeamIdPortalsPortalIdChangePost($id, $teamId, $portalId)
+    public function customersIdTeamsTeamIdPortalsPortalIdChangePost($id, $id2, $teamId, $portalId)
     {
-        list($response) = $this->customersIdTeamsTeamIdPortalsPortalIdChangePostWithHttpInfo($id, $teamId, $portalId);
+        list($response) = $this->customersIdTeamsTeamIdPortalsPortalIdChangePostWithHttpInfo($id, $id2, $teamId, $portalId);
         return $response;
     }
 
@@ -12120,16 +12135,21 @@ class CustomerApi
      * Move authentication to a Portal
      *
      * @param string $id Customer id (required)
+     * @param string $id2 Customer id (required)
      * @param string $teamId Team id (required)
      * @param string $portalId Portal id (required)
      * @return array of \Swagger\Client\Model\TeamMemberAccessToken, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function customersIdTeamsTeamIdPortalsPortalIdChangePostWithHttpInfo($id, $teamId, $portalId)
+    public function customersIdTeamsTeamIdPortalsPortalIdChangePostWithHttpInfo($id, $id2, $teamId, $portalId)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id when calling customersIdTeamsTeamIdPortalsPortalIdChangePost');
+        }
+        // verify the required parameter 'id2' is set
+        if ($id2 === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id2 when calling customersIdTeamsTeamIdPortalsPortalIdChangePost');
         }
         // verify the required parameter 'teamId' is set
         if ($teamId === null) {
@@ -12156,6 +12176,14 @@ class CustomerApi
             $resourcePath = str_replace(
                 "{" . "id" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($id2 !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id2),
                 $resourcePath
             );
         }
@@ -12221,12 +12249,13 @@ class CustomerApi
      * Get token info
      *
      * @param string $id Customer id (required)
+     * @param string $id2 Customer id (required)
      * @return \Swagger\Client\Model\TeamMemberAccessToken
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function customersIdTokenGet($id)
+    public function customersIdTokenGet($id, $id2)
     {
-        list($response) = $this->customersIdTokenGetWithHttpInfo($id);
+        list($response) = $this->customersIdTokenGetWithHttpInfo($id, $id2);
         return $response;
     }
 
@@ -12236,14 +12265,19 @@ class CustomerApi
      * Get token info
      *
      * @param string $id Customer id (required)
+     * @param string $id2 Customer id (required)
      * @return array of \Swagger\Client\Model\TeamMemberAccessToken, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function customersIdTokenGetWithHttpInfo($id)
+    public function customersIdTokenGetWithHttpInfo($id, $id2)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id when calling customersIdTokenGet');
+        }
+        // verify the required parameter 'id2' is set
+        if ($id2 === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id2 when calling customersIdTokenGet');
         }
         // parse inputs
         $resourcePath = "/Customers/{id}/token";
@@ -12262,6 +12296,14 @@ class CustomerApi
             $resourcePath = str_replace(
                 "{" . "id" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($id2 !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id2),
                 $resourcePath
             );
         }
