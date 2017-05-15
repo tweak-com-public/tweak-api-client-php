@@ -1366,12 +1366,23 @@ class CustomerApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for customersInvitationTicketsAcceptPost
+     * Test case for customersInvitationTicketsTokenAcceptPost
      *
      * Accept invitation with token.
      *
      */
-    public function testCustomersInvitationTicketsAcceptPost()
+    public function testCustomersInvitationTicketsTokenAcceptPost()
+    {
+
+    }
+
+    /**
+     * Test case for customersInvitationTicketsTokenGet
+     *
+     * Get invitation details with token.
+     *
+     */
+    public function testCustomersInvitationTicketsTokenGet()
     {
 
     }

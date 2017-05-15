@@ -120,7 +120,8 @@ Method | HTTP request | Description
 [**customersIdTeamsTeamIdChangePost**](CustomerApi.md#customersIdTeamsTeamIdChangePost) | **POST** /Customers/{id}/teams/{teamId}/change | Move authentication to a Team
 [**customersIdTeamsTeamIdPortalsPortalIdChangePost**](CustomerApi.md#customersIdTeamsTeamIdPortalsPortalIdChangePost) | **POST** /Customers/{id}/teams/{teamId}/portals/{portalId}/change | Move authentication to a Portal
 [**customersIdTokenGet**](CustomerApi.md#customersIdTokenGet) | **GET** /Customers/{id}/token | Get token info
-[**customersInvitationTicketsAcceptPost**](CustomerApi.md#customersInvitationTicketsAcceptPost) | **POST** /Customers/invitationTickets/accept | Accept invitation with token
+[**customersInvitationTicketsTokenAcceptPost**](CustomerApi.md#customersInvitationTicketsTokenAcceptPost) | **POST** /Customers/invitationTickets/{token}/accept | Accept invitation with token
+[**customersInvitationTicketsTokenGet**](CustomerApi.md#customersInvitationTicketsTokenGet) | **GET** /Customers/invitationTickets/{token} | Get invitation details with token
 [**customersLoginPost**](CustomerApi.md#customersLoginPost) | **POST** /Customers/login | Login a user with username/email and password.
 [**customersLogoutPost**](CustomerApi.md#customersLogoutPost) | **POST** /Customers/logout | Logout a user with access token.
 [**customersPatch**](CustomerApi.md#customersPatch) | **PATCH** /Customers | Patch an existing model instance or insert a new one into the data source.
@@ -6019,8 +6020,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **customersInvitationTicketsAcceptPost**
-> \Swagger\Client\Model\InvitationTicket customersInvitationTicketsAcceptPost($token, $data)
+# **customersInvitationTicketsTokenAcceptPost**
+> \Swagger\Client\Model\InvitationTicket customersInvitationTicketsTokenAcceptPost($token, $data)
 
 Accept invitation with token
 
@@ -6039,10 +6040,10 @@ $token = "token_example"; // string | Token describing invitation ticket
 $data = new \Swagger\Client\Model\Customer(); // \Swagger\Client\Model\Customer | Customer data in case new customer
 
 try {
-    $result = $api_instance->customersInvitationTicketsAcceptPost($token, $data);
+    $result = $api_instance->customersInvitationTicketsTokenAcceptPost($token, $data);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CustomerApi->customersInvitationTicketsAcceptPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CustomerApi->customersInvitationTicketsTokenAcceptPost: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -6053,6 +6054,54 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **token** | **string**| Token describing invitation ticket |
  **data** | [**\Swagger\Client\Model\Customer**](../Model/\Swagger\Client\Model\Customer.md)| Customer data in case new customer | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\InvitationTicket**](../Model/InvitationTicket.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **customersInvitationTicketsTokenGet**
+> \Swagger\Client\Model\InvitationTicket customersInvitationTicketsTokenGet($token)
+
+Get invitation details with token
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+$token = "token_example"; // string | Token describing invitation ticket
+
+try {
+    $result = $api_instance->customersInvitationTicketsTokenGet($token);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersInvitationTicketsTokenGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **token** | **string**| Token describing invitation ticket |
 
 ### Return type
 

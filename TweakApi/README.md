@@ -197,7 +197,8 @@ Class | Method | HTTP request | Description
 *CustomerApi* | [**customersIdTeamsTeamIdChangePost**](docs/Api/CustomerApi.md#customersidteamsteamidchangepost) | **POST** /Customers/{id}/teams/{teamId}/change | Move authentication to a Team
 *CustomerApi* | [**customersIdTeamsTeamIdPortalsPortalIdChangePost**](docs/Api/CustomerApi.md#customersidteamsteamidportalsportalidchangepost) | **POST** /Customers/{id}/teams/{teamId}/portals/{portalId}/change | Move authentication to a Portal
 *CustomerApi* | [**customersIdTokenGet**](docs/Api/CustomerApi.md#customersidtokenget) | **GET** /Customers/{id}/token | Get token info
-*CustomerApi* | [**customersInvitationTicketsAcceptPost**](docs/Api/CustomerApi.md#customersinvitationticketsacceptpost) | **POST** /Customers/invitationTickets/accept | Accept invitation with token
+*CustomerApi* | [**customersInvitationTicketsTokenAcceptPost**](docs/Api/CustomerApi.md#customersinvitationticketstokenacceptpost) | **POST** /Customers/invitationTickets/{token}/accept | Accept invitation with token
+*CustomerApi* | [**customersInvitationTicketsTokenGet**](docs/Api/CustomerApi.md#customersinvitationticketstokenget) | **GET** /Customers/invitationTickets/{token} | Get invitation details with token
 *CustomerApi* | [**customersLoginPost**](docs/Api/CustomerApi.md#customersloginpost) | **POST** /Customers/login | Login a user with username/email and password.
 *CustomerApi* | [**customersLogoutPost**](docs/Api/CustomerApi.md#customerslogoutpost) | **POST** /Customers/logout | Logout a user with access token.
 *CustomerApi* | [**customersPatch**](docs/Api/CustomerApi.md#customerspatch) | **PATCH** /Customers | Patch an existing model instance or insert a new one into the data source.

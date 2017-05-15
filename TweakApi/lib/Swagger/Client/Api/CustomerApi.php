@@ -12348,7 +12348,7 @@ class CustomerApi
     }
 
     /**
-     * Operation customersInvitationTicketsAcceptPost
+     * Operation customersInvitationTicketsTokenAcceptPost
      *
      * Accept invitation with token
      *
@@ -12357,14 +12357,14 @@ class CustomerApi
      * @return \Swagger\Client\Model\InvitationTicket
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function customersInvitationTicketsAcceptPost($token, $data = null)
+    public function customersInvitationTicketsTokenAcceptPost($token, $data = null)
     {
-        list($response) = $this->customersInvitationTicketsAcceptPostWithHttpInfo($token, $data);
+        list($response) = $this->customersInvitationTicketsTokenAcceptPostWithHttpInfo($token, $data);
         return $response;
     }
 
     /**
-     * Operation customersInvitationTicketsAcceptPostWithHttpInfo
+     * Operation customersInvitationTicketsTokenAcceptPostWithHttpInfo
      *
      * Accept invitation with token
      *
@@ -12373,14 +12373,14 @@ class CustomerApi
      * @return array of \Swagger\Client\Model\InvitationTicket, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function customersInvitationTicketsAcceptPostWithHttpInfo($token, $data = null)
+    public function customersInvitationTicketsTokenAcceptPostWithHttpInfo($token, $data = null)
     {
         // verify the required parameter 'token' is set
         if ($token === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $token when calling customersInvitationTicketsAcceptPost');
+            throw new \InvalidArgumentException('Missing the required parameter $token when calling customersInvitationTicketsTokenAcceptPost');
         }
         // parse inputs
-        $resourcePath = "/Customers/invitationTickets/accept";
+        $resourcePath = "/Customers/invitationTickets/{token}/accept";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -12391,9 +12391,13 @@ class CustomerApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
 
-        // query params
+        // path params
         if ($token !== null) {
-            $queryParams['token'] = $this->apiClient->getSerializer()->toQueryValue($token);
+            $resourcePath = str_replace(
+                "{" . "token" . "}",
+                $this->apiClient->getSerializer()->toPathValue($token),
+                $resourcePath
+            );
         }
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
@@ -12424,7 +12428,97 @@ class CustomerApi
                 $httpBody,
                 $headerParams,
                 '\Swagger\Client\Model\InvitationTicket',
-                '/Customers/invitationTickets/accept'
+                '/Customers/invitationTickets/{token}/accept'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InvitationTicket', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InvitationTicket', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation customersInvitationTicketsTokenGet
+     *
+     * Get invitation details with token
+     *
+     * @param string $token Token describing invitation ticket (required)
+     * @return \Swagger\Client\Model\InvitationTicket
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function customersInvitationTicketsTokenGet($token)
+    {
+        list($response) = $this->customersInvitationTicketsTokenGetWithHttpInfo($token);
+        return $response;
+    }
+
+    /**
+     * Operation customersInvitationTicketsTokenGetWithHttpInfo
+     *
+     * Get invitation details with token
+     *
+     * @param string $token Token describing invitation ticket (required)
+     * @return array of \Swagger\Client\Model\InvitationTicket, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function customersInvitationTicketsTokenGetWithHttpInfo($token)
+    {
+        // verify the required parameter 'token' is set
+        if ($token === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $token when calling customersInvitationTicketsTokenGet');
+        }
+        // parse inputs
+        $resourcePath = "/Customers/invitationTickets/{token}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($token !== null) {
+            $resourcePath = str_replace(
+                "{" . "token" . "}",
+                $this->apiClient->getSerializer()->toPathValue($token),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\InvitationTicket',
+                '/Customers/invitationTickets/{token}'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InvitationTicket', $httpHeader), $statusCode, $httpHeader);
