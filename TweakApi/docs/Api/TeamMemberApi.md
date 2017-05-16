@@ -67,6 +67,7 @@ Method | HTTP request | Description
 [**teamMembersIdPortalsAvailableGet**](TeamMemberApi.md#teamMembersIdPortalsAvailableGet) | **GET** /TeamMembers/{id}/portals/available | Find all available Portals
 [**teamMembersIdPortalsCountGet**](TeamMemberApi.md#teamMembersIdPortalsCountGet) | **GET** /TeamMembers/{id}/portals/count | Counts portals of TeamMember.
 [**teamMembersIdPortalsDelete**](TeamMemberApi.md#teamMembersIdPortalsDelete) | **DELETE** /TeamMembers/{id}/portals | Deletes all portals of this model.
+[**teamMembersIdPortalsFkAvailableGet**](TeamMemberApi.md#teamMembersIdPortalsFkAvailableGet) | **GET** /TeamMembers/{id}/portals/{fk}/available | Find available Portal by id
 [**teamMembersIdPortalsFkDelete**](TeamMemberApi.md#teamMembersIdPortalsFkDelete) | **DELETE** /TeamMembers/{id}/portals/{fk} | Delete a related item by id for portals.
 [**teamMembersIdPortalsFkGet**](TeamMemberApi.md#teamMembersIdPortalsFkGet) | **GET** /TeamMembers/{id}/portals/{fk} | Find a related item by id for portals.
 [**teamMembersIdPortalsFkPut**](TeamMemberApi.md#teamMembersIdPortalsFkPut) | **PUT** /TeamMembers/{id}/portals/{fk} | Update a related item by id for portals.
@@ -3311,6 +3312,60 @@ Name | Type | Description  | Notes
 ### Return type
 
 void (empty response body)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdPortalsFkAvailableGet**
+> \Swagger\Client\Model\Portal teamMembersIdPortalsFkAvailableGet($id, $id2, $fk, $include)
+
+Find available Portal by id
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+$id2 = "id_example"; // string | 
+$fk = "fk_example"; // string | 
+$include = "include_example"; // string | Only include changes that match this filter
+
+try {
+    $result = $api_instance->teamMembersIdPortalsFkAvailableGet($id, $id2, $fk, $include);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdPortalsFkAvailableGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+ **id2** | **string**|  |
+ **fk** | **string**|  |
+ **include** | **string**| Only include changes that match this filter | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\Portal**](../Model/Portal.md)
 
 ### Authorization
 

@@ -1124,6 +1124,7 @@ Class | Method | HTTP request | Description
 *TeamMemberApi* | [**teamMembersIdPortalsAvailableGet**](docs/Api/TeamMemberApi.md#teammembersidportalsavailableget) | **GET** /TeamMembers/{id}/portals/available | Find all available Portals
 *TeamMemberApi* | [**teamMembersIdPortalsCountGet**](docs/Api/TeamMemberApi.md#teammembersidportalscountget) | **GET** /TeamMembers/{id}/portals/count | Counts portals of TeamMember.
 *TeamMemberApi* | [**teamMembersIdPortalsDelete**](docs/Api/TeamMemberApi.md#teammembersidportalsdelete) | **DELETE** /TeamMembers/{id}/portals | Deletes all portals of this model.
+*TeamMemberApi* | [**teamMembersIdPortalsFkAvailableGet**](docs/Api/TeamMemberApi.md#teammembersidportalsfkavailableget) | **GET** /TeamMembers/{id}/portals/{fk}/available | Find available Portal by id
 *TeamMemberApi* | [**teamMembersIdPortalsFkDelete**](docs/Api/TeamMemberApi.md#teammembersidportalsfkdelete) | **DELETE** /TeamMembers/{id}/portals/{fk} | Delete a related item by id for portals.
 *TeamMemberApi* | [**teamMembersIdPortalsFkGet**](docs/Api/TeamMemberApi.md#teammembersidportalsfkget) | **GET** /TeamMembers/{id}/portals/{fk} | Find a related item by id for portals.
 *TeamMemberApi* | [**teamMembersIdPortalsFkPut**](docs/Api/TeamMemberApi.md#teammembersidportalsfkput) | **PUT** /TeamMembers/{id}/portals/{fk} | Update a related item by id for portals.

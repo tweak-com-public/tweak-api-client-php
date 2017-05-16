@@ -783,6 +783,17 @@ class TeamMemberApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for teamMembersIdPortalsFkAvailableGet
+     *
+     * Find available Portal by id.
+     *
+     */
+    public function testTeamMembersIdPortalsFkAvailableGet()
+    {
+
+    }
+
+    /**
      * Test case for teamMembersIdPortalsFkDelete
      *
      * Delete a related item by id for portals..

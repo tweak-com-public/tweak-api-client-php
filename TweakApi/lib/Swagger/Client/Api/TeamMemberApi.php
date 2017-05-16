@@ -6259,6 +6259,130 @@ class TeamMemberApi
     }
 
     /**
+     * Operation teamMembersIdPortalsFkAvailableGet
+     *
+     * Find available Portal by id
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $id2  (required)
+     * @param string $fk  (required)
+     * @param string $include Only include changes that match this filter (optional)
+     * @return \Swagger\Client\Model\Portal
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdPortalsFkAvailableGet($id, $id2, $fk, $include = null)
+    {
+        list($response) = $this->teamMembersIdPortalsFkAvailableGetWithHttpInfo($id, $id2, $fk, $include);
+        return $response;
+    }
+
+    /**
+     * Operation teamMembersIdPortalsFkAvailableGetWithHttpInfo
+     *
+     * Find available Portal by id
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $id2  (required)
+     * @param string $fk  (required)
+     * @param string $include Only include changes that match this filter (optional)
+     * @return array of \Swagger\Client\Model\Portal, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdPortalsFkAvailableGetWithHttpInfo($id, $id2, $fk, $include = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdPortalsFkAvailableGet');
+        }
+        // verify the required parameter 'id2' is set
+        if ($id2 === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id2 when calling teamMembersIdPortalsFkAvailableGet');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling teamMembersIdPortalsFkAvailableGet');
+        }
+        // parse inputs
+        $resourcePath = "/TeamMembers/{id}/portals/{fk}/available";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($include !== null) {
+            $queryParams['include'] = $this->apiClient->getSerializer()->toQueryValue($include);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($id2 !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id2),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\Portal',
+                '/TeamMembers/{id}/portals/{fk}/available'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Portal', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Portal', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation teamMembersIdPortalsFkDelete
      *
      * Delete a related item by id for portals.
