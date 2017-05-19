@@ -144,6 +144,14 @@ class TemplateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "status"
+     */
+    public function testPropertyStatus()
+    {
+
+    }
+
+    /**
      * Test attribute "created"
      */
     public function testPropertyCreated()

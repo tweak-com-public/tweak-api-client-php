@@ -838,6 +838,17 @@ class TeamMemberApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for teamMembersIdPortalsNkDesignsFkFlashvarsGet
+     *
+     * Find Design FlashVars within available Portal by id.
+     *
+     */
+    public function testTeamMembersIdPortalsNkDesignsFkFlashvarsGet()
+    {
+
+    }
+
+    /**
      * Test case for teamMembersIdPortalsPost
      *
      * Creates a new instance in portals of this model..
@@ -1889,6 +1900,17 @@ class TeamMemberApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testTeamMembersIdTemplatesFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTemplatesFkFlashvarsGet
+     *
+     * Find Template FlashVars by id.
+     *
+     */
+    public function testTeamMembersIdTemplatesFkFlashvarsGet()
     {
 
     }

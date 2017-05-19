@@ -179,6 +179,7 @@ class Customer implements ArrayAccess
 
     const STATUS_ACTIVE = 'active';
     const STATUS_INACTIVE = 'inactive';
+    const STATUS_GODMODE = 'godmode';
     
 
     
@@ -191,6 +192,7 @@ class Customer implements ArrayAccess
         return [
             self::STATUS_ACTIVE,
             self::STATUS_INACTIVE,
+            self::STATUS_GODMODE,
         ];
     }
     
@@ -243,7 +245,7 @@ class Customer implements ArrayAccess
         if ($this->container['initials'] === null) {
             $invalid_properties[] = "'initials' can't be null";
         }
-        $allowed_values = array("active", "inactive");
+        $allowed_values = array("active", "inactive", "godmode");
         if (!in_array($this->container['status'], $allowed_values)) {
             $invalid_properties[] = "invalid value for 'status', must be one of #{allowed_values}.";
         }
@@ -271,7 +273,7 @@ class Customer implements ArrayAccess
         if ($this->container['initials'] === null) {
             return false;
         }
-        $allowed_values = array("active", "inactive");
+        $allowed_values = array("active", "inactive", "godmode");
         if (!in_array($this->container['status'], $allowed_values)) {
             return false;
         }
@@ -382,9 +384,9 @@ class Customer implements ArrayAccess
      */
     public function setStatus($status)
     {
-        $allowed_values = array('active', 'inactive');
+        $allowed_values = array('active', 'inactive', 'godmode');
         if (!in_array($status, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'active', 'inactive'");
+            throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'active', 'inactive', 'godmode'");
         }
         $this->container['status'] = $status;
 

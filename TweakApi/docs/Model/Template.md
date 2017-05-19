@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **description** | **string** |  | [optional] [default to '']
 **edited** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **teamPath** | **string** |  | [optional] [default to '/']
+**status** | **string** |  | [optional] [default to 'pendingApproval']
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **modified** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **id** | **string** |  | [optional] 

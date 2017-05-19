@@ -72,6 +72,7 @@ class Template implements ArrayAccess
         'description' => 'string',
         'edited' => '\DateTime',
         'teamPath' => 'string',
+        'status' => 'string',
         'created' => '\DateTime',
         'modified' => '\DateTime',
         'id' => 'string',
@@ -108,6 +109,7 @@ class Template implements ArrayAccess
         'description' => 'description',
         'edited' => 'edited',
         'teamPath' => 'teamPath',
+        'status' => 'status',
         'created' => 'created',
         'modified' => 'modified',
         'id' => 'id',
@@ -144,6 +146,7 @@ class Template implements ArrayAccess
         'description' => 'setDescription',
         'edited' => 'setEdited',
         'teamPath' => 'setTeamPath',
+        'status' => 'setStatus',
         'created' => 'setCreated',
         'modified' => 'setModified',
         'id' => 'setId',
@@ -180,6 +183,7 @@ class Template implements ArrayAccess
         'description' => 'getDescription',
         'edited' => 'getEdited',
         'teamPath' => 'getTeamPath',
+        'status' => 'getStatus',
         'created' => 'getCreated',
         'modified' => 'getModified',
         'id' => 'getId',
@@ -205,8 +209,24 @@ class Template implements ArrayAccess
         return self::$getters;
     }
 
+    const STATUS_PENDING_APPROVAL = 'pendingApproval';
+    const STATUS_APPROVED = 'approved';
+    const STATUS_REJECTED = 'rejected';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getStatusAllowableValues()
+    {
+        return [
+            self::STATUS_PENDING_APPROVAL,
+            self::STATUS_APPROVED,
+            self::STATUS_REJECTED,
+        ];
+    }
     
 
     /**
@@ -227,6 +247,7 @@ class Template implements ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : '';
         $this->container['edited'] = isset($data['edited']) ? $data['edited'] : null;
         $this->container['teamPath'] = isset($data['teamPath']) ? $data['teamPath'] : '/';
+        $this->container['status'] = isset($data['status']) ? $data['status'] : 'pendingApproval';
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
         $this->container['modified'] = isset($data['modified']) ? $data['modified'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
@@ -261,6 +282,11 @@ class Template implements ArrayAccess
         if ($this->container['object'] === null) {
             $invalid_properties[] = "'object' can't be null";
         }
+        $allowed_values = array("pendingApproval", "approved", "rejected");
+        if (!in_array($this->container['status'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'status', must be one of #{allowed_values}.";
+        }
+
         return $invalid_properties;
     }
 
@@ -276,6 +302,10 @@ class Template implements ArrayAccess
             return false;
         }
         if ($this->container['object'] === null) {
+            return false;
+        }
+        $allowed_values = array("pendingApproval", "approved", "rejected");
+        if (!in_array($this->container['status'], $allowed_values)) {
             return false;
         }
         return true;
@@ -404,6 +434,31 @@ class Template implements ArrayAccess
     public function setTeamPath($teamPath)
     {
         $this->container['teamPath'] = $teamPath;
+
+        return $this;
+    }
+
+    /**
+     * Gets status
+     * @return string
+     */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+     * Sets status
+     * @param string $status
+     * @return $this
+     */
+    public function setStatus($status)
+    {
+        $allowed_values = array('pendingApproval', 'approved', 'rejected');
+        if (!in_array($status, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'pendingApproval', 'approved', 'rejected'");
+        }
+        $this->container['status'] = $status;
 
         return $this;
     }

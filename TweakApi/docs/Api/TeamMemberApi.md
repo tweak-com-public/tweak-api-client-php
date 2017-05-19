@@ -72,6 +72,7 @@ Method | HTTP request | Description
 [**teamMembersIdPortalsFkGet**](TeamMemberApi.md#teamMembersIdPortalsFkGet) | **GET** /TeamMembers/{id}/portals/{fk} | Find a related item by id for portals.
 [**teamMembersIdPortalsFkPut**](TeamMemberApi.md#teamMembersIdPortalsFkPut) | **PUT** /TeamMembers/{id}/portals/{fk} | Update a related item by id for portals.
 [**teamMembersIdPortalsGet**](TeamMemberApi.md#teamMembersIdPortalsGet) | **GET** /TeamMembers/{id}/portals | Queries portals of TeamMember.
+[**teamMembersIdPortalsNkDesignsFkFlashvarsGet**](TeamMemberApi.md#teamMembersIdPortalsNkDesignsFkFlashvarsGet) | **GET** /TeamMembers/{id}/portals/{nk}/designs/{fk}/flashvars | Find Design FlashVars within available Portal by id
 [**teamMembersIdPortalsPost**](TeamMemberApi.md#teamMembersIdPortalsPost) | **POST** /TeamMembers/{id}/portals | Creates a new instance in portals of this model.
 [**teamMembersIdPortalsRelFkDelete**](TeamMemberApi.md#teamMembersIdPortalsRelFkDelete) | **DELETE** /TeamMembers/{id}/portals/rel/{fk} | Remove the portals relation to an item by id.
 [**teamMembersIdPortalsRelFkHead**](TeamMemberApi.md#teamMembersIdPortalsRelFkHead) | **HEAD** /TeamMembers/{id}/portals/rel/{fk} | Check the existence of portals relation to an item by id.
@@ -168,6 +169,7 @@ Method | HTTP request | Description
 [**teamMembersIdTemplatesCountGet**](TeamMemberApi.md#teamMembersIdTemplatesCountGet) | **GET** /TeamMembers/{id}/templates/count | Counts templates of TeamMember.
 [**teamMembersIdTemplatesDelete**](TeamMemberApi.md#teamMembersIdTemplatesDelete) | **DELETE** /TeamMembers/{id}/templates | Deletes all templates of this model.
 [**teamMembersIdTemplatesFkDelete**](TeamMemberApi.md#teamMembersIdTemplatesFkDelete) | **DELETE** /TeamMembers/{id}/templates/{fk} | Delete a related item by id for templates.
+[**teamMembersIdTemplatesFkFlashvarsGet**](TeamMemberApi.md#teamMembersIdTemplatesFkFlashvarsGet) | **GET** /TeamMembers/{id}/templates/{fk}/flashvars | Find Template FlashVars by id
 [**teamMembersIdTemplatesFkGet**](TeamMemberApi.md#teamMembersIdTemplatesFkGet) | **GET** /TeamMembers/{id}/templates/{fk} | Find a related item by id for templates.
 [**teamMembersIdTemplatesFkPut**](TeamMemberApi.md#teamMembersIdTemplatesFkPut) | **PUT** /TeamMembers/{id}/templates/{fk} | Update a related item by id for templates.
 [**teamMembersIdTemplatesGet**](TeamMemberApi.md#teamMembersIdTemplatesGet) | **GET** /TeamMembers/{id}/templates | Queries templates of TeamMember.
@@ -3567,6 +3569,60 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\Portal[]**](../Model/Portal.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdPortalsNkDesignsFkFlashvarsGet**
+> \Swagger\Client\Model\FlashVar teamMembersIdPortalsNkDesignsFkFlashvarsGet($id, $id2, $nk, $fk)
+
+Find Design FlashVars within available Portal by id
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+$id2 = "id_example"; // string | 
+$nk = "nk_example"; // string | 
+$fk = "fk_example"; // string | 
+
+try {
+    $result = $api_instance->teamMembersIdPortalsNkDesignsFkFlashvarsGet($id, $id2, $nk, $fk);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdPortalsNkDesignsFkFlashvarsGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+ **id2** | **string**|  |
+ **nk** | **string**|  |
+ **fk** | **string**|  |
+
+### Return type
+
+[**\Swagger\Client\Model\FlashVar**](../Model/FlashVar.md)
 
 ### Authorization
 
@@ -8354,6 +8410,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 void (empty response body)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdTemplatesFkFlashvarsGet**
+> \Swagger\Client\Model\FlashVar teamMembersIdTemplatesFkFlashvarsGet($id, $id2, $fk)
+
+Find Template FlashVars by id
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+$id2 = "id_example"; // string | 
+$fk = "fk_example"; // string | 
+
+try {
+    $result = $api_instance->teamMembersIdTemplatesFkFlashvarsGet($id, $id2, $fk);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTemplatesFkFlashvarsGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+ **id2** | **string**|  |
+ **fk** | **string**|  |
+
+### Return type
+
+[**\Swagger\Client\Model\FlashVar**](../Model/FlashVar.md)
 
 ### Authorization
 
