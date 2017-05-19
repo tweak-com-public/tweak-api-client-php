@@ -1476,50 +1476,6 @@ class TeamApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for teamsIdPortalsNkPermissionDelete
-     *
-     * Deletes permission of this model..
-     *
-     */
-    public function testTeamsIdPortalsNkPermissionDelete()
-    {
-
-    }
-
-    /**
-     * Test case for teamsIdPortalsNkPermissionGet
-     *
-     * Fetches hasOne relation permission..
-     *
-     */
-    public function testTeamsIdPortalsNkPermissionGet()
-    {
-
-    }
-
-    /**
-     * Test case for teamsIdPortalsNkPermissionPost
-     *
-     * Creates a new instance in permission of this model..
-     *
-     */
-    public function testTeamsIdPortalsNkPermissionPost()
-    {
-
-    }
-
-    /**
-     * Test case for teamsIdPortalsNkPermissionPut
-     *
-     * Update permission of this model..
-     *
-     */
-    public function testTeamsIdPortalsNkPermissionPut()
-    {
-
-    }
-
-    /**
      * Test case for teamsIdPortalsNkPortalMembersCountGet
      *
      * Counts portalMembers of Portal..

@@ -81,7 +81,7 @@ class FlashVar implements ArrayAccess
         'showConfirm' => 'bool',
         'allowApprovePluginProduct' => 'bool',
         'allowSendToApprovePluginProduct' => 'bool',
-        'approvalFormID' => 'object',
+        'approvalFormID' => 'object[]',
         'showPluginImages' => 'bool',
         'pluginImageLibraries' => 'string[]',
         'id' => 'string',
@@ -250,8 +250,8 @@ class FlashVar implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['apiPartnerAuthUrl'] = isset($data['apiPartnerAuthUrl']) ? $data['apiPartnerAuthUrl'] : '';
-        $this->container['productId'] = isset($data['productId']) ? $data['productId'] : '';
-        $this->container['savedPluginProductId'] = isset($data['savedPluginProductId']) ? $data['savedPluginProductId'] : '';
+        $this->container['productId'] = isset($data['productId']) ? $data['productId'] : null;
+        $this->container['savedPluginProductId'] = isset($data['savedPluginProductId']) ? $data['savedPluginProductId'] : null;
         $this->container['allowAddImage'] = isset($data['allowAddImage']) ? $data['allowAddImage'] : false;
         $this->container['allowAddText'] = isset($data['allowAddText']) ? $data['allowAddText'] : false;
         $this->container['allowJPEG'] = isset($data['allowJPEG']) ? $data['allowJPEG'] : false;
@@ -622,7 +622,7 @@ class FlashVar implements ArrayAccess
 
     /**
      * Gets approvalFormID
-     * @return object
+     * @return object[]
      */
     public function getApprovalFormID()
     {
@@ -631,7 +631,7 @@ class FlashVar implements ArrayAccess
 
     /**
      * Sets approvalFormID
-     * @param object $approvalFormID
+     * @param object[] $approvalFormID
      * @return $this
      */
     public function setApprovalFormID($approvalFormID)

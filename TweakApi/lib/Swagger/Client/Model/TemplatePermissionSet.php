@@ -66,13 +66,12 @@ class TemplatePermissionSet implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'canEdit' => 'bool',
-        'needApproval' => 'bool',
-        'canBeOrdered' => 'bool',
-        'printPdf' => 'bool',
+        'highResPdf' => 'bool',
         'proofPdf' => 'bool',
         'jpegs' => 'bool',
         'socialSharing' => 'bool',
+        'canEdit' => 'bool',
+        'needAdminApproval' => 'bool',
         'id' => 'string',
         'templateId' => 'string',
         'template' => '\Swagger\Client\Model\Template'
@@ -88,13 +87,12 @@ class TemplatePermissionSet implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'canEdit' => 'canEdit',
-        'needApproval' => 'needApproval',
-        'canBeOrdered' => 'canBeOrdered',
-        'printPdf' => 'printPdf',
+        'highResPdf' => 'highResPdf',
         'proofPdf' => 'proofPdf',
         'jpegs' => 'jpegs',
         'socialSharing' => 'socialSharing',
+        'canEdit' => 'canEdit',
+        'needAdminApproval' => 'needAdminApproval',
         'id' => 'id',
         'templateId' => 'templateId',
         'template' => 'template'
@@ -110,13 +108,12 @@ class TemplatePermissionSet implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'canEdit' => 'setCanEdit',
-        'needApproval' => 'setNeedApproval',
-        'canBeOrdered' => 'setCanBeOrdered',
-        'printPdf' => 'setPrintPdf',
+        'highResPdf' => 'setHighResPdf',
         'proofPdf' => 'setProofPdf',
         'jpegs' => 'setJpegs',
         'socialSharing' => 'setSocialSharing',
+        'canEdit' => 'setCanEdit',
+        'needAdminApproval' => 'setNeedAdminApproval',
         'id' => 'setId',
         'templateId' => 'setTemplateId',
         'template' => 'setTemplate'
@@ -132,13 +129,12 @@ class TemplatePermissionSet implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'canEdit' => 'getCanEdit',
-        'needApproval' => 'getNeedApproval',
-        'canBeOrdered' => 'getCanBeOrdered',
-        'printPdf' => 'getPrintPdf',
+        'highResPdf' => 'getHighResPdf',
         'proofPdf' => 'getProofPdf',
         'jpegs' => 'getJpegs',
         'socialSharing' => 'getSocialSharing',
+        'canEdit' => 'getCanEdit',
+        'needAdminApproval' => 'getNeedAdminApproval',
         'id' => 'getId',
         'templateId' => 'getTemplateId',
         'template' => 'getTemplate'
@@ -165,13 +161,12 @@ class TemplatePermissionSet implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['canEdit'] = isset($data['canEdit']) ? $data['canEdit'] : false;
-        $this->container['needApproval'] = isset($data['needApproval']) ? $data['needApproval'] : false;
-        $this->container['canBeOrdered'] = isset($data['canBeOrdered']) ? $data['canBeOrdered'] : false;
-        $this->container['printPdf'] = isset($data['printPdf']) ? $data['printPdf'] : false;
+        $this->container['highResPdf'] = isset($data['highResPdf']) ? $data['highResPdf'] : false;
         $this->container['proofPdf'] = isset($data['proofPdf']) ? $data['proofPdf'] : false;
         $this->container['jpegs'] = isset($data['jpegs']) ? $data['jpegs'] : false;
         $this->container['socialSharing'] = isset($data['socialSharing']) ? $data['socialSharing'] : false;
+        $this->container['canEdit'] = isset($data['canEdit']) ? $data['canEdit'] : false;
+        $this->container['needAdminApproval'] = isset($data['needAdminApproval']) ? $data['needAdminApproval'] : false;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['templateId'] = isset($data['templateId']) ? $data['templateId'] : null;
         $this->container['template'] = isset($data['template']) ? $data['template'] : null;
@@ -201,85 +196,22 @@ class TemplatePermissionSet implements ArrayAccess
 
 
     /**
-     * Gets canEdit
+     * Gets highResPdf
      * @return bool
      */
-    public function getCanEdit()
+    public function getHighResPdf()
     {
-        return $this->container['canEdit'];
+        return $this->container['highResPdf'];
     }
 
     /**
-     * Sets canEdit
-     * @param bool $canEdit
+     * Sets highResPdf
+     * @param bool $highResPdf
      * @return $this
      */
-    public function setCanEdit($canEdit)
+    public function setHighResPdf($highResPdf)
     {
-        $this->container['canEdit'] = $canEdit;
-
-        return $this;
-    }
-
-    /**
-     * Gets needApproval
-     * @return bool
-     */
-    public function getNeedApproval()
-    {
-        return $this->container['needApproval'];
-    }
-
-    /**
-     * Sets needApproval
-     * @param bool $needApproval
-     * @return $this
-     */
-    public function setNeedApproval($needApproval)
-    {
-        $this->container['needApproval'] = $needApproval;
-
-        return $this;
-    }
-
-    /**
-     * Gets canBeOrdered
-     * @return bool
-     */
-    public function getCanBeOrdered()
-    {
-        return $this->container['canBeOrdered'];
-    }
-
-    /**
-     * Sets canBeOrdered
-     * @param bool $canBeOrdered
-     * @return $this
-     */
-    public function setCanBeOrdered($canBeOrdered)
-    {
-        $this->container['canBeOrdered'] = $canBeOrdered;
-
-        return $this;
-    }
-
-    /**
-     * Gets printPdf
-     * @return bool
-     */
-    public function getPrintPdf()
-    {
-        return $this->container['printPdf'];
-    }
-
-    /**
-     * Sets printPdf
-     * @param bool $printPdf
-     * @return $this
-     */
-    public function setPrintPdf($printPdf)
-    {
-        $this->container['printPdf'] = $printPdf;
+        $this->container['highResPdf'] = $highResPdf;
 
         return $this;
     }
@@ -343,6 +275,48 @@ class TemplatePermissionSet implements ArrayAccess
     public function setSocialSharing($socialSharing)
     {
         $this->container['socialSharing'] = $socialSharing;
+
+        return $this;
+    }
+
+    /**
+     * Gets canEdit
+     * @return bool
+     */
+    public function getCanEdit()
+    {
+        return $this->container['canEdit'];
+    }
+
+    /**
+     * Sets canEdit
+     * @param bool $canEdit
+     * @return $this
+     */
+    public function setCanEdit($canEdit)
+    {
+        $this->container['canEdit'] = $canEdit;
+
+        return $this;
+    }
+
+    /**
+     * Gets needAdminApproval
+     * @return bool
+     */
+    public function getNeedAdminApproval()
+    {
+        return $this->container['needAdminApproval'];
+    }
+
+    /**
+     * Sets needAdminApproval
+     * @param bool $needAdminApproval
+     * @return $this
+     */
+    public function setNeedAdminApproval($needAdminApproval)
+    {
+        $this->container['needAdminApproval'] = $needAdminApproval;
 
         return $this;
     }

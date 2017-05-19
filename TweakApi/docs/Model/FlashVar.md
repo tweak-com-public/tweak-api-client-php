@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **apiPartnerAuthUrl** | **string** |  | [optional] [default to '']
-**productId** | **string** |  | [optional] [default to '']
-**savedPluginProductId** | **string** |  | [optional] [default to '']
+**productId** | **string** |  | [optional] 
+**savedPluginProductId** | **string** |  | [optional] 
 **allowAddImage** | **bool** |  | [optional] [default to false]
 **allowAddText** | **bool** |  | [optional] [default to false]
 **allowJPEG** | **bool** |  | [optional] [default to false]
@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **showConfirm** | **bool** |  | [optional] [default to false]
 **allowApprovePluginProduct** | **bool** |  | [optional] [default to false]
 **allowSendToApprovePluginProduct** | **bool** |  | [optional] [default to false]
-**approvalFormID** | **object** |  | [optional] 
+**approvalFormID** | **object[]** |  | [optional] 
 **showPluginImages** | **bool** |  | [optional] [default to false]
 **pluginImageLibraries** | **string[]** |  | [optional] 
 **id** | **string** |  | [optional] 

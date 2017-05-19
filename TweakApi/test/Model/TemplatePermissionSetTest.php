@@ -96,33 +96,9 @@ class TemplatePermissionSetTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "canEdit"
+     * Test attribute "highResPdf"
      */
-    public function testPropertyCanEdit()
-    {
-
-    }
-
-    /**
-     * Test attribute "needApproval"
-     */
-    public function testPropertyNeedApproval()
-    {
-
-    }
-
-    /**
-     * Test attribute "canBeOrdered"
-     */
-    public function testPropertyCanBeOrdered()
-    {
-
-    }
-
-    /**
-     * Test attribute "printPdf"
-     */
-    public function testPropertyPrintPdf()
+    public function testPropertyHighResPdf()
     {
 
     }
@@ -147,6 +123,22 @@ class TemplatePermissionSetTest extends \PHPUnit_Framework_TestCase
      * Test attribute "socialSharing"
      */
     public function testPropertySocialSharing()
+    {
+
+    }
+
+    /**
+     * Test attribute "canEdit"
+     */
+    public function testPropertyCanEdit()
+    {
+
+    }
+
+    /**
+     * Test attribute "needAdminApproval"
+     */
+    public function testPropertyNeedAdminApproval()
     {
 
     }

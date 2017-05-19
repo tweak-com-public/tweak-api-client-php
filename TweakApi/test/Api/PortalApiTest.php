@@ -1058,50 +1058,6 @@ class PortalApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for portalsIdPermissionDelete
-     *
-     * Deletes permission of this model..
-     *
-     */
-    public function testPortalsIdPermissionDelete()
-    {
-
-    }
-
-    /**
-     * Test case for portalsIdPermissionGet
-     *
-     * Fetches hasOne relation permission..
-     *
-     */
-    public function testPortalsIdPermissionGet()
-    {
-
-    }
-
-    /**
-     * Test case for portalsIdPermissionPost
-     *
-     * Creates a new instance in permission of this model..
-     *
-     */
-    public function testPortalsIdPermissionPost()
-    {
-
-    }
-
-    /**
-     * Test case for portalsIdPermissionPut
-     *
-     * Update permission of this model..
-     *
-     */
-    public function testPortalsIdPermissionPut()
-    {
-
-    }
-
-    /**
      * Test case for portalsIdPortalMembersCountGet
      *
      * Counts portalMembers of Portal..

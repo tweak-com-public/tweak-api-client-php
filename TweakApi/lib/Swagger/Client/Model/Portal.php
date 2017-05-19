@@ -79,7 +79,6 @@ class Portal implements ArrayAccess
         'members' => '\Swagger\Client\Model\TeamMember[]',
         'portalMembers' => '\Swagger\Client\Model\PortalMember[]',
         'team' => '\Swagger\Client\Model\Team',
-        'permission' => '\Swagger\Client\Model\PortalPermissionSet',
         'designs' => '\Swagger\Client\Model\Design[]',
         'templateFolders' => '\Swagger\Client\Model\PortalTemplateFolder[]',
         'designFolders' => '\Swagger\Client\Model\DesignFolder[]',
@@ -109,7 +108,6 @@ class Portal implements ArrayAccess
         'members' => 'members',
         'portalMembers' => 'portalMembers',
         'team' => 'team',
-        'permission' => 'permission',
         'designs' => 'designs',
         'templateFolders' => 'templateFolders',
         'designFolders' => 'designFolders',
@@ -139,7 +137,6 @@ class Portal implements ArrayAccess
         'members' => 'setMembers',
         'portalMembers' => 'setPortalMembers',
         'team' => 'setTeam',
-        'permission' => 'setPermission',
         'designs' => 'setDesigns',
         'templateFolders' => 'setTemplateFolders',
         'designFolders' => 'setDesignFolders',
@@ -169,7 +166,6 @@ class Portal implements ArrayAccess
         'members' => 'getMembers',
         'portalMembers' => 'getPortalMembers',
         'team' => 'getTeam',
-        'permission' => 'getPermission',
         'designs' => 'getDesigns',
         'templateFolders' => 'getTemplateFolders',
         'designFolders' => 'getDesignFolders',
@@ -538,7 +534,6 @@ class Portal implements ArrayAccess
         $this->container['members'] = isset($data['members']) ? $data['members'] : null;
         $this->container['portalMembers'] = isset($data['portalMembers']) ? $data['portalMembers'] : null;
         $this->container['team'] = isset($data['team']) ? $data['team'] : null;
-        $this->container['permission'] = isset($data['permission']) ? $data['permission'] : null;
         $this->container['designs'] = isset($data['designs']) ? $data['designs'] : null;
         $this->container['templateFolders'] = isset($data['templateFolders']) ? $data['templateFolders'] : null;
         $this->container['designFolders'] = isset($data['designFolders']) ? $data['designFolders'] : null;
@@ -869,27 +864,6 @@ class Portal implements ArrayAccess
     public function setTeam($team)
     {
         $this->container['team'] = $team;
-
-        return $this;
-    }
-
-    /**
-     * Gets permission
-     * @return \Swagger\Client\Model\PortalPermissionSet
-     */
-    public function getPermission()
-    {
-        return $this->container['permission'];
-    }
-
-    /**
-     * Sets permission
-     * @param \Swagger\Client\Model\PortalPermissionSet $permission
-     * @return $this
-     */
-    public function setPermission($permission)
-    {
-        $this->container['permission'] = $permission;
 
         return $this;
     }

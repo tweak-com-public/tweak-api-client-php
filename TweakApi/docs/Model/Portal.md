@@ -16,7 +16,6 @@ Name | Type | Description | Notes
 **members** | [**\Swagger\Client\Model\TeamMember[]**](TeamMember.md) |  | [optional] 
 **portalMembers** | [**\Swagger\Client\Model\PortalMember[]**](PortalMember.md) |  | [optional] 
 **team** | [**\Swagger\Client\Model\Team**](Team.md) |  | [optional] 
-**permission** | [**\Swagger\Client\Model\PortalPermissionSet**](PortalPermissionSet.md) |  | [optional] 
 **designs** | [**\Swagger\Client\Model\Design[]**](Design.md) |  | [optional] 
 **templateFolders** | [**\Swagger\Client\Model\PortalTemplateFolder[]**](PortalTemplateFolder.md) |  | [optional] 
 **designFolders** | [**\Swagger\Client\Model\DesignFolder[]**](DesignFolder.md) |  | [optional] 

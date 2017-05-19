@@ -3,13 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**canEdit** | **bool** |  | [optional] [default to false]
-**needApproval** | **bool** |  | [optional] [default to false]
-**canBeOrdered** | **bool** |  | [optional] [default to false]
-**printPdf** | **bool** |  | [optional] [default to false]
+**highResPdf** | **bool** |  | [optional] [default to false]
 **proofPdf** | **bool** |  | [optional] [default to false]
 **jpegs** | **bool** |  | [optional] [default to false]
 **socialSharing** | **bool** |  | [optional] [default to false]
+**canEdit** | **bool** |  | [optional] [default to false]
+**needAdminApproval** | **bool** |  | [optional] [default to false]
 **id** | **string** |  | [optional] 
 **templateId** | **string** |  | [optional] 
 **template** | [**\Swagger\Client\Model\Template**](Template.md) |  | [optional] 
