@@ -2774,6 +2774,17 @@ class TeamApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for teamsIdTemplatesWithDesignsGet
+     *
+     * List Templates with Designs for this Team.
+     *
+     */
+    public function testTeamsIdTemplatesWithDesignsGet()
+    {
+
+    }
+
+    /**
      * Test case for teamsIdWorkflowsCountGet
      *
      * Counts workflows of Team..

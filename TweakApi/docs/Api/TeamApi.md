@@ -248,6 +248,7 @@ Method | HTTP request | Description
 [**teamsIdTemplatesNkUploaderGet**](TeamApi.md#teamsIdTemplatesNkUploaderGet) | **GET** /Teams/{id}/templates/{nk}/uploader | Fetches belongsTo relation uploader.
 [**teamsIdTemplatesNkWorkflowGet**](TeamApi.md#teamsIdTemplatesNkWorkflowGet) | **GET** /Teams/{id}/templates/{nk}/workflow | Fetches belongsTo relation workflow.
 [**teamsIdTemplatesPost**](TeamApi.md#teamsIdTemplatesPost) | **POST** /Teams/{id}/templates | Creates a new instance in templates of this model.
+[**teamsIdTemplatesWithDesignsGet**](TeamApi.md#teamsIdTemplatesWithDesignsGet) | **GET** /Teams/{id}/templatesWithDesigns | List Templates with Designs for this Team
 [**teamsIdWorkflowsCountGet**](TeamApi.md#teamsIdWorkflowsCountGet) | **GET** /Teams/{id}/workflows/count | Counts workflows of Team.
 [**teamsIdWorkflowsDelete**](TeamApi.md#teamsIdWorkflowsDelete) | **DELETE** /Teams/{id}/workflows | Deletes all workflows of this model.
 [**teamsIdWorkflowsFkDelete**](TeamApi.md#teamsIdWorkflowsFkDelete) | **DELETE** /Teams/{id}/workflows/{fk} | Delete a related item by id for workflows.
@@ -12741,6 +12742,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\Template**](../Model/Template.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamsIdTemplatesWithDesignsGet**
+> \Swagger\Client\Model\Template[] teamsIdTemplatesWithDesignsGet($id, $id2, $filter)
+
+List Templates with Designs for this Team
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamApi();
+$id = "id_example"; // string | Team id
+$id2 = "id_example"; // string | Team id
+$filter = "filter_example"; // string | Filter defining fields and include - must be a JSON-encoded string ({\"something\":\"value\"})
+
+try {
+    $result = $api_instance->teamsIdTemplatesWithDesignsGet($id, $id2, $filter);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamApi->teamsIdTemplatesWithDesignsGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Team id |
+ **id2** | **string**| Team id |
+ **filter** | **string**| Filter defining fields and include - must be a JSON-encoded string ({\&quot;something\&quot;:\&quot;value\&quot;}) | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\Template[]**](../Model/Template.md)
 
 ### Authorization
 

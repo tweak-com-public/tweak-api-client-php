@@ -1021,6 +1021,7 @@ Class | Method | HTTP request | Description
 *TeamApi* | [**teamsIdTemplatesNkUploaderGet**](docs/Api/TeamApi.md#teamsidtemplatesnkuploaderget) | **GET** /Teams/{id}/templates/{nk}/uploader | Fetches belongsTo relation uploader.
 *TeamApi* | [**teamsIdTemplatesNkWorkflowGet**](docs/Api/TeamApi.md#teamsidtemplatesnkworkflowget) | **GET** /Teams/{id}/templates/{nk}/workflow | Fetches belongsTo relation workflow.
 *TeamApi* | [**teamsIdTemplatesPost**](docs/Api/TeamApi.md#teamsidtemplatespost) | **POST** /Teams/{id}/templates | Creates a new instance in templates of this model.
+*TeamApi* | [**teamsIdTemplatesWithDesignsGet**](docs/Api/TeamApi.md#teamsidtemplateswithdesignsget) | **GET** /Teams/{id}/templatesWithDesigns | List Templates with Designs for this Team
 *TeamApi* | [**teamsIdWorkflowsCountGet**](docs/Api/TeamApi.md#teamsidworkflowscountget) | **GET** /Teams/{id}/workflows/count | Counts workflows of Team.
 *TeamApi* | [**teamsIdWorkflowsDelete**](docs/Api/TeamApi.md#teamsidworkflowsdelete) | **DELETE** /Teams/{id}/workflows | Deletes all workflows of this model.
 *TeamApi* | [**teamsIdWorkflowsFkDelete**](docs/Api/TeamApi.md#teamsidworkflowsfkdelete) | **DELETE** /Teams/{id}/workflows/{fk} | Delete a related item by id for workflows.
@@ -1189,6 +1190,7 @@ Class | Method | HTTP request | Description
 *TeamMemberApi* | [**teamMembersIdTeamTemplatesFkPut**](docs/Api/TeamMemberApi.md#teammembersidteamtemplatesfkput) | **PUT** /TeamMembers/{id}/team/templates/{fk} | Update a related item by id for templates.
 *TeamMemberApi* | [**teamMembersIdTeamTemplatesGet**](docs/Api/TeamMemberApi.md#teammembersidteamtemplatesget) | **GET** /TeamMembers/{id}/team/templates | Queries templates of Team.
 *TeamMemberApi* | [**teamMembersIdTeamTemplatesPost**](docs/Api/TeamMemberApi.md#teammembersidteamtemplatespost) | **POST** /TeamMembers/{id}/team/templates | Creates a new instance in templates of this model.
+*TeamMemberApi* | [**teamMembersIdTeamTemplatesWithDesignsGet**](docs/Api/TeamMemberApi.md#teammembersidteamtemplateswithdesignsget) | **GET** /TeamMembers/{id}/team/templatesWithDesigns | List Templates with Designs for the Team of TeamMember
 *TeamMemberApi* | [**teamMembersIdTeamWorkflowsCountGet**](docs/Api/TeamMemberApi.md#teammembersidteamworkflowscountget) | **GET** /TeamMembers/{id}/team/workflows/count | Counts workflows of Team.
 *TeamMemberApi* | [**teamMembersIdTeamWorkflowsDelete**](docs/Api/TeamMemberApi.md#teammembersidteamworkflowsdelete) | **DELETE** /TeamMembers/{id}/team/workflows | Deletes all workflows of this model.
 *TeamMemberApi* | [**teamMembersIdTeamWorkflowsFkDelete**](docs/Api/TeamMemberApi.md#teammembersidteamworkflowsfkdelete) | **DELETE** /TeamMembers/{id}/team/workflows/{fk} | Delete a related item by id for workflows.

@@ -11,6 +11,8 @@ Name | Type | Description | Notes
 **description** | **string** |  | [optional] [default to '']
 **purpose** | **string** |  | [optional] [default to 'none']
 **status** | **string** |  | [optional] [default to 'pendingAction']
+**rejectionReason** | **string** |  | [optional] [default to '']
+**formData** | **object[]** |  | [optional] 
 **edited** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **expired** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **path** | **string** |  | [optional] [default to '/']

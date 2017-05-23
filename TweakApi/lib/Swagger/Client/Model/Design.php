@@ -74,6 +74,8 @@ class Design implements ArrayAccess
         'description' => 'string',
         'purpose' => 'string',
         'status' => 'string',
+        'rejectionReason' => 'string',
+        'formData' => 'object[]',
         'edited' => '\DateTime',
         'expired' => '\DateTime',
         'path' => 'string',
@@ -118,6 +120,8 @@ class Design implements ArrayAccess
         'description' => 'description',
         'purpose' => 'purpose',
         'status' => 'status',
+        'rejectionReason' => 'rejectionReason',
+        'formData' => 'formData',
         'edited' => 'edited',
         'expired' => 'expired',
         'path' => 'path',
@@ -162,6 +166,8 @@ class Design implements ArrayAccess
         'description' => 'setDescription',
         'purpose' => 'setPurpose',
         'status' => 'setStatus',
+        'rejectionReason' => 'setRejectionReason',
+        'formData' => 'setFormData',
         'edited' => 'setEdited',
         'expired' => 'setExpired',
         'path' => 'setPath',
@@ -206,6 +212,8 @@ class Design implements ArrayAccess
         'description' => 'getDescription',
         'purpose' => 'getPurpose',
         'status' => 'getStatus',
+        'rejectionReason' => 'getRejectionReason',
+        'formData' => 'getFormData',
         'edited' => 'getEdited',
         'expired' => 'getExpired',
         'path' => 'getPath',
@@ -293,6 +301,8 @@ class Design implements ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : '';
         $this->container['purpose'] = isset($data['purpose']) ? $data['purpose'] : 'none';
         $this->container['status'] = isset($data['status']) ? $data['status'] : 'pendingAction';
+        $this->container['rejectionReason'] = isset($data['rejectionReason']) ? $data['rejectionReason'] : '';
+        $this->container['formData'] = isset($data['formData']) ? $data['formData'] : null;
         $this->container['edited'] = isset($data['edited']) ? $data['edited'] : null;
         $this->container['expired'] = isset($data['expired']) ? $data['expired'] : null;
         $this->container['path'] = isset($data['path']) ? $data['path'] : '/';
@@ -544,6 +554,48 @@ class Design implements ArrayAccess
             throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'pendingAction', 'pendingApproval', 'approved', 'rejected'");
         }
         $this->container['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * Gets rejectionReason
+     * @return string
+     */
+    public function getRejectionReason()
+    {
+        return $this->container['rejectionReason'];
+    }
+
+    /**
+     * Sets rejectionReason
+     * @param string $rejectionReason
+     * @return $this
+     */
+    public function setRejectionReason($rejectionReason)
+    {
+        $this->container['rejectionReason'] = $rejectionReason;
+
+        return $this;
+    }
+
+    /**
+     * Gets formData
+     * @return object[]
+     */
+    public function getFormData()
+    {
+        return $this->container['formData'];
+    }
+
+    /**
+     * Sets formData
+     * @param object[] $formData
+     * @return $this
+     */
+    public function setFormData($formData)
+    {
+        $this->container['formData'] = $formData;
 
         return $this;
     }

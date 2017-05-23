@@ -159,6 +159,7 @@ Method | HTTP request | Description
 [**teamMembersIdTeamTemplatesFkPut**](TeamMemberApi.md#teamMembersIdTeamTemplatesFkPut) | **PUT** /TeamMembers/{id}/team/templates/{fk} | Update a related item by id for templates.
 [**teamMembersIdTeamTemplatesGet**](TeamMemberApi.md#teamMembersIdTeamTemplatesGet) | **GET** /TeamMembers/{id}/team/templates | Queries templates of Team.
 [**teamMembersIdTeamTemplatesPost**](TeamMemberApi.md#teamMembersIdTeamTemplatesPost) | **POST** /TeamMembers/{id}/team/templates | Creates a new instance in templates of this model.
+[**teamMembersIdTeamTemplatesWithDesignsGet**](TeamMemberApi.md#teamMembersIdTeamTemplatesWithDesignsGet) | **GET** /TeamMembers/{id}/team/templatesWithDesigns | List Templates with Designs for the Team of TeamMember
 [**teamMembersIdTeamWorkflowsCountGet**](TeamMemberApi.md#teamMembersIdTeamWorkflowsCountGet) | **GET** /TeamMembers/{id}/team/workflows/count | Counts workflows of Team.
 [**teamMembersIdTeamWorkflowsDelete**](TeamMemberApi.md#teamMembersIdTeamWorkflowsDelete) | **DELETE** /TeamMembers/{id}/team/workflows | Deletes all workflows of this model.
 [**teamMembersIdTeamWorkflowsFkDelete**](TeamMemberApi.md#teamMembersIdTeamWorkflowsFkDelete) | **DELETE** /TeamMembers/{id}/team/workflows/{fk} | Delete a related item by id for workflows.
@@ -7916,6 +7917,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\Template**](../Model/Template.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdTeamTemplatesWithDesignsGet**
+> \Swagger\Client\Model\Template[] teamMembersIdTeamTemplatesWithDesignsGet($id, $id2, $filter)
+
+List Templates with Designs for the Team of TeamMember
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+$id2 = "id_example"; // string | TeamMember id
+$filter = "filter_example"; // string | Filter defining fields and include - must be a JSON-encoded string ({\"something\":\"value\"})
+
+try {
+    $result = $api_instance->teamMembersIdTeamTemplatesWithDesignsGet($id, $id2, $filter);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamTemplatesWithDesignsGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+ **id2** | **string**| TeamMember id |
+ **filter** | **string**| Filter defining fields and include - must be a JSON-encoded string ({\&quot;something\&quot;:\&quot;value\&quot;}) | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\Template[]**](../Model/Template.md)
 
 ### Authorization
 

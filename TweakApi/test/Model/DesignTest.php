@@ -160,6 +160,22 @@ class DesignTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "rejectionReason"
+     */
+    public function testPropertyRejectionReason()
+    {
+
+    }
+
+    /**
+     * Test attribute "formData"
+     */
+    public function testPropertyFormData()
+    {
+
+    }
+
+    /**
      * Test attribute "edited"
      */
     public function testPropertyEdited()
