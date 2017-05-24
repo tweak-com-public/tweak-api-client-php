@@ -2311,6 +2311,1124 @@ class DesignApi
     }
 
     /**
+     * Operation designsIdCommentsNkCommenterGet
+     *
+     * Fetches belongsTo relation commenter.
+     *
+     * @param string $id Design id (required)
+     * @param string $nk Foreign key for comments. (required)
+     * @param bool $refresh  (optional)
+     * @return \Swagger\Client\Model\TeamMember
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function designsIdCommentsNkCommenterGet($id, $nk, $refresh = null)
+    {
+        list($response) = $this->designsIdCommentsNkCommenterGetWithHttpInfo($id, $nk, $refresh);
+        return $response;
+    }
+
+    /**
+     * Operation designsIdCommentsNkCommenterGetWithHttpInfo
+     *
+     * Fetches belongsTo relation commenter.
+     *
+     * @param string $id Design id (required)
+     * @param string $nk Foreign key for comments. (required)
+     * @param bool $refresh  (optional)
+     * @return array of \Swagger\Client\Model\TeamMember, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function designsIdCommentsNkCommenterGetWithHttpInfo($id, $nk, $refresh = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling designsIdCommentsNkCommenterGet');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling designsIdCommentsNkCommenterGet');
+        }
+        // parse inputs
+        $resourcePath = "/Designs/{id}/comments/{nk}/commenter";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($refresh !== null) {
+            $queryParams['refresh'] = $this->apiClient->getSerializer()->toQueryValue($refresh);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\TeamMember',
+                '/Designs/{id}/comments/{nk}/commenter'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TeamMember', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TeamMember', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation designsIdCommentsNkDesignGet
+     *
+     * Fetches belongsTo relation design.
+     *
+     * @param string $id Design id (required)
+     * @param string $nk Foreign key for comments. (required)
+     * @param bool $refresh  (optional)
+     * @return \Swagger\Client\Model\Design
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function designsIdCommentsNkDesignGet($id, $nk, $refresh = null)
+    {
+        list($response) = $this->designsIdCommentsNkDesignGetWithHttpInfo($id, $nk, $refresh);
+        return $response;
+    }
+
+    /**
+     * Operation designsIdCommentsNkDesignGetWithHttpInfo
+     *
+     * Fetches belongsTo relation design.
+     *
+     * @param string $id Design id (required)
+     * @param string $nk Foreign key for comments. (required)
+     * @param bool $refresh  (optional)
+     * @return array of \Swagger\Client\Model\Design, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function designsIdCommentsNkDesignGetWithHttpInfo($id, $nk, $refresh = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling designsIdCommentsNkDesignGet');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling designsIdCommentsNkDesignGet');
+        }
+        // parse inputs
+        $resourcePath = "/Designs/{id}/comments/{nk}/design";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($refresh !== null) {
+            $queryParams['refresh'] = $this->apiClient->getSerializer()->toQueryValue($refresh);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\Design',
+                '/Designs/{id}/comments/{nk}/design'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Design', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Design', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation designsIdCommentsNkRepliesCountGet
+     *
+     * Counts replies of DesignComment.
+     *
+     * @param string $id Design id (required)
+     * @param string $nk Foreign key for comments. (required)
+     * @param string $where Criteria to match model instances (optional)
+     * @return \Swagger\Client\Model\InlineResponse200
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function designsIdCommentsNkRepliesCountGet($id, $nk, $where = null)
+    {
+        list($response) = $this->designsIdCommentsNkRepliesCountGetWithHttpInfo($id, $nk, $where);
+        return $response;
+    }
+
+    /**
+     * Operation designsIdCommentsNkRepliesCountGetWithHttpInfo
+     *
+     * Counts replies of DesignComment.
+     *
+     * @param string $id Design id (required)
+     * @param string $nk Foreign key for comments. (required)
+     * @param string $where Criteria to match model instances (optional)
+     * @return array of \Swagger\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function designsIdCommentsNkRepliesCountGetWithHttpInfo($id, $nk, $where = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling designsIdCommentsNkRepliesCountGet');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling designsIdCommentsNkRepliesCountGet');
+        }
+        // parse inputs
+        $resourcePath = "/Designs/{id}/comments/{nk}/replies/count";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($where !== null) {
+            $queryParams['where'] = $this->apiClient->getSerializer()->toQueryValue($where);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\InlineResponse200',
+                '/Designs/{id}/comments/{nk}/replies/count'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse200', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation designsIdCommentsNkRepliesDelete
+     *
+     * Deletes all replies of this model.
+     *
+     * @param string $id Design id (required)
+     * @param string $nk Foreign key for comments. (required)
+     * @return void
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function designsIdCommentsNkRepliesDelete($id, $nk)
+    {
+        list($response) = $this->designsIdCommentsNkRepliesDeleteWithHttpInfo($id, $nk);
+        return $response;
+    }
+
+    /**
+     * Operation designsIdCommentsNkRepliesDeleteWithHttpInfo
+     *
+     * Deletes all replies of this model.
+     *
+     * @param string $id Design id (required)
+     * @param string $nk Foreign key for comments. (required)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function designsIdCommentsNkRepliesDeleteWithHttpInfo($id, $nk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling designsIdCommentsNkRepliesDelete');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling designsIdCommentsNkRepliesDelete');
+        }
+        // parse inputs
+        $resourcePath = "/Designs/{id}/comments/{nk}/replies";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/Designs/{id}/comments/{nk}/replies'
+            );
+
+            return array(null, $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation designsIdCommentsNkRepliesFkDelete
+     *
+     * Delete a related item by id for replies.
+     *
+     * @param string $id Design id (required)
+     * @param string $nk Foreign key for comments. (required)
+     * @param string $fk Foreign key for replies (required)
+     * @return void
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function designsIdCommentsNkRepliesFkDelete($id, $nk, $fk)
+    {
+        list($response) = $this->designsIdCommentsNkRepliesFkDeleteWithHttpInfo($id, $nk, $fk);
+        return $response;
+    }
+
+    /**
+     * Operation designsIdCommentsNkRepliesFkDeleteWithHttpInfo
+     *
+     * Delete a related item by id for replies.
+     *
+     * @param string $id Design id (required)
+     * @param string $nk Foreign key for comments. (required)
+     * @param string $fk Foreign key for replies (required)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function designsIdCommentsNkRepliesFkDeleteWithHttpInfo($id, $nk, $fk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling designsIdCommentsNkRepliesFkDelete');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling designsIdCommentsNkRepliesFkDelete');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling designsIdCommentsNkRepliesFkDelete');
+        }
+        // parse inputs
+        $resourcePath = "/Designs/{id}/comments/{nk}/replies/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/Designs/{id}/comments/{nk}/replies/{fk}'
+            );
+
+            return array(null, $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation designsIdCommentsNkRepliesFkGet
+     *
+     * Find a related item by id for replies.
+     *
+     * @param string $id Design id (required)
+     * @param string $nk Foreign key for comments. (required)
+     * @param string $fk Foreign key for replies (required)
+     * @return \Swagger\Client\Model\DesignComment
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function designsIdCommentsNkRepliesFkGet($id, $nk, $fk)
+    {
+        list($response) = $this->designsIdCommentsNkRepliesFkGetWithHttpInfo($id, $nk, $fk);
+        return $response;
+    }
+
+    /**
+     * Operation designsIdCommentsNkRepliesFkGetWithHttpInfo
+     *
+     * Find a related item by id for replies.
+     *
+     * @param string $id Design id (required)
+     * @param string $nk Foreign key for comments. (required)
+     * @param string $fk Foreign key for replies (required)
+     * @return array of \Swagger\Client\Model\DesignComment, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function designsIdCommentsNkRepliesFkGetWithHttpInfo($id, $nk, $fk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling designsIdCommentsNkRepliesFkGet');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling designsIdCommentsNkRepliesFkGet');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling designsIdCommentsNkRepliesFkGet');
+        }
+        // parse inputs
+        $resourcePath = "/Designs/{id}/comments/{nk}/replies/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\DesignComment',
+                '/Designs/{id}/comments/{nk}/replies/{fk}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\DesignComment', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\DesignComment', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation designsIdCommentsNkRepliesFkPut
+     *
+     * Update a related item by id for replies.
+     *
+     * @param string $id Design id (required)
+     * @param string $nk Foreign key for comments. (required)
+     * @param string $fk Foreign key for replies (required)
+     * @param \Swagger\Client\Model\DesignComment $data  (optional)
+     * @return \Swagger\Client\Model\DesignComment
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function designsIdCommentsNkRepliesFkPut($id, $nk, $fk, $data = null)
+    {
+        list($response) = $this->designsIdCommentsNkRepliesFkPutWithHttpInfo($id, $nk, $fk, $data);
+        return $response;
+    }
+
+    /**
+     * Operation designsIdCommentsNkRepliesFkPutWithHttpInfo
+     *
+     * Update a related item by id for replies.
+     *
+     * @param string $id Design id (required)
+     * @param string $nk Foreign key for comments. (required)
+     * @param string $fk Foreign key for replies (required)
+     * @param \Swagger\Client\Model\DesignComment $data  (optional)
+     * @return array of \Swagger\Client\Model\DesignComment, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function designsIdCommentsNkRepliesFkPutWithHttpInfo($id, $nk, $fk, $data = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling designsIdCommentsNkRepliesFkPut');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling designsIdCommentsNkRepliesFkPut');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling designsIdCommentsNkRepliesFkPut');
+        }
+        // parse inputs
+        $resourcePath = "/Designs/{id}/comments/{nk}/replies/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\DesignComment',
+                '/Designs/{id}/comments/{nk}/replies/{fk}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\DesignComment', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\DesignComment', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation designsIdCommentsNkRepliesGet
+     *
+     * Queries replies of DesignComment.
+     *
+     * @param string $id Design id (required)
+     * @param string $nk Foreign key for comments. (required)
+     * @param string $filter  (optional)
+     * @return \Swagger\Client\Model\DesignComment[]
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function designsIdCommentsNkRepliesGet($id, $nk, $filter = null)
+    {
+        list($response) = $this->designsIdCommentsNkRepliesGetWithHttpInfo($id, $nk, $filter);
+        return $response;
+    }
+
+    /**
+     * Operation designsIdCommentsNkRepliesGetWithHttpInfo
+     *
+     * Queries replies of DesignComment.
+     *
+     * @param string $id Design id (required)
+     * @param string $nk Foreign key for comments. (required)
+     * @param string $filter  (optional)
+     * @return array of \Swagger\Client\Model\DesignComment[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function designsIdCommentsNkRepliesGetWithHttpInfo($id, $nk, $filter = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling designsIdCommentsNkRepliesGet');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling designsIdCommentsNkRepliesGet');
+        }
+        // parse inputs
+        $resourcePath = "/Designs/{id}/comments/{nk}/replies";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($filter !== null) {
+            $queryParams['filter'] = $this->apiClient->getSerializer()->toQueryValue($filter);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\DesignComment[]',
+                '/Designs/{id}/comments/{nk}/replies'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\DesignComment[]', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\DesignComment[]', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation designsIdCommentsNkRepliesPost
+     *
+     * Creates a new instance in replies of this model.
+     *
+     * @param string $id Design id (required)
+     * @param string $nk Foreign key for comments. (required)
+     * @param \Swagger\Client\Model\DesignComment $data  (optional)
+     * @return \Swagger\Client\Model\DesignComment
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function designsIdCommentsNkRepliesPost($id, $nk, $data = null)
+    {
+        list($response) = $this->designsIdCommentsNkRepliesPostWithHttpInfo($id, $nk, $data);
+        return $response;
+    }
+
+    /**
+     * Operation designsIdCommentsNkRepliesPostWithHttpInfo
+     *
+     * Creates a new instance in replies of this model.
+     *
+     * @param string $id Design id (required)
+     * @param string $nk Foreign key for comments. (required)
+     * @param \Swagger\Client\Model\DesignComment $data  (optional)
+     * @return array of \Swagger\Client\Model\DesignComment, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function designsIdCommentsNkRepliesPostWithHttpInfo($id, $nk, $data = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling designsIdCommentsNkRepliesPost');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling designsIdCommentsNkRepliesPost');
+        }
+        // parse inputs
+        $resourcePath = "/Designs/{id}/comments/{nk}/replies";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\DesignComment',
+                '/Designs/{id}/comments/{nk}/replies'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\DesignComment', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\DesignComment', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation designsIdCommentsNkReplyOfGet
+     *
+     * Fetches belongsTo relation replyOf.
+     *
+     * @param string $id Design id (required)
+     * @param string $nk Foreign key for comments. (required)
+     * @param bool $refresh  (optional)
+     * @return \Swagger\Client\Model\DesignComment
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function designsIdCommentsNkReplyOfGet($id, $nk, $refresh = null)
+    {
+        list($response) = $this->designsIdCommentsNkReplyOfGetWithHttpInfo($id, $nk, $refresh);
+        return $response;
+    }
+
+    /**
+     * Operation designsIdCommentsNkReplyOfGetWithHttpInfo
+     *
+     * Fetches belongsTo relation replyOf.
+     *
+     * @param string $id Design id (required)
+     * @param string $nk Foreign key for comments. (required)
+     * @param bool $refresh  (optional)
+     * @return array of \Swagger\Client\Model\DesignComment, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function designsIdCommentsNkReplyOfGetWithHttpInfo($id, $nk, $refresh = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling designsIdCommentsNkReplyOfGet');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling designsIdCommentsNkReplyOfGet');
+        }
+        // parse inputs
+        $resourcePath = "/Designs/{id}/comments/{nk}/replyOf";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($refresh !== null) {
+            $queryParams['refresh'] = $this->apiClient->getSerializer()->toQueryValue($refresh);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\DesignComment',
+                '/Designs/{id}/comments/{nk}/replyOf'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\DesignComment', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\DesignComment', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation designsIdCommentsPost
      *
      * Creates a new instance in comments of this model.

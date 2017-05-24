@@ -596,6 +596,699 @@ class CustomerApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for customersIdTeamsNkBrandDelete
+     *
+     * Deletes brand of this model..
+     *
+     */
+    public function testCustomersIdTeamsNkBrandDelete()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkBrandGet
+     *
+     * Fetches hasOne relation brand..
+     *
+     */
+    public function testCustomersIdTeamsNkBrandGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkBrandPost
+     *
+     * Creates a new instance in brand of this model..
+     *
+     */
+    public function testCustomersIdTeamsNkBrandPost()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkBrandPut
+     *
+     * Update brand of this model..
+     *
+     */
+    public function testCustomersIdTeamsNkBrandPut()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkImageFoldersCountGet
+     *
+     * Counts imageFolders of Team..
+     *
+     */
+    public function testCustomersIdTeamsNkImageFoldersCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkImageFoldersDelete
+     *
+     * Deletes all imageFolders of this model..
+     *
+     */
+    public function testCustomersIdTeamsNkImageFoldersDelete()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkImageFoldersFkDelete
+     *
+     * Delete a related item by id for imageFolders..
+     *
+     */
+    public function testCustomersIdTeamsNkImageFoldersFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkImageFoldersFkGet
+     *
+     * Find a related item by id for imageFolders..
+     *
+     */
+    public function testCustomersIdTeamsNkImageFoldersFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkImageFoldersFkPut
+     *
+     * Update a related item by id for imageFolders..
+     *
+     */
+    public function testCustomersIdTeamsNkImageFoldersFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkImageFoldersGet
+     *
+     * Queries imageFolders of Team..
+     *
+     */
+    public function testCustomersIdTeamsNkImageFoldersGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkImageFoldersPost
+     *
+     * Creates a new instance in imageFolders of this model..
+     *
+     */
+    public function testCustomersIdTeamsNkImageFoldersPost()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkImagesCountGet
+     *
+     * Counts images of Team..
+     *
+     */
+    public function testCustomersIdTeamsNkImagesCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkImagesDelete
+     *
+     * Deletes all images of this model..
+     *
+     */
+    public function testCustomersIdTeamsNkImagesDelete()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkImagesFkDelete
+     *
+     * Delete a related item by id for images..
+     *
+     */
+    public function testCustomersIdTeamsNkImagesFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkImagesFkGet
+     *
+     * Find a related item by id for images..
+     *
+     */
+    public function testCustomersIdTeamsNkImagesFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkImagesFkPut
+     *
+     * Update a related item by id for images..
+     *
+     */
+    public function testCustomersIdTeamsNkImagesFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkImagesGet
+     *
+     * Queries images of Team..
+     *
+     */
+    public function testCustomersIdTeamsNkImagesGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkImagesPost
+     *
+     * Creates a new instance in images of this model..
+     *
+     */
+    public function testCustomersIdTeamsNkImagesPost()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkMembersCountGet
+     *
+     * Counts members of Team..
+     *
+     */
+    public function testCustomersIdTeamsNkMembersCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkMembersDelete
+     *
+     * Deletes all members of this model..
+     *
+     */
+    public function testCustomersIdTeamsNkMembersDelete()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkMembersFkDelete
+     *
+     * Delete a related item by id for members..
+     *
+     */
+    public function testCustomersIdTeamsNkMembersFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkMembersFkGet
+     *
+     * Find a related item by id for members..
+     *
+     */
+    public function testCustomersIdTeamsNkMembersFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkMembersFkPut
+     *
+     * Update a related item by id for members..
+     *
+     */
+    public function testCustomersIdTeamsNkMembersFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkMembersGet
+     *
+     * Queries members of Team..
+     *
+     */
+    public function testCustomersIdTeamsNkMembersGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkMembersPost
+     *
+     * Creates a new instance in members of this model..
+     *
+     */
+    public function testCustomersIdTeamsNkMembersPost()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkMembersRelFkDelete
+     *
+     * Remove the members relation to an item by id..
+     *
+     */
+    public function testCustomersIdTeamsNkMembersRelFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkMembersRelFkHead
+     *
+     * Check the existence of members relation to an item by id..
+     *
+     */
+    public function testCustomersIdTeamsNkMembersRelFkHead()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkMembersRelFkPut
+     *
+     * Add a related item by id for members..
+     *
+     */
+    public function testCustomersIdTeamsNkMembersRelFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkPortalsCountGet
+     *
+     * Counts portals of Team..
+     *
+     */
+    public function testCustomersIdTeamsNkPortalsCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkPortalsDelete
+     *
+     * Deletes all portals of this model..
+     *
+     */
+    public function testCustomersIdTeamsNkPortalsDelete()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkPortalsFkDelete
+     *
+     * Delete a related item by id for portals..
+     *
+     */
+    public function testCustomersIdTeamsNkPortalsFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkPortalsFkGet
+     *
+     * Find a related item by id for portals..
+     *
+     */
+    public function testCustomersIdTeamsNkPortalsFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkPortalsFkPut
+     *
+     * Update a related item by id for portals..
+     *
+     */
+    public function testCustomersIdTeamsNkPortalsFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkPortalsGet
+     *
+     * Queries portals of Team..
+     *
+     */
+    public function testCustomersIdTeamsNkPortalsGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkPortalsPost
+     *
+     * Creates a new instance in portals of this model..
+     *
+     */
+    public function testCustomersIdTeamsNkPortalsPost()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkTeamMembersCountGet
+     *
+     * Counts teamMembers of Team..
+     *
+     */
+    public function testCustomersIdTeamsNkTeamMembersCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkTeamMembersDelete
+     *
+     * Deletes all teamMembers of this model..
+     *
+     */
+    public function testCustomersIdTeamsNkTeamMembersDelete()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkTeamMembersFkDelete
+     *
+     * Delete a related item by id for teamMembers..
+     *
+     */
+    public function testCustomersIdTeamsNkTeamMembersFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkTeamMembersFkGet
+     *
+     * Find a related item by id for teamMembers..
+     *
+     */
+    public function testCustomersIdTeamsNkTeamMembersFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkTeamMembersFkPut
+     *
+     * Update a related item by id for teamMembers..
+     *
+     */
+    public function testCustomersIdTeamsNkTeamMembersFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkTeamMembersGet
+     *
+     * Queries teamMembers of Team..
+     *
+     */
+    public function testCustomersIdTeamsNkTeamMembersGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkTeamMembersPost
+     *
+     * Creates a new instance in teamMembers of this model..
+     *
+     */
+    public function testCustomersIdTeamsNkTeamMembersPost()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkTemplateFoldersCountGet
+     *
+     * Counts templateFolders of Team..
+     *
+     */
+    public function testCustomersIdTeamsNkTemplateFoldersCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkTemplateFoldersDelete
+     *
+     * Deletes all templateFolders of this model..
+     *
+     */
+    public function testCustomersIdTeamsNkTemplateFoldersDelete()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkTemplateFoldersFkDelete
+     *
+     * Delete a related item by id for templateFolders..
+     *
+     */
+    public function testCustomersIdTeamsNkTemplateFoldersFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkTemplateFoldersFkGet
+     *
+     * Find a related item by id for templateFolders..
+     *
+     */
+    public function testCustomersIdTeamsNkTemplateFoldersFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkTemplateFoldersFkPut
+     *
+     * Update a related item by id for templateFolders..
+     *
+     */
+    public function testCustomersIdTeamsNkTemplateFoldersFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkTemplateFoldersGet
+     *
+     * Queries templateFolders of Team..
+     *
+     */
+    public function testCustomersIdTeamsNkTemplateFoldersGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkTemplateFoldersPost
+     *
+     * Creates a new instance in templateFolders of this model..
+     *
+     */
+    public function testCustomersIdTeamsNkTemplateFoldersPost()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkTemplatesCountGet
+     *
+     * Counts templates of Team..
+     *
+     */
+    public function testCustomersIdTeamsNkTemplatesCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkTemplatesDelete
+     *
+     * Deletes all templates of this model..
+     *
+     */
+    public function testCustomersIdTeamsNkTemplatesDelete()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkTemplatesFkDelete
+     *
+     * Delete a related item by id for templates..
+     *
+     */
+    public function testCustomersIdTeamsNkTemplatesFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkTemplatesFkGet
+     *
+     * Find a related item by id for templates..
+     *
+     */
+    public function testCustomersIdTeamsNkTemplatesFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkTemplatesFkPut
+     *
+     * Update a related item by id for templates..
+     *
+     */
+    public function testCustomersIdTeamsNkTemplatesFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkTemplatesGet
+     *
+     * Queries templates of Team..
+     *
+     */
+    public function testCustomersIdTeamsNkTemplatesGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkTemplatesPost
+     *
+     * Creates a new instance in templates of this model..
+     *
+     */
+    public function testCustomersIdTeamsNkTemplatesPost()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkWorkflowsCountGet
+     *
+     * Counts workflows of Team..
+     *
+     */
+    public function testCustomersIdTeamsNkWorkflowsCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkWorkflowsDelete
+     *
+     * Deletes all workflows of this model..
+     *
+     */
+    public function testCustomersIdTeamsNkWorkflowsDelete()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkWorkflowsFkDelete
+     *
+     * Delete a related item by id for workflows..
+     *
+     */
+    public function testCustomersIdTeamsNkWorkflowsFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkWorkflowsFkGet
+     *
+     * Find a related item by id for workflows..
+     *
+     */
+    public function testCustomersIdTeamsNkWorkflowsFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkWorkflowsFkPut
+     *
+     * Update a related item by id for workflows..
+     *
+     */
+    public function testCustomersIdTeamsNkWorkflowsFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkWorkflowsGet
+     *
+     * Queries workflows of Team..
+     *
+     */
+    public function testCustomersIdTeamsNkWorkflowsGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkWorkflowsPost
+     *
+     * Creates a new instance in workflows of this model..
+     *
+     */
+    public function testCustomersIdTeamsNkWorkflowsPost()
+    {
+
+    }
+
+    /**
      * Test case for customersIdTeamsPost
      *
      * Creates a new instance in teams of this model..

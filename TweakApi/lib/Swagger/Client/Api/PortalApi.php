@@ -1886,6 +1886,4642 @@ class PortalApi
     }
 
     /**
+     * Operation portalsIdDesignsNkAssigneeGet
+     *
+     * Fetches belongsTo relation assignee.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param bool $refresh  (optional)
+     * @return \Swagger\Client\Model\TeamMember
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkAssigneeGet($id, $nk, $refresh = null)
+    {
+        list($response) = $this->portalsIdDesignsNkAssigneeGetWithHttpInfo($id, $nk, $refresh);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdDesignsNkAssigneeGetWithHttpInfo
+     *
+     * Fetches belongsTo relation assignee.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param bool $refresh  (optional)
+     * @return array of \Swagger\Client\Model\TeamMember, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkAssigneeGetWithHttpInfo($id, $nk, $refresh = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdDesignsNkAssigneeGet');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdDesignsNkAssigneeGet');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/designs/{nk}/assignee";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($refresh !== null) {
+            $queryParams['refresh'] = $this->apiClient->getSerializer()->toQueryValue($refresh);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\TeamMember',
+                '/Portals/{id}/designs/{nk}/assignee'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TeamMember', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TeamMember', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdDesignsNkCommentersCountGet
+     *
+     * Counts commenters of Design.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $where Criteria to match model instances (optional)
+     * @return \Swagger\Client\Model\InlineResponse200
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkCommentersCountGet($id, $nk, $where = null)
+    {
+        list($response) = $this->portalsIdDesignsNkCommentersCountGetWithHttpInfo($id, $nk, $where);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdDesignsNkCommentersCountGetWithHttpInfo
+     *
+     * Counts commenters of Design.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $where Criteria to match model instances (optional)
+     * @return array of \Swagger\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkCommentersCountGetWithHttpInfo($id, $nk, $where = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdDesignsNkCommentersCountGet');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdDesignsNkCommentersCountGet');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/designs/{nk}/commenters/count";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($where !== null) {
+            $queryParams['where'] = $this->apiClient->getSerializer()->toQueryValue($where);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\InlineResponse200',
+                '/Portals/{id}/designs/{nk}/commenters/count'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse200', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdDesignsNkCommentersDelete
+     *
+     * Deletes all commenters of this model.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @return void
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkCommentersDelete($id, $nk)
+    {
+        list($response) = $this->portalsIdDesignsNkCommentersDeleteWithHttpInfo($id, $nk);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdDesignsNkCommentersDeleteWithHttpInfo
+     *
+     * Deletes all commenters of this model.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkCommentersDeleteWithHttpInfo($id, $nk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdDesignsNkCommentersDelete');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdDesignsNkCommentersDelete');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/designs/{nk}/commenters";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/Portals/{id}/designs/{nk}/commenters'
+            );
+
+            return array(null, $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdDesignsNkCommentersFkDelete
+     *
+     * Delete a related item by id for commenters.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $fk Foreign key for commenters (required)
+     * @return void
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkCommentersFkDelete($id, $nk, $fk)
+    {
+        list($response) = $this->portalsIdDesignsNkCommentersFkDeleteWithHttpInfo($id, $nk, $fk);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdDesignsNkCommentersFkDeleteWithHttpInfo
+     *
+     * Delete a related item by id for commenters.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $fk Foreign key for commenters (required)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkCommentersFkDeleteWithHttpInfo($id, $nk, $fk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdDesignsNkCommentersFkDelete');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdDesignsNkCommentersFkDelete');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling portalsIdDesignsNkCommentersFkDelete');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/designs/{nk}/commenters/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/Portals/{id}/designs/{nk}/commenters/{fk}'
+            );
+
+            return array(null, $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdDesignsNkCommentersFkGet
+     *
+     * Find a related item by id for commenters.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $fk Foreign key for commenters (required)
+     * @return \Swagger\Client\Model\TeamMember
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkCommentersFkGet($id, $nk, $fk)
+    {
+        list($response) = $this->portalsIdDesignsNkCommentersFkGetWithHttpInfo($id, $nk, $fk);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdDesignsNkCommentersFkGetWithHttpInfo
+     *
+     * Find a related item by id for commenters.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $fk Foreign key for commenters (required)
+     * @return array of \Swagger\Client\Model\TeamMember, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkCommentersFkGetWithHttpInfo($id, $nk, $fk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdDesignsNkCommentersFkGet');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdDesignsNkCommentersFkGet');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling portalsIdDesignsNkCommentersFkGet');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/designs/{nk}/commenters/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\TeamMember',
+                '/Portals/{id}/designs/{nk}/commenters/{fk}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TeamMember', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TeamMember', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdDesignsNkCommentersFkPut
+     *
+     * Update a related item by id for commenters.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $fk Foreign key for commenters (required)
+     * @param \Swagger\Client\Model\TeamMember $data  (optional)
+     * @return \Swagger\Client\Model\TeamMember
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkCommentersFkPut($id, $nk, $fk, $data = null)
+    {
+        list($response) = $this->portalsIdDesignsNkCommentersFkPutWithHttpInfo($id, $nk, $fk, $data);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdDesignsNkCommentersFkPutWithHttpInfo
+     *
+     * Update a related item by id for commenters.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $fk Foreign key for commenters (required)
+     * @param \Swagger\Client\Model\TeamMember $data  (optional)
+     * @return array of \Swagger\Client\Model\TeamMember, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkCommentersFkPutWithHttpInfo($id, $nk, $fk, $data = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdDesignsNkCommentersFkPut');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdDesignsNkCommentersFkPut');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling portalsIdDesignsNkCommentersFkPut');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/designs/{nk}/commenters/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\TeamMember',
+                '/Portals/{id}/designs/{nk}/commenters/{fk}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TeamMember', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TeamMember', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdDesignsNkCommentersGet
+     *
+     * Queries commenters of Design.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $filter  (optional)
+     * @return \Swagger\Client\Model\TeamMember[]
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkCommentersGet($id, $nk, $filter = null)
+    {
+        list($response) = $this->portalsIdDesignsNkCommentersGetWithHttpInfo($id, $nk, $filter);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdDesignsNkCommentersGetWithHttpInfo
+     *
+     * Queries commenters of Design.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $filter  (optional)
+     * @return array of \Swagger\Client\Model\TeamMember[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkCommentersGetWithHttpInfo($id, $nk, $filter = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdDesignsNkCommentersGet');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdDesignsNkCommentersGet');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/designs/{nk}/commenters";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($filter !== null) {
+            $queryParams['filter'] = $this->apiClient->getSerializer()->toQueryValue($filter);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\TeamMember[]',
+                '/Portals/{id}/designs/{nk}/commenters'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TeamMember[]', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TeamMember[]', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdDesignsNkCommentersPost
+     *
+     * Creates a new instance in commenters of this model.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param \Swagger\Client\Model\TeamMember $data  (optional)
+     * @return \Swagger\Client\Model\TeamMember
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkCommentersPost($id, $nk, $data = null)
+    {
+        list($response) = $this->portalsIdDesignsNkCommentersPostWithHttpInfo($id, $nk, $data);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdDesignsNkCommentersPostWithHttpInfo
+     *
+     * Creates a new instance in commenters of this model.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param \Swagger\Client\Model\TeamMember $data  (optional)
+     * @return array of \Swagger\Client\Model\TeamMember, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkCommentersPostWithHttpInfo($id, $nk, $data = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdDesignsNkCommentersPost');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdDesignsNkCommentersPost');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/designs/{nk}/commenters";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\TeamMember',
+                '/Portals/{id}/designs/{nk}/commenters'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TeamMember', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TeamMember', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdDesignsNkCommentersRelFkDelete
+     *
+     * Remove the commenters relation to an item by id.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $fk Foreign key for commenters (required)
+     * @return void
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkCommentersRelFkDelete($id, $nk, $fk)
+    {
+        list($response) = $this->portalsIdDesignsNkCommentersRelFkDeleteWithHttpInfo($id, $nk, $fk);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdDesignsNkCommentersRelFkDeleteWithHttpInfo
+     *
+     * Remove the commenters relation to an item by id.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $fk Foreign key for commenters (required)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkCommentersRelFkDeleteWithHttpInfo($id, $nk, $fk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdDesignsNkCommentersRelFkDelete');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdDesignsNkCommentersRelFkDelete');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling portalsIdDesignsNkCommentersRelFkDelete');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/designs/{nk}/commenters/rel/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/Portals/{id}/designs/{nk}/commenters/rel/{fk}'
+            );
+
+            return array(null, $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdDesignsNkCommentersRelFkHead
+     *
+     * Check the existence of commenters relation to an item by id.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $fk Foreign key for commenters (required)
+     * @return bool
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkCommentersRelFkHead($id, $nk, $fk)
+    {
+        list($response) = $this->portalsIdDesignsNkCommentersRelFkHeadWithHttpInfo($id, $nk, $fk);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdDesignsNkCommentersRelFkHeadWithHttpInfo
+     *
+     * Check the existence of commenters relation to an item by id.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $fk Foreign key for commenters (required)
+     * @return array of bool, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkCommentersRelFkHeadWithHttpInfo($id, $nk, $fk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdDesignsNkCommentersRelFkHead');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdDesignsNkCommentersRelFkHead');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling portalsIdDesignsNkCommentersRelFkHead');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/designs/{nk}/commenters/rel/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'HEAD',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                'bool',
+                '/Portals/{id}/designs/{nk}/commenters/rel/{fk}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, 'bool', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), 'bool', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdDesignsNkCommentersRelFkPut
+     *
+     * Add a related item by id for commenters.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $fk Foreign key for commenters (required)
+     * @param \Swagger\Client\Model\DesignComment $data  (optional)
+     * @return \Swagger\Client\Model\DesignComment
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkCommentersRelFkPut($id, $nk, $fk, $data = null)
+    {
+        list($response) = $this->portalsIdDesignsNkCommentersRelFkPutWithHttpInfo($id, $nk, $fk, $data);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdDesignsNkCommentersRelFkPutWithHttpInfo
+     *
+     * Add a related item by id for commenters.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $fk Foreign key for commenters (required)
+     * @param \Swagger\Client\Model\DesignComment $data  (optional)
+     * @return array of \Swagger\Client\Model\DesignComment, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkCommentersRelFkPutWithHttpInfo($id, $nk, $fk, $data = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdDesignsNkCommentersRelFkPut');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdDesignsNkCommentersRelFkPut');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling portalsIdDesignsNkCommentersRelFkPut');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/designs/{nk}/commenters/rel/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\DesignComment',
+                '/Portals/{id}/designs/{nk}/commenters/rel/{fk}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\DesignComment', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\DesignComment', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdDesignsNkCommentsCountGet
+     *
+     * Counts comments of Design.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $where Criteria to match model instances (optional)
+     * @return \Swagger\Client\Model\InlineResponse200
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkCommentsCountGet($id, $nk, $where = null)
+    {
+        list($response) = $this->portalsIdDesignsNkCommentsCountGetWithHttpInfo($id, $nk, $where);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdDesignsNkCommentsCountGetWithHttpInfo
+     *
+     * Counts comments of Design.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $where Criteria to match model instances (optional)
+     * @return array of \Swagger\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkCommentsCountGetWithHttpInfo($id, $nk, $where = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdDesignsNkCommentsCountGet');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdDesignsNkCommentsCountGet');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/designs/{nk}/comments/count";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($where !== null) {
+            $queryParams['where'] = $this->apiClient->getSerializer()->toQueryValue($where);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\InlineResponse200',
+                '/Portals/{id}/designs/{nk}/comments/count'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse200', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdDesignsNkCommentsDelete
+     *
+     * Deletes all comments of this model.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @return void
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkCommentsDelete($id, $nk)
+    {
+        list($response) = $this->portalsIdDesignsNkCommentsDeleteWithHttpInfo($id, $nk);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdDesignsNkCommentsDeleteWithHttpInfo
+     *
+     * Deletes all comments of this model.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkCommentsDeleteWithHttpInfo($id, $nk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdDesignsNkCommentsDelete');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdDesignsNkCommentsDelete');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/designs/{nk}/comments";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/Portals/{id}/designs/{nk}/comments'
+            );
+
+            return array(null, $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdDesignsNkCommentsFkDelete
+     *
+     * Delete a related item by id for comments.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $fk Foreign key for comments (required)
+     * @return void
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkCommentsFkDelete($id, $nk, $fk)
+    {
+        list($response) = $this->portalsIdDesignsNkCommentsFkDeleteWithHttpInfo($id, $nk, $fk);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdDesignsNkCommentsFkDeleteWithHttpInfo
+     *
+     * Delete a related item by id for comments.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $fk Foreign key for comments (required)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkCommentsFkDeleteWithHttpInfo($id, $nk, $fk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdDesignsNkCommentsFkDelete');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdDesignsNkCommentsFkDelete');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling portalsIdDesignsNkCommentsFkDelete');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/designs/{nk}/comments/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/Portals/{id}/designs/{nk}/comments/{fk}'
+            );
+
+            return array(null, $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdDesignsNkCommentsFkGet
+     *
+     * Find a related item by id for comments.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $fk Foreign key for comments (required)
+     * @return \Swagger\Client\Model\DesignComment
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkCommentsFkGet($id, $nk, $fk)
+    {
+        list($response) = $this->portalsIdDesignsNkCommentsFkGetWithHttpInfo($id, $nk, $fk);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdDesignsNkCommentsFkGetWithHttpInfo
+     *
+     * Find a related item by id for comments.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $fk Foreign key for comments (required)
+     * @return array of \Swagger\Client\Model\DesignComment, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkCommentsFkGetWithHttpInfo($id, $nk, $fk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdDesignsNkCommentsFkGet');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdDesignsNkCommentsFkGet');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling portalsIdDesignsNkCommentsFkGet');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/designs/{nk}/comments/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\DesignComment',
+                '/Portals/{id}/designs/{nk}/comments/{fk}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\DesignComment', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\DesignComment', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdDesignsNkCommentsFkPut
+     *
+     * Update a related item by id for comments.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $fk Foreign key for comments (required)
+     * @param \Swagger\Client\Model\DesignComment $data  (optional)
+     * @return \Swagger\Client\Model\DesignComment
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkCommentsFkPut($id, $nk, $fk, $data = null)
+    {
+        list($response) = $this->portalsIdDesignsNkCommentsFkPutWithHttpInfo($id, $nk, $fk, $data);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdDesignsNkCommentsFkPutWithHttpInfo
+     *
+     * Update a related item by id for comments.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $fk Foreign key for comments (required)
+     * @param \Swagger\Client\Model\DesignComment $data  (optional)
+     * @return array of \Swagger\Client\Model\DesignComment, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkCommentsFkPutWithHttpInfo($id, $nk, $fk, $data = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdDesignsNkCommentsFkPut');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdDesignsNkCommentsFkPut');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling portalsIdDesignsNkCommentsFkPut');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/designs/{nk}/comments/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\DesignComment',
+                '/Portals/{id}/designs/{nk}/comments/{fk}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\DesignComment', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\DesignComment', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdDesignsNkCommentsGet
+     *
+     * Queries comments of Design.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $filter  (optional)
+     * @return \Swagger\Client\Model\DesignComment[]
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkCommentsGet($id, $nk, $filter = null)
+    {
+        list($response) = $this->portalsIdDesignsNkCommentsGetWithHttpInfo($id, $nk, $filter);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdDesignsNkCommentsGetWithHttpInfo
+     *
+     * Queries comments of Design.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $filter  (optional)
+     * @return array of \Swagger\Client\Model\DesignComment[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkCommentsGetWithHttpInfo($id, $nk, $filter = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdDesignsNkCommentsGet');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdDesignsNkCommentsGet');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/designs/{nk}/comments";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($filter !== null) {
+            $queryParams['filter'] = $this->apiClient->getSerializer()->toQueryValue($filter);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\DesignComment[]',
+                '/Portals/{id}/designs/{nk}/comments'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\DesignComment[]', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\DesignComment[]', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdDesignsNkCommentsPost
+     *
+     * Creates a new instance in comments of this model.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param \Swagger\Client\Model\DesignComment $data  (optional)
+     * @return \Swagger\Client\Model\DesignComment
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkCommentsPost($id, $nk, $data = null)
+    {
+        list($response) = $this->portalsIdDesignsNkCommentsPostWithHttpInfo($id, $nk, $data);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdDesignsNkCommentsPostWithHttpInfo
+     *
+     * Creates a new instance in comments of this model.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param \Swagger\Client\Model\DesignComment $data  (optional)
+     * @return array of \Swagger\Client\Model\DesignComment, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkCommentsPostWithHttpInfo($id, $nk, $data = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdDesignsNkCommentsPost');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdDesignsNkCommentsPost');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/designs/{nk}/comments";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\DesignComment',
+                '/Portals/{id}/designs/{nk}/comments'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\DesignComment', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\DesignComment', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdDesignsNkCustomerGet
+     *
+     * Fetches belongsTo relation customer.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param bool $refresh  (optional)
+     * @return \Swagger\Client\Model\Customer
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkCustomerGet($id, $nk, $refresh = null)
+    {
+        list($response) = $this->portalsIdDesignsNkCustomerGetWithHttpInfo($id, $nk, $refresh);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdDesignsNkCustomerGetWithHttpInfo
+     *
+     * Fetches belongsTo relation customer.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param bool $refresh  (optional)
+     * @return array of \Swagger\Client\Model\Customer, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkCustomerGetWithHttpInfo($id, $nk, $refresh = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdDesignsNkCustomerGet');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdDesignsNkCustomerGet');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/designs/{nk}/customer";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($refresh !== null) {
+            $queryParams['refresh'] = $this->apiClient->getSerializer()->toQueryValue($refresh);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\Customer',
+                '/Portals/{id}/designs/{nk}/customer'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Customer', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Customer', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdDesignsNkExportsCountGet
+     *
+     * Counts exports of Design.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $where Criteria to match model instances (optional)
+     * @return \Swagger\Client\Model\InlineResponse200
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkExportsCountGet($id, $nk, $where = null)
+    {
+        list($response) = $this->portalsIdDesignsNkExportsCountGetWithHttpInfo($id, $nk, $where);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdDesignsNkExportsCountGetWithHttpInfo
+     *
+     * Counts exports of Design.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $where Criteria to match model instances (optional)
+     * @return array of \Swagger\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkExportsCountGetWithHttpInfo($id, $nk, $where = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdDesignsNkExportsCountGet');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdDesignsNkExportsCountGet');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/designs/{nk}/exports/count";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($where !== null) {
+            $queryParams['where'] = $this->apiClient->getSerializer()->toQueryValue($where);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\InlineResponse200',
+                '/Portals/{id}/designs/{nk}/exports/count'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse200', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdDesignsNkExportsDelete
+     *
+     * Deletes all exports of this model.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @return void
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkExportsDelete($id, $nk)
+    {
+        list($response) = $this->portalsIdDesignsNkExportsDeleteWithHttpInfo($id, $nk);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdDesignsNkExportsDeleteWithHttpInfo
+     *
+     * Deletes all exports of this model.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkExportsDeleteWithHttpInfo($id, $nk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdDesignsNkExportsDelete');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdDesignsNkExportsDelete');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/designs/{nk}/exports";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/Portals/{id}/designs/{nk}/exports'
+            );
+
+            return array(null, $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdDesignsNkExportsFkDelete
+     *
+     * Delete a related item by id for exports.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $fk Foreign key for exports (required)
+     * @return void
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkExportsFkDelete($id, $nk, $fk)
+    {
+        list($response) = $this->portalsIdDesignsNkExportsFkDeleteWithHttpInfo($id, $nk, $fk);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdDesignsNkExportsFkDeleteWithHttpInfo
+     *
+     * Delete a related item by id for exports.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $fk Foreign key for exports (required)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkExportsFkDeleteWithHttpInfo($id, $nk, $fk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdDesignsNkExportsFkDelete');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdDesignsNkExportsFkDelete');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling portalsIdDesignsNkExportsFkDelete');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/designs/{nk}/exports/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/Portals/{id}/designs/{nk}/exports/{fk}'
+            );
+
+            return array(null, $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdDesignsNkExportsFkGet
+     *
+     * Find a related item by id for exports.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $fk Foreign key for exports (required)
+     * @return \Swagger\Client\Model\DesignExport
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkExportsFkGet($id, $nk, $fk)
+    {
+        list($response) = $this->portalsIdDesignsNkExportsFkGetWithHttpInfo($id, $nk, $fk);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdDesignsNkExportsFkGetWithHttpInfo
+     *
+     * Find a related item by id for exports.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $fk Foreign key for exports (required)
+     * @return array of \Swagger\Client\Model\DesignExport, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkExportsFkGetWithHttpInfo($id, $nk, $fk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdDesignsNkExportsFkGet');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdDesignsNkExportsFkGet');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling portalsIdDesignsNkExportsFkGet');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/designs/{nk}/exports/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\DesignExport',
+                '/Portals/{id}/designs/{nk}/exports/{fk}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\DesignExport', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\DesignExport', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdDesignsNkExportsFkPut
+     *
+     * Update a related item by id for exports.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $fk Foreign key for exports (required)
+     * @param \Swagger\Client\Model\DesignExport $data  (optional)
+     * @return \Swagger\Client\Model\DesignExport
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkExportsFkPut($id, $nk, $fk, $data = null)
+    {
+        list($response) = $this->portalsIdDesignsNkExportsFkPutWithHttpInfo($id, $nk, $fk, $data);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdDesignsNkExportsFkPutWithHttpInfo
+     *
+     * Update a related item by id for exports.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $fk Foreign key for exports (required)
+     * @param \Swagger\Client\Model\DesignExport $data  (optional)
+     * @return array of \Swagger\Client\Model\DesignExport, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkExportsFkPutWithHttpInfo($id, $nk, $fk, $data = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdDesignsNkExportsFkPut');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdDesignsNkExportsFkPut');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling portalsIdDesignsNkExportsFkPut');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/designs/{nk}/exports/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\DesignExport',
+                '/Portals/{id}/designs/{nk}/exports/{fk}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\DesignExport', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\DesignExport', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdDesignsNkExportsGet
+     *
+     * Queries exports of Design.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $filter  (optional)
+     * @return \Swagger\Client\Model\DesignExport[]
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkExportsGet($id, $nk, $filter = null)
+    {
+        list($response) = $this->portalsIdDesignsNkExportsGetWithHttpInfo($id, $nk, $filter);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdDesignsNkExportsGetWithHttpInfo
+     *
+     * Queries exports of Design.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $filter  (optional)
+     * @return array of \Swagger\Client\Model\DesignExport[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkExportsGetWithHttpInfo($id, $nk, $filter = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdDesignsNkExportsGet');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdDesignsNkExportsGet');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/designs/{nk}/exports";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($filter !== null) {
+            $queryParams['filter'] = $this->apiClient->getSerializer()->toQueryValue($filter);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\DesignExport[]',
+                '/Portals/{id}/designs/{nk}/exports'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\DesignExport[]', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\DesignExport[]', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdDesignsNkExportsPost
+     *
+     * Creates a new instance in exports of this model.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param \Swagger\Client\Model\DesignExport $data  (optional)
+     * @return \Swagger\Client\Model\DesignExport
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkExportsPost($id, $nk, $data = null)
+    {
+        list($response) = $this->portalsIdDesignsNkExportsPostWithHttpInfo($id, $nk, $data);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdDesignsNkExportsPostWithHttpInfo
+     *
+     * Creates a new instance in exports of this model.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param \Swagger\Client\Model\DesignExport $data  (optional)
+     * @return array of \Swagger\Client\Model\DesignExport, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkExportsPostWithHttpInfo($id, $nk, $data = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdDesignsNkExportsPost');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdDesignsNkExportsPost');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/designs/{nk}/exports";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\DesignExport',
+                '/Portals/{id}/designs/{nk}/exports'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\DesignExport', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\DesignExport', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdDesignsNkFolderGet
+     *
+     * Fetches belongsTo relation folder.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param bool $refresh  (optional)
+     * @return \Swagger\Client\Model\DesignFolder
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkFolderGet($id, $nk, $refresh = null)
+    {
+        list($response) = $this->portalsIdDesignsNkFolderGetWithHttpInfo($id, $nk, $refresh);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdDesignsNkFolderGetWithHttpInfo
+     *
+     * Fetches belongsTo relation folder.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param bool $refresh  (optional)
+     * @return array of \Swagger\Client\Model\DesignFolder, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkFolderGetWithHttpInfo($id, $nk, $refresh = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdDesignsNkFolderGet');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdDesignsNkFolderGet');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/designs/{nk}/folder";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($refresh !== null) {
+            $queryParams['refresh'] = $this->apiClient->getSerializer()->toQueryValue($refresh);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\DesignFolder',
+                '/Portals/{id}/designs/{nk}/folder'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\DesignFolder', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\DesignFolder', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdDesignsNkPortalGet
+     *
+     * Fetches belongsTo relation portal.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param bool $refresh  (optional)
+     * @return \Swagger\Client\Model\Portal
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkPortalGet($id, $nk, $refresh = null)
+    {
+        list($response) = $this->portalsIdDesignsNkPortalGetWithHttpInfo($id, $nk, $refresh);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdDesignsNkPortalGetWithHttpInfo
+     *
+     * Fetches belongsTo relation portal.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param bool $refresh  (optional)
+     * @return array of \Swagger\Client\Model\Portal, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkPortalGetWithHttpInfo($id, $nk, $refresh = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdDesignsNkPortalGet');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdDesignsNkPortalGet');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/designs/{nk}/portal";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($refresh !== null) {
+            $queryParams['refresh'] = $this->apiClient->getSerializer()->toQueryValue($refresh);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\Portal',
+                '/Portals/{id}/designs/{nk}/portal'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Portal', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Portal', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdDesignsNkRequesterGet
+     *
+     * Fetches belongsTo relation requester.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param bool $refresh  (optional)
+     * @return \Swagger\Client\Model\TeamMember
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkRequesterGet($id, $nk, $refresh = null)
+    {
+        list($response) = $this->portalsIdDesignsNkRequesterGetWithHttpInfo($id, $nk, $refresh);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdDesignsNkRequesterGetWithHttpInfo
+     *
+     * Fetches belongsTo relation requester.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param bool $refresh  (optional)
+     * @return array of \Swagger\Client\Model\TeamMember, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkRequesterGetWithHttpInfo($id, $nk, $refresh = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdDesignsNkRequesterGet');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdDesignsNkRequesterGet');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/designs/{nk}/requester";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($refresh !== null) {
+            $queryParams['refresh'] = $this->apiClient->getSerializer()->toQueryValue($refresh);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\TeamMember',
+                '/Portals/{id}/designs/{nk}/requester'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TeamMember', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TeamMember', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdDesignsNkReviewerGet
+     *
+     * Fetches belongsTo relation reviewer.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param bool $refresh  (optional)
+     * @return \Swagger\Client\Model\TeamMember
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkReviewerGet($id, $nk, $refresh = null)
+    {
+        list($response) = $this->portalsIdDesignsNkReviewerGetWithHttpInfo($id, $nk, $refresh);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdDesignsNkReviewerGetWithHttpInfo
+     *
+     * Fetches belongsTo relation reviewer.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param bool $refresh  (optional)
+     * @return array of \Swagger\Client\Model\TeamMember, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkReviewerGetWithHttpInfo($id, $nk, $refresh = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdDesignsNkReviewerGet');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdDesignsNkReviewerGet');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/designs/{nk}/reviewer";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($refresh !== null) {
+            $queryParams['refresh'] = $this->apiClient->getSerializer()->toQueryValue($refresh);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\TeamMember',
+                '/Portals/{id}/designs/{nk}/reviewer'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TeamMember', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TeamMember', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdDesignsNkTagsCountGet
+     *
+     * Counts tags of Design.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $where Criteria to match model instances (optional)
+     * @return \Swagger\Client\Model\InlineResponse200
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkTagsCountGet($id, $nk, $where = null)
+    {
+        list($response) = $this->portalsIdDesignsNkTagsCountGetWithHttpInfo($id, $nk, $where);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdDesignsNkTagsCountGetWithHttpInfo
+     *
+     * Counts tags of Design.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $where Criteria to match model instances (optional)
+     * @return array of \Swagger\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkTagsCountGetWithHttpInfo($id, $nk, $where = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdDesignsNkTagsCountGet');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdDesignsNkTagsCountGet');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/designs/{nk}/tags/count";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($where !== null) {
+            $queryParams['where'] = $this->apiClient->getSerializer()->toQueryValue($where);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\InlineResponse200',
+                '/Portals/{id}/designs/{nk}/tags/count'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse200', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdDesignsNkTagsDelete
+     *
+     * Deletes all tags of this model.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @return void
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkTagsDelete($id, $nk)
+    {
+        list($response) = $this->portalsIdDesignsNkTagsDeleteWithHttpInfo($id, $nk);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdDesignsNkTagsDeleteWithHttpInfo
+     *
+     * Deletes all tags of this model.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkTagsDeleteWithHttpInfo($id, $nk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdDesignsNkTagsDelete');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdDesignsNkTagsDelete');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/designs/{nk}/tags";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/Portals/{id}/designs/{nk}/tags'
+            );
+
+            return array(null, $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdDesignsNkTagsFkDelete
+     *
+     * Delete a related item by id for tags.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $fk Foreign key for tags (required)
+     * @return void
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkTagsFkDelete($id, $nk, $fk)
+    {
+        list($response) = $this->portalsIdDesignsNkTagsFkDeleteWithHttpInfo($id, $nk, $fk);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdDesignsNkTagsFkDeleteWithHttpInfo
+     *
+     * Delete a related item by id for tags.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $fk Foreign key for tags (required)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkTagsFkDeleteWithHttpInfo($id, $nk, $fk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdDesignsNkTagsFkDelete');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdDesignsNkTagsFkDelete');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling portalsIdDesignsNkTagsFkDelete');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/designs/{nk}/tags/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/Portals/{id}/designs/{nk}/tags/{fk}'
+            );
+
+            return array(null, $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdDesignsNkTagsFkGet
+     *
+     * Find a related item by id for tags.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $fk Foreign key for tags (required)
+     * @return \Swagger\Client\Model\Tag
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkTagsFkGet($id, $nk, $fk)
+    {
+        list($response) = $this->portalsIdDesignsNkTagsFkGetWithHttpInfo($id, $nk, $fk);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdDesignsNkTagsFkGetWithHttpInfo
+     *
+     * Find a related item by id for tags.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $fk Foreign key for tags (required)
+     * @return array of \Swagger\Client\Model\Tag, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkTagsFkGetWithHttpInfo($id, $nk, $fk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdDesignsNkTagsFkGet');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdDesignsNkTagsFkGet');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling portalsIdDesignsNkTagsFkGet');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/designs/{nk}/tags/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\Tag',
+                '/Portals/{id}/designs/{nk}/tags/{fk}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Tag', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Tag', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdDesignsNkTagsFkPut
+     *
+     * Update a related item by id for tags.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $fk Foreign key for tags (required)
+     * @param \Swagger\Client\Model\Tag $data  (optional)
+     * @return \Swagger\Client\Model\Tag
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkTagsFkPut($id, $nk, $fk, $data = null)
+    {
+        list($response) = $this->portalsIdDesignsNkTagsFkPutWithHttpInfo($id, $nk, $fk, $data);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdDesignsNkTagsFkPutWithHttpInfo
+     *
+     * Update a related item by id for tags.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $fk Foreign key for tags (required)
+     * @param \Swagger\Client\Model\Tag $data  (optional)
+     * @return array of \Swagger\Client\Model\Tag, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkTagsFkPutWithHttpInfo($id, $nk, $fk, $data = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdDesignsNkTagsFkPut');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdDesignsNkTagsFkPut');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling portalsIdDesignsNkTagsFkPut');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/designs/{nk}/tags/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\Tag',
+                '/Portals/{id}/designs/{nk}/tags/{fk}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Tag', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Tag', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdDesignsNkTagsGet
+     *
+     * Queries tags of Design.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $filter  (optional)
+     * @return \Swagger\Client\Model\Tag[]
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkTagsGet($id, $nk, $filter = null)
+    {
+        list($response) = $this->portalsIdDesignsNkTagsGetWithHttpInfo($id, $nk, $filter);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdDesignsNkTagsGetWithHttpInfo
+     *
+     * Queries tags of Design.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $filter  (optional)
+     * @return array of \Swagger\Client\Model\Tag[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkTagsGetWithHttpInfo($id, $nk, $filter = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdDesignsNkTagsGet');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdDesignsNkTagsGet');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/designs/{nk}/tags";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($filter !== null) {
+            $queryParams['filter'] = $this->apiClient->getSerializer()->toQueryValue($filter);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\Tag[]',
+                '/Portals/{id}/designs/{nk}/tags'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Tag[]', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Tag[]', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdDesignsNkTagsPost
+     *
+     * Creates a new instance in tags of this model.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param \Swagger\Client\Model\Tag $data  (optional)
+     * @return \Swagger\Client\Model\Tag
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkTagsPost($id, $nk, $data = null)
+    {
+        list($response) = $this->portalsIdDesignsNkTagsPostWithHttpInfo($id, $nk, $data);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdDesignsNkTagsPostWithHttpInfo
+     *
+     * Creates a new instance in tags of this model.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param \Swagger\Client\Model\Tag $data  (optional)
+     * @return array of \Swagger\Client\Model\Tag, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkTagsPostWithHttpInfo($id, $nk, $data = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdDesignsNkTagsPost');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdDesignsNkTagsPost');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/designs/{nk}/tags";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\Tag',
+                '/Portals/{id}/designs/{nk}/tags'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Tag', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Tag', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdDesignsNkTagsRelFkDelete
+     *
+     * Remove the tags relation to an item by id.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $fk Foreign key for tags (required)
+     * @return void
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkTagsRelFkDelete($id, $nk, $fk)
+    {
+        list($response) = $this->portalsIdDesignsNkTagsRelFkDeleteWithHttpInfo($id, $nk, $fk);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdDesignsNkTagsRelFkDeleteWithHttpInfo
+     *
+     * Remove the tags relation to an item by id.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $fk Foreign key for tags (required)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkTagsRelFkDeleteWithHttpInfo($id, $nk, $fk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdDesignsNkTagsRelFkDelete');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdDesignsNkTagsRelFkDelete');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling portalsIdDesignsNkTagsRelFkDelete');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/designs/{nk}/tags/rel/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/Portals/{id}/designs/{nk}/tags/rel/{fk}'
+            );
+
+            return array(null, $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdDesignsNkTagsRelFkHead
+     *
+     * Check the existence of tags relation to an item by id.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $fk Foreign key for tags (required)
+     * @return bool
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkTagsRelFkHead($id, $nk, $fk)
+    {
+        list($response) = $this->portalsIdDesignsNkTagsRelFkHeadWithHttpInfo($id, $nk, $fk);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdDesignsNkTagsRelFkHeadWithHttpInfo
+     *
+     * Check the existence of tags relation to an item by id.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $fk Foreign key for tags (required)
+     * @return array of bool, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkTagsRelFkHeadWithHttpInfo($id, $nk, $fk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdDesignsNkTagsRelFkHead');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdDesignsNkTagsRelFkHead');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling portalsIdDesignsNkTagsRelFkHead');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/designs/{nk}/tags/rel/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'HEAD',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                'bool',
+                '/Portals/{id}/designs/{nk}/tags/rel/{fk}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, 'bool', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), 'bool', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdDesignsNkTagsRelFkPut
+     *
+     * Add a related item by id for tags.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $fk Foreign key for tags (required)
+     * @param \Swagger\Client\Model\DesignTag $data  (optional)
+     * @return \Swagger\Client\Model\DesignTag
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkTagsRelFkPut($id, $nk, $fk, $data = null)
+    {
+        list($response) = $this->portalsIdDesignsNkTagsRelFkPutWithHttpInfo($id, $nk, $fk, $data);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdDesignsNkTagsRelFkPutWithHttpInfo
+     *
+     * Add a related item by id for tags.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param string $fk Foreign key for tags (required)
+     * @param \Swagger\Client\Model\DesignTag $data  (optional)
+     * @return array of \Swagger\Client\Model\DesignTag, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkTagsRelFkPutWithHttpInfo($id, $nk, $fk, $data = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdDesignsNkTagsRelFkPut');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdDesignsNkTagsRelFkPut');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling portalsIdDesignsNkTagsRelFkPut');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/designs/{nk}/tags/rel/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\DesignTag',
+                '/Portals/{id}/designs/{nk}/tags/rel/{fk}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\DesignTag', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\DesignTag', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation portalsIdDesignsNkTemplateGet
+     *
+     * Fetches belongsTo relation template.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param bool $refresh  (optional)
+     * @return \Swagger\Client\Model\Template
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkTemplateGet($id, $nk, $refresh = null)
+    {
+        list($response) = $this->portalsIdDesignsNkTemplateGetWithHttpInfo($id, $nk, $refresh);
+        return $response;
+    }
+
+    /**
+     * Operation portalsIdDesignsNkTemplateGetWithHttpInfo
+     *
+     * Fetches belongsTo relation template.
+     *
+     * @param string $id Portal id (required)
+     * @param string $nk Foreign key for designs. (required)
+     * @param bool $refresh  (optional)
+     * @return array of \Swagger\Client\Model\Template, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function portalsIdDesignsNkTemplateGetWithHttpInfo($id, $nk, $refresh = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling portalsIdDesignsNkTemplateGet');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling portalsIdDesignsNkTemplateGet');
+        }
+        // parse inputs
+        $resourcePath = "/Portals/{id}/designs/{nk}/template";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($refresh !== null) {
+            $queryParams['refresh'] = $this->apiClient->getSerializer()->toQueryValue($refresh);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\Template',
+                '/Portals/{id}/designs/{nk}/template'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Template', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Template', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation portalsIdDesignsPost
      *
      * Creates a new instance in designs of this model.
