@@ -112,9 +112,9 @@ class FlashVarTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "savedPluginProductId"
+     * Test attribute "pluginProductId"
      */
-    public function testPropertySavedPluginProductId()
+    public function testPropertyPluginProductId()
     {
 
     }
@@ -216,9 +216,17 @@ class FlashVarTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "approvalFormID"
+     * Test attribute "workflowForm"
      */
-    public function testPropertyApprovalFormID()
+    public function testPropertyWorkflowForm()
+    {
+
+    }
+
+    /**
+     * Test attribute "designFormData"
+     */
+    public function testPropertyDesignFormData()
     {
 
     }
@@ -235,6 +243,14 @@ class FlashVarTest extends \PHPUnit_Framework_TestCase
      * Test attribute "pluginImageLibraries"
      */
     public function testPropertyPluginImageLibraries()
+    {
+
+    }
+
+    /**
+     * Test attribute "isTweakTemplate"
+     */
+    public function testPropertyIsTweakTemplate()
     {
 
     }

@@ -68,7 +68,7 @@ class FlashVar implements ArrayAccess
     protected static $swaggerTypes = array(
         'apiPartnerAuthUrl' => 'string',
         'productId' => 'string',
-        'savedPluginProductId' => 'string',
+        'pluginProductId' => 'string',
         'allowAddImage' => 'bool',
         'allowAddText' => 'bool',
         'allowJPEG' => 'bool',
@@ -81,9 +81,11 @@ class FlashVar implements ArrayAccess
         'showConfirm' => 'bool',
         'allowApprovePluginProduct' => 'bool',
         'allowSendToApprovePluginProduct' => 'bool',
-        'approvalFormID' => 'object[]',
+        'workflowForm' => 'object[]',
+        'designFormData' => 'object[]',
         'showPluginImages' => 'bool',
         'pluginImageLibraries' => 'string[]',
+        'isTweakTemplate' => 'bool',
         'id' => 'string',
         'teamId' => 'string',
         'team' => '\Swagger\Client\Model\Team',
@@ -111,7 +113,7 @@ class FlashVar implements ArrayAccess
     protected static $attributeMap = array(
         'apiPartnerAuthUrl' => 'apiPartnerAuthUrl',
         'productId' => 'productId',
-        'savedPluginProductId' => 'savedPluginProductId',
+        'pluginProductId' => 'pluginProductId',
         'allowAddImage' => 'allowAddImage',
         'allowAddText' => 'allowAddText',
         'allowJPEG' => 'allowJPEG',
@@ -124,9 +126,11 @@ class FlashVar implements ArrayAccess
         'showConfirm' => 'showConfirm',
         'allowApprovePluginProduct' => 'allowApprovePluginProduct',
         'allowSendToApprovePluginProduct' => 'allowSendToApprovePluginProduct',
-        'approvalFormID' => 'approvalFormID',
+        'workflowForm' => 'workflowForm',
+        'designFormData' => 'designFormData',
         'showPluginImages' => 'showPluginImages',
         'pluginImageLibraries' => 'pluginImageLibraries',
+        'isTweakTemplate' => 'isTweakTemplate',
         'id' => 'id',
         'teamId' => 'teamId',
         'team' => 'team',
@@ -154,7 +158,7 @@ class FlashVar implements ArrayAccess
     protected static $setters = array(
         'apiPartnerAuthUrl' => 'setApiPartnerAuthUrl',
         'productId' => 'setProductId',
-        'savedPluginProductId' => 'setSavedPluginProductId',
+        'pluginProductId' => 'setPluginProductId',
         'allowAddImage' => 'setAllowAddImage',
         'allowAddText' => 'setAllowAddText',
         'allowJPEG' => 'setAllowJPEG',
@@ -167,9 +171,11 @@ class FlashVar implements ArrayAccess
         'showConfirm' => 'setShowConfirm',
         'allowApprovePluginProduct' => 'setAllowApprovePluginProduct',
         'allowSendToApprovePluginProduct' => 'setAllowSendToApprovePluginProduct',
-        'approvalFormID' => 'setApprovalFormID',
+        'workflowForm' => 'setWorkflowForm',
+        'designFormData' => 'setDesignFormData',
         'showPluginImages' => 'setShowPluginImages',
         'pluginImageLibraries' => 'setPluginImageLibraries',
+        'isTweakTemplate' => 'setIsTweakTemplate',
         'id' => 'setId',
         'teamId' => 'setTeamId',
         'team' => 'setTeam',
@@ -197,7 +203,7 @@ class FlashVar implements ArrayAccess
     protected static $getters = array(
         'apiPartnerAuthUrl' => 'getApiPartnerAuthUrl',
         'productId' => 'getProductId',
-        'savedPluginProductId' => 'getSavedPluginProductId',
+        'pluginProductId' => 'getPluginProductId',
         'allowAddImage' => 'getAllowAddImage',
         'allowAddText' => 'getAllowAddText',
         'allowJPEG' => 'getAllowJPEG',
@@ -210,9 +216,11 @@ class FlashVar implements ArrayAccess
         'showConfirm' => 'getShowConfirm',
         'allowApprovePluginProduct' => 'getAllowApprovePluginProduct',
         'allowSendToApprovePluginProduct' => 'getAllowSendToApprovePluginProduct',
-        'approvalFormID' => 'getApprovalFormID',
+        'workflowForm' => 'getWorkflowForm',
+        'designFormData' => 'getDesignFormData',
         'showPluginImages' => 'getShowPluginImages',
         'pluginImageLibraries' => 'getPluginImageLibraries',
+        'isTweakTemplate' => 'getIsTweakTemplate',
         'id' => 'getId',
         'teamId' => 'getTeamId',
         'team' => 'getTeam',
@@ -251,7 +259,7 @@ class FlashVar implements ArrayAccess
     {
         $this->container['apiPartnerAuthUrl'] = isset($data['apiPartnerAuthUrl']) ? $data['apiPartnerAuthUrl'] : '';
         $this->container['productId'] = isset($data['productId']) ? $data['productId'] : null;
-        $this->container['savedPluginProductId'] = isset($data['savedPluginProductId']) ? $data['savedPluginProductId'] : null;
+        $this->container['pluginProductId'] = isset($data['pluginProductId']) ? $data['pluginProductId'] : null;
         $this->container['allowAddImage'] = isset($data['allowAddImage']) ? $data['allowAddImage'] : false;
         $this->container['allowAddText'] = isset($data['allowAddText']) ? $data['allowAddText'] : false;
         $this->container['allowJPEG'] = isset($data['allowJPEG']) ? $data['allowJPEG'] : false;
@@ -264,9 +272,11 @@ class FlashVar implements ArrayAccess
         $this->container['showConfirm'] = isset($data['showConfirm']) ? $data['showConfirm'] : false;
         $this->container['allowApprovePluginProduct'] = isset($data['allowApprovePluginProduct']) ? $data['allowApprovePluginProduct'] : false;
         $this->container['allowSendToApprovePluginProduct'] = isset($data['allowSendToApprovePluginProduct']) ? $data['allowSendToApprovePluginProduct'] : false;
-        $this->container['approvalFormID'] = isset($data['approvalFormID']) ? $data['approvalFormID'] : null;
+        $this->container['workflowForm'] = isset($data['workflowForm']) ? $data['workflowForm'] : null;
+        $this->container['designFormData'] = isset($data['designFormData']) ? $data['designFormData'] : null;
         $this->container['showPluginImages'] = isset($data['showPluginImages']) ? $data['showPluginImages'] : false;
         $this->container['pluginImageLibraries'] = isset($data['pluginImageLibraries']) ? $data['pluginImageLibraries'] : null;
+        $this->container['isTweakTemplate'] = isset($data['isTweakTemplate']) ? $data['isTweakTemplate'] : false;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['teamId'] = isset($data['teamId']) ? $data['teamId'] : null;
         $this->container['team'] = isset($data['team']) ? $data['team'] : null;
@@ -348,22 +358,22 @@ class FlashVar implements ArrayAccess
     }
 
     /**
-     * Gets savedPluginProductId
+     * Gets pluginProductId
      * @return string
      */
-    public function getSavedPluginProductId()
+    public function getPluginProductId()
     {
-        return $this->container['savedPluginProductId'];
+        return $this->container['pluginProductId'];
     }
 
     /**
-     * Sets savedPluginProductId
-     * @param string $savedPluginProductId
+     * Sets pluginProductId
+     * @param string $pluginProductId
      * @return $this
      */
-    public function setSavedPluginProductId($savedPluginProductId)
+    public function setPluginProductId($pluginProductId)
     {
-        $this->container['savedPluginProductId'] = $savedPluginProductId;
+        $this->container['pluginProductId'] = $pluginProductId;
 
         return $this;
     }
@@ -621,22 +631,43 @@ class FlashVar implements ArrayAccess
     }
 
     /**
-     * Gets approvalFormID
+     * Gets workflowForm
      * @return object[]
      */
-    public function getApprovalFormID()
+    public function getWorkflowForm()
     {
-        return $this->container['approvalFormID'];
+        return $this->container['workflowForm'];
     }
 
     /**
-     * Sets approvalFormID
-     * @param object[] $approvalFormID
+     * Sets workflowForm
+     * @param object[] $workflowForm
      * @return $this
      */
-    public function setApprovalFormID($approvalFormID)
+    public function setWorkflowForm($workflowForm)
     {
-        $this->container['approvalFormID'] = $approvalFormID;
+        $this->container['workflowForm'] = $workflowForm;
+
+        return $this;
+    }
+
+    /**
+     * Gets designFormData
+     * @return object[]
+     */
+    public function getDesignFormData()
+    {
+        return $this->container['designFormData'];
+    }
+
+    /**
+     * Sets designFormData
+     * @param object[] $designFormData
+     * @return $this
+     */
+    public function setDesignFormData($designFormData)
+    {
+        $this->container['designFormData'] = $designFormData;
 
         return $this;
     }
@@ -679,6 +710,27 @@ class FlashVar implements ArrayAccess
     public function setPluginImageLibraries($pluginImageLibraries)
     {
         $this->container['pluginImageLibraries'] = $pluginImageLibraries;
+
+        return $this;
+    }
+
+    /**
+     * Gets isTweakTemplate
+     * @return bool
+     */
+    public function getIsTweakTemplate()
+    {
+        return $this->container['isTweakTemplate'];
+    }
+
+    /**
+     * Sets isTweakTemplate
+     * @param bool $isTweakTemplate
+     * @return $this
+     */
+    public function setIsTweakTemplate($isTweakTemplate)
+    {
+        $this->container['isTweakTemplate'] = $isTweakTemplate;
 
         return $this;
     }
