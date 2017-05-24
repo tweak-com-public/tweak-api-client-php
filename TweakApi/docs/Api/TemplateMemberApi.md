@@ -15,6 +15,7 @@ Method | HTTP request | Description
 [**templateMembersIdHead**](TemplateMemberApi.md#templateMembersIdHead) | **HEAD** /TemplateMembers/{id} | Check whether a model instance exists in the data source.
 [**templateMembersIdMemberGet**](TemplateMemberApi.md#templateMembersIdMemberGet) | **GET** /TemplateMembers/{id}/member | Fetches belongsTo relation member.
 [**templateMembersIdPatch**](TemplateMemberApi.md#templateMembersIdPatch) | **PATCH** /TemplateMembers/{id} | Patch attributes for a model instance and persist it into the data source.
+[**templateMembersIdPortalGet**](TemplateMemberApi.md#templateMembersIdPortalGet) | **GET** /TemplateMembers/{id}/portal | Fetches belongsTo relation portal.
 [**templateMembersIdPut**](TemplateMemberApi.md#templateMembersIdPut) | **PUT** /TemplateMembers/{id} | Replace attributes for a model instance and persist it into the data source.
 [**templateMembersIdReplacePost**](TemplateMemberApi.md#templateMembersIdReplacePost) | **POST** /TemplateMembers/{id}/replace | Replace attributes for a model instance and persist it into the data source.
 [**templateMembersIdTemplateGet**](TemplateMemberApi.md#templateMembersIdTemplateGet) | **GET** /TemplateMembers/{id}/template | Fetches belongsTo relation template.
@@ -548,6 +549,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\TemplateMember**](../Model/TemplateMember.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **templateMembersIdPortalGet**
+> \Swagger\Client\Model\Portal templateMembersIdPortalGet($id, $refresh)
+
+Fetches belongsTo relation portal.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TemplateMemberApi();
+$id = "id_example"; // string | TemplateMember id
+$refresh = true; // bool | 
+
+try {
+    $result = $api_instance->templateMembersIdPortalGet($id, $refresh);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TemplateMemberApi->templateMembersIdPortalGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TemplateMember id |
+ **refresh** | **bool**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\Portal**](../Model/Portal.md)
 
 ### Authorization
 

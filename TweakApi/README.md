@@ -1008,6 +1008,7 @@ Class | Method | HTTP request | Description
 *TemplateMemberApi* | [**templateMembersIdHead**](docs/Api/TemplateMemberApi.md#templatemembersidhead) | **HEAD** /TemplateMembers/{id} | Check whether a model instance exists in the data source.
 *TemplateMemberApi* | [**templateMembersIdMemberGet**](docs/Api/TemplateMemberApi.md#templatemembersidmemberget) | **GET** /TemplateMembers/{id}/member | Fetches belongsTo relation member.
 *TemplateMemberApi* | [**templateMembersIdPatch**](docs/Api/TemplateMemberApi.md#templatemembersidpatch) | **PATCH** /TemplateMembers/{id} | Patch attributes for a model instance and persist it into the data source.
+*TemplateMemberApi* | [**templateMembersIdPortalGet**](docs/Api/TemplateMemberApi.md#templatemembersidportalget) | **GET** /TemplateMembers/{id}/portal | Fetches belongsTo relation portal.
 *TemplateMemberApi* | [**templateMembersIdPut**](docs/Api/TemplateMemberApi.md#templatemembersidput) | **PUT** /TemplateMembers/{id} | Replace attributes for a model instance and persist it into the data source.
 *TemplateMemberApi* | [**templateMembersIdReplacePost**](docs/Api/TemplateMemberApi.md#templatemembersidreplacepost) | **POST** /TemplateMembers/{id}/replace | Replace attributes for a model instance and persist it into the data source.
 *TemplateMemberApi* | [**templateMembersIdTemplateGet**](docs/Api/TemplateMemberApi.md#templatemembersidtemplateget) | **GET** /TemplateMembers/{id}/template | Fetches belongsTo relation template.

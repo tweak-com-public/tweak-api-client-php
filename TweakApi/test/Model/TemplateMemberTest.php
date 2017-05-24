@@ -136,6 +136,14 @@ class TemplateMemberTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "portalId"
+     */
+    public function testPropertyPortalId()
+    {
+
+    }
+
+    /**
      * Test attribute "template"
      */
     public function testPropertyTemplate()
@@ -147,6 +155,14 @@ class TemplateMemberTest extends \PHPUnit_Framework_TestCase
      * Test attribute "member"
      */
     public function testPropertyMember()
+    {
+
+    }
+
+    /**
+     * Test attribute "portal"
+     */
+    public function testPropertyPortal()
     {
 
     }

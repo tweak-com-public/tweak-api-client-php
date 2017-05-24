@@ -71,8 +71,10 @@ class TemplateMember implements ArrayAccess
         'id' => 'string',
         'templateId' => 'string',
         'memberId' => 'string',
+        'portalId' => 'string',
         'template' => '\Swagger\Client\Model\Template',
-        'member' => '\Swagger\Client\Model\TeamMember'
+        'member' => '\Swagger\Client\Model\TeamMember',
+        'portal' => '\Swagger\Client\Model\Portal'
     );
 
     public static function swaggerTypes()
@@ -90,8 +92,10 @@ class TemplateMember implements ArrayAccess
         'id' => 'id',
         'templateId' => 'templateId',
         'memberId' => 'memberId',
+        'portalId' => 'portalId',
         'template' => 'template',
-        'member' => 'member'
+        'member' => 'member',
+        'portal' => 'portal'
     );
 
     public static function attributeMap()
@@ -109,8 +113,10 @@ class TemplateMember implements ArrayAccess
         'id' => 'setId',
         'templateId' => 'setTemplateId',
         'memberId' => 'setMemberId',
+        'portalId' => 'setPortalId',
         'template' => 'setTemplate',
-        'member' => 'setMember'
+        'member' => 'setMember',
+        'portal' => 'setPortal'
     );
 
     public static function setters()
@@ -128,8 +134,10 @@ class TemplateMember implements ArrayAccess
         'id' => 'getId',
         'templateId' => 'getTemplateId',
         'memberId' => 'getMemberId',
+        'portalId' => 'getPortalId',
         'template' => 'getTemplate',
-        'member' => 'getMember'
+        'member' => 'getMember',
+        'portal' => 'getPortal'
     );
 
     public static function getters()
@@ -158,8 +166,10 @@ class TemplateMember implements ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['templateId'] = isset($data['templateId']) ? $data['templateId'] : null;
         $this->container['memberId'] = isset($data['memberId']) ? $data['memberId'] : null;
+        $this->container['portalId'] = isset($data['portalId']) ? $data['portalId'] : null;
         $this->container['template'] = isset($data['template']) ? $data['template'] : null;
         $this->container['member'] = isset($data['member']) ? $data['member'] : null;
+        $this->container['portal'] = isset($data['portal']) ? $data['portal'] : null;
     }
 
     /**
@@ -291,6 +301,27 @@ class TemplateMember implements ArrayAccess
     }
 
     /**
+     * Gets portalId
+     * @return string
+     */
+    public function getPortalId()
+    {
+        return $this->container['portalId'];
+    }
+
+    /**
+     * Sets portalId
+     * @param string $portalId
+     * @return $this
+     */
+    public function setPortalId($portalId)
+    {
+        $this->container['portalId'] = $portalId;
+
+        return $this;
+    }
+
+    /**
      * Gets template
      * @return \Swagger\Client\Model\Template
      */
@@ -328,6 +359,27 @@ class TemplateMember implements ArrayAccess
     public function setMember($member)
     {
         $this->container['member'] = $member;
+
+        return $this;
+    }
+
+    /**
+     * Gets portal
+     * @return \Swagger\Client\Model\Portal
+     */
+    public function getPortal()
+    {
+        return $this->container['portal'];
+    }
+
+    /**
+     * Sets portal
+     * @param \Swagger\Client\Model\Portal $portal
+     * @return $this
+     */
+    public function setPortal($portal)
+    {
+        $this->container['portal'] = $portal;
 
         return $this;
     }

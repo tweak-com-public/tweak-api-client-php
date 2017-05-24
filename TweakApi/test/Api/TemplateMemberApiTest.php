@@ -211,6 +211,17 @@ class TemplateMemberApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for templateMembersIdPortalGet
+     *
+     * Fetches belongsTo relation portal..
+     *
+     */
+    public function testTemplateMembersIdPortalGet()
+    {
+
+    }
+
+    /**
      * Test case for templateMembersIdPut
      *
      * Replace attributes for a model instance and persist it into the data source..
