@@ -96,22 +96,6 @@ class TemplateMemberTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "uploader"
-     */
-    public function testPropertyUploader()
-    {
-
-    }
-
-    /**
-     * Test attribute "viewOnly"
-     */
-    public function testPropertyViewOnly()
-    {
-
-    }
-
-    /**
      * Test attribute "id"
      */
     public function testPropertyId()

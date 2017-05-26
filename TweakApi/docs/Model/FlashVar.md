@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **apiPartnerAuthUrl** | **string** |  | [optional] [default to '']
-**productId** | **string** |  | [optional] 
 **pluginProductId** | **string** |  | [optional] 
+**savedProductId** | **string** |  | [optional] 
 **allowAddImage** | **bool** |  | [optional] [default to false]
 **allowAddText** | **bool** |  | [optional] [default to false]
 **allowJPEG** | **bool** |  | [optional] [default to false]

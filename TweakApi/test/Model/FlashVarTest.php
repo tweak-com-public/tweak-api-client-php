@@ -104,17 +104,17 @@ class FlashVarTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "productId"
+     * Test attribute "pluginProductId"
      */
-    public function testPropertyProductId()
+    public function testPropertyPluginProductId()
     {
 
     }
 
     /**
-     * Test attribute "pluginProductId"
+     * Test attribute "savedProductId"
      */
-    public function testPropertyPluginProductId()
+    public function testPropertySavedProductId()
     {
 
     }

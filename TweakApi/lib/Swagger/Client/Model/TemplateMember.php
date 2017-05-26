@@ -66,8 +66,6 @@ class TemplateMember implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'uploader' => 'bool',
-        'viewOnly' => 'bool',
         'id' => 'string',
         'templateId' => 'string',
         'memberId' => 'string',
@@ -87,8 +85,6 @@ class TemplateMember implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'uploader' => 'uploader',
-        'viewOnly' => 'viewOnly',
         'id' => 'id',
         'templateId' => 'templateId',
         'memberId' => 'memberId',
@@ -108,8 +104,6 @@ class TemplateMember implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'uploader' => 'setUploader',
-        'viewOnly' => 'setViewOnly',
         'id' => 'setId',
         'templateId' => 'setTemplateId',
         'memberId' => 'setMemberId',
@@ -129,8 +123,6 @@ class TemplateMember implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'uploader' => 'getUploader',
-        'viewOnly' => 'getViewOnly',
         'id' => 'getId',
         'templateId' => 'getTemplateId',
         'memberId' => 'getMemberId',
@@ -161,8 +153,6 @@ class TemplateMember implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['uploader'] = isset($data['uploader']) ? $data['uploader'] : null;
-        $this->container['viewOnly'] = isset($data['viewOnly']) ? $data['viewOnly'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['templateId'] = isset($data['templateId']) ? $data['templateId'] : null;
         $this->container['memberId'] = isset($data['memberId']) ? $data['memberId'] : null;
@@ -194,48 +184,6 @@ class TemplateMember implements ArrayAccess
         return true;
     }
 
-
-    /**
-     * Gets uploader
-     * @return bool
-     */
-    public function getUploader()
-    {
-        return $this->container['uploader'];
-    }
-
-    /**
-     * Sets uploader
-     * @param bool $uploader
-     * @return $this
-     */
-    public function setUploader($uploader)
-    {
-        $this->container['uploader'] = $uploader;
-
-        return $this;
-    }
-
-    /**
-     * Gets viewOnly
-     * @return bool
-     */
-    public function getViewOnly()
-    {
-        return $this->container['viewOnly'];
-    }
-
-    /**
-     * Sets viewOnly
-     * @param bool $viewOnly
-     * @return $this
-     */
-    public function setViewOnly($viewOnly)
-    {
-        $this->container['viewOnly'] = $viewOnly;
-
-        return $this;
-    }
 
     /**
      * Gets id

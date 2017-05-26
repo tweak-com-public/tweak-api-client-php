@@ -67,8 +67,8 @@ class FlashVar implements ArrayAccess
       */
     protected static $swaggerTypes = array(
         'apiPartnerAuthUrl' => 'string',
-        'productId' => 'string',
         'pluginProductId' => 'string',
+        'savedProductId' => 'string',
         'allowAddImage' => 'bool',
         'allowAddText' => 'bool',
         'allowJPEG' => 'bool',
@@ -112,8 +112,8 @@ class FlashVar implements ArrayAccess
      */
     protected static $attributeMap = array(
         'apiPartnerAuthUrl' => 'apiPartnerAuthUrl',
-        'productId' => 'productId',
         'pluginProductId' => 'pluginProductId',
+        'savedProductId' => 'savedProductId',
         'allowAddImage' => 'allowAddImage',
         'allowAddText' => 'allowAddText',
         'allowJPEG' => 'allowJPEG',
@@ -157,8 +157,8 @@ class FlashVar implements ArrayAccess
      */
     protected static $setters = array(
         'apiPartnerAuthUrl' => 'setApiPartnerAuthUrl',
-        'productId' => 'setProductId',
         'pluginProductId' => 'setPluginProductId',
+        'savedProductId' => 'setSavedProductId',
         'allowAddImage' => 'setAllowAddImage',
         'allowAddText' => 'setAllowAddText',
         'allowJPEG' => 'setAllowJPEG',
@@ -202,8 +202,8 @@ class FlashVar implements ArrayAccess
      */
     protected static $getters = array(
         'apiPartnerAuthUrl' => 'getApiPartnerAuthUrl',
-        'productId' => 'getProductId',
         'pluginProductId' => 'getPluginProductId',
+        'savedProductId' => 'getSavedProductId',
         'allowAddImage' => 'getAllowAddImage',
         'allowAddText' => 'getAllowAddText',
         'allowJPEG' => 'getAllowJPEG',
@@ -258,8 +258,8 @@ class FlashVar implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['apiPartnerAuthUrl'] = isset($data['apiPartnerAuthUrl']) ? $data['apiPartnerAuthUrl'] : '';
-        $this->container['productId'] = isset($data['productId']) ? $data['productId'] : null;
         $this->container['pluginProductId'] = isset($data['pluginProductId']) ? $data['pluginProductId'] : null;
+        $this->container['savedProductId'] = isset($data['savedProductId']) ? $data['savedProductId'] : null;
         $this->container['allowAddImage'] = isset($data['allowAddImage']) ? $data['allowAddImage'] : false;
         $this->container['allowAddText'] = isset($data['allowAddText']) ? $data['allowAddText'] : false;
         $this->container['allowJPEG'] = isset($data['allowJPEG']) ? $data['allowJPEG'] : false;
@@ -337,27 +337,6 @@ class FlashVar implements ArrayAccess
     }
 
     /**
-     * Gets productId
-     * @return string
-     */
-    public function getProductId()
-    {
-        return $this->container['productId'];
-    }
-
-    /**
-     * Sets productId
-     * @param string $productId
-     * @return $this
-     */
-    public function setProductId($productId)
-    {
-        $this->container['productId'] = $productId;
-
-        return $this;
-    }
-
-    /**
      * Gets pluginProductId
      * @return string
      */
@@ -374,6 +353,27 @@ class FlashVar implements ArrayAccess
     public function setPluginProductId($pluginProductId)
     {
         $this->container['pluginProductId'] = $pluginProductId;
+
+        return $this;
+    }
+
+    /**
+     * Gets savedProductId
+     * @return string
+     */
+    public function getSavedProductId()
+    {
+        return $this->container['savedProductId'];
+    }
+
+    /**
+     * Sets savedProductId
+     * @param string $savedProductId
+     * @return $this
+     */
+    public function setSavedProductId($savedProductId)
+    {
+        $this->container['savedProductId'] = $savedProductId;
 
         return $this;
     }

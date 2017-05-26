@@ -3,8 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**uploader** | **bool** |  | [optional] 
-**viewOnly** | **bool** |  | [optional] 
 **id** | **string** |  | [optional] 
 **templateId** | **string** |  | [optional] 
 **memberId** | **string** |  | [optional] 
