@@ -78,8 +78,24 @@ class InvitationTicket implements ArrayAccess
         'id' => 'string',
         'inviteeId' => 'string',
         'inviterId' => 'string',
+        'targetTeamId' => 'string',
+        'targetTeamMemberId' => 'string',
+        'targetPortalId' => 'string',
+        'targetPortalMemberId' => 'string',
+        'targetTemplateId' => 'string',
+        'targetTemplateMemberId' => 'string',
+        'targetImageFolderId' => 'string',
+        'targetImageFolderMemberId' => 'string',
         'invitee' => '\Swagger\Client\Model\Customer',
-        'inviter' => '\Swagger\Client\Model\TeamMember'
+        'inviter' => '\Swagger\Client\Model\TeamMember',
+        'targetTeam' => '\Swagger\Client\Model\Team',
+        'targetTeamMember' => '\Swagger\Client\Model\TeamMember',
+        'targetPortal' => '\Swagger\Client\Model\Portal',
+        'targetPortalMember' => '\Swagger\Client\Model\PortalMember',
+        'targetTemplate' => '\Swagger\Client\Model\Template',
+        'targetTemplateMember' => '\Swagger\Client\Model\TemplateMember',
+        'targetImageFolder' => '\Swagger\Client\Model\ImageFolder',
+        'targetImageFolderMember' => '\Swagger\Client\Model\ImageFolderMember'
     );
 
     public static function swaggerTypes()
@@ -104,8 +120,24 @@ class InvitationTicket implements ArrayAccess
         'id' => 'id',
         'inviteeId' => 'inviteeId',
         'inviterId' => 'inviterId',
+        'targetTeamId' => 'targetTeamId',
+        'targetTeamMemberId' => 'targetTeamMemberId',
+        'targetPortalId' => 'targetPortalId',
+        'targetPortalMemberId' => 'targetPortalMemberId',
+        'targetTemplateId' => 'targetTemplateId',
+        'targetTemplateMemberId' => 'targetTemplateMemberId',
+        'targetImageFolderId' => 'targetImageFolderId',
+        'targetImageFolderMemberId' => 'targetImageFolderMemberId',
         'invitee' => 'invitee',
-        'inviter' => 'inviter'
+        'inviter' => 'inviter',
+        'targetTeam' => 'targetTeam',
+        'targetTeamMember' => 'targetTeamMember',
+        'targetPortal' => 'targetPortal',
+        'targetPortalMember' => 'targetPortalMember',
+        'targetTemplate' => 'targetTemplate',
+        'targetTemplateMember' => 'targetTemplateMember',
+        'targetImageFolder' => 'targetImageFolder',
+        'targetImageFolderMember' => 'targetImageFolderMember'
     );
 
     public static function attributeMap()
@@ -130,8 +162,24 @@ class InvitationTicket implements ArrayAccess
         'id' => 'setId',
         'inviteeId' => 'setInviteeId',
         'inviterId' => 'setInviterId',
+        'targetTeamId' => 'setTargetTeamId',
+        'targetTeamMemberId' => 'setTargetTeamMemberId',
+        'targetPortalId' => 'setTargetPortalId',
+        'targetPortalMemberId' => 'setTargetPortalMemberId',
+        'targetTemplateId' => 'setTargetTemplateId',
+        'targetTemplateMemberId' => 'setTargetTemplateMemberId',
+        'targetImageFolderId' => 'setTargetImageFolderId',
+        'targetImageFolderMemberId' => 'setTargetImageFolderMemberId',
         'invitee' => 'setInvitee',
-        'inviter' => 'setInviter'
+        'inviter' => 'setInviter',
+        'targetTeam' => 'setTargetTeam',
+        'targetTeamMember' => 'setTargetTeamMember',
+        'targetPortal' => 'setTargetPortal',
+        'targetPortalMember' => 'setTargetPortalMember',
+        'targetTemplate' => 'setTargetTemplate',
+        'targetTemplateMember' => 'setTargetTemplateMember',
+        'targetImageFolder' => 'setTargetImageFolder',
+        'targetImageFolderMember' => 'setTargetImageFolderMember'
     );
 
     public static function setters()
@@ -156,8 +204,24 @@ class InvitationTicket implements ArrayAccess
         'id' => 'getId',
         'inviteeId' => 'getInviteeId',
         'inviterId' => 'getInviterId',
+        'targetTeamId' => 'getTargetTeamId',
+        'targetTeamMemberId' => 'getTargetTeamMemberId',
+        'targetPortalId' => 'getTargetPortalId',
+        'targetPortalMemberId' => 'getTargetPortalMemberId',
+        'targetTemplateId' => 'getTargetTemplateId',
+        'targetTemplateMemberId' => 'getTargetTemplateMemberId',
+        'targetImageFolderId' => 'getTargetImageFolderId',
+        'targetImageFolderMemberId' => 'getTargetImageFolderMemberId',
         'invitee' => 'getInvitee',
-        'inviter' => 'getInviter'
+        'inviter' => 'getInviter',
+        'targetTeam' => 'getTargetTeam',
+        'targetTeamMember' => 'getTargetTeamMember',
+        'targetPortal' => 'getTargetPortal',
+        'targetPortalMember' => 'getTargetPortalMember',
+        'targetTemplate' => 'getTargetTemplate',
+        'targetTemplateMember' => 'getTargetTemplateMember',
+        'targetImageFolder' => 'getTargetImageFolder',
+        'targetImageFolderMember' => 'getTargetImageFolderMember'
     );
 
     public static function getters()
@@ -227,8 +291,24 @@ class InvitationTicket implements ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['inviteeId'] = isset($data['inviteeId']) ? $data['inviteeId'] : null;
         $this->container['inviterId'] = isset($data['inviterId']) ? $data['inviterId'] : null;
+        $this->container['targetTeamId'] = isset($data['targetTeamId']) ? $data['targetTeamId'] : null;
+        $this->container['targetTeamMemberId'] = isset($data['targetTeamMemberId']) ? $data['targetTeamMemberId'] : null;
+        $this->container['targetPortalId'] = isset($data['targetPortalId']) ? $data['targetPortalId'] : null;
+        $this->container['targetPortalMemberId'] = isset($data['targetPortalMemberId']) ? $data['targetPortalMemberId'] : null;
+        $this->container['targetTemplateId'] = isset($data['targetTemplateId']) ? $data['targetTemplateId'] : null;
+        $this->container['targetTemplateMemberId'] = isset($data['targetTemplateMemberId']) ? $data['targetTemplateMemberId'] : null;
+        $this->container['targetImageFolderId'] = isset($data['targetImageFolderId']) ? $data['targetImageFolderId'] : null;
+        $this->container['targetImageFolderMemberId'] = isset($data['targetImageFolderMemberId']) ? $data['targetImageFolderMemberId'] : null;
         $this->container['invitee'] = isset($data['invitee']) ? $data['invitee'] : null;
         $this->container['inviter'] = isset($data['inviter']) ? $data['inviter'] : null;
+        $this->container['targetTeam'] = isset($data['targetTeam']) ? $data['targetTeam'] : null;
+        $this->container['targetTeamMember'] = isset($data['targetTeamMember']) ? $data['targetTeamMember'] : null;
+        $this->container['targetPortal'] = isset($data['targetPortal']) ? $data['targetPortal'] : null;
+        $this->container['targetPortalMember'] = isset($data['targetPortalMember']) ? $data['targetPortalMember'] : null;
+        $this->container['targetTemplate'] = isset($data['targetTemplate']) ? $data['targetTemplate'] : null;
+        $this->container['targetTemplateMember'] = isset($data['targetTemplateMember']) ? $data['targetTemplateMember'] : null;
+        $this->container['targetImageFolder'] = isset($data['targetImageFolder']) ? $data['targetImageFolder'] : null;
+        $this->container['targetImageFolderMember'] = isset($data['targetImageFolderMember']) ? $data['targetImageFolderMember'] : null;
     }
 
     /**
@@ -545,6 +625,174 @@ class InvitationTicket implements ArrayAccess
     }
 
     /**
+     * Gets targetTeamId
+     * @return string
+     */
+    public function getTargetTeamId()
+    {
+        return $this->container['targetTeamId'];
+    }
+
+    /**
+     * Sets targetTeamId
+     * @param string $targetTeamId
+     * @return $this
+     */
+    public function setTargetTeamId($targetTeamId)
+    {
+        $this->container['targetTeamId'] = $targetTeamId;
+
+        return $this;
+    }
+
+    /**
+     * Gets targetTeamMemberId
+     * @return string
+     */
+    public function getTargetTeamMemberId()
+    {
+        return $this->container['targetTeamMemberId'];
+    }
+
+    /**
+     * Sets targetTeamMemberId
+     * @param string $targetTeamMemberId
+     * @return $this
+     */
+    public function setTargetTeamMemberId($targetTeamMemberId)
+    {
+        $this->container['targetTeamMemberId'] = $targetTeamMemberId;
+
+        return $this;
+    }
+
+    /**
+     * Gets targetPortalId
+     * @return string
+     */
+    public function getTargetPortalId()
+    {
+        return $this->container['targetPortalId'];
+    }
+
+    /**
+     * Sets targetPortalId
+     * @param string $targetPortalId
+     * @return $this
+     */
+    public function setTargetPortalId($targetPortalId)
+    {
+        $this->container['targetPortalId'] = $targetPortalId;
+
+        return $this;
+    }
+
+    /**
+     * Gets targetPortalMemberId
+     * @return string
+     */
+    public function getTargetPortalMemberId()
+    {
+        return $this->container['targetPortalMemberId'];
+    }
+
+    /**
+     * Sets targetPortalMemberId
+     * @param string $targetPortalMemberId
+     * @return $this
+     */
+    public function setTargetPortalMemberId($targetPortalMemberId)
+    {
+        $this->container['targetPortalMemberId'] = $targetPortalMemberId;
+
+        return $this;
+    }
+
+    /**
+     * Gets targetTemplateId
+     * @return string
+     */
+    public function getTargetTemplateId()
+    {
+        return $this->container['targetTemplateId'];
+    }
+
+    /**
+     * Sets targetTemplateId
+     * @param string $targetTemplateId
+     * @return $this
+     */
+    public function setTargetTemplateId($targetTemplateId)
+    {
+        $this->container['targetTemplateId'] = $targetTemplateId;
+
+        return $this;
+    }
+
+    /**
+     * Gets targetTemplateMemberId
+     * @return string
+     */
+    public function getTargetTemplateMemberId()
+    {
+        return $this->container['targetTemplateMemberId'];
+    }
+
+    /**
+     * Sets targetTemplateMemberId
+     * @param string $targetTemplateMemberId
+     * @return $this
+     */
+    public function setTargetTemplateMemberId($targetTemplateMemberId)
+    {
+        $this->container['targetTemplateMemberId'] = $targetTemplateMemberId;
+
+        return $this;
+    }
+
+    /**
+     * Gets targetImageFolderId
+     * @return string
+     */
+    public function getTargetImageFolderId()
+    {
+        return $this->container['targetImageFolderId'];
+    }
+
+    /**
+     * Sets targetImageFolderId
+     * @param string $targetImageFolderId
+     * @return $this
+     */
+    public function setTargetImageFolderId($targetImageFolderId)
+    {
+        $this->container['targetImageFolderId'] = $targetImageFolderId;
+
+        return $this;
+    }
+
+    /**
+     * Gets targetImageFolderMemberId
+     * @return string
+     */
+    public function getTargetImageFolderMemberId()
+    {
+        return $this->container['targetImageFolderMemberId'];
+    }
+
+    /**
+     * Sets targetImageFolderMemberId
+     * @param string $targetImageFolderMemberId
+     * @return $this
+     */
+    public function setTargetImageFolderMemberId($targetImageFolderMemberId)
+    {
+        $this->container['targetImageFolderMemberId'] = $targetImageFolderMemberId;
+
+        return $this;
+    }
+
+    /**
      * Gets invitee
      * @return \Swagger\Client\Model\Customer
      */
@@ -582,6 +830,174 @@ class InvitationTicket implements ArrayAccess
     public function setInviter($inviter)
     {
         $this->container['inviter'] = $inviter;
+
+        return $this;
+    }
+
+    /**
+     * Gets targetTeam
+     * @return \Swagger\Client\Model\Team
+     */
+    public function getTargetTeam()
+    {
+        return $this->container['targetTeam'];
+    }
+
+    /**
+     * Sets targetTeam
+     * @param \Swagger\Client\Model\Team $targetTeam
+     * @return $this
+     */
+    public function setTargetTeam($targetTeam)
+    {
+        $this->container['targetTeam'] = $targetTeam;
+
+        return $this;
+    }
+
+    /**
+     * Gets targetTeamMember
+     * @return \Swagger\Client\Model\TeamMember
+     */
+    public function getTargetTeamMember()
+    {
+        return $this->container['targetTeamMember'];
+    }
+
+    /**
+     * Sets targetTeamMember
+     * @param \Swagger\Client\Model\TeamMember $targetTeamMember
+     * @return $this
+     */
+    public function setTargetTeamMember($targetTeamMember)
+    {
+        $this->container['targetTeamMember'] = $targetTeamMember;
+
+        return $this;
+    }
+
+    /**
+     * Gets targetPortal
+     * @return \Swagger\Client\Model\Portal
+     */
+    public function getTargetPortal()
+    {
+        return $this->container['targetPortal'];
+    }
+
+    /**
+     * Sets targetPortal
+     * @param \Swagger\Client\Model\Portal $targetPortal
+     * @return $this
+     */
+    public function setTargetPortal($targetPortal)
+    {
+        $this->container['targetPortal'] = $targetPortal;
+
+        return $this;
+    }
+
+    /**
+     * Gets targetPortalMember
+     * @return \Swagger\Client\Model\PortalMember
+     */
+    public function getTargetPortalMember()
+    {
+        return $this->container['targetPortalMember'];
+    }
+
+    /**
+     * Sets targetPortalMember
+     * @param \Swagger\Client\Model\PortalMember $targetPortalMember
+     * @return $this
+     */
+    public function setTargetPortalMember($targetPortalMember)
+    {
+        $this->container['targetPortalMember'] = $targetPortalMember;
+
+        return $this;
+    }
+
+    /**
+     * Gets targetTemplate
+     * @return \Swagger\Client\Model\Template
+     */
+    public function getTargetTemplate()
+    {
+        return $this->container['targetTemplate'];
+    }
+
+    /**
+     * Sets targetTemplate
+     * @param \Swagger\Client\Model\Template $targetTemplate
+     * @return $this
+     */
+    public function setTargetTemplate($targetTemplate)
+    {
+        $this->container['targetTemplate'] = $targetTemplate;
+
+        return $this;
+    }
+
+    /**
+     * Gets targetTemplateMember
+     * @return \Swagger\Client\Model\TemplateMember
+     */
+    public function getTargetTemplateMember()
+    {
+        return $this->container['targetTemplateMember'];
+    }
+
+    /**
+     * Sets targetTemplateMember
+     * @param \Swagger\Client\Model\TemplateMember $targetTemplateMember
+     * @return $this
+     */
+    public function setTargetTemplateMember($targetTemplateMember)
+    {
+        $this->container['targetTemplateMember'] = $targetTemplateMember;
+
+        return $this;
+    }
+
+    /**
+     * Gets targetImageFolder
+     * @return \Swagger\Client\Model\ImageFolder
+     */
+    public function getTargetImageFolder()
+    {
+        return $this->container['targetImageFolder'];
+    }
+
+    /**
+     * Sets targetImageFolder
+     * @param \Swagger\Client\Model\ImageFolder $targetImageFolder
+     * @return $this
+     */
+    public function setTargetImageFolder($targetImageFolder)
+    {
+        $this->container['targetImageFolder'] = $targetImageFolder;
+
+        return $this;
+    }
+
+    /**
+     * Gets targetImageFolderMember
+     * @return \Swagger\Client\Model\ImageFolderMember
+     */
+    public function getTargetImageFolderMember()
+    {
+        return $this->container['targetImageFolderMember'];
+    }
+
+    /**
+     * Sets targetImageFolderMember
+     * @param \Swagger\Client\Model\ImageFolderMember $targetImageFolderMember
+     * @return $this
+     */
+    public function setTargetImageFolderMember($targetImageFolderMember)
+    {
+        $this->container['targetImageFolderMember'] = $targetImageFolderMember;
 
         return $this;
     }

@@ -192,6 +192,70 @@ class InvitationTicketTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "targetTeamId"
+     */
+    public function testPropertyTargetTeamId()
+    {
+
+    }
+
+    /**
+     * Test attribute "targetTeamMemberId"
+     */
+    public function testPropertyTargetTeamMemberId()
+    {
+
+    }
+
+    /**
+     * Test attribute "targetPortalId"
+     */
+    public function testPropertyTargetPortalId()
+    {
+
+    }
+
+    /**
+     * Test attribute "targetPortalMemberId"
+     */
+    public function testPropertyTargetPortalMemberId()
+    {
+
+    }
+
+    /**
+     * Test attribute "targetTemplateId"
+     */
+    public function testPropertyTargetTemplateId()
+    {
+
+    }
+
+    /**
+     * Test attribute "targetTemplateMemberId"
+     */
+    public function testPropertyTargetTemplateMemberId()
+    {
+
+    }
+
+    /**
+     * Test attribute "targetImageFolderId"
+     */
+    public function testPropertyTargetImageFolderId()
+    {
+
+    }
+
+    /**
+     * Test attribute "targetImageFolderMemberId"
+     */
+    public function testPropertyTargetImageFolderMemberId()
+    {
+
+    }
+
+    /**
      * Test attribute "invitee"
      */
     public function testPropertyInvitee()
@@ -203,6 +267,70 @@ class InvitationTicketTest extends \PHPUnit_Framework_TestCase
      * Test attribute "inviter"
      */
     public function testPropertyInviter()
+    {
+
+    }
+
+    /**
+     * Test attribute "targetTeam"
+     */
+    public function testPropertyTargetTeam()
+    {
+
+    }
+
+    /**
+     * Test attribute "targetTeamMember"
+     */
+    public function testPropertyTargetTeamMember()
+    {
+
+    }
+
+    /**
+     * Test attribute "targetPortal"
+     */
+    public function testPropertyTargetPortal()
+    {
+
+    }
+
+    /**
+     * Test attribute "targetPortalMember"
+     */
+    public function testPropertyTargetPortalMember()
+    {
+
+    }
+
+    /**
+     * Test attribute "targetTemplate"
+     */
+    public function testPropertyTargetTemplate()
+    {
+
+    }
+
+    /**
+     * Test attribute "targetTemplateMember"
+     */
+    public function testPropertyTargetTemplateMember()
+    {
+
+    }
+
+    /**
+     * Test attribute "targetImageFolder"
+     */
+    public function testPropertyTargetImageFolder()
+    {
+
+    }
+
+    /**
+     * Test attribute "targetImageFolderMember"
+     */
+    public function testPropertyTargetImageFolderMember()
     {
 
     }

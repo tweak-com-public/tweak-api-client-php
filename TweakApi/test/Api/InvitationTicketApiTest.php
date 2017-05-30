@@ -244,6 +244,94 @@ class InvitationTicketApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for invitationTicketsIdTargetImageFolderGet
+     *
+     * Fetches belongsTo relation targetImageFolder..
+     *
+     */
+    public function testInvitationTicketsIdTargetImageFolderGet()
+    {
+
+    }
+
+    /**
+     * Test case for invitationTicketsIdTargetImageFolderMemberGet
+     *
+     * Fetches belongsTo relation targetImageFolderMember..
+     *
+     */
+    public function testInvitationTicketsIdTargetImageFolderMemberGet()
+    {
+
+    }
+
+    /**
+     * Test case for invitationTicketsIdTargetPortalGet
+     *
+     * Fetches belongsTo relation targetPortal..
+     *
+     */
+    public function testInvitationTicketsIdTargetPortalGet()
+    {
+
+    }
+
+    /**
+     * Test case for invitationTicketsIdTargetPortalMemberGet
+     *
+     * Fetches belongsTo relation targetPortalMember..
+     *
+     */
+    public function testInvitationTicketsIdTargetPortalMemberGet()
+    {
+
+    }
+
+    /**
+     * Test case for invitationTicketsIdTargetTeamGet
+     *
+     * Fetches belongsTo relation targetTeam..
+     *
+     */
+    public function testInvitationTicketsIdTargetTeamGet()
+    {
+
+    }
+
+    /**
+     * Test case for invitationTicketsIdTargetTeamMemberGet
+     *
+     * Fetches belongsTo relation targetTeamMember..
+     *
+     */
+    public function testInvitationTicketsIdTargetTeamMemberGet()
+    {
+
+    }
+
+    /**
+     * Test case for invitationTicketsIdTargetTemplateGet
+     *
+     * Fetches belongsTo relation targetTemplate..
+     *
+     */
+    public function testInvitationTicketsIdTargetTemplateGet()
+    {
+
+    }
+
+    /**
+     * Test case for invitationTicketsIdTargetTemplateMemberGet
+     *
+     * Fetches belongsTo relation targetTemplateMember..
+     *
+     */
+    public function testInvitationTicketsIdTargetTemplateMemberGet()
+    {
+
+    }
+
+    /**
      * Test case for invitationTicketsPatch
      *
      * Patch an existing model instance or insert a new one into the data source..
