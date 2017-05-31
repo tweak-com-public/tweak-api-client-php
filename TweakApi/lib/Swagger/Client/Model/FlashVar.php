@@ -86,6 +86,9 @@ class FlashVar implements ArrayAccess
         'showPluginImages' => 'bool',
         'pluginImageLibraries' => 'string[]',
         'isTweakTemplate' => 'bool',
+        'showItemNavigator' => 'bool',
+        'showItemCounts' => 'bool',
+        'showEditableItemToggle' => 'bool',
         'id' => 'string',
         'teamId' => 'string',
         'team' => '\Swagger\Client\Model\Team',
@@ -131,6 +134,9 @@ class FlashVar implements ArrayAccess
         'showPluginImages' => 'showPluginImages',
         'pluginImageLibraries' => 'pluginImageLibraries',
         'isTweakTemplate' => 'isTweakTemplate',
+        'showItemNavigator' => 'showItemNavigator',
+        'showItemCounts' => 'showItemCounts',
+        'showEditableItemToggle' => 'showEditableItemToggle',
         'id' => 'id',
         'teamId' => 'teamId',
         'team' => 'team',
@@ -176,6 +182,9 @@ class FlashVar implements ArrayAccess
         'showPluginImages' => 'setShowPluginImages',
         'pluginImageLibraries' => 'setPluginImageLibraries',
         'isTweakTemplate' => 'setIsTweakTemplate',
+        'showItemNavigator' => 'setShowItemNavigator',
+        'showItemCounts' => 'setShowItemCounts',
+        'showEditableItemToggle' => 'setShowEditableItemToggle',
         'id' => 'setId',
         'teamId' => 'setTeamId',
         'team' => 'setTeam',
@@ -221,6 +230,9 @@ class FlashVar implements ArrayAccess
         'showPluginImages' => 'getShowPluginImages',
         'pluginImageLibraries' => 'getPluginImageLibraries',
         'isTweakTemplate' => 'getIsTweakTemplate',
+        'showItemNavigator' => 'getShowItemNavigator',
+        'showItemCounts' => 'getShowItemCounts',
+        'showEditableItemToggle' => 'getShowEditableItemToggle',
         'id' => 'getId',
         'teamId' => 'getTeamId',
         'team' => 'getTeam',
@@ -277,6 +289,9 @@ class FlashVar implements ArrayAccess
         $this->container['showPluginImages'] = isset($data['showPluginImages']) ? $data['showPluginImages'] : false;
         $this->container['pluginImageLibraries'] = isset($data['pluginImageLibraries']) ? $data['pluginImageLibraries'] : null;
         $this->container['isTweakTemplate'] = isset($data['isTweakTemplate']) ? $data['isTweakTemplate'] : false;
+        $this->container['showItemNavigator'] = isset($data['showItemNavigator']) ? $data['showItemNavigator'] : false;
+        $this->container['showItemCounts'] = isset($data['showItemCounts']) ? $data['showItemCounts'] : false;
+        $this->container['showEditableItemToggle'] = isset($data['showEditableItemToggle']) ? $data['showEditableItemToggle'] : false;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['teamId'] = isset($data['teamId']) ? $data['teamId'] : null;
         $this->container['team'] = isset($data['team']) ? $data['team'] : null;
@@ -731,6 +746,69 @@ class FlashVar implements ArrayAccess
     public function setIsTweakTemplate($isTweakTemplate)
     {
         $this->container['isTweakTemplate'] = $isTweakTemplate;
+
+        return $this;
+    }
+
+    /**
+     * Gets showItemNavigator
+     * @return bool
+     */
+    public function getShowItemNavigator()
+    {
+        return $this->container['showItemNavigator'];
+    }
+
+    /**
+     * Sets showItemNavigator
+     * @param bool $showItemNavigator
+     * @return $this
+     */
+    public function setShowItemNavigator($showItemNavigator)
+    {
+        $this->container['showItemNavigator'] = $showItemNavigator;
+
+        return $this;
+    }
+
+    /**
+     * Gets showItemCounts
+     * @return bool
+     */
+    public function getShowItemCounts()
+    {
+        return $this->container['showItemCounts'];
+    }
+
+    /**
+     * Sets showItemCounts
+     * @param bool $showItemCounts
+     * @return $this
+     */
+    public function setShowItemCounts($showItemCounts)
+    {
+        $this->container['showItemCounts'] = $showItemCounts;
+
+        return $this;
+    }
+
+    /**
+     * Gets showEditableItemToggle
+     * @return bool
+     */
+    public function getShowEditableItemToggle()
+    {
+        return $this->container['showEditableItemToggle'];
+    }
+
+    /**
+     * Sets showEditableItemToggle
+     * @param bool $showEditableItemToggle
+     * @return $this
+     */
+    public function setShowEditableItemToggle($showEditableItemToggle)
+    {
+        $this->container['showEditableItemToggle'] = $showEditableItemToggle;
 
         return $this;
     }

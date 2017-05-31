@@ -256,6 +256,30 @@ class FlashVarTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "showItemNavigator"
+     */
+    public function testPropertyShowItemNavigator()
+    {
+
+    }
+
+    /**
+     * Test attribute "showItemCounts"
+     */
+    public function testPropertyShowItemCounts()
+    {
+
+    }
+
+    /**
+     * Test attribute "showEditableItemToggle"
+     */
+    public function testPropertyShowEditableItemToggle()
+    {
+
+    }
+
+    /**
      * Test attribute "id"
      */
     public function testPropertyId()
