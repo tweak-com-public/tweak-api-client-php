@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **string** |  | 
-**logo** | **string** |  | [optional] 
+**logo** | **object** |  | [optional] 
 **status** | **string** |  | [optional] [default to 'private']
 **language** | **string** |  | [optional] [default to 'en']
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 

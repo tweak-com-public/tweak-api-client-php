@@ -84,7 +84,7 @@ Class | Method | HTTP request | Description
 *CustomerApi* | [**customersChangePasswordPost**](docs/Api/CustomerApi.md#customerschangepasswordpost) | **POST** /Customers/change-password | Change a user&#39;s password.
 *CustomerApi* | [**customersChangeStreamGet**](docs/Api/CustomerApi.md#customerschangestreamget) | **GET** /Customers/change-stream | Create a change stream.
 *CustomerApi* | [**customersChangeStreamPost**](docs/Api/CustomerApi.md#customerschangestreampost) | **POST** /Customers/change-stream | Create a change stream.
-*CustomerApi* | [**customersConfirmGet**](docs/Api/CustomerApi.md#customersconfirmget) | **GET** /Customers/confirm | Confirm a user registration with email verification token.
+*CustomerApi* | [**customersConfirmGet**](docs/Api/CustomerApi.md#customersconfirmget) | **GET** /Customers/confirm | Confirm a user registration with identity verification token.
 *CustomerApi* | [**customersCountGet**](docs/Api/CustomerApi.md#customerscountget) | **GET** /Customers/count | Count instances of the model matched by where from the data source.
 *CustomerApi* | [**customersFindOneGet**](docs/Api/CustomerApi.md#customersfindoneget) | **GET** /Customers/findOne | Find first instance of the model matched by filter from the data source.
 *CustomerApi* | [**customersGet**](docs/Api/CustomerApi.md#customersget) | **GET** /Customers | Find all instances of the model matched by filter from the data source.
@@ -197,6 +197,7 @@ Class | Method | HTTP request | Description
 *CustomerApi* | [**customersIdTeamsTeamIdChangePost**](docs/Api/CustomerApi.md#customersidteamsteamidchangepost) | **POST** /Customers/{id}/teams/{teamId}/change | Move authentication to a Team
 *CustomerApi* | [**customersIdTeamsTeamIdPortalsPortalIdChangePost**](docs/Api/CustomerApi.md#customersidteamsteamidportalsportalidchangepost) | **POST** /Customers/{id}/teams/{teamId}/portals/{portalId}/change | Move authentication to a Portal
 *CustomerApi* | [**customersIdTokenGet**](docs/Api/CustomerApi.md#customersidtokenget) | **GET** /Customers/{id}/token | Get token info
+*CustomerApi* | [**customersIdVerifyPost**](docs/Api/CustomerApi.md#customersidverifypost) | **POST** /Customers/{id}/verify | Trigger user&#39;s identity verification with configured verifyOptions
 *CustomerApi* | [**customersInvitationTicketsTokenAcceptPost**](docs/Api/CustomerApi.md#customersinvitationticketstokenacceptpost) | **POST** /Customers/invitationTickets/{token}/accept | Accept invitation with token
 *CustomerApi* | [**customersInvitationTicketsTokenGet**](docs/Api/CustomerApi.md#customersinvitationticketstokenget) | **GET** /Customers/invitationTickets/{token} | Get invitation details with token
 *CustomerApi* | [**customersLoginPost**](docs/Api/CustomerApi.md#customersloginpost) | **POST** /Customers/login | Login a user with username/email and password.
@@ -206,6 +207,7 @@ Class | Method | HTTP request | Description
 *CustomerApi* | [**customersPut**](docs/Api/CustomerApi.md#customersput) | **PUT** /Customers | Replace an existing model instance or insert a new one into the data source.
 *CustomerApi* | [**customersRegisterPost**](docs/Api/CustomerApi.md#customersregisterpost) | **POST** /Customers/register | Create customer and assign it to a team
 *CustomerApi* | [**customersReplaceOrCreatePost**](docs/Api/CustomerApi.md#customersreplaceorcreatepost) | **POST** /Customers/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
+*CustomerApi* | [**customersResetPasswordPost**](docs/Api/CustomerApi.md#customersresetpasswordpost) | **POST** /Customers/reset-password | Reset user&#39;s password via a password-reset token.
 *CustomerApi* | [**customersResetPost**](docs/Api/CustomerApi.md#customersresetpost) | **POST** /Customers/reset | Reset password for a user with email.
 *CustomerApi* | [**customersUpdatePost**](docs/Api/CustomerApi.md#customersupdatepost) | **POST** /Customers/update | Update instances of the model matched by {{where}} from the data source.
 *CustomerApi* | [**customersUpsertWithWherePost**](docs/Api/CustomerApi.md#customersupsertwithwherepost) | **POST** /Customers/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
@@ -747,6 +749,25 @@ Class | Method | HTTP request | Description
 *PortalTemplateFolderApi* | [**portalTemplateFoldersReplaceOrCreatePost**](docs/Api/PortalTemplateFolderApi.md#portaltemplatefoldersreplaceorcreatepost) | **POST** /PortalTemplateFolders/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
 *PortalTemplateFolderApi* | [**portalTemplateFoldersUpdatePost**](docs/Api/PortalTemplateFolderApi.md#portaltemplatefoldersupdatepost) | **POST** /PortalTemplateFolders/update | Update instances of the model matched by {{where}} from the data source.
 *PortalTemplateFolderApi* | [**portalTemplateFoldersUpsertWithWherePost**](docs/Api/PortalTemplateFolderApi.md#portaltemplatefoldersupsertwithwherepost) | **POST** /PortalTemplateFolders/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
+*QTaskApi* | [**qTasksChangeStreamGet**](docs/Api/QTaskApi.md#qtaskschangestreamget) | **GET** /QTasks/change-stream | Create a change stream.
+*QTaskApi* | [**qTasksChangeStreamPost**](docs/Api/QTaskApi.md#qtaskschangestreampost) | **POST** /QTasks/change-stream | Create a change stream.
+*QTaskApi* | [**qTasksCountGet**](docs/Api/QTaskApi.md#qtaskscountget) | **GET** /QTasks/count | Count instances of the model matched by where from the data source.
+*QTaskApi* | [**qTasksFindOneGet**](docs/Api/QTaskApi.md#qtasksfindoneget) | **GET** /QTasks/findOne | Find first instance of the model matched by filter from the data source.
+*QTaskApi* | [**qTasksGet**](docs/Api/QTaskApi.md#qtasksget) | **GET** /QTasks | Find all instances of the model matched by filter from the data source.
+*QTaskApi* | [**qTasksIdDelete**](docs/Api/QTaskApi.md#qtasksiddelete) | **DELETE** /QTasks/{id} | Delete a model instance by {{id}} from the data source.
+*QTaskApi* | [**qTasksIdExistsGet**](docs/Api/QTaskApi.md#qtasksidexistsget) | **GET** /QTasks/{id}/exists | Check whether a model instance exists in the data source.
+*QTaskApi* | [**qTasksIdGet**](docs/Api/QTaskApi.md#qtasksidget) | **GET** /QTasks/{id} | Find a model instance by {{id}} from the data source.
+*QTaskApi* | [**qTasksIdHead**](docs/Api/QTaskApi.md#qtasksidhead) | **HEAD** /QTasks/{id} | Check whether a model instance exists in the data source.
+*QTaskApi* | [**qTasksIdItemGet**](docs/Api/QTaskApi.md#qtasksiditemget) | **GET** /QTasks/{id}/item | Fetches belongsTo relation item.
+*QTaskApi* | [**qTasksIdPatch**](docs/Api/QTaskApi.md#qtasksidpatch) | **PATCH** /QTasks/{id} | Patch attributes for a model instance and persist it into the data source.
+*QTaskApi* | [**qTasksIdPut**](docs/Api/QTaskApi.md#qtasksidput) | **PUT** /QTasks/{id} | Replace attributes for a model instance and persist it into the data source.
+*QTaskApi* | [**qTasksIdReplacePost**](docs/Api/QTaskApi.md#qtasksidreplacepost) | **POST** /QTasks/{id}/replace | Replace attributes for a model instance and persist it into the data source.
+*QTaskApi* | [**qTasksPatch**](docs/Api/QTaskApi.md#qtaskspatch) | **PATCH** /QTasks | Patch an existing model instance or insert a new one into the data source.
+*QTaskApi* | [**qTasksPost**](docs/Api/QTaskApi.md#qtaskspost) | **POST** /QTasks | Create a new instance of the model and persist it into the data source.
+*QTaskApi* | [**qTasksPut**](docs/Api/QTaskApi.md#qtasksput) | **PUT** /QTasks | Replace an existing model instance or insert a new one into the data source.
+*QTaskApi* | [**qTasksReplaceOrCreatePost**](docs/Api/QTaskApi.md#qtasksreplaceorcreatepost) | **POST** /QTasks/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
+*QTaskApi* | [**qTasksUpdatePost**](docs/Api/QTaskApi.md#qtasksupdatepost) | **POST** /QTasks/update | Update instances of the model matched by {{where}} from the data source.
+*QTaskApi* | [**qTasksUpsertWithWherePost**](docs/Api/QTaskApi.md#qtasksupsertwithwherepost) | **POST** /QTasks/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
 *TagApi* | [**tagsChangeStreamGet**](docs/Api/TagApi.md#tagschangestreamget) | **GET** /Tags/change-stream | Create a change stream.
 *TagApi* | [**tagsChangeStreamPost**](docs/Api/TagApi.md#tagschangestreampost) | **POST** /Tags/change-stream | Create a change stream.
 *TagApi* | [**tagsCountGet**](docs/Api/TagApi.md#tagscountget) | **GET** /Tags/count | Count instances of the model matched by where from the data source.
@@ -1463,11 +1484,13 @@ Class | Method | HTTP request | Description
  - [InlineResponse2002](docs/Model/InlineResponse2002.md)
  - [InlineResponse2003](docs/Model/InlineResponse2003.md)
  - [InvitationTicket](docs/Model/InvitationTicket.md)
+ - [PersistedModel](docs/Model/PersistedModel.md)
  - [Portal](docs/Model/Portal.md)
  - [PortalImageFolder](docs/Model/PortalImageFolder.md)
  - [PortalMember](docs/Model/PortalMember.md)
  - [PortalTemplate](docs/Model/PortalTemplate.md)
  - [PortalTemplateFolder](docs/Model/PortalTemplateFolder.md)
+ - [QTask](docs/Model/QTask.md)
  - [Tag](docs/Model/Tag.md)
  - [Team](docs/Model/Team.md)
  - [TeamBrand](docs/Model/TeamBrand.md)

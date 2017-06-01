@@ -68,6 +68,7 @@ class TeamMemberAccessToken implements ArrayAccess
     protected static $swaggerTypes = array(
         'id' => 'string',
         'ttl' => 'double',
+        'scopes' => 'string[]',
         'created' => '\DateTime',
         'userId' => 'string',
         'teamId' => 'string',
@@ -93,6 +94,7 @@ class TeamMemberAccessToken implements ArrayAccess
     protected static $attributeMap = array(
         'id' => 'id',
         'ttl' => 'ttl',
+        'scopes' => 'scopes',
         'created' => 'created',
         'userId' => 'userId',
         'teamId' => 'teamId',
@@ -118,6 +120,7 @@ class TeamMemberAccessToken implements ArrayAccess
     protected static $setters = array(
         'id' => 'setId',
         'ttl' => 'setTtl',
+        'scopes' => 'setScopes',
         'created' => 'setCreated',
         'userId' => 'setUserId',
         'teamId' => 'setTeamId',
@@ -143,6 +146,7 @@ class TeamMemberAccessToken implements ArrayAccess
     protected static $getters = array(
         'id' => 'getId',
         'ttl' => 'getTtl',
+        'scopes' => 'getScopes',
         'created' => 'getCreated',
         'userId' => 'getUserId',
         'teamId' => 'getTeamId',
@@ -179,6 +183,7 @@ class TeamMemberAccessToken implements ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['ttl'] = isset($data['ttl']) ? $data['ttl'] : 1209600.0;
+        $this->container['scopes'] = isset($data['scopes']) ? $data['scopes'] : null;
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
         $this->container['userId'] = isset($data['userId']) ? $data['userId'] : null;
         $this->container['teamId'] = isset($data['teamId']) ? $data['teamId'] : null;
@@ -259,6 +264,27 @@ class TeamMemberAccessToken implements ArrayAccess
     public function setTtl($ttl)
     {
         $this->container['ttl'] = $ttl;
+
+        return $this;
+    }
+
+    /**
+     * Gets scopes
+     * @return string[]
+     */
+    public function getScopes()
+    {
+        return $this->container['scopes'];
+    }
+
+    /**
+     * Sets scopes
+     * @param string[] $scopes Array of scopes granted to this access token.
+     * @return $this
+     */
+    public function setScopes($scopes)
+    {
+        $this->container['scopes'] = $scopes;
 
         return $this;
     }

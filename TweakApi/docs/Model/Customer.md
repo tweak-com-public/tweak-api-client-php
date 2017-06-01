@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**profilePicture** | **string** |  | [optional] 
+**profilePicture** | **object** |  | [optional] 
 **firstName** | **string** |  | 
 **lastName** | **string** |  | 
 **initials** | **string** |  | 

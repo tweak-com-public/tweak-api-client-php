@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** |  | 
 **ttl** | **double** | time to live in seconds (2 weeks by default) | [optional] [default to 1209600.0]
+**scopes** | **string[]** | Array of scopes granted to this access token. | [optional] 
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **userId** | **string** |  | [optional] 
 **teamId** | **string** |  | [optional] 

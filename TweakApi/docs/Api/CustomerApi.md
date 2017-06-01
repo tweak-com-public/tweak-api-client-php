@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**customersChangePasswordPost**](CustomerApi.md#customersChangePasswordPost) | **POST** /Customers/change-password | Change a user&#39;s password.
 [**customersChangeStreamGet**](CustomerApi.md#customersChangeStreamGet) | **GET** /Customers/change-stream | Create a change stream.
 [**customersChangeStreamPost**](CustomerApi.md#customersChangeStreamPost) | **POST** /Customers/change-stream | Create a change stream.
-[**customersConfirmGet**](CustomerApi.md#customersConfirmGet) | **GET** /Customers/confirm | Confirm a user registration with email verification token.
+[**customersConfirmGet**](CustomerApi.md#customersConfirmGet) | **GET** /Customers/confirm | Confirm a user registration with identity verification token.
 [**customersCountGet**](CustomerApi.md#customersCountGet) | **GET** /Customers/count | Count instances of the model matched by where from the data source.
 [**customersFindOneGet**](CustomerApi.md#customersFindOneGet) | **GET** /Customers/findOne | Find first instance of the model matched by filter from the data source.
 [**customersGet**](CustomerApi.md#customersGet) | **GET** /Customers | Find all instances of the model matched by filter from the data source.
@@ -120,6 +120,7 @@ Method | HTTP request | Description
 [**customersIdTeamsTeamIdChangePost**](CustomerApi.md#customersIdTeamsTeamIdChangePost) | **POST** /Customers/{id}/teams/{teamId}/change | Move authentication to a Team
 [**customersIdTeamsTeamIdPortalsPortalIdChangePost**](CustomerApi.md#customersIdTeamsTeamIdPortalsPortalIdChangePost) | **POST** /Customers/{id}/teams/{teamId}/portals/{portalId}/change | Move authentication to a Portal
 [**customersIdTokenGet**](CustomerApi.md#customersIdTokenGet) | **GET** /Customers/{id}/token | Get token info
+[**customersIdVerifyPost**](CustomerApi.md#customersIdVerifyPost) | **POST** /Customers/{id}/verify | Trigger user&#39;s identity verification with configured verifyOptions
 [**customersInvitationTicketsTokenAcceptPost**](CustomerApi.md#customersInvitationTicketsTokenAcceptPost) | **POST** /Customers/invitationTickets/{token}/accept | Accept invitation with token
 [**customersInvitationTicketsTokenGet**](CustomerApi.md#customersInvitationTicketsTokenGet) | **GET** /Customers/invitationTickets/{token} | Get invitation details with token
 [**customersLoginPost**](CustomerApi.md#customersLoginPost) | **POST** /Customers/login | Login a user with username/email and password.
@@ -129,6 +130,7 @@ Method | HTTP request | Description
 [**customersPut**](CustomerApi.md#customersPut) | **PUT** /Customers | Replace an existing model instance or insert a new one into the data source.
 [**customersRegisterPost**](CustomerApi.md#customersRegisterPost) | **POST** /Customers/register | Create customer and assign it to a team
 [**customersReplaceOrCreatePost**](CustomerApi.md#customersReplaceOrCreatePost) | **POST** /Customers/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
+[**customersResetPasswordPost**](CustomerApi.md#customersResetPasswordPost) | **POST** /Customers/reset-password | Reset user&#39;s password via a password-reset token.
 [**customersResetPost**](CustomerApi.md#customersResetPost) | **POST** /Customers/reset | Reset password for a user with email.
 [**customersUpdatePost**](CustomerApi.md#customersUpdatePost) | **POST** /Customers/update | Update instances of the model matched by {{where}} from the data source.
 [**customersUpsertWithWherePost**](CustomerApi.md#customersUpsertWithWherePost) | **POST** /Customers/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
@@ -282,7 +284,7 @@ Name | Type | Description  | Notes
 # **customersConfirmGet**
 > customersConfirmGet($uid, $token, $redirect)
 
-Confirm a user registration with email verification token.
+Confirm a user registration with identity verification token.
 
 ### Example
 ```php
@@ -6020,6 +6022,53 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **customersIdVerifyPost**
+> customersIdVerifyPost($id)
+
+Trigger user's identity verification with configured verifyOptions
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+$id = "id_example"; // string | Customer id
+
+try {
+    $api_instance->customersIdVerifyPost($id);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersIdVerifyPost: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Customer id |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **customersInvitationTicketsTokenAcceptPost**
 > \Swagger\Client\Model\InvitationTicket customersInvitationTicketsTokenAcceptPost($token, $data)
 
@@ -6439,6 +6488,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\Customer**](../Model/Customer.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **customersResetPasswordPost**
+> customersResetPasswordPost($newPassword)
+
+Reset user's password via a password-reset token.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+$newPassword = "newPassword_example"; // string | 
+
+try {
+    $api_instance->customersResetPasswordPost($newPassword);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersResetPasswordPost: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **newPassword** | **string**|  |
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * TeamMemberAccessTokenTest
+ * PersistedModelTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Tweak\Api;
 
 /**
- * TeamMemberAccessTokenTest Class Doc Comment
+ * PersistedModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description TeamMemberAccessToken
+// * @description PersistedModel
 /**
  * @package     Tweak\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class TeamMemberAccessTokenTest extends \PHPUnit_Framework_TestCase
+class PersistedModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,9 +88,9 @@ class TeamMemberAccessTokenTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "TeamMemberAccessToken"
+     * Test "PersistedModel"
      */
-    public function testTeamMemberAccessToken()
+    public function testPersistedModel()
     {
 
     }
@@ -99,110 +99,6 @@ class TeamMemberAccessTokenTest extends \PHPUnit_Framework_TestCase
      * Test attribute "id"
      */
     public function testPropertyId()
-    {
-
-    }
-
-    /**
-     * Test attribute "ttl"
-     */
-    public function testPropertyTtl()
-    {
-
-    }
-
-    /**
-     * Test attribute "scopes"
-     */
-    public function testPropertyScopes()
-    {
-
-    }
-
-    /**
-     * Test attribute "created"
-     */
-    public function testPropertyCreated()
-    {
-
-    }
-
-    /**
-     * Test attribute "userId"
-     */
-    public function testPropertyUserId()
-    {
-
-    }
-
-    /**
-     * Test attribute "teamId"
-     */
-    public function testPropertyTeamId()
-    {
-
-    }
-
-    /**
-     * Test attribute "teamMemberId"
-     */
-    public function testPropertyTeamMemberId()
-    {
-
-    }
-
-    /**
-     * Test attribute "portalId"
-     */
-    public function testPropertyPortalId()
-    {
-
-    }
-
-    /**
-     * Test attribute "portalMemberId"
-     */
-    public function testPropertyPortalMemberId()
-    {
-
-    }
-
-    /**
-     * Test attribute "customer"
-     */
-    public function testPropertyCustomer()
-    {
-
-    }
-
-    /**
-     * Test attribute "team"
-     */
-    public function testPropertyTeam()
-    {
-
-    }
-
-    /**
-     * Test attribute "teamMember"
-     */
-    public function testPropertyTeamMember()
-    {
-
-    }
-
-    /**
-     * Test attribute "portal"
-     */
-    public function testPropertyPortal()
-    {
-
-    }
-
-    /**
-     * Test attribute "portalMember"
-     */
-    public function testPropertyPortalMember()
     {
 
     }

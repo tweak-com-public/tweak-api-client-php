@@ -1,6 +1,6 @@
 <?php
 /**
- * TeamMemberAccessTokenTest
+ * QTaskTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Tweak\Api;
 
 /**
- * TeamMemberAccessTokenTest Class Doc Comment
+ * QTaskTest Class Doc Comment
  *
  * @category    Class */
-// * @description TeamMemberAccessToken
+// * @description QTask
 /**
  * @package     Tweak\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class TeamMemberAccessTokenTest extends \PHPUnit_Framework_TestCase
+class QTaskTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,9 +88,129 @@ class TeamMemberAccessTokenTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "TeamMemberAccessToken"
+     * Test "QTask"
      */
-    public function testTeamMemberAccessToken()
+    public function testQTask()
+    {
+
+    }
+
+    /**
+     * Test attribute "chain"
+     */
+    public function testPropertyChain()
+    {
+
+    }
+
+    /**
+     * Test attribute "events"
+     */
+    public function testPropertyEvents()
+    {
+
+    }
+
+    /**
+     * Test attribute "status"
+     */
+    public function testPropertyStatus()
+    {
+
+    }
+
+    /**
+     * Test attribute "params"
+     */
+    public function testPropertyParams()
+    {
+
+    }
+
+    /**
+     * Test attribute "queue"
+     */
+    public function testPropertyQueue()
+    {
+
+    }
+
+    /**
+     * Test attribute "count"
+     */
+    public function testPropertyCount()
+    {
+
+    }
+
+    /**
+     * Test attribute "attempts"
+     */
+    public function testPropertyAttempts()
+    {
+
+    }
+
+    /**
+     * Test attribute "remaining"
+     */
+    public function testPropertyRemaining()
+    {
+
+    }
+
+    /**
+     * Test attribute "delay"
+     */
+    public function testPropertyDelay()
+    {
+
+    }
+
+    /**
+     * Test attribute "priority"
+     */
+    public function testPropertyPriority()
+    {
+
+    }
+
+    /**
+     * Test attribute "ended"
+     */
+    public function testPropertyEnded()
+    {
+
+    }
+
+    /**
+     * Test attribute "enqueued"
+     */
+    public function testPropertyEnqueued()
+    {
+
+    }
+
+    /**
+     * Test attribute "result"
+     */
+    public function testPropertyResult()
+    {
+
+    }
+
+    /**
+     * Test attribute "error"
+     */
+    public function testPropertyError()
+    {
+
+    }
+
+    /**
+     * Test attribute "stack"
+     */
+    public function testPropertyStack()
     {
 
     }
@@ -104,105 +224,17 @@ class TeamMemberAccessTokenTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "ttl"
+     * Test attribute "itemId"
      */
-    public function testPropertyTtl()
+    public function testPropertyItemId()
     {
 
     }
 
     /**
-     * Test attribute "scopes"
+     * Test attribute "itemType"
      */
-    public function testPropertyScopes()
-    {
-
-    }
-
-    /**
-     * Test attribute "created"
-     */
-    public function testPropertyCreated()
-    {
-
-    }
-
-    /**
-     * Test attribute "userId"
-     */
-    public function testPropertyUserId()
-    {
-
-    }
-
-    /**
-     * Test attribute "teamId"
-     */
-    public function testPropertyTeamId()
-    {
-
-    }
-
-    /**
-     * Test attribute "teamMemberId"
-     */
-    public function testPropertyTeamMemberId()
-    {
-
-    }
-
-    /**
-     * Test attribute "portalId"
-     */
-    public function testPropertyPortalId()
-    {
-
-    }
-
-    /**
-     * Test attribute "portalMemberId"
-     */
-    public function testPropertyPortalMemberId()
-    {
-
-    }
-
-    /**
-     * Test attribute "customer"
-     */
-    public function testPropertyCustomer()
-    {
-
-    }
-
-    /**
-     * Test attribute "team"
-     */
-    public function testPropertyTeam()
-    {
-
-    }
-
-    /**
-     * Test attribute "teamMember"
-     */
-    public function testPropertyTeamMember()
-    {
-
-    }
-
-    /**
-     * Test attribute "portal"
-     */
-    public function testPropertyPortal()
-    {
-
-    }
-
-    /**
-     * Test attribute "portalMember"
-     */
-    public function testPropertyPortalMember()
+    public function testPropertyItemType()
     {
 
     }

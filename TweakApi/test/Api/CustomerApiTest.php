@@ -125,7 +125,7 @@ class CustomerApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for customersConfirmGet
      *
-     * Confirm a user registration with email verification token..
+     * Confirm a user registration with identity verification token..
      *
      */
     public function testCustomersConfirmGet()
@@ -1366,6 +1366,17 @@ class CustomerApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for customersIdVerifyPost
+     *
+     * Trigger user's identity verification with configured verifyOptions.
+     *
+     */
+    public function testCustomersIdVerifyPost()
+    {
+
+    }
+
+    /**
      * Test case for customersInvitationTicketsTokenAcceptPost
      *
      * Accept invitation with token.
@@ -1460,6 +1471,17 @@ class CustomerApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testCustomersReplaceOrCreatePost()
+    {
+
+    }
+
+    /**
+     * Test case for customersResetPasswordPost
+     *
+     * Reset user's password via a password-reset token..
+     *
+     */
+    public function testCustomersResetPasswordPost()
     {
 
     }

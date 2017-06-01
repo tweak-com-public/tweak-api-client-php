@@ -361,7 +361,7 @@ class CustomerApi
     /**
      * Operation customersConfirmGet
      *
-     * Confirm a user registration with email verification token.
+     * Confirm a user registration with identity verification token.
      *
      * @param string $uid  (required)
      * @param string $token  (required)
@@ -378,7 +378,7 @@ class CustomerApi
     /**
      * Operation customersConfirmGetWithHttpInfo
      *
-     * Confirm a user registration with email verification token.
+     * Confirm a user registration with identity verification token.
      *
      * @param string $uid  (required)
      * @param string $token  (required)
@@ -12348,6 +12348,92 @@ class CustomerApi
     }
 
     /**
+     * Operation customersIdVerifyPost
+     *
+     * Trigger user's identity verification with configured verifyOptions
+     *
+     * @param string $id Customer id (required)
+     * @return void
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function customersIdVerifyPost($id)
+    {
+        list($response) = $this->customersIdVerifyPostWithHttpInfo($id);
+        return $response;
+    }
+
+    /**
+     * Operation customersIdVerifyPostWithHttpInfo
+     *
+     * Trigger user's identity verification with configured verifyOptions
+     *
+     * @param string $id Customer id (required)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function customersIdVerifyPostWithHttpInfo($id)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling customersIdVerifyPost');
+        }
+        // parse inputs
+        $resourcePath = "/Customers/{id}/verify";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/Customers/{id}/verify'
+            );
+
+            return array(null, $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation customersInvitationTicketsTokenAcceptPost
      *
      * Accept invitation with token
@@ -13108,6 +13194,88 @@ class CustomerApi
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Customer', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation customersResetPasswordPost
+     *
+     * Reset user's password via a password-reset token.
+     *
+     * @param string $newPassword  (required)
+     * @return void
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function customersResetPasswordPost($newPassword)
+    {
+        list($response) = $this->customersResetPasswordPostWithHttpInfo($newPassword);
+        return $response;
+    }
+
+    /**
+     * Operation customersResetPasswordPostWithHttpInfo
+     *
+     * Reset user's password via a password-reset token.
+     *
+     * @param string $newPassword  (required)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function customersResetPasswordPostWithHttpInfo($newPassword)
+    {
+        // verify the required parameter 'newPassword' is set
+        if ($newPassword === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $newPassword when calling customersResetPasswordPost');
+        }
+        // parse inputs
+        $resourcePath = "/Customers/reset-password";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // form params
+        if ($newPassword !== null) {
+            $formParams['newPassword'] = $this->apiClient->getSerializer()->toFormValue($newPassword);
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/Customers/reset-password'
+            );
+
+            return array(null, $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
             }
 
             throw $e;

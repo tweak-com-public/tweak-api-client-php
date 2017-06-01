@@ -67,7 +67,7 @@ class Portal implements ArrayAccess
       */
     protected static $swaggerTypes = array(
         'name' => 'string',
-        'logo' => 'string',
+        'logo' => 'object',
         'status' => 'string',
         'language' => 'string',
         'created' => '\DateTime',
@@ -610,7 +610,7 @@ class Portal implements ArrayAccess
 
     /**
      * Gets logo
-     * @return string
+     * @return object
      */
     public function getLogo()
     {
@@ -619,7 +619,7 @@ class Portal implements ArrayAccess
 
     /**
      * Sets logo
-     * @param string $logo
+     * @param object $logo
      * @return $this
      */
     public function setLogo($logo)

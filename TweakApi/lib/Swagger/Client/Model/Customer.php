@@ -66,7 +66,7 @@ class Customer implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'profilePicture' => 'string',
+        'profilePicture' => 'object',
         'firstName' => 'string',
         'lastName' => 'string',
         'initials' => 'string',
@@ -286,7 +286,7 @@ class Customer implements ArrayAccess
 
     /**
      * Gets profilePicture
-     * @return string
+     * @return object
      */
     public function getProfilePicture()
     {
@@ -295,7 +295,7 @@ class Customer implements ArrayAccess
 
     /**
      * Sets profilePicture
-     * @param string $profilePicture
+     * @param object $profilePicture
      * @return $this
      */
     public function setProfilePicture($profilePicture)
