@@ -57,7 +57,7 @@ Please follow the [installation procedure](#installation--usage) and then run th
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
+// Configure API key authorization: apiKey
 Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
@@ -1507,7 +1507,7 @@ Class | Method | HTTP request | Description
 ## Documentation For Authorization
 
 
-## access_token
+## apiKey
 
 - **Type**: API key
 - **API key parameter name**: access_token

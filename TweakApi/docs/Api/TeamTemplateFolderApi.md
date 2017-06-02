@@ -50,7 +50,7 @@ Create a change stream.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
+// Configure API key authorization: apiKey
 Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
@@ -79,7 +79,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../../README.md#access_token)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -98,7 +98,7 @@ Create a change stream.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
+// Configure API key authorization: apiKey
 Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
@@ -127,7 +127,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../../README.md#access_token)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -146,7 +146,7 @@ Count instances of the model matched by where from the data source.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
+// Configure API key authorization: apiKey
 Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../../README.md#access_token)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -194,7 +194,7 @@ Find first instance of the model matched by filter from the data source.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
+// Configure API key authorization: apiKey
 Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
@@ -223,7 +223,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../../README.md#access_token)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -242,7 +242,7 @@ Find all instances of the model matched by filter from the data source.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
+// Configure API key authorization: apiKey
 Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
@@ -271,7 +271,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../../README.md#access_token)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -290,7 +290,7 @@ Counts children of TeamTemplateFolder.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
+// Configure API key authorization: apiKey
 Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
@@ -321,7 +321,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../../README.md#access_token)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -340,7 +340,7 @@ Deletes all children of this model.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
+// Configure API key authorization: apiKey
 Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
@@ -368,7 +368,7 @@ void (empty response body)
 
 ### Authorization
 
-[access_token](../../README.md#access_token)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -387,7 +387,7 @@ Delete a related item by id for children.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
+// Configure API key authorization: apiKey
 Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
@@ -417,7 +417,7 @@ void (empty response body)
 
 ### Authorization
 
-[access_token](../../README.md#access_token)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -436,7 +436,7 @@ Find a related item by id for children.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
+// Configure API key authorization: apiKey
 Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
@@ -467,7 +467,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../../README.md#access_token)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -486,7 +486,7 @@ Update a related item by id for children.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
+// Configure API key authorization: apiKey
 Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
@@ -519,7 +519,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../../README.md#access_token)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -538,7 +538,7 @@ Queries children of TeamTemplateFolder.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
+// Configure API key authorization: apiKey
 Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
@@ -569,7 +569,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../../README.md#access_token)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -588,7 +588,7 @@ Creates a new instance in children of this model.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
+// Configure API key authorization: apiKey
 Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
@@ -619,7 +619,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../../README.md#access_token)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -638,7 +638,7 @@ Delete a model instance by {{id}} from the data source.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
+// Configure API key authorization: apiKey
 Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
@@ -667,7 +667,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../../README.md#access_token)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -686,7 +686,7 @@ Check whether a model instance exists in the data source.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
+// Configure API key authorization: apiKey
 Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
@@ -715,7 +715,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../../README.md#access_token)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -734,7 +734,7 @@ Find a model instance by {{id}} from the data source.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
+// Configure API key authorization: apiKey
 Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
@@ -765,7 +765,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../../README.md#access_token)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -784,7 +784,7 @@ Check whether a model instance exists in the data source.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
+// Configure API key authorization: apiKey
 Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
@@ -813,7 +813,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../../README.md#access_token)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -832,7 +832,7 @@ Fetches belongsTo relation parent.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
+// Configure API key authorization: apiKey
 Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
@@ -863,7 +863,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../../README.md#access_token)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -882,7 +882,7 @@ Patch attributes for a model instance and persist it into the data source.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
+// Configure API key authorization: apiKey
 Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
@@ -913,7 +913,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../../README.md#access_token)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -932,7 +932,7 @@ Replace attributes for a model instance and persist it into the data source.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
+// Configure API key authorization: apiKey
 Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
@@ -963,7 +963,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../../README.md#access_token)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -982,7 +982,7 @@ Replace attributes for a model instance and persist it into the data source.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
+// Configure API key authorization: apiKey
 Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
@@ -1013,7 +1013,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../../README.md#access_token)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -1032,7 +1032,7 @@ Fetches belongsTo relation team.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
+// Configure API key authorization: apiKey
 Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
@@ -1063,7 +1063,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../../README.md#access_token)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -1082,7 +1082,7 @@ Counts templates of TeamTemplateFolder.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
+// Configure API key authorization: apiKey
 Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
@@ -1113,7 +1113,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../../README.md#access_token)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -1132,7 +1132,7 @@ Deletes all templates of this model.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
+// Configure API key authorization: apiKey
 Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
@@ -1160,7 +1160,7 @@ void (empty response body)
 
 ### Authorization
 
-[access_token](../../README.md#access_token)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -1179,7 +1179,7 @@ Delete a related item by id for templates.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
+// Configure API key authorization: apiKey
 Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
@@ -1209,7 +1209,7 @@ void (empty response body)
 
 ### Authorization
 
-[access_token](../../README.md#access_token)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -1228,7 +1228,7 @@ Find a related item by id for templates.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
+// Configure API key authorization: apiKey
 Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
@@ -1259,7 +1259,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../../README.md#access_token)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -1278,7 +1278,7 @@ Update a related item by id for templates.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
+// Configure API key authorization: apiKey
 Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
@@ -1311,7 +1311,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../../README.md#access_token)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -1330,7 +1330,7 @@ Queries templates of TeamTemplateFolder.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
+// Configure API key authorization: apiKey
 Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
@@ -1361,7 +1361,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../../README.md#access_token)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -1380,7 +1380,7 @@ Creates a new instance in templates of this model.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
+// Configure API key authorization: apiKey
 Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
@@ -1411,7 +1411,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../../README.md#access_token)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -1430,7 +1430,7 @@ Patch an existing model instance or insert a new one into the data source.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
+// Configure API key authorization: apiKey
 Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
@@ -1459,7 +1459,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../../README.md#access_token)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -1478,7 +1478,7 @@ Create a new instance of the model and persist it into the data source.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
+// Configure API key authorization: apiKey
 Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
@@ -1507,7 +1507,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../../README.md#access_token)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -1526,7 +1526,7 @@ Replace an existing model instance or insert a new one into the data source.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
+// Configure API key authorization: apiKey
 Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
@@ -1555,7 +1555,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../../README.md#access_token)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -1574,7 +1574,7 @@ Replace an existing model instance or insert a new one into the data source.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
+// Configure API key authorization: apiKey
 Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
@@ -1603,7 +1603,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../../README.md#access_token)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -1622,7 +1622,7 @@ Update instances of the model matched by {{where}} from the data source.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
+// Configure API key authorization: apiKey
 Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
@@ -1653,7 +1653,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../../README.md#access_token)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -1672,7 +1672,7 @@ Update an existing model instance or insert a new one into the data source based
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
+// Configure API key authorization: apiKey
 Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
@@ -1703,7 +1703,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../../README.md#access_token)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
