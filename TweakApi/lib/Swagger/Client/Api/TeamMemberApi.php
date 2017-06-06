@@ -6926,6 +6926,138 @@ class TeamMemberApi
     }
 
     /**
+     * Operation teamMembersIdPortalsNkTemplatesFkFlashvarsGet
+     *
+     * Find Template FlashVars within available Portal by id
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $id2  (required)
+     * @param string $nk  (required)
+     * @param string $fk  (required)
+     * @return \Swagger\Client\Model\FlashVar
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdPortalsNkTemplatesFkFlashvarsGet($id, $id2, $nk, $fk)
+    {
+        list($response) = $this->teamMembersIdPortalsNkTemplatesFkFlashvarsGetWithHttpInfo($id, $id2, $nk, $fk);
+        return $response;
+    }
+
+    /**
+     * Operation teamMembersIdPortalsNkTemplatesFkFlashvarsGetWithHttpInfo
+     *
+     * Find Template FlashVars within available Portal by id
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $id2  (required)
+     * @param string $nk  (required)
+     * @param string $fk  (required)
+     * @return array of \Swagger\Client\Model\FlashVar, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdPortalsNkTemplatesFkFlashvarsGetWithHttpInfo($id, $id2, $nk, $fk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdPortalsNkTemplatesFkFlashvarsGet');
+        }
+        // verify the required parameter 'id2' is set
+        if ($id2 === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id2 when calling teamMembersIdPortalsNkTemplatesFkFlashvarsGet');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling teamMembersIdPortalsNkTemplatesFkFlashvarsGet');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling teamMembersIdPortalsNkTemplatesFkFlashvarsGet');
+        }
+        // parse inputs
+        $resourcePath = "/TeamMembers/{id}/portals/{nk}/templates/{fk}/flashvars";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($id2 !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id2),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\FlashVar',
+                '/TeamMembers/{id}/portals/{nk}/templates/{fk}/flashvars'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\FlashVar', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\FlashVar', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation teamMembersIdPortalsPost
      *
      * Creates a new instance in portals of this model.

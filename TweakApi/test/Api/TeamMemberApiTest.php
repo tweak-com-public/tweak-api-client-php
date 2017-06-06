@@ -849,6 +849,17 @@ class TeamMemberApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for teamMembersIdPortalsNkTemplatesFkFlashvarsGet
+     *
+     * Find Template FlashVars within available Portal by id.
+     *
+     */
+    public function testTeamMembersIdPortalsNkTemplatesFkFlashvarsGet()
+    {
+
+    }
+
+    /**
      * Test case for teamMembersIdPortalsPost
      *
      * Creates a new instance in portals of this model..

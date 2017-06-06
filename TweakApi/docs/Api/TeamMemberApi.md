@@ -73,6 +73,7 @@ Method | HTTP request | Description
 [**teamMembersIdPortalsFkPut**](TeamMemberApi.md#teamMembersIdPortalsFkPut) | **PUT** /TeamMembers/{id}/portals/{fk} | Update a related item by id for portals.
 [**teamMembersIdPortalsGet**](TeamMemberApi.md#teamMembersIdPortalsGet) | **GET** /TeamMembers/{id}/portals | Queries portals of TeamMember.
 [**teamMembersIdPortalsNkDesignsFkFlashvarsGet**](TeamMemberApi.md#teamMembersIdPortalsNkDesignsFkFlashvarsGet) | **GET** /TeamMembers/{id}/portals/{nk}/designs/{fk}/flashvars | Find Design FlashVars within available Portal by id
+[**teamMembersIdPortalsNkTemplatesFkFlashvarsGet**](TeamMemberApi.md#teamMembersIdPortalsNkTemplatesFkFlashvarsGet) | **GET** /TeamMembers/{id}/portals/{nk}/templates/{fk}/flashvars | Find Template FlashVars within available Portal by id
 [**teamMembersIdPortalsPost**](TeamMemberApi.md#teamMembersIdPortalsPost) | **POST** /TeamMembers/{id}/portals | Creates a new instance in portals of this model.
 [**teamMembersIdPortalsRelFkDelete**](TeamMemberApi.md#teamMembersIdPortalsRelFkDelete) | **DELETE** /TeamMembers/{id}/portals/rel/{fk} | Remove the portals relation to an item by id.
 [**teamMembersIdPortalsRelFkHead**](TeamMemberApi.md#teamMembersIdPortalsRelFkHead) | **HEAD** /TeamMembers/{id}/portals/rel/{fk} | Check the existence of portals relation to an item by id.
@@ -3608,6 +3609,60 @@ try {
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TeamMemberApi->teamMembersIdPortalsNkDesignsFkFlashvarsGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+ **id2** | **string**|  |
+ **nk** | **string**|  |
+ **fk** | **string**|  |
+
+### Return type
+
+[**\Swagger\Client\Model\FlashVar**](../Model/FlashVar.md)
+
+### Authorization
+
+[apiKey](../../README.md#apiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdPortalsNkTemplatesFkFlashvarsGet**
+> \Swagger\Client\Model\FlashVar teamMembersIdPortalsNkTemplatesFkFlashvarsGet($id, $id2, $nk, $fk)
+
+Find Template FlashVars within available Portal by id
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: apiKey
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+$id2 = "id_example"; // string | 
+$nk = "nk_example"; // string | 
+$fk = "fk_example"; // string | 
+
+try {
+    $result = $api_instance->teamMembersIdPortalsNkTemplatesFkFlashvarsGet($id, $id2, $nk, $fk);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdPortalsNkTemplatesFkFlashvarsGet: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

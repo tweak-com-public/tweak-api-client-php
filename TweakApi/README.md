@@ -1133,6 +1133,7 @@ Class | Method | HTTP request | Description
 *TeamMemberApi* | [**teamMembersIdPortalsFkPut**](docs/Api/TeamMemberApi.md#teammembersidportalsfkput) | **PUT** /TeamMembers/{id}/portals/{fk} | Update a related item by id for portals.
 *TeamMemberApi* | [**teamMembersIdPortalsGet**](docs/Api/TeamMemberApi.md#teammembersidportalsget) | **GET** /TeamMembers/{id}/portals | Queries portals of TeamMember.
 *TeamMemberApi* | [**teamMembersIdPortalsNkDesignsFkFlashvarsGet**](docs/Api/TeamMemberApi.md#teammembersidportalsnkdesignsfkflashvarsget) | **GET** /TeamMembers/{id}/portals/{nk}/designs/{fk}/flashvars | Find Design FlashVars within available Portal by id
+*TeamMemberApi* | [**teamMembersIdPortalsNkTemplatesFkFlashvarsGet**](docs/Api/TeamMemberApi.md#teammembersidportalsnktemplatesfkflashvarsget) | **GET** /TeamMembers/{id}/portals/{nk}/templates/{fk}/flashvars | Find Template FlashVars within available Portal by id
 *TeamMemberApi* | [**teamMembersIdPortalsPost**](docs/Api/TeamMemberApi.md#teammembersidportalspost) | **POST** /TeamMembers/{id}/portals | Creates a new instance in portals of this model.
 *TeamMemberApi* | [**teamMembersIdPortalsRelFkDelete**](docs/Api/TeamMemberApi.md#teammembersidportalsrelfkdelete) | **DELETE** /TeamMembers/{id}/portals/rel/{fk} | Remove the portals relation to an item by id.
 *TeamMemberApi* | [**teamMembersIdPortalsRelFkHead**](docs/Api/TeamMemberApi.md#teammembersidportalsrelfkhead) | **HEAD** /TeamMembers/{id}/portals/rel/{fk} | Check the existence of portals relation to an item by id.
