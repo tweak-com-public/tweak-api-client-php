@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **name** | **string** |  | 
 **logo** | **object** |  | [optional] 
 **subdomain** | **string** |  | [optional] 
+**country** | **string** |  | 
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **modified** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **id** | **string** |  | 
@@ -25,6 +26,8 @@ Name | Type | Description | Notes
 **workflows** | [**\Swagger\Client\Model\Workflow[]**](Workflow.md) |  | [optional] 
 **images** | [**\Swagger\Client\Model\Image[]**](Image.md) |  | [optional] 
 **imageFolders** | [**\Swagger\Client\Model\ImageFolder[]**](ImageFolder.md) |  | [optional] 
+**billing** | [**\Swagger\Client\Model\Billing**](Billing.md) |  | [optional] 
+**permission** | [**\Swagger\Client\Model\TeamPermissionSet**](TeamPermissionSet.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

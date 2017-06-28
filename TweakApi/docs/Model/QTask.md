@@ -18,8 +18,8 @@ Name | Type | Description | Notes
 **result** | **object** |  | [optional] 
 **error** | **object** |  | [optional] 
 **stack** | **object** |  | [optional] 
-**id** | **double** |  | [optional] 
-**itemId** | **double** |  | [optional] 
+**id** | [**\Swagger\Client\Model\ObjectID**](ObjectID.md) |  | [optional] 
+**itemId** | [**\Swagger\Client\Model\ObjectID**](ObjectID.md) |  | [optional] 
 **itemType** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

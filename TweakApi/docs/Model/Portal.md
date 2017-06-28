@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **designs** | [**\Swagger\Client\Model\Design[]**](Design.md) |  | [optional] 
 **templateFolders** | [**\Swagger\Client\Model\PortalTemplateFolder[]**](PortalTemplateFolder.md) |  | [optional] 
 **designFolders** | [**\Swagger\Client\Model\DesignFolder[]**](DesignFolder.md) |  | [optional] 
-**imageFolders** | [**\Swagger\Client\Model\Image[]**](Image.md) |  | [optional] 
+**imageFolders** | [**\Swagger\Client\Model\ImageFolder[]**](ImageFolder.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
