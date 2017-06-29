@@ -228,7 +228,7 @@ class Team implements ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['logo'] = isset($data['logo']) ? $data['logo'] : null;
         $this->container['subdomain'] = isset($data['subdomain']) ? $data['subdomain'] : null;
-        $this->container['country'] = isset($data['country']) ? $data['country'] : null;
+        $this->container['country'] = isset($data['country']) ? $data['country'] : 'Ireland';
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
         $this->container['modified'] = isset($data['modified']) ? $data['modified'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
@@ -263,9 +263,6 @@ class Team implements ArrayAccess
         if ($this->container['name'] === null) {
             $invalid_properties[] = "'name' can't be null";
         }
-        if ($this->container['country'] === null) {
-            $invalid_properties[] = "'country' can't be null";
-        }
         if ($this->container['id'] === null) {
             $invalid_properties[] = "'id' can't be null";
         }
@@ -281,9 +278,6 @@ class Team implements ArrayAccess
     public function valid()
     {
         if ($this->container['name'] === null) {
-            return false;
-        }
-        if ($this->container['country'] === null) {
             return false;
         }
         if ($this->container['id'] === null) {
