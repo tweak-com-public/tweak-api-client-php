@@ -6173,7 +6173,7 @@ $api_instance = new Tweak\Api\Api\PortalApi();
 $id = "id_example"; // string | Portal id
 $id2 = "id_example"; // string | 
 $fk = "fk_example"; // string | 
-$data = array(new XAny()); // \Swagger\Client\Model\XAny[] | 
+$data = array(new object[]()); // object[] | 
 
 try {
     $result = $api_instance->portalsIdTemplatesFkDesignsGenerateBulkPost($id, $id2, $fk, $data);
@@ -6191,7 +6191,7 @@ Name | Type | Description  | Notes
  **id** | **string**| Portal id |
  **id2** | **string**|  |
  **fk** | **string**|  |
- **data** | [**\Swagger\Client\Model\XAny[]**](../Model/XAny.md)|  | [optional]
+ **data** | **object[]**|  | [optional]
 
 ### Return type
 

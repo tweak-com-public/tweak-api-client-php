@@ -5171,7 +5171,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamMembersIdTargetModelTargetIdInvitePost**
-> \Swagger\Client\Model\XAny[] teamMembersIdTargetModelTargetIdInvitePost($id, $id2, $targetModel, $targetId, $data)
+> \Swagger\Client\Model\InvitationTicket[] teamMembersIdTargetModelTargetIdInvitePost($id, $id2, $targetModel, $targetId, $data)
 
 Invite a group of people to join a team, portal or other targets
 
@@ -5190,7 +5190,7 @@ $id = "id_example"; // string | TeamMember id
 $id2 = "id_example"; // string | 
 $targetModel = "targetModel_example"; // string | 
 $targetId = "targetId_example"; // string | 
-$data = array(new XAny()); // \Swagger\Client\Model\XAny[] | 
+$data = array(new object[]()); // object[] | 
 
 try {
     $result = $api_instance->teamMembersIdTargetModelTargetIdInvitePost($id, $id2, $targetModel, $targetId, $data);
@@ -5209,11 +5209,11 @@ Name | Type | Description  | Notes
  **id2** | **string**|  |
  **targetModel** | **string**|  |
  **targetId** | **string**|  |
- **data** | [**\Swagger\Client\Model\XAny[]**](../Model/XAny.md)|  | [optional]
+ **data** | **object[]**|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\XAny[]**](../Model/XAny.md)
+[**\Swagger\Client\Model\InvitationTicket[]**](../Model/InvitationTicket.md)
 
 ### Authorization
 
