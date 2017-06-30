@@ -104,6 +104,38 @@ class TeamMemberTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "position"
+     */
+    public function testPropertyPosition()
+    {
+
+    }
+
+    /**
+     * Test attribute "officePhone"
+     */
+    public function testPropertyOfficePhone()
+    {
+
+    }
+
+    /**
+     * Test attribute "mobilePhone"
+     */
+    public function testPropertyMobilePhone()
+    {
+
+    }
+
+    /**
+     * Test attribute "website"
+     */
+    public function testPropertyWebsite()
+    {
+
+    }
+
+    /**
      * Test attribute "created"
      */
     public function testPropertyCreated()

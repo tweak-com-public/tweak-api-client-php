@@ -4,6 +4,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **roles** | **string[]** |  | 
+**position** | **string** |  | [optional] 
+**officePhone** | **string** |  | [optional] 
+**mobilePhone** | **string** |  | [optional] 
+**website** | **string** |  | [optional] 
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **modified** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **id** | **string** |  | [optional] 

@@ -67,6 +67,10 @@ class TeamMember implements ArrayAccess
       */
     protected static $swaggerTypes = array(
         'roles' => 'string[]',
+        'position' => 'string',
+        'officePhone' => 'string',
+        'mobilePhone' => 'string',
+        'website' => 'string',
         'created' => '\DateTime',
         'modified' => '\DateTime',
         'id' => 'string',
@@ -100,6 +104,10 @@ class TeamMember implements ArrayAccess
      */
     protected static $attributeMap = array(
         'roles' => 'roles',
+        'position' => 'position',
+        'officePhone' => 'officePhone',
+        'mobilePhone' => 'mobilePhone',
+        'website' => 'website',
         'created' => 'created',
         'modified' => 'modified',
         'id' => 'id',
@@ -133,6 +141,10 @@ class TeamMember implements ArrayAccess
      */
     protected static $setters = array(
         'roles' => 'setRoles',
+        'position' => 'setPosition',
+        'officePhone' => 'setOfficePhone',
+        'mobilePhone' => 'setMobilePhone',
+        'website' => 'setWebsite',
         'created' => 'setCreated',
         'modified' => 'setModified',
         'id' => 'setId',
@@ -166,6 +178,10 @@ class TeamMember implements ArrayAccess
      */
     protected static $getters = array(
         'roles' => 'getRoles',
+        'position' => 'getPosition',
+        'officePhone' => 'getOfficePhone',
+        'mobilePhone' => 'getMobilePhone',
+        'website' => 'getWebsite',
         'created' => 'getCreated',
         'modified' => 'getModified',
         'id' => 'getId',
@@ -210,6 +226,10 @@ class TeamMember implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['roles'] = isset($data['roles']) ? $data['roles'] : null;
+        $this->container['position'] = isset($data['position']) ? $data['position'] : null;
+        $this->container['officePhone'] = isset($data['officePhone']) ? $data['officePhone'] : null;
+        $this->container['mobilePhone'] = isset($data['mobilePhone']) ? $data['mobilePhone'] : null;
+        $this->container['website'] = isset($data['website']) ? $data['website'] : null;
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
         $this->container['modified'] = isset($data['modified']) ? $data['modified'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
@@ -278,6 +298,90 @@ class TeamMember implements ArrayAccess
     public function setRoles($roles)
     {
         $this->container['roles'] = $roles;
+
+        return $this;
+    }
+
+    /**
+     * Gets position
+     * @return string
+     */
+    public function getPosition()
+    {
+        return $this->container['position'];
+    }
+
+    /**
+     * Sets position
+     * @param string $position
+     * @return $this
+     */
+    public function setPosition($position)
+    {
+        $this->container['position'] = $position;
+
+        return $this;
+    }
+
+    /**
+     * Gets officePhone
+     * @return string
+     */
+    public function getOfficePhone()
+    {
+        return $this->container['officePhone'];
+    }
+
+    /**
+     * Sets officePhone
+     * @param string $officePhone
+     * @return $this
+     */
+    public function setOfficePhone($officePhone)
+    {
+        $this->container['officePhone'] = $officePhone;
+
+        return $this;
+    }
+
+    /**
+     * Gets mobilePhone
+     * @return string
+     */
+    public function getMobilePhone()
+    {
+        return $this->container['mobilePhone'];
+    }
+
+    /**
+     * Sets mobilePhone
+     * @param string $mobilePhone
+     * @return $this
+     */
+    public function setMobilePhone($mobilePhone)
+    {
+        $this->container['mobilePhone'] = $mobilePhone;
+
+        return $this;
+    }
+
+    /**
+     * Gets website
+     * @return string
+     */
+    public function getWebsite()
+    {
+        return $this->container['website'];
+    }
+
+    /**
+     * Sets website
+     * @param string $website
+     * @return $this
+     */
+    public function setWebsite($website)
+    {
+        $this->container['website'] = $website;
 
         return $this;
     }

@@ -102,7 +102,7 @@ class Configuration
      *
      * @var string
      */
-    protected $host = 'https://apistagecdn.tweak.com/api';
+    protected $host = 'https://apidevcdn.tweak.com/api';
 
     /**
      * Timeout (second) of the HTTP request, by default set to 0, no timeout

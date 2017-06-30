@@ -73,7 +73,7 @@ class QTaskApi
     {
         if ($apiClient == null) {
             $apiClient = new ApiClient();
-            $apiClient->getConfig()->setHost('https://apistagecdn.tweak.com/api');
+            $apiClient->getConfig()->setHost('https://apidevcdn.tweak.com/api');
         }
 
         $this->apiClient = $apiClient;
