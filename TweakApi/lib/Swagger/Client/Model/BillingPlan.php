@@ -75,6 +75,7 @@ class BillingPlan implements ArrayAccess
         'statementDescriptor' => 'string',
         'statementDescription' => 'string',
         'trialPeriodDays' => 'double',
+        'type' => 'string',
         'created' => '\DateTime'
     );
 
@@ -97,6 +98,7 @@ class BillingPlan implements ArrayAccess
         'statementDescriptor' => 'statementDescriptor',
         'statementDescription' => 'statementDescription',
         'trialPeriodDays' => 'trialPeriodDays',
+        'type' => 'type',
         'created' => 'created'
     );
 
@@ -119,6 +121,7 @@ class BillingPlan implements ArrayAccess
         'statementDescriptor' => 'setStatementDescriptor',
         'statementDescription' => 'setStatementDescription',
         'trialPeriodDays' => 'setTrialPeriodDays',
+        'type' => 'setType',
         'created' => 'setCreated'
     );
 
@@ -141,6 +144,7 @@ class BillingPlan implements ArrayAccess
         'statementDescriptor' => 'getStatementDescriptor',
         'statementDescription' => 'getStatementDescription',
         'trialPeriodDays' => 'getTrialPeriodDays',
+        'type' => 'getType',
         'created' => 'getCreated'
     );
 
@@ -149,8 +153,22 @@ class BillingPlan implements ArrayAccess
         return self::$getters;
     }
 
+    const TYPE_PLAN = 'plan';
+    const TYPE_ADDITIONAL = 'additional';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_PLAN,
+            self::TYPE_ADDITIONAL,
+        ];
+    }
     
 
     /**
@@ -174,6 +192,7 @@ class BillingPlan implements ArrayAccess
         $this->container['statementDescriptor'] = isset($data['statementDescriptor']) ? $data['statementDescriptor'] : null;
         $this->container['statementDescription'] = isset($data['statementDescription']) ? $data['statementDescription'] : null;
         $this->container['trialPeriodDays'] = isset($data['trialPeriodDays']) ? $data['trialPeriodDays'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
     }
 
@@ -188,6 +207,11 @@ class BillingPlan implements ArrayAccess
         if ($this->container['id'] === null) {
             $invalid_properties[] = "'id' can't be null";
         }
+        $allowed_values = array("plan", "additional");
+        if (!in_array($this->container['type'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'type', must be one of #{allowed_values}.";
+        }
+
         return $invalid_properties;
     }
 
@@ -200,6 +224,10 @@ class BillingPlan implements ArrayAccess
     public function valid()
     {
         if ($this->container['id'] === null) {
+            return false;
+        }
+        $allowed_values = array("plan", "additional");
+        if (!in_array($this->container['type'], $allowed_values)) {
             return false;
         }
         return true;
@@ -391,6 +419,31 @@ class BillingPlan implements ArrayAccess
     public function setTrialPeriodDays($trialPeriodDays)
     {
         $this->container['trialPeriodDays'] = $trialPeriodDays;
+
+        return $this;
+    }
+
+    /**
+     * Gets type
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     * @param string $type
+     * @return $this
+     */
+    public function setType($type)
+    {
+        $allowed_values = array('plan', 'additional');
+        if (!in_array($type, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'plan', 'additional'");
+        }
+        $this->container['type'] = $type;
 
         return $this;
     }
