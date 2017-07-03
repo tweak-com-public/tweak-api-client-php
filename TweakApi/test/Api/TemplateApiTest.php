@@ -937,6 +937,17 @@ class TemplateApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for templatesIdUrlReviewGet
+     *
+     * Get URL to review a template.
+     *
+     */
+    public function testTemplatesIdUrlReviewGet()
+    {
+
+    }
+
+    /**
      * Test case for templatesIdWorkflowGet
      *
      * Fetches belongsTo relation workflow..

@@ -174,6 +174,7 @@ Method | HTTP request | Description
 [**teamMembersIdTeamTemplatesFkDelete**](TeamMemberApi.md#teamMembersIdTeamTemplatesFkDelete) | **DELETE** /TeamMembers/{id}/team/templates/{fk} | Delete a related item by id for templates.
 [**teamMembersIdTeamTemplatesFkGet**](TeamMemberApi.md#teamMembersIdTeamTemplatesFkGet) | **GET** /TeamMembers/{id}/team/templates/{fk} | Find a related item by id for templates.
 [**teamMembersIdTeamTemplatesFkPut**](TeamMemberApi.md#teamMembersIdTeamTemplatesFkPut) | **PUT** /TeamMembers/{id}/team/templates/{fk} | Update a related item by id for templates.
+[**teamMembersIdTeamTemplatesFkUrlReviewGet**](TeamMemberApi.md#teamMembersIdTeamTemplatesFkUrlReviewGet) | **GET** /TeamMembers/{id}/team/templates/{fk}/url/review | Get URL to review a Team Template
 [**teamMembersIdTeamTemplatesGet**](TeamMemberApi.md#teamMembersIdTeamTemplatesGet) | **GET** /TeamMembers/{id}/team/templates | Queries templates of Team.
 [**teamMembersIdTeamTemplatesPost**](TeamMemberApi.md#teamMembersIdTeamTemplatesPost) | **POST** /TeamMembers/{id}/team/templates | Creates a new instance in templates of this model.
 [**teamMembersIdTeamTemplatesWithDesignsGet**](TeamMemberApi.md#teamMembersIdTeamTemplatesWithDesignsGet) | **GET** /TeamMembers/{id}/team/templatesWithDesigns | List Templates with Designs for the Team of TeamMember
@@ -8690,6 +8691,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\Template**](../Model/Template.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdTeamTemplatesFkUrlReviewGet**
+> string teamMembersIdTeamTemplatesFkUrlReviewGet($id, $fk)
+
+Get URL to review a Team Template
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+$fk = "fk_example"; // string | Template id
+
+try {
+    $result = $api_instance->teamMembersIdTeamTemplatesFkUrlReviewGet($id, $fk);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamTemplatesFkUrlReviewGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+ **fk** | **string**| Template id |
+
+### Return type
+
+**string**
 
 ### Authorization
 

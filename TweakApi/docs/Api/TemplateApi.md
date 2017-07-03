@@ -81,6 +81,7 @@ Method | HTTP request | Description
 [**templatesIdTemplateMembersGet**](TemplateApi.md#templatesIdTemplateMembersGet) | **GET** /Templates/{id}/templateMembers | Queries templateMembers of Template.
 [**templatesIdTemplateMembersPost**](TemplateApi.md#templatesIdTemplateMembersPost) | **POST** /Templates/{id}/templateMembers | Creates a new instance in templateMembers of this model.
 [**templatesIdUploaderGet**](TemplateApi.md#templatesIdUploaderGet) | **GET** /Templates/{id}/uploader | Fetches belongsTo relation uploader.
+[**templatesIdUrlReviewGet**](TemplateApi.md#templatesIdUrlReviewGet) | **GET** /Templates/{id}/url/review | Get URL to review a template
 [**templatesIdWorkflowGet**](TemplateApi.md#templatesIdWorkflowGet) | **GET** /Templates/{id}/workflow | Fetches belongsTo relation workflow.
 [**templatesPatch**](TemplateApi.md#templatesPatch) | **PATCH** /Templates | Patch an existing model instance or insert a new one into the data source.
 [**templatesPost**](TemplateApi.md#templatesPost) | **POST** /Templates | Create a new instance of the model and persist it into the data source.
@@ -3911,6 +3912,54 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\TeamMember**](../Model/TeamMember.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **templatesIdUrlReviewGet**
+> string templatesIdUrlReviewGet($id)
+
+Get URL to review a template
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TemplateApi();
+$id = "id_example"; // string | Template id
+
+try {
+    $result = $api_instance->templatesIdUrlReviewGet($id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TemplateApi->templatesIdUrlReviewGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Template id |
+
+### Return type
+
+**string**
 
 ### Authorization
 
