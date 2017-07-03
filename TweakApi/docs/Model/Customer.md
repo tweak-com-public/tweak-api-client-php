@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **firstName** | **string** |  | 
 **lastName** | **string** |  | 
 **initials** | **string** |  | 
-**status** | **string** |  | [optional] [default to 'active']
+**status** | **string** |  | [optional] 
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **modified** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **realm** | **string** |  | [optional] 

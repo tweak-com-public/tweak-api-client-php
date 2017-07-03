@@ -523,8 +523,8 @@ class Portal implements ArrayAccess
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['logo'] = isset($data['logo']) ? $data['logo'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : 'private';
-        $this->container['language'] = isset($data['language']) ? $data['language'] : 'en';
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['language'] = isset($data['language']) ? $data['language'] : null;
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
         $this->container['modified'] = isset($data['modified']) ? $data['modified'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;

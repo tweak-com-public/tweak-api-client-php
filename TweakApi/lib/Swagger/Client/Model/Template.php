@@ -247,7 +247,7 @@ class Template implements ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : '';
         $this->container['edited'] = isset($data['edited']) ? $data['edited'] : null;
         $this->container['teamPath'] = isset($data['teamPath']) ? $data['teamPath'] : '/';
-        $this->container['status'] = isset($data['status']) ? $data['status'] : 'pendingApproval';
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
         $this->container['modified'] = isset($data['modified']) ? $data['modified'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
