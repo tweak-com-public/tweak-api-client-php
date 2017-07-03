@@ -1960,6 +1960,17 @@ class TeamMemberApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for teamMembersIdTeamTemplatesFkUrlReviewGet
+     *
+     * Get URL to review a Team Template.
+     *
+     */
+    public function testTeamMembersIdTeamTemplatesFkUrlReviewGet()
+    {
+
+    }
+
+    /**
      * Test case for teamMembersIdTeamTemplatesGet
      *
      * Queries templates of Team..

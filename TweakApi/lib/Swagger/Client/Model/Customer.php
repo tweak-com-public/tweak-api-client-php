@@ -213,7 +213,7 @@ class Customer implements ArrayAccess
         $this->container['firstName'] = isset($data['firstName']) ? $data['firstName'] : null;
         $this->container['lastName'] = isset($data['lastName']) ? $data['lastName'] : null;
         $this->container['initials'] = isset($data['initials']) ? $data['initials'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : 'active';
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
         $this->container['modified'] = isset($data['modified']) ? $data['modified'] : null;
         $this->container['realm'] = isset($data['realm']) ? $data['realm'] : null;
