@@ -1,6 +1,6 @@
 <?php
 /**
- * BillingPlan
+ * BillingInvoiceLine
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * BillingPlan Class Doc Comment
+ * BillingInvoiceLine Class Doc Comment
  *
  * @category    Class */
 /** 
@@ -53,13 +53,13 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class BillingPlan implements ArrayAccess
+class BillingInvoiceLine implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'BillingPlan';
+    protected static $swaggerModelName = 'BillingInvoiceLine';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -67,16 +67,19 @@ class BillingPlan implements ArrayAccess
       */
     protected static $swaggerTypes = array(
         'id' => 'string',
-        'name' => 'string',
         'amount' => 'double',
         'currency' => 'string',
-        'interval' => 'string',
-        'intervalCount' => 'double',
-        'statementDescriptor' => 'string',
-        'statementDescription' => 'string',
-        'trialPeriodDays' => 'double',
-        'type' => 'string',
-        'created' => '\DateTime'
+        'customer' => 'string',
+        'date' => '\DateTime',
+        'description' => 'string',
+        'discountable' => 'bool',
+        'invoice' => 'string',
+        'period' => 'object',
+        'plan' => '\Swagger\Client\Model\BillingPlan',
+        'proration' => 'bool',
+        'quantity' => 'double',
+        'subscription' => 'string',
+        'subscriptionItem' => 'string'
     );
 
     public static function swaggerTypes()
@@ -90,16 +93,19 @@ class BillingPlan implements ArrayAccess
      */
     protected static $attributeMap = array(
         'id' => 'id',
-        'name' => 'name',
         'amount' => 'amount',
         'currency' => 'currency',
-        'interval' => 'interval',
-        'intervalCount' => 'intervalCount',
-        'statementDescriptor' => 'statementDescriptor',
-        'statementDescription' => 'statementDescription',
-        'trialPeriodDays' => 'trialPeriodDays',
-        'type' => 'type',
-        'created' => 'created'
+        'customer' => 'customer',
+        'date' => 'date',
+        'description' => 'description',
+        'discountable' => 'discountable',
+        'invoice' => 'invoice',
+        'period' => 'period',
+        'plan' => 'plan',
+        'proration' => 'proration',
+        'quantity' => 'quantity',
+        'subscription' => 'subscription',
+        'subscriptionItem' => 'subscriptionItem'
     );
 
     public static function attributeMap()
@@ -113,16 +119,19 @@ class BillingPlan implements ArrayAccess
      */
     protected static $setters = array(
         'id' => 'setId',
-        'name' => 'setName',
         'amount' => 'setAmount',
         'currency' => 'setCurrency',
-        'interval' => 'setInterval',
-        'intervalCount' => 'setIntervalCount',
-        'statementDescriptor' => 'setStatementDescriptor',
-        'statementDescription' => 'setStatementDescription',
-        'trialPeriodDays' => 'setTrialPeriodDays',
-        'type' => 'setType',
-        'created' => 'setCreated'
+        'customer' => 'setCustomer',
+        'date' => 'setDate',
+        'description' => 'setDescription',
+        'discountable' => 'setDiscountable',
+        'invoice' => 'setInvoice',
+        'period' => 'setPeriod',
+        'plan' => 'setPlan',
+        'proration' => 'setProration',
+        'quantity' => 'setQuantity',
+        'subscription' => 'setSubscription',
+        'subscriptionItem' => 'setSubscriptionItem'
     );
 
     public static function setters()
@@ -136,16 +145,19 @@ class BillingPlan implements ArrayAccess
      */
     protected static $getters = array(
         'id' => 'getId',
-        'name' => 'getName',
         'amount' => 'getAmount',
         'currency' => 'getCurrency',
-        'interval' => 'getInterval',
-        'intervalCount' => 'getIntervalCount',
-        'statementDescriptor' => 'getStatementDescriptor',
-        'statementDescription' => 'getStatementDescription',
-        'trialPeriodDays' => 'getTrialPeriodDays',
-        'type' => 'getType',
-        'created' => 'getCreated'
+        'customer' => 'getCustomer',
+        'date' => 'getDate',
+        'description' => 'getDescription',
+        'discountable' => 'getDiscountable',
+        'invoice' => 'getInvoice',
+        'period' => 'getPeriod',
+        'plan' => 'getPlan',
+        'proration' => 'getProration',
+        'quantity' => 'getQuantity',
+        'subscription' => 'getSubscription',
+        'subscriptionItem' => 'getSubscriptionItem'
     );
 
     public static function getters()
@@ -153,22 +165,8 @@ class BillingPlan implements ArrayAccess
         return self::$getters;
     }
 
-    const TYPE_PLAN = 'plan';
-    const TYPE_ADDITIONAL = 'additional';
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     * @return string[]
-     */
-    public function getTypeAllowableValues()
-    {
-        return [
-            self::TYPE_PLAN,
-            self::TYPE_ADDITIONAL,
-        ];
-    }
     
 
     /**
@@ -184,16 +182,19 @@ class BillingPlan implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['amount'] = isset($data['amount']) ? $data['amount'] : null;
         $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
-        $this->container['interval'] = isset($data['interval']) ? $data['interval'] : null;
-        $this->container['intervalCount'] = isset($data['intervalCount']) ? $data['intervalCount'] : null;
-        $this->container['statementDescriptor'] = isset($data['statementDescriptor']) ? $data['statementDescriptor'] : null;
-        $this->container['statementDescription'] = isset($data['statementDescription']) ? $data['statementDescription'] : null;
-        $this->container['trialPeriodDays'] = isset($data['trialPeriodDays']) ? $data['trialPeriodDays'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['created'] = isset($data['created']) ? $data['created'] : null;
+        $this->container['customer'] = isset($data['customer']) ? $data['customer'] : null;
+        $this->container['date'] = isset($data['date']) ? $data['date'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['discountable'] = isset($data['discountable']) ? $data['discountable'] : null;
+        $this->container['invoice'] = isset($data['invoice']) ? $data['invoice'] : null;
+        $this->container['period'] = isset($data['period']) ? $data['period'] : null;
+        $this->container['plan'] = isset($data['plan']) ? $data['plan'] : null;
+        $this->container['proration'] = isset($data['proration']) ? $data['proration'] : null;
+        $this->container['quantity'] = isset($data['quantity']) ? $data['quantity'] : null;
+        $this->container['subscription'] = isset($data['subscription']) ? $data['subscription'] : null;
+        $this->container['subscriptionItem'] = isset($data['subscriptionItem']) ? $data['subscriptionItem'] : null;
     }
 
     /**
@@ -207,11 +208,6 @@ class BillingPlan implements ArrayAccess
         if ($this->container['id'] === null) {
             $invalid_properties[] = "'id' can't be null";
         }
-        $allowed_values = array("plan", "additional");
-        if (!in_array($this->container['type'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'type', must be one of #{allowed_values}.";
-        }
-
         return $invalid_properties;
     }
 
@@ -224,10 +220,6 @@ class BillingPlan implements ArrayAccess
     public function valid()
     {
         if ($this->container['id'] === null) {
-            return false;
-        }
-        $allowed_values = array("plan", "additional");
-        if (!in_array($this->container['type'], $allowed_values)) {
             return false;
         }
         return true;
@@ -251,27 +243,6 @@ class BillingPlan implements ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets name
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     * @param string $name
-     * @return $this
-     */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
 
         return $this;
     }
@@ -319,152 +290,232 @@ class BillingPlan implements ArrayAccess
     }
 
     /**
-     * Gets interval
+     * Gets customer
      * @return string
      */
-    public function getInterval()
+    public function getCustomer()
     {
-        return $this->container['interval'];
+        return $this->container['customer'];
     }
 
     /**
-     * Sets interval
-     * @param string $interval
+     * Sets customer
+     * @param string $customer
      * @return $this
      */
-    public function setInterval($interval)
+    public function setCustomer($customer)
     {
-        $this->container['interval'] = $interval;
+        $this->container['customer'] = $customer;
 
         return $this;
     }
 
     /**
-     * Gets intervalCount
-     * @return double
-     */
-    public function getIntervalCount()
-    {
-        return $this->container['intervalCount'];
-    }
-
-    /**
-     * Sets intervalCount
-     * @param double $intervalCount
-     * @return $this
-     */
-    public function setIntervalCount($intervalCount)
-    {
-        $this->container['intervalCount'] = $intervalCount;
-
-        return $this;
-    }
-
-    /**
-     * Gets statementDescriptor
-     * @return string
-     */
-    public function getStatementDescriptor()
-    {
-        return $this->container['statementDescriptor'];
-    }
-
-    /**
-     * Sets statementDescriptor
-     * @param string $statementDescriptor
-     * @return $this
-     */
-    public function setStatementDescriptor($statementDescriptor)
-    {
-        $this->container['statementDescriptor'] = $statementDescriptor;
-
-        return $this;
-    }
-
-    /**
-     * Gets statementDescription
-     * @return string
-     */
-    public function getStatementDescription()
-    {
-        return $this->container['statementDescription'];
-    }
-
-    /**
-     * Sets statementDescription
-     * @param string $statementDescription
-     * @return $this
-     */
-    public function setStatementDescription($statementDescription)
-    {
-        $this->container['statementDescription'] = $statementDescription;
-
-        return $this;
-    }
-
-    /**
-     * Gets trialPeriodDays
-     * @return double
-     */
-    public function getTrialPeriodDays()
-    {
-        return $this->container['trialPeriodDays'];
-    }
-
-    /**
-     * Sets trialPeriodDays
-     * @param double $trialPeriodDays
-     * @return $this
-     */
-    public function setTrialPeriodDays($trialPeriodDays)
-    {
-        $this->container['trialPeriodDays'] = $trialPeriodDays;
-
-        return $this;
-    }
-
-    /**
-     * Gets type
-     * @return string
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     * @param string $type
-     * @return $this
-     */
-    public function setType($type)
-    {
-        $allowed_values = array('plan', 'additional');
-        if (!in_array($type, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'plan', 'additional'");
-        }
-        $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * Gets created
+     * Gets date
      * @return \DateTime
      */
-    public function getCreated()
+    public function getDate()
     {
-        return $this->container['created'];
+        return $this->container['date'];
     }
 
     /**
-     * Sets created
-     * @param \DateTime $created
+     * Sets date
+     * @param \DateTime $date
      * @return $this
      */
-    public function setCreated($created)
+    public function setDate($date)
     {
-        $this->container['created'] = $created;
+        $this->container['date'] = $date;
+
+        return $this;
+    }
+
+    /**
+     * Gets description
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+     * Sets description
+     * @param string $description
+     * @return $this
+     */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
+
+        return $this;
+    }
+
+    /**
+     * Gets discountable
+     * @return bool
+     */
+    public function getDiscountable()
+    {
+        return $this->container['discountable'];
+    }
+
+    /**
+     * Sets discountable
+     * @param bool $discountable
+     * @return $this
+     */
+    public function setDiscountable($discountable)
+    {
+        $this->container['discountable'] = $discountable;
+
+        return $this;
+    }
+
+    /**
+     * Gets invoice
+     * @return string
+     */
+    public function getInvoice()
+    {
+        return $this->container['invoice'];
+    }
+
+    /**
+     * Sets invoice
+     * @param string $invoice
+     * @return $this
+     */
+    public function setInvoice($invoice)
+    {
+        $this->container['invoice'] = $invoice;
+
+        return $this;
+    }
+
+    /**
+     * Gets period
+     * @return object
+     */
+    public function getPeriod()
+    {
+        return $this->container['period'];
+    }
+
+    /**
+     * Sets period
+     * @param object $period
+     * @return $this
+     */
+    public function setPeriod($period)
+    {
+        $this->container['period'] = $period;
+
+        return $this;
+    }
+
+    /**
+     * Gets plan
+     * @return \Swagger\Client\Model\BillingPlan
+     */
+    public function getPlan()
+    {
+        return $this->container['plan'];
+    }
+
+    /**
+     * Sets plan
+     * @param \Swagger\Client\Model\BillingPlan $plan
+     * @return $this
+     */
+    public function setPlan($plan)
+    {
+        $this->container['plan'] = $plan;
+
+        return $this;
+    }
+
+    /**
+     * Gets proration
+     * @return bool
+     */
+    public function getProration()
+    {
+        return $this->container['proration'];
+    }
+
+    /**
+     * Sets proration
+     * @param bool $proration
+     * @return $this
+     */
+    public function setProration($proration)
+    {
+        $this->container['proration'] = $proration;
+
+        return $this;
+    }
+
+    /**
+     * Gets quantity
+     * @return double
+     */
+    public function getQuantity()
+    {
+        return $this->container['quantity'];
+    }
+
+    /**
+     * Sets quantity
+     * @param double $quantity
+     * @return $this
+     */
+    public function setQuantity($quantity)
+    {
+        $this->container['quantity'] = $quantity;
+
+        return $this;
+    }
+
+    /**
+     * Gets subscription
+     * @return string
+     */
+    public function getSubscription()
+    {
+        return $this->container['subscription'];
+    }
+
+    /**
+     * Sets subscription
+     * @param string $subscription
+     * @return $this
+     */
+    public function setSubscription($subscription)
+    {
+        $this->container['subscription'] = $subscription;
+
+        return $this;
+    }
+
+    /**
+     * Gets subscriptionItem
+     * @return string
+     */
+    public function getSubscriptionItem()
+    {
+        return $this->container['subscriptionItem'];
+    }
+
+    /**
+     * Sets subscriptionItem
+     * @param string $subscriptionItem
+     * @return $this
+     */
+    public function setSubscriptionItem($subscriptionItem)
+    {
+        $this->container['subscriptionItem'] = $subscriptionItem;
 
         return $this;
     }

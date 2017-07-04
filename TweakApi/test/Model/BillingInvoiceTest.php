@@ -1,6 +1,6 @@
 <?php
 /**
- * BillingPlanTest
+ * BillingInvoiceTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Tweak\Api;
 
 /**
- * BillingPlanTest Class Doc Comment
+ * BillingInvoiceTest Class Doc Comment
  *
  * @category    Class */
-// * @description BillingPlan
+// * @description BillingInvoice
 /**
  * @package     Tweak\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class BillingPlanTest extends \PHPUnit_Framework_TestCase
+class BillingInvoiceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,9 +88,9 @@ class BillingPlanTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "BillingPlan"
+     * Test "BillingInvoice"
      */
-    public function testBillingPlan()
+    public function testBillingInvoice()
     {
 
     }
@@ -104,17 +104,41 @@ class BillingPlanTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "amountDue"
      */
-    public function testPropertyName()
+    public function testPropertyAmountDue()
     {
 
     }
 
     /**
-     * Test attribute "amount"
+     * Test attribute "attemptCount"
      */
-    public function testPropertyAmount()
+    public function testPropertyAttemptCount()
+    {
+
+    }
+
+    /**
+     * Test attribute "attempted"
+     */
+    public function testPropertyAttempted()
+    {
+
+    }
+
+    /**
+     * Test attribute "charged"
+     */
+    public function testPropertyCharged()
+    {
+
+    }
+
+    /**
+     * Test attribute "closed"
+     */
+    public function testPropertyClosed()
     {
 
     }
@@ -128,17 +152,97 @@ class BillingPlanTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "interval"
+     * Test attribute "customer"
      */
-    public function testPropertyInterval()
+    public function testPropertyCustomer()
     {
 
     }
 
     /**
-     * Test attribute "intervalCount"
+     * Test attribute "date"
      */
-    public function testPropertyIntervalCount()
+    public function testPropertyDate()
+    {
+
+    }
+
+    /**
+     * Test attribute "description"
+     */
+    public function testPropertyDescription()
+    {
+
+    }
+
+    /**
+     * Test attribute "endingBalance"
+     */
+    public function testPropertyEndingBalance()
+    {
+
+    }
+
+    /**
+     * Test attribute "forgiven"
+     */
+    public function testPropertyForgiven()
+    {
+
+    }
+
+    /**
+     * Test attribute "lines"
+     */
+    public function testPropertyLines()
+    {
+
+    }
+
+    /**
+     * Test attribute "nextPaymentAttempt"
+     */
+    public function testPropertyNextPaymentAttempt()
+    {
+
+    }
+
+    /**
+     * Test attribute "paid"
+     */
+    public function testPropertyPaid()
+    {
+
+    }
+
+    /**
+     * Test attribute "periodEnd"
+     */
+    public function testPropertyPeriodEnd()
+    {
+
+    }
+
+    /**
+     * Test attribute "periodStart"
+     */
+    public function testPropertyPeriodStart()
+    {
+
+    }
+
+    /**
+     * Test attribute "reciptNumber"
+     */
+    public function testPropertyReciptNumber()
+    {
+
+    }
+
+    /**
+     * Test attribute "startingBalance"
+     */
+    public function testPropertyStartingBalance()
     {
 
     }
@@ -152,33 +256,41 @@ class BillingPlanTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "statementDescription"
+     * Test attribute "subscription"
      */
-    public function testPropertyStatementDescription()
+    public function testPropertySubscription()
     {
 
     }
 
     /**
-     * Test attribute "trialPeriodDays"
+     * Test attribute "subscriptionProrationDate"
      */
-    public function testPropertyTrialPeriodDays()
+    public function testPropertySubscriptionProrationDate()
     {
 
     }
 
     /**
-     * Test attribute "type"
+     * Test attribute "subtotal"
      */
-    public function testPropertyType()
+    public function testPropertySubtotal()
     {
 
     }
 
     /**
-     * Test attribute "created"
+     * Test attribute "tax"
      */
-    public function testPropertyCreated()
+    public function testPropertyTax()
+    {
+
+    }
+
+    /**
+     * Test attribute "total"
+     */
+    public function testPropertyTotal()
     {
 
     }

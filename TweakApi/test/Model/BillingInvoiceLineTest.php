@@ -1,6 +1,6 @@
 <?php
 /**
- * BillingPlanTest
+ * BillingInvoiceLineTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Tweak\Api;
 
 /**
- * BillingPlanTest Class Doc Comment
+ * BillingInvoiceLineTest Class Doc Comment
  *
  * @category    Class */
-// * @description BillingPlan
+// * @description BillingInvoiceLine
 /**
  * @package     Tweak\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class BillingPlanTest extends \PHPUnit_Framework_TestCase
+class BillingInvoiceLineTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,9 +88,9 @@ class BillingPlanTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "BillingPlan"
+     * Test "BillingInvoiceLine"
      */
-    public function testBillingPlan()
+    public function testBillingInvoiceLine()
     {
 
     }
@@ -99,14 +99,6 @@ class BillingPlanTest extends \PHPUnit_Framework_TestCase
      * Test attribute "id"
      */
     public function testPropertyId()
-    {
-
-    }
-
-    /**
-     * Test attribute "name"
-     */
-    public function testPropertyName()
     {
 
     }
@@ -128,57 +120,89 @@ class BillingPlanTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "interval"
+     * Test attribute "customer"
      */
-    public function testPropertyInterval()
+    public function testPropertyCustomer()
     {
 
     }
 
     /**
-     * Test attribute "intervalCount"
+     * Test attribute "date"
      */
-    public function testPropertyIntervalCount()
+    public function testPropertyDate()
     {
 
     }
 
     /**
-     * Test attribute "statementDescriptor"
+     * Test attribute "description"
      */
-    public function testPropertyStatementDescriptor()
+    public function testPropertyDescription()
     {
 
     }
 
     /**
-     * Test attribute "statementDescription"
+     * Test attribute "discountable"
      */
-    public function testPropertyStatementDescription()
+    public function testPropertyDiscountable()
     {
 
     }
 
     /**
-     * Test attribute "trialPeriodDays"
+     * Test attribute "invoice"
      */
-    public function testPropertyTrialPeriodDays()
+    public function testPropertyInvoice()
     {
 
     }
 
     /**
-     * Test attribute "type"
+     * Test attribute "period"
      */
-    public function testPropertyType()
+    public function testPropertyPeriod()
     {
 
     }
 
     /**
-     * Test attribute "created"
+     * Test attribute "plan"
      */
-    public function testPropertyCreated()
+    public function testPropertyPlan()
+    {
+
+    }
+
+    /**
+     * Test attribute "proration"
+     */
+    public function testPropertyProration()
+    {
+
+    }
+
+    /**
+     * Test attribute "quantity"
+     */
+    public function testPropertyQuantity()
+    {
+
+    }
+
+    /**
+     * Test attribute "subscription"
+     */
+    public function testPropertySubscription()
+    {
+
+    }
+
+    /**
+     * Test attribute "subscriptionItem"
+     */
+    public function testPropertySubscriptionItem()
     {
 
     }
