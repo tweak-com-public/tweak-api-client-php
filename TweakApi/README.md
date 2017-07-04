@@ -1198,6 +1198,9 @@ Class | Method | HTTP request | Description
 *TeamMemberApi* | [**teamMembersIdTeamBillingCardPut**](docs/Api/TeamMemberApi.md#teammembersidteambillingcardput) | **PUT** /TeamMembers/{id}/team/billing/card | Update Team Billing Card
 *TeamMemberApi* | [**teamMembersIdTeamBillingDelete**](docs/Api/TeamMemberApi.md#teammembersidteambillingdelete) | **DELETE** /TeamMembers/{id}/team/billing | Deletes billing of this model.
 *TeamMemberApi* | [**teamMembersIdTeamBillingGet**](docs/Api/TeamMemberApi.md#teammembersidteambillingget) | **GET** /TeamMembers/{id}/team/billing | Fetches hasOne relation billing.
+*TeamMemberApi* | [**teamMembersIdTeamBillingInvoicesFkPost**](docs/Api/TeamMemberApi.md#teammembersidteambillinginvoicesfkpost) | **POST** /TeamMembers/{id}/team/billing/invoices/{fk} | Pay Team Billing Invoice
+*TeamMemberApi* | [**teamMembersIdTeamBillingInvoicesGet**](docs/Api/TeamMemberApi.md#teammembersidteambillinginvoicesget) | **GET** /TeamMembers/{id}/team/billing/invoices | List Team Billing Invoices
+*TeamMemberApi* | [**teamMembersIdTeamBillingInvoicesUpcomingGet**](docs/Api/TeamMemberApi.md#teammembersidteambillinginvoicesupcomingget) | **GET** /TeamMembers/{id}/team/billing/invoices/upcoming | List Upcoming Team Billing Invoices
 *TeamMemberApi* | [**teamMembersIdTeamBillingPost**](docs/Api/TeamMemberApi.md#teammembersidteambillingpost) | **POST** /TeamMembers/{id}/team/billing | Creates a new instance in billing of this model.
 *TeamMemberApi* | [**teamMembersIdTeamBillingPut**](docs/Api/TeamMemberApi.md#teammembersidteambillingput) | **PUT** /TeamMembers/{id}/team/billing | Update billing of this model.
 *TeamMemberApi* | [**teamMembersIdTeamBillingSubscriptionPut**](docs/Api/TeamMemberApi.md#teammembersidteambillingsubscriptionput) | **PUT** /TeamMembers/{id}/team/billing/subscription | Update Team Billing Card
@@ -1541,6 +1544,8 @@ Class | Method | HTTP request | Description
  - [Axes](docs/Model/Axes.md)
  - [Billing](docs/Model/Billing.md)
  - [BillingCard](docs/Model/BillingCard.md)
+ - [BillingInvoice](docs/Model/BillingInvoice.md)
+ - [BillingInvoiceLine](docs/Model/BillingInvoiceLine.md)
  - [BillingPlan](docs/Model/BillingPlan.md)
  - [BillingSubscription](docs/Model/BillingSubscription.md)
  - [BillingSubscriptionItem](docs/Model/BillingSubscriptionItem.md)
