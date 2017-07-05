@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **string** |  | 
 **logo** | **object** |  | [optional] 
-**status** | **string** |  | [optional] [default to 'private']
-**language** | **string** |  | [optional] [default to 'en']
+**status** | **string** |  | [optional] 
+**language** | **string** |  | [optional] 
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **modified** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **id** | **string** |  | [optional] 

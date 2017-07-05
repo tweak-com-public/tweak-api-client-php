@@ -1,6 +1,6 @@
 <?php
 /**
- * TemplateTest
+ * BillingInvoiceLineTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Tweak\Api;
 
 /**
- * TemplateTest Class Doc Comment
+ * BillingInvoiceLineTest Class Doc Comment
  *
  * @category    Class */
-// * @description Template
+// * @description BillingInvoiceLine
 /**
  * @package     Tweak\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class TemplateTest extends \PHPUnit_Framework_TestCase
+class BillingInvoiceLineTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,81 +88,9 @@ class TemplateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "Template"
+     * Test "BillingInvoiceLine"
      */
-    public function testTemplate()
-    {
-
-    }
-
-    /**
-     * Test attribute "name"
-     */
-    public function testPropertyName()
-    {
-
-    }
-
-    /**
-     * Test attribute "thumbnail"
-     */
-    public function testPropertyThumbnail()
-    {
-
-    }
-
-    /**
-     * Test attribute "object"
-     */
-    public function testPropertyObject()
-    {
-
-    }
-
-    /**
-     * Test attribute "description"
-     */
-    public function testPropertyDescription()
-    {
-
-    }
-
-    /**
-     * Test attribute "edited"
-     */
-    public function testPropertyEdited()
-    {
-
-    }
-
-    /**
-     * Test attribute "path"
-     */
-    public function testPropertyPath()
-    {
-
-    }
-
-    /**
-     * Test attribute "status"
-     */
-    public function testPropertyStatus()
-    {
-
-    }
-
-    /**
-     * Test attribute "created"
-     */
-    public function testPropertyCreated()
-    {
-
-    }
-
-    /**
-     * Test attribute "modified"
-     */
-    public function testPropertyModified()
+    public function testBillingInvoiceLine()
     {
 
     }
@@ -176,121 +104,105 @@ class TemplateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "teamId"
+     * Test attribute "amount"
      */
-    public function testPropertyTeamId()
+    public function testPropertyAmount()
     {
 
     }
 
     /**
-     * Test attribute "uploaderId"
+     * Test attribute "currency"
      */
-    public function testPropertyUploaderId()
+    public function testPropertyCurrency()
     {
 
     }
 
     /**
-     * Test attribute "teamFolderId"
+     * Test attribute "customer"
      */
-    public function testPropertyTeamFolderId()
+    public function testPropertyCustomer()
     {
 
     }
 
     /**
-     * Test attribute "workflowId"
+     * Test attribute "date"
      */
-    public function testPropertyWorkflowId()
+    public function testPropertyDate()
     {
 
     }
 
     /**
-     * Test attribute "portals"
+     * Test attribute "description"
      */
-    public function testPropertyPortals()
+    public function testPropertyDescription()
     {
 
     }
 
     /**
-     * Test attribute "team"
+     * Test attribute "discountable"
      */
-    public function testPropertyTeam()
+    public function testPropertyDiscountable()
     {
 
     }
 
     /**
-     * Test attribute "members"
+     * Test attribute "invoice"
      */
-    public function testPropertyMembers()
+    public function testPropertyInvoice()
     {
 
     }
 
     /**
-     * Test attribute "templateMembers"
+     * Test attribute "period"
      */
-    public function testPropertyTemplateMembers()
+    public function testPropertyPeriod()
     {
 
     }
 
     /**
-     * Test attribute "permission"
+     * Test attribute "plan"
      */
-    public function testPropertyPermission()
+    public function testPropertyPlan()
     {
 
     }
 
     /**
-     * Test attribute "designs"
+     * Test attribute "proration"
      */
-    public function testPropertyDesigns()
+    public function testPropertyProration()
     {
 
     }
 
     /**
-     * Test attribute "tags"
+     * Test attribute "quantity"
      */
-    public function testPropertyTags()
+    public function testPropertyQuantity()
     {
 
     }
 
     /**
-     * Test attribute "teamFolder"
+     * Test attribute "subscription"
      */
-    public function testPropertyTeamFolder()
+    public function testPropertySubscription()
     {
 
     }
 
     /**
-     * Test attribute "portalFolders"
+     * Test attribute "subscriptionItem"
      */
-    public function testPropertyPortalFolders()
-    {
-
-    }
-
-    /**
-     * Test attribute "workflow"
-     */
-    public function testPropertyWorkflow()
-    {
-
-    }
-
-    /**
-     * Test attribute "uploader"
-     */
-    public function testPropertyUploader()
+    public function testPropertySubscriptionItem()
     {
 
     }

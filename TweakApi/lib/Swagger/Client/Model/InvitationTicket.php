@@ -285,7 +285,7 @@ class InvitationTicket implements ArrayAccess
         $this->container['targetModel'] = isset($data['targetModel']) ? $data['targetModel'] : null;
         $this->container['targetId'] = isset($data['targetId']) ? $data['targetId'] : null;
         $this->container['targetAttrs'] = isset($data['targetAttrs']) ? $data['targetAttrs'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : 'pending';
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
         $this->container['modified'] = isset($data['modified']) ? $data['modified'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;

@@ -311,8 +311,8 @@ class Design implements ArrayAccess
         $this->container['object'] = isset($data['object']) ? $data['object'] : null;
         $this->container['thumbnail'] = isset($data['thumbnail']) ? $data['thumbnail'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : '';
-        $this->container['purpose'] = isset($data['purpose']) ? $data['purpose'] : 'none';
-        $this->container['status'] = isset($data['status']) ? $data['status'] : 'pendingAction';
+        $this->container['purpose'] = isset($data['purpose']) ? $data['purpose'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['rejectionReason'] = isset($data['rejectionReason']) ? $data['rejectionReason'] : '';
         $this->container['formData'] = isset($data['formData']) ? $data['formData'] : null;
         $this->container['highResPdfUrl'] = isset($data['highResPdfUrl']) ? $data['highResPdfUrl'] : '';

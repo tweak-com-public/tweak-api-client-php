@@ -1,6 +1,6 @@
 <?php
 /**
- * TemplateTest
+ * BillingInvoiceTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Tweak\Api;
 
 /**
- * TemplateTest Class Doc Comment
+ * BillingInvoiceTest Class Doc Comment
  *
  * @category    Class */
-// * @description Template
+// * @description BillingInvoice
 /**
  * @package     Tweak\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class TemplateTest extends \PHPUnit_Framework_TestCase
+class BillingInvoiceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,81 +88,9 @@ class TemplateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "Template"
+     * Test "BillingInvoice"
      */
-    public function testTemplate()
-    {
-
-    }
-
-    /**
-     * Test attribute "name"
-     */
-    public function testPropertyName()
-    {
-
-    }
-
-    /**
-     * Test attribute "thumbnail"
-     */
-    public function testPropertyThumbnail()
-    {
-
-    }
-
-    /**
-     * Test attribute "object"
-     */
-    public function testPropertyObject()
-    {
-
-    }
-
-    /**
-     * Test attribute "description"
-     */
-    public function testPropertyDescription()
-    {
-
-    }
-
-    /**
-     * Test attribute "edited"
-     */
-    public function testPropertyEdited()
-    {
-
-    }
-
-    /**
-     * Test attribute "path"
-     */
-    public function testPropertyPath()
-    {
-
-    }
-
-    /**
-     * Test attribute "status"
-     */
-    public function testPropertyStatus()
-    {
-
-    }
-
-    /**
-     * Test attribute "created"
-     */
-    public function testPropertyCreated()
-    {
-
-    }
-
-    /**
-     * Test attribute "modified"
-     */
-    public function testPropertyModified()
+    public function testBillingInvoice()
     {
 
     }
@@ -176,121 +104,193 @@ class TemplateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "teamId"
+     * Test attribute "amountDue"
      */
-    public function testPropertyTeamId()
+    public function testPropertyAmountDue()
     {
 
     }
 
     /**
-     * Test attribute "uploaderId"
+     * Test attribute "attemptCount"
      */
-    public function testPropertyUploaderId()
+    public function testPropertyAttemptCount()
     {
 
     }
 
     /**
-     * Test attribute "teamFolderId"
+     * Test attribute "attempted"
      */
-    public function testPropertyTeamFolderId()
+    public function testPropertyAttempted()
     {
 
     }
 
     /**
-     * Test attribute "workflowId"
+     * Test attribute "charged"
      */
-    public function testPropertyWorkflowId()
+    public function testPropertyCharged()
     {
 
     }
 
     /**
-     * Test attribute "portals"
+     * Test attribute "closed"
      */
-    public function testPropertyPortals()
+    public function testPropertyClosed()
     {
 
     }
 
     /**
-     * Test attribute "team"
+     * Test attribute "currency"
      */
-    public function testPropertyTeam()
+    public function testPropertyCurrency()
     {
 
     }
 
     /**
-     * Test attribute "members"
+     * Test attribute "customer"
      */
-    public function testPropertyMembers()
+    public function testPropertyCustomer()
     {
 
     }
 
     /**
-     * Test attribute "templateMembers"
+     * Test attribute "date"
      */
-    public function testPropertyTemplateMembers()
+    public function testPropertyDate()
     {
 
     }
 
     /**
-     * Test attribute "permission"
+     * Test attribute "description"
      */
-    public function testPropertyPermission()
+    public function testPropertyDescription()
     {
 
     }
 
     /**
-     * Test attribute "designs"
+     * Test attribute "endingBalance"
      */
-    public function testPropertyDesigns()
+    public function testPropertyEndingBalance()
     {
 
     }
 
     /**
-     * Test attribute "tags"
+     * Test attribute "forgiven"
      */
-    public function testPropertyTags()
+    public function testPropertyForgiven()
     {
 
     }
 
     /**
-     * Test attribute "teamFolder"
+     * Test attribute "lines"
      */
-    public function testPropertyTeamFolder()
+    public function testPropertyLines()
     {
 
     }
 
     /**
-     * Test attribute "portalFolders"
+     * Test attribute "nextPaymentAttempt"
      */
-    public function testPropertyPortalFolders()
+    public function testPropertyNextPaymentAttempt()
     {
 
     }
 
     /**
-     * Test attribute "workflow"
+     * Test attribute "paid"
      */
-    public function testPropertyWorkflow()
+    public function testPropertyPaid()
     {
 
     }
 
     /**
-     * Test attribute "uploader"
+     * Test attribute "periodEnd"
      */
-    public function testPropertyUploader()
+    public function testPropertyPeriodEnd()
+    {
+
+    }
+
+    /**
+     * Test attribute "periodStart"
+     */
+    public function testPropertyPeriodStart()
+    {
+
+    }
+
+    /**
+     * Test attribute "reciptNumber"
+     */
+    public function testPropertyReciptNumber()
+    {
+
+    }
+
+    /**
+     * Test attribute "startingBalance"
+     */
+    public function testPropertyStartingBalance()
+    {
+
+    }
+
+    /**
+     * Test attribute "statementDescriptor"
+     */
+    public function testPropertyStatementDescriptor()
+    {
+
+    }
+
+    /**
+     * Test attribute "subscription"
+     */
+    public function testPropertySubscription()
+    {
+
+    }
+
+    /**
+     * Test attribute "subscriptionProrationDate"
+     */
+    public function testPropertySubscriptionProrationDate()
+    {
+
+    }
+
+    /**
+     * Test attribute "subtotal"
+     */
+    public function testPropertySubtotal()
+    {
+
+    }
+
+    /**
+     * Test attribute "tax"
+     */
+    public function testPropertyTax()
+    {
+
+    }
+
+    /**
+     * Test attribute "total"
+     */
+    public function testPropertyTotal()
     {
 
     }

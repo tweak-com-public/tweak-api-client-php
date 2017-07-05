@@ -1267,6 +1267,39 @@ class TeamMemberApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for teamMembersIdTeamBillingInvoicesFkPost
+     *
+     * Pay Team Billing Invoice.
+     *
+     */
+    public function testTeamMembersIdTeamBillingInvoicesFkPost()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamBillingInvoicesGet
+     *
+     * List Team Billing Invoices.
+     *
+     */
+    public function testTeamMembersIdTeamBillingInvoicesGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamBillingInvoicesUpcomingGet
+     *
+     * List Upcoming Team Billing Invoices.
+     *
+     */
+    public function testTeamMembersIdTeamBillingInvoicesUpcomingGet()
+    {
+
+    }
+
+    /**
      * Test case for teamMembersIdTeamBillingPost
      *
      * Creates a new instance in billing of this model..
@@ -1955,6 +1988,17 @@ class TeamMemberApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testTeamMembersIdTeamTemplatesFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamTemplatesFkUrlReviewGet
+     *
+     * Get URL to review a Team Template.
+     *
+     */
+    public function testTeamMembersIdTeamTemplatesFkUrlReviewGet()
     {
 
     }

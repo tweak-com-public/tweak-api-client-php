@@ -198,7 +198,7 @@ class DesignComment implements ArrayAccess
         $this->container['comment'] = isset($data['comment']) ? $data['comment'] : null;
         $this->container['position'] = isset($data['position']) ? $data['position'] : null;
         $this->container['pageIndex'] = isset($data['pageIndex']) ? $data['pageIndex'] : 0.0;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : 'unsolved';
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
         $this->container['modified'] = isset($data['modified']) ? $data['modified'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;

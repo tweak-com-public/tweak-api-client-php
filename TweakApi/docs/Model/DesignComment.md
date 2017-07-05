@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **comment** | **string** |  | 
 **position** | [**\Swagger\Client\Model\Axes**](Axes.md) |  | [optional] 
 **pageIndex** | **double** |  | [optional] [default to 0.0]
-**status** | **string** |  | [optional] [default to 'unsolved']
+**status** | **string** |  | [optional] 
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **modified** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **id** | **string** |  | [optional] 

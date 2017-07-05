@@ -71,7 +71,7 @@ class Template implements ArrayAccess
         'object' => 'object',
         'description' => 'string',
         'edited' => '\DateTime',
-        'teamPath' => 'string',
+        'path' => 'string',
         'status' => 'string',
         'created' => '\DateTime',
         'modified' => '\DateTime',
@@ -108,7 +108,7 @@ class Template implements ArrayAccess
         'object' => 'object',
         'description' => 'description',
         'edited' => 'edited',
-        'teamPath' => 'teamPath',
+        'path' => 'path',
         'status' => 'status',
         'created' => 'created',
         'modified' => 'modified',
@@ -145,7 +145,7 @@ class Template implements ArrayAccess
         'object' => 'setObject',
         'description' => 'setDescription',
         'edited' => 'setEdited',
-        'teamPath' => 'setTeamPath',
+        'path' => 'setPath',
         'status' => 'setStatus',
         'created' => 'setCreated',
         'modified' => 'setModified',
@@ -182,7 +182,7 @@ class Template implements ArrayAccess
         'object' => 'getObject',
         'description' => 'getDescription',
         'edited' => 'getEdited',
-        'teamPath' => 'getTeamPath',
+        'path' => 'getPath',
         'status' => 'getStatus',
         'created' => 'getCreated',
         'modified' => 'getModified',
@@ -246,8 +246,8 @@ class Template implements ArrayAccess
         $this->container['object'] = isset($data['object']) ? $data['object'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : '';
         $this->container['edited'] = isset($data['edited']) ? $data['edited'] : null;
-        $this->container['teamPath'] = isset($data['teamPath']) ? $data['teamPath'] : '/';
-        $this->container['status'] = isset($data['status']) ? $data['status'] : 'pendingApproval';
+        $this->container['path'] = isset($data['path']) ? $data['path'] : '/';
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
         $this->container['modified'] = isset($data['modified']) ? $data['modified'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
@@ -418,22 +418,22 @@ class Template implements ArrayAccess
     }
 
     /**
-     * Gets teamPath
+     * Gets path
      * @return string
      */
-    public function getTeamPath()
+    public function getPath()
     {
-        return $this->container['teamPath'];
+        return $this->container['path'];
     }
 
     /**
-     * Sets teamPath
-     * @param string $teamPath
+     * Sets path
+     * @param string $path
      * @return $this
      */
-    public function setTeamPath($teamPath)
+    public function setPath($path)
     {
-        $this->container['teamPath'] = $teamPath;
+        $this->container['path'] = $path;
 
         return $this;
     }

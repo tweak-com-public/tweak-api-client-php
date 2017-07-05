@@ -136,6 +136,54 @@ class TeamMemberTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "addressCity"
+     */
+    public function testPropertyAddressCity()
+    {
+
+    }
+
+    /**
+     * Test attribute "addressCountry"
+     */
+    public function testPropertyAddressCountry()
+    {
+
+    }
+
+    /**
+     * Test attribute "addressLine1"
+     */
+    public function testPropertyAddressLine1()
+    {
+
+    }
+
+    /**
+     * Test attribute "addressLine2"
+     */
+    public function testPropertyAddressLine2()
+    {
+
+    }
+
+    /**
+     * Test attribute "addressState"
+     */
+    public function testPropertyAddressState()
+    {
+
+    }
+
+    /**
+     * Test attribute "addressZip"
+     */
+    public function testPropertyAddressZip()
+    {
+
+    }
+
+    /**
      * Test attribute "created"
      */
     public function testPropertyCreated()

@@ -73,7 +73,7 @@ class TemplatePermissionSetApi
     {
         if ($apiClient == null) {
             $apiClient = new ApiClient();
-            $apiClient->getConfig()->setHost('https://apidevcdn.tweak.com/api');
+            $apiClient->getConfig()->setHost('https://apicdn.tweak.com/api');
         }
 
         $this->apiClient = $apiClient;

@@ -9,8 +9,8 @@ Name | Type | Description | Notes
 **object** | **object** |  | 
 **thumbnail** | **string** |  | [optional] 
 **description** | **string** |  | [optional] [default to '']
-**purpose** | **string** |  | [optional] [default to 'none']
-**status** | **string** |  | [optional] [default to 'pendingAction']
+**purpose** | **string** |  | [optional] 
+**status** | **string** |  | [optional] 
 **rejectionReason** | **string** |  | [optional] [default to '']
 **formData** | **object[]** |  | [optional] 
 **highResPdfUrl** | **string** |  | [optional] [default to '']

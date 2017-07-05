@@ -73,7 +73,7 @@ class TeamMemberApi
     {
         if ($apiClient == null) {
             $apiClient = new ApiClient();
-            $apiClient->getConfig()->setHost('https://apidevcdn.tweak.com/api');
+            $apiClient->getConfig()->setHost('https://apicdn.tweak.com/api');
         }
 
         $this->apiClient = $apiClient;
@@ -10807,6 +10807,296 @@ class TeamMemberApi
     }
 
     /**
+     * Operation teamMembersIdTeamBillingInvoicesFkPost
+     *
+     * Pay Team Billing Invoice
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $fk Billing Invoice id (required)
+     * @return \Swagger\Client\Model\BillingInvoice
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamBillingInvoicesFkPost($id, $fk)
+    {
+        list($response) = $this->teamMembersIdTeamBillingInvoicesFkPostWithHttpInfo($id, $fk);
+        return $response;
+    }
+
+    /**
+     * Operation teamMembersIdTeamBillingInvoicesFkPostWithHttpInfo
+     *
+     * Pay Team Billing Invoice
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $fk Billing Invoice id (required)
+     * @return array of \Swagger\Client\Model\BillingInvoice, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamBillingInvoicesFkPostWithHttpInfo($id, $fk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdTeamBillingInvoicesFkPost');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling teamMembersIdTeamBillingInvoicesFkPost');
+        }
+        // parse inputs
+        $resourcePath = "/TeamMembers/{id}/team/billing/invoices/{fk}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\BillingInvoice',
+                '/TeamMembers/{id}/team/billing/invoices/{fk}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\BillingInvoice', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\BillingInvoice', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamMembersIdTeamBillingInvoicesGet
+     *
+     * List Team Billing Invoices
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $filter Filter defining fields and include - must be a JSON-encoded string ({\&quot;something\&quot;:\&quot;value\&quot;}) (optional)
+     * @return \Swagger\Client\Model\BillingInvoice[]
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamBillingInvoicesGet($id, $filter = null)
+    {
+        list($response) = $this->teamMembersIdTeamBillingInvoicesGetWithHttpInfo($id, $filter);
+        return $response;
+    }
+
+    /**
+     * Operation teamMembersIdTeamBillingInvoicesGetWithHttpInfo
+     *
+     * List Team Billing Invoices
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $filter Filter defining fields and include - must be a JSON-encoded string ({\&quot;something\&quot;:\&quot;value\&quot;}) (optional)
+     * @return array of \Swagger\Client\Model\BillingInvoice[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamBillingInvoicesGetWithHttpInfo($id, $filter = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdTeamBillingInvoicesGet');
+        }
+        // parse inputs
+        $resourcePath = "/TeamMembers/{id}/team/billing/invoices";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($filter !== null) {
+            $queryParams['filter'] = $this->apiClient->getSerializer()->toQueryValue($filter);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\BillingInvoice[]',
+                '/TeamMembers/{id}/team/billing/invoices'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\BillingInvoice[]', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\BillingInvoice[]', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamMembersIdTeamBillingInvoicesUpcomingGet
+     *
+     * List Upcoming Team Billing Invoices
+     *
+     * @param string $id TeamMember id (required)
+     * @return \Swagger\Client\Model\BillingInvoice
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamBillingInvoicesUpcomingGet($id)
+    {
+        list($response) = $this->teamMembersIdTeamBillingInvoicesUpcomingGetWithHttpInfo($id);
+        return $response;
+    }
+
+    /**
+     * Operation teamMembersIdTeamBillingInvoicesUpcomingGetWithHttpInfo
+     *
+     * List Upcoming Team Billing Invoices
+     *
+     * @param string $id TeamMember id (required)
+     * @return array of \Swagger\Client\Model\BillingInvoice, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamBillingInvoicesUpcomingGetWithHttpInfo($id)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdTeamBillingInvoicesUpcomingGet');
+        }
+        // parse inputs
+        $resourcePath = "/TeamMembers/{id}/team/billing/invoices/upcoming";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\BillingInvoice',
+                '/TeamMembers/{id}/team/billing/invoices/upcoming'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\BillingInvoice', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\BillingInvoice', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation teamMembersIdTeamBillingPost
      *
      * Creates a new instance in billing of this model.
@@ -17004,6 +17294,110 @@ class TeamMemberApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Template', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamMembersIdTeamTemplatesFkUrlReviewGet
+     *
+     * Get URL to review a Team Template
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $fk Template id (required)
+     * @return string
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamTemplatesFkUrlReviewGet($id, $fk)
+    {
+        list($response) = $this->teamMembersIdTeamTemplatesFkUrlReviewGetWithHttpInfo($id, $fk);
+        return $response;
+    }
+
+    /**
+     * Operation teamMembersIdTeamTemplatesFkUrlReviewGetWithHttpInfo
+     *
+     * Get URL to review a Team Template
+     *
+     * @param string $id TeamMember id (required)
+     * @param string $fk Template id (required)
+     * @return array of string, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamTemplatesFkUrlReviewGetWithHttpInfo($id, $fk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdTeamTemplatesFkUrlReviewGet');
+        }
+        // verify the required parameter 'fk' is set
+        if ($fk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $fk when calling teamMembersIdTeamTemplatesFkUrlReviewGet');
+        }
+        // parse inputs
+        $resourcePath = "/TeamMembers/{id}/team/templates/{fk}/url/review";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($fk !== null) {
+            $resourcePath = str_replace(
+                "{" . "fk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($fk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                'string',
+                '/TeamMembers/{id}/team/templates/{fk}/url/review'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, 'string', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), 'string', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

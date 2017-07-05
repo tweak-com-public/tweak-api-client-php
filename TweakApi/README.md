@@ -77,7 +77,7 @@ try {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://apidevcdn.tweak.com/api*
+All URIs are relative to *https://apicdn.tweak.com/api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -1198,6 +1198,9 @@ Class | Method | HTTP request | Description
 *TeamMemberApi* | [**teamMembersIdTeamBillingCardPut**](docs/Api/TeamMemberApi.md#teammembersidteambillingcardput) | **PUT** /TeamMembers/{id}/team/billing/card | Update Team Billing Card
 *TeamMemberApi* | [**teamMembersIdTeamBillingDelete**](docs/Api/TeamMemberApi.md#teammembersidteambillingdelete) | **DELETE** /TeamMembers/{id}/team/billing | Deletes billing of this model.
 *TeamMemberApi* | [**teamMembersIdTeamBillingGet**](docs/Api/TeamMemberApi.md#teammembersidteambillingget) | **GET** /TeamMembers/{id}/team/billing | Fetches hasOne relation billing.
+*TeamMemberApi* | [**teamMembersIdTeamBillingInvoicesFkPost**](docs/Api/TeamMemberApi.md#teammembersidteambillinginvoicesfkpost) | **POST** /TeamMembers/{id}/team/billing/invoices/{fk} | Pay Team Billing Invoice
+*TeamMemberApi* | [**teamMembersIdTeamBillingInvoicesGet**](docs/Api/TeamMemberApi.md#teammembersidteambillinginvoicesget) | **GET** /TeamMembers/{id}/team/billing/invoices | List Team Billing Invoices
+*TeamMemberApi* | [**teamMembersIdTeamBillingInvoicesUpcomingGet**](docs/Api/TeamMemberApi.md#teammembersidteambillinginvoicesupcomingget) | **GET** /TeamMembers/{id}/team/billing/invoices/upcoming | List Upcoming Team Billing Invoices
 *TeamMemberApi* | [**teamMembersIdTeamBillingPost**](docs/Api/TeamMemberApi.md#teammembersidteambillingpost) | **POST** /TeamMembers/{id}/team/billing | Creates a new instance in billing of this model.
 *TeamMemberApi* | [**teamMembersIdTeamBillingPut**](docs/Api/TeamMemberApi.md#teammembersidteambillingput) | **PUT** /TeamMembers/{id}/team/billing | Update billing of this model.
 *TeamMemberApi* | [**teamMembersIdTeamBillingSubscriptionPut**](docs/Api/TeamMemberApi.md#teammembersidteambillingsubscriptionput) | **PUT** /TeamMembers/{id}/team/billing/subscription | Update Team Billing Card
@@ -1261,6 +1264,7 @@ Class | Method | HTTP request | Description
 *TeamMemberApi* | [**teamMembersIdTeamTemplatesFkDelete**](docs/Api/TeamMemberApi.md#teammembersidteamtemplatesfkdelete) | **DELETE** /TeamMembers/{id}/team/templates/{fk} | Delete a related item by id for templates.
 *TeamMemberApi* | [**teamMembersIdTeamTemplatesFkGet**](docs/Api/TeamMemberApi.md#teammembersidteamtemplatesfkget) | **GET** /TeamMembers/{id}/team/templates/{fk} | Find a related item by id for templates.
 *TeamMemberApi* | [**teamMembersIdTeamTemplatesFkPut**](docs/Api/TeamMemberApi.md#teammembersidteamtemplatesfkput) | **PUT** /TeamMembers/{id}/team/templates/{fk} | Update a related item by id for templates.
+*TeamMemberApi* | [**teamMembersIdTeamTemplatesFkUrlReviewGet**](docs/Api/TeamMemberApi.md#teammembersidteamtemplatesfkurlreviewget) | **GET** /TeamMembers/{id}/team/templates/{fk}/url/review | Get URL to review a Team Template
 *TeamMemberApi* | [**teamMembersIdTeamTemplatesGet**](docs/Api/TeamMemberApi.md#teammembersidteamtemplatesget) | **GET** /TeamMembers/{id}/team/templates | Queries templates of Team.
 *TeamMemberApi* | [**teamMembersIdTeamTemplatesPost**](docs/Api/TeamMemberApi.md#teammembersidteamtemplatespost) | **POST** /TeamMembers/{id}/team/templates | Creates a new instance in templates of this model.
 *TeamMemberApi* | [**teamMembersIdTeamTemplatesWithDesignsGet**](docs/Api/TeamMemberApi.md#teammembersidteamtemplateswithdesignsget) | **GET** /TeamMembers/{id}/team/templatesWithDesigns | List Templates with Designs for the Team of TeamMember
@@ -1438,6 +1442,7 @@ Class | Method | HTTP request | Description
 *TemplateApi* | [**templatesIdTemplateMembersGet**](docs/Api/TemplateApi.md#templatesidtemplatemembersget) | **GET** /Templates/{id}/templateMembers | Queries templateMembers of Template.
 *TemplateApi* | [**templatesIdTemplateMembersPost**](docs/Api/TemplateApi.md#templatesidtemplatememberspost) | **POST** /Templates/{id}/templateMembers | Creates a new instance in templateMembers of this model.
 *TemplateApi* | [**templatesIdUploaderGet**](docs/Api/TemplateApi.md#templatesiduploaderget) | **GET** /Templates/{id}/uploader | Fetches belongsTo relation uploader.
+*TemplateApi* | [**templatesIdUrlReviewGet**](docs/Api/TemplateApi.md#templatesidurlreviewget) | **GET** /Templates/{id}/url/review | Get URL to review a template
 *TemplateApi* | [**templatesIdWorkflowGet**](docs/Api/TemplateApi.md#templatesidworkflowget) | **GET** /Templates/{id}/workflow | Fetches belongsTo relation workflow.
 *TemplateApi* | [**templatesPatch**](docs/Api/TemplateApi.md#templatespatch) | **PATCH** /Templates | Patch an existing model instance or insert a new one into the data source.
 *TemplateApi* | [**templatesPost**](docs/Api/TemplateApi.md#templatespost) | **POST** /Templates | Create a new instance of the model and persist it into the data source.
@@ -1539,6 +1544,8 @@ Class | Method | HTTP request | Description
  - [Axes](docs/Model/Axes.md)
  - [Billing](docs/Model/Billing.md)
  - [BillingCard](docs/Model/BillingCard.md)
+ - [BillingInvoice](docs/Model/BillingInvoice.md)
+ - [BillingInvoiceLine](docs/Model/BillingInvoiceLine.md)
  - [BillingPlan](docs/Model/BillingPlan.md)
  - [BillingSubscription](docs/Model/BillingSubscription.md)
  - [BillingSubscriptionItem](docs/Model/BillingSubscriptionItem.md)
