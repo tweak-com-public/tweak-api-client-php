@@ -71,6 +71,12 @@ class TeamMember implements ArrayAccess
         'officePhone' => 'string',
         'mobilePhone' => 'string',
         'website' => 'string',
+        'addressCity' => 'string',
+        'addressCountry' => 'string',
+        'addressLine1' => 'string',
+        'addressLine2' => 'string',
+        'addressState' => 'string',
+        'addressZip' => 'string',
         'created' => '\DateTime',
         'modified' => '\DateTime',
         'id' => 'string',
@@ -108,6 +114,12 @@ class TeamMember implements ArrayAccess
         'officePhone' => 'officePhone',
         'mobilePhone' => 'mobilePhone',
         'website' => 'website',
+        'addressCity' => 'addressCity',
+        'addressCountry' => 'addressCountry',
+        'addressLine1' => 'addressLine1',
+        'addressLine2' => 'addressLine2',
+        'addressState' => 'addressState',
+        'addressZip' => 'addressZip',
         'created' => 'created',
         'modified' => 'modified',
         'id' => 'id',
@@ -145,6 +157,12 @@ class TeamMember implements ArrayAccess
         'officePhone' => 'setOfficePhone',
         'mobilePhone' => 'setMobilePhone',
         'website' => 'setWebsite',
+        'addressCity' => 'setAddressCity',
+        'addressCountry' => 'setAddressCountry',
+        'addressLine1' => 'setAddressLine1',
+        'addressLine2' => 'setAddressLine2',
+        'addressState' => 'setAddressState',
+        'addressZip' => 'setAddressZip',
         'created' => 'setCreated',
         'modified' => 'setModified',
         'id' => 'setId',
@@ -182,6 +200,12 @@ class TeamMember implements ArrayAccess
         'officePhone' => 'getOfficePhone',
         'mobilePhone' => 'getMobilePhone',
         'website' => 'getWebsite',
+        'addressCity' => 'getAddressCity',
+        'addressCountry' => 'getAddressCountry',
+        'addressLine1' => 'getAddressLine1',
+        'addressLine2' => 'getAddressLine2',
+        'addressState' => 'getAddressState',
+        'addressZip' => 'getAddressZip',
         'created' => 'getCreated',
         'modified' => 'getModified',
         'id' => 'getId',
@@ -230,6 +254,12 @@ class TeamMember implements ArrayAccess
         $this->container['officePhone'] = isset($data['officePhone']) ? $data['officePhone'] : null;
         $this->container['mobilePhone'] = isset($data['mobilePhone']) ? $data['mobilePhone'] : null;
         $this->container['website'] = isset($data['website']) ? $data['website'] : null;
+        $this->container['addressCity'] = isset($data['addressCity']) ? $data['addressCity'] : null;
+        $this->container['addressCountry'] = isset($data['addressCountry']) ? $data['addressCountry'] : null;
+        $this->container['addressLine1'] = isset($data['addressLine1']) ? $data['addressLine1'] : null;
+        $this->container['addressLine2'] = isset($data['addressLine2']) ? $data['addressLine2'] : null;
+        $this->container['addressState'] = isset($data['addressState']) ? $data['addressState'] : null;
+        $this->container['addressZip'] = isset($data['addressZip']) ? $data['addressZip'] : null;
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
         $this->container['modified'] = isset($data['modified']) ? $data['modified'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
@@ -382,6 +412,132 @@ class TeamMember implements ArrayAccess
     public function setWebsite($website)
     {
         $this->container['website'] = $website;
+
+        return $this;
+    }
+
+    /**
+     * Gets addressCity
+     * @return string
+     */
+    public function getAddressCity()
+    {
+        return $this->container['addressCity'];
+    }
+
+    /**
+     * Sets addressCity
+     * @param string $addressCity
+     * @return $this
+     */
+    public function setAddressCity($addressCity)
+    {
+        $this->container['addressCity'] = $addressCity;
+
+        return $this;
+    }
+
+    /**
+     * Gets addressCountry
+     * @return string
+     */
+    public function getAddressCountry()
+    {
+        return $this->container['addressCountry'];
+    }
+
+    /**
+     * Sets addressCountry
+     * @param string $addressCountry
+     * @return $this
+     */
+    public function setAddressCountry($addressCountry)
+    {
+        $this->container['addressCountry'] = $addressCountry;
+
+        return $this;
+    }
+
+    /**
+     * Gets addressLine1
+     * @return string
+     */
+    public function getAddressLine1()
+    {
+        return $this->container['addressLine1'];
+    }
+
+    /**
+     * Sets addressLine1
+     * @param string $addressLine1
+     * @return $this
+     */
+    public function setAddressLine1($addressLine1)
+    {
+        $this->container['addressLine1'] = $addressLine1;
+
+        return $this;
+    }
+
+    /**
+     * Gets addressLine2
+     * @return string
+     */
+    public function getAddressLine2()
+    {
+        return $this->container['addressLine2'];
+    }
+
+    /**
+     * Sets addressLine2
+     * @param string $addressLine2
+     * @return $this
+     */
+    public function setAddressLine2($addressLine2)
+    {
+        $this->container['addressLine2'] = $addressLine2;
+
+        return $this;
+    }
+
+    /**
+     * Gets addressState
+     * @return string
+     */
+    public function getAddressState()
+    {
+        return $this->container['addressState'];
+    }
+
+    /**
+     * Sets addressState
+     * @param string $addressState
+     * @return $this
+     */
+    public function setAddressState($addressState)
+    {
+        $this->container['addressState'] = $addressState;
+
+        return $this;
+    }
+
+    /**
+     * Gets addressZip
+     * @return string
+     */
+    public function getAddressZip()
+    {
+        return $this->container['addressZip'];
+    }
+
+    /**
+     * Sets addressZip
+     * @param string $addressZip
+     * @return $this
+     */
+    public function setAddressZip($addressZip)
+    {
+        $this->container['addressZip'] = $addressZip;
 
         return $this;
     }

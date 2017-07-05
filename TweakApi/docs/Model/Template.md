@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **object** | **object** |  | 
 **description** | **string** |  | [optional] [default to '']
 **edited** | [**\DateTime**](\DateTime.md) |  | [optional] 
-**teamPath** | **string** |  | [optional] [default to '/']
+**path** | **string** |  | [optional] [default to '/']
 **status** | **string** |  | [optional] 
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **modified** | [**\DateTime**](\DateTime.md) |  | [optional] 
