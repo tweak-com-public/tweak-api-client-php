@@ -203,6 +203,7 @@ Method | HTTP request | Description
 [**teamMembersIdTweakTemplateFoldersNkGet**](TeamMemberApi.md#teamMembersIdTweakTemplateFoldersNkGet) | **GET** /TeamMembers/{id}/tweakTemplateFolders/{nk} | Get Tweak Templates Folders details
 [**teamMembersIdTweakTemplateFoldersNkTemplatesFkGet**](TeamMemberApi.md#teamMembersIdTweakTemplateFoldersNkTemplatesFkGet) | **GET** /TeamMembers/{id}/tweakTemplateFolders/{nk}/templates/{fk} | Get Tweak Template details within a Tweak Template Folder
 [**teamMembersIdTweakTemplateFoldersNkTemplatesGet**](TeamMemberApi.md#teamMembersIdTweakTemplateFoldersNkTemplatesGet) | **GET** /TeamMembers/{id}/tweakTemplateFolders/{nk}/templates | List Tweak Templates within a Tweak Template Folder
+[**teamMembersIdTweakTemplatesFkFlashvarsGet**](TeamMemberApi.md#teamMembersIdTweakTemplatesFkFlashvarsGet) | **GET** /TeamMembers/{id}/tweakTemplates/{fk}/flashvars | Find Template FlashVars by id
 [**teamMembersIdTweakTemplatesFkGet**](TeamMemberApi.md#teamMembersIdTweakTemplatesFkGet) | **GET** /TeamMembers/{id}/tweakTemplates/{fk} | Get Tweak Template details
 [**teamMembersIdTweakTemplatesGet**](TeamMemberApi.md#teamMembersIdTweakTemplatesGet) | **GET** /TeamMembers/{id}/tweakTemplates | List Tweak Templates
 [**teamMembersIdUploadedTemplatesCountGet**](TeamMemberApi.md#teamMembersIdUploadedTemplatesCountGet) | **GET** /TeamMembers/{id}/uploadedTemplates/count | Counts uploadedTemplates of TeamMember.
@@ -10159,6 +10160,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\Template[]**](../Model/Template.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdTweakTemplatesFkFlashvarsGet**
+> \Swagger\Client\Model\FlashVar teamMembersIdTweakTemplatesFkFlashvarsGet($id, $id2, $fk)
+
+Find Template FlashVars by id
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+$id2 = "id_example"; // string | 
+$fk = "fk_example"; // string | 
+
+try {
+    $result = $api_instance->teamMembersIdTweakTemplatesFkFlashvarsGet($id, $id2, $fk);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTweakTemplatesFkFlashvarsGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+ **id2** | **string**|  |
+ **fk** | **string**|  |
+
+### Return type
+
+[**\Swagger\Client\Model\FlashVar**](../Model/FlashVar.md)
 
 ### Authorization
 
