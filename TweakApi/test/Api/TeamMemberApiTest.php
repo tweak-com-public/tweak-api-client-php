@@ -1377,6 +1377,83 @@ class TeamMemberApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for teamMembersIdTeamDataSourcesCountGet
+     *
+     * Counts dataSources of Team..
+     *
+     */
+    public function testTeamMembersIdTeamDataSourcesCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamDataSourcesDelete
+     *
+     * Deletes all dataSources of this model..
+     *
+     */
+    public function testTeamMembersIdTeamDataSourcesDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamDataSourcesFkDelete
+     *
+     * Delete a related item by id for dataSources..
+     *
+     */
+    public function testTeamMembersIdTeamDataSourcesFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamDataSourcesFkGet
+     *
+     * Find a related item by id for dataSources..
+     *
+     */
+    public function testTeamMembersIdTeamDataSourcesFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamDataSourcesFkPut
+     *
+     * Update a related item by id for dataSources..
+     *
+     */
+    public function testTeamMembersIdTeamDataSourcesFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamDataSourcesGet
+     *
+     * Queries dataSources of Team..
+     *
+     */
+    public function testTeamMembersIdTeamDataSourcesGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamDataSourcesPost
+     *
+     * Creates a new instance in dataSources of this model..
+     *
+     */
+    public function testTeamMembersIdTeamDataSourcesPost()
+    {
+
+    }
+
+    /**
      * Test case for teamMembersIdTeamGet
      *
      * Fetches belongsTo relation team..

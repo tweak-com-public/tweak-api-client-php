@@ -1,6 +1,6 @@
 <?php
 /**
- * BillingTest
+ * BillingLimitCounterTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Tweak\Api;
 
 /**
- * BillingTest Class Doc Comment
+ * BillingLimitCounterTest Class Doc Comment
  *
  * @category    Class */
-// * @description Billing
+// * @description BillingLimitCounter
 /**
  * @package     Tweak\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class BillingTest extends \PHPUnit_Framework_TestCase
+class BillingLimitCounterTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,49 +88,9 @@ class BillingTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "Billing"
+     * Test "BillingLimitCounter"
      */
-    public function testBilling()
-    {
-
-    }
-
-    /**
-     * Test attribute "companyName"
-     */
-    public function testPropertyCompanyName()
-    {
-
-    }
-
-    /**
-     * Test attribute "companyEmail"
-     */
-    public function testPropertyCompanyEmail()
-    {
-
-    }
-
-    /**
-     * Test attribute "companyVat"
-     */
-    public function testPropertyCompanyVat()
-    {
-
-    }
-
-    /**
-     * Test attribute "companyCard"
-     */
-    public function testPropertyCompanyCard()
-    {
-
-    }
-
-    /**
-     * Test attribute "subscription"
-     */
-    public function testPropertySubscription()
+    public function testBillingLimitCounter()
     {
 
     }
@@ -144,25 +104,25 @@ class BillingTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "stripeCustomerId"
+     * Test attribute "count"
      */
-    public function testPropertyStripeCustomerId()
+    public function testPropertyCount()
     {
 
     }
 
     /**
-     * Test attribute "stripeCardId"
+     * Test attribute "unitType"
      */
-    public function testPropertyStripeCardId()
+    public function testPropertyUnitType()
     {
 
     }
 
     /**
-     * Test attribute "stripeSubscriptionId"
+     * Test attribute "unitPrefix"
      */
-    public function testPropertyStripeSubscriptionId()
+    public function testPropertyUnitPrefix()
     {
 
     }
@@ -171,22 +131,6 @@ class BillingTest extends \PHPUnit_Framework_TestCase
      * Test attribute "id"
      */
     public function testPropertyId()
-    {
-
-    }
-
-    /**
-     * Test attribute "teamId"
-     */
-    public function testPropertyTeamId()
-    {
-
-    }
-
-    /**
-     * Test attribute "team"
-     */
-    public function testPropertyTeam()
     {
 
     }

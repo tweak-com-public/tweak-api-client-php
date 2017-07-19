@@ -1,6 +1,6 @@
 <?php
 /**
- * Billing
+ * DataSourceRecordValue
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * Billing Class Doc Comment
+ * DataSourceRecordValue Class Doc Comment
  *
  * @category    Class */
 /** 
@@ -53,31 +53,29 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Billing implements ArrayAccess
+class DataSourceRecordValue implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'Billing';
+    protected static $swaggerModelName = 'DataSourceRecordValue';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'companyName' => 'string',
-        'companyEmail' => 'string',
-        'companyVat' => 'string',
-        'companyCard' => '\Swagger\Client\Model\BillingCard',
-        'subscription' => '\Swagger\Client\Model\BillingSubscription',
-        'limit' => '\Swagger\Client\Model\BillingLimit',
-        'stripeCustomerId' => 'string',
-        'stripeCardId' => 'string',
-        'stripeSubscriptionId' => 'string',
+        'value' => 'string',
         'id' => 'string',
         'teamId' => 'string',
-        'team' => '\Swagger\Client\Model\Team'
+        'dataSourceId' => 'string',
+        'recordId' => 'string',
+        'keyId' => 'string',
+        'team' => '\Swagger\Client\Model\Team',
+        'dataSource' => '\Swagger\Client\Model\DataSource',
+        'values' => '\Swagger\Client\Model\DataSourceRecord',
+        'key' => '\Swagger\Client\Model\DataSourceKey'
     );
 
     public static function swaggerTypes()
@@ -90,18 +88,16 @@ class Billing implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'companyName' => 'companyName',
-        'companyEmail' => 'companyEmail',
-        'companyVat' => 'companyVat',
-        'companyCard' => 'companyCard',
-        'subscription' => 'subscription',
-        'limit' => 'limit',
-        'stripeCustomerId' => 'stripeCustomerId',
-        'stripeCardId' => 'stripeCardId',
-        'stripeSubscriptionId' => 'stripeSubscriptionId',
+        'value' => 'value',
         'id' => 'id',
         'teamId' => 'teamId',
-        'team' => 'team'
+        'dataSourceId' => 'dataSourceId',
+        'recordId' => 'recordId',
+        'keyId' => 'keyId',
+        'team' => 'team',
+        'dataSource' => 'dataSource',
+        'values' => 'values',
+        'key' => 'key'
     );
 
     public static function attributeMap()
@@ -114,18 +110,16 @@ class Billing implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'companyName' => 'setCompanyName',
-        'companyEmail' => 'setCompanyEmail',
-        'companyVat' => 'setCompanyVat',
-        'companyCard' => 'setCompanyCard',
-        'subscription' => 'setSubscription',
-        'limit' => 'setLimit',
-        'stripeCustomerId' => 'setStripeCustomerId',
-        'stripeCardId' => 'setStripeCardId',
-        'stripeSubscriptionId' => 'setStripeSubscriptionId',
+        'value' => 'setValue',
         'id' => 'setId',
         'teamId' => 'setTeamId',
-        'team' => 'setTeam'
+        'dataSourceId' => 'setDataSourceId',
+        'recordId' => 'setRecordId',
+        'keyId' => 'setKeyId',
+        'team' => 'setTeam',
+        'dataSource' => 'setDataSource',
+        'values' => 'setValues',
+        'key' => 'setKey'
     );
 
     public static function setters()
@@ -138,18 +132,16 @@ class Billing implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'companyName' => 'getCompanyName',
-        'companyEmail' => 'getCompanyEmail',
-        'companyVat' => 'getCompanyVat',
-        'companyCard' => 'getCompanyCard',
-        'subscription' => 'getSubscription',
-        'limit' => 'getLimit',
-        'stripeCustomerId' => 'getStripeCustomerId',
-        'stripeCardId' => 'getStripeCardId',
-        'stripeSubscriptionId' => 'getStripeSubscriptionId',
+        'value' => 'getValue',
         'id' => 'getId',
         'teamId' => 'getTeamId',
-        'team' => 'getTeam'
+        'dataSourceId' => 'getDataSourceId',
+        'recordId' => 'getRecordId',
+        'keyId' => 'getKeyId',
+        'team' => 'getTeam',
+        'dataSource' => 'getDataSource',
+        'values' => 'getValues',
+        'key' => 'getKey'
     );
 
     public static function getters()
@@ -173,18 +165,16 @@ class Billing implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['companyName'] = isset($data['companyName']) ? $data['companyName'] : null;
-        $this->container['companyEmail'] = isset($data['companyEmail']) ? $data['companyEmail'] : null;
-        $this->container['companyVat'] = isset($data['companyVat']) ? $data['companyVat'] : null;
-        $this->container['companyCard'] = isset($data['companyCard']) ? $data['companyCard'] : null;
-        $this->container['subscription'] = isset($data['subscription']) ? $data['subscription'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
-        $this->container['stripeCustomerId'] = isset($data['stripeCustomerId']) ? $data['stripeCustomerId'] : null;
-        $this->container['stripeCardId'] = isset($data['stripeCardId']) ? $data['stripeCardId'] : null;
-        $this->container['stripeSubscriptionId'] = isset($data['stripeSubscriptionId']) ? $data['stripeSubscriptionId'] : null;
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['teamId'] = isset($data['teamId']) ? $data['teamId'] : null;
+        $this->container['dataSourceId'] = isset($data['dataSourceId']) ? $data['dataSourceId'] : null;
+        $this->container['recordId'] = isset($data['recordId']) ? $data['recordId'] : null;
+        $this->container['keyId'] = isset($data['keyId']) ? $data['keyId'] : null;
         $this->container['team'] = isset($data['team']) ? $data['team'] : null;
+        $this->container['dataSource'] = isset($data['dataSource']) ? $data['dataSource'] : null;
+        $this->container['values'] = isset($data['values']) ? $data['values'] : null;
+        $this->container['key'] = isset($data['key']) ? $data['key'] : null;
     }
 
     /**
@@ -211,190 +201,22 @@ class Billing implements ArrayAccess
 
 
     /**
-     * Gets companyName
+     * Gets value
      * @return string
      */
-    public function getCompanyName()
+    public function getValue()
     {
-        return $this->container['companyName'];
+        return $this->container['value'];
     }
 
     /**
-     * Sets companyName
-     * @param string $companyName
+     * Sets value
+     * @param string $value
      * @return $this
      */
-    public function setCompanyName($companyName)
+    public function setValue($value)
     {
-        $this->container['companyName'] = $companyName;
-
-        return $this;
-    }
-
-    /**
-     * Gets companyEmail
-     * @return string
-     */
-    public function getCompanyEmail()
-    {
-        return $this->container['companyEmail'];
-    }
-
-    /**
-     * Sets companyEmail
-     * @param string $companyEmail
-     * @return $this
-     */
-    public function setCompanyEmail($companyEmail)
-    {
-        $this->container['companyEmail'] = $companyEmail;
-
-        return $this;
-    }
-
-    /**
-     * Gets companyVat
-     * @return string
-     */
-    public function getCompanyVat()
-    {
-        return $this->container['companyVat'];
-    }
-
-    /**
-     * Sets companyVat
-     * @param string $companyVat
-     * @return $this
-     */
-    public function setCompanyVat($companyVat)
-    {
-        $this->container['companyVat'] = $companyVat;
-
-        return $this;
-    }
-
-    /**
-     * Gets companyCard
-     * @return \Swagger\Client\Model\BillingCard
-     */
-    public function getCompanyCard()
-    {
-        return $this->container['companyCard'];
-    }
-
-    /**
-     * Sets companyCard
-     * @param \Swagger\Client\Model\BillingCard $companyCard
-     * @return $this
-     */
-    public function setCompanyCard($companyCard)
-    {
-        $this->container['companyCard'] = $companyCard;
-
-        return $this;
-    }
-
-    /**
-     * Gets subscription
-     * @return \Swagger\Client\Model\BillingSubscription
-     */
-    public function getSubscription()
-    {
-        return $this->container['subscription'];
-    }
-
-    /**
-     * Sets subscription
-     * @param \Swagger\Client\Model\BillingSubscription $subscription
-     * @return $this
-     */
-    public function setSubscription($subscription)
-    {
-        $this->container['subscription'] = $subscription;
-
-        return $this;
-    }
-
-    /**
-     * Gets limit
-     * @return \Swagger\Client\Model\BillingLimit
-     */
-    public function getLimit()
-    {
-        return $this->container['limit'];
-    }
-
-    /**
-     * Sets limit
-     * @param \Swagger\Client\Model\BillingLimit $limit
-     * @return $this
-     */
-    public function setLimit($limit)
-    {
-        $this->container['limit'] = $limit;
-
-        return $this;
-    }
-
-    /**
-     * Gets stripeCustomerId
-     * @return string
-     */
-    public function getStripeCustomerId()
-    {
-        return $this->container['stripeCustomerId'];
-    }
-
-    /**
-     * Sets stripeCustomerId
-     * @param string $stripeCustomerId
-     * @return $this
-     */
-    public function setStripeCustomerId($stripeCustomerId)
-    {
-        $this->container['stripeCustomerId'] = $stripeCustomerId;
-
-        return $this;
-    }
-
-    /**
-     * Gets stripeCardId
-     * @return string
-     */
-    public function getStripeCardId()
-    {
-        return $this->container['stripeCardId'];
-    }
-
-    /**
-     * Sets stripeCardId
-     * @param string $stripeCardId
-     * @return $this
-     */
-    public function setStripeCardId($stripeCardId)
-    {
-        $this->container['stripeCardId'] = $stripeCardId;
-
-        return $this;
-    }
-
-    /**
-     * Gets stripeSubscriptionId
-     * @return string
-     */
-    public function getStripeSubscriptionId()
-    {
-        return $this->container['stripeSubscriptionId'];
-    }
-
-    /**
-     * Sets stripeSubscriptionId
-     * @param string $stripeSubscriptionId
-     * @return $this
-     */
-    public function setStripeSubscriptionId($stripeSubscriptionId)
-    {
-        $this->container['stripeSubscriptionId'] = $stripeSubscriptionId;
+        $this->container['value'] = $value;
 
         return $this;
     }
@@ -442,6 +264,69 @@ class Billing implements ArrayAccess
     }
 
     /**
+     * Gets dataSourceId
+     * @return string
+     */
+    public function getDataSourceId()
+    {
+        return $this->container['dataSourceId'];
+    }
+
+    /**
+     * Sets dataSourceId
+     * @param string $dataSourceId
+     * @return $this
+     */
+    public function setDataSourceId($dataSourceId)
+    {
+        $this->container['dataSourceId'] = $dataSourceId;
+
+        return $this;
+    }
+
+    /**
+     * Gets recordId
+     * @return string
+     */
+    public function getRecordId()
+    {
+        return $this->container['recordId'];
+    }
+
+    /**
+     * Sets recordId
+     * @param string $recordId
+     * @return $this
+     */
+    public function setRecordId($recordId)
+    {
+        $this->container['recordId'] = $recordId;
+
+        return $this;
+    }
+
+    /**
+     * Gets keyId
+     * @return string
+     */
+    public function getKeyId()
+    {
+        return $this->container['keyId'];
+    }
+
+    /**
+     * Sets keyId
+     * @param string $keyId
+     * @return $this
+     */
+    public function setKeyId($keyId)
+    {
+        $this->container['keyId'] = $keyId;
+
+        return $this;
+    }
+
+    /**
      * Gets team
      * @return \Swagger\Client\Model\Team
      */
@@ -458,6 +343,69 @@ class Billing implements ArrayAccess
     public function setTeam($team)
     {
         $this->container['team'] = $team;
+
+        return $this;
+    }
+
+    /**
+     * Gets dataSource
+     * @return \Swagger\Client\Model\DataSource
+     */
+    public function getDataSource()
+    {
+        return $this->container['dataSource'];
+    }
+
+    /**
+     * Sets dataSource
+     * @param \Swagger\Client\Model\DataSource $dataSource
+     * @return $this
+     */
+    public function setDataSource($dataSource)
+    {
+        $this->container['dataSource'] = $dataSource;
+
+        return $this;
+    }
+
+    /**
+     * Gets values
+     * @return \Swagger\Client\Model\DataSourceRecord
+     */
+    public function getValues()
+    {
+        return $this->container['values'];
+    }
+
+    /**
+     * Sets values
+     * @param \Swagger\Client\Model\DataSourceRecord $values
+     * @return $this
+     */
+    public function setValues($values)
+    {
+        $this->container['values'] = $values;
+
+        return $this;
+    }
+
+    /**
+     * Gets key
+     * @return \Swagger\Client\Model\DataSourceKey
+     */
+    public function getKey()
+    {
+        return $this->container['key'];
+    }
+
+    /**
+     * Sets key
+     * @param \Swagger\Client\Model\DataSourceKey $key
+     * @return $this
+     */
+    public function setKey($key)
+    {
+        $this->container['key'] = $key;
 
         return $this;
     }

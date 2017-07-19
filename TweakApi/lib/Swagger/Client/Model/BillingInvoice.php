@@ -78,7 +78,7 @@ class BillingInvoice implements ArrayAccess
         'description' => 'string',
         'endingBalance' => 'double',
         'forgiven' => 'bool',
-        'lines' => '\Swagger\Client\Model\BillingInvoiceLine',
+        'lines' => '\Swagger\Client\Model\BillingInvoiceLine[]',
         'nextPaymentAttempt' => '\DateTime',
         'paid' => 'bool',
         'periodEnd' => '\DateTime',
@@ -535,7 +535,7 @@ class BillingInvoice implements ArrayAccess
 
     /**
      * Gets lines
-     * @return \Swagger\Client\Model\BillingInvoiceLine
+     * @return \Swagger\Client\Model\BillingInvoiceLine[]
      */
     public function getLines()
     {
@@ -544,7 +544,7 @@ class BillingInvoice implements ArrayAccess
 
     /**
      * Sets lines
-     * @param \Swagger\Client\Model\BillingInvoiceLine $lines
+     * @param \Swagger\Client\Model\BillingInvoiceLine[] $lines
      * @return $this
      */
     public function setLines($lines)

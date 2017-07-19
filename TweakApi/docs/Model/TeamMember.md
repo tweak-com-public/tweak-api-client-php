@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **roles** | **string[]** |  | 
+**previousRoles** | **string[]** |  | [optional] 
 **position** | **string** |  | [optional] 
 **officePhone** | **string** |  | [optional] 
 **mobilePhone** | **string** |  | [optional] 

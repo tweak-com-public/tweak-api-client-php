@@ -144,6 +144,13 @@ Class | Method | HTTP request | Description
 *CustomerApi* | [**customersIdTeamsNkBrandGet**](docs/Api/CustomerApi.md#customersidteamsnkbrandget) | **GET** /Customers/{id}/teams/{nk}/brand | Fetches hasOne relation brand.
 *CustomerApi* | [**customersIdTeamsNkBrandPost**](docs/Api/CustomerApi.md#customersidteamsnkbrandpost) | **POST** /Customers/{id}/teams/{nk}/brand | Creates a new instance in brand of this model.
 *CustomerApi* | [**customersIdTeamsNkBrandPut**](docs/Api/CustomerApi.md#customersidteamsnkbrandput) | **PUT** /Customers/{id}/teams/{nk}/brand | Update brand of this model.
+*CustomerApi* | [**customersIdTeamsNkDataSourcesCountGet**](docs/Api/CustomerApi.md#customersidteamsnkdatasourcescountget) | **GET** /Customers/{id}/teams/{nk}/dataSources/count | Counts dataSources of Team.
+*CustomerApi* | [**customersIdTeamsNkDataSourcesDelete**](docs/Api/CustomerApi.md#customersidteamsnkdatasourcesdelete) | **DELETE** /Customers/{id}/teams/{nk}/dataSources | Deletes all dataSources of this model.
+*CustomerApi* | [**customersIdTeamsNkDataSourcesFkDelete**](docs/Api/CustomerApi.md#customersidteamsnkdatasourcesfkdelete) | **DELETE** /Customers/{id}/teams/{nk}/dataSources/{fk} | Delete a related item by id for dataSources.
+*CustomerApi* | [**customersIdTeamsNkDataSourcesFkGet**](docs/Api/CustomerApi.md#customersidteamsnkdatasourcesfkget) | **GET** /Customers/{id}/teams/{nk}/dataSources/{fk} | Find a related item by id for dataSources.
+*CustomerApi* | [**customersIdTeamsNkDataSourcesFkPut**](docs/Api/CustomerApi.md#customersidteamsnkdatasourcesfkput) | **PUT** /Customers/{id}/teams/{nk}/dataSources/{fk} | Update a related item by id for dataSources.
+*CustomerApi* | [**customersIdTeamsNkDataSourcesGet**](docs/Api/CustomerApi.md#customersidteamsnkdatasourcesget) | **GET** /Customers/{id}/teams/{nk}/dataSources | Queries dataSources of Team.
+*CustomerApi* | [**customersIdTeamsNkDataSourcesPost**](docs/Api/CustomerApi.md#customersidteamsnkdatasourcespost) | **POST** /Customers/{id}/teams/{nk}/dataSources | Creates a new instance in dataSources of this model.
 *CustomerApi* | [**customersIdTeamsNkImageFoldersCountGet**](docs/Api/CustomerApi.md#customersidteamsnkimagefolderscountget) | **GET** /Customers/{id}/teams/{nk}/imageFolders/count | Counts imageFolders of Team.
 *CustomerApi* | [**customersIdTeamsNkImageFoldersDelete**](docs/Api/CustomerApi.md#customersidteamsnkimagefoldersdelete) | **DELETE** /Customers/{id}/teams/{nk}/imageFolders | Deletes all imageFolders of this model.
 *CustomerApi* | [**customersIdTeamsNkImageFoldersFkDelete**](docs/Api/CustomerApi.md#customersidteamsnkimagefoldersfkdelete) | **DELETE** /Customers/{id}/teams/{nk}/imageFolders/{fk} | Delete a related item by id for imageFolders.
@@ -228,6 +235,89 @@ Class | Method | HTTP request | Description
 *CustomerApi* | [**customersResetPost**](docs/Api/CustomerApi.md#customersresetpost) | **POST** /Customers/reset | Reset password for a user with email.
 *CustomerApi* | [**customersUpdatePost**](docs/Api/CustomerApi.md#customersupdatepost) | **POST** /Customers/update | Update instances of the model matched by {{where}} from the data source.
 *CustomerApi* | [**customersUpsertWithWherePost**](docs/Api/CustomerApi.md#customersupsertwithwherepost) | **POST** /Customers/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
+*DataSourceApi* | [**dataSourcesIdKeysCountGet**](docs/Api/DataSourceApi.md#datasourcesidkeyscountget) | **GET** /DataSources/{id}/keys/count | Counts keys of DataSource.
+*DataSourceApi* | [**dataSourcesIdKeysDelete**](docs/Api/DataSourceApi.md#datasourcesidkeysdelete) | **DELETE** /DataSources/{id}/keys | Deletes all keys of this model.
+*DataSourceApi* | [**dataSourcesIdKeysFkDelete**](docs/Api/DataSourceApi.md#datasourcesidkeysfkdelete) | **DELETE** /DataSources/{id}/keys/{fk} | Delete a related item by id for keys.
+*DataSourceApi* | [**dataSourcesIdKeysFkGet**](docs/Api/DataSourceApi.md#datasourcesidkeysfkget) | **GET** /DataSources/{id}/keys/{fk} | Find a related item by id for keys.
+*DataSourceApi* | [**dataSourcesIdKeysFkPut**](docs/Api/DataSourceApi.md#datasourcesidkeysfkput) | **PUT** /DataSources/{id}/keys/{fk} | Update a related item by id for keys.
+*DataSourceApi* | [**dataSourcesIdKeysGet**](docs/Api/DataSourceApi.md#datasourcesidkeysget) | **GET** /DataSources/{id}/keys | Queries keys of DataSource.
+*DataSourceApi* | [**dataSourcesIdKeysPost**](docs/Api/DataSourceApi.md#datasourcesidkeyspost) | **POST** /DataSources/{id}/keys | Creates a new instance in keys of this model.
+*DataSourceKeyApi* | [**dataSourcesChangeStreamGet**](docs/Api/DataSourceKeyApi.md#datasourceschangestreamget) | **GET** /DataSources/change-stream | Create a change stream.
+*DataSourceKeyApi* | [**dataSourcesChangeStreamPost**](docs/Api/DataSourceKeyApi.md#datasourceschangestreampost) | **POST** /DataSources/change-stream | Create a change stream.
+*DataSourceKeyApi* | [**dataSourcesCountGet**](docs/Api/DataSourceKeyApi.md#datasourcescountget) | **GET** /DataSources/count | Count instances of the model matched by where from the data source.
+*DataSourceKeyApi* | [**dataSourcesFindOneGet**](docs/Api/DataSourceKeyApi.md#datasourcesfindoneget) | **GET** /DataSources/findOne | Find first instance of the model matched by filter from the data source.
+*DataSourceKeyApi* | [**dataSourcesGet**](docs/Api/DataSourceKeyApi.md#datasourcesget) | **GET** /DataSources | Find all instances of the model matched by filter from the data source.
+*DataSourceKeyApi* | [**dataSourcesIdDataSourceGet**](docs/Api/DataSourceKeyApi.md#datasourcesiddatasourceget) | **GET** /DataSources/{id}/dataSource | Fetches belongsTo relation dataSource.
+*DataSourceKeyApi* | [**dataSourcesIdDelete**](docs/Api/DataSourceKeyApi.md#datasourcesiddelete) | **DELETE** /DataSources/{id} | Delete a model instance by {{id}} from the data source.
+*DataSourceKeyApi* | [**dataSourcesIdExistsGet**](docs/Api/DataSourceKeyApi.md#datasourcesidexistsget) | **GET** /DataSources/{id}/exists | Check whether a model instance exists in the data source.
+*DataSourceKeyApi* | [**dataSourcesIdGet**](docs/Api/DataSourceKeyApi.md#datasourcesidget) | **GET** /DataSources/{id} | Find a model instance by {{id}} from the data source.
+*DataSourceKeyApi* | [**dataSourcesIdHead**](docs/Api/DataSourceKeyApi.md#datasourcesidhead) | **HEAD** /DataSources/{id} | Check whether a model instance exists in the data source.
+*DataSourceKeyApi* | [**dataSourcesIdPatch**](docs/Api/DataSourceKeyApi.md#datasourcesidpatch) | **PATCH** /DataSources/{id} | Patch attributes for a model instance and persist it into the data source.
+*DataSourceKeyApi* | [**dataSourcesIdPut**](docs/Api/DataSourceKeyApi.md#datasourcesidput) | **PUT** /DataSources/{id} | Replace attributes for a model instance and persist it into the data source.
+*DataSourceKeyApi* | [**dataSourcesIdRecordValuesCountGet**](docs/Api/DataSourceKeyApi.md#datasourcesidrecordvaluescountget) | **GET** /DataSources/{id}/recordValues/count | Counts recordValues of DataSourceKey.
+*DataSourceKeyApi* | [**dataSourcesIdRecordValuesDelete**](docs/Api/DataSourceKeyApi.md#datasourcesidrecordvaluesdelete) | **DELETE** /DataSources/{id}/recordValues | Deletes all recordValues of this model.
+*DataSourceKeyApi* | [**dataSourcesIdRecordValuesFkDelete**](docs/Api/DataSourceKeyApi.md#datasourcesidrecordvaluesfkdelete) | **DELETE** /DataSources/{id}/recordValues/{fk} | Delete a related item by id for recordValues.
+*DataSourceKeyApi* | [**dataSourcesIdRecordValuesFkGet**](docs/Api/DataSourceKeyApi.md#datasourcesidrecordvaluesfkget) | **GET** /DataSources/{id}/recordValues/{fk} | Find a related item by id for recordValues.
+*DataSourceKeyApi* | [**dataSourcesIdRecordValuesFkPut**](docs/Api/DataSourceKeyApi.md#datasourcesidrecordvaluesfkput) | **PUT** /DataSources/{id}/recordValues/{fk} | Update a related item by id for recordValues.
+*DataSourceKeyApi* | [**dataSourcesIdRecordValuesGet**](docs/Api/DataSourceKeyApi.md#datasourcesidrecordvaluesget) | **GET** /DataSources/{id}/recordValues | Queries recordValues of DataSourceKey.
+*DataSourceKeyApi* | [**dataSourcesIdRecordValuesPost**](docs/Api/DataSourceKeyApi.md#datasourcesidrecordvaluespost) | **POST** /DataSources/{id}/recordValues | Creates a new instance in recordValues of this model.
+*DataSourceKeyApi* | [**dataSourcesIdReplacePost**](docs/Api/DataSourceKeyApi.md#datasourcesidreplacepost) | **POST** /DataSources/{id}/replace | Replace attributes for a model instance and persist it into the data source.
+*DataSourceKeyApi* | [**dataSourcesIdTeamGet**](docs/Api/DataSourceKeyApi.md#datasourcesidteamget) | **GET** /DataSources/{id}/team | Fetches belongsTo relation team.
+*DataSourceKeyApi* | [**dataSourcesPatch**](docs/Api/DataSourceKeyApi.md#datasourcespatch) | **PATCH** /DataSources | Patch an existing model instance or insert a new one into the data source.
+*DataSourceKeyApi* | [**dataSourcesPost**](docs/Api/DataSourceKeyApi.md#datasourcespost) | **POST** /DataSources | Create a new instance of the model and persist it into the data source.
+*DataSourceKeyApi* | [**dataSourcesPut**](docs/Api/DataSourceKeyApi.md#datasourcesput) | **PUT** /DataSources | Replace an existing model instance or insert a new one into the data source.
+*DataSourceKeyApi* | [**dataSourcesReplaceOrCreatePost**](docs/Api/DataSourceKeyApi.md#datasourcesreplaceorcreatepost) | **POST** /DataSources/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
+*DataSourceKeyApi* | [**dataSourcesUpdatePost**](docs/Api/DataSourceKeyApi.md#datasourcesupdatepost) | **POST** /DataSources/update | Update instances of the model matched by {{where}} from the data source.
+*DataSourceKeyApi* | [**dataSourcesUpsertWithWherePost**](docs/Api/DataSourceKeyApi.md#datasourcesupsertwithwherepost) | **POST** /DataSources/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
+*DataSourceRecordApi* | [**dataSourceRecordsChangeStreamGet**](docs/Api/DataSourceRecordApi.md#datasourcerecordschangestreamget) | **GET** /DataSourceRecords/change-stream | Create a change stream.
+*DataSourceRecordApi* | [**dataSourceRecordsChangeStreamPost**](docs/Api/DataSourceRecordApi.md#datasourcerecordschangestreampost) | **POST** /DataSourceRecords/change-stream | Create a change stream.
+*DataSourceRecordApi* | [**dataSourceRecordsCountGet**](docs/Api/DataSourceRecordApi.md#datasourcerecordscountget) | **GET** /DataSourceRecords/count | Count instances of the model matched by where from the data source.
+*DataSourceRecordApi* | [**dataSourceRecordsFindOneGet**](docs/Api/DataSourceRecordApi.md#datasourcerecordsfindoneget) | **GET** /DataSourceRecords/findOne | Find first instance of the model matched by filter from the data source.
+*DataSourceRecordApi* | [**dataSourceRecordsGet**](docs/Api/DataSourceRecordApi.md#datasourcerecordsget) | **GET** /DataSourceRecords | Find all instances of the model matched by filter from the data source.
+*DataSourceRecordApi* | [**dataSourceRecordsIdDataSourceGet**](docs/Api/DataSourceRecordApi.md#datasourcerecordsiddatasourceget) | **GET** /DataSourceRecords/{id}/dataSource | Fetches belongsTo relation dataSource.
+*DataSourceRecordApi* | [**dataSourceRecordsIdDelete**](docs/Api/DataSourceRecordApi.md#datasourcerecordsiddelete) | **DELETE** /DataSourceRecords/{id} | Delete a model instance by {{id}} from the data source.
+*DataSourceRecordApi* | [**dataSourceRecordsIdExistsGet**](docs/Api/DataSourceRecordApi.md#datasourcerecordsidexistsget) | **GET** /DataSourceRecords/{id}/exists | Check whether a model instance exists in the data source.
+*DataSourceRecordApi* | [**dataSourceRecordsIdGet**](docs/Api/DataSourceRecordApi.md#datasourcerecordsidget) | **GET** /DataSourceRecords/{id} | Find a model instance by {{id}} from the data source.
+*DataSourceRecordApi* | [**dataSourceRecordsIdHead**](docs/Api/DataSourceRecordApi.md#datasourcerecordsidhead) | **HEAD** /DataSourceRecords/{id} | Check whether a model instance exists in the data source.
+*DataSourceRecordApi* | [**dataSourceRecordsIdPatch**](docs/Api/DataSourceRecordApi.md#datasourcerecordsidpatch) | **PATCH** /DataSourceRecords/{id} | Patch attributes for a model instance and persist it into the data source.
+*DataSourceRecordApi* | [**dataSourceRecordsIdPut**](docs/Api/DataSourceRecordApi.md#datasourcerecordsidput) | **PUT** /DataSourceRecords/{id} | Replace attributes for a model instance and persist it into the data source.
+*DataSourceRecordApi* | [**dataSourceRecordsIdReplacePost**](docs/Api/DataSourceRecordApi.md#datasourcerecordsidreplacepost) | **POST** /DataSourceRecords/{id}/replace | Replace attributes for a model instance and persist it into the data source.
+*DataSourceRecordApi* | [**dataSourceRecordsIdTeamGet**](docs/Api/DataSourceRecordApi.md#datasourcerecordsidteamget) | **GET** /DataSourceRecords/{id}/team | Fetches belongsTo relation team.
+*DataSourceRecordApi* | [**dataSourceRecordsIdValuesCountGet**](docs/Api/DataSourceRecordApi.md#datasourcerecordsidvaluescountget) | **GET** /DataSourceRecords/{id}/values/count | Counts values of DataSourceRecord.
+*DataSourceRecordApi* | [**dataSourceRecordsIdValuesDelete**](docs/Api/DataSourceRecordApi.md#datasourcerecordsidvaluesdelete) | **DELETE** /DataSourceRecords/{id}/values | Deletes all values of this model.
+*DataSourceRecordApi* | [**dataSourceRecordsIdValuesFkDelete**](docs/Api/DataSourceRecordApi.md#datasourcerecordsidvaluesfkdelete) | **DELETE** /DataSourceRecords/{id}/values/{fk} | Delete a related item by id for values.
+*DataSourceRecordApi* | [**dataSourceRecordsIdValuesFkGet**](docs/Api/DataSourceRecordApi.md#datasourcerecordsidvaluesfkget) | **GET** /DataSourceRecords/{id}/values/{fk} | Find a related item by id for values.
+*DataSourceRecordApi* | [**dataSourceRecordsIdValuesFkPut**](docs/Api/DataSourceRecordApi.md#datasourcerecordsidvaluesfkput) | **PUT** /DataSourceRecords/{id}/values/{fk} | Update a related item by id for values.
+*DataSourceRecordApi* | [**dataSourceRecordsIdValuesGet**](docs/Api/DataSourceRecordApi.md#datasourcerecordsidvaluesget) | **GET** /DataSourceRecords/{id}/values | Queries values of DataSourceRecord.
+*DataSourceRecordApi* | [**dataSourceRecordsIdValuesPost**](docs/Api/DataSourceRecordApi.md#datasourcerecordsidvaluespost) | **POST** /DataSourceRecords/{id}/values | Creates a new instance in values of this model.
+*DataSourceRecordApi* | [**dataSourceRecordsPatch**](docs/Api/DataSourceRecordApi.md#datasourcerecordspatch) | **PATCH** /DataSourceRecords | Patch an existing model instance or insert a new one into the data source.
+*DataSourceRecordApi* | [**dataSourceRecordsPost**](docs/Api/DataSourceRecordApi.md#datasourcerecordspost) | **POST** /DataSourceRecords | Create a new instance of the model and persist it into the data source.
+*DataSourceRecordApi* | [**dataSourceRecordsPut**](docs/Api/DataSourceRecordApi.md#datasourcerecordsput) | **PUT** /DataSourceRecords | Replace an existing model instance or insert a new one into the data source.
+*DataSourceRecordApi* | [**dataSourceRecordsReplaceOrCreatePost**](docs/Api/DataSourceRecordApi.md#datasourcerecordsreplaceorcreatepost) | **POST** /DataSourceRecords/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
+*DataSourceRecordApi* | [**dataSourceRecordsUpdatePost**](docs/Api/DataSourceRecordApi.md#datasourcerecordsupdatepost) | **POST** /DataSourceRecords/update | Update instances of the model matched by {{where}} from the data source.
+*DataSourceRecordApi* | [**dataSourceRecordsUpsertWithWherePost**](docs/Api/DataSourceRecordApi.md#datasourcerecordsupsertwithwherepost) | **POST** /DataSourceRecords/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
+*DataSourceRecordValueApi* | [**dataSourceRecordValuesChangeStreamGet**](docs/Api/DataSourceRecordValueApi.md#datasourcerecordvalueschangestreamget) | **GET** /DataSourceRecordValues/change-stream | Create a change stream.
+*DataSourceRecordValueApi* | [**dataSourceRecordValuesChangeStreamPost**](docs/Api/DataSourceRecordValueApi.md#datasourcerecordvalueschangestreampost) | **POST** /DataSourceRecordValues/change-stream | Create a change stream.
+*DataSourceRecordValueApi* | [**dataSourceRecordValuesCountGet**](docs/Api/DataSourceRecordValueApi.md#datasourcerecordvaluescountget) | **GET** /DataSourceRecordValues/count | Count instances of the model matched by where from the data source.
+*DataSourceRecordValueApi* | [**dataSourceRecordValuesFindOneGet**](docs/Api/DataSourceRecordValueApi.md#datasourcerecordvaluesfindoneget) | **GET** /DataSourceRecordValues/findOne | Find first instance of the model matched by filter from the data source.
+*DataSourceRecordValueApi* | [**dataSourceRecordValuesGet**](docs/Api/DataSourceRecordValueApi.md#datasourcerecordvaluesget) | **GET** /DataSourceRecordValues | Find all instances of the model matched by filter from the data source.
+*DataSourceRecordValueApi* | [**dataSourceRecordValuesIdDataSourceGet**](docs/Api/DataSourceRecordValueApi.md#datasourcerecordvaluesiddatasourceget) | **GET** /DataSourceRecordValues/{id}/dataSource | Fetches belongsTo relation dataSource.
+*DataSourceRecordValueApi* | [**dataSourceRecordValuesIdDelete**](docs/Api/DataSourceRecordValueApi.md#datasourcerecordvaluesiddelete) | **DELETE** /DataSourceRecordValues/{id} | Delete a model instance by {{id}} from the data source.
+*DataSourceRecordValueApi* | [**dataSourceRecordValuesIdExistsGet**](docs/Api/DataSourceRecordValueApi.md#datasourcerecordvaluesidexistsget) | **GET** /DataSourceRecordValues/{id}/exists | Check whether a model instance exists in the data source.
+*DataSourceRecordValueApi* | [**dataSourceRecordValuesIdGet**](docs/Api/DataSourceRecordValueApi.md#datasourcerecordvaluesidget) | **GET** /DataSourceRecordValues/{id} | Find a model instance by {{id}} from the data source.
+*DataSourceRecordValueApi* | [**dataSourceRecordValuesIdHead**](docs/Api/DataSourceRecordValueApi.md#datasourcerecordvaluesidhead) | **HEAD** /DataSourceRecordValues/{id} | Check whether a model instance exists in the data source.
+*DataSourceRecordValueApi* | [**dataSourceRecordValuesIdKeyGet**](docs/Api/DataSourceRecordValueApi.md#datasourcerecordvaluesidkeyget) | **GET** /DataSourceRecordValues/{id}/key | Fetches belongsTo relation key.
+*DataSourceRecordValueApi* | [**dataSourceRecordValuesIdPatch**](docs/Api/DataSourceRecordValueApi.md#datasourcerecordvaluesidpatch) | **PATCH** /DataSourceRecordValues/{id} | Patch attributes for a model instance and persist it into the data source.
+*DataSourceRecordValueApi* | [**dataSourceRecordValuesIdPut**](docs/Api/DataSourceRecordValueApi.md#datasourcerecordvaluesidput) | **PUT** /DataSourceRecordValues/{id} | Replace attributes for a model instance and persist it into the data source.
+*DataSourceRecordValueApi* | [**dataSourceRecordValuesIdReplacePost**](docs/Api/DataSourceRecordValueApi.md#datasourcerecordvaluesidreplacepost) | **POST** /DataSourceRecordValues/{id}/replace | Replace attributes for a model instance and persist it into the data source.
+*DataSourceRecordValueApi* | [**dataSourceRecordValuesIdTeamGet**](docs/Api/DataSourceRecordValueApi.md#datasourcerecordvaluesidteamget) | **GET** /DataSourceRecordValues/{id}/team | Fetches belongsTo relation team.
+*DataSourceRecordValueApi* | [**dataSourceRecordValuesIdValuesGet**](docs/Api/DataSourceRecordValueApi.md#datasourcerecordvaluesidvaluesget) | **GET** /DataSourceRecordValues/{id}/values | Fetches belongsTo relation values.
+*DataSourceRecordValueApi* | [**dataSourceRecordValuesPatch**](docs/Api/DataSourceRecordValueApi.md#datasourcerecordvaluespatch) | **PATCH** /DataSourceRecordValues | Patch an existing model instance or insert a new one into the data source.
+*DataSourceRecordValueApi* | [**dataSourceRecordValuesPost**](docs/Api/DataSourceRecordValueApi.md#datasourcerecordvaluespost) | **POST** /DataSourceRecordValues | Create a new instance of the model and persist it into the data source.
+*DataSourceRecordValueApi* | [**dataSourceRecordValuesPut**](docs/Api/DataSourceRecordValueApi.md#datasourcerecordvaluesput) | **PUT** /DataSourceRecordValues | Replace an existing model instance or insert a new one into the data source.
+*DataSourceRecordValueApi* | [**dataSourceRecordValuesReplaceOrCreatePost**](docs/Api/DataSourceRecordValueApi.md#datasourcerecordvaluesreplaceorcreatepost) | **POST** /DataSourceRecordValues/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
+*DataSourceRecordValueApi* | [**dataSourceRecordValuesUpdatePost**](docs/Api/DataSourceRecordValueApi.md#datasourcerecordvaluesupdatepost) | **POST** /DataSourceRecordValues/update | Update instances of the model matched by {{where}} from the data source.
+*DataSourceRecordValueApi* | [**dataSourceRecordValuesUpsertWithWherePost**](docs/Api/DataSourceRecordValueApi.md#datasourcerecordvaluesupsertwithwherepost) | **POST** /DataSourceRecordValues/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
 *DesignApi* | [**designsChangeStreamGet**](docs/Api/DesignApi.md#designschangestreamget) | **GET** /Designs/change-stream | Create a change stream.
 *DesignApi* | [**designsChangeStreamPost**](docs/Api/DesignApi.md#designschangestreampost) | **POST** /Designs/change-stream | Create a change stream.
 *DesignApi* | [**designsCountGet**](docs/Api/DesignApi.md#designscountget) | **GET** /Designs/count | Count instances of the model matched by where from the data source.
@@ -837,6 +927,13 @@ Class | Method | HTTP request | Description
 *TeamApi* | [**teamsIdBrandGet**](docs/Api/TeamApi.md#teamsidbrandget) | **GET** /Teams/{id}/brand | Fetches hasOne relation brand.
 *TeamApi* | [**teamsIdBrandPost**](docs/Api/TeamApi.md#teamsidbrandpost) | **POST** /Teams/{id}/brand | Creates a new instance in brand of this model.
 *TeamApi* | [**teamsIdBrandPut**](docs/Api/TeamApi.md#teamsidbrandput) | **PUT** /Teams/{id}/brand | Update brand of this model.
+*TeamApi* | [**teamsIdDataSourcesCountGet**](docs/Api/TeamApi.md#teamsiddatasourcescountget) | **GET** /Teams/{id}/dataSources/count | Counts dataSources of Team.
+*TeamApi* | [**teamsIdDataSourcesDelete**](docs/Api/TeamApi.md#teamsiddatasourcesdelete) | **DELETE** /Teams/{id}/dataSources | Deletes all dataSources of this model.
+*TeamApi* | [**teamsIdDataSourcesFkDelete**](docs/Api/TeamApi.md#teamsiddatasourcesfkdelete) | **DELETE** /Teams/{id}/dataSources/{fk} | Delete a related item by id for dataSources.
+*TeamApi* | [**teamsIdDataSourcesFkGet**](docs/Api/TeamApi.md#teamsiddatasourcesfkget) | **GET** /Teams/{id}/dataSources/{fk} | Find a related item by id for dataSources.
+*TeamApi* | [**teamsIdDataSourcesFkPut**](docs/Api/TeamApi.md#teamsiddatasourcesfkput) | **PUT** /Teams/{id}/dataSources/{fk} | Update a related item by id for dataSources.
+*TeamApi* | [**teamsIdDataSourcesGet**](docs/Api/TeamApi.md#teamsiddatasourcesget) | **GET** /Teams/{id}/dataSources | Queries dataSources of Team.
+*TeamApi* | [**teamsIdDataSourcesPost**](docs/Api/TeamApi.md#teamsiddatasourcespost) | **POST** /Teams/{id}/dataSources | Creates a new instance in dataSources of this model.
 *TeamApi* | [**teamsIdDelete**](docs/Api/TeamApi.md#teamsiddelete) | **DELETE** /Teams/{id} | Delete a model instance by {{id}} from the data source.
 *TeamApi* | [**teamsIdExistsGet**](docs/Api/TeamApi.md#teamsidexistsget) | **GET** /Teams/{id}/exists | Check whether a model instance exists in the data source.
 *TeamApi* | [**teamsIdGet**](docs/Api/TeamApi.md#teamsidget) | **GET** /Teams/{id} | Find a model instance by {{id}} from the data source.
@@ -1208,6 +1305,13 @@ Class | Method | HTTP request | Description
 *TeamMemberApi* | [**teamMembersIdTeamBrandGet**](docs/Api/TeamMemberApi.md#teammembersidteambrandget) | **GET** /TeamMembers/{id}/team/brand | Fetches hasOne relation brand.
 *TeamMemberApi* | [**teamMembersIdTeamBrandPost**](docs/Api/TeamMemberApi.md#teammembersidteambrandpost) | **POST** /TeamMembers/{id}/team/brand | Creates a new instance in brand of this model.
 *TeamMemberApi* | [**teamMembersIdTeamBrandPut**](docs/Api/TeamMemberApi.md#teammembersidteambrandput) | **PUT** /TeamMembers/{id}/team/brand | Update brand of this model.
+*TeamMemberApi* | [**teamMembersIdTeamDataSourcesCountGet**](docs/Api/TeamMemberApi.md#teammembersidteamdatasourcescountget) | **GET** /TeamMembers/{id}/team/dataSources/count | Counts dataSources of Team.
+*TeamMemberApi* | [**teamMembersIdTeamDataSourcesDelete**](docs/Api/TeamMemberApi.md#teammembersidteamdatasourcesdelete) | **DELETE** /TeamMembers/{id}/team/dataSources | Deletes all dataSources of this model.
+*TeamMemberApi* | [**teamMembersIdTeamDataSourcesFkDelete**](docs/Api/TeamMemberApi.md#teammembersidteamdatasourcesfkdelete) | **DELETE** /TeamMembers/{id}/team/dataSources/{fk} | Delete a related item by id for dataSources.
+*TeamMemberApi* | [**teamMembersIdTeamDataSourcesFkGet**](docs/Api/TeamMemberApi.md#teammembersidteamdatasourcesfkget) | **GET** /TeamMembers/{id}/team/dataSources/{fk} | Find a related item by id for dataSources.
+*TeamMemberApi* | [**teamMembersIdTeamDataSourcesFkPut**](docs/Api/TeamMemberApi.md#teammembersidteamdatasourcesfkput) | **PUT** /TeamMembers/{id}/team/dataSources/{fk} | Update a related item by id for dataSources.
+*TeamMemberApi* | [**teamMembersIdTeamDataSourcesGet**](docs/Api/TeamMemberApi.md#teammembersidteamdatasourcesget) | **GET** /TeamMembers/{id}/team/dataSources | Queries dataSources of Team.
+*TeamMemberApi* | [**teamMembersIdTeamDataSourcesPost**](docs/Api/TeamMemberApi.md#teammembersidteamdatasourcespost) | **POST** /TeamMembers/{id}/team/dataSources | Creates a new instance in dataSources of this model.
 *TeamMemberApi* | [**teamMembersIdTeamGet**](docs/Api/TeamMemberApi.md#teammembersidteamget) | **GET** /TeamMembers/{id}/team | Fetches belongsTo relation team.
 *TeamMemberApi* | [**teamMembersIdTeamImageFoldersCountGet**](docs/Api/TeamMemberApi.md#teammembersidteamimagefolderscountget) | **GET** /TeamMembers/{id}/team/imageFolders/count | Counts imageFolders of Team.
 *TeamMemberApi* | [**teamMembersIdTeamImageFoldersDelete**](docs/Api/TeamMemberApi.md#teammembersidteamimagefoldersdelete) | **DELETE** /TeamMembers/{id}/team/imageFolders | Deletes all imageFolders of this model.
@@ -1547,11 +1651,17 @@ Class | Method | HTTP request | Description
  - [BillingCard](docs/Model/BillingCard.md)
  - [BillingInvoice](docs/Model/BillingInvoice.md)
  - [BillingInvoiceLine](docs/Model/BillingInvoiceLine.md)
+ - [BillingLimit](docs/Model/BillingLimit.md)
+ - [BillingLimitCounter](docs/Model/BillingLimitCounter.md)
  - [BillingPlan](docs/Model/BillingPlan.md)
  - [BillingSubscription](docs/Model/BillingSubscription.md)
  - [BillingSubscriptionItem](docs/Model/BillingSubscriptionItem.md)
  - [Customer](docs/Model/Customer.md)
  - [CustomerPermissionSet](docs/Model/CustomerPermissionSet.md)
+ - [DataSource](docs/Model/DataSource.md)
+ - [DataSourceKey](docs/Model/DataSourceKey.md)
+ - [DataSourceRecord](docs/Model/DataSourceRecord.md)
+ - [DataSourceRecordValue](docs/Model/DataSourceRecordValue.md)
  - [Design](docs/Model/Design.md)
  - [DesignComment](docs/Model/DesignComment.md)
  - [DesignExport](docs/Model/DesignExport.md)

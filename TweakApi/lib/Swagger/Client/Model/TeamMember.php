@@ -67,6 +67,7 @@ class TeamMember implements ArrayAccess
       */
     protected static $swaggerTypes = array(
         'roles' => 'string[]',
+        'previousRoles' => 'string[]',
         'position' => 'string',
         'officePhone' => 'string',
         'mobilePhone' => 'string',
@@ -110,6 +111,7 @@ class TeamMember implements ArrayAccess
      */
     protected static $attributeMap = array(
         'roles' => 'roles',
+        'previousRoles' => 'previousRoles',
         'position' => 'position',
         'officePhone' => 'officePhone',
         'mobilePhone' => 'mobilePhone',
@@ -153,6 +155,7 @@ class TeamMember implements ArrayAccess
      */
     protected static $setters = array(
         'roles' => 'setRoles',
+        'previousRoles' => 'setPreviousRoles',
         'position' => 'setPosition',
         'officePhone' => 'setOfficePhone',
         'mobilePhone' => 'setMobilePhone',
@@ -196,6 +199,7 @@ class TeamMember implements ArrayAccess
      */
     protected static $getters = array(
         'roles' => 'getRoles',
+        'previousRoles' => 'getPreviousRoles',
         'position' => 'getPosition',
         'officePhone' => 'getOfficePhone',
         'mobilePhone' => 'getMobilePhone',
@@ -250,6 +254,7 @@ class TeamMember implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['roles'] = isset($data['roles']) ? $data['roles'] : null;
+        $this->container['previousRoles'] = isset($data['previousRoles']) ? $data['previousRoles'] : null;
         $this->container['position'] = isset($data['position']) ? $data['position'] : null;
         $this->container['officePhone'] = isset($data['officePhone']) ? $data['officePhone'] : null;
         $this->container['mobilePhone'] = isset($data['mobilePhone']) ? $data['mobilePhone'] : null;
@@ -328,6 +333,27 @@ class TeamMember implements ArrayAccess
     public function setRoles($roles)
     {
         $this->container['roles'] = $roles;
+
+        return $this;
+    }
+
+    /**
+     * Gets previousRoles
+     * @return string[]
+     */
+    public function getPreviousRoles()
+    {
+        return $this->container['previousRoles'];
+    }
+
+    /**
+     * Sets previousRoles
+     * @param string[] $previousRoles
+     * @return $this
+     */
+    public function setPreviousRoles($previousRoles)
+    {
+        $this->container['previousRoles'] = $previousRoles;
 
         return $this;
     }

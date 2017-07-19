@@ -1,6 +1,6 @@
 <?php
 /**
- * BillingTest
+ * BillingLimitTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Tweak\Api;
 
 /**
- * BillingTest Class Doc Comment
+ * BillingLimitTest Class Doc Comment
  *
  * @category    Class */
-// * @description Billing
+// * @description BillingLimit
 /**
  * @package     Tweak\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class BillingTest extends \PHPUnit_Framework_TestCase
+class BillingLimitTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,81 +88,113 @@ class BillingTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "Billing"
+     * Test "BillingLimit"
      */
-    public function testBilling()
+    public function testBillingLimit()
     {
 
     }
 
     /**
-     * Test attribute "companyName"
+     * Test attribute "teamMember"
      */
-    public function testPropertyCompanyName()
+    public function testPropertyTeamMember()
     {
 
     }
 
     /**
-     * Test attribute "companyEmail"
+     * Test attribute "uploader"
      */
-    public function testPropertyCompanyEmail()
+    public function testPropertyUploader()
     {
 
     }
 
     /**
-     * Test attribute "companyVat"
+     * Test attribute "portal"
      */
-    public function testPropertyCompanyVat()
+    public function testPropertyPortal()
     {
 
     }
 
     /**
-     * Test attribute "companyCard"
+     * Test attribute "jpeg"
      */
-    public function testPropertyCompanyCard()
+    public function testPropertyJpeg()
     {
 
     }
 
     /**
-     * Test attribute "subscription"
+     * Test attribute "proof"
      */
-    public function testPropertySubscription()
+    public function testPropertyProof()
     {
 
     }
 
     /**
-     * Test attribute "limit"
+     * Test attribute "highResPdf"
      */
-    public function testPropertyLimit()
+    public function testPropertyHighResPdf()
     {
 
     }
 
     /**
-     * Test attribute "stripeCustomerId"
+     * Test attribute "storage"
      */
-    public function testPropertyStripeCustomerId()
+    public function testPropertyStorage()
     {
 
     }
 
     /**
-     * Test attribute "stripeCardId"
+     * Test attribute "stockImageLibrary"
      */
-    public function testPropertyStripeCardId()
+    public function testPropertyStockImageLibrary()
     {
 
     }
 
     /**
-     * Test attribute "stripeSubscriptionId"
+     * Test attribute "productDbRecord"
      */
-    public function testPropertyStripeSubscriptionId()
+    public function testPropertyProductDbRecord()
+    {
+
+    }
+
+    /**
+     * Test attribute "accountSupport"
+     */
+    public function testPropertyAccountSupport()
+    {
+
+    }
+
+    /**
+     * Test attribute "supportResponse"
+     */
+    public function testPropertySupportResponse()
+    {
+
+    }
+
+    /**
+     * Test attribute "bandwidth"
+     */
+    public function testPropertyBandwidth()
+    {
+
+    }
+
+    /**
+     * Test attribute "printerApi"
+     */
+    public function testPropertyPrinterApi()
     {
 
     }
@@ -171,22 +203,6 @@ class BillingTest extends \PHPUnit_Framework_TestCase
      * Test attribute "id"
      */
     public function testPropertyId()
-    {
-
-    }
-
-    /**
-     * Test attribute "teamId"
-     */
-    public function testPropertyTeamId()
-    {
-
-    }
-
-    /**
-     * Test attribute "team"
-     */
-    public function testPropertyTeam()
     {
 
     }

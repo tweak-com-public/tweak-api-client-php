@@ -695,6 +695,83 @@ class CustomerApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for customersIdTeamsNkDataSourcesCountGet
+     *
+     * Counts dataSources of Team..
+     *
+     */
+    public function testCustomersIdTeamsNkDataSourcesCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkDataSourcesDelete
+     *
+     * Deletes all dataSources of this model..
+     *
+     */
+    public function testCustomersIdTeamsNkDataSourcesDelete()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkDataSourcesFkDelete
+     *
+     * Delete a related item by id for dataSources..
+     *
+     */
+    public function testCustomersIdTeamsNkDataSourcesFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkDataSourcesFkGet
+     *
+     * Find a related item by id for dataSources..
+     *
+     */
+    public function testCustomersIdTeamsNkDataSourcesFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkDataSourcesFkPut
+     *
+     * Update a related item by id for dataSources..
+     *
+     */
+    public function testCustomersIdTeamsNkDataSourcesFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkDataSourcesGet
+     *
+     * Queries dataSources of Team..
+     *
+     */
+    public function testCustomersIdTeamsNkDataSourcesGet()
+    {
+
+    }
+
+    /**
+     * Test case for customersIdTeamsNkDataSourcesPost
+     *
+     * Creates a new instance in dataSources of this model..
+     *
+     */
+    public function testCustomersIdTeamsNkDataSourcesPost()
+    {
+
+    }
+
+    /**
      * Test case for customersIdTeamsNkImageFoldersCountGet
      *
      * Counts imageFolders of Team..

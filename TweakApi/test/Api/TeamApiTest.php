@@ -233,6 +233,83 @@ class TeamApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for teamsIdDataSourcesCountGet
+     *
+     * Counts dataSources of Team..
+     *
+     */
+    public function testTeamsIdDataSourcesCountGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamsIdDataSourcesDelete
+     *
+     * Deletes all dataSources of this model..
+     *
+     */
+    public function testTeamsIdDataSourcesDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamsIdDataSourcesFkDelete
+     *
+     * Delete a related item by id for dataSources..
+     *
+     */
+    public function testTeamsIdDataSourcesFkDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamsIdDataSourcesFkGet
+     *
+     * Find a related item by id for dataSources..
+     *
+     */
+    public function testTeamsIdDataSourcesFkGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamsIdDataSourcesFkPut
+     *
+     * Update a related item by id for dataSources..
+     *
+     */
+    public function testTeamsIdDataSourcesFkPut()
+    {
+
+    }
+
+    /**
+     * Test case for teamsIdDataSourcesGet
+     *
+     * Queries dataSources of Team..
+     *
+     */
+    public function testTeamsIdDataSourcesGet()
+    {
+
+    }
+
+    /**
+     * Test case for teamsIdDataSourcesPost
+     *
+     * Creates a new instance in dataSources of this model..
+     *
+     */
+    public function testTeamsIdDataSourcesPost()
+    {
+
+    }
+
+    /**
      * Test case for teamsIdDelete
      *
      * Delete a model instance by {{id}} from the data source..

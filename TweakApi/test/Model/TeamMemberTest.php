@@ -104,6 +104,14 @@ class TeamMemberTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "previousRoles"
+     */
+    public function testPropertyPreviousRoles()
+    {
+
+    }
+
+    /**
      * Test attribute "position"
      */
     public function testPropertyPosition()

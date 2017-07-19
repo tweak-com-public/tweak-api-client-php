@@ -1,6 +1,6 @@
 <?php
 /**
- * BillingTest
+ * DataSourceKeyTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Tweak\Api;
 
 /**
- * BillingTest Class Doc Comment
+ * DataSourceKeyTest Class Doc Comment
  *
  * @category    Class */
-// * @description Billing
+// * @description DataSourceKey
 /**
  * @package     Tweak\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class BillingTest extends \PHPUnit_Framework_TestCase
+class DataSourceKeyTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,81 +88,73 @@ class BillingTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "Billing"
+     * Test "DataSourceKey"
      */
-    public function testBilling()
+    public function testDataSourceKey()
     {
 
     }
 
     /**
-     * Test attribute "companyName"
+     * Test attribute "label"
      */
-    public function testPropertyCompanyName()
+    public function testPropertyLabel()
     {
 
     }
 
     /**
-     * Test attribute "companyEmail"
+     * Test attribute "column"
      */
-    public function testPropertyCompanyEmail()
+    public function testPropertyColumn()
     {
 
     }
 
     /**
-     * Test attribute "companyVat"
+     * Test attribute "valueDefault"
      */
-    public function testPropertyCompanyVat()
+    public function testPropertyValueDefault()
     {
 
     }
 
     /**
-     * Test attribute "companyCard"
+     * Test attribute "primaryKey"
      */
-    public function testPropertyCompanyCard()
+    public function testPropertyPrimaryKey()
     {
 
     }
 
     /**
-     * Test attribute "subscription"
+     * Test attribute "valueRequired"
      */
-    public function testPropertySubscription()
+    public function testPropertyValueRequired()
     {
 
     }
 
     /**
-     * Test attribute "limit"
+     * Test attribute "valueMin"
      */
-    public function testPropertyLimit()
+    public function testPropertyValueMin()
     {
 
     }
 
     /**
-     * Test attribute "stripeCustomerId"
+     * Test attribute "valueMax"
      */
-    public function testPropertyStripeCustomerId()
+    public function testPropertyValueMax()
     {
 
     }
 
     /**
-     * Test attribute "stripeCardId"
+     * Test attribute "valueType"
      */
-    public function testPropertyStripeCardId()
-    {
-
-    }
-
-    /**
-     * Test attribute "stripeSubscriptionId"
-     */
-    public function testPropertyStripeSubscriptionId()
+    public function testPropertyValueType()
     {
 
     }
@@ -184,9 +176,33 @@ class BillingTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "dataSourceId"
+     */
+    public function testPropertyDataSourceId()
+    {
+
+    }
+
+    /**
      * Test attribute "team"
      */
     public function testPropertyTeam()
+    {
+
+    }
+
+    /**
+     * Test attribute "dataSource"
+     */
+    public function testPropertyDataSource()
+    {
+
+    }
+
+    /**
+     * Test attribute "recordValues"
+     */
+    public function testPropertyRecordValues()
     {
 
     }

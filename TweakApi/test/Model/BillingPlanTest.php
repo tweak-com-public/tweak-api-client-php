@@ -176,6 +176,14 @@ class BillingPlanTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "limit"
+     */
+    public function testPropertyLimit()
+    {
+
+    }
+
+    /**
      * Test attribute "created"
      */
     public function testPropertyCreated()

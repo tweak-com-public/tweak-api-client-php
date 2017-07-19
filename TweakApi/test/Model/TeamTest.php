@@ -216,6 +216,14 @@ class TeamTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "dataSources"
+     */
+    public function testPropertyDataSources()
+    {
+
+    }
+
+    /**
      * Test attribute "teamMembers"
      */
     public function testPropertyTeamMembers()
