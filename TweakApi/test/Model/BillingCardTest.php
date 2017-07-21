@@ -144,6 +144,14 @@ class BillingCardTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "cvcCheck"
+     */
+    public function testPropertyCvcCheck()
+    {
+
+    }
+
+    /**
      * Test attribute "last4"
      */
     public function testPropertyLast4()
