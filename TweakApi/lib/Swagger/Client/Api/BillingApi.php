@@ -703,6 +703,110 @@ class BillingApi
     }
 
     /**
+     * Operation billingsTaxEvidenceCountryVatGet
+     *
+     * Get Tax Evidence by country and VAT
+     *
+     * @param string $country  (required)
+     * @param string $vat  (required)
+     * @return object
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function billingsTaxEvidenceCountryVatGet($country, $vat)
+    {
+        list($response) = $this->billingsTaxEvidenceCountryVatGetWithHttpInfo($country, $vat);
+        return $response;
+    }
+
+    /**
+     * Operation billingsTaxEvidenceCountryVatGetWithHttpInfo
+     *
+     * Get Tax Evidence by country and VAT
+     *
+     * @param string $country  (required)
+     * @param string $vat  (required)
+     * @return array of object, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function billingsTaxEvidenceCountryVatGetWithHttpInfo($country, $vat)
+    {
+        // verify the required parameter 'country' is set
+        if ($country === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $country when calling billingsTaxEvidenceCountryVatGet');
+        }
+        // verify the required parameter 'vat' is set
+        if ($vat === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $vat when calling billingsTaxEvidenceCountryVatGet');
+        }
+        // parse inputs
+        $resourcePath = "/Billings/taxEvidence/{country}/{vat}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($country !== null) {
+            $resourcePath = str_replace(
+                "{" . "country" . "}",
+                $this->apiClient->getSerializer()->toPathValue($country),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($vat !== null) {
+            $resourcePath = str_replace(
+                "{" . "vat" . "}",
+                $this->apiClient->getSerializer()->toPathValue($vat),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                'object',
+                '/Billings/taxEvidence/{country}/{vat}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, 'object', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), 'object', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation billingsUpsertWithWherePost
      *
      * Update an existing model instance or insert a new one into the data source based on the where criteria.

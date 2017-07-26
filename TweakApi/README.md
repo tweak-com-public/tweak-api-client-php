@@ -88,6 +88,7 @@ Class | Method | HTTP request | Description
 *BillingApi* | [**billingsIdReplacePost**](docs/Api/BillingApi.md#billingsidreplacepost) | **POST** /Billings/{id}/replace | Replace attributes for a model instance and persist it into the data source.
 *BillingApi* | [**billingsPut**](docs/Api/BillingApi.md#billingsput) | **PUT** /Billings | Replace an existing model instance or insert a new one into the data source.
 *BillingApi* | [**billingsReplaceOrCreatePost**](docs/Api/BillingApi.md#billingsreplaceorcreatepost) | **POST** /Billings/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
+*BillingApi* | [**billingsTaxEvidenceCountryVatGet**](docs/Api/BillingApi.md#billingstaxevidencecountryvatget) | **GET** /Billings/taxEvidence/{country}/{vat} | Get Tax Evidence by country and VAT
 *BillingApi* | [**billingsUpsertWithWherePost**](docs/Api/BillingApi.md#billingsupsertwithwherepost) | **POST** /Billings/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
 *CustomerApi* | [**customersChangePasswordPost**](docs/Api/CustomerApi.md#customerschangepasswordpost) | **POST** /Customers/change-password | Change a user&#39;s password.
 *CustomerApi* | [**customersChangeStreamGet**](docs/Api/CustomerApi.md#customerschangestreamget) | **GET** /Customers/change-stream | Create a change stream.
@@ -1301,6 +1302,7 @@ Class | Method | HTTP request | Description
 *TeamMemberApi* | [**teamMembersIdTeamBillingPost**](docs/Api/TeamMemberApi.md#teammembersidteambillingpost) | **POST** /TeamMembers/{id}/team/billing | Creates a new instance in billing of this model.
 *TeamMemberApi* | [**teamMembersIdTeamBillingPut**](docs/Api/TeamMemberApi.md#teammembersidteambillingput) | **PUT** /TeamMembers/{id}/team/billing | Update billing of this model.
 *TeamMemberApi* | [**teamMembersIdTeamBillingSubscriptionPut**](docs/Api/TeamMemberApi.md#teammembersidteambillingsubscriptionput) | **PUT** /TeamMembers/{id}/team/billing/subscription | Update Team Billing Card
+*TeamMemberApi* | [**teamMembersIdTeamBillingTaxEvidenceGet**](docs/Api/TeamMemberApi.md#teammembersidteambillingtaxevidenceget) | **GET** /TeamMembers/{id}/team/billing/taxEvidence | Get Team Billing Tax Evidence
 *TeamMemberApi* | [**teamMembersIdTeamBrandDelete**](docs/Api/TeamMemberApi.md#teammembersidteambranddelete) | **DELETE** /TeamMembers/{id}/team/brand | Deletes brand of this model.
 *TeamMemberApi* | [**teamMembersIdTeamBrandGet**](docs/Api/TeamMemberApi.md#teammembersidteambrandget) | **GET** /TeamMembers/{id}/team/brand | Fetches hasOne relation brand.
 *TeamMemberApi* | [**teamMembersIdTeamBrandPost**](docs/Api/TeamMemberApi.md#teammembersidteambrandpost) | **POST** /TeamMembers/{id}/team/brand | Creates a new instance in brand of this model.

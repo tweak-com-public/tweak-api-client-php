@@ -167,6 +167,17 @@ class BillingApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for billingsTaxEvidenceCountryVatGet
+     *
+     * Get Tax Evidence by country and VAT.
+     *
+     */
+    public function testBillingsTaxEvidenceCountryVatGet()
+    {
+
+    }
+
+    /**
      * Test case for billingsUpsertWithWherePost
      *
      * Update an existing model instance or insert a new one into the data source based on the where criteria..
