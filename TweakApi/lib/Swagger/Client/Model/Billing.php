@@ -72,6 +72,7 @@ class Billing implements ArrayAccess
         'companyCard' => '\Swagger\Client\Model\BillingCard',
         'subscription' => '\Swagger\Client\Model\BillingSubscription',
         'limit' => '\Swagger\Client\Model\BillingLimit',
+        'taxPercent' => 'double',
         'stripeCustomerId' => 'string',
         'stripeCardId' => 'string',
         'stripeSubscriptionId' => 'string',
@@ -96,6 +97,7 @@ class Billing implements ArrayAccess
         'companyCard' => 'companyCard',
         'subscription' => 'subscription',
         'limit' => 'limit',
+        'taxPercent' => 'taxPercent',
         'stripeCustomerId' => 'stripeCustomerId',
         'stripeCardId' => 'stripeCardId',
         'stripeSubscriptionId' => 'stripeSubscriptionId',
@@ -120,6 +122,7 @@ class Billing implements ArrayAccess
         'companyCard' => 'setCompanyCard',
         'subscription' => 'setSubscription',
         'limit' => 'setLimit',
+        'taxPercent' => 'setTaxPercent',
         'stripeCustomerId' => 'setStripeCustomerId',
         'stripeCardId' => 'setStripeCardId',
         'stripeSubscriptionId' => 'setStripeSubscriptionId',
@@ -144,6 +147,7 @@ class Billing implements ArrayAccess
         'companyCard' => 'getCompanyCard',
         'subscription' => 'getSubscription',
         'limit' => 'getLimit',
+        'taxPercent' => 'getTaxPercent',
         'stripeCustomerId' => 'getStripeCustomerId',
         'stripeCardId' => 'getStripeCardId',
         'stripeSubscriptionId' => 'getStripeSubscriptionId',
@@ -179,6 +183,7 @@ class Billing implements ArrayAccess
         $this->container['companyCard'] = isset($data['companyCard']) ? $data['companyCard'] : null;
         $this->container['subscription'] = isset($data['subscription']) ? $data['subscription'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['taxPercent'] = isset($data['taxPercent']) ? $data['taxPercent'] : 0.0;
         $this->container['stripeCustomerId'] = isset($data['stripeCustomerId']) ? $data['stripeCustomerId'] : null;
         $this->container['stripeCardId'] = isset($data['stripeCardId']) ? $data['stripeCardId'] : null;
         $this->container['stripeSubscriptionId'] = isset($data['stripeSubscriptionId']) ? $data['stripeSubscriptionId'] : null;
@@ -332,6 +337,27 @@ class Billing implements ArrayAccess
     public function setLimit($limit)
     {
         $this->container['limit'] = $limit;
+
+        return $this;
+    }
+
+    /**
+     * Gets taxPercent
+     * @return double
+     */
+    public function getTaxPercent()
+    {
+        return $this->container['taxPercent'];
+    }
+
+    /**
+     * Sets taxPercent
+     * @param double $taxPercent
+     * @return $this
+     */
+    public function setTaxPercent($taxPercent)
+    {
+        $this->container['taxPercent'] = $taxPercent;
 
         return $this;
     }

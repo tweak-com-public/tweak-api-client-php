@@ -144,6 +144,14 @@ class BillingTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "taxPercent"
+     */
+    public function testPropertyTaxPercent()
+    {
+
+    }
+
+    /**
      * Test attribute "stripeCustomerId"
      */
     public function testPropertyStripeCustomerId()
