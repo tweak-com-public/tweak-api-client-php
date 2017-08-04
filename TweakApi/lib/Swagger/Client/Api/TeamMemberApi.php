@@ -11291,39 +11291,39 @@ class TeamMemberApi
     }
 
     /**
-     * Operation teamMembersIdTeamBillingSubscriptionPut
+     * Operation teamMembersIdTeamBillingSubscriptionPlanPut
      *
-     * Update Team Billing Card
+     * Update Team Billing Subscription Plan
      *
      * @param string $id TeamMember id (required)
      * @param \Swagger\Client\Model\TeamMember $data  (optional)
      * @return \Swagger\Client\Model\Billing
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function teamMembersIdTeamBillingSubscriptionPut($id, $data = null)
+    public function teamMembersIdTeamBillingSubscriptionPlanPut($id, $data = null)
     {
-        list($response) = $this->teamMembersIdTeamBillingSubscriptionPutWithHttpInfo($id, $data);
+        list($response) = $this->teamMembersIdTeamBillingSubscriptionPlanPutWithHttpInfo($id, $data);
         return $response;
     }
 
     /**
-     * Operation teamMembersIdTeamBillingSubscriptionPutWithHttpInfo
+     * Operation teamMembersIdTeamBillingSubscriptionPlanPutWithHttpInfo
      *
-     * Update Team Billing Card
+     * Update Team Billing Subscription Plan
      *
      * @param string $id TeamMember id (required)
      * @param \Swagger\Client\Model\TeamMember $data  (optional)
      * @return array of \Swagger\Client\Model\Billing, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function teamMembersIdTeamBillingSubscriptionPutWithHttpInfo($id, $data = null)
+    public function teamMembersIdTeamBillingSubscriptionPlanPutWithHttpInfo($id, $data = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdTeamBillingSubscriptionPut');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdTeamBillingSubscriptionPlanPut');
         }
         // parse inputs
-        $resourcePath = "/TeamMembers/{id}/team/billing/subscription";
+        $resourcePath = "/TeamMembers/{id}/team/billing/subscription/plan";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -11371,7 +11371,7 @@ class TeamMemberApi
                 $httpBody,
                 $headerParams,
                 '\Swagger\Client\Model\Billing',
-                '/TeamMembers/{id}/team/billing/subscription'
+                '/TeamMembers/{id}/team/billing/subscription/plan'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Billing', $httpHeader), $statusCode, $httpHeader);
