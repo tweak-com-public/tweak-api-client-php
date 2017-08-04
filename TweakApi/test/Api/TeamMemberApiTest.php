@@ -1322,12 +1322,12 @@ class TeamMemberApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for teamMembersIdTeamBillingSubscriptionPut
+     * Test case for teamMembersIdTeamBillingSubscriptionPlanPut
      *
-     * Update Team Billing Card.
+     * Update Team Billing Subscription Plan.
      *
      */
-    public function testTeamMembersIdTeamBillingSubscriptionPut()
+    public function testTeamMembersIdTeamBillingSubscriptionPlanPut()
     {
 
     }

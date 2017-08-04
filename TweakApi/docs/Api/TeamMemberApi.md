@@ -116,7 +116,7 @@ Method | HTTP request | Description
 [**teamMembersIdTeamBillingInvoicesUpcomingGet**](TeamMemberApi.md#teamMembersIdTeamBillingInvoicesUpcomingGet) | **GET** /TeamMembers/{id}/team/billing/invoices/upcoming | List Upcoming Team Billing Invoices
 [**teamMembersIdTeamBillingPost**](TeamMemberApi.md#teamMembersIdTeamBillingPost) | **POST** /TeamMembers/{id}/team/billing | Creates a new instance in billing of this model.
 [**teamMembersIdTeamBillingPut**](TeamMemberApi.md#teamMembersIdTeamBillingPut) | **PUT** /TeamMembers/{id}/team/billing | Update billing of this model.
-[**teamMembersIdTeamBillingSubscriptionPut**](TeamMemberApi.md#teamMembersIdTeamBillingSubscriptionPut) | **PUT** /TeamMembers/{id}/team/billing/subscription | Update Team Billing Card
+[**teamMembersIdTeamBillingSubscriptionPlanPut**](TeamMemberApi.md#teamMembersIdTeamBillingSubscriptionPlanPut) | **PUT** /TeamMembers/{id}/team/billing/subscription/plan | Update Team Billing Subscription Plan
 [**teamMembersIdTeamBillingTaxEvidenceGet**](TeamMemberApi.md#teamMembersIdTeamBillingTaxEvidenceGet) | **GET** /TeamMembers/{id}/team/billing/taxEvidence | Get Team Billing Tax Evidence
 [**teamMembersIdTeamBrandDelete**](TeamMemberApi.md#teamMembersIdTeamBrandDelete) | **DELETE** /TeamMembers/{id}/team/brand | Deletes brand of this model.
 [**teamMembersIdTeamBrandGet**](TeamMemberApi.md#teamMembersIdTeamBrandGet) | **GET** /TeamMembers/{id}/team/brand | Fetches hasOne relation brand.
@@ -5830,10 +5830,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **teamMembersIdTeamBillingSubscriptionPut**
-> \Swagger\Client\Model\Billing teamMembersIdTeamBillingSubscriptionPut($id, $data)
+# **teamMembersIdTeamBillingSubscriptionPlanPut**
+> \Swagger\Client\Model\Billing teamMembersIdTeamBillingSubscriptionPlanPut($id, $data)
 
-Update Team Billing Card
+Update Team Billing Subscription Plan
 
 ### Example
 ```php
@@ -5850,10 +5850,10 @@ $id = "id_example"; // string | TeamMember id
 $data = new \Swagger\Client\Model\TeamMember(); // \Swagger\Client\Model\TeamMember | 
 
 try {
-    $result = $api_instance->teamMembersIdTeamBillingSubscriptionPut($id, $data);
+    $result = $api_instance->teamMembersIdTeamBillingSubscriptionPlanPut($id, $data);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamBillingSubscriptionPut: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamBillingSubscriptionPlanPut: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
