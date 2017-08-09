@@ -1597,6 +1597,17 @@ class CustomerApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for customersMeTokenGet
+     *
+     * Get token info.
+     *
+     */
+    public function testCustomersMeTokenGet()
+    {
+
+    }
+
+    /**
      * Test case for customersPatch
      *
      * Patch an existing model instance or insert a new one into the data source..

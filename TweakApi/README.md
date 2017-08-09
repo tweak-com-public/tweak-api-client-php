@@ -227,6 +227,7 @@ Class | Method | HTTP request | Description
 *CustomerApi* | [**customersInvitationTicketsTokenGet**](docs/Api/CustomerApi.md#customersinvitationticketstokenget) | **GET** /Customers/invitationTickets/{token} | Get invitation details with token
 *CustomerApi* | [**customersLoginPost**](docs/Api/CustomerApi.md#customersloginpost) | **POST** /Customers/login | Login a user with username/email and password.
 *CustomerApi* | [**customersLogoutPost**](docs/Api/CustomerApi.md#customerslogoutpost) | **POST** /Customers/logout | Logout a user with access token.
+*CustomerApi* | [**customersMeTokenGet**](docs/Api/CustomerApi.md#customersmetokenget) | **GET** /Customers/me/token | Get token info
 *CustomerApi* | [**customersPatch**](docs/Api/CustomerApi.md#customerspatch) | **PATCH** /Customers | Patch an existing model instance or insert a new one into the data source.
 *CustomerApi* | [**customersPost**](docs/Api/CustomerApi.md#customerspost) | **POST** /Customers | Create a new instance of the model and persist it into the data source.
 *CustomerApi* | [**customersPut**](docs/Api/CustomerApi.md#customersput) | **PUT** /Customers | Replace an existing model instance or insert a new one into the data source.
