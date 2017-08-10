@@ -539,6 +539,96 @@ class CustomerApi
     }
 
     /**
+     * Operation customersEmailEmailExistsGet
+     *
+     * Define whether customer exists or not
+     *
+     * @param string $email Customer email (required)
+     * @return \Swagger\Client\Model\InlineResponse2001
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function customersEmailEmailExistsGet($email)
+    {
+        list($response) = $this->customersEmailEmailExistsGetWithHttpInfo($email);
+        return $response;
+    }
+
+    /**
+     * Operation customersEmailEmailExistsGetWithHttpInfo
+     *
+     * Define whether customer exists or not
+     *
+     * @param string $email Customer email (required)
+     * @return array of \Swagger\Client\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function customersEmailEmailExistsGetWithHttpInfo($email)
+    {
+        // verify the required parameter 'email' is set
+        if ($email === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $email when calling customersEmailEmailExistsGet');
+        }
+        // parse inputs
+        $resourcePath = "/Customers/email/{email}/exists";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($email !== null) {
+            $resourcePath = str_replace(
+                "{" . "email" . "}",
+                $this->apiClient->getSerializer()->toPathValue($email),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\InlineResponse2001',
+                '/Customers/email/{email}/exists'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse2001', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse2001', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation customersFindOneGet
      *
      * Find first instance of the model matched by filter from the data source.
@@ -2268,7 +2358,7 @@ class CustomerApi
      * Check whether a model instance exists in the data source.
      *
      * @param string $id Model id (required)
-     * @return \Swagger\Client\Model\InlineResponse2002
+     * @return \Swagger\Client\Model\InlineResponse2001
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
     public function customersIdExistsGet($id)
@@ -2283,7 +2373,7 @@ class CustomerApi
      * Check whether a model instance exists in the data source.
      *
      * @param string $id Model id (required)
-     * @return array of \Swagger\Client\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
     public function customersIdExistsGetWithHttpInfo($id)
@@ -2335,15 +2425,15 @@ class CustomerApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\InlineResponse2002',
+                '\Swagger\Client\Model\InlineResponse2001',
                 '/Customers/{id}/exists'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse2002', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse2001', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse2002', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse2001', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -2454,7 +2544,7 @@ class CustomerApi
      * Check whether a model instance exists in the data source.
      *
      * @param string $id Model id (required)
-     * @return \Swagger\Client\Model\InlineResponse2002
+     * @return \Swagger\Client\Model\InlineResponse2001
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
     public function customersIdHead($id)
@@ -2469,7 +2559,7 @@ class CustomerApi
      * Check whether a model instance exists in the data source.
      *
      * @param string $id Model id (required)
-     * @return array of \Swagger\Client\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
     public function customersIdHeadWithHttpInfo($id)
@@ -2521,15 +2611,15 @@ class CustomerApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\InlineResponse2002',
+                '\Swagger\Client\Model\InlineResponse2001',
                 '/Customers/{id}'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse2002', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse2001', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse2002', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse2001', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -15215,7 +15305,7 @@ class CustomerApi
      *
      * @param string $where Criteria to match model instances (optional)
      * @param \Swagger\Client\Model\Customer $data An object of model property name/value pairs (optional)
-     * @return \Swagger\Client\Model\InlineResponse2001
+     * @return \Swagger\Client\Model\InlineResponse2002
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
     public function customersUpdatePost($where = null, $data = null)
@@ -15231,7 +15321,7 @@ class CustomerApi
      *
      * @param string $where Criteria to match model instances (optional)
      * @param \Swagger\Client\Model\Customer $data An object of model property name/value pairs (optional)
-     * @return array of \Swagger\Client\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
     public function customersUpdatePostWithHttpInfo($where = null, $data = null)
@@ -15280,15 +15370,15 @@ class CustomerApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\InlineResponse2001',
+                '\Swagger\Client\Model\InlineResponse2002',
                 '/Customers/update'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse2001', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse2002', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse2001', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse2002', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

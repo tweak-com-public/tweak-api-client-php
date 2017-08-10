@@ -3038,6 +3038,17 @@ class TeamApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for teamsNameNameExistsGet
+     *
+     * Define whether team exists or not.
+     *
+     */
+    public function testTeamsNameNameExistsGet()
+    {
+
+    }
+
+    /**
      * Test case for teamsPatch
      *
      * Patch an existing model instance or insert a new one into the data source..
@@ -3077,6 +3088,17 @@ class TeamApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testTeamsReplaceOrCreatePost()
+    {
+
+    }
+
+    /**
+     * Test case for teamsSubdomainSubdomainExistsGet
+     *
+     * Define whether team exists or not.
+     *
+     */
+    public function testTeamsSubdomainSubdomainExistsGet()
     {
 
     }

@@ -145,6 +145,17 @@ class CustomerApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for customersEmailEmailExistsGet
+     *
+     * Define whether customer exists or not.
+     *
+     */
+    public function testCustomersEmailEmailExistsGet()
+    {
+
+    }
+
+    /**
      * Test case for customersFindOneGet
      *
      * Find first instance of the model matched by filter from the data source..

@@ -45,7 +45,7 @@ namespace Tweak\Api;
  * InlineResponse2002Test Class Doc Comment
  *
  * @category    Class */
-// * @description InlineResponse2002
+// * @description Information related to the outcome of the operation
 /**
  * @package     Tweak\Api
  * @author      http://github.com/swagger-api/swagger-codegen
@@ -96,9 +96,9 @@ class InlineResponse2002Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "exists"
+     * Test attribute "count"
      */
-    public function testPropertyExists()
+    public function testPropertyCount()
     {
 
     }
