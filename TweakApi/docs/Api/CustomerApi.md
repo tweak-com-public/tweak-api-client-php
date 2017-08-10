@@ -141,6 +141,7 @@ Method | HTTP request | Description
 [**customersInvitationTicketsTokenGet**](CustomerApi.md#customersInvitationTicketsTokenGet) | **GET** /Customers/invitationTickets/{token} | Get invitation details with token
 [**customersLoginPost**](CustomerApi.md#customersLoginPost) | **POST** /Customers/login | Login a user with username/email and password.
 [**customersLogoutPost**](CustomerApi.md#customersLogoutPost) | **POST** /Customers/logout | Logout a user with access token.
+[**customersMeTokenGet**](CustomerApi.md#customersMeTokenGet) | **GET** /Customers/me/token | Get token info
 [**customersPatch**](CustomerApi.md#customersPatch) | **PATCH** /Customers | Patch an existing model instance or insert a new one into the data source.
 [**customersPost**](CustomerApi.md#customersPost) | **POST** /Customers | Create a new instance of the model and persist it into the data source.
 [**customersPut**](CustomerApi.md#customersPut) | **PUT** /Customers | Replace an existing model instance or insert a new one into the data source.
@@ -7088,6 +7089,50 @@ This endpoint does not need any parameter.
 ### Return type
 
 void (empty response body)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **customersMeTokenGet**
+> \Swagger\Client\Model\TeamMemberAccessToken customersMeTokenGet()
+
+Get token info
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+
+try {
+    $result = $api_instance->customersMeTokenGet();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersMeTokenGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**\Swagger\Client\Model\TeamMemberAccessToken**](../Model/TeamMemberAccessToken.md)
 
 ### Authorization
 

@@ -66,6 +66,7 @@ class TeamMemberAccessToken implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
+        'roles' => 'string[]',
         'id' => 'string',
         'ttl' => 'double',
         'scopes' => 'string[]',
@@ -92,6 +93,7 @@ class TeamMemberAccessToken implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
+        'roles' => 'roles',
         'id' => 'id',
         'ttl' => 'ttl',
         'scopes' => 'scopes',
@@ -118,6 +120,7 @@ class TeamMemberAccessToken implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
+        'roles' => 'setRoles',
         'id' => 'setId',
         'ttl' => 'setTtl',
         'scopes' => 'setScopes',
@@ -144,6 +147,7 @@ class TeamMemberAccessToken implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
+        'roles' => 'getRoles',
         'id' => 'getId',
         'ttl' => 'getTtl',
         'scopes' => 'getScopes',
@@ -181,6 +185,7 @@ class TeamMemberAccessToken implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['roles'] = isset($data['roles']) ? $data['roles'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['ttl'] = isset($data['ttl']) ? $data['ttl'] : 1209600.0;
         $this->container['scopes'] = isset($data['scopes']) ? $data['scopes'] : null;
@@ -225,6 +230,27 @@ class TeamMemberAccessToken implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets roles
+     * @return string[]
+     */
+    public function getRoles()
+    {
+        return $this->container['roles'];
+    }
+
+    /**
+     * Sets roles
+     * @param string[] $roles
+     * @return $this
+     */
+    public function setRoles($roles)
+    {
+        $this->container['roles'] = $roles;
+
+        return $this;
+    }
 
     /**
      * Gets id
