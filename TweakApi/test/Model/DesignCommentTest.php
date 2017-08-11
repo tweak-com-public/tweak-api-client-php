@@ -128,6 +128,14 @@ class DesignCommentTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "type"
+     */
+    public function testPropertyType()
+    {
+
+    }
+
+    /**
      * Test attribute "created"
      */
     public function testPropertyCreated()

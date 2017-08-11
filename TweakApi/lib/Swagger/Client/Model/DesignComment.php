@@ -70,6 +70,7 @@ class DesignComment implements ArrayAccess
         'position' => '\Swagger\Client\Model\Axes',
         'pageIndex' => 'double',
         'status' => 'string',
+        'type' => 'string',
         'created' => '\DateTime',
         'modified' => '\DateTime',
         'id' => 'string',
@@ -96,6 +97,7 @@ class DesignComment implements ArrayAccess
         'position' => 'position',
         'pageIndex' => 'pageIndex',
         'status' => 'status',
+        'type' => 'type',
         'created' => 'created',
         'modified' => 'modified',
         'id' => 'id',
@@ -122,6 +124,7 @@ class DesignComment implements ArrayAccess
         'position' => 'setPosition',
         'pageIndex' => 'setPageIndex',
         'status' => 'setStatus',
+        'type' => 'setType',
         'created' => 'setCreated',
         'modified' => 'setModified',
         'id' => 'setId',
@@ -148,6 +151,7 @@ class DesignComment implements ArrayAccess
         'position' => 'getPosition',
         'pageIndex' => 'getPageIndex',
         'status' => 'getStatus',
+        'type' => 'getType',
         'created' => 'getCreated',
         'modified' => 'getModified',
         'id' => 'getId',
@@ -167,6 +171,9 @@ class DesignComment implements ArrayAccess
 
     const STATUS_UNSOLVED = 'unsolved';
     const STATUS_RESOLVED = 'resolved';
+    const TYPE_COMMENT = 'comment';
+    const TYPE_REJECTION = 'rejection';
+    const TYPE_REACTION = 'reaction';
     
 
     
@@ -179,6 +186,19 @@ class DesignComment implements ArrayAccess
         return [
             self::STATUS_UNSOLVED,
             self::STATUS_RESOLVED,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_COMMENT,
+            self::TYPE_REJECTION,
+            self::TYPE_REACTION,
         ];
     }
     
@@ -199,6 +219,7 @@ class DesignComment implements ArrayAccess
         $this->container['position'] = isset($data['position']) ? $data['position'] : null;
         $this->container['pageIndex'] = isset($data['pageIndex']) ? $data['pageIndex'] : 0.0;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
         $this->container['modified'] = isset($data['modified']) ? $data['modified'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
@@ -231,6 +252,11 @@ class DesignComment implements ArrayAccess
             $invalid_properties[] = "invalid value for 'status', must be one of #{allowed_values}.";
         }
 
+        $allowed_values = array("comment", "rejection", "reaction");
+        if (!in_array($this->container['type'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'type', must be one of #{allowed_values}.";
+        }
+
         return $invalid_properties;
     }
 
@@ -250,6 +276,10 @@ class DesignComment implements ArrayAccess
         }
         $allowed_values = array("unsolved", "resolved");
         if (!in_array($this->container['status'], $allowed_values)) {
+            return false;
+        }
+        $allowed_values = array("comment", "rejection", "reaction");
+        if (!in_array($this->container['type'], $allowed_values)) {
             return false;
         }
         return true;
@@ -344,6 +374,31 @@ class DesignComment implements ArrayAccess
             throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'unsolved', 'resolved'");
         }
         $this->container['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * Gets type
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     * @param string $type
+     * @return $this
+     */
+    public function setType($type)
+    {
+        $allowed_values = array('comment', 'rejection', 'reaction');
+        if (!in_array($type, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'comment', 'rejection', 'reaction'");
+        }
+        $this->container['type'] = $type;
 
         return $this;
     }

@@ -160,14 +160,6 @@ class DesignTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "rejectionReason"
-     */
-    public function testPropertyRejectionReason()
-    {
-
-    }
-
-    /**
      * Test attribute "formData"
      */
     public function testPropertyFormData()
@@ -296,6 +288,14 @@ class DesignTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "rejectionCommentId"
+     */
+    public function testPropertyRejectionCommentId()
+    {
+
+    }
+
+    /**
      * Test attribute "folderId"
      */
     public function testPropertyFolderId()
@@ -339,6 +339,14 @@ class DesignTest extends \PHPUnit_Framework_TestCase
      * Test attribute "comments"
      */
     public function testPropertyComments()
+    {
+
+    }
+
+    /**
+     * Test attribute "rejectionComment"
+     */
+    public function testPropertyRejectionComment()
     {
 
     }

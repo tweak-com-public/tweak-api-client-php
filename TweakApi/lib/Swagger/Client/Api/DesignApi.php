@@ -5070,12 +5070,13 @@ class DesignApi
      *
      * @param string $id Design id (required)
      * @param string $id2 Customer id (required)
+     * @param \Swagger\Client\Model\Design $data  (optional)
      * @return \Swagger\Client\Model\Design
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function designsIdRejectPost($id, $id2)
+    public function designsIdRejectPost($id, $id2, $data = null)
     {
-        list($response) = $this->designsIdRejectPostWithHttpInfo($id, $id2);
+        list($response) = $this->designsIdRejectPostWithHttpInfo($id, $id2, $data);
         return $response;
     }
 
@@ -5086,10 +5087,11 @@ class DesignApi
      *
      * @param string $id Design id (required)
      * @param string $id2 Customer id (required)
+     * @param \Swagger\Client\Model\Design $data  (optional)
      * @return array of \Swagger\Client\Model\Design, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function designsIdRejectPostWithHttpInfo($id, $id2)
+    public function designsIdRejectPostWithHttpInfo($id, $id2, $data = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
@@ -5130,7 +5132,12 @@ class DesignApi
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
@@ -5159,6 +5166,102 @@ class DesignApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Design', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation designsIdRejectionCommentGet
+     *
+     * Fetches belongsTo relation rejectionComment.
+     *
+     * @param string $id Design id (required)
+     * @param bool $refresh  (optional)
+     * @return \Swagger\Client\Model\DesignComment
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function designsIdRejectionCommentGet($id, $refresh = null)
+    {
+        list($response) = $this->designsIdRejectionCommentGetWithHttpInfo($id, $refresh);
+        return $response;
+    }
+
+    /**
+     * Operation designsIdRejectionCommentGetWithHttpInfo
+     *
+     * Fetches belongsTo relation rejectionComment.
+     *
+     * @param string $id Design id (required)
+     * @param bool $refresh  (optional)
+     * @return array of \Swagger\Client\Model\DesignComment, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function designsIdRejectionCommentGetWithHttpInfo($id, $refresh = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling designsIdRejectionCommentGet');
+        }
+        // parse inputs
+        $resourcePath = "/Designs/{id}/rejectionComment";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($refresh !== null) {
+            $queryParams['refresh'] = $this->apiClient->getSerializer()->toQueryValue($refresh);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\DesignComment',
+                '/Designs/{id}/rejectionComment'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\DesignComment', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\DesignComment', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

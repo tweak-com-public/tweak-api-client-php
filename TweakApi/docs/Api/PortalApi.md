@@ -51,6 +51,7 @@ Method | HTTP request | Description
 [**portalsIdDesignsNkExportsPost**](PortalApi.md#portalsIdDesignsNkExportsPost) | **POST** /Portals/{id}/designs/{nk}/exports | Creates a new instance in exports of this model.
 [**portalsIdDesignsNkFolderGet**](PortalApi.md#portalsIdDesignsNkFolderGet) | **GET** /Portals/{id}/designs/{nk}/folder | Fetches belongsTo relation folder.
 [**portalsIdDesignsNkPortalGet**](PortalApi.md#portalsIdDesignsNkPortalGet) | **GET** /Portals/{id}/designs/{nk}/portal | Fetches belongsTo relation portal.
+[**portalsIdDesignsNkRejectionCommentGet**](PortalApi.md#portalsIdDesignsNkRejectionCommentGet) | **GET** /Portals/{id}/designs/{nk}/rejectionComment | Fetches belongsTo relation rejectionComment.
 [**portalsIdDesignsNkRequesterGet**](PortalApi.md#portalsIdDesignsNkRequesterGet) | **GET** /Portals/{id}/designs/{nk}/requester | Fetches belongsTo relation requester.
 [**portalsIdDesignsNkReviewerGet**](PortalApi.md#portalsIdDesignsNkReviewerGet) | **GET** /Portals/{id}/designs/{nk}/reviewer | Fetches belongsTo relation reviewer.
 [**portalsIdDesignsNkTagsCountGet**](PortalApi.md#portalsIdDesignsNkTagsCountGet) | **GET** /Portals/{id}/designs/{nk}/tags/count | Counts tags of Design.
@@ -2513,6 +2514,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\Portal**](../Model/Portal.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **portalsIdDesignsNkRejectionCommentGet**
+> \Swagger\Client\Model\DesignComment portalsIdDesignsNkRejectionCommentGet($id, $nk, $refresh)
+
+Fetches belongsTo relation rejectionComment.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\PortalApi();
+$id = "id_example"; // string | Portal id
+$nk = "nk_example"; // string | Foreign key for designs.
+$refresh = true; // bool | 
+
+try {
+    $result = $api_instance->portalsIdDesignsNkRejectionCommentGet($id, $nk, $refresh);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PortalApi->portalsIdDesignsNkRejectionCommentGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Portal id |
+ **nk** | **string**| Foreign key for designs. |
+ **refresh** | **bool**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\DesignComment**](../Model/DesignComment.md)
 
 ### Authorization
 

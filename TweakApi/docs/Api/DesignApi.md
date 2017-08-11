@@ -55,6 +55,7 @@ Method | HTTP request | Description
 [**designsIdPortalGet**](DesignApi.md#designsIdPortalGet) | **GET** /Designs/{id}/portal | Fetches belongsTo relation portal.
 [**designsIdPut**](DesignApi.md#designsIdPut) | **PUT** /Designs/{id} | Replace attributes for a model instance and persist it into the data source.
 [**designsIdRejectPost**](DesignApi.md#designsIdRejectPost) | **POST** /Designs/{id}/reject | Reject design
+[**designsIdRejectionCommentGet**](DesignApi.md#designsIdRejectionCommentGet) | **GET** /Designs/{id}/rejectionComment | Fetches belongsTo relation rejectionComment.
 [**designsIdReplacePost**](DesignApi.md#designsIdReplacePost) | **POST** /Designs/{id}/replace | Replace attributes for a model instance and persist it into the data source.
 [**designsIdRequesterGet**](DesignApi.md#designsIdRequesterGet) | **GET** /Designs/{id}/requester | Fetches belongsTo relation requester.
 [**designsIdReviewerGet**](DesignApi.md#designsIdReviewerGet) | **GET** /Designs/{id}/reviewer | Fetches belongsTo relation reviewer.
@@ -2576,7 +2577,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **designsIdRejectPost**
-> \Swagger\Client\Model\Design designsIdRejectPost($id, $id2)
+> \Swagger\Client\Model\Design designsIdRejectPost($id, $id2, $data)
 
 Reject design
 
@@ -2593,9 +2594,10 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 $api_instance = new Tweak\Api\Api\DesignApi();
 $id = "id_example"; // string | Design id
 $id2 = "id_example"; // string | Customer id
+$data = new \Swagger\Client\Model\Design(); // \Swagger\Client\Model\Design | 
 
 try {
-    $result = $api_instance->designsIdRejectPost($id, $id2);
+    $result = $api_instance->designsIdRejectPost($id, $id2, $data);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DesignApi->designsIdRejectPost: ', $e->getMessage(), PHP_EOL;
@@ -2609,10 +2611,61 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| Design id |
  **id2** | **string**| Customer id |
+ **data** | [**\Swagger\Client\Model\Design**](../Model/\Swagger\Client\Model\Design.md)|  | [optional]
 
 ### Return type
 
 [**\Swagger\Client\Model\Design**](../Model/Design.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **designsIdRejectionCommentGet**
+> \Swagger\Client\Model\DesignComment designsIdRejectionCommentGet($id, $refresh)
+
+Fetches belongsTo relation rejectionComment.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\DesignApi();
+$id = "id_example"; // string | Design id
+$refresh = true; // bool | 
+
+try {
+    $result = $api_instance->designsIdRejectionCommentGet($id, $refresh);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DesignApi->designsIdRejectionCommentGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Design id |
+ **refresh** | **bool**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\DesignComment**](../Model/DesignComment.md)
 
 ### Authorization
 
