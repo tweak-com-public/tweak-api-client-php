@@ -315,7 +315,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **templateTagsIdExistsGet**
-> \Swagger\Client\Model\InlineResponse2002 templateTagsIdExistsGet($id)
+> \Swagger\Client\Model\InlineResponse2001 templateTagsIdExistsGet($id)
 
 Check whether a model instance exists in the data source.
 
@@ -349,7 +349,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -413,7 +413,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **templateTagsIdHead**
-> \Swagger\Client\Model\InlineResponse2002 templateTagsIdHead($id)
+> \Swagger\Client\Model\InlineResponse2001 templateTagsIdHead($id)
 
 Check whether a model instance exists in the data source.
 
@@ -447,7 +447,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -903,7 +903,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **templateTagsUpdatePost**
-> \Swagger\Client\Model\InlineResponse2001 templateTagsUpdatePost($where, $data)
+> \Swagger\Client\Model\InlineResponse2002 templateTagsUpdatePost($where, $data)
 
 Update instances of the model matched by {{where}} from the data source.
 
@@ -939,7 +939,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 

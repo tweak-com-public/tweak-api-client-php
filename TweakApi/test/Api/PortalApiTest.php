@@ -607,6 +607,17 @@ class PortalApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for portalsIdDesignsNkRejectionCommentGet
+     *
+     * Fetches belongsTo relation rejectionComment..
+     *
+     */
+    public function testPortalsIdDesignsNkRejectionCommentGet()
+    {
+
+    }
+
+    /**
      * Test case for portalsIdDesignsNkRequesterGet
      *
      * Fetches belongsTo relation requester..

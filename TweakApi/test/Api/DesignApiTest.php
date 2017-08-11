@@ -651,6 +651,17 @@ class DesignApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for designsIdRejectionCommentGet
+     *
+     * Fetches belongsTo relation rejectionComment..
+     *
+     */
+    public function testDesignsIdRejectionCommentGet()
+    {
+
+    }
+
+    /**
      * Test case for designsIdReplacePost
      *
      * Replace attributes for a model instance and persist it into the data source..

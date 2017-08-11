@@ -314,7 +314,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamPermissionSetsIdExistsGet**
-> \Swagger\Client\Model\InlineResponse2002 teamPermissionSetsIdExistsGet($id)
+> \Swagger\Client\Model\InlineResponse2001 teamPermissionSetsIdExistsGet($id)
 
 Check whether a model instance exists in the data source.
 
@@ -348,7 +348,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -412,7 +412,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamPermissionSetsIdHead**
-> \Swagger\Client\Model\InlineResponse2002 teamPermissionSetsIdHead($id)
+> \Swagger\Client\Model\InlineResponse2001 teamPermissionSetsIdHead($id)
 
 Check whether a model instance exists in the data source.
 
@@ -446,7 +446,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -852,7 +852,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamPermissionSetsUpdatePost**
-> \Swagger\Client\Model\InlineResponse2001 teamPermissionSetsUpdatePost($where, $data)
+> \Swagger\Client\Model\InlineResponse2002 teamPermissionSetsUpdatePost($where, $data)
 
 Update instances of the model matched by {{where}} from the data source.
 
@@ -888,7 +888,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 

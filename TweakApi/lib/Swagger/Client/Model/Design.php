@@ -74,7 +74,6 @@ class Design implements ArrayAccess
         'description' => 'string',
         'purpose' => 'string',
         'status' => 'string',
-        'rejectionReason' => 'string',
         'formData' => 'object[]',
         'highResPdfUrl' => 'string',
         'proofPdfUrl' => 'string',
@@ -91,12 +90,14 @@ class Design implements ArrayAccess
         'reviewerId' => 'string',
         'templateId' => 'string',
         'portalId' => 'string',
+        'rejectionCommentId' => 'string',
         'folderId' => 'string',
         'tags' => '\Swagger\Client\Model\Tag[]',
         'customer' => '\Swagger\Client\Model\Customer',
         'template' => '\Swagger\Client\Model\Template',
         'portal' => '\Swagger\Client\Model\Portal',
         'comments' => '\Swagger\Client\Model\DesignComment[]',
+        'rejectionComment' => '\Swagger\Client\Model\DesignComment',
         'exports' => '\Swagger\Client\Model\DesignExport[]',
         'requester' => '\Swagger\Client\Model\TeamMember',
         'assignee' => '\Swagger\Client\Model\TeamMember',
@@ -123,7 +124,6 @@ class Design implements ArrayAccess
         'description' => 'description',
         'purpose' => 'purpose',
         'status' => 'status',
-        'rejectionReason' => 'rejectionReason',
         'formData' => 'formData',
         'highResPdfUrl' => 'highResPdfUrl',
         'proofPdfUrl' => 'proofPdfUrl',
@@ -140,12 +140,14 @@ class Design implements ArrayAccess
         'reviewerId' => 'reviewerId',
         'templateId' => 'templateId',
         'portalId' => 'portalId',
+        'rejectionCommentId' => 'rejectionCommentId',
         'folderId' => 'folderId',
         'tags' => 'tags',
         'customer' => 'customer',
         'template' => 'template',
         'portal' => 'portal',
         'comments' => 'comments',
+        'rejectionComment' => 'rejectionComment',
         'exports' => 'exports',
         'requester' => 'requester',
         'assignee' => 'assignee',
@@ -172,7 +174,6 @@ class Design implements ArrayAccess
         'description' => 'setDescription',
         'purpose' => 'setPurpose',
         'status' => 'setStatus',
-        'rejectionReason' => 'setRejectionReason',
         'formData' => 'setFormData',
         'highResPdfUrl' => 'setHighResPdfUrl',
         'proofPdfUrl' => 'setProofPdfUrl',
@@ -189,12 +190,14 @@ class Design implements ArrayAccess
         'reviewerId' => 'setReviewerId',
         'templateId' => 'setTemplateId',
         'portalId' => 'setPortalId',
+        'rejectionCommentId' => 'setRejectionCommentId',
         'folderId' => 'setFolderId',
         'tags' => 'setTags',
         'customer' => 'setCustomer',
         'template' => 'setTemplate',
         'portal' => 'setPortal',
         'comments' => 'setComments',
+        'rejectionComment' => 'setRejectionComment',
         'exports' => 'setExports',
         'requester' => 'setRequester',
         'assignee' => 'setAssignee',
@@ -221,7 +224,6 @@ class Design implements ArrayAccess
         'description' => 'getDescription',
         'purpose' => 'getPurpose',
         'status' => 'getStatus',
-        'rejectionReason' => 'getRejectionReason',
         'formData' => 'getFormData',
         'highResPdfUrl' => 'getHighResPdfUrl',
         'proofPdfUrl' => 'getProofPdfUrl',
@@ -238,12 +240,14 @@ class Design implements ArrayAccess
         'reviewerId' => 'getReviewerId',
         'templateId' => 'getTemplateId',
         'portalId' => 'getPortalId',
+        'rejectionCommentId' => 'getRejectionCommentId',
         'folderId' => 'getFolderId',
         'tags' => 'getTags',
         'customer' => 'getCustomer',
         'template' => 'getTemplate',
         'portal' => 'getPortal',
         'comments' => 'getComments',
+        'rejectionComment' => 'getRejectionComment',
         'exports' => 'getExports',
         'requester' => 'getRequester',
         'assignee' => 'getAssignee',
@@ -313,7 +317,6 @@ class Design implements ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : '';
         $this->container['purpose'] = isset($data['purpose']) ? $data['purpose'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['rejectionReason'] = isset($data['rejectionReason']) ? $data['rejectionReason'] : '';
         $this->container['formData'] = isset($data['formData']) ? $data['formData'] : null;
         $this->container['highResPdfUrl'] = isset($data['highResPdfUrl']) ? $data['highResPdfUrl'] : '';
         $this->container['proofPdfUrl'] = isset($data['proofPdfUrl']) ? $data['proofPdfUrl'] : '';
@@ -330,12 +333,14 @@ class Design implements ArrayAccess
         $this->container['reviewerId'] = isset($data['reviewerId']) ? $data['reviewerId'] : null;
         $this->container['templateId'] = isset($data['templateId']) ? $data['templateId'] : null;
         $this->container['portalId'] = isset($data['portalId']) ? $data['portalId'] : null;
+        $this->container['rejectionCommentId'] = isset($data['rejectionCommentId']) ? $data['rejectionCommentId'] : null;
         $this->container['folderId'] = isset($data['folderId']) ? $data['folderId'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['customer'] = isset($data['customer']) ? $data['customer'] : null;
         $this->container['template'] = isset($data['template']) ? $data['template'] : null;
         $this->container['portal'] = isset($data['portal']) ? $data['portal'] : null;
         $this->container['comments'] = isset($data['comments']) ? $data['comments'] : null;
+        $this->container['rejectionComment'] = isset($data['rejectionComment']) ? $data['rejectionComment'] : null;
         $this->container['exports'] = isset($data['exports']) ? $data['exports'] : null;
         $this->container['requester'] = isset($data['requester']) ? $data['requester'] : null;
         $this->container['assignee'] = isset($data['assignee']) ? $data['assignee'] : null;
@@ -569,27 +574,6 @@ class Design implements ArrayAccess
             throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'pendingAction', 'pendingApproval', 'approved', 'rejected'");
         }
         $this->container['status'] = $status;
-
-        return $this;
-    }
-
-    /**
-     * Gets rejectionReason
-     * @return string
-     */
-    public function getRejectionReason()
-    {
-        return $this->container['rejectionReason'];
-    }
-
-    /**
-     * Sets rejectionReason
-     * @param string $rejectionReason
-     * @return $this
-     */
-    public function setRejectionReason($rejectionReason)
-    {
-        $this->container['rejectionReason'] = $rejectionReason;
 
         return $this;
     }
@@ -931,6 +915,27 @@ class Design implements ArrayAccess
     }
 
     /**
+     * Gets rejectionCommentId
+     * @return string
+     */
+    public function getRejectionCommentId()
+    {
+        return $this->container['rejectionCommentId'];
+    }
+
+    /**
+     * Sets rejectionCommentId
+     * @param string $rejectionCommentId
+     * @return $this
+     */
+    public function setRejectionCommentId($rejectionCommentId)
+    {
+        $this->container['rejectionCommentId'] = $rejectionCommentId;
+
+        return $this;
+    }
+
+    /**
      * Gets folderId
      * @return string
      */
@@ -1052,6 +1057,27 @@ class Design implements ArrayAccess
     public function setComments($comments)
     {
         $this->container['comments'] = $comments;
+
+        return $this;
+    }
+
+    /**
+     * Gets rejectionComment
+     * @return \Swagger\Client\Model\DesignComment
+     */
+    public function getRejectionComment()
+    {
+        return $this->container['rejectionComment'];
+    }
+
+    /**
+     * Sets rejectionComment
+     * @param \Swagger\Client\Model\DesignComment $rejectionComment
+     * @return $this
+     */
+    public function setRejectionComment($rejectionComment)
+    {
+        $this->container['rejectionComment'] = $rejectionComment;
 
         return $this;
     }

@@ -51,6 +51,7 @@ Method | HTTP request | Description
 [**portalsIdDesignsNkExportsPost**](PortalApi.md#portalsIdDesignsNkExportsPost) | **POST** /Portals/{id}/designs/{nk}/exports | Creates a new instance in exports of this model.
 [**portalsIdDesignsNkFolderGet**](PortalApi.md#portalsIdDesignsNkFolderGet) | **GET** /Portals/{id}/designs/{nk}/folder | Fetches belongsTo relation folder.
 [**portalsIdDesignsNkPortalGet**](PortalApi.md#portalsIdDesignsNkPortalGet) | **GET** /Portals/{id}/designs/{nk}/portal | Fetches belongsTo relation portal.
+[**portalsIdDesignsNkRejectionCommentGet**](PortalApi.md#portalsIdDesignsNkRejectionCommentGet) | **GET** /Portals/{id}/designs/{nk}/rejectionComment | Fetches belongsTo relation rejectionComment.
 [**portalsIdDesignsNkRequesterGet**](PortalApi.md#portalsIdDesignsNkRequesterGet) | **GET** /Portals/{id}/designs/{nk}/requester | Fetches belongsTo relation requester.
 [**portalsIdDesignsNkReviewerGet**](PortalApi.md#portalsIdDesignsNkReviewerGet) | **GET** /Portals/{id}/designs/{nk}/reviewer | Fetches belongsTo relation reviewer.
 [**portalsIdDesignsNkTagsCountGet**](PortalApi.md#portalsIdDesignsNkTagsCountGet) | **GET** /Portals/{id}/designs/{nk}/tags/count | Counts tags of Design.
@@ -2525,6 +2526,58 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **portalsIdDesignsNkRejectionCommentGet**
+> \Swagger\Client\Model\DesignComment portalsIdDesignsNkRejectionCommentGet($id, $nk, $refresh)
+
+Fetches belongsTo relation rejectionComment.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\PortalApi();
+$id = "id_example"; // string | Portal id
+$nk = "nk_example"; // string | Foreign key for designs.
+$refresh = true; // bool | 
+
+try {
+    $result = $api_instance->portalsIdDesignsNkRejectionCommentGet($id, $nk, $refresh);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PortalApi->portalsIdDesignsNkRejectionCommentGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Portal id |
+ **nk** | **string**| Foreign key for designs. |
+ **refresh** | **bool**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\DesignComment**](../Model/DesignComment.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **portalsIdDesignsNkRequesterGet**
 > \Swagger\Client\Model\TeamMember portalsIdDesignsNkRequesterGet($id, $nk, $refresh)
 
@@ -3251,7 +3304,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **portalsIdExistsGet**
-> \Swagger\Client\Model\InlineResponse2002 portalsIdExistsGet($id)
+> \Swagger\Client\Model\InlineResponse2001 portalsIdExistsGet($id)
 
 Check whether a model instance exists in the data source.
 
@@ -3285,7 +3338,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -3349,7 +3402,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **portalsIdHead**
-> \Swagger\Client\Model\InlineResponse2002 portalsIdHead($id)
+> \Swagger\Client\Model\InlineResponse2001 portalsIdHead($id)
 
 Check whether a model instance exists in the data source.
 
@@ -3383,7 +3436,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -6808,7 +6861,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **portalsUpdatePost**
-> \Swagger\Client\Model\InlineResponse2001 portalsUpdatePost($where, $data)
+> \Swagger\Client\Model\InlineResponse2002 portalsUpdatePost($where, $data)
 
 Update instances of the model matched by {{where}} from the data source.
 
@@ -6844,7 +6897,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
