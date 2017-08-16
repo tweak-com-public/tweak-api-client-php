@@ -1,6 +1,6 @@
 <?php
 /**
- * TeamPermissionSet
+ * PortalPermissionSet
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * TeamPermissionSet Class Doc Comment
+ * PortalPermissionSet Class Doc Comment
  *
  * @category    Class */
 /** 
@@ -53,25 +53,24 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class TeamPermissionSet implements ArrayAccess
+class PortalPermissionSet implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'TeamPermissionSet';
+    protected static $swaggerModelName = 'PortalPermissionSet';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'emailNotification' => 'bool',
         'templatePermission' => '\Swagger\Client\Model\TemplatePermissionSet',
         'tweakTemplatePermission' => '\Swagger\Client\Model\TemplatePermissionSet',
         'id' => 'string',
-        'teamId' => 'string',
-        'team' => '\Swagger\Client\Model\Team'
+        'portalId' => 'string',
+        'portal' => '\Swagger\Client\Model\Portal'
     );
 
     public static function swaggerTypes()
@@ -84,12 +83,11 @@ class TeamPermissionSet implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'emailNotification' => 'emailNotification',
         'templatePermission' => 'templatePermission',
         'tweakTemplatePermission' => 'tweakTemplatePermission',
         'id' => 'id',
-        'teamId' => 'teamId',
-        'team' => 'team'
+        'portalId' => 'portalId',
+        'portal' => 'portal'
     );
 
     public static function attributeMap()
@@ -102,12 +100,11 @@ class TeamPermissionSet implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'emailNotification' => 'setEmailNotification',
         'templatePermission' => 'setTemplatePermission',
         'tweakTemplatePermission' => 'setTweakTemplatePermission',
         'id' => 'setId',
-        'teamId' => 'setTeamId',
-        'team' => 'setTeam'
+        'portalId' => 'setPortalId',
+        'portal' => 'setPortal'
     );
 
     public static function setters()
@@ -120,12 +117,11 @@ class TeamPermissionSet implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'emailNotification' => 'getEmailNotification',
         'templatePermission' => 'getTemplatePermission',
         'tweakTemplatePermission' => 'getTweakTemplatePermission',
         'id' => 'getId',
-        'teamId' => 'getTeamId',
-        'team' => 'getTeam'
+        'portalId' => 'getPortalId',
+        'portal' => 'getPortal'
     );
 
     public static function getters()
@@ -149,12 +145,11 @@ class TeamPermissionSet implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['emailNotification'] = isset($data['emailNotification']) ? $data['emailNotification'] : true;
         $this->container['templatePermission'] = isset($data['templatePermission']) ? $data['templatePermission'] : null;
         $this->container['tweakTemplatePermission'] = isset($data['tweakTemplatePermission']) ? $data['tweakTemplatePermission'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['teamId'] = isset($data['teamId']) ? $data['teamId'] : null;
-        $this->container['team'] = isset($data['team']) ? $data['team'] : null;
+        $this->container['portalId'] = isset($data['portalId']) ? $data['portalId'] : null;
+        $this->container['portal'] = isset($data['portal']) ? $data['portal'] : null;
     }
 
     /**
@@ -179,27 +174,6 @@ class TeamPermissionSet implements ArrayAccess
         return true;
     }
 
-
-    /**
-     * Gets emailNotification
-     * @return bool
-     */
-    public function getEmailNotification()
-    {
-        return $this->container['emailNotification'];
-    }
-
-    /**
-     * Sets emailNotification
-     * @param bool $emailNotification
-     * @return $this
-     */
-    public function setEmailNotification($emailNotification)
-    {
-        $this->container['emailNotification'] = $emailNotification;
-
-        return $this;
-    }
 
     /**
      * Gets templatePermission
@@ -265,43 +239,43 @@ class TeamPermissionSet implements ArrayAccess
     }
 
     /**
-     * Gets teamId
+     * Gets portalId
      * @return string
      */
-    public function getTeamId()
+    public function getPortalId()
     {
-        return $this->container['teamId'];
+        return $this->container['portalId'];
     }
 
     /**
-     * Sets teamId
-     * @param string $teamId
+     * Sets portalId
+     * @param string $portalId
      * @return $this
      */
-    public function setTeamId($teamId)
+    public function setPortalId($portalId)
     {
-        $this->container['teamId'] = $teamId;
+        $this->container['portalId'] = $portalId;
 
         return $this;
     }
 
     /**
-     * Gets team
-     * @return \Swagger\Client\Model\Team
+     * Gets portal
+     * @return \Swagger\Client\Model\Portal
      */
-    public function getTeam()
+    public function getPortal()
     {
-        return $this->container['team'];
+        return $this->container['portal'];
     }
 
     /**
-     * Sets team
-     * @param \Swagger\Client\Model\Team $team
+     * Sets portal
+     * @param \Swagger\Client\Model\Portal $portal
      * @return $this
      */
-    public function setTeam($team)
+    public function setPortal($portal)
     {
-        $this->container['team'] = $team;
+        $this->container['portal'] = $portal;
 
         return $this;
     }

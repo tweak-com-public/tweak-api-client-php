@@ -1,6 +1,6 @@
 <?php
 /**
- * TeamPermissionSet
+ * DesignPermissionSet
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * TeamPermissionSet Class Doc Comment
+ * DesignPermissionSet Class Doc Comment
  *
  * @category    Class */
 /** 
@@ -53,25 +53,28 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class TeamPermissionSet implements ArrayAccess
+class DesignPermissionSet implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'TeamPermissionSet';
+    protected static $swaggerModelName = 'DesignPermissionSet';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'emailNotification' => 'bool',
-        'templatePermission' => '\Swagger\Client\Model\TemplatePermissionSet',
-        'tweakTemplatePermission' => '\Swagger\Client\Model\TemplatePermissionSet',
+        'highResPdf' => 'bool',
+        'proofPdf' => 'bool',
+        'jpegs' => 'bool',
+        'socialSharing' => 'bool',
+        'canEdit' => 'bool',
+        'needAdminApproval' => 'bool',
         'id' => 'string',
-        'teamId' => 'string',
-        'team' => '\Swagger\Client\Model\Team'
+        'designId' => 'string',
+        'design' => '\Swagger\Client\Model\Design'
     );
 
     public static function swaggerTypes()
@@ -84,12 +87,15 @@ class TeamPermissionSet implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'emailNotification' => 'emailNotification',
-        'templatePermission' => 'templatePermission',
-        'tweakTemplatePermission' => 'tweakTemplatePermission',
+        'highResPdf' => 'highResPdf',
+        'proofPdf' => 'proofPdf',
+        'jpegs' => 'jpegs',
+        'socialSharing' => 'socialSharing',
+        'canEdit' => 'canEdit',
+        'needAdminApproval' => 'needAdminApproval',
         'id' => 'id',
-        'teamId' => 'teamId',
-        'team' => 'team'
+        'designId' => 'designId',
+        'design' => 'design'
     );
 
     public static function attributeMap()
@@ -102,12 +108,15 @@ class TeamPermissionSet implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'emailNotification' => 'setEmailNotification',
-        'templatePermission' => 'setTemplatePermission',
-        'tweakTemplatePermission' => 'setTweakTemplatePermission',
+        'highResPdf' => 'setHighResPdf',
+        'proofPdf' => 'setProofPdf',
+        'jpegs' => 'setJpegs',
+        'socialSharing' => 'setSocialSharing',
+        'canEdit' => 'setCanEdit',
+        'needAdminApproval' => 'setNeedAdminApproval',
         'id' => 'setId',
-        'teamId' => 'setTeamId',
-        'team' => 'setTeam'
+        'designId' => 'setDesignId',
+        'design' => 'setDesign'
     );
 
     public static function setters()
@@ -120,12 +129,15 @@ class TeamPermissionSet implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'emailNotification' => 'getEmailNotification',
-        'templatePermission' => 'getTemplatePermission',
-        'tweakTemplatePermission' => 'getTweakTemplatePermission',
+        'highResPdf' => 'getHighResPdf',
+        'proofPdf' => 'getProofPdf',
+        'jpegs' => 'getJpegs',
+        'socialSharing' => 'getSocialSharing',
+        'canEdit' => 'getCanEdit',
+        'needAdminApproval' => 'getNeedAdminApproval',
         'id' => 'getId',
-        'teamId' => 'getTeamId',
-        'team' => 'getTeam'
+        'designId' => 'getDesignId',
+        'design' => 'getDesign'
     );
 
     public static function getters()
@@ -149,12 +161,15 @@ class TeamPermissionSet implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['emailNotification'] = isset($data['emailNotification']) ? $data['emailNotification'] : true;
-        $this->container['templatePermission'] = isset($data['templatePermission']) ? $data['templatePermission'] : null;
-        $this->container['tweakTemplatePermission'] = isset($data['tweakTemplatePermission']) ? $data['tweakTemplatePermission'] : null;
+        $this->container['highResPdf'] = isset($data['highResPdf']) ? $data['highResPdf'] : false;
+        $this->container['proofPdf'] = isset($data['proofPdf']) ? $data['proofPdf'] : false;
+        $this->container['jpegs'] = isset($data['jpegs']) ? $data['jpegs'] : false;
+        $this->container['socialSharing'] = isset($data['socialSharing']) ? $data['socialSharing'] : false;
+        $this->container['canEdit'] = isset($data['canEdit']) ? $data['canEdit'] : false;
+        $this->container['needAdminApproval'] = isset($data['needAdminApproval']) ? $data['needAdminApproval'] : false;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['teamId'] = isset($data['teamId']) ? $data['teamId'] : null;
-        $this->container['team'] = isset($data['team']) ? $data['team'] : null;
+        $this->container['designId'] = isset($data['designId']) ? $data['designId'] : null;
+        $this->container['design'] = isset($data['design']) ? $data['design'] : null;
     }
 
     /**
@@ -181,64 +196,127 @@ class TeamPermissionSet implements ArrayAccess
 
 
     /**
-     * Gets emailNotification
+     * Gets highResPdf
      * @return bool
      */
-    public function getEmailNotification()
+    public function getHighResPdf()
     {
-        return $this->container['emailNotification'];
+        return $this->container['highResPdf'];
     }
 
     /**
-     * Sets emailNotification
-     * @param bool $emailNotification
+     * Sets highResPdf
+     * @param bool $highResPdf
      * @return $this
      */
-    public function setEmailNotification($emailNotification)
+    public function setHighResPdf($highResPdf)
     {
-        $this->container['emailNotification'] = $emailNotification;
+        $this->container['highResPdf'] = $highResPdf;
 
         return $this;
     }
 
     /**
-     * Gets templatePermission
-     * @return \Swagger\Client\Model\TemplatePermissionSet
+     * Gets proofPdf
+     * @return bool
      */
-    public function getTemplatePermission()
+    public function getProofPdf()
     {
-        return $this->container['templatePermission'];
+        return $this->container['proofPdf'];
     }
 
     /**
-     * Sets templatePermission
-     * @param \Swagger\Client\Model\TemplatePermissionSet $templatePermission
+     * Sets proofPdf
+     * @param bool $proofPdf
      * @return $this
      */
-    public function setTemplatePermission($templatePermission)
+    public function setProofPdf($proofPdf)
     {
-        $this->container['templatePermission'] = $templatePermission;
+        $this->container['proofPdf'] = $proofPdf;
 
         return $this;
     }
 
     /**
-     * Gets tweakTemplatePermission
-     * @return \Swagger\Client\Model\TemplatePermissionSet
+     * Gets jpegs
+     * @return bool
      */
-    public function getTweakTemplatePermission()
+    public function getJpegs()
     {
-        return $this->container['tweakTemplatePermission'];
+        return $this->container['jpegs'];
     }
 
     /**
-     * Sets tweakTemplatePermission
-     * @param \Swagger\Client\Model\TemplatePermissionSet $tweakTemplatePermission
+     * Sets jpegs
+     * @param bool $jpegs
      * @return $this
      */
-    public function setTweakTemplatePermission($tweakTemplatePermission)
+    public function setJpegs($jpegs)
     {
-        $this->container['tweakTemplatePermission'] = $tweakTemplatePermission;
+        $this->container['jpegs'] = $jpegs;
+
+        return $this;
+    }
+
+    /**
+     * Gets socialSharing
+     * @return bool
+     */
+    public function getSocialSharing()
+    {
+        return $this->container['socialSharing'];
+    }
+
+    /**
+     * Sets socialSharing
+     * @param bool $socialSharing
+     * @return $this
+     */
+    public function setSocialSharing($socialSharing)
+    {
+        $this->container['socialSharing'] = $socialSharing;
+
+        return $this;
+    }
+
+    /**
+     * Gets canEdit
+     * @return bool
+     */
+    public function getCanEdit()
+    {
+        return $this->container['canEdit'];
+    }
+
+    /**
+     * Sets canEdit
+     * @param bool $canEdit
+     * @return $this
+     */
+    public function setCanEdit($canEdit)
+    {
+        $this->container['canEdit'] = $canEdit;
+
+        return $this;
+    }
+
+    /**
+     * Gets needAdminApproval
+     * @return bool
+     */
+    public function getNeedAdminApproval()
+    {
+        return $this->container['needAdminApproval'];
+    }
+
+    /**
+     * Sets needAdminApproval
+     * @param bool $needAdminApproval
+     * @return $this
+     */
+    public function setNeedAdminApproval($needAdminApproval)
+    {
+        $this->container['needAdminApproval'] = $needAdminApproval;
 
         return $this;
     }
@@ -265,43 +343,43 @@ class TeamPermissionSet implements ArrayAccess
     }
 
     /**
-     * Gets teamId
+     * Gets designId
      * @return string
      */
-    public function getTeamId()
+    public function getDesignId()
     {
-        return $this->container['teamId'];
+        return $this->container['designId'];
     }
 
     /**
-     * Sets teamId
-     * @param string $teamId
+     * Sets designId
+     * @param string $designId
      * @return $this
      */
-    public function setTeamId($teamId)
+    public function setDesignId($designId)
     {
-        $this->container['teamId'] = $teamId;
+        $this->container['designId'] = $designId;
 
         return $this;
     }
 
     /**
-     * Gets team
-     * @return \Swagger\Client\Model\Team
+     * Gets design
+     * @return \Swagger\Client\Model\Design
      */
-    public function getTeam()
+    public function getDesign()
     {
-        return $this->container['team'];
+        return $this->container['design'];
     }
 
     /**
-     * Sets team
-     * @param \Swagger\Client\Model\Team $team
+     * Sets design
+     * @param \Swagger\Client\Model\Design $design
      * @return $this
      */
-    public function setTeam($team)
+    public function setDesign($design)
     {
-        $this->container['team'] = $team;
+        $this->container['design'] = $design;
 
         return $this;
     }

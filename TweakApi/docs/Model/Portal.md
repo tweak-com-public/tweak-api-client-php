@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **templateFolders** | [**\Swagger\Client\Model\PortalTemplateFolder[]**](PortalTemplateFolder.md) |  | [optional] 
 **designFolders** | [**\Swagger\Client\Model\DesignFolder[]**](DesignFolder.md) |  | [optional] 
 **imageFolders** | [**\Swagger\Client\Model\ImageFolder[]**](ImageFolder.md) |  | [optional] 
+**permission** | [**\Swagger\Client\Model\PortalPermissionSet**](PortalPermissionSet.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

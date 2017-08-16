@@ -1,6 +1,6 @@
 <?php
 /**
- * TeamPermissionSetTest
+ * PortalPermissionSetTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Tweak\Api;
 
 /**
- * TeamPermissionSetTest Class Doc Comment
+ * PortalPermissionSetTest Class Doc Comment
  *
  * @category    Class */
-// * @description TeamPermissionSet
+// * @description PortalPermissionSet
 /**
  * @package     Tweak\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class TeamPermissionSetTest extends \PHPUnit_Framework_TestCase
+class PortalPermissionSetTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,17 +88,9 @@ class TeamPermissionSetTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "TeamPermissionSet"
+     * Test "PortalPermissionSet"
      */
-    public function testTeamPermissionSet()
-    {
-
-    }
-
-    /**
-     * Test attribute "emailNotification"
-     */
-    public function testPropertyEmailNotification()
+    public function testPortalPermissionSet()
     {
 
     }
@@ -128,17 +120,17 @@ class TeamPermissionSetTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "teamId"
+     * Test attribute "portalId"
      */
-    public function testPropertyTeamId()
+    public function testPropertyPortalId()
     {
 
     }
 
     /**
-     * Test attribute "team"
+     * Test attribute "portal"
      */
-    public function testPropertyTeam()
+    public function testPropertyPortal()
     {
 
     }

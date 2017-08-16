@@ -1,6 +1,6 @@
 <?php
 /**
- * TeamPermissionSetTest
+ * DesignPermissionSetTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Tweak\Api;
 
 /**
- * TeamPermissionSetTest Class Doc Comment
+ * DesignPermissionSetTest Class Doc Comment
  *
  * @category    Class */
-// * @description TeamPermissionSet
+// * @description DesignPermissionSet
 /**
  * @package     Tweak\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class TeamPermissionSetTest extends \PHPUnit_Framework_TestCase
+class DesignPermissionSetTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,33 +88,57 @@ class TeamPermissionSetTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "TeamPermissionSet"
+     * Test "DesignPermissionSet"
      */
-    public function testTeamPermissionSet()
+    public function testDesignPermissionSet()
     {
 
     }
 
     /**
-     * Test attribute "emailNotification"
+     * Test attribute "highResPdf"
      */
-    public function testPropertyEmailNotification()
+    public function testPropertyHighResPdf()
     {
 
     }
 
     /**
-     * Test attribute "templatePermission"
+     * Test attribute "proofPdf"
      */
-    public function testPropertyTemplatePermission()
+    public function testPropertyProofPdf()
     {
 
     }
 
     /**
-     * Test attribute "tweakTemplatePermission"
+     * Test attribute "jpegs"
      */
-    public function testPropertyTweakTemplatePermission()
+    public function testPropertyJpegs()
+    {
+
+    }
+
+    /**
+     * Test attribute "socialSharing"
+     */
+    public function testPropertySocialSharing()
+    {
+
+    }
+
+    /**
+     * Test attribute "canEdit"
+     */
+    public function testPropertyCanEdit()
+    {
+
+    }
+
+    /**
+     * Test attribute "needAdminApproval"
+     */
+    public function testPropertyNeedAdminApproval()
     {
 
     }
@@ -128,17 +152,17 @@ class TeamPermissionSetTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "teamId"
+     * Test attribute "designId"
      */
-    public function testPropertyTeamId()
+    public function testPropertyDesignId()
     {
 
     }
 
     /**
-     * Test attribute "team"
+     * Test attribute "design"
      */
-    public function testPropertyTeam()
+    public function testPropertyDesign()
     {
 
     }

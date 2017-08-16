@@ -618,6 +618,50 @@ class DesignApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for designsIdPermissionDelete
+     *
+     * Deletes permission of this model..
+     *
+     */
+    public function testDesignsIdPermissionDelete()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdPermissionGet
+     *
+     * Fetches hasOne relation permission..
+     *
+     */
+    public function testDesignsIdPermissionGet()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdPermissionPost
+     *
+     * Creates a new instance in permission of this model..
+     *
+     */
+    public function testDesignsIdPermissionPost()
+    {
+
+    }
+
+    /**
+     * Test case for designsIdPermissionPut
+     *
+     * Update permission of this model..
+     *
+     */
+    public function testDesignsIdPermissionPut()
+    {
+
+    }
+
+    /**
      * Test case for designsIdPortalGet
      *
      * Fetches belongsTo relation portal..

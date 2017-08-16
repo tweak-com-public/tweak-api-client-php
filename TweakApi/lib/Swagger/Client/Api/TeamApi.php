@@ -15199,6 +15199,438 @@ class TeamApi
     }
 
     /**
+     * Operation teamsIdPortalsNkPermissionDelete
+     *
+     * Deletes permission of this model.
+     *
+     * @param string $id Team id (required)
+     * @param string $nk Foreign key for portals. (required)
+     * @return void
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamsIdPortalsNkPermissionDelete($id, $nk)
+    {
+        list($response) = $this->teamsIdPortalsNkPermissionDeleteWithHttpInfo($id, $nk);
+        return $response;
+    }
+
+    /**
+     * Operation teamsIdPortalsNkPermissionDeleteWithHttpInfo
+     *
+     * Deletes permission of this model.
+     *
+     * @param string $id Team id (required)
+     * @param string $nk Foreign key for portals. (required)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamsIdPortalsNkPermissionDeleteWithHttpInfo($id, $nk)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamsIdPortalsNkPermissionDelete');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling teamsIdPortalsNkPermissionDelete');
+        }
+        // parse inputs
+        $resourcePath = "/Teams/{id}/portals/{nk}/permission";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/Teams/{id}/portals/{nk}/permission'
+            );
+
+            return array(null, $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamsIdPortalsNkPermissionGet
+     *
+     * Fetches hasOne relation permission.
+     *
+     * @param string $id Team id (required)
+     * @param string $nk Foreign key for portals. (required)
+     * @param bool $refresh  (optional)
+     * @return \Swagger\Client\Model\PortalPermissionSet
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamsIdPortalsNkPermissionGet($id, $nk, $refresh = null)
+    {
+        list($response) = $this->teamsIdPortalsNkPermissionGetWithHttpInfo($id, $nk, $refresh);
+        return $response;
+    }
+
+    /**
+     * Operation teamsIdPortalsNkPermissionGetWithHttpInfo
+     *
+     * Fetches hasOne relation permission.
+     *
+     * @param string $id Team id (required)
+     * @param string $nk Foreign key for portals. (required)
+     * @param bool $refresh  (optional)
+     * @return array of \Swagger\Client\Model\PortalPermissionSet, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamsIdPortalsNkPermissionGetWithHttpInfo($id, $nk, $refresh = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamsIdPortalsNkPermissionGet');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling teamsIdPortalsNkPermissionGet');
+        }
+        // parse inputs
+        $resourcePath = "/Teams/{id}/portals/{nk}/permission";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($refresh !== null) {
+            $queryParams['refresh'] = $this->apiClient->getSerializer()->toQueryValue($refresh);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\PortalPermissionSet',
+                '/Teams/{id}/portals/{nk}/permission'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\PortalPermissionSet', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\PortalPermissionSet', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamsIdPortalsNkPermissionPost
+     *
+     * Creates a new instance in permission of this model.
+     *
+     * @param string $id Team id (required)
+     * @param string $nk Foreign key for portals. (required)
+     * @param \Swagger\Client\Model\PortalPermissionSet $data  (optional)
+     * @return \Swagger\Client\Model\PortalPermissionSet
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamsIdPortalsNkPermissionPost($id, $nk, $data = null)
+    {
+        list($response) = $this->teamsIdPortalsNkPermissionPostWithHttpInfo($id, $nk, $data);
+        return $response;
+    }
+
+    /**
+     * Operation teamsIdPortalsNkPermissionPostWithHttpInfo
+     *
+     * Creates a new instance in permission of this model.
+     *
+     * @param string $id Team id (required)
+     * @param string $nk Foreign key for portals. (required)
+     * @param \Swagger\Client\Model\PortalPermissionSet $data  (optional)
+     * @return array of \Swagger\Client\Model\PortalPermissionSet, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamsIdPortalsNkPermissionPostWithHttpInfo($id, $nk, $data = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamsIdPortalsNkPermissionPost');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling teamsIdPortalsNkPermissionPost');
+        }
+        // parse inputs
+        $resourcePath = "/Teams/{id}/portals/{nk}/permission";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\PortalPermissionSet',
+                '/Teams/{id}/portals/{nk}/permission'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\PortalPermissionSet', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\PortalPermissionSet', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation teamsIdPortalsNkPermissionPut
+     *
+     * Update permission of this model.
+     *
+     * @param string $id Team id (required)
+     * @param string $nk Foreign key for portals. (required)
+     * @param \Swagger\Client\Model\PortalPermissionSet $data  (optional)
+     * @return \Swagger\Client\Model\PortalPermissionSet
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamsIdPortalsNkPermissionPut($id, $nk, $data = null)
+    {
+        list($response) = $this->teamsIdPortalsNkPermissionPutWithHttpInfo($id, $nk, $data);
+        return $response;
+    }
+
+    /**
+     * Operation teamsIdPortalsNkPermissionPutWithHttpInfo
+     *
+     * Update permission of this model.
+     *
+     * @param string $id Team id (required)
+     * @param string $nk Foreign key for portals. (required)
+     * @param \Swagger\Client\Model\PortalPermissionSet $data  (optional)
+     * @return array of \Swagger\Client\Model\PortalPermissionSet, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamsIdPortalsNkPermissionPutWithHttpInfo($id, $nk, $data = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamsIdPortalsNkPermissionPut');
+        }
+        // verify the required parameter 'nk' is set
+        if ($nk === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nk when calling teamsIdPortalsNkPermissionPut');
+        }
+        // parse inputs
+        $resourcePath = "/Teams/{id}/portals/{nk}/permission";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nk !== null) {
+            $resourcePath = str_replace(
+                "{" . "nk" . "}",
+                $this->apiClient->getSerializer()->toPathValue($nk),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\PortalPermissionSet',
+                '/Teams/{id}/portals/{nk}/permission'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\PortalPermissionSet', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\PortalPermissionSet', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation teamsIdPortalsNkPortalMembersCountGet
      *
      * Counts portalMembers of Portal.
