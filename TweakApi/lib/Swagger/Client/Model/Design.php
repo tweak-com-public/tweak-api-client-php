@@ -103,7 +103,8 @@ class Design implements ArrayAccess
         'assignee' => '\Swagger\Client\Model\TeamMember',
         'reviewer' => '\Swagger\Client\Model\TeamMember',
         'commenters' => '\Swagger\Client\Model\TeamMember[]',
-        'folder' => '\Swagger\Client\Model\DesignFolder'
+        'folder' => '\Swagger\Client\Model\DesignFolder',
+        'permission' => '\Swagger\Client\Model\DesignPermissionSet'
     );
 
     public static function swaggerTypes()
@@ -153,7 +154,8 @@ class Design implements ArrayAccess
         'assignee' => 'assignee',
         'reviewer' => 'reviewer',
         'commenters' => 'commenters',
-        'folder' => 'folder'
+        'folder' => 'folder',
+        'permission' => 'permission'
     );
 
     public static function attributeMap()
@@ -203,7 +205,8 @@ class Design implements ArrayAccess
         'assignee' => 'setAssignee',
         'reviewer' => 'setReviewer',
         'commenters' => 'setCommenters',
-        'folder' => 'setFolder'
+        'folder' => 'setFolder',
+        'permission' => 'setPermission'
     );
 
     public static function setters()
@@ -253,7 +256,8 @@ class Design implements ArrayAccess
         'assignee' => 'getAssignee',
         'reviewer' => 'getReviewer',
         'commenters' => 'getCommenters',
-        'folder' => 'getFolder'
+        'folder' => 'getFolder',
+        'permission' => 'getPermission'
     );
 
     public static function getters()
@@ -347,6 +351,7 @@ class Design implements ArrayAccess
         $this->container['reviewer'] = isset($data['reviewer']) ? $data['reviewer'] : null;
         $this->container['commenters'] = isset($data['commenters']) ? $data['commenters'] : null;
         $this->container['folder'] = isset($data['folder']) ? $data['folder'] : null;
+        $this->container['permission'] = isset($data['permission']) ? $data['permission'] : null;
     }
 
     /**
@@ -1204,6 +1209,27 @@ class Design implements ArrayAccess
     public function setFolder($folder)
     {
         $this->container['folder'] = $folder;
+
+        return $this;
+    }
+
+    /**
+     * Gets permission
+     * @return \Swagger\Client\Model\DesignPermissionSet
+     */
+    public function getPermission()
+    {
+        return $this->container['permission'];
+    }
+
+    /**
+     * Sets permission
+     * @param \Swagger\Client\Model\DesignPermissionSet $permission
+     * @return $this
+     */
+    public function setPermission($permission)
+    {
+        $this->container['permission'] = $permission;
 
         return $this;
     }

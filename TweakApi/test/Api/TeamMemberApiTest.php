@@ -1344,6 +1344,17 @@ class TeamMemberApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for teamMembersIdTeamBillingUncachedGet
+     *
+     * Get Team Billing.
+     *
+     */
+    public function testTeamMembersIdTeamBillingUncachedGet()
+    {
+
+    }
+
+    /**
      * Test case for teamMembersIdTeamBrandDelete
      *
      * Deletes brand of this model..

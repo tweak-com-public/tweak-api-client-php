@@ -41,6 +41,7 @@ Name | Type | Description | Notes
 **reviewer** | [**\Swagger\Client\Model\TeamMember**](TeamMember.md) |  | [optional] 
 **commenters** | [**\Swagger\Client\Model\TeamMember[]**](TeamMember.md) |  | [optional] 
 **folder** | [**\Swagger\Client\Model\DesignFolder**](DesignFolder.md) |  | [optional] 
+**permission** | [**\Swagger\Client\Model\DesignPermissionSet**](DesignPermissionSet.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

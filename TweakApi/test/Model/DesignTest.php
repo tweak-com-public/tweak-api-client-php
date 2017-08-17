@@ -399,4 +399,12 @@ class DesignTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "permission"
+     */
+    public function testPropertyPermission()
+    {
+
+    }
+
 }

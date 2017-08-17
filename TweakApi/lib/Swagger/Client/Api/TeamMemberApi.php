@@ -11478,6 +11478,96 @@ class TeamMemberApi
     }
 
     /**
+     * Operation teamMembersIdTeamBillingUncachedGet
+     *
+     * Get Team Billing
+     *
+     * @param string $id TeamMember id (required)
+     * @return \Swagger\Client\Model\Billing
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamBillingUncachedGet($id)
+    {
+        list($response) = $this->teamMembersIdTeamBillingUncachedGetWithHttpInfo($id);
+        return $response;
+    }
+
+    /**
+     * Operation teamMembersIdTeamBillingUncachedGetWithHttpInfo
+     *
+     * Get Team Billing
+     *
+     * @param string $id TeamMember id (required)
+     * @return array of \Swagger\Client\Model\Billing, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function teamMembersIdTeamBillingUncachedGetWithHttpInfo($id)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling teamMembersIdTeamBillingUncachedGet');
+        }
+        // parse inputs
+        $resourcePath = "/TeamMembers/{id}/team/billing/uncached";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\Billing',
+                '/TeamMembers/{id}/team/billing/uncached'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Billing', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Billing', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation teamMembersIdTeamBrandDelete
      *
      * Deletes brand of this model.
