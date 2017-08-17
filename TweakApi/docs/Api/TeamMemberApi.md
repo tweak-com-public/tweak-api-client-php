@@ -118,6 +118,7 @@ Method | HTTP request | Description
 [**teamMembersIdTeamBillingPut**](TeamMemberApi.md#teamMembersIdTeamBillingPut) | **PUT** /TeamMembers/{id}/team/billing | Update billing of this model.
 [**teamMembersIdTeamBillingSubscriptionPlanPut**](TeamMemberApi.md#teamMembersIdTeamBillingSubscriptionPlanPut) | **PUT** /TeamMembers/{id}/team/billing/subscription/plan | Update Team Billing Subscription Plan
 [**teamMembersIdTeamBillingTaxEvidenceGet**](TeamMemberApi.md#teamMembersIdTeamBillingTaxEvidenceGet) | **GET** /TeamMembers/{id}/team/billing/taxEvidence | Get Team Billing Tax Evidence
+[**teamMembersIdTeamBillingUncachedGet**](TeamMemberApi.md#teamMembersIdTeamBillingUncachedGet) | **GET** /TeamMembers/{id}/team/billing/uncached | Get Team Billing
 [**teamMembersIdTeamBrandDelete**](TeamMemberApi.md#teamMembersIdTeamBrandDelete) | **DELETE** /TeamMembers/{id}/team/brand | Deletes brand of this model.
 [**teamMembersIdTeamBrandGet**](TeamMemberApi.md#teamMembersIdTeamBrandGet) | **GET** /TeamMembers/{id}/team/brand | Fetches hasOne relation brand.
 [**teamMembersIdTeamBrandPost**](TeamMemberApi.md#teamMembersIdTeamBrandPost) | **POST** /TeamMembers/{id}/team/brand | Creates a new instance in brand of this model.
@@ -5916,6 +5917,54 @@ Name | Type | Description  | Notes
 ### Return type
 
 **object**
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdTeamBillingUncachedGet**
+> \Swagger\Client\Model\Billing teamMembersIdTeamBillingUncachedGet($id)
+
+Get Team Billing
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+
+try {
+    $result = $api_instance->teamMembersIdTeamBillingUncachedGet($id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamBillingUncachedGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+
+### Return type
+
+[**\Swagger\Client\Model\Billing**](../Model/Billing.md)
 
 ### Authorization
 
