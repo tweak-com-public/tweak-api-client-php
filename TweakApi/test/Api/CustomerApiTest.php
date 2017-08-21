@@ -1685,6 +1685,17 @@ class CustomerApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for customersResetPasswordTokenGet
+     *
+     * Get token info for reset password token.
+     *
+     */
+    public function testCustomersResetPasswordTokenGet()
+    {
+
+    }
+
+    /**
      * Test case for customersResetPost
      *
      * Reset password for a user with email..
