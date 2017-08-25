@@ -45,6 +45,7 @@ Method | HTTP request | Description
 [**customersIdPermissionPut**](CustomerApi.md#customersIdPermissionPut) | **PUT** /Customers/{id}/permission | Update permission of this model.
 [**customersIdProfilePicturePut**](CustomerApi.md#customersIdProfilePicturePut) | **PUT** /Customers/{id}/profilePicture | Change profile picture
 [**customersIdPut**](CustomerApi.md#customersIdPut) | **PUT** /Customers/{id} | Replace attributes for a model instance and persist it into the data source.
+[**customersIdRegisterTeamPost**](CustomerApi.md#customersIdRegisterTeamPost) | **POST** /Customers/{id}/register/team | Register team and assign it to the customer
 [**customersIdReplacePost**](CustomerApi.md#customersIdReplacePost) | **POST** /Customers/{id}/replace | Replace attributes for a model instance and persist it into the data source.
 [**customersIdTeamsCountGet**](CustomerApi.md#customersIdTeamsCountGet) | **GET** /Customers/{id}/teams/count | Counts teams of Customer.
 [**customersIdTeamsDelete**](CustomerApi.md#customersIdTeamsDelete) | **DELETE** /Customers/{id}/teams | Deletes all teams of this model.
@@ -2166,6 +2167,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\Customer**](../Model/Customer.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **customersIdRegisterTeamPost**
+> \Swagger\Client\Model\TeamMember customersIdRegisterTeamPost($id, $data)
+
+Register team and assign it to the customer
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+$id = "id_example"; // string | Customer id
+$data = new \Swagger\Client\Model\Team(); // \Swagger\Client\Model\Team | Model instance data
+
+try {
+    $result = $api_instance->customersIdRegisterTeamPost($id, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersIdRegisterTeamPost: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Customer id |
+ **data** | [**\Swagger\Client\Model\Team**](../Model/\Swagger\Client\Model\Team.md)| Model instance data | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\TeamMember**](../Model/TeamMember.md)
 
 ### Authorization
 

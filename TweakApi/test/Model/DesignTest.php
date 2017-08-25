@@ -216,6 +216,22 @@ class DesignTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "sentForApproval"
+     */
+    public function testPropertySentForApproval()
+    {
+
+    }
+
+    /**
+     * Test attribute "approved"
+     */
+    public function testPropertyApproved()
+    {
+
+    }
+
+    /**
      * Test attribute "created"
      */
     public function testPropertyCreated()

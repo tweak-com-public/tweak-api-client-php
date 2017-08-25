@@ -81,6 +81,8 @@ class Design implements ArrayAccess
         'edited' => '\DateTime',
         'expired' => '\DateTime',
         'path' => 'string',
+        'sentForApproval' => '\DateTime',
+        'approved' => '\DateTime',
         'created' => '\DateTime',
         'modified' => '\DateTime',
         'id' => 'string',
@@ -132,6 +134,8 @@ class Design implements ArrayAccess
         'edited' => 'edited',
         'expired' => 'expired',
         'path' => 'path',
+        'sentForApproval' => 'sentForApproval',
+        'approved' => 'approved',
         'created' => 'created',
         'modified' => 'modified',
         'id' => 'id',
@@ -183,6 +187,8 @@ class Design implements ArrayAccess
         'edited' => 'setEdited',
         'expired' => 'setExpired',
         'path' => 'setPath',
+        'sentForApproval' => 'setSentForApproval',
+        'approved' => 'setApproved',
         'created' => 'setCreated',
         'modified' => 'setModified',
         'id' => 'setId',
@@ -234,6 +240,8 @@ class Design implements ArrayAccess
         'edited' => 'getEdited',
         'expired' => 'getExpired',
         'path' => 'getPath',
+        'sentForApproval' => 'getSentForApproval',
+        'approved' => 'getApproved',
         'created' => 'getCreated',
         'modified' => 'getModified',
         'id' => 'getId',
@@ -328,6 +336,8 @@ class Design implements ArrayAccess
         $this->container['edited'] = isset($data['edited']) ? $data['edited'] : null;
         $this->container['expired'] = isset($data['expired']) ? $data['expired'] : null;
         $this->container['path'] = isset($data['path']) ? $data['path'] : '/';
+        $this->container['sentForApproval'] = isset($data['sentForApproval']) ? $data['sentForApproval'] : null;
+        $this->container['approved'] = isset($data['approved']) ? $data['approved'] : null;
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
         $this->container['modified'] = isset($data['modified']) ? $data['modified'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
@@ -726,6 +736,48 @@ class Design implements ArrayAccess
     public function setPath($path)
     {
         $this->container['path'] = $path;
+
+        return $this;
+    }
+
+    /**
+     * Gets sentForApproval
+     * @return \DateTime
+     */
+    public function getSentForApproval()
+    {
+        return $this->container['sentForApproval'];
+    }
+
+    /**
+     * Sets sentForApproval
+     * @param \DateTime $sentForApproval
+     * @return $this
+     */
+    public function setSentForApproval($sentForApproval)
+    {
+        $this->container['sentForApproval'] = $sentForApproval;
+
+        return $this;
+    }
+
+    /**
+     * Gets approved
+     * @return \DateTime
+     */
+    public function getApproved()
+    {
+        return $this->container['approved'];
+    }
+
+    /**
+     * Sets approved
+     * @param \DateTime $approved
+     * @return $this
+     */
+    public function setApproved($approved)
+    {
+        $this->container['approved'] = $approved;
 
         return $this;
     }
