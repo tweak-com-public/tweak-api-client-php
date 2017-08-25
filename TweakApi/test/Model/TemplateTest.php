@@ -152,6 +152,22 @@ class TemplateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "shared"
+     */
+    public function testPropertyShared()
+    {
+
+    }
+
+    /**
+     * Test attribute "permissionSetUpdated"
+     */
+    public function testPropertyPermissionSetUpdated()
+    {
+
+    }
+
+    /**
      * Test attribute "created"
      */
     public function testPropertyCreated()

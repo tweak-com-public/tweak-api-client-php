@@ -541,6 +541,17 @@ class CustomerApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for customersIdRegisterTeamPost
+     *
+     * Register team and assign it to the customer.
+     *
+     */
+    public function testCustomersIdRegisterTeamPost()
+    {
+
+    }
+
+    /**
      * Test case for customersIdReplacePost
      *
      * Replace attributes for a model instance and persist it into the data source..
