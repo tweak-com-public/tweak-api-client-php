@@ -14816,6 +14816,92 @@ class CustomerApi
     }
 
     /**
+     * Operation customersMeTokenRefreshGet
+     *
+     * Refresh current access token
+     *
+     * @param string $refreshToken AccessToken refreshToken (required)
+     * @return \Swagger\Client\Model\TeamMemberAccessToken
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function customersMeTokenRefreshGet($refreshToken)
+    {
+        list($response) = $this->customersMeTokenRefreshGetWithHttpInfo($refreshToken);
+        return $response;
+    }
+
+    /**
+     * Operation customersMeTokenRefreshGetWithHttpInfo
+     *
+     * Refresh current access token
+     *
+     * @param string $refreshToken AccessToken refreshToken (required)
+     * @return array of \Swagger\Client\Model\TeamMemberAccessToken, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function customersMeTokenRefreshGetWithHttpInfo($refreshToken)
+    {
+        // verify the required parameter 'refreshToken' is set
+        if ($refreshToken === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $refreshToken when calling customersMeTokenRefreshGet');
+        }
+        // parse inputs
+        $resourcePath = "/Customers/me/token/refresh";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($refreshToken !== null) {
+            $queryParams['refreshToken'] = $this->apiClient->getSerializer()->toQueryValue($refreshToken);
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\TeamMemberAccessToken',
+                '/Customers/me/token/refresh'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TeamMemberAccessToken', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TeamMemberAccessToken', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation customersPatch
      *
      * Patch an existing model instance or insert a new one into the data source.
