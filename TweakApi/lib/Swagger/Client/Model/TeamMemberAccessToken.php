@@ -67,6 +67,7 @@ class TeamMemberAccessToken implements ArrayAccess
       */
     protected static $swaggerTypes = array(
         'roles' => 'string[]',
+        'refreshToken' => 'string',
         'id' => 'string',
         'ttl' => 'double',
         'scopes' => 'string[]',
@@ -94,6 +95,7 @@ class TeamMemberAccessToken implements ArrayAccess
      */
     protected static $attributeMap = array(
         'roles' => 'roles',
+        'refreshToken' => 'refreshToken',
         'id' => 'id',
         'ttl' => 'ttl',
         'scopes' => 'scopes',
@@ -121,6 +123,7 @@ class TeamMemberAccessToken implements ArrayAccess
      */
     protected static $setters = array(
         'roles' => 'setRoles',
+        'refreshToken' => 'setRefreshToken',
         'id' => 'setId',
         'ttl' => 'setTtl',
         'scopes' => 'setScopes',
@@ -148,6 +151,7 @@ class TeamMemberAccessToken implements ArrayAccess
      */
     protected static $getters = array(
         'roles' => 'getRoles',
+        'refreshToken' => 'getRefreshToken',
         'id' => 'getId',
         'ttl' => 'getTtl',
         'scopes' => 'getScopes',
@@ -186,6 +190,7 @@ class TeamMemberAccessToken implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['roles'] = isset($data['roles']) ? $data['roles'] : null;
+        $this->container['refreshToken'] = isset($data['refreshToken']) ? $data['refreshToken'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['ttl'] = isset($data['ttl']) ? $data['ttl'] : 1209600.0;
         $this->container['scopes'] = isset($data['scopes']) ? $data['scopes'] : null;
@@ -248,6 +253,27 @@ class TeamMemberAccessToken implements ArrayAccess
     public function setRoles($roles)
     {
         $this->container['roles'] = $roles;
+
+        return $this;
+    }
+
+    /**
+     * Gets refreshToken
+     * @return string
+     */
+    public function getRefreshToken()
+    {
+        return $this->container['refreshToken'];
+    }
+
+    /**
+     * Sets refreshToken
+     * @param string $refreshToken
+     * @return $this
+     */
+    public function setRefreshToken($refreshToken)
+    {
+        $this->container['refreshToken'] = $refreshToken;
 
         return $this;
     }

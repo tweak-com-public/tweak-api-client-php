@@ -104,6 +104,14 @@ class TeamMemberAccessTokenTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "refreshToken"
+     */
+    public function testPropertyRefreshToken()
+    {
+
+    }
+
+    /**
      * Test attribute "id"
      */
     public function testPropertyId()
