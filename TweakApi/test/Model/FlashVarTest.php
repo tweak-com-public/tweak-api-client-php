@@ -176,6 +176,14 @@ class FlashVarTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "allowDuplicateDesign"
+     */
+    public function testPropertyAllowDuplicateDesign()
+    {
+
+    }
+
+    /**
      * Test attribute "blockEditing"
      */
     public function testPropertyBlockEditing()

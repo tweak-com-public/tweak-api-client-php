@@ -76,6 +76,7 @@ class FlashVar implements ArrayAccess
         'allowHighResPDF' => 'bool',
         'allowSaveForLater' => 'bool',
         'allowSaveAsTemplate' => 'bool',
+        'allowDuplicateDesign' => 'bool',
         'blockEditing' => 'bool',
         'makeAllItemsEditable' => 'bool',
         'showConfirm' => 'bool',
@@ -124,6 +125,7 @@ class FlashVar implements ArrayAccess
         'allowHighResPDF' => 'allowHighResPDF',
         'allowSaveForLater' => 'allowSaveForLater',
         'allowSaveAsTemplate' => 'allowSaveAsTemplate',
+        'allowDuplicateDesign' => 'allowDuplicateDesign',
         'blockEditing' => 'blockEditing',
         'makeAllItemsEditable' => 'makeAllItemsEditable',
         'showConfirm' => 'showConfirm',
@@ -172,6 +174,7 @@ class FlashVar implements ArrayAccess
         'allowHighResPDF' => 'setAllowHighResPDF',
         'allowSaveForLater' => 'setAllowSaveForLater',
         'allowSaveAsTemplate' => 'setAllowSaveAsTemplate',
+        'allowDuplicateDesign' => 'setAllowDuplicateDesign',
         'blockEditing' => 'setBlockEditing',
         'makeAllItemsEditable' => 'setMakeAllItemsEditable',
         'showConfirm' => 'setShowConfirm',
@@ -220,6 +223,7 @@ class FlashVar implements ArrayAccess
         'allowHighResPDF' => 'getAllowHighResPDF',
         'allowSaveForLater' => 'getAllowSaveForLater',
         'allowSaveAsTemplate' => 'getAllowSaveAsTemplate',
+        'allowDuplicateDesign' => 'getAllowDuplicateDesign',
         'blockEditing' => 'getBlockEditing',
         'makeAllItemsEditable' => 'getMakeAllItemsEditable',
         'showConfirm' => 'getShowConfirm',
@@ -279,6 +283,7 @@ class FlashVar implements ArrayAccess
         $this->container['allowHighResPDF'] = isset($data['allowHighResPDF']) ? $data['allowHighResPDF'] : false;
         $this->container['allowSaveForLater'] = isset($data['allowSaveForLater']) ? $data['allowSaveForLater'] : false;
         $this->container['allowSaveAsTemplate'] = isset($data['allowSaveAsTemplate']) ? $data['allowSaveAsTemplate'] : false;
+        $this->container['allowDuplicateDesign'] = isset($data['allowDuplicateDesign']) ? $data['allowDuplicateDesign'] : false;
         $this->container['blockEditing'] = isset($data['blockEditing']) ? $data['blockEditing'] : false;
         $this->container['makeAllItemsEditable'] = isset($data['makeAllItemsEditable']) ? $data['makeAllItemsEditable'] : false;
         $this->container['showConfirm'] = isset($data['showConfirm']) ? $data['showConfirm'] : false;
@@ -536,6 +541,27 @@ class FlashVar implements ArrayAccess
     public function setAllowSaveAsTemplate($allowSaveAsTemplate)
     {
         $this->container['allowSaveAsTemplate'] = $allowSaveAsTemplate;
+
+        return $this;
+    }
+
+    /**
+     * Gets allowDuplicateDesign
+     * @return bool
+     */
+    public function getAllowDuplicateDesign()
+    {
+        return $this->container['allowDuplicateDesign'];
+    }
+
+    /**
+     * Sets allowDuplicateDesign
+     * @param bool $allowDuplicateDesign
+     * @return $this
+     */
+    public function setAllowDuplicateDesign($allowDuplicateDesign)
+    {
+        $this->container['allowDuplicateDesign'] = $allowDuplicateDesign;
 
         return $this;
     }
