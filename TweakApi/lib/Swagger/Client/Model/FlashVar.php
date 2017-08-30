@@ -82,7 +82,7 @@ class FlashVar implements ArrayAccess
         'showConfirm' => 'bool',
         'allowApprovePluginProduct' => 'bool',
         'allowSendToApprovePluginProduct' => 'bool',
-        'workflowForm' => 'object',
+        'workflowForm' => 'string',
         'designFormData' => 'object[]',
         'showPluginImages' => 'bool',
         'pluginImageLibraries' => 'string[]',
@@ -673,7 +673,7 @@ class FlashVar implements ArrayAccess
 
     /**
      * Gets workflowForm
-     * @return object
+     * @return string
      */
     public function getWorkflowForm()
     {
@@ -682,7 +682,7 @@ class FlashVar implements ArrayAccess
 
     /**
      * Sets workflowForm
-     * @param object $workflowForm
+     * @param string $workflowForm
      * @return $this
      */
     public function setWorkflowForm($workflowForm)
