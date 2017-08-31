@@ -323,7 +323,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **invitationTicketsIdExistsGet**
-> \Swagger\Client\Model\InlineResponse2002 invitationTicketsIdExistsGet($id)
+> \Swagger\Client\Model\InlineResponse2001 invitationTicketsIdExistsGet($id)
 
 Check whether a model instance exists in the data source.
 
@@ -357,7 +357,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -421,7 +421,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **invitationTicketsIdHead**
-> \Swagger\Client\Model\InlineResponse2002 invitationTicketsIdHead($id)
+> \Swagger\Client\Model\InlineResponse2001 invitationTicketsIdHead($id)
 
 Check whether a model instance exists in the data source.
 
@@ -455,7 +455,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -1311,7 +1311,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **invitationTicketsUpdatePost**
-> \Swagger\Client\Model\InlineResponse2001 invitationTicketsUpdatePost($where, $data)
+> \Swagger\Client\Model\InlineResponse2002 invitationTicketsUpdatePost($where, $data)
 
 Update instances of the model matched by {{where}} from the data source.
 
@@ -1347,7 +1347,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 

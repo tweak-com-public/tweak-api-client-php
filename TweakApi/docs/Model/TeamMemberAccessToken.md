@@ -3,6 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**roles** | **string[]** |  | [optional] 
+**refreshToken** | **string** |  | [optional] 
 **id** | **string** |  | 
 **ttl** | **double** | time to live in seconds (2 weeks by default) | [optional] [default to 1209600.0]
 **scopes** | **string[]** | Array of scopes granted to this access token. | [optional] 

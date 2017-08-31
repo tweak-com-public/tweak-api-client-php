@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **masterKey** | **string** |  | [optional] 
 **status** | **string** | Status of the application, production/sandbox/disabled | [optional] [default to 'sandbox']
 **members** | [**\Swagger\Client\Model\Customer[]**](Customer.md) |  | [optional] 
+**dataSources** | [**\Swagger\Client\Model\DataSource[]**](DataSource.md) |  | [optional] 
 **teamMembers** | [**\Swagger\Client\Model\TeamMember[]**](TeamMember.md) |  | [optional] 
 **portals** | [**\Swagger\Client\Model\Portal[]**](Portal.md) |  | [optional] 
 **templates** | [**\Swagger\Client\Model\Template[]**](Template.md) |  | [optional] 

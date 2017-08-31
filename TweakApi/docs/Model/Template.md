@@ -10,6 +10,8 @@ Name | Type | Description | Notes
 **edited** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **path** | **string** |  | [optional] [default to '/']
 **status** | **string** |  | [optional] 
+**shared** | [**\DateTime**](\DateTime.md) |  | [optional] 
+**permissionSetUpdated** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **modified** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **id** | **string** |  | [optional] 

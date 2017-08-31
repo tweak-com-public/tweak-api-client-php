@@ -8,6 +8,8 @@ Name | Type | Description | Notes
 **companyVat** | **string** |  | [optional] 
 **companyCard** | [**\Swagger\Client\Model\BillingCard**](BillingCard.md) |  | [optional] 
 **subscription** | [**\Swagger\Client\Model\BillingSubscription**](BillingSubscription.md) |  | [optional] 
+**limit** | [**\Swagger\Client\Model\BillingLimit**](BillingLimit.md) |  | [optional] 
+**taxPercent** | **double** |  | [optional] [default to 0.0]
 **stripeCustomerId** | **string** |  | [optional] 
 **stripeCardId** | **string** |  | [optional] 
 **stripeSubscriptionId** | **string** |  | [optional] 

@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**customersChangeStreamPost**](CustomerApi.md#customersChangeStreamPost) | **POST** /Customers/change-stream | Create a change stream.
 [**customersConfirmGet**](CustomerApi.md#customersConfirmGet) | **GET** /Customers/confirm | Confirm a user registration with identity verification token.
 [**customersCountGet**](CustomerApi.md#customersCountGet) | **GET** /Customers/count | Count instances of the model matched by where from the data source.
+[**customersEmailEmailExistsGet**](CustomerApi.md#customersEmailEmailExistsGet) | **GET** /Customers/email/{email}/exists | Define whether customer exists or not
 [**customersFindOneGet**](CustomerApi.md#customersFindOneGet) | **GET** /Customers/findOne | Find first instance of the model matched by filter from the data source.
 [**customersGet**](CustomerApi.md#customersGet) | **GET** /Customers | Find all instances of the model matched by filter from the data source.
 [**customersIdAccessTokensCountGet**](CustomerApi.md#customersIdAccessTokensCountGet) | **GET** /Customers/{id}/accessTokens/count | Counts accessTokens of Customer.
@@ -44,6 +45,7 @@ Method | HTTP request | Description
 [**customersIdPermissionPut**](CustomerApi.md#customersIdPermissionPut) | **PUT** /Customers/{id}/permission | Update permission of this model.
 [**customersIdProfilePicturePut**](CustomerApi.md#customersIdProfilePicturePut) | **PUT** /Customers/{id}/profilePicture | Change profile picture
 [**customersIdPut**](CustomerApi.md#customersIdPut) | **PUT** /Customers/{id} | Replace attributes for a model instance and persist it into the data source.
+[**customersIdRegisterTeamPost**](CustomerApi.md#customersIdRegisterTeamPost) | **POST** /Customers/{id}/register/team | Register team and assign it to the customer
 [**customersIdReplacePost**](CustomerApi.md#customersIdReplacePost) | **POST** /Customers/{id}/replace | Replace attributes for a model instance and persist it into the data source.
 [**customersIdTeamsCountGet**](CustomerApi.md#customersIdTeamsCountGet) | **GET** /Customers/{id}/teams/count | Counts teams of Customer.
 [**customersIdTeamsDelete**](CustomerApi.md#customersIdTeamsDelete) | **DELETE** /Customers/{id}/teams | Deletes all teams of this model.
@@ -59,6 +61,13 @@ Method | HTTP request | Description
 [**customersIdTeamsNkBrandGet**](CustomerApi.md#customersIdTeamsNkBrandGet) | **GET** /Customers/{id}/teams/{nk}/brand | Fetches hasOne relation brand.
 [**customersIdTeamsNkBrandPost**](CustomerApi.md#customersIdTeamsNkBrandPost) | **POST** /Customers/{id}/teams/{nk}/brand | Creates a new instance in brand of this model.
 [**customersIdTeamsNkBrandPut**](CustomerApi.md#customersIdTeamsNkBrandPut) | **PUT** /Customers/{id}/teams/{nk}/brand | Update brand of this model.
+[**customersIdTeamsNkDataSourcesCountGet**](CustomerApi.md#customersIdTeamsNkDataSourcesCountGet) | **GET** /Customers/{id}/teams/{nk}/dataSources/count | Counts dataSources of Team.
+[**customersIdTeamsNkDataSourcesDelete**](CustomerApi.md#customersIdTeamsNkDataSourcesDelete) | **DELETE** /Customers/{id}/teams/{nk}/dataSources | Deletes all dataSources of this model.
+[**customersIdTeamsNkDataSourcesFkDelete**](CustomerApi.md#customersIdTeamsNkDataSourcesFkDelete) | **DELETE** /Customers/{id}/teams/{nk}/dataSources/{fk} | Delete a related item by id for dataSources.
+[**customersIdTeamsNkDataSourcesFkGet**](CustomerApi.md#customersIdTeamsNkDataSourcesFkGet) | **GET** /Customers/{id}/teams/{nk}/dataSources/{fk} | Find a related item by id for dataSources.
+[**customersIdTeamsNkDataSourcesFkPut**](CustomerApi.md#customersIdTeamsNkDataSourcesFkPut) | **PUT** /Customers/{id}/teams/{nk}/dataSources/{fk} | Update a related item by id for dataSources.
+[**customersIdTeamsNkDataSourcesGet**](CustomerApi.md#customersIdTeamsNkDataSourcesGet) | **GET** /Customers/{id}/teams/{nk}/dataSources | Queries dataSources of Team.
+[**customersIdTeamsNkDataSourcesPost**](CustomerApi.md#customersIdTeamsNkDataSourcesPost) | **POST** /Customers/{id}/teams/{nk}/dataSources | Creates a new instance in dataSources of this model.
 [**customersIdTeamsNkImageFoldersCountGet**](CustomerApi.md#customersIdTeamsNkImageFoldersCountGet) | **GET** /Customers/{id}/teams/{nk}/imageFolders/count | Counts imageFolders of Team.
 [**customersIdTeamsNkImageFoldersDelete**](CustomerApi.md#customersIdTeamsNkImageFoldersDelete) | **DELETE** /Customers/{id}/teams/{nk}/imageFolders | Deletes all imageFolders of this model.
 [**customersIdTeamsNkImageFoldersFkDelete**](CustomerApi.md#customersIdTeamsNkImageFoldersFkDelete) | **DELETE** /Customers/{id}/teams/{nk}/imageFolders/{fk} | Delete a related item by id for imageFolders.
@@ -134,12 +143,15 @@ Method | HTTP request | Description
 [**customersInvitationTicketsTokenGet**](CustomerApi.md#customersInvitationTicketsTokenGet) | **GET** /Customers/invitationTickets/{token} | Get invitation details with token
 [**customersLoginPost**](CustomerApi.md#customersLoginPost) | **POST** /Customers/login | Login a user with username/email and password.
 [**customersLogoutPost**](CustomerApi.md#customersLogoutPost) | **POST** /Customers/logout | Logout a user with access token.
+[**customersMeTokenGet**](CustomerApi.md#customersMeTokenGet) | **GET** /Customers/me/token | Get token info
+[**customersMeTokenRefreshGet**](CustomerApi.md#customersMeTokenRefreshGet) | **GET** /Customers/me/token/refresh | Refresh current access token
 [**customersPatch**](CustomerApi.md#customersPatch) | **PATCH** /Customers | Patch an existing model instance or insert a new one into the data source.
 [**customersPost**](CustomerApi.md#customersPost) | **POST** /Customers | Create a new instance of the model and persist it into the data source.
 [**customersPut**](CustomerApi.md#customersPut) | **PUT** /Customers | Replace an existing model instance or insert a new one into the data source.
 [**customersRegisterPost**](CustomerApi.md#customersRegisterPost) | **POST** /Customers/register | Create customer and assign it to a team
 [**customersReplaceOrCreatePost**](CustomerApi.md#customersReplaceOrCreatePost) | **POST** /Customers/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
 [**customersResetPasswordPost**](CustomerApi.md#customersResetPasswordPost) | **POST** /Customers/reset-password | Reset user&#39;s password via a password-reset token.
+[**customersResetPasswordTokenGet**](CustomerApi.md#customersResetPasswordTokenGet) | **GET** /Customers/reset-password/token | Get token info for reset password token
 [**customersResetPost**](CustomerApi.md#customersResetPost) | **POST** /Customers/reset | Reset password for a user with email.
 [**customersUpdatePost**](CustomerApi.md#customersUpdatePost) | **POST** /Customers/update | Update instances of the model matched by {{where}} from the data source.
 [**customersUpsertWithWherePost**](CustomerApi.md#customersUpsertWithWherePost) | **POST** /Customers/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
@@ -377,6 +389,54 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **customersEmailEmailExistsGet**
+> \Swagger\Client\Model\InlineResponse2001 customersEmailEmailExistsGet($email)
+
+Define whether customer exists or not
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+$email = "email_example"; // string | Customer email
+
+try {
+    $result = $api_instance->customersEmailEmailExistsGet($email);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersEmailEmailExistsGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **email** | **string**| Customer email |
+
+### Return type
+
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -1278,7 +1338,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **customersIdExistsGet**
-> \Swagger\Client\Model\InlineResponse2002 customersIdExistsGet($id)
+> \Swagger\Client\Model\InlineResponse2001 customersIdExistsGet($id)
 
 Check whether a model instance exists in the data source.
 
@@ -1312,7 +1372,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -1376,7 +1436,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **customersIdHead**
-> \Swagger\Client\Model\InlineResponse2002 customersIdHead($id)
+> \Swagger\Client\Model\InlineResponse2001 customersIdHead($id)
 
 Check whether a model instance exists in the data source.
 
@@ -1410,7 +1470,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -2108,6 +2168,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\Customer**](../Model/Customer.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **customersIdRegisterTeamPost**
+> \Swagger\Client\Model\TeamMember customersIdRegisterTeamPost($id, $data)
+
+Register team and assign it to the customer
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+$id = "id_example"; // string | Customer id
+$data = new \Swagger\Client\Model\Team(); // \Swagger\Client\Model\Team | Model instance data
+
+try {
+    $result = $api_instance->customersIdRegisterTeamPost($id, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersIdRegisterTeamPost: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Customer id |
+ **data** | [**\Swagger\Client\Model\Team**](../Model/\Swagger\Client\Model\Team.md)| Model instance data | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\TeamMember**](../Model/TeamMember.md)
 
 ### Authorization
 
@@ -2866,6 +2976,368 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\TeamBrand**](../Model/TeamBrand.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **customersIdTeamsNkDataSourcesCountGet**
+> \Swagger\Client\Model\InlineResponse200 customersIdTeamsNkDataSourcesCountGet($id, $nk, $where)
+
+Counts dataSources of Team.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+$id = "id_example"; // string | Customer id
+$nk = "nk_example"; // string | Foreign key for teams.
+$where = "where_example"; // string | Criteria to match model instances
+
+try {
+    $result = $api_instance->customersIdTeamsNkDataSourcesCountGet($id, $nk, $where);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersIdTeamsNkDataSourcesCountGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Customer id |
+ **nk** | **string**| Foreign key for teams. |
+ **where** | **string**| Criteria to match model instances | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **customersIdTeamsNkDataSourcesDelete**
+> customersIdTeamsNkDataSourcesDelete($id, $nk)
+
+Deletes all dataSources of this model.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+$id = "id_example"; // string | Customer id
+$nk = "nk_example"; // string | Foreign key for teams.
+
+try {
+    $api_instance->customersIdTeamsNkDataSourcesDelete($id, $nk);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersIdTeamsNkDataSourcesDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Customer id |
+ **nk** | **string**| Foreign key for teams. |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **customersIdTeamsNkDataSourcesFkDelete**
+> customersIdTeamsNkDataSourcesFkDelete($id, $nk, $fk)
+
+Delete a related item by id for dataSources.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+$id = "id_example"; // string | Customer id
+$nk = "nk_example"; // string | Foreign key for teams.
+$fk = "fk_example"; // string | Foreign key for dataSources
+
+try {
+    $api_instance->customersIdTeamsNkDataSourcesFkDelete($id, $nk, $fk);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersIdTeamsNkDataSourcesFkDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Customer id |
+ **nk** | **string**| Foreign key for teams. |
+ **fk** | **string**| Foreign key for dataSources |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **customersIdTeamsNkDataSourcesFkGet**
+> \Swagger\Client\Model\DataSource customersIdTeamsNkDataSourcesFkGet($id, $nk, $fk)
+
+Find a related item by id for dataSources.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+$id = "id_example"; // string | Customer id
+$nk = "nk_example"; // string | Foreign key for teams.
+$fk = "fk_example"; // string | Foreign key for dataSources
+
+try {
+    $result = $api_instance->customersIdTeamsNkDataSourcesFkGet($id, $nk, $fk);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersIdTeamsNkDataSourcesFkGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Customer id |
+ **nk** | **string**| Foreign key for teams. |
+ **fk** | **string**| Foreign key for dataSources |
+
+### Return type
+
+[**\Swagger\Client\Model\DataSource**](../Model/DataSource.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **customersIdTeamsNkDataSourcesFkPut**
+> \Swagger\Client\Model\DataSource customersIdTeamsNkDataSourcesFkPut($id, $nk, $fk, $data)
+
+Update a related item by id for dataSources.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+$id = "id_example"; // string | Customer id
+$nk = "nk_example"; // string | Foreign key for teams.
+$fk = "fk_example"; // string | Foreign key for dataSources
+$data = new \Swagger\Client\Model\DataSource(); // \Swagger\Client\Model\DataSource | 
+
+try {
+    $result = $api_instance->customersIdTeamsNkDataSourcesFkPut($id, $nk, $fk, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersIdTeamsNkDataSourcesFkPut: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Customer id |
+ **nk** | **string**| Foreign key for teams. |
+ **fk** | **string**| Foreign key for dataSources |
+ **data** | [**\Swagger\Client\Model\DataSource**](../Model/\Swagger\Client\Model\DataSource.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\DataSource**](../Model/DataSource.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **customersIdTeamsNkDataSourcesGet**
+> \Swagger\Client\Model\DataSource[] customersIdTeamsNkDataSourcesGet($id, $nk, $filter)
+
+Queries dataSources of Team.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+$id = "id_example"; // string | Customer id
+$nk = "nk_example"; // string | Foreign key for teams.
+$filter = "filter_example"; // string | 
+
+try {
+    $result = $api_instance->customersIdTeamsNkDataSourcesGet($id, $nk, $filter);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersIdTeamsNkDataSourcesGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Customer id |
+ **nk** | **string**| Foreign key for teams. |
+ **filter** | **string**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\DataSource[]**](../Model/DataSource.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **customersIdTeamsNkDataSourcesPost**
+> \Swagger\Client\Model\DataSource customersIdTeamsNkDataSourcesPost($id, $nk, $data)
+
+Creates a new instance in dataSources of this model.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+$id = "id_example"; // string | Customer id
+$nk = "nk_example"; // string | Foreign key for teams.
+$data = new \Swagger\Client\Model\DataSource(); // \Swagger\Client\Model\DataSource | 
+
+try {
+    $result = $api_instance->customersIdTeamsNkDataSourcesPost($id, $nk, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersIdTeamsNkDataSourcesPost: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Customer id |
+ **nk** | **string**| Foreign key for teams. |
+ **data** | [**\Swagger\Client\Model\DataSource**](../Model/\Swagger\Client\Model\DataSource.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\DataSource**](../Model/DataSource.md)
 
 ### Authorization
 
@@ -6731,6 +7203,98 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **customersMeTokenGet**
+> \Swagger\Client\Model\TeamMemberAccessToken customersMeTokenGet()
+
+Get token info
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+
+try {
+    $result = $api_instance->customersMeTokenGet();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersMeTokenGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**\Swagger\Client\Model\TeamMemberAccessToken**](../Model/TeamMemberAccessToken.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **customersMeTokenRefreshGet**
+> \Swagger\Client\Model\TeamMemberAccessToken customersMeTokenRefreshGet($refreshToken)
+
+Refresh current access token
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+$refreshToken = "refreshToken_example"; // string | AccessToken refreshToken
+
+try {
+    $result = $api_instance->customersMeTokenRefreshGet($refreshToken);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersMeTokenRefreshGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **refreshToken** | **string**| AccessToken refreshToken |
+
+### Return type
+
+[**\Swagger\Client\Model\TeamMemberAccessToken**](../Model/TeamMemberAccessToken.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **customersPatch**
 > \Swagger\Client\Model\Customer customersPatch($data)
 
@@ -7018,6 +7582,54 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **customersResetPasswordTokenGet**
+> \Swagger\Client\Model\TeamMemberAccessToken customersResetPasswordTokenGet($token)
+
+Get token info for reset password token
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+$token = "token_example"; // string | Reset password access token
+
+try {
+    $result = $api_instance->customersResetPasswordTokenGet($token);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersResetPasswordTokenGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **token** | **string**| Reset password access token |
+
+### Return type
+
+[**\Swagger\Client\Model\TeamMemberAccessToken**](../Model/TeamMemberAccessToken.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **customersResetPost**
 > customersResetPost($options)
 
@@ -7066,7 +7678,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **customersUpdatePost**
-> \Swagger\Client\Model\InlineResponse2001 customersUpdatePost($where, $data)
+> \Swagger\Client\Model\InlineResponse2002 customersUpdatePost($where, $data)
 
 Update instances of the model matched by {{where}} from the data source.
 
@@ -7102,7 +7714,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
