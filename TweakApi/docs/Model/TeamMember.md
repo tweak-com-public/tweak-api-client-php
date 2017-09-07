@@ -15,6 +15,8 @@ Name | Type | Description | Notes
 **addressLine2** | **string** |  | [optional] 
 **addressState** | **string** |  | [optional] 
 **addressZip** | **string** |  | [optional] 
+**language** | **string** |  | [optional] 
+**timezone** | **string** |  | [optional] 
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **modified** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **id** | **string** |  | [optional] 
@@ -35,6 +37,7 @@ Name | Type | Description | Notes
 **designFolders** | [**\Swagger\Client\Model\DesignFolder[]**](DesignFolder.md) |  | [optional] 
 **workflows** | [**\Swagger\Client\Model\Workflow[]**](Workflow.md) |  | [optional] 
 **imageFolders** | [**\Swagger\Client\Model\ImageFolder[]**](ImageFolder.md) |  | [optional] 
+**notifications** | [**\Swagger\Client\Model\Notification[]**](Notification.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
