@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**teamsCountGet**](TeamApi.md#teamsCountGet) | **GET** /Teams/count | Count instances of the model matched by where from the data source.
 [**teamsFindOneGet**](TeamApi.md#teamsFindOneGet) | **GET** /Teams/findOne | Find first instance of the model matched by filter from the data source.
 [**teamsGet**](TeamApi.md#teamsGet) | **GET** /Teams | Find all instances of the model matched by filter from the data source.
+[**teamsIdAuthResetKeysDelete**](TeamApi.md#teamsIdAuthResetKeysDelete) | **DELETE** /Teams/{id}/auth/reset-keys | Reset Team keys
 [**teamsIdBillingDelete**](TeamApi.md#teamsIdBillingDelete) | **DELETE** /Teams/{id}/billing | Deletes billing of this model.
 [**teamsIdBillingGet**](TeamApi.md#teamsIdBillingGet) | **GET** /Teams/{id}/billing | Fetches hasOne relation billing.
 [**teamsIdBillingPost**](TeamApi.md#teamsIdBillingPost) | **POST** /Teams/{id}/billing | Creates a new instance in billing of this model.
@@ -191,6 +192,7 @@ Method | HTTP request | Description
 [**teamsIdTeamMembersFkGet**](TeamApi.md#teamsIdTeamMembersFkGet) | **GET** /Teams/{id}/teamMembers/{fk} | Find a related item by id for teamMembers.
 [**teamsIdTeamMembersFkPut**](TeamApi.md#teamsIdTeamMembersFkPut) | **PUT** /Teams/{id}/teamMembers/{fk} | Update a related item by id for teamMembers.
 [**teamsIdTeamMembersGet**](TeamApi.md#teamsIdTeamMembersGet) | **GET** /Teams/{id}/teamMembers | Queries teamMembers of Team.
+[**teamsIdTeamMembersMapKeysGet**](TeamApi.md#teamsIdTeamMembersMapKeysGet) | **GET** /Teams/{id}/teamMembers/map-keys | Map teamMembers emails to teamMembers keys
 [**teamsIdTeamMembersPost**](TeamApi.md#teamsIdTeamMembersPost) | **POST** /Teams/{id}/teamMembers | Creates a new instance in teamMembers of this model.
 [**teamsIdTemplateFoldersCountGet**](TeamApi.md#teamsIdTemplateFoldersCountGet) | **GET** /Teams/{id}/templateFolders/count | Counts templateFolders of Team.
 [**teamsIdTemplateFoldersDelete**](TeamApi.md#teamsIdTemplateFoldersDelete) | **DELETE** /Teams/{id}/templateFolders | Deletes all templateFolders of this model.
@@ -514,6 +516,54 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\Team[]**](../Model/Team.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamsIdAuthResetKeysDelete**
+> \Swagger\Client\Model\Team teamsIdAuthResetKeysDelete($id)
+
+Reset Team keys
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamApi();
+$id = "id_example"; // string | Team id
+
+try {
+    $result = $api_instance->teamsIdAuthResetKeysDelete($id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamApi->teamsIdAuthResetKeysDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Team id |
+
+### Return type
+
+[**\Swagger\Client\Model\Team**](../Model/Team.md)
 
 ### Authorization
 
@@ -9804,6 +9854,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\TeamMember[]**](../Model/TeamMember.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamsIdTeamMembersMapKeysGet**
+> object[] teamsIdTeamMembersMapKeysGet($id, $data)
+
+Map teamMembers emails to teamMembers keys
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamApi();
+$id = "id_example"; // string | Team id
+$data = new \Swagger\Client\Model\Team(); // \Swagger\Client\Model\Team | TeamMember(s) email
+
+try {
+    $result = $api_instance->teamsIdTeamMembersMapKeysGet($id, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamApi->teamsIdTeamMembersMapKeysGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Team id |
+ **data** | [**\Swagger\Client\Model\Team**](../Model/\Swagger\Client\Model\Team.md)| TeamMember(s) email |
+
+### Return type
+
+**object[]**
 
 ### Authorization
 
