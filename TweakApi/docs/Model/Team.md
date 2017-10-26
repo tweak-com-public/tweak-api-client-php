@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **masterKey** | **string** |  | [optional] 
 **status** | **string** | Status of the application, production/sandbox/disabled | [optional] [default to 'sandbox']
 **members** | [**\Swagger\Client\Model\Customer[]**](Customer.md) |  | [optional] 
+**builderConfigs** | [**\Swagger\Client\Model\TeamBuilderConfig[]**](TeamBuilderConfig.md) |  | [optional] 
 **dataSources** | [**\Swagger\Client\Model\DataSource[]**](DataSource.md) |  | [optional] 
 **dynamicDatas** | [**\Swagger\Client\Model\DynamicData[]**](DynamicData.md) |  | [optional] 
 **teamMembers** | [**\Swagger\Client\Model\TeamMember[]**](TeamMember.md) |  | [optional] 

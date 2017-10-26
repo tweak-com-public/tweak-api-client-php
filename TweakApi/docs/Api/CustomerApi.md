@@ -61,6 +61,13 @@ Method | HTTP request | Description
 [**customersIdTeamsNkBrandGet**](CustomerApi.md#customersIdTeamsNkBrandGet) | **GET** /Customers/{id}/teams/{nk}/brand | Fetches hasOne relation brand.
 [**customersIdTeamsNkBrandPost**](CustomerApi.md#customersIdTeamsNkBrandPost) | **POST** /Customers/{id}/teams/{nk}/brand | Creates a new instance in brand of this model.
 [**customersIdTeamsNkBrandPut**](CustomerApi.md#customersIdTeamsNkBrandPut) | **PUT** /Customers/{id}/teams/{nk}/brand | Update brand of this model.
+[**customersIdTeamsNkBuilderConfigsCountGet**](CustomerApi.md#customersIdTeamsNkBuilderConfigsCountGet) | **GET** /Customers/{id}/teams/{nk}/builderConfigs/count | Counts builderConfigs of Team.
+[**customersIdTeamsNkBuilderConfigsDelete**](CustomerApi.md#customersIdTeamsNkBuilderConfigsDelete) | **DELETE** /Customers/{id}/teams/{nk}/builderConfigs | Deletes all builderConfigs of this model.
+[**customersIdTeamsNkBuilderConfigsFkDelete**](CustomerApi.md#customersIdTeamsNkBuilderConfigsFkDelete) | **DELETE** /Customers/{id}/teams/{nk}/builderConfigs/{fk} | Delete a related item by id for builderConfigs.
+[**customersIdTeamsNkBuilderConfigsFkGet**](CustomerApi.md#customersIdTeamsNkBuilderConfigsFkGet) | **GET** /Customers/{id}/teams/{nk}/builderConfigs/{fk} | Find a related item by id for builderConfigs.
+[**customersIdTeamsNkBuilderConfigsFkPut**](CustomerApi.md#customersIdTeamsNkBuilderConfigsFkPut) | **PUT** /Customers/{id}/teams/{nk}/builderConfigs/{fk} | Update a related item by id for builderConfigs.
+[**customersIdTeamsNkBuilderConfigsGet**](CustomerApi.md#customersIdTeamsNkBuilderConfigsGet) | **GET** /Customers/{id}/teams/{nk}/builderConfigs | Queries builderConfigs of Team.
+[**customersIdTeamsNkBuilderConfigsPost**](CustomerApi.md#customersIdTeamsNkBuilderConfigsPost) | **POST** /Customers/{id}/teams/{nk}/builderConfigs | Creates a new instance in builderConfigs of this model.
 [**customersIdTeamsNkDataSourcesCountGet**](CustomerApi.md#customersIdTeamsNkDataSourcesCountGet) | **GET** /Customers/{id}/teams/{nk}/dataSources/count | Counts dataSources of Team.
 [**customersIdTeamsNkDataSourcesDelete**](CustomerApi.md#customersIdTeamsNkDataSourcesDelete) | **DELETE** /Customers/{id}/teams/{nk}/dataSources | Deletes all dataSources of this model.
 [**customersIdTeamsNkDataSourcesFkDelete**](CustomerApi.md#customersIdTeamsNkDataSourcesFkDelete) | **DELETE** /Customers/{id}/teams/{nk}/dataSources/{fk} | Delete a related item by id for dataSources.
@@ -2983,6 +2990,368 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\TeamBrand**](../Model/TeamBrand.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **customersIdTeamsNkBuilderConfigsCountGet**
+> \Swagger\Client\Model\InlineResponse200 customersIdTeamsNkBuilderConfigsCountGet($id, $nk, $where)
+
+Counts builderConfigs of Team.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+$id = "id_example"; // string | Customer id
+$nk = "nk_example"; // string | Foreign key for teams.
+$where = "where_example"; // string | Criteria to match model instances
+
+try {
+    $result = $api_instance->customersIdTeamsNkBuilderConfigsCountGet($id, $nk, $where);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersIdTeamsNkBuilderConfigsCountGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Customer id |
+ **nk** | **string**| Foreign key for teams. |
+ **where** | **string**| Criteria to match model instances | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **customersIdTeamsNkBuilderConfigsDelete**
+> customersIdTeamsNkBuilderConfigsDelete($id, $nk)
+
+Deletes all builderConfigs of this model.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+$id = "id_example"; // string | Customer id
+$nk = "nk_example"; // string | Foreign key for teams.
+
+try {
+    $api_instance->customersIdTeamsNkBuilderConfigsDelete($id, $nk);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersIdTeamsNkBuilderConfigsDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Customer id |
+ **nk** | **string**| Foreign key for teams. |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **customersIdTeamsNkBuilderConfigsFkDelete**
+> customersIdTeamsNkBuilderConfigsFkDelete($id, $nk, $fk)
+
+Delete a related item by id for builderConfigs.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+$id = "id_example"; // string | Customer id
+$nk = "nk_example"; // string | Foreign key for teams.
+$fk = "fk_example"; // string | Foreign key for builderConfigs
+
+try {
+    $api_instance->customersIdTeamsNkBuilderConfigsFkDelete($id, $nk, $fk);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersIdTeamsNkBuilderConfigsFkDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Customer id |
+ **nk** | **string**| Foreign key for teams. |
+ **fk** | **string**| Foreign key for builderConfigs |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **customersIdTeamsNkBuilderConfigsFkGet**
+> \Swagger\Client\Model\TeamBuilderConfig customersIdTeamsNkBuilderConfigsFkGet($id, $nk, $fk)
+
+Find a related item by id for builderConfigs.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+$id = "id_example"; // string | Customer id
+$nk = "nk_example"; // string | Foreign key for teams.
+$fk = "fk_example"; // string | Foreign key for builderConfigs
+
+try {
+    $result = $api_instance->customersIdTeamsNkBuilderConfigsFkGet($id, $nk, $fk);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersIdTeamsNkBuilderConfigsFkGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Customer id |
+ **nk** | **string**| Foreign key for teams. |
+ **fk** | **string**| Foreign key for builderConfigs |
+
+### Return type
+
+[**\Swagger\Client\Model\TeamBuilderConfig**](../Model/TeamBuilderConfig.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **customersIdTeamsNkBuilderConfigsFkPut**
+> \Swagger\Client\Model\TeamBuilderConfig customersIdTeamsNkBuilderConfigsFkPut($id, $nk, $fk, $data)
+
+Update a related item by id for builderConfigs.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+$id = "id_example"; // string | Customer id
+$nk = "nk_example"; // string | Foreign key for teams.
+$fk = "fk_example"; // string | Foreign key for builderConfigs
+$data = new \Swagger\Client\Model\TeamBuilderConfig(); // \Swagger\Client\Model\TeamBuilderConfig | 
+
+try {
+    $result = $api_instance->customersIdTeamsNkBuilderConfigsFkPut($id, $nk, $fk, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersIdTeamsNkBuilderConfigsFkPut: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Customer id |
+ **nk** | **string**| Foreign key for teams. |
+ **fk** | **string**| Foreign key for builderConfigs |
+ **data** | [**\Swagger\Client\Model\TeamBuilderConfig**](../Model/\Swagger\Client\Model\TeamBuilderConfig.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\TeamBuilderConfig**](../Model/TeamBuilderConfig.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **customersIdTeamsNkBuilderConfigsGet**
+> \Swagger\Client\Model\TeamBuilderConfig[] customersIdTeamsNkBuilderConfigsGet($id, $nk, $filter)
+
+Queries builderConfigs of Team.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+$id = "id_example"; // string | Customer id
+$nk = "nk_example"; // string | Foreign key for teams.
+$filter = "filter_example"; // string | 
+
+try {
+    $result = $api_instance->customersIdTeamsNkBuilderConfigsGet($id, $nk, $filter);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersIdTeamsNkBuilderConfigsGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Customer id |
+ **nk** | **string**| Foreign key for teams. |
+ **filter** | **string**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\TeamBuilderConfig[]**](../Model/TeamBuilderConfig.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **customersIdTeamsNkBuilderConfigsPost**
+> \Swagger\Client\Model\TeamBuilderConfig customersIdTeamsNkBuilderConfigsPost($id, $nk, $data)
+
+Creates a new instance in builderConfigs of this model.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+$id = "id_example"; // string | Customer id
+$nk = "nk_example"; // string | Foreign key for teams.
+$data = new \Swagger\Client\Model\TeamBuilderConfig(); // \Swagger\Client\Model\TeamBuilderConfig | 
+
+try {
+    $result = $api_instance->customersIdTeamsNkBuilderConfigsPost($id, $nk, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersIdTeamsNkBuilderConfigsPost: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Customer id |
+ **nk** | **string**| Foreign key for teams. |
+ **data** | [**\Swagger\Client\Model\TeamBuilderConfig**](../Model/\Swagger\Client\Model\TeamBuilderConfig.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\TeamBuilderConfig**](../Model/TeamBuilderConfig.md)
 
 ### Authorization
 
