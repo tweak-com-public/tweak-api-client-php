@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **validations** | **object** |  | [optional] 
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **modified** | [**\DateTime**](\DateTime.md) |  | [optional] 
+**recordCount** | **double** |  | [optional] [default to 0.0]
 **id** | **string** |  | [optional] 
 **teamId** | **string** |  | [optional] 
 **team** | [**\Swagger\Client\Model\Team**](Team.md) |  | [optional] 

@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **timezone** | **string** |  | [optional] 
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **modified** | [**\DateTime**](\DateTime.md) |  | [optional] 
+**key** | **string** |  | [optional] 
 **id** | **string** |  | [optional] 
 **customerId** | **string** |  | [optional] 
 **teamId** | **string** |  | [optional] 
