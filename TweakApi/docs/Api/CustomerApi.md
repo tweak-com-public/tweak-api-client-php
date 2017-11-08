@@ -1,6 +1,6 @@
 # Tweak\Api\CustomerApi
 
-All URIs are relative to *https://apidevcdn.tweak.com/api*
+All URIs are relative to *https://apicdn.tweak.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -53,6 +53,10 @@ Method | HTTP request | Description
 [**customersIdTeamsFkGet**](CustomerApi.md#customersIdTeamsFkGet) | **GET** /Customers/{id}/teams/{fk} | Find a related item by id for teams.
 [**customersIdTeamsFkPut**](CustomerApi.md#customersIdTeamsFkPut) | **PUT** /Customers/{id}/teams/{fk} | Update a related item by id for teams.
 [**customersIdTeamsGet**](CustomerApi.md#customersIdTeamsGet) | **GET** /Customers/{id}/teams | Queries teams of Customer.
+[**customersIdTeamsNkBillingDelete**](CustomerApi.md#customersIdTeamsNkBillingDelete) | **DELETE** /Customers/{id}/teams/{nk}/billing | Deletes billing of this model.
+[**customersIdTeamsNkBillingGet**](CustomerApi.md#customersIdTeamsNkBillingGet) | **GET** /Customers/{id}/teams/{nk}/billing | Fetches hasOne relation billing.
+[**customersIdTeamsNkBillingPost**](CustomerApi.md#customersIdTeamsNkBillingPost) | **POST** /Customers/{id}/teams/{nk}/billing | Creates a new instance in billing of this model.
+[**customersIdTeamsNkBillingPut**](CustomerApi.md#customersIdTeamsNkBillingPut) | **PUT** /Customers/{id}/teams/{nk}/billing | Update billing of this model.
 [**customersIdTeamsNkBrandDelete**](CustomerApi.md#customersIdTeamsNkBrandDelete) | **DELETE** /Customers/{id}/teams/{nk}/brand | Deletes brand of this model.
 [**customersIdTeamsNkBrandGet**](CustomerApi.md#customersIdTeamsNkBrandGet) | **GET** /Customers/{id}/teams/{nk}/brand | Fetches hasOne relation brand.
 [**customersIdTeamsNkBrandPost**](CustomerApi.md#customersIdTeamsNkBrandPost) | **POST** /Customers/{id}/teams/{nk}/brand | Creates a new instance in brand of this model.
@@ -2576,6 +2580,211 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\Team[]**](../Model/Team.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **customersIdTeamsNkBillingDelete**
+> customersIdTeamsNkBillingDelete($id, $nk)
+
+Deletes billing of this model.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+$id = "id_example"; // string | Customer id
+$nk = "nk_example"; // string | Foreign key for teams.
+
+try {
+    $api_instance->customersIdTeamsNkBillingDelete($id, $nk);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersIdTeamsNkBillingDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Customer id |
+ **nk** | **string**| Foreign key for teams. |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **customersIdTeamsNkBillingGet**
+> \Swagger\Client\Model\Billing customersIdTeamsNkBillingGet($id, $nk, $refresh)
+
+Fetches hasOne relation billing.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+$id = "id_example"; // string | Customer id
+$nk = "nk_example"; // string | Foreign key for teams.
+$refresh = true; // bool | 
+
+try {
+    $result = $api_instance->customersIdTeamsNkBillingGet($id, $nk, $refresh);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersIdTeamsNkBillingGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Customer id |
+ **nk** | **string**| Foreign key for teams. |
+ **refresh** | **bool**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\Billing**](../Model/Billing.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **customersIdTeamsNkBillingPost**
+> \Swagger\Client\Model\Billing customersIdTeamsNkBillingPost($id, $nk, $data)
+
+Creates a new instance in billing of this model.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+$id = "id_example"; // string | Customer id
+$nk = "nk_example"; // string | Foreign key for teams.
+$data = new \Swagger\Client\Model\Billing(); // \Swagger\Client\Model\Billing | 
+
+try {
+    $result = $api_instance->customersIdTeamsNkBillingPost($id, $nk, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersIdTeamsNkBillingPost: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Customer id |
+ **nk** | **string**| Foreign key for teams. |
+ **data** | [**\Swagger\Client\Model\Billing**](../Model/\Swagger\Client\Model\Billing.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\Billing**](../Model/Billing.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **customersIdTeamsNkBillingPut**
+> \Swagger\Client\Model\Billing customersIdTeamsNkBillingPut($id, $nk, $data)
+
+Update billing of this model.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+$id = "id_example"; // string | Customer id
+$nk = "nk_example"; // string | Foreign key for teams.
+$data = new \Swagger\Client\Model\Billing(); // \Swagger\Client\Model\Billing | 
+
+try {
+    $result = $api_instance->customersIdTeamsNkBillingPut($id, $nk, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersIdTeamsNkBillingPut: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Customer id |
+ **nk** | **string**| Foreign key for teams. |
+ **data** | [**\Swagger\Client\Model\Billing**](../Model/\Swagger\Client\Model\Billing.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\Billing**](../Model/Billing.md)
 
 ### Authorization
 
