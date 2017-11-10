@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **id** | **string** |  | [optional] 
 **teamId** | **string** |  | [optional] 
 **team** | [**\Swagger\Client\Model\Team**](Team.md) |  | [optional] 
+**designs** | [**\Swagger\Client\Model\Design[]**](Design.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

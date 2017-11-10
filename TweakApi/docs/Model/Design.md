@@ -24,6 +24,7 @@ Name | Type | Description | Notes
 **modified** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **id** | **string** |  | [optional] 
 **customerId** | **string** |  | [optional] 
+**dynamicDataId** | **string** |  | [optional] 
 **requesterId** | **string** |  | [optional] 
 **assigneeId** | **string** |  | [optional] 
 **reviewerId** | **string** |  | [optional] 
@@ -44,6 +45,7 @@ Name | Type | Description | Notes
 **commenters** | [**\Swagger\Client\Model\TeamMember[]**](TeamMember.md) |  | [optional] 
 **folder** | [**\Swagger\Client\Model\DesignFolder**](DesignFolder.md) |  | [optional] 
 **permission** | [**\Swagger\Client\Model\DesignPermissionSet**](DesignPermissionSet.md) |  | [optional] 
+**dynamicData** | [**\Swagger\Client\Model\DynamicData**](DynamicData.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -1,6 +1,6 @@
 # Tweak\Api\TeamMemberApi
 
-All URIs are relative to *https://apicdn.tweak.com/api*
+All URIs are relative to *https://apidevcdn.tweak.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -116,13 +116,10 @@ Method | HTTP request | Description
 [**teamMembersIdTeamBillingCardDelete**](TeamMemberApi.md#teamMembersIdTeamBillingCardDelete) | **DELETE** /TeamMembers/{id}/team/billing/card | Delete Team Billing Card
 [**teamMembersIdTeamBillingCardPost**](TeamMemberApi.md#teamMembersIdTeamBillingCardPost) | **POST** /TeamMembers/{id}/team/billing/card | Create Team Billing Card
 [**teamMembersIdTeamBillingCardPut**](TeamMemberApi.md#teamMembersIdTeamBillingCardPut) | **PUT** /TeamMembers/{id}/team/billing/card | Update Team Billing Card
-[**teamMembersIdTeamBillingDelete**](TeamMemberApi.md#teamMembersIdTeamBillingDelete) | **DELETE** /TeamMembers/{id}/team/billing | Deletes billing of this model.
-[**teamMembersIdTeamBillingGet**](TeamMemberApi.md#teamMembersIdTeamBillingGet) | **GET** /TeamMembers/{id}/team/billing | Fetches hasOne relation billing.
 [**teamMembersIdTeamBillingInvoicesFkPost**](TeamMemberApi.md#teamMembersIdTeamBillingInvoicesFkPost) | **POST** /TeamMembers/{id}/team/billing/invoices/{fk} | Pay Team Billing Invoice
 [**teamMembersIdTeamBillingInvoicesGet**](TeamMemberApi.md#teamMembersIdTeamBillingInvoicesGet) | **GET** /TeamMembers/{id}/team/billing/invoices | List Team Billing Invoices
 [**teamMembersIdTeamBillingInvoicesUpcomingGet**](TeamMemberApi.md#teamMembersIdTeamBillingInvoicesUpcomingGet) | **GET** /TeamMembers/{id}/team/billing/invoices/upcoming | List Upcoming Team Billing Invoices
-[**teamMembersIdTeamBillingPost**](TeamMemberApi.md#teamMembersIdTeamBillingPost) | **POST** /TeamMembers/{id}/team/billing | Creates a new instance in billing of this model.
-[**teamMembersIdTeamBillingPut**](TeamMemberApi.md#teamMembersIdTeamBillingPut) | **PUT** /TeamMembers/{id}/team/billing | Update billing of this model.
+[**teamMembersIdTeamBillingPut**](TeamMemberApi.md#teamMembersIdTeamBillingPut) | **PUT** /TeamMembers/{id}/team/billing | Update Team Billing
 [**teamMembersIdTeamBillingSubscriptionPlanPut**](TeamMemberApi.md#teamMembersIdTeamBillingSubscriptionPlanPut) | **PUT** /TeamMembers/{id}/team/billing/subscription/plan | Update Team Billing Subscription Plan
 [**teamMembersIdTeamBillingTaxEvidenceGet**](TeamMemberApi.md#teamMembersIdTeamBillingTaxEvidenceGet) | **GET** /TeamMembers/{id}/team/billing/taxEvidence | Get Team Billing Tax Evidence
 [**teamMembersIdTeamBillingUncachedGet**](TeamMemberApi.md#teamMembersIdTeamBillingUncachedGet) | **GET** /TeamMembers/{id}/team/billing/uncached | Get Team Billing
@@ -131,9 +128,11 @@ Method | HTTP request | Description
 [**teamMembersIdTeamBrandPost**](TeamMemberApi.md#teamMembersIdTeamBrandPost) | **POST** /TeamMembers/{id}/team/brand | Creates a new instance in brand of this model.
 [**teamMembersIdTeamBrandPut**](TeamMemberApi.md#teamMembersIdTeamBrandPut) | **PUT** /TeamMembers/{id}/team/brand | Update brand of this model.
 [**teamMembersIdTeamBuilderConfigsCountGet**](TeamMemberApi.md#teamMembersIdTeamBuilderConfigsCountGet) | **GET** /TeamMembers/{id}/team/builderConfigs/count | Counts builderConfigs of Team.
+[**teamMembersIdTeamBuilderConfigsDefaultGet**](TeamMemberApi.md#teamMembersIdTeamBuilderConfigsDefaultGet) | **GET** /TeamMembers/{id}/team/builderConfigs/default | Get default Team Builder Config
 [**teamMembersIdTeamBuilderConfigsDelete**](TeamMemberApi.md#teamMembersIdTeamBuilderConfigsDelete) | **DELETE** /TeamMembers/{id}/team/builderConfigs | Deletes all builderConfigs of this model.
 [**teamMembersIdTeamBuilderConfigsFkDelete**](TeamMemberApi.md#teamMembersIdTeamBuilderConfigsFkDelete) | **DELETE** /TeamMembers/{id}/team/builderConfigs/{fk} | Delete a related item by id for builderConfigs.
 [**teamMembersIdTeamBuilderConfigsFkGet**](TeamMemberApi.md#teamMembersIdTeamBuilderConfigsFkGet) | **GET** /TeamMembers/{id}/team/builderConfigs/{fk} | Find a related item by id for builderConfigs.
+[**teamMembersIdTeamBuilderConfigsFkLogoPut**](TeamMemberApi.md#teamMembersIdTeamBuilderConfigsFkLogoPut) | **PUT** /TeamMembers/{id}/team/builderConfigs/{fk}/logo | Change Builder Config logo
 [**teamMembersIdTeamBuilderConfigsFkPut**](TeamMemberApi.md#teamMembersIdTeamBuilderConfigsFkPut) | **PUT** /TeamMembers/{id}/team/builderConfigs/{fk} | Update a related item by id for builderConfigs.
 [**teamMembersIdTeamBuilderConfigsGet**](TeamMemberApi.md#teamMembersIdTeamBuilderConfigsGet) | **GET** /TeamMembers/{id}/team/builderConfigs | Queries builderConfigs of Team.
 [**teamMembersIdTeamBuilderConfigsPost**](TeamMemberApi.md#teamMembersIdTeamBuilderConfigsPost) | **POST** /TeamMembers/{id}/team/builderConfigs | Creates a new instance in builderConfigs of this model.
@@ -188,6 +187,20 @@ Method | HTTP request | Description
 [**teamMembersIdTeamPortalsFkPut**](TeamMemberApi.md#teamMembersIdTeamPortalsFkPut) | **PUT** /TeamMembers/{id}/team/portals/{fk} | Update a related item by id for portals.
 [**teamMembersIdTeamPortalsGet**](TeamMemberApi.md#teamMembersIdTeamPortalsGet) | **GET** /TeamMembers/{id}/team/portals | Queries portals of Team.
 [**teamMembersIdTeamPortalsPost**](TeamMemberApi.md#teamMembersIdTeamPortalsPost) | **POST** /TeamMembers/{id}/team/portals | Creates a new instance in portals of this model.
+[**teamMembersIdTeamProductMaterialsCountGet**](TeamMemberApi.md#teamMembersIdTeamProductMaterialsCountGet) | **GET** /TeamMembers/{id}/team/productMaterials/count | Counts productMaterials of Team.
+[**teamMembersIdTeamProductMaterialsDelete**](TeamMemberApi.md#teamMembersIdTeamProductMaterialsDelete) | **DELETE** /TeamMembers/{id}/team/productMaterials | Deletes all productMaterials of this model.
+[**teamMembersIdTeamProductMaterialsFkDelete**](TeamMemberApi.md#teamMembersIdTeamProductMaterialsFkDelete) | **DELETE** /TeamMembers/{id}/team/productMaterials/{fk} | Delete a related item by id for productMaterials.
+[**teamMembersIdTeamProductMaterialsFkGet**](TeamMemberApi.md#teamMembersIdTeamProductMaterialsFkGet) | **GET** /TeamMembers/{id}/team/productMaterials/{fk} | Find a related item by id for productMaterials.
+[**teamMembersIdTeamProductMaterialsFkPut**](TeamMemberApi.md#teamMembersIdTeamProductMaterialsFkPut) | **PUT** /TeamMembers/{id}/team/productMaterials/{fk} | Update a related item by id for productMaterials.
+[**teamMembersIdTeamProductMaterialsGet**](TeamMemberApi.md#teamMembersIdTeamProductMaterialsGet) | **GET** /TeamMembers/{id}/team/productMaterials | Queries productMaterials of Team.
+[**teamMembersIdTeamProductMaterialsPost**](TeamMemberApi.md#teamMembersIdTeamProductMaterialsPost) | **POST** /TeamMembers/{id}/team/productMaterials | Creates a new instance in productMaterials of this model.
+[**teamMembersIdTeamProductSizeMaterialsCountGet**](TeamMemberApi.md#teamMembersIdTeamProductSizeMaterialsCountGet) | **GET** /TeamMembers/{id}/team/productSizeMaterials/count | Counts productSizeMaterials of Team.
+[**teamMembersIdTeamProductSizeMaterialsDelete**](TeamMemberApi.md#teamMembersIdTeamProductSizeMaterialsDelete) | **DELETE** /TeamMembers/{id}/team/productSizeMaterials | Deletes all productSizeMaterials of this model.
+[**teamMembersIdTeamProductSizeMaterialsFkDelete**](TeamMemberApi.md#teamMembersIdTeamProductSizeMaterialsFkDelete) | **DELETE** /TeamMembers/{id}/team/productSizeMaterials/{fk} | Delete a related item by id for productSizeMaterials.
+[**teamMembersIdTeamProductSizeMaterialsFkGet**](TeamMemberApi.md#teamMembersIdTeamProductSizeMaterialsFkGet) | **GET** /TeamMembers/{id}/team/productSizeMaterials/{fk} | Find a related item by id for productSizeMaterials.
+[**teamMembersIdTeamProductSizeMaterialsFkPut**](TeamMemberApi.md#teamMembersIdTeamProductSizeMaterialsFkPut) | **PUT** /TeamMembers/{id}/team/productSizeMaterials/{fk} | Update a related item by id for productSizeMaterials.
+[**teamMembersIdTeamProductSizeMaterialsGet**](TeamMemberApi.md#teamMembersIdTeamProductSizeMaterialsGet) | **GET** /TeamMembers/{id}/team/productSizeMaterials | Queries productSizeMaterials of Team.
+[**teamMembersIdTeamProductSizeMaterialsPost**](TeamMemberApi.md#teamMembersIdTeamProductSizeMaterialsPost) | **POST** /TeamMembers/{id}/team/productSizeMaterials | Creates a new instance in productSizeMaterials of this model.
 [**teamMembersIdTeamTeamMembersCountGet**](TeamMemberApi.md#teamMembersIdTeamTeamMembersCountGet) | **GET** /TeamMembers/{id}/team/teamMembers/count | Counts teamMembers of Team.
 [**teamMembersIdTeamTeamMembersDelete**](TeamMemberApi.md#teamMembersIdTeamTeamMembersDelete) | **DELETE** /TeamMembers/{id}/team/teamMembers | Deletes all teamMembers of this model.
 [**teamMembersIdTeamTeamMembersFkDelete**](TeamMemberApi.md#teamMembersIdTeamTeamMembersFkDelete) | **DELETE** /TeamMembers/{id}/team/teamMembers/{fk} | Delete a related item by id for teamMembers.
@@ -5855,103 +5868,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **teamMembersIdTeamBillingDelete**
-> teamMembersIdTeamBillingDelete($id)
-
-Deletes billing of this model.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\TeamMemberApi();
-$id = "id_example"; // string | TeamMember id
-
-try {
-    $api_instance->teamMembersIdTeamBillingDelete($id);
-} catch (Exception $e) {
-    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamBillingDelete: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| TeamMember id |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **teamMembersIdTeamBillingGet**
-> \Swagger\Client\Model\Billing teamMembersIdTeamBillingGet($id, $refresh)
-
-Fetches hasOne relation billing.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\TeamMemberApi();
-$id = "id_example"; // string | TeamMember id
-$refresh = true; // bool | 
-
-try {
-    $result = $api_instance->teamMembersIdTeamBillingGet($id, $refresh);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamBillingGet: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| TeamMember id |
- **refresh** | **bool**|  | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\Billing**](../Model/Billing.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
 # **teamMembersIdTeamBillingInvoicesFkPost**
 > \Swagger\Client\Model\BillingInvoice teamMembersIdTeamBillingInvoicesFkPost($id, $fk)
 
@@ -6100,60 +6016,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **teamMembersIdTeamBillingPost**
-> \Swagger\Client\Model\Billing teamMembersIdTeamBillingPost($id, $data)
-
-Creates a new instance in billing of this model.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\TeamMemberApi();
-$id = "id_example"; // string | TeamMember id
-$data = new \Swagger\Client\Model\Billing(); // \Swagger\Client\Model\Billing | 
-
-try {
-    $result = $api_instance->teamMembersIdTeamBillingPost($id, $data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamBillingPost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| TeamMember id |
- **data** | [**\Swagger\Client\Model\Billing**](../Model/\Swagger\Client\Model\Billing.md)|  | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\Billing**](../Model/Billing.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
 # **teamMembersIdTeamBillingPut**
 > \Swagger\Client\Model\Billing teamMembersIdTeamBillingPut($id, $data)
 
-Update billing of this model.
+Update Team Billing
 
 ### Example
 ```php
@@ -6167,7 +6033,7 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 
 $api_instance = new Tweak\Api\Api\TeamMemberApi();
 $id = "id_example"; // string | TeamMember id
-$data = new \Swagger\Client\Model\Billing(); // \Swagger\Client\Model\Billing | 
+$data = new \Swagger\Client\Model\TeamMember(); // \Swagger\Client\Model\TeamMember | 
 
 try {
     $result = $api_instance->teamMembersIdTeamBillingPut($id, $data);
@@ -6183,7 +6049,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| TeamMember id |
- **data** | [**\Swagger\Client\Model\Billing**](../Model/\Swagger\Client\Model\Billing.md)|  | [optional]
+ **data** | [**\Swagger\Client\Model\TeamMember**](../Model/\Swagger\Client\Model\TeamMember.md)|  | [optional]
 
 ### Return type
 
@@ -6593,6 +6459,54 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **teamMembersIdTeamBuilderConfigsDefaultGet**
+> \Swagger\Client\Model\TeamBuilderConfig teamMembersIdTeamBuilderConfigsDefaultGet($id)
+
+Get default Team Builder Config
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+
+try {
+    $result = $api_instance->teamMembersIdTeamBuilderConfigsDefaultGet($id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamBuilderConfigsDefaultGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+
+### Return type
+
+[**\Swagger\Client\Model\TeamBuilderConfig**](../Model/TeamBuilderConfig.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **teamMembersIdTeamBuilderConfigsDelete**
 > teamMembersIdTeamBuilderConfigsDelete($id)
 
@@ -6723,6 +6637,58 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| TeamMember id |
  **fk** | **string**| Foreign key for builderConfigs |
+
+### Return type
+
+[**\Swagger\Client\Model\TeamBuilderConfig**](../Model/TeamBuilderConfig.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdTeamBuilderConfigsFkLogoPut**
+> \Swagger\Client\Model\TeamBuilderConfig teamMembersIdTeamBuilderConfigsFkLogoPut($id, $fk, $data)
+
+Change Builder Config logo
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+$fk = "fk_example"; // string | BuilderConfig id
+$data = new \Swagger\Client\Model\TeamMember(); // \Swagger\Client\Model\TeamMember | Logo
+
+try {
+    $result = $api_instance->teamMembersIdTeamBuilderConfigsFkLogoPut($id, $fk, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamBuilderConfigsFkLogoPut: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+ **fk** | **string**| BuilderConfig id |
+ **data** | [**\Swagger\Client\Model\TeamMember**](../Model/\Swagger\Client\Model\TeamMember.md)| Logo |
 
 ### Return type
 
@@ -9417,6 +9383,702 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\Portal**](../Model/Portal.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdTeamProductMaterialsCountGet**
+> \Swagger\Client\Model\InlineResponse200 teamMembersIdTeamProductMaterialsCountGet($id, $where)
+
+Counts productMaterials of Team.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+$where = "where_example"; // string | Criteria to match model instances
+
+try {
+    $result = $api_instance->teamMembersIdTeamProductMaterialsCountGet($id, $where);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamProductMaterialsCountGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+ **where** | **string**| Criteria to match model instances | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdTeamProductMaterialsDelete**
+> teamMembersIdTeamProductMaterialsDelete($id)
+
+Deletes all productMaterials of this model.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+
+try {
+    $api_instance->teamMembersIdTeamProductMaterialsDelete($id);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamProductMaterialsDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdTeamProductMaterialsFkDelete**
+> teamMembersIdTeamProductMaterialsFkDelete($id, $fk)
+
+Delete a related item by id for productMaterials.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+$fk = "fk_example"; // string | Foreign key for productMaterials
+
+try {
+    $api_instance->teamMembersIdTeamProductMaterialsFkDelete($id, $fk);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamProductMaterialsFkDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+ **fk** | **string**| Foreign key for productMaterials |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdTeamProductMaterialsFkGet**
+> \Swagger\Client\Model\ProductMaterial teamMembersIdTeamProductMaterialsFkGet($id, $fk)
+
+Find a related item by id for productMaterials.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+$fk = "fk_example"; // string | Foreign key for productMaterials
+
+try {
+    $result = $api_instance->teamMembersIdTeamProductMaterialsFkGet($id, $fk);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamProductMaterialsFkGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+ **fk** | **string**| Foreign key for productMaterials |
+
+### Return type
+
+[**\Swagger\Client\Model\ProductMaterial**](../Model/ProductMaterial.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdTeamProductMaterialsFkPut**
+> \Swagger\Client\Model\ProductMaterial teamMembersIdTeamProductMaterialsFkPut($id, $fk, $data)
+
+Update a related item by id for productMaterials.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+$fk = "fk_example"; // string | Foreign key for productMaterials
+$data = new \Swagger\Client\Model\ProductMaterial(); // \Swagger\Client\Model\ProductMaterial | 
+
+try {
+    $result = $api_instance->teamMembersIdTeamProductMaterialsFkPut($id, $fk, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamProductMaterialsFkPut: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+ **fk** | **string**| Foreign key for productMaterials |
+ **data** | [**\Swagger\Client\Model\ProductMaterial**](../Model/\Swagger\Client\Model\ProductMaterial.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\ProductMaterial**](../Model/ProductMaterial.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdTeamProductMaterialsGet**
+> \Swagger\Client\Model\ProductMaterial[] teamMembersIdTeamProductMaterialsGet($id, $filter)
+
+Queries productMaterials of Team.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+$filter = "filter_example"; // string | 
+
+try {
+    $result = $api_instance->teamMembersIdTeamProductMaterialsGet($id, $filter);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamProductMaterialsGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+ **filter** | **string**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\ProductMaterial[]**](../Model/ProductMaterial.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdTeamProductMaterialsPost**
+> \Swagger\Client\Model\ProductMaterial teamMembersIdTeamProductMaterialsPost($id, $data)
+
+Creates a new instance in productMaterials of this model.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+$data = new \Swagger\Client\Model\ProductMaterial(); // \Swagger\Client\Model\ProductMaterial | 
+
+try {
+    $result = $api_instance->teamMembersIdTeamProductMaterialsPost($id, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamProductMaterialsPost: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+ **data** | [**\Swagger\Client\Model\ProductMaterial**](../Model/\Swagger\Client\Model\ProductMaterial.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\ProductMaterial**](../Model/ProductMaterial.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdTeamProductSizeMaterialsCountGet**
+> \Swagger\Client\Model\InlineResponse200 teamMembersIdTeamProductSizeMaterialsCountGet($id, $where)
+
+Counts productSizeMaterials of Team.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+$where = "where_example"; // string | Criteria to match model instances
+
+try {
+    $result = $api_instance->teamMembersIdTeamProductSizeMaterialsCountGet($id, $where);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamProductSizeMaterialsCountGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+ **where** | **string**| Criteria to match model instances | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdTeamProductSizeMaterialsDelete**
+> teamMembersIdTeamProductSizeMaterialsDelete($id)
+
+Deletes all productSizeMaterials of this model.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+
+try {
+    $api_instance->teamMembersIdTeamProductSizeMaterialsDelete($id);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamProductSizeMaterialsDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdTeamProductSizeMaterialsFkDelete**
+> teamMembersIdTeamProductSizeMaterialsFkDelete($id, $fk)
+
+Delete a related item by id for productSizeMaterials.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+$fk = "fk_example"; // string | Foreign key for productSizeMaterials
+
+try {
+    $api_instance->teamMembersIdTeamProductSizeMaterialsFkDelete($id, $fk);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamProductSizeMaterialsFkDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+ **fk** | **string**| Foreign key for productSizeMaterials |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdTeamProductSizeMaterialsFkGet**
+> \Swagger\Client\Model\ProductSizeMaterial teamMembersIdTeamProductSizeMaterialsFkGet($id, $fk)
+
+Find a related item by id for productSizeMaterials.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+$fk = "fk_example"; // string | Foreign key for productSizeMaterials
+
+try {
+    $result = $api_instance->teamMembersIdTeamProductSizeMaterialsFkGet($id, $fk);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamProductSizeMaterialsFkGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+ **fk** | **string**| Foreign key for productSizeMaterials |
+
+### Return type
+
+[**\Swagger\Client\Model\ProductSizeMaterial**](../Model/ProductSizeMaterial.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdTeamProductSizeMaterialsFkPut**
+> \Swagger\Client\Model\ProductSizeMaterial teamMembersIdTeamProductSizeMaterialsFkPut($id, $fk, $data)
+
+Update a related item by id for productSizeMaterials.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+$fk = "fk_example"; // string | Foreign key for productSizeMaterials
+$data = new \Swagger\Client\Model\ProductSizeMaterial(); // \Swagger\Client\Model\ProductSizeMaterial | 
+
+try {
+    $result = $api_instance->teamMembersIdTeamProductSizeMaterialsFkPut($id, $fk, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamProductSizeMaterialsFkPut: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+ **fk** | **string**| Foreign key for productSizeMaterials |
+ **data** | [**\Swagger\Client\Model\ProductSizeMaterial**](../Model/\Swagger\Client\Model\ProductSizeMaterial.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\ProductSizeMaterial**](../Model/ProductSizeMaterial.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdTeamProductSizeMaterialsGet**
+> \Swagger\Client\Model\ProductSizeMaterial[] teamMembersIdTeamProductSizeMaterialsGet($id, $filter)
+
+Queries productSizeMaterials of Team.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+$filter = "filter_example"; // string | 
+
+try {
+    $result = $api_instance->teamMembersIdTeamProductSizeMaterialsGet($id, $filter);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamProductSizeMaterialsGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+ **filter** | **string**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\ProductSizeMaterial[]**](../Model/ProductSizeMaterial.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdTeamProductSizeMaterialsPost**
+> \Swagger\Client\Model\ProductSizeMaterial teamMembersIdTeamProductSizeMaterialsPost($id, $data)
+
+Creates a new instance in productSizeMaterials of this model.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+$data = new \Swagger\Client\Model\ProductSizeMaterial(); // \Swagger\Client\Model\ProductSizeMaterial | 
+
+try {
+    $result = $api_instance->teamMembersIdTeamProductSizeMaterialsPost($id, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamProductSizeMaterialsPost: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+ **data** | [**\Swagger\Client\Model\ProductSizeMaterial**](../Model/\Swagger\Client\Model\ProductSizeMaterial.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\ProductSizeMaterial**](../Model/ProductSizeMaterial.md)
 
 ### Authorization
 

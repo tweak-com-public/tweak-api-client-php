@@ -31,6 +31,8 @@ Name | Type | Description | Notes
 **imageFolders** | [**\Swagger\Client\Model\ImageFolder[]**](ImageFolder.md) |  | [optional] 
 **billing** | [**\Swagger\Client\Model\Billing**](Billing.md) |  | [optional] 
 **permission** | [**\Swagger\Client\Model\TeamPermissionSet**](TeamPermissionSet.md) |  | [optional] 
+**productMaterials** | [**\Swagger\Client\Model\ProductMaterial[]**](ProductMaterial.md) |  | [optional] 
+**productSizeMaterials** | [**\Swagger\Client\Model\ProductSizeMaterial[]**](ProductSizeMaterial.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

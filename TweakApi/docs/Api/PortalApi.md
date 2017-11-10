@@ -1,6 +1,6 @@
 # Tweak\Api\PortalApi
 
-All URIs are relative to *https://apicdn.tweak.com/api*
+All URIs are relative to *https://apidevcdn.tweak.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -42,6 +42,7 @@ Method | HTTP request | Description
 [**portalsIdDesignsNkCommentsGet**](PortalApi.md#portalsIdDesignsNkCommentsGet) | **GET** /Portals/{id}/designs/{nk}/comments | Queries comments of Design.
 [**portalsIdDesignsNkCommentsPost**](PortalApi.md#portalsIdDesignsNkCommentsPost) | **POST** /Portals/{id}/designs/{nk}/comments | Creates a new instance in comments of this model.
 [**portalsIdDesignsNkCustomerGet**](PortalApi.md#portalsIdDesignsNkCustomerGet) | **GET** /Portals/{id}/designs/{nk}/customer | Fetches belongsTo relation customer.
+[**portalsIdDesignsNkDynamicDataGet**](PortalApi.md#portalsIdDesignsNkDynamicDataGet) | **GET** /Portals/{id}/designs/{nk}/dynamicData | Fetches belongsTo relation dynamicData.
 [**portalsIdDesignsNkExportsCountGet**](PortalApi.md#portalsIdDesignsNkExportsCountGet) | **GET** /Portals/{id}/designs/{nk}/exports/count | Counts exports of Design.
 [**portalsIdDesignsNkExportsDelete**](PortalApi.md#portalsIdDesignsNkExportsDelete) | **DELETE** /Portals/{id}/designs/{nk}/exports | Deletes all exports of this model.
 [**portalsIdDesignsNkExportsFkDelete**](PortalApi.md#portalsIdDesignsNkExportsFkDelete) | **DELETE** /Portals/{id}/designs/{nk}/exports/{fk} | Delete a related item by id for exports.
@@ -2056,6 +2057,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\Customer**](../Model/Customer.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **portalsIdDesignsNkDynamicDataGet**
+> \Swagger\Client\Model\DynamicData portalsIdDesignsNkDynamicDataGet($id, $nk, $refresh)
+
+Fetches belongsTo relation dynamicData.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\PortalApi();
+$id = "id_example"; // string | Portal id
+$nk = "nk_example"; // string | Foreign key for designs.
+$refresh = true; // bool | 
+
+try {
+    $result = $api_instance->portalsIdDesignsNkDynamicDataGet($id, $nk, $refresh);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PortalApi->portalsIdDesignsNkDynamicDataGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Portal id |
+ **nk** | **string**| Foreign key for designs. |
+ **refresh** | **bool**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\DynamicData**](../Model/DynamicData.md)
 
 ### Authorization
 
