@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **modified** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **email** | **string** |  | [optional] 
 **key** | **string** |  | [optional] 
+**teamDataRecordId** | **string** |  | [optional] 
 **id** | **string** |  | [optional] 
 **customerId** | **string** |  | [optional] 
 **teamId** | **string** |  | [optional] 

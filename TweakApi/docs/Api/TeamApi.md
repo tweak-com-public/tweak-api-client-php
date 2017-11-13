@@ -281,6 +281,7 @@ Method | HTTP request | Description
 [**teamsIdProductSizeMaterialsPost**](TeamApi.md#teamsIdProductSizeMaterialsPost) | **POST** /Teams/{id}/productSizeMaterials | Creates a new instance in productSizeMaterials of this model.
 [**teamsIdPut**](TeamApi.md#teamsIdPut) | **PUT** /Teams/{id} | Replace attributes for a model instance and persist it into the data source.
 [**teamsIdReplacePost**](TeamApi.md#teamsIdReplacePost) | **POST** /Teams/{id}/replace | Replace attributes for a model instance and persist it into the data source.
+[**teamsIdTeamDataGet**](TeamApi.md#teamsIdTeamDataGet) | **GET** /Teams/{id}/teamData | Fetches belongsTo relation teamData.
 [**teamsIdTeamMembersCountGet**](TeamApi.md#teamsIdTeamMembersCountGet) | **GET** /Teams/{id}/teamMembers/count | Counts teamMembers of Team.
 [**teamsIdTeamMembersDelete**](TeamApi.md#teamsIdTeamMembersDelete) | **DELETE** /Teams/{id}/teamMembers | Deletes all teamMembers of this model.
 [**teamsIdTeamMembersFkDelete**](TeamApi.md#teamsIdTeamMembersFkDelete) | **DELETE** /Teams/{id}/teamMembers/{fk} | Delete a related item by id for teamMembers.
@@ -14528,6 +14529,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\Team**](../Model/Team.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamsIdTeamDataGet**
+> \Swagger\Client\Model\DynamicData teamsIdTeamDataGet($id, $refresh)
+
+Fetches belongsTo relation teamData.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamApi();
+$id = "id_example"; // string | Team id
+$refresh = true; // bool | 
+
+try {
+    $result = $api_instance->teamsIdTeamDataGet($id, $refresh);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamApi->teamsIdTeamDataGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Team id |
+ **refresh** | **bool**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\DynamicData**](../Model/DynamicData.md)
 
 ### Authorization
 

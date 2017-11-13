@@ -120,6 +120,7 @@ Method | HTTP request | Description
 [**customersIdTeamsNkProductSizeMaterialsFkPut**](CustomerApi.md#customersIdTeamsNkProductSizeMaterialsFkPut) | **PUT** /Customers/{id}/teams/{nk}/productSizeMaterials/{fk} | Update a related item by id for productSizeMaterials.
 [**customersIdTeamsNkProductSizeMaterialsGet**](CustomerApi.md#customersIdTeamsNkProductSizeMaterialsGet) | **GET** /Customers/{id}/teams/{nk}/productSizeMaterials | Queries productSizeMaterials of Team.
 [**customersIdTeamsNkProductSizeMaterialsPost**](CustomerApi.md#customersIdTeamsNkProductSizeMaterialsPost) | **POST** /Customers/{id}/teams/{nk}/productSizeMaterials | Creates a new instance in productSizeMaterials of this model.
+[**customersIdTeamsNkTeamDataGet**](CustomerApi.md#customersIdTeamsNkTeamDataGet) | **GET** /Customers/{id}/teams/{nk}/teamData | Fetches belongsTo relation teamData.
 [**customersIdTeamsNkTeamMembersCountGet**](CustomerApi.md#customersIdTeamsNkTeamMembersCountGet) | **GET** /Customers/{id}/teams/{nk}/teamMembers/count | Counts teamMembers of Team.
 [**customersIdTeamsNkTeamMembersDelete**](CustomerApi.md#customersIdTeamsNkTeamMembersDelete) | **DELETE** /Customers/{id}/teams/{nk}/teamMembers | Deletes all teamMembers of this model.
 [**customersIdTeamsNkTeamMembersFkDelete**](CustomerApi.md#customersIdTeamsNkTeamMembersFkDelete) | **DELETE** /Customers/{id}/teams/{nk}/teamMembers/{fk} | Delete a related item by id for teamMembers.
@@ -6060,6 +6061,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\ProductSizeMaterial**](../Model/ProductSizeMaterial.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **customersIdTeamsNkTeamDataGet**
+> \Swagger\Client\Model\DynamicData customersIdTeamsNkTeamDataGet($id, $nk, $refresh)
+
+Fetches belongsTo relation teamData.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+$id = "id_example"; // string | Customer id
+$nk = "nk_example"; // string | Foreign key for teams.
+$refresh = true; // bool | 
+
+try {
+    $result = $api_instance->customersIdTeamsNkTeamDataGet($id, $nk, $refresh);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersIdTeamsNkTeamDataGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Customer id |
+ **nk** | **string**| Foreign key for teams. |
+ **refresh** | **bool**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\DynamicData**](../Model/DynamicData.md)
 
 ### Authorization
 

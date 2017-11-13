@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **windowsKey** | **string** |  | [optional] 
 **masterKey** | **string** |  | [optional] 
 **status** | **string** | Status of the application, production/sandbox/disabled | [optional] [default to 'sandbox']
+**teamDataId** | **string** |  | [optional] 
 **members** | [**\Swagger\Client\Model\Customer[]**](Customer.md) |  | [optional] 
 **builderConfigs** | [**\Swagger\Client\Model\TeamBuilderConfig[]**](TeamBuilderConfig.md) |  | [optional] 
 **dataSources** | [**\Swagger\Client\Model\DataSource[]**](DataSource.md) |  | [optional] 
@@ -33,6 +34,7 @@ Name | Type | Description | Notes
 **permission** | [**\Swagger\Client\Model\TeamPermissionSet**](TeamPermissionSet.md) |  | [optional] 
 **productMaterials** | [**\Swagger\Client\Model\ProductMaterial[]**](ProductMaterial.md) |  | [optional] 
 **productSizeMaterials** | [**\Swagger\Client\Model\ProductSizeMaterial[]**](ProductSizeMaterial.md) |  | [optional] 
+**teamData** | [**\Swagger\Client\Model\DynamicData**](DynamicData.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

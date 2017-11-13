@@ -153,6 +153,9 @@ Method | HTTP request | Description
 [**teamMembersIdTeamBuilderConfigsFkPut**](TeamMemberApi.md#teamMembersIdTeamBuilderConfigsFkPut) | **PUT** /TeamMembers/{id}/team/builderConfigs/{fk} | Update a related item by id for builderConfigs.
 [**teamMembersIdTeamBuilderConfigsGet**](TeamMemberApi.md#teamMembersIdTeamBuilderConfigsGet) | **GET** /TeamMembers/{id}/team/builderConfigs | Queries builderConfigs of Team.
 [**teamMembersIdTeamBuilderConfigsPost**](TeamMemberApi.md#teamMembersIdTeamBuilderConfigsPost) | **POST** /TeamMembers/{id}/team/builderConfigs | Creates a new instance in builderConfigs of this model.
+[**teamMembersIdTeamDataRecordGet**](TeamMemberApi.md#teamMembersIdTeamDataRecordGet) | **GET** /TeamMembers/{id}/teamData/record | Get TeamData Record
+[**teamMembersIdTeamDataRecordPost**](TeamMemberApi.md#teamMembersIdTeamDataRecordPost) | **POST** /TeamMembers/{id}/teamData/record | Create TeamData Record
+[**teamMembersIdTeamDataRecordPut**](TeamMemberApi.md#teamMembersIdTeamDataRecordPut) | **PUT** /TeamMembers/{id}/teamData/record | Update TeamData Record
 [**teamMembersIdTeamDataSourcesCountGet**](TeamMemberApi.md#teamMembersIdTeamDataSourcesCountGet) | **GET** /TeamMembers/{id}/team/dataSources/count | Counts dataSources of Team.
 [**teamMembersIdTeamDataSourcesDelete**](TeamMemberApi.md#teamMembersIdTeamDataSourcesDelete) | **DELETE** /TeamMembers/{id}/team/dataSources | Deletes all dataSources of this model.
 [**teamMembersIdTeamDataSourcesFkDelete**](TeamMemberApi.md#teamMembersIdTeamDataSourcesFkDelete) | **DELETE** /TeamMembers/{id}/team/dataSources/{fk} | Delete a related item by id for dataSources.
@@ -218,6 +221,7 @@ Method | HTTP request | Description
 [**teamMembersIdTeamProductSizeMaterialsFkPut**](TeamMemberApi.md#teamMembersIdTeamProductSizeMaterialsFkPut) | **PUT** /TeamMembers/{id}/team/productSizeMaterials/{fk} | Update a related item by id for productSizeMaterials.
 [**teamMembersIdTeamProductSizeMaterialsGet**](TeamMemberApi.md#teamMembersIdTeamProductSizeMaterialsGet) | **GET** /TeamMembers/{id}/team/productSizeMaterials | Queries productSizeMaterials of Team.
 [**teamMembersIdTeamProductSizeMaterialsPost**](TeamMemberApi.md#teamMembersIdTeamProductSizeMaterialsPost) | **POST** /TeamMembers/{id}/team/productSizeMaterials | Creates a new instance in productSizeMaterials of this model.
+[**teamMembersIdTeamTeamDataGet**](TeamMemberApi.md#teamMembersIdTeamTeamDataGet) | **GET** /TeamMembers/{id}/team/teamData | Fetches belongsTo relation teamData.
 [**teamMembersIdTeamTeamMembersCountGet**](TeamMemberApi.md#teamMembersIdTeamTeamMembersCountGet) | **GET** /TeamMembers/{id}/team/teamMembers/count | Counts teamMembers of Team.
 [**teamMembersIdTeamTeamMembersDelete**](TeamMemberApi.md#teamMembersIdTeamTeamMembersDelete) | **DELETE** /TeamMembers/{id}/team/teamMembers | Deletes all teamMembers of this model.
 [**teamMembersIdTeamTeamMembersFkDelete**](TeamMemberApi.md#teamMembersIdTeamTeamMembersFkDelete) | **DELETE** /TeamMembers/{id}/team/teamMembers/{fk} | Delete a related item by id for teamMembers.
@@ -7721,6 +7725,154 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **teamMembersIdTeamDataRecordGet**
+> object teamMembersIdTeamDataRecordGet($id)
+
+Get TeamData Record
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+
+try {
+    $result = $api_instance->teamMembersIdTeamDataRecordGet($id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamDataRecordGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+
+### Return type
+
+**object**
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdTeamDataRecordPost**
+> object teamMembersIdTeamDataRecordPost($id, $data)
+
+Create TeamData Record
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+$data = new \Swagger\Client\Model\TeamMember(); // \Swagger\Client\Model\TeamMember | Model instance data
+
+try {
+    $result = $api_instance->teamMembersIdTeamDataRecordPost($id, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamDataRecordPost: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+ **data** | [**\Swagger\Client\Model\TeamMember**](../Model/\Swagger\Client\Model\TeamMember.md)| Model instance data | [optional]
+
+### Return type
+
+**object**
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdTeamDataRecordPut**
+> object teamMembersIdTeamDataRecordPut($id, $data)
+
+Update TeamData Record
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+$data = new \Swagger\Client\Model\TeamMember(); // \Swagger\Client\Model\TeamMember | Model instance data
+
+try {
+    $result = $api_instance->teamMembersIdTeamDataRecordPut($id, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamDataRecordPut: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+ **data** | [**\Swagger\Client\Model\TeamMember**](../Model/\Swagger\Client\Model\TeamMember.md)| Model instance data | [optional]
+
+### Return type
+
+**object**
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **teamMembersIdTeamDataSourcesCountGet**
 > \Swagger\Client\Model\InlineResponse200 teamMembersIdTeamDataSourcesCountGet($id, $where)
 
@@ -10943,6 +11095,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\ProductSizeMaterial**](../Model/ProductSizeMaterial.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdTeamTeamDataGet**
+> \Swagger\Client\Model\DynamicData teamMembersIdTeamTeamDataGet($id, $refresh)
+
+Fetches belongsTo relation teamData.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+$refresh = true; // bool | 
+
+try {
+    $result = $api_instance->teamMembersIdTeamTeamDataGet($id, $refresh);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamTeamDataGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+ **refresh** | **bool**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\DynamicData**](../Model/DynamicData.md)
 
 ### Authorization
 
