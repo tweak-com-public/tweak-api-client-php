@@ -20,10 +20,10 @@ Name | Type | Description | Notes
 **path** | **string** |  | [optional] [default to '/']
 **sentForApproval** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **approved** | [**\DateTime**](\DateTime.md) |  | [optional] 
+**shared** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **modified** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **id** | **string** |  | [optional] 
-**customerId** | **string** |  | [optional] 
 **dynamicDataId** | **string** |  | [optional] 
 **requesterId** | **string** |  | [optional] 
 **assigneeId** | **string** |  | [optional] 
@@ -33,7 +33,6 @@ Name | Type | Description | Notes
 **rejectionCommentId** | **string** |  | [optional] 
 **folderId** | **string** |  | [optional] 
 **tags** | [**\Swagger\Client\Model\Tag[]**](Tag.md) |  | [optional] 
-**customer** | [**\Swagger\Client\Model\Customer**](Customer.md) |  | [optional] 
 **template** | [**\Swagger\Client\Model\Template**](Template.md) |  | [optional] 
 **portal** | [**\Swagger\Client\Model\Portal**](Portal.md) |  | [optional] 
 **comments** | [**\Swagger\Client\Model\DesignComment[]**](DesignComment.md) |  | [optional] 
@@ -45,6 +44,8 @@ Name | Type | Description | Notes
 **commenters** | [**\Swagger\Client\Model\TeamMember[]**](TeamMember.md) |  | [optional] 
 **folder** | [**\Swagger\Client\Model\DesignFolder**](DesignFolder.md) |  | [optional] 
 **permission** | [**\Swagger\Client\Model\DesignPermissionSet**](DesignPermissionSet.md) |  | [optional] 
+**members** | [**\Swagger\Client\Model\TeamMember[]**](TeamMember.md) |  | [optional] 
+**designMembers** | [**\Swagger\Client\Model\DesignMember[]**](DesignMember.md) |  | [optional] 
 **dynamicData** | [**\Swagger\Client\Model\DynamicData**](DynamicData.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
