@@ -3,12 +3,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **string** |  | 
+**code** | **string** |  | 
 **description** | **string** |  | [optional] 
 **thumbnail** | **string** |  | [optional] 
 **status** | **string** |  | [optional] 
 **bindingType** | **string** |  | [optional] 
 **defaultBleed** | [**\Swagger\Client\Model\Bounds**](Bounds.md) |  | [optional] 
+**pdfColorProfile** | **string** |  | [optional] [default to '']
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **modified** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **id** | **string** |  | [optional] 

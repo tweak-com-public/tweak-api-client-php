@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **string** |  | 
+**code** | **string** |  | 
 **thumbnail** | **string** |  | [optional] 
 **foldingType** | **string** |  | [optional] 
 **foldingMethod** | **string** |  | [optional] 

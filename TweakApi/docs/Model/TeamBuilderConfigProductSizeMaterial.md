@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **bindingType** | **string** |  | [optional] 
 **defaultBleed** | [**\Swagger\Client\Model\Bounds**](Bounds.md) |  | [optional] 
+**pdfColorProfile** | **string** |  | [optional] [default to '']
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **modified** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **id** | **string** |  | [optional] 
