@@ -151,6 +151,7 @@ Method | HTTP request | Description
 [**teamMembersIdTeamBuilderConfigsFkGet**](TeamMemberApi.md#teamMembersIdTeamBuilderConfigsFkGet) | **GET** /TeamMembers/{id}/team/builderConfigs/{fk} | Find a related item by id for builderConfigs.
 [**teamMembersIdTeamBuilderConfigsFkLogoPut**](TeamMemberApi.md#teamMembersIdTeamBuilderConfigsFkLogoPut) | **PUT** /TeamMembers/{id}/team/builderConfigs/{fk}/logo | Change Builder Config logo
 [**teamMembersIdTeamBuilderConfigsFkPut**](TeamMemberApi.md#teamMembersIdTeamBuilderConfigsFkPut) | **PUT** /TeamMembers/{id}/team/builderConfigs/{fk} | Update a related item by id for builderConfigs.
+[**teamMembersIdTeamBuilderConfigsFkWatermarkPut**](TeamMemberApi.md#teamMembersIdTeamBuilderConfigsFkWatermarkPut) | **PUT** /TeamMembers/{id}/team/builderConfigs/{fk}/watermark | Change Builder Config watermark
 [**teamMembersIdTeamBuilderConfigsGet**](TeamMemberApi.md#teamMembersIdTeamBuilderConfigsGet) | **GET** /TeamMembers/{id}/team/builderConfigs | Queries builderConfigs of Team.
 [**teamMembersIdTeamBuilderConfigsPost**](TeamMemberApi.md#teamMembersIdTeamBuilderConfigsPost) | **POST** /TeamMembers/{id}/team/builderConfigs | Creates a new instance in builderConfigs of this model.
 [**teamMembersIdTeamDataRecordGet**](TeamMemberApi.md#teamMembersIdTeamDataRecordGet) | **GET** /TeamMembers/{id}/teamData/record | Get TeamData Record
@@ -7609,6 +7610,58 @@ Name | Type | Description  | Notes
  **id** | **string**| TeamMember id |
  **fk** | **string**| Foreign key for builderConfigs |
  **data** | [**\Swagger\Client\Model\TeamBuilderConfig**](../Model/\Swagger\Client\Model\TeamBuilderConfig.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\TeamBuilderConfig**](../Model/TeamBuilderConfig.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdTeamBuilderConfigsFkWatermarkPut**
+> \Swagger\Client\Model\TeamBuilderConfig teamMembersIdTeamBuilderConfigsFkWatermarkPut($id, $fk, $data)
+
+Change Builder Config watermark
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+$fk = "fk_example"; // string | BuilderConfig id
+$data = new \Swagger\Client\Model\TeamMember(); // \Swagger\Client\Model\TeamMember | Watermark
+
+try {
+    $result = $api_instance->teamMembersIdTeamBuilderConfigsFkWatermarkPut($id, $fk, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamBuilderConfigsFkWatermarkPut: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+ **fk** | **string**| BuilderConfig id |
+ **data** | [**\Swagger\Client\Model\TeamMember**](../Model/\Swagger\Client\Model\TeamMember.md)| Watermark |
 
 ### Return type
 

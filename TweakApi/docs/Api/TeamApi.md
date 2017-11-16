@@ -21,6 +21,7 @@ Method | HTTP request | Description
 [**teamsIdBuilderConfigsFkGet**](TeamApi.md#teamsIdBuilderConfigsFkGet) | **GET** /Teams/{id}/builderConfigs/{fk} | Find a related item by id for builderConfigs.
 [**teamsIdBuilderConfigsFkLogoPut**](TeamApi.md#teamsIdBuilderConfigsFkLogoPut) | **PUT** /Teams/{id}/builderConfigs/{fk}/logo | Change Builder Config logo
 [**teamsIdBuilderConfigsFkPut**](TeamApi.md#teamsIdBuilderConfigsFkPut) | **PUT** /Teams/{id}/builderConfigs/{fk} | Update a related item by id for builderConfigs.
+[**teamsIdBuilderConfigsFkWatermarkPut**](TeamApi.md#teamsIdBuilderConfigsFkWatermarkPut) | **PUT** /Teams/{id}/builderConfigs/{fk}/watermark | Change Builder Config watermark
 [**teamsIdBuilderConfigsGet**](TeamApi.md#teamsIdBuilderConfigsGet) | **GET** /Teams/{id}/builderConfigs | Queries builderConfigs of Team.
 [**teamsIdBuilderConfigsNkProductGroupsCountGet**](TeamApi.md#teamsIdBuilderConfigsNkProductGroupsCountGet) | **GET** /Teams/{id}/builderConfigs/{nk}/productGroups/count | Counts productGroups of TeamBuilderConfig.
 [**teamsIdBuilderConfigsNkProductGroupsDelete**](TeamApi.md#teamsIdBuilderConfigsNkProductGroupsDelete) | **DELETE** /Teams/{id}/builderConfigs/{nk}/productGroups | Deletes all productGroups of this model.
@@ -1218,6 +1219,58 @@ Name | Type | Description  | Notes
  **id** | **string**| Team id |
  **fk** | **string**| Foreign key for builderConfigs |
  **data** | [**\Swagger\Client\Model\TeamBuilderConfig**](../Model/\Swagger\Client\Model\TeamBuilderConfig.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\TeamBuilderConfig**](../Model/TeamBuilderConfig.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamsIdBuilderConfigsFkWatermarkPut**
+> \Swagger\Client\Model\TeamBuilderConfig teamsIdBuilderConfigsFkWatermarkPut($id, $fk, $data)
+
+Change Builder Config watermark
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamApi();
+$id = "id_example"; // string | Team id
+$fk = "fk_example"; // string | BuilderConfig id
+$data = new \Swagger\Client\Model\Team(); // \Swagger\Client\Model\Team | Watermark
+
+try {
+    $result = $api_instance->teamsIdBuilderConfigsFkWatermarkPut($id, $fk, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamApi->teamsIdBuilderConfigsFkWatermarkPut: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Team id |
+ **fk** | **string**| BuilderConfig id |
+ **data** | [**\Swagger\Client\Model\Team**](../Model/\Swagger\Client\Model\Team.md)| Watermark |
 
 ### Return type
 
