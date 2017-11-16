@@ -24,6 +24,16 @@ Method | HTTP request | Description
 [**tagsIdGet**](TagApi.md#tagsIdGet) | **GET** /Tags/{id} | Find a model instance by {{id}} from the data source.
 [**tagsIdHead**](TagApi.md#tagsIdHead) | **HEAD** /Tags/{id} | Check whether a model instance exists in the data source.
 [**tagsIdPatch**](TagApi.md#tagsIdPatch) | **PATCH** /Tags/{id} | Patch attributes for a model instance and persist it into the data source.
+[**tagsIdProductsCountGet**](TagApi.md#tagsIdProductsCountGet) | **GET** /Tags/{id}/products/count | Counts products of Tag.
+[**tagsIdProductsDelete**](TagApi.md#tagsIdProductsDelete) | **DELETE** /Tags/{id}/products | Deletes all products of this model.
+[**tagsIdProductsFkDelete**](TagApi.md#tagsIdProductsFkDelete) | **DELETE** /Tags/{id}/products/{fk} | Delete a related item by id for products.
+[**tagsIdProductsFkGet**](TagApi.md#tagsIdProductsFkGet) | **GET** /Tags/{id}/products/{fk} | Find a related item by id for products.
+[**tagsIdProductsFkPut**](TagApi.md#tagsIdProductsFkPut) | **PUT** /Tags/{id}/products/{fk} | Update a related item by id for products.
+[**tagsIdProductsGet**](TagApi.md#tagsIdProductsGet) | **GET** /Tags/{id}/products | Queries products of Tag.
+[**tagsIdProductsPost**](TagApi.md#tagsIdProductsPost) | **POST** /Tags/{id}/products | Creates a new instance in products of this model.
+[**tagsIdProductsRelFkDelete**](TagApi.md#tagsIdProductsRelFkDelete) | **DELETE** /Tags/{id}/products/rel/{fk} | Remove the products relation to an item by id.
+[**tagsIdProductsRelFkHead**](TagApi.md#tagsIdProductsRelFkHead) | **HEAD** /Tags/{id}/products/rel/{fk} | Check the existence of products relation to an item by id.
+[**tagsIdProductsRelFkPut**](TagApi.md#tagsIdProductsRelFkPut) | **PUT** /Tags/{id}/products/rel/{fk} | Add a related item by id for products.
 [**tagsIdPut**](TagApi.md#tagsIdPut) | **PUT** /Tags/{id} | Replace attributes for a model instance and persist it into the data source.
 [**tagsIdReplacePost**](TagApi.md#tagsIdReplacePost) | **POST** /Tags/{id}/replace | Replace attributes for a model instance and persist it into the data source.
 [**tagsIdTemplatesCountGet**](TagApi.md#tagsIdTemplatesCountGet) | **GET** /Tags/{id}/templates/count | Counts templates of Tag.
@@ -1015,6 +1025,505 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\Tag**](../Model/Tag.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **tagsIdProductsCountGet**
+> \Swagger\Client\Model\InlineResponse200 tagsIdProductsCountGet($id, $where)
+
+Counts products of Tag.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TagApi();
+$id = "id_example"; // string | Tag id
+$where = "where_example"; // string | Criteria to match model instances
+
+try {
+    $result = $api_instance->tagsIdProductsCountGet($id, $where);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TagApi->tagsIdProductsCountGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Tag id |
+ **where** | **string**| Criteria to match model instances | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **tagsIdProductsDelete**
+> tagsIdProductsDelete($id)
+
+Deletes all products of this model.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TagApi();
+$id = "id_example"; // string | Tag id
+
+try {
+    $api_instance->tagsIdProductsDelete($id);
+} catch (Exception $e) {
+    echo 'Exception when calling TagApi->tagsIdProductsDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Tag id |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **tagsIdProductsFkDelete**
+> tagsIdProductsFkDelete($id, $fk)
+
+Delete a related item by id for products.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TagApi();
+$id = "id_example"; // string | Tag id
+$fk = "fk_example"; // string | Foreign key for products
+
+try {
+    $api_instance->tagsIdProductsFkDelete($id, $fk);
+} catch (Exception $e) {
+    echo 'Exception when calling TagApi->tagsIdProductsFkDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Tag id |
+ **fk** | **string**| Foreign key for products |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **tagsIdProductsFkGet**
+> \Swagger\Client\Model\Product tagsIdProductsFkGet($id, $fk)
+
+Find a related item by id for products.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TagApi();
+$id = "id_example"; // string | Tag id
+$fk = "fk_example"; // string | Foreign key for products
+
+try {
+    $result = $api_instance->tagsIdProductsFkGet($id, $fk);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TagApi->tagsIdProductsFkGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Tag id |
+ **fk** | **string**| Foreign key for products |
+
+### Return type
+
+[**\Swagger\Client\Model\Product**](../Model/Product.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **tagsIdProductsFkPut**
+> \Swagger\Client\Model\Product tagsIdProductsFkPut($id, $fk, $data)
+
+Update a related item by id for products.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TagApi();
+$id = "id_example"; // string | Tag id
+$fk = "fk_example"; // string | Foreign key for products
+$data = new \Swagger\Client\Model\Product(); // \Swagger\Client\Model\Product | 
+
+try {
+    $result = $api_instance->tagsIdProductsFkPut($id, $fk, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TagApi->tagsIdProductsFkPut: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Tag id |
+ **fk** | **string**| Foreign key for products |
+ **data** | [**\Swagger\Client\Model\Product**](../Model/\Swagger\Client\Model\Product.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\Product**](../Model/Product.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **tagsIdProductsGet**
+> \Swagger\Client\Model\Product[] tagsIdProductsGet($id, $filter)
+
+Queries products of Tag.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TagApi();
+$id = "id_example"; // string | Tag id
+$filter = "filter_example"; // string | 
+
+try {
+    $result = $api_instance->tagsIdProductsGet($id, $filter);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TagApi->tagsIdProductsGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Tag id |
+ **filter** | **string**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\Product[]**](../Model/Product.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **tagsIdProductsPost**
+> \Swagger\Client\Model\Product tagsIdProductsPost($id, $data)
+
+Creates a new instance in products of this model.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TagApi();
+$id = "id_example"; // string | Tag id
+$data = new \Swagger\Client\Model\Product(); // \Swagger\Client\Model\Product | 
+
+try {
+    $result = $api_instance->tagsIdProductsPost($id, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TagApi->tagsIdProductsPost: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Tag id |
+ **data** | [**\Swagger\Client\Model\Product**](../Model/\Swagger\Client\Model\Product.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\Product**](../Model/Product.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **tagsIdProductsRelFkDelete**
+> tagsIdProductsRelFkDelete($id, $fk)
+
+Remove the products relation to an item by id.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TagApi();
+$id = "id_example"; // string | Tag id
+$fk = "fk_example"; // string | Foreign key for products
+
+try {
+    $api_instance->tagsIdProductsRelFkDelete($id, $fk);
+} catch (Exception $e) {
+    echo 'Exception when calling TagApi->tagsIdProductsRelFkDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Tag id |
+ **fk** | **string**| Foreign key for products |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **tagsIdProductsRelFkHead**
+> bool tagsIdProductsRelFkHead($id, $fk)
+
+Check the existence of products relation to an item by id.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TagApi();
+$id = "id_example"; // string | Tag id
+$fk = "fk_example"; // string | Foreign key for products
+
+try {
+    $result = $api_instance->tagsIdProductsRelFkHead($id, $fk);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TagApi->tagsIdProductsRelFkHead: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Tag id |
+ **fk** | **string**| Foreign key for products |
+
+### Return type
+
+**bool**
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **tagsIdProductsRelFkPut**
+> \Swagger\Client\Model\ProductTag tagsIdProductsRelFkPut($id, $fk, $data)
+
+Add a related item by id for products.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TagApi();
+$id = "id_example"; // string | Tag id
+$fk = "fk_example"; // string | Foreign key for products
+$data = new \Swagger\Client\Model\ProductTag(); // \Swagger\Client\Model\ProductTag | 
+
+try {
+    $result = $api_instance->tagsIdProductsRelFkPut($id, $fk, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TagApi->tagsIdProductsRelFkPut: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Tag id |
+ **fk** | **string**| Foreign key for products |
+ **data** | [**\Swagger\Client\Model\ProductTag**](../Model/\Swagger\Client\Model\ProductTag.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\ProductTag**](../Model/ProductTag.md)
 
 ### Authorization
 
