@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **pdfSize** | [**\Swagger\Client\Model\Dimensions**](Dimensions.md) |  | [optional] 
 **pdfPageCount** | **double** |  | [optional] [default to 1.0]
 **pdfDpi** | **double** |  | [optional] [default to 300.0]
-**printProfile** | [**\Swagger\Client\Model\Stirng**](Stirng.md) |  | [optional] 
+**printProfile** | **string** |  | [optional] 
 **customerSize** | [**\Swagger\Client\Model\Dimensions**](Dimensions.md) |  | [optional] 
 **customerPageCount** | **double** |  | [optional] [default to 1.0]
 **maxBleed** | [**\Swagger\Client\Model\Bounds**](Bounds.md) |  | [optional] 

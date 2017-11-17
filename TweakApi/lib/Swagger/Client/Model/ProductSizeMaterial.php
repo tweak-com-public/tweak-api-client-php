@@ -72,7 +72,7 @@ class ProductSizeMaterial implements ArrayAccess
         'status' => 'string',
         'bindingType' => 'string',
         'defaultBleed' => '\Swagger\Client\Model\Bounds',
-        'printProfile' => '\Swagger\Client\Model\Stirng',
+        'printProfile' => 'string',
         'created' => '\DateTime',
         'modified' => '\DateTime',
         'id' => 'string',
@@ -193,6 +193,8 @@ class ProductSizeMaterial implements ArrayAccess
     const BINDING_TYPE_COPTIC = 'coptic';
     const BINDING_TYPE_JAPANESE = 'japanese';
     const BINDING_TYPE_SCREW_POST = 'screw-post';
+    const PRINT_PROFILE_PDFX1_A = 'PDFX1A';
+    const PRINT_PROFILE_PDFX3_A = 'PDFX3A';
     
 
     
@@ -225,6 +227,18 @@ class ProductSizeMaterial implements ArrayAccess
             self::BINDING_TYPE_COPTIC,
             self::BINDING_TYPE_JAPANESE,
             self::BINDING_TYPE_SCREW_POST,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getPrintProfileAllowableValues()
+    {
+        return [
+            self::PRINT_PROFILE_PDFX1_A,
+            self::PRINT_PROFILE_PDFX3_A,
         ];
     }
     
@@ -282,6 +296,11 @@ class ProductSizeMaterial implements ArrayAccess
             $invalid_properties[] = "invalid value for 'bindingType', must be one of #{allowed_values}.";
         }
 
+        $allowed_values = array("PDFX1A", "PDFX3A");
+        if (!in_array($this->container['printProfile'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'printProfile', must be one of #{allowed_values}.";
+        }
+
         return $invalid_properties;
     }
 
@@ -302,6 +321,10 @@ class ProductSizeMaterial implements ArrayAccess
         }
         $allowed_values = array("none", "saddle-stitched", "perfect", "section-sewn", "wiro", "cased-in-wiro", "pamphlet-stitched", "coptic", "japanese", "screw-post");
         if (!in_array($this->container['bindingType'], $allowed_values)) {
+            return false;
+        }
+        $allowed_values = array("PDFX1A", "PDFX3A");
+        if (!in_array($this->container['printProfile'], $allowed_values)) {
             return false;
         }
         return true;
@@ -444,7 +467,7 @@ class ProductSizeMaterial implements ArrayAccess
 
     /**
      * Gets printProfile
-     * @return \Swagger\Client\Model\Stirng
+     * @return string
      */
     public function getPrintProfile()
     {
@@ -453,11 +476,15 @@ class ProductSizeMaterial implements ArrayAccess
 
     /**
      * Sets printProfile
-     * @param \Swagger\Client\Model\Stirng $printProfile
+     * @param string $printProfile
      * @return $this
      */
     public function setPrintProfile($printProfile)
     {
+        $allowed_values = array('PDFX1A', 'PDFX3A');
+        if (!in_array($printProfile, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'printProfile', must be one of 'PDFX1A', 'PDFX3A'");
+        }
         $this->container['printProfile'] = $printProfile;
 
         return $this;

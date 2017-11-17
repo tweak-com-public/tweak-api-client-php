@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **bindingType** | **string** |  | [optional] 
 **defaultBleed** | [**\Swagger\Client\Model\Bounds**](Bounds.md) |  | [optional] 
-**printProfile** | [**\Swagger\Client\Model\Stirng**](Stirng.md) |  | [optional] 
+**printProfile** | **string** |  | [optional] 
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **modified** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **id** | **string** |  | [optional] 
