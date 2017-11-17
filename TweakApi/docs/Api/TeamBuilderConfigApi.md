@@ -38,6 +38,7 @@ Method | HTTP request | Description
 [**teamBuilderConfigsIdProductSizeMaterialsFkPut**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizeMaterialsFkPut) | **PUT** /TeamBuilderConfigs/{id}/productSizeMaterials/{fk} | Update a related item by id for productSizeMaterials.
 [**teamBuilderConfigsIdProductSizeMaterialsGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizeMaterialsGet) | **GET** /TeamBuilderConfigs/{id}/productSizeMaterials | Queries productSizeMaterials of TeamBuilderConfig.
 [**teamBuilderConfigsIdProductSizeMaterialsNkMaterialGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizeMaterialsNkMaterialGet) | **GET** /TeamBuilderConfigs/{id}/productSizeMaterials/{nk}/material | Fetches belongsTo relation material.
+[**teamBuilderConfigsIdProductSizeMaterialsNkPdfColorProfileGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizeMaterialsNkPdfColorProfileGet) | **GET** /TeamBuilderConfigs/{id}/productSizeMaterials/{nk}/pdfColorProfile | Fetches belongsTo relation pdfColorProfile.
 [**teamBuilderConfigsIdProductSizeMaterialsNkSizeGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizeMaterialsNkSizeGet) | **GET** /TeamBuilderConfigs/{id}/productSizeMaterials/{nk}/size | Fetches belongsTo relation size.
 [**teamBuilderConfigsIdProductSizeMaterialsNkTeamGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizeMaterialsNkTeamGet) | **GET** /TeamBuilderConfigs/{id}/productSizeMaterials/{nk}/team | Fetches belongsTo relation team.
 [**teamBuilderConfigsIdProductSizeMaterialsPost**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizeMaterialsPost) | **POST** /TeamBuilderConfigs/{id}/productSizeMaterials | Creates a new instance in productSizeMaterials of this model.
@@ -51,6 +52,7 @@ Method | HTTP request | Description
 [**teamBuilderConfigsIdProductSizeMaterialsRelFkPut_0**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizeMaterialsRelFkPut_0) | **PUT** /TeamBuilderConfigs/{id}/productSizeMaterialsRel/{fk} | Update a related item by id for productSizeMaterialsRel.
 [**teamBuilderConfigsIdProductSizeMaterialsRelGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizeMaterialsRelGet) | **GET** /TeamBuilderConfigs/{id}/productSizeMaterialsRel | Queries productSizeMaterialsRel of TeamBuilderConfig.
 [**teamBuilderConfigsIdProductSizeMaterialsRelNkBuilderConfigGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizeMaterialsRelNkBuilderConfigGet) | **GET** /TeamBuilderConfigs/{id}/productSizeMaterialsRel/{nk}/builderConfig | Fetches belongsTo relation builderConfig.
+[**teamBuilderConfigsIdProductSizeMaterialsRelNkPdfColorProfileGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizeMaterialsRelNkPdfColorProfileGet) | **GET** /TeamBuilderConfigs/{id}/productSizeMaterialsRel/{nk}/pdfColorProfile | Fetches belongsTo relation pdfColorProfile.
 [**teamBuilderConfigsIdProductSizeMaterialsRelNkProductSizeMaterialGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizeMaterialsRelNkProductSizeMaterialGet) | **GET** /TeamBuilderConfigs/{id}/productSizeMaterialsRel/{nk}/productSizeMaterial | Fetches belongsTo relation productSizeMaterial.
 [**teamBuilderConfigsIdProductSizeMaterialsRelPost**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizeMaterialsRelPost) | **POST** /TeamBuilderConfigs/{id}/productSizeMaterialsRel | Creates a new instance in productSizeMaterialsRel of this model.
 [**teamBuilderConfigsIdProductSizesCountGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizesCountGet) | **GET** /TeamBuilderConfigs/{id}/productSizes/count | Counts productSizes of TeamBuilderConfig.
@@ -69,6 +71,7 @@ Method | HTTP request | Description
 [**teamBuilderConfigsIdProductSizesNkMaterialsRelFkDelete**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizesNkMaterialsRelFkDelete) | **DELETE** /TeamBuilderConfigs/{id}/productSizes/{nk}/materials/rel/{fk} | Remove the materials relation to an item by id.
 [**teamBuilderConfigsIdProductSizesNkMaterialsRelFkHead**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizesNkMaterialsRelFkHead) | **HEAD** /TeamBuilderConfigs/{id}/productSizes/{nk}/materials/rel/{fk} | Check the existence of materials relation to an item by id.
 [**teamBuilderConfigsIdProductSizesNkMaterialsRelFkPut**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizesNkMaterialsRelFkPut) | **PUT** /TeamBuilderConfigs/{id}/productSizes/{nk}/materials/rel/{fk} | Add a related item by id for materials.
+[**teamBuilderConfigsIdProductSizesNkPdfColorProfileGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizesNkPdfColorProfileGet) | **GET** /TeamBuilderConfigs/{id}/productSizes/{nk}/pdfColorProfile | Fetches belongsTo relation pdfColorProfile.
 [**teamBuilderConfigsIdProductSizesNkProductsCountGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizesNkProductsCountGet) | **GET** /TeamBuilderConfigs/{id}/productSizes/{nk}/products/count | Counts products of ProductSize.
 [**teamBuilderConfigsIdProductSizesNkProductsDelete**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizesNkProductsDelete) | **DELETE** /TeamBuilderConfigs/{id}/productSizes/{nk}/products | Deletes all products of this model.
 [**teamBuilderConfigsIdProductSizesNkProductsFkDelete**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizesNkProductsFkDelete) | **DELETE** /TeamBuilderConfigs/{id}/productSizes/{nk}/products/{fk} | Delete a related item by id for products.
@@ -1812,6 +1815,58 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **teamBuilderConfigsIdProductSizeMaterialsNkPdfColorProfileGet**
+> \Swagger\Client\Model\ProductPdfColorProfile teamBuilderConfigsIdProductSizeMaterialsNkPdfColorProfileGet($id, $nk, $refresh)
+
+Fetches belongsTo relation pdfColorProfile.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamBuilderConfigApi();
+$id = "id_example"; // string | TeamBuilderConfig id
+$nk = "nk_example"; // string | Foreign key for productSizeMaterials.
+$refresh = true; // bool | 
+
+try {
+    $result = $api_instance->teamBuilderConfigsIdProductSizeMaterialsNkPdfColorProfileGet($id, $nk, $refresh);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamBuilderConfigApi->teamBuilderConfigsIdProductSizeMaterialsNkPdfColorProfileGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamBuilderConfig id |
+ **nk** | **string**| Foreign key for productSizeMaterials. |
+ **refresh** | **bool**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\ProductPdfColorProfile**](../Model/ProductPdfColorProfile.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **teamBuilderConfigsIdProductSizeMaterialsNkSizeGet**
 > \Swagger\Client\Model\ProductSize teamBuilderConfigsIdProductSizeMaterialsNkSizeGet($id, $nk, $refresh)
 
@@ -2455,6 +2510,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\TeamBuilderConfig**](../Model/TeamBuilderConfig.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamBuilderConfigsIdProductSizeMaterialsRelNkPdfColorProfileGet**
+> \Swagger\Client\Model\ProductPdfColorProfile teamBuilderConfigsIdProductSizeMaterialsRelNkPdfColorProfileGet($id, $nk, $refresh)
+
+Fetches belongsTo relation pdfColorProfile.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamBuilderConfigApi();
+$id = "id_example"; // string | TeamBuilderConfig id
+$nk = "nk_example"; // string | Foreign key for productSizeMaterialsRel.
+$refresh = true; // bool | 
+
+try {
+    $result = $api_instance->teamBuilderConfigsIdProductSizeMaterialsRelNkPdfColorProfileGet($id, $nk, $refresh);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamBuilderConfigApi->teamBuilderConfigsIdProductSizeMaterialsRelNkPdfColorProfileGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamBuilderConfig id |
+ **nk** | **string**| Foreign key for productSizeMaterialsRel. |
+ **refresh** | **bool**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\ProductPdfColorProfile**](../Model/ProductPdfColorProfile.md)
 
 ### Authorization
 
@@ -3374,6 +3481,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\ProductSizeMaterial**](../Model/ProductSizeMaterial.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamBuilderConfigsIdProductSizesNkPdfColorProfileGet**
+> \Swagger\Client\Model\ProductPdfColorProfile teamBuilderConfigsIdProductSizesNkPdfColorProfileGet($id, $nk, $refresh)
+
+Fetches belongsTo relation pdfColorProfile.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamBuilderConfigApi();
+$id = "id_example"; // string | TeamBuilderConfig id
+$nk = "nk_example"; // string | Foreign key for productSizes.
+$refresh = true; // bool | 
+
+try {
+    $result = $api_instance->teamBuilderConfigsIdProductSizesNkPdfColorProfileGet($id, $nk, $refresh);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamBuilderConfigApi->teamBuilderConfigsIdProductSizesNkPdfColorProfileGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamBuilderConfig id |
+ **nk** | **string**| Foreign key for productSizes. |
+ **refresh** | **bool**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\ProductPdfColorProfile**](../Model/ProductPdfColorProfile.md)
 
 ### Authorization
 

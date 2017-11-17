@@ -34,6 +34,7 @@ Name | Type | Description | Notes
 **permission** | [**\Swagger\Client\Model\TeamPermissionSet**](TeamPermissionSet.md) |  | [optional] 
 **productMaterials** | [**\Swagger\Client\Model\ProductMaterial[]**](ProductMaterial.md) |  | [optional] 
 **productSizeMaterials** | [**\Swagger\Client\Model\ProductSizeMaterial[]**](ProductSizeMaterial.md) |  | [optional] 
+**productPdfColorProfiles** | [**\Swagger\Client\Model\ProductPdfColorProfile[]**](ProductPdfColorProfile.md) |  | [optional] 
 **teamData** | [**\Swagger\Client\Model\DynamicData**](DynamicData.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

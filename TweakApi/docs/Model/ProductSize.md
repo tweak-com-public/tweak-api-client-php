@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **pdfSize** | [**\Swagger\Client\Model\Dimensions**](Dimensions.md) |  | [optional] 
 **pdfPageCount** | **double** |  | [optional] [default to 1.0]
 **pdfDpi** | **double** |  | [optional] [default to 300.0]
-**pdfColorProfile** | **string** |  | [optional] [default to '']
+**printProfile** | [**\Swagger\Client\Model\Stirng**](Stirng.md) |  | [optional] 
 **customerSize** | [**\Swagger\Client\Model\Dimensions**](Dimensions.md) |  | [optional] 
 **customerPageCount** | **double** |  | [optional] [default to 1.0]
 **maxBleed** | [**\Swagger\Client\Model\Bounds**](Bounds.md) |  | [optional] 
@@ -32,11 +32,13 @@ Name | Type | Description | Notes
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **modified** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **id** | **string** |  | [optional] 
+**pdfColorProfileId** | **string** |  | [optional] 
 **typeId** | **string** |  | [optional] 
 **type** | [**\Swagger\Client\Model\ProductType**](ProductType.md) |  | [optional] 
 **materials** | [**\Swagger\Client\Model\ProductMaterial[]**](ProductMaterial.md) |  | [optional] 
 **sizeMaterials** | [**\Swagger\Client\Model\ProductSizeMaterial[]**](ProductSizeMaterial.md) |  | [optional] 
 **products** | [**\Swagger\Client\Model\Product[]**](Product.md) |  | [optional] 
+**pdfColorProfile** | [**\Swagger\Client\Model\ProductPdfColorProfile**](ProductPdfColorProfile.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
