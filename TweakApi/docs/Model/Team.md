@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **string** |  | 
-**logo** | **object** |  | [optional] 
+**logo** | [**\Swagger\Client\Model\CloudinaryImage**](CloudinaryImage.md) |  | [optional] 
 **subdomain** | **string** |  | [optional] 
 **country** | **string** |  | [optional] [default to 'Ireland']
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 

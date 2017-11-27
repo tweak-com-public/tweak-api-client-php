@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **name** | **string** |  | 
 **code** | **string** |  | 
 **description** | **string** |  | [optional] 
-**thumbnail** | **string** |  | [optional] 
+**thumbnail** | [**\Swagger\Client\Model\CloudinaryImage**](CloudinaryImage.md) |  | [optional] 
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **modified** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **id** | **string** |  | [optional] 

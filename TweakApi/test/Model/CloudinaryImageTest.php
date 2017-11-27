@@ -1,6 +1,6 @@
 <?php
 /**
- * PortalPermissionSetTest
+ * CloudinaryImageTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Tweak\Api;
 
 /**
- * PortalPermissionSetTest Class Doc Comment
+ * CloudinaryImageTest Class Doc Comment
  *
  * @category    Class */
-// * @description PortalPermissionSet
+// * @description CloudinaryImage
 /**
  * @package     Tweak\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PortalPermissionSetTest extends \PHPUnit_Framework_TestCase
+class CloudinaryImageTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,25 +88,137 @@ class PortalPermissionSetTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PortalPermissionSet"
+     * Test "CloudinaryImage"
      */
-    public function testPortalPermissionSet()
+    public function testCloudinaryImage()
     {
 
     }
 
     /**
-     * Test attribute "templatePermission"
+     * Test attribute "publicId"
      */
-    public function testPropertyTemplatePermission()
+    public function testPropertyPublicId()
     {
 
     }
 
     /**
-     * Test attribute "tweakTemplatePermission"
+     * Test attribute "version"
      */
-    public function testPropertyTweakTemplatePermission()
+    public function testPropertyVersion()
+    {
+
+    }
+
+    /**
+     * Test attribute "signature"
+     */
+    public function testPropertySignature()
+    {
+
+    }
+
+    /**
+     * Test attribute "width"
+     */
+    public function testPropertyWidth()
+    {
+
+    }
+
+    /**
+     * Test attribute "height"
+     */
+    public function testPropertyHeight()
+    {
+
+    }
+
+    /**
+     * Test attribute "format"
+     */
+    public function testPropertyFormat()
+    {
+
+    }
+
+    /**
+     * Test attribute "resourceType"
+     */
+    public function testPropertyResourceType()
+    {
+
+    }
+
+    /**
+     * Test attribute "createdAt"
+     */
+    public function testPropertyCreatedAt()
+    {
+
+    }
+
+    /**
+     * Test attribute "tags"
+     */
+    public function testPropertyTags()
+    {
+
+    }
+
+    /**
+     * Test attribute "bytes"
+     */
+    public function testPropertyBytes()
+    {
+
+    }
+
+    /**
+     * Test attribute "type"
+     */
+    public function testPropertyType()
+    {
+
+    }
+
+    /**
+     * Test attribute "etag"
+     */
+    public function testPropertyEtag()
+    {
+
+    }
+
+    /**
+     * Test attribute "url"
+     */
+    public function testPropertyUrl()
+    {
+
+    }
+
+    /**
+     * Test attribute "secureUrl"
+     */
+    public function testPropertySecureUrl()
+    {
+
+    }
+
+    /**
+     * Test attribute "originalFilename"
+     */
+    public function testPropertyOriginalFilename()
+    {
+
+    }
+
+    /**
+     * Test attribute "isBase64"
+     */
+    public function testPropertyIsBase64()
     {
 
     }
@@ -115,22 +227,6 @@ class PortalPermissionSetTest extends \PHPUnit_Framework_TestCase
      * Test attribute "id"
      */
     public function testPropertyId()
-    {
-
-    }
-
-    /**
-     * Test attribute "portalId"
-     */
-    public function testPropertyPortalId()
-    {
-
-    }
-
-    /**
-     * Test attribute "portal"
-     */
-    public function testPropertyPortal()
     {
 
     }

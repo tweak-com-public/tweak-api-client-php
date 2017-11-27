@@ -97,6 +97,7 @@ Method | HTTP request | Description
 [**teamsIdDynamicDatasNkRecordsDelete**](TeamApi.md#teamsIdDynamicDatasNkRecordsDelete) | **DELETE** /Teams/{id}/dynamicDatas/{nk}/records | Delete all matching records.
 [**teamsIdDynamicDatasNkRecordsFkDelete**](TeamApi.md#teamsIdDynamicDatasNkRecordsFkDelete) | **DELETE** /Teams/{id}/dynamicDatas/{nk}/records/{fk} | Delete a model instance by {{fk}} from the data source.
 [**teamsIdDynamicDatasNkRecordsFkGet**](TeamApi.md#teamsIdDynamicDatasNkRecordsFkGet) | **GET** /Teams/{id}/dynamicDatas/{nk}/records/{fk} | Find a model instance by {{fk}} from the data source.
+[**teamsIdDynamicDatasNkRecordsFkPropertyNameUploadPut**](TeamApi.md#teamsIdDynamicDatasNkRecordsFkPropertyNameUploadPut) | **PUT** /Teams/{id}/dynamicDatas/{nk}/records/{fk}/{propertyName}/upload | Replace attributes for a model instance and persist it into the data source.
 [**teamsIdDynamicDatasNkRecordsFkPut**](TeamApi.md#teamsIdDynamicDatasNkRecordsFkPut) | **PUT** /Teams/{id}/dynamicDatas/{nk}/records/{fk} | Replace attributes for a model instance and persist it into the data source.
 [**teamsIdDynamicDatasNkRecordsGet**](TeamApi.md#teamsIdDynamicDatasNkRecordsGet) | **GET** /Teams/{id}/dynamicDatas/{nk}/records | Find all instances of the model matched by filter from the data source.
 [**teamsIdDynamicDatasNkRecordsMigratePost**](TeamApi.md#teamsIdDynamicDatasNkRecordsMigratePost) | **POST** /Teams/{id}/dynamicDatas/{nk}/records/migrate | Request migration for Dynamic Data records
@@ -303,6 +304,7 @@ Method | HTTP request | Description
 [**teamsIdTeamDataRecordsDelete**](TeamApi.md#teamsIdTeamDataRecordsDelete) | **DELETE** /Teams/{id}/teamData/records | Delete all matching records.
 [**teamsIdTeamDataRecordsFkDelete**](TeamApi.md#teamsIdTeamDataRecordsFkDelete) | **DELETE** /Teams/{id}/teamData/records/{fk} | Delete a model instance by {{fk}} from the data source.
 [**teamsIdTeamDataRecordsFkGet**](TeamApi.md#teamsIdTeamDataRecordsFkGet) | **GET** /Teams/{id}/teamData/records/{fk} | Find a model instance by {{fk}} from the data source.
+[**teamsIdTeamDataRecordsFkPropertyNameUploadPut**](TeamApi.md#teamsIdTeamDataRecordsFkPropertyNameUploadPut) | **PUT** /Teams/{id}/teamData/records/{fk}/{propertyName}/upload | Replace attributes for a model instance and persist it into the data source.
 [**teamsIdTeamDataRecordsFkPut**](TeamApi.md#teamsIdTeamDataRecordsFkPut) | **PUT** /Teams/{id}/teamData/records/{fk} | Replace attributes for a model instance and persist it into the data source.
 [**teamsIdTeamDataRecordsGet**](TeamApi.md#teamsIdTeamDataRecordsGet) | **GET** /Teams/{id}/teamData/records | Find all instances of the model matched by filter from the data source.
 [**teamsIdTeamDataRecordsMigratePost**](TeamApi.md#teamsIdTeamDataRecordsMigratePost) | **POST** /Teams/{id}/teamData/records/migrate | Request migration for Dynamic Data records
@@ -5136,6 +5138,62 @@ Name | Type | Description  | Notes
  **nk** | **string**| Foreign key for dynamicDatas. |
  **fk** | **string**| Model id |
  **filter** | **string**| Filter defining fields and include - must be a JSON-encoded string ({\&quot;something\&quot;:\&quot;value\&quot;}) | [optional]
+
+### Return type
+
+**object**
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamsIdDynamicDatasNkRecordsFkPropertyNameUploadPut**
+> object teamsIdDynamicDatasNkRecordsFkPropertyNameUploadPut($id, $nk, $fk, $propertyName, $data)
+
+Replace attributes for a model instance and persist it into the data source.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamApi();
+$id = "id_example"; // string | Team id
+$nk = "nk_example"; // string | Foreign key for dynamicDatas.
+$fk = "fk_example"; // string | Model id
+$propertyName = "propertyName_example"; // string | Model property name
+$data = new \Swagger\Client\Model\Team(); // \Swagger\Client\Model\Team | Model instance data
+
+try {
+    $result = $api_instance->teamsIdDynamicDatasNkRecordsFkPropertyNameUploadPut($id, $nk, $fk, $propertyName, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamApi->teamsIdDynamicDatasNkRecordsFkPropertyNameUploadPut: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Team id |
+ **nk** | **string**| Foreign key for dynamicDatas. |
+ **fk** | **string**| Model id |
+ **propertyName** | **string**| Model property name |
+ **data** | [**\Swagger\Client\Model\Team**](../Model/\Swagger\Client\Model\Team.md)| Model instance data | [optional]
 
 ### Return type
 
@@ -15652,6 +15710,60 @@ Name | Type | Description  | Notes
  **id** | **string**| Team id |
  **fk** | **string**| Model id |
  **filter** | **string**| Filter defining fields and include - must be a JSON-encoded string ({\&quot;something\&quot;:\&quot;value\&quot;}) | [optional]
+
+### Return type
+
+**object**
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamsIdTeamDataRecordsFkPropertyNameUploadPut**
+> object teamsIdTeamDataRecordsFkPropertyNameUploadPut($id, $fk, $propertyName, $data)
+
+Replace attributes for a model instance and persist it into the data source.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamApi();
+$id = "id_example"; // string | Team id
+$fk = "fk_example"; // string | Model id
+$propertyName = "propertyName_example"; // string | Model property name
+$data = new \Swagger\Client\Model\Team(); // \Swagger\Client\Model\Team | Model instance data
+
+try {
+    $result = $api_instance->teamsIdTeamDataRecordsFkPropertyNameUploadPut($id, $fk, $propertyName, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamApi->teamsIdTeamDataRecordsFkPropertyNameUploadPut: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Team id |
+ **fk** | **string**| Model id |
+ **propertyName** | **string**| Model property name |
+ **data** | [**\Swagger\Client\Model\Team**](../Model/\Swagger\Client\Model\Team.md)| Model instance data | [optional]
 
 ### Return type
 

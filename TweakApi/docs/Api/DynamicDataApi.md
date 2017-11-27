@@ -26,6 +26,7 @@ Method | HTTP request | Description
 [**dynamicDataIdRecordsDelete**](DynamicDataApi.md#dynamicDataIdRecordsDelete) | **DELETE** /DynamicData/{id}/records | Delete all matching records.
 [**dynamicDataIdRecordsFkDelete**](DynamicDataApi.md#dynamicDataIdRecordsFkDelete) | **DELETE** /DynamicData/{id}/records/{fk} | Delete a model instance by {{fk}} from the data source.
 [**dynamicDataIdRecordsFkGet**](DynamicDataApi.md#dynamicDataIdRecordsFkGet) | **GET** /DynamicData/{id}/records/{fk} | Find a model instance by {{fk}} from the data source.
+[**dynamicDataIdRecordsFkPropertyNameUploadPut**](DynamicDataApi.md#dynamicDataIdRecordsFkPropertyNameUploadPut) | **PUT** /DynamicData/{id}/records/{fk}/{propertyName}/upload | Replace attributes for a model instance and persist it into the data source.
 [**dynamicDataIdRecordsFkPut**](DynamicDataApi.md#dynamicDataIdRecordsFkPut) | **PUT** /DynamicData/{id}/records/{fk} | Replace attributes for a model instance and persist it into the data source.
 [**dynamicDataIdRecordsGet**](DynamicDataApi.md#dynamicDataIdRecordsGet) | **GET** /DynamicData/{id}/records | Find all instances of the model matched by filter from the data source.
 [**dynamicDataIdRecordsMigratePost**](DynamicDataApi.md#dynamicDataIdRecordsMigratePost) | **POST** /DynamicData/{id}/records/migrate | Request migration for Dynamic Data records
@@ -1109,6 +1110,60 @@ Name | Type | Description  | Notes
  **id** | **string**| DynamicData id |
  **fk** | **string**| Model id |
  **filter** | **string**| Filter defining fields and include - must be a JSON-encoded string ({\&quot;something\&quot;:\&quot;value\&quot;}) | [optional]
+
+### Return type
+
+**object**
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **dynamicDataIdRecordsFkPropertyNameUploadPut**
+> object dynamicDataIdRecordsFkPropertyNameUploadPut($id, $fk, $propertyName, $data)
+
+Replace attributes for a model instance and persist it into the data source.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\DynamicDataApi();
+$id = "id_example"; // string | DynamicData id
+$fk = "fk_example"; // string | Model id
+$propertyName = "propertyName_example"; // string | Model property name
+$data = new \Swagger\Client\Model\DynamicData(); // \Swagger\Client\Model\DynamicData | Model instance data
+
+try {
+    $result = $api_instance->dynamicDataIdRecordsFkPropertyNameUploadPut($id, $fk, $propertyName, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DynamicDataApi->dynamicDataIdRecordsFkPropertyNameUploadPut: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| DynamicData id |
+ **fk** | **string**| Model id |
+ **propertyName** | **string**| Model property name |
+ **data** | [**\Swagger\Client\Model\DynamicData**](../Model/\Swagger\Client\Model\DynamicData.md)| Model instance data | [optional]
 
 ### Return type
 

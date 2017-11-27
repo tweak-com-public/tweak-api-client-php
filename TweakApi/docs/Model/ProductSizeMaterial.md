@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **code** | **string** |  | 
 **description** | **string** |  | [optional] 
-**thumbnail** | **string** |  | [optional] 
+**thumbnail** | [**\Swagger\Client\Model\CloudinaryImage**](CloudinaryImage.md) |  | [optional] 
 **status** | **string** |  | [optional] 
 **bindingType** | **string** |  | [optional] 
 **defaultBleed** | [**\Swagger\Client\Model\Bounds**](Bounds.md) |  | [optional] 
