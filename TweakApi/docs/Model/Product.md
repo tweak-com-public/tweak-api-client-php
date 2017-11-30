@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **string** |  | 
 **description** | **string** |  | [optional] [default to '']
-**thumbnail** | **object** |  | [optional] 
+**thumbnail** | [**\Swagger\Client\Model\CloudinaryImage**](CloudinaryImage.md) |  | [optional] 
 **object** | **object** |  | [optional] 
 **idml** | **object** |  | [optional] 
 **language** | **string** |  | [optional] 

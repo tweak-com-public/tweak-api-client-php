@@ -15,6 +15,7 @@ Method | HTTP request | Description
 [**productSizeMaterialsIdHead**](ProductSizeMaterialApi.md#productSizeMaterialsIdHead) | **HEAD** /ProductSizeMaterials/{id} | Check whether a model instance exists in the data source.
 [**productSizeMaterialsIdMaterialGet**](ProductSizeMaterialApi.md#productSizeMaterialsIdMaterialGet) | **GET** /ProductSizeMaterials/{id}/material | Fetches belongsTo relation material.
 [**productSizeMaterialsIdPatch**](ProductSizeMaterialApi.md#productSizeMaterialsIdPatch) | **PATCH** /ProductSizeMaterials/{id} | Patch attributes for a model instance and persist it into the data source.
+[**productSizeMaterialsIdPdfColorProfileGet**](ProductSizeMaterialApi.md#productSizeMaterialsIdPdfColorProfileGet) | **GET** /ProductSizeMaterials/{id}/pdfColorProfile | Fetches belongsTo relation pdfColorProfile.
 [**productSizeMaterialsIdPut**](ProductSizeMaterialApi.md#productSizeMaterialsIdPut) | **PUT** /ProductSizeMaterials/{id} | Replace attributes for a model instance and persist it into the data source.
 [**productSizeMaterialsIdReplacePost**](ProductSizeMaterialApi.md#productSizeMaterialsIdReplacePost) | **POST** /ProductSizeMaterials/{id}/replace | Replace attributes for a model instance and persist it into the data source.
 [**productSizeMaterialsIdSizeGet**](ProductSizeMaterialApi.md#productSizeMaterialsIdSizeGet) | **GET** /ProductSizeMaterials/{id}/size | Fetches belongsTo relation size.
@@ -549,6 +550,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\ProductSizeMaterial**](../Model/ProductSizeMaterial.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **productSizeMaterialsIdPdfColorProfileGet**
+> \Swagger\Client\Model\ProductPdfColorProfile productSizeMaterialsIdPdfColorProfileGet($id, $refresh)
+
+Fetches belongsTo relation pdfColorProfile.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\ProductSizeMaterialApi();
+$id = "id_example"; // string | ProductSizeMaterial id
+$refresh = true; // bool | 
+
+try {
+    $result = $api_instance->productSizeMaterialsIdPdfColorProfileGet($id, $refresh);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ProductSizeMaterialApi->productSizeMaterialsIdPdfColorProfileGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| ProductSizeMaterial id |
+ **refresh** | **bool**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\ProductPdfColorProfile**](../Model/ProductPdfColorProfile.md)
 
 ### Authorization
 

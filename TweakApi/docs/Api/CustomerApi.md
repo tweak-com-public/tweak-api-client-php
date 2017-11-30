@@ -113,6 +113,12 @@ Method | HTTP request | Description
 [**customersIdTeamsNkProductMaterialsFkPut**](CustomerApi.md#customersIdTeamsNkProductMaterialsFkPut) | **PUT** /Customers/{id}/teams/{nk}/productMaterials/{fk} | Update a related item by id for productMaterials.
 [**customersIdTeamsNkProductMaterialsGet**](CustomerApi.md#customersIdTeamsNkProductMaterialsGet) | **GET** /Customers/{id}/teams/{nk}/productMaterials | Queries productMaterials of Team.
 [**customersIdTeamsNkProductMaterialsPost**](CustomerApi.md#customersIdTeamsNkProductMaterialsPost) | **POST** /Customers/{id}/teams/{nk}/productMaterials | Creates a new instance in productMaterials of this model.
+[**customersIdTeamsNkProductPdfColorProfilesCountGet**](CustomerApi.md#customersIdTeamsNkProductPdfColorProfilesCountGet) | **GET** /Customers/{id}/teams/{nk}/productPdfColorProfiles/count | Counts productPdfColorProfiles of Team.
+[**customersIdTeamsNkProductPdfColorProfilesDelete**](CustomerApi.md#customersIdTeamsNkProductPdfColorProfilesDelete) | **DELETE** /Customers/{id}/teams/{nk}/productPdfColorProfiles | Deletes all productPdfColorProfiles of this model.
+[**customersIdTeamsNkProductPdfColorProfilesFkDelete**](CustomerApi.md#customersIdTeamsNkProductPdfColorProfilesFkDelete) | **DELETE** /Customers/{id}/teams/{nk}/productPdfColorProfiles/{fk} | Delete a related item by id for productPdfColorProfiles.
+[**customersIdTeamsNkProductPdfColorProfilesFkGet**](CustomerApi.md#customersIdTeamsNkProductPdfColorProfilesFkGet) | **GET** /Customers/{id}/teams/{nk}/productPdfColorProfiles/{fk} | Find a related item by id for productPdfColorProfiles.
+[**customersIdTeamsNkProductPdfColorProfilesFkPut**](CustomerApi.md#customersIdTeamsNkProductPdfColorProfilesFkPut) | **PUT** /Customers/{id}/teams/{nk}/productPdfColorProfiles/{fk} | Update a related item by id for productPdfColorProfiles.
+[**customersIdTeamsNkProductPdfColorProfilesGet**](CustomerApi.md#customersIdTeamsNkProductPdfColorProfilesGet) | **GET** /Customers/{id}/teams/{nk}/productPdfColorProfiles | Queries productPdfColorProfiles of Team.
 [**customersIdTeamsNkProductSizeMaterialsCountGet**](CustomerApi.md#customersIdTeamsNkProductSizeMaterialsCountGet) | **GET** /Customers/{id}/teams/{nk}/productSizeMaterials/count | Counts productSizeMaterials of Team.
 [**customersIdTeamsNkProductSizeMaterialsDelete**](CustomerApi.md#customersIdTeamsNkProductSizeMaterialsDelete) | **DELETE** /Customers/{id}/teams/{nk}/productSizeMaterials | Deletes all productSizeMaterials of this model.
 [**customersIdTeamsNkProductSizeMaterialsFkDelete**](CustomerApi.md#customersIdTeamsNkProductSizeMaterialsFkDelete) | **DELETE** /Customers/{id}/teams/{nk}/productSizeMaterials/{fk} | Delete a related item by id for productSizeMaterials.
@@ -5699,6 +5705,316 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\ProductMaterial**](../Model/ProductMaterial.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **customersIdTeamsNkProductPdfColorProfilesCountGet**
+> \Swagger\Client\Model\InlineResponse200 customersIdTeamsNkProductPdfColorProfilesCountGet($id, $nk, $where)
+
+Counts productPdfColorProfiles of Team.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+$id = "id_example"; // string | Customer id
+$nk = "nk_example"; // string | Foreign key for teams.
+$where = "where_example"; // string | Criteria to match model instances
+
+try {
+    $result = $api_instance->customersIdTeamsNkProductPdfColorProfilesCountGet($id, $nk, $where);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersIdTeamsNkProductPdfColorProfilesCountGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Customer id |
+ **nk** | **string**| Foreign key for teams. |
+ **where** | **string**| Criteria to match model instances | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **customersIdTeamsNkProductPdfColorProfilesDelete**
+> customersIdTeamsNkProductPdfColorProfilesDelete($id, $nk)
+
+Deletes all productPdfColorProfiles of this model.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+$id = "id_example"; // string | Customer id
+$nk = "nk_example"; // string | Foreign key for teams.
+
+try {
+    $api_instance->customersIdTeamsNkProductPdfColorProfilesDelete($id, $nk);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersIdTeamsNkProductPdfColorProfilesDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Customer id |
+ **nk** | **string**| Foreign key for teams. |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **customersIdTeamsNkProductPdfColorProfilesFkDelete**
+> customersIdTeamsNkProductPdfColorProfilesFkDelete($id, $nk, $fk)
+
+Delete a related item by id for productPdfColorProfiles.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+$id = "id_example"; // string | Customer id
+$nk = "nk_example"; // string | Foreign key for teams.
+$fk = "fk_example"; // string | Foreign key for productPdfColorProfiles
+
+try {
+    $api_instance->customersIdTeamsNkProductPdfColorProfilesFkDelete($id, $nk, $fk);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersIdTeamsNkProductPdfColorProfilesFkDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Customer id |
+ **nk** | **string**| Foreign key for teams. |
+ **fk** | **string**| Foreign key for productPdfColorProfiles |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **customersIdTeamsNkProductPdfColorProfilesFkGet**
+> \Swagger\Client\Model\ProductPdfColorProfile customersIdTeamsNkProductPdfColorProfilesFkGet($id, $nk, $fk)
+
+Find a related item by id for productPdfColorProfiles.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+$id = "id_example"; // string | Customer id
+$nk = "nk_example"; // string | Foreign key for teams.
+$fk = "fk_example"; // string | Foreign key for productPdfColorProfiles
+
+try {
+    $result = $api_instance->customersIdTeamsNkProductPdfColorProfilesFkGet($id, $nk, $fk);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersIdTeamsNkProductPdfColorProfilesFkGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Customer id |
+ **nk** | **string**| Foreign key for teams. |
+ **fk** | **string**| Foreign key for productPdfColorProfiles |
+
+### Return type
+
+[**\Swagger\Client\Model\ProductPdfColorProfile**](../Model/ProductPdfColorProfile.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **customersIdTeamsNkProductPdfColorProfilesFkPut**
+> \Swagger\Client\Model\ProductPdfColorProfile customersIdTeamsNkProductPdfColorProfilesFkPut($id, $nk, $fk, $data)
+
+Update a related item by id for productPdfColorProfiles.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+$id = "id_example"; // string | Customer id
+$nk = "nk_example"; // string | Foreign key for teams.
+$fk = "fk_example"; // string | Foreign key for productPdfColorProfiles
+$data = new \Swagger\Client\Model\ProductPdfColorProfile(); // \Swagger\Client\Model\ProductPdfColorProfile | 
+
+try {
+    $result = $api_instance->customersIdTeamsNkProductPdfColorProfilesFkPut($id, $nk, $fk, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersIdTeamsNkProductPdfColorProfilesFkPut: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Customer id |
+ **nk** | **string**| Foreign key for teams. |
+ **fk** | **string**| Foreign key for productPdfColorProfiles |
+ **data** | [**\Swagger\Client\Model\ProductPdfColorProfile**](../Model/\Swagger\Client\Model\ProductPdfColorProfile.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\ProductPdfColorProfile**](../Model/ProductPdfColorProfile.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **customersIdTeamsNkProductPdfColorProfilesGet**
+> \Swagger\Client\Model\ProductPdfColorProfile[] customersIdTeamsNkProductPdfColorProfilesGet($id, $nk, $filter)
+
+Queries productPdfColorProfiles of Team.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\CustomerApi();
+$id = "id_example"; // string | Customer id
+$nk = "nk_example"; // string | Foreign key for teams.
+$filter = "filter_example"; // string | 
+
+try {
+    $result = $api_instance->customersIdTeamsNkProductPdfColorProfilesGet($id, $nk, $filter);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersIdTeamsNkProductPdfColorProfilesGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Customer id |
+ **nk** | **string**| Foreign key for teams. |
+ **filter** | **string**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\ProductPdfColorProfile[]**](../Model/ProductPdfColorProfile.md)
 
 ### Authorization
 

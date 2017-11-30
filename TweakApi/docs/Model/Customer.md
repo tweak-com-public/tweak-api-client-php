@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**profilePicture** | **object** |  | [optional] 
+**profilePicture** | [**\Swagger\Client\Model\CloudinaryImage**](CloudinaryImage.md) |  | [optional] 
 **firstName** | **string** |  | 
 **lastName** | **string** |  | 
 **initials** | **string** |  | 
