@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **code** | **string** |  | 
+**legacyCode** | **string** |  | [optional] 
 **description** | **string** |  | [optional] 
 **thumbnail** | [**\Swagger\Client\Model\CloudinaryImage**](CloudinaryImage.md) |  | [optional] 
 **status** | **string** |  | [optional] 

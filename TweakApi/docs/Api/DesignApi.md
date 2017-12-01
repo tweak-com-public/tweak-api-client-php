@@ -91,6 +91,7 @@ Method | HTTP request | Description
 [**designsIdTagsRelFkDelete**](DesignApi.md#designsIdTagsRelFkDelete) | **DELETE** /Designs/{id}/tags/rel/{fk} | Remove the tags relation to an item by id.
 [**designsIdTagsRelFkHead**](DesignApi.md#designsIdTagsRelFkHead) | **HEAD** /Designs/{id}/tags/rel/{fk} | Check the existence of tags relation to an item by id.
 [**designsIdTagsRelFkPut**](DesignApi.md#designsIdTagsRelFkPut) | **PUT** /Designs/{id}/tags/rel/{fk} | Add a related item by id for tags.
+[**designsIdTeamGet**](DesignApi.md#designsIdTeamGet) | **GET** /Designs/{id}/team | Fetches belongsTo relation team.
 [**designsIdTemplateGet**](DesignApi.md#designsIdTemplateGet) | **GET** /Designs/{id}/template | Fetches belongsTo relation template.
 [**designsPatch**](DesignApi.md#designsPatch) | **PATCH** /Designs | Patch an existing model instance or insert a new one into the data source.
 [**designsPost**](DesignApi.md#designsPost) | **POST** /Designs | Create a new instance of the model and persist it into the data source.
@@ -4430,6 +4431,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\DesignTag**](../Model/DesignTag.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **designsIdTeamGet**
+> \Swagger\Client\Model\Team designsIdTeamGet($id, $refresh)
+
+Fetches belongsTo relation team.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\DesignApi();
+$id = "id_example"; // string | Design id
+$refresh = true; // bool | 
+
+try {
+    $result = $api_instance->designsIdTeamGet($id, $refresh);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DesignApi->designsIdTeamGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Design id |
+ **refresh** | **bool**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\Team**](../Model/Team.md)
 
 ### Authorization
 
