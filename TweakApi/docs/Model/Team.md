@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **string** |  | 
-**logo** | **object** |  | [optional] 
+**logo** | [**\Swagger\Client\Model\CloudinaryImage**](CloudinaryImage.md) |  | [optional] 
 **subdomain** | **string** |  | [optional] 
 **country** | **string** |  | [optional] [default to 'Ireland']
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 
@@ -17,8 +17,11 @@ Name | Type | Description | Notes
 **windowsKey** | **string** |  | [optional] 
 **masterKey** | **string** |  | [optional] 
 **status** | **string** | Status of the application, production/sandbox/disabled | [optional] [default to 'sandbox']
+**teamDataId** | **string** |  | [optional] 
 **members** | [**\Swagger\Client\Model\Customer[]**](Customer.md) |  | [optional] 
+**builderConfigs** | [**\Swagger\Client\Model\TeamBuilderConfig[]**](TeamBuilderConfig.md) |  | [optional] 
 **dataSources** | [**\Swagger\Client\Model\DataSource[]**](DataSource.md) |  | [optional] 
+**dynamicDatas** | [**\Swagger\Client\Model\DynamicData[]**](DynamicData.md) |  | [optional] 
 **teamMembers** | [**\Swagger\Client\Model\TeamMember[]**](TeamMember.md) |  | [optional] 
 **portals** | [**\Swagger\Client\Model\Portal[]**](Portal.md) |  | [optional] 
 **templates** | [**\Swagger\Client\Model\Template[]**](Template.md) |  | [optional] 
@@ -29,6 +32,10 @@ Name | Type | Description | Notes
 **imageFolders** | [**\Swagger\Client\Model\ImageFolder[]**](ImageFolder.md) |  | [optional] 
 **billing** | [**\Swagger\Client\Model\Billing**](Billing.md) |  | [optional] 
 **permission** | [**\Swagger\Client\Model\TeamPermissionSet**](TeamPermissionSet.md) |  | [optional] 
+**productMaterials** | [**\Swagger\Client\Model\ProductMaterial[]**](ProductMaterial.md) |  | [optional] 
+**productSizeMaterials** | [**\Swagger\Client\Model\ProductSizeMaterial[]**](ProductSizeMaterial.md) |  | [optional] 
+**productPdfColorProfiles** | [**\Swagger\Client\Model\ProductPdfColorProfile[]**](ProductPdfColorProfile.md) |  | [optional] 
+**teamData** | [**\Swagger\Client\Model\DynamicData**](DynamicData.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

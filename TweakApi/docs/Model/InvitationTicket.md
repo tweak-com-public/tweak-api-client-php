@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **targetId** | **string** |  | 
 **targetAttrs** | **object** |  | [optional] 
 **status** | **string** |  | [optional] 
+**notify** | **bool** |  | [optional] [default to true]
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **modified** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **id** | **string** |  | [optional] 
@@ -20,7 +21,9 @@ Name | Type | Description | Notes
 **targetPortalId** | **string** |  | [optional] 
 **targetPortalMemberId** | **string** |  | [optional] 
 **targetTemplateId** | **string** |  | [optional] 
+**targetDesignId** | **string** |  | [optional] 
 **targetTemplateMemberId** | **string** |  | [optional] 
+**targetDesignMemberId** | **string** |  | [optional] 
 **targetImageFolderId** | **string** |  | [optional] 
 **targetImageFolderMemberId** | **string** |  | [optional] 
 **invitee** | [**\Swagger\Client\Model\Customer**](Customer.md) |  | [optional] 
@@ -33,6 +36,8 @@ Name | Type | Description | Notes
 **targetTemplateMember** | [**\Swagger\Client\Model\TemplateMember**](TemplateMember.md) |  | [optional] 
 **targetImageFolder** | [**\Swagger\Client\Model\ImageFolder**](ImageFolder.md) |  | [optional] 
 **targetImageFolderMember** | [**\Swagger\Client\Model\ImageFolderMember**](ImageFolderMember.md) |  | [optional] 
+**targetDesign** | [**\Swagger\Client\Model\Design**](Design.md) |  | [optional] 
+**targetDesignMember** | [**\Swagger\Client\Model\DesignMember**](DesignMember.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

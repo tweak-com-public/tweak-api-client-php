@@ -41,7 +41,14 @@ Method | HTTP request | Description
 [**portalsIdDesignsNkCommentsFkPut**](PortalApi.md#portalsIdDesignsNkCommentsFkPut) | **PUT** /Portals/{id}/designs/{nk}/comments/{fk} | Update a related item by id for comments.
 [**portalsIdDesignsNkCommentsGet**](PortalApi.md#portalsIdDesignsNkCommentsGet) | **GET** /Portals/{id}/designs/{nk}/comments | Queries comments of Design.
 [**portalsIdDesignsNkCommentsPost**](PortalApi.md#portalsIdDesignsNkCommentsPost) | **POST** /Portals/{id}/designs/{nk}/comments | Creates a new instance in comments of this model.
-[**portalsIdDesignsNkCustomerGet**](PortalApi.md#portalsIdDesignsNkCustomerGet) | **GET** /Portals/{id}/designs/{nk}/customer | Fetches belongsTo relation customer.
+[**portalsIdDesignsNkDesignMembersCountGet**](PortalApi.md#portalsIdDesignsNkDesignMembersCountGet) | **GET** /Portals/{id}/designs/{nk}/designMembers/count | Counts designMembers of Design.
+[**portalsIdDesignsNkDesignMembersDelete**](PortalApi.md#portalsIdDesignsNkDesignMembersDelete) | **DELETE** /Portals/{id}/designs/{nk}/designMembers | Deletes all designMembers of this model.
+[**portalsIdDesignsNkDesignMembersFkDelete**](PortalApi.md#portalsIdDesignsNkDesignMembersFkDelete) | **DELETE** /Portals/{id}/designs/{nk}/designMembers/{fk} | Delete a related item by id for designMembers.
+[**portalsIdDesignsNkDesignMembersFkGet**](PortalApi.md#portalsIdDesignsNkDesignMembersFkGet) | **GET** /Portals/{id}/designs/{nk}/designMembers/{fk} | Find a related item by id for designMembers.
+[**portalsIdDesignsNkDesignMembersFkPut**](PortalApi.md#portalsIdDesignsNkDesignMembersFkPut) | **PUT** /Portals/{id}/designs/{nk}/designMembers/{fk} | Update a related item by id for designMembers.
+[**portalsIdDesignsNkDesignMembersGet**](PortalApi.md#portalsIdDesignsNkDesignMembersGet) | **GET** /Portals/{id}/designs/{nk}/designMembers | Queries designMembers of Design.
+[**portalsIdDesignsNkDesignMembersPost**](PortalApi.md#portalsIdDesignsNkDesignMembersPost) | **POST** /Portals/{id}/designs/{nk}/designMembers | Creates a new instance in designMembers of this model.
+[**portalsIdDesignsNkDynamicDataGet**](PortalApi.md#portalsIdDesignsNkDynamicDataGet) | **GET** /Portals/{id}/designs/{nk}/dynamicData | Fetches belongsTo relation dynamicData.
 [**portalsIdDesignsNkExportsCountGet**](PortalApi.md#portalsIdDesignsNkExportsCountGet) | **GET** /Portals/{id}/designs/{nk}/exports/count | Counts exports of Design.
 [**portalsIdDesignsNkExportsDelete**](PortalApi.md#portalsIdDesignsNkExportsDelete) | **DELETE** /Portals/{id}/designs/{nk}/exports | Deletes all exports of this model.
 [**portalsIdDesignsNkExportsFkDelete**](PortalApi.md#portalsIdDesignsNkExportsFkDelete) | **DELETE** /Portals/{id}/designs/{nk}/exports/{fk} | Delete a related item by id for exports.
@@ -50,6 +57,16 @@ Method | HTTP request | Description
 [**portalsIdDesignsNkExportsGet**](PortalApi.md#portalsIdDesignsNkExportsGet) | **GET** /Portals/{id}/designs/{nk}/exports | Queries exports of Design.
 [**portalsIdDesignsNkExportsPost**](PortalApi.md#portalsIdDesignsNkExportsPost) | **POST** /Portals/{id}/designs/{nk}/exports | Creates a new instance in exports of this model.
 [**portalsIdDesignsNkFolderGet**](PortalApi.md#portalsIdDesignsNkFolderGet) | **GET** /Portals/{id}/designs/{nk}/folder | Fetches belongsTo relation folder.
+[**portalsIdDesignsNkMembersCountGet**](PortalApi.md#portalsIdDesignsNkMembersCountGet) | **GET** /Portals/{id}/designs/{nk}/members/count | Counts members of Design.
+[**portalsIdDesignsNkMembersDelete**](PortalApi.md#portalsIdDesignsNkMembersDelete) | **DELETE** /Portals/{id}/designs/{nk}/members | Deletes all members of this model.
+[**portalsIdDesignsNkMembersFkDelete**](PortalApi.md#portalsIdDesignsNkMembersFkDelete) | **DELETE** /Portals/{id}/designs/{nk}/members/{fk} | Delete a related item by id for members.
+[**portalsIdDesignsNkMembersFkGet**](PortalApi.md#portalsIdDesignsNkMembersFkGet) | **GET** /Portals/{id}/designs/{nk}/members/{fk} | Find a related item by id for members.
+[**portalsIdDesignsNkMembersFkPut**](PortalApi.md#portalsIdDesignsNkMembersFkPut) | **PUT** /Portals/{id}/designs/{nk}/members/{fk} | Update a related item by id for members.
+[**portalsIdDesignsNkMembersGet**](PortalApi.md#portalsIdDesignsNkMembersGet) | **GET** /Portals/{id}/designs/{nk}/members | Queries members of Design.
+[**portalsIdDesignsNkMembersPost**](PortalApi.md#portalsIdDesignsNkMembersPost) | **POST** /Portals/{id}/designs/{nk}/members | Creates a new instance in members of this model.
+[**portalsIdDesignsNkMembersRelFkDelete**](PortalApi.md#portalsIdDesignsNkMembersRelFkDelete) | **DELETE** /Portals/{id}/designs/{nk}/members/rel/{fk} | Remove the members relation to an item by id.
+[**portalsIdDesignsNkMembersRelFkHead**](PortalApi.md#portalsIdDesignsNkMembersRelFkHead) | **HEAD** /Portals/{id}/designs/{nk}/members/rel/{fk} | Check the existence of members relation to an item by id.
+[**portalsIdDesignsNkMembersRelFkPut**](PortalApi.md#portalsIdDesignsNkMembersRelFkPut) | **PUT** /Portals/{id}/designs/{nk}/members/rel/{fk} | Add a related item by id for members.
 [**portalsIdDesignsNkPermissionDelete**](PortalApi.md#portalsIdDesignsNkPermissionDelete) | **DELETE** /Portals/{id}/designs/{nk}/permission | Deletes permission of this model.
 [**portalsIdDesignsNkPermissionGet**](PortalApi.md#portalsIdDesignsNkPermissionGet) | **GET** /Portals/{id}/designs/{nk}/permission | Fetches hasOne relation permission.
 [**portalsIdDesignsNkPermissionPost**](PortalApi.md#portalsIdDesignsNkPermissionPost) | **POST** /Portals/{id}/designs/{nk}/permission | Creates a new instance in permission of this model.
@@ -68,6 +85,7 @@ Method | HTTP request | Description
 [**portalsIdDesignsNkTagsRelFkDelete**](PortalApi.md#portalsIdDesignsNkTagsRelFkDelete) | **DELETE** /Portals/{id}/designs/{nk}/tags/rel/{fk} | Remove the tags relation to an item by id.
 [**portalsIdDesignsNkTagsRelFkHead**](PortalApi.md#portalsIdDesignsNkTagsRelFkHead) | **HEAD** /Portals/{id}/designs/{nk}/tags/rel/{fk} | Check the existence of tags relation to an item by id.
 [**portalsIdDesignsNkTagsRelFkPut**](PortalApi.md#portalsIdDesignsNkTagsRelFkPut) | **PUT** /Portals/{id}/designs/{nk}/tags/rel/{fk} | Add a related item by id for tags.
+[**portalsIdDesignsNkTeamGet**](PortalApi.md#portalsIdDesignsNkTeamGet) | **GET** /Portals/{id}/designs/{nk}/team | Fetches belongsTo relation team.
 [**portalsIdDesignsNkTemplateGet**](PortalApi.md#portalsIdDesignsNkTemplateGet) | **GET** /Portals/{id}/designs/{nk}/template | Fetches belongsTo relation template.
 [**portalsIdDesignsPost**](PortalApi.md#portalsIdDesignsPost) | **POST** /Portals/{id}/designs | Creates a new instance in designs of this model.
 [**portalsIdExistsGet**](PortalApi.md#portalsIdExistsGet) | **GET** /Portals/{id}/exists | Check whether a model instance exists in the data source.
@@ -2016,10 +2034,372 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **portalsIdDesignsNkCustomerGet**
-> \Swagger\Client\Model\Customer portalsIdDesignsNkCustomerGet($id, $nk, $refresh)
+# **portalsIdDesignsNkDesignMembersCountGet**
+> \Swagger\Client\Model\InlineResponse200 portalsIdDesignsNkDesignMembersCountGet($id, $nk, $where)
 
-Fetches belongsTo relation customer.
+Counts designMembers of Design.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\PortalApi();
+$id = "id_example"; // string | Portal id
+$nk = "nk_example"; // string | Foreign key for designs.
+$where = "where_example"; // string | Criteria to match model instances
+
+try {
+    $result = $api_instance->portalsIdDesignsNkDesignMembersCountGet($id, $nk, $where);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PortalApi->portalsIdDesignsNkDesignMembersCountGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Portal id |
+ **nk** | **string**| Foreign key for designs. |
+ **where** | **string**| Criteria to match model instances | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **portalsIdDesignsNkDesignMembersDelete**
+> portalsIdDesignsNkDesignMembersDelete($id, $nk)
+
+Deletes all designMembers of this model.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\PortalApi();
+$id = "id_example"; // string | Portal id
+$nk = "nk_example"; // string | Foreign key for designs.
+
+try {
+    $api_instance->portalsIdDesignsNkDesignMembersDelete($id, $nk);
+} catch (Exception $e) {
+    echo 'Exception when calling PortalApi->portalsIdDesignsNkDesignMembersDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Portal id |
+ **nk** | **string**| Foreign key for designs. |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **portalsIdDesignsNkDesignMembersFkDelete**
+> portalsIdDesignsNkDesignMembersFkDelete($id, $nk, $fk)
+
+Delete a related item by id for designMembers.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\PortalApi();
+$id = "id_example"; // string | Portal id
+$nk = "nk_example"; // string | Foreign key for designs.
+$fk = "fk_example"; // string | Foreign key for designMembers
+
+try {
+    $api_instance->portalsIdDesignsNkDesignMembersFkDelete($id, $nk, $fk);
+} catch (Exception $e) {
+    echo 'Exception when calling PortalApi->portalsIdDesignsNkDesignMembersFkDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Portal id |
+ **nk** | **string**| Foreign key for designs. |
+ **fk** | **string**| Foreign key for designMembers |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **portalsIdDesignsNkDesignMembersFkGet**
+> \Swagger\Client\Model\DesignMember portalsIdDesignsNkDesignMembersFkGet($id, $nk, $fk)
+
+Find a related item by id for designMembers.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\PortalApi();
+$id = "id_example"; // string | Portal id
+$nk = "nk_example"; // string | Foreign key for designs.
+$fk = "fk_example"; // string | Foreign key for designMembers
+
+try {
+    $result = $api_instance->portalsIdDesignsNkDesignMembersFkGet($id, $nk, $fk);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PortalApi->portalsIdDesignsNkDesignMembersFkGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Portal id |
+ **nk** | **string**| Foreign key for designs. |
+ **fk** | **string**| Foreign key for designMembers |
+
+### Return type
+
+[**\Swagger\Client\Model\DesignMember**](../Model/DesignMember.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **portalsIdDesignsNkDesignMembersFkPut**
+> \Swagger\Client\Model\DesignMember portalsIdDesignsNkDesignMembersFkPut($id, $nk, $fk, $data)
+
+Update a related item by id for designMembers.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\PortalApi();
+$id = "id_example"; // string | Portal id
+$nk = "nk_example"; // string | Foreign key for designs.
+$fk = "fk_example"; // string | Foreign key for designMembers
+$data = new \Swagger\Client\Model\DesignMember(); // \Swagger\Client\Model\DesignMember | 
+
+try {
+    $result = $api_instance->portalsIdDesignsNkDesignMembersFkPut($id, $nk, $fk, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PortalApi->portalsIdDesignsNkDesignMembersFkPut: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Portal id |
+ **nk** | **string**| Foreign key for designs. |
+ **fk** | **string**| Foreign key for designMembers |
+ **data** | [**\Swagger\Client\Model\DesignMember**](../Model/\Swagger\Client\Model\DesignMember.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\DesignMember**](../Model/DesignMember.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **portalsIdDesignsNkDesignMembersGet**
+> \Swagger\Client\Model\DesignMember[] portalsIdDesignsNkDesignMembersGet($id, $nk, $filter)
+
+Queries designMembers of Design.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\PortalApi();
+$id = "id_example"; // string | Portal id
+$nk = "nk_example"; // string | Foreign key for designs.
+$filter = "filter_example"; // string | 
+
+try {
+    $result = $api_instance->portalsIdDesignsNkDesignMembersGet($id, $nk, $filter);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PortalApi->portalsIdDesignsNkDesignMembersGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Portal id |
+ **nk** | **string**| Foreign key for designs. |
+ **filter** | **string**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\DesignMember[]**](../Model/DesignMember.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **portalsIdDesignsNkDesignMembersPost**
+> \Swagger\Client\Model\DesignMember portalsIdDesignsNkDesignMembersPost($id, $nk, $data)
+
+Creates a new instance in designMembers of this model.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\PortalApi();
+$id = "id_example"; // string | Portal id
+$nk = "nk_example"; // string | Foreign key for designs.
+$data = new \Swagger\Client\Model\DesignMember(); // \Swagger\Client\Model\DesignMember | 
+
+try {
+    $result = $api_instance->portalsIdDesignsNkDesignMembersPost($id, $nk, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PortalApi->portalsIdDesignsNkDesignMembersPost: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Portal id |
+ **nk** | **string**| Foreign key for designs. |
+ **data** | [**\Swagger\Client\Model\DesignMember**](../Model/\Swagger\Client\Model\DesignMember.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\DesignMember**](../Model/DesignMember.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **portalsIdDesignsNkDynamicDataGet**
+> \Swagger\Client\Model\DynamicData portalsIdDesignsNkDynamicDataGet($id, $nk, $refresh)
+
+Fetches belongsTo relation dynamicData.
 
 ### Example
 ```php
@@ -2037,10 +2417,10 @@ $nk = "nk_example"; // string | Foreign key for designs.
 $refresh = true; // bool | 
 
 try {
-    $result = $api_instance->portalsIdDesignsNkCustomerGet($id, $nk, $refresh);
+    $result = $api_instance->portalsIdDesignsNkDynamicDataGet($id, $nk, $refresh);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PortalApi->portalsIdDesignsNkCustomerGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PortalApi->portalsIdDesignsNkDynamicDataGet: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -2055,7 +2435,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Customer**](../Model/Customer.md)
+[**\Swagger\Client\Model\DynamicData**](../Model/DynamicData.md)
 
 ### Authorization
 
@@ -2470,6 +2850,525 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\DesignFolder**](../Model/DesignFolder.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **portalsIdDesignsNkMembersCountGet**
+> \Swagger\Client\Model\InlineResponse200 portalsIdDesignsNkMembersCountGet($id, $nk, $where)
+
+Counts members of Design.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\PortalApi();
+$id = "id_example"; // string | Portal id
+$nk = "nk_example"; // string | Foreign key for designs.
+$where = "where_example"; // string | Criteria to match model instances
+
+try {
+    $result = $api_instance->portalsIdDesignsNkMembersCountGet($id, $nk, $where);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PortalApi->portalsIdDesignsNkMembersCountGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Portal id |
+ **nk** | **string**| Foreign key for designs. |
+ **where** | **string**| Criteria to match model instances | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **portalsIdDesignsNkMembersDelete**
+> portalsIdDesignsNkMembersDelete($id, $nk)
+
+Deletes all members of this model.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\PortalApi();
+$id = "id_example"; // string | Portal id
+$nk = "nk_example"; // string | Foreign key for designs.
+
+try {
+    $api_instance->portalsIdDesignsNkMembersDelete($id, $nk);
+} catch (Exception $e) {
+    echo 'Exception when calling PortalApi->portalsIdDesignsNkMembersDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Portal id |
+ **nk** | **string**| Foreign key for designs. |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **portalsIdDesignsNkMembersFkDelete**
+> portalsIdDesignsNkMembersFkDelete($id, $nk, $fk)
+
+Delete a related item by id for members.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\PortalApi();
+$id = "id_example"; // string | Portal id
+$nk = "nk_example"; // string | Foreign key for designs.
+$fk = "fk_example"; // string | Foreign key for members
+
+try {
+    $api_instance->portalsIdDesignsNkMembersFkDelete($id, $nk, $fk);
+} catch (Exception $e) {
+    echo 'Exception when calling PortalApi->portalsIdDesignsNkMembersFkDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Portal id |
+ **nk** | **string**| Foreign key for designs. |
+ **fk** | **string**| Foreign key for members |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **portalsIdDesignsNkMembersFkGet**
+> \Swagger\Client\Model\TeamMember portalsIdDesignsNkMembersFkGet($id, $nk, $fk)
+
+Find a related item by id for members.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\PortalApi();
+$id = "id_example"; // string | Portal id
+$nk = "nk_example"; // string | Foreign key for designs.
+$fk = "fk_example"; // string | Foreign key for members
+
+try {
+    $result = $api_instance->portalsIdDesignsNkMembersFkGet($id, $nk, $fk);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PortalApi->portalsIdDesignsNkMembersFkGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Portal id |
+ **nk** | **string**| Foreign key for designs. |
+ **fk** | **string**| Foreign key for members |
+
+### Return type
+
+[**\Swagger\Client\Model\TeamMember**](../Model/TeamMember.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **portalsIdDesignsNkMembersFkPut**
+> \Swagger\Client\Model\TeamMember portalsIdDesignsNkMembersFkPut($id, $nk, $fk, $data)
+
+Update a related item by id for members.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\PortalApi();
+$id = "id_example"; // string | Portal id
+$nk = "nk_example"; // string | Foreign key for designs.
+$fk = "fk_example"; // string | Foreign key for members
+$data = new \Swagger\Client\Model\TeamMember(); // \Swagger\Client\Model\TeamMember | 
+
+try {
+    $result = $api_instance->portalsIdDesignsNkMembersFkPut($id, $nk, $fk, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PortalApi->portalsIdDesignsNkMembersFkPut: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Portal id |
+ **nk** | **string**| Foreign key for designs. |
+ **fk** | **string**| Foreign key for members |
+ **data** | [**\Swagger\Client\Model\TeamMember**](../Model/\Swagger\Client\Model\TeamMember.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\TeamMember**](../Model/TeamMember.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **portalsIdDesignsNkMembersGet**
+> \Swagger\Client\Model\TeamMember[] portalsIdDesignsNkMembersGet($id, $nk, $filter)
+
+Queries members of Design.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\PortalApi();
+$id = "id_example"; // string | Portal id
+$nk = "nk_example"; // string | Foreign key for designs.
+$filter = "filter_example"; // string | 
+
+try {
+    $result = $api_instance->portalsIdDesignsNkMembersGet($id, $nk, $filter);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PortalApi->portalsIdDesignsNkMembersGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Portal id |
+ **nk** | **string**| Foreign key for designs. |
+ **filter** | **string**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\TeamMember[]**](../Model/TeamMember.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **portalsIdDesignsNkMembersPost**
+> \Swagger\Client\Model\TeamMember portalsIdDesignsNkMembersPost($id, $nk, $data)
+
+Creates a new instance in members of this model.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\PortalApi();
+$id = "id_example"; // string | Portal id
+$nk = "nk_example"; // string | Foreign key for designs.
+$data = new \Swagger\Client\Model\TeamMember(); // \Swagger\Client\Model\TeamMember | 
+
+try {
+    $result = $api_instance->portalsIdDesignsNkMembersPost($id, $nk, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PortalApi->portalsIdDesignsNkMembersPost: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Portal id |
+ **nk** | **string**| Foreign key for designs. |
+ **data** | [**\Swagger\Client\Model\TeamMember**](../Model/\Swagger\Client\Model\TeamMember.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\TeamMember**](../Model/TeamMember.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **portalsIdDesignsNkMembersRelFkDelete**
+> portalsIdDesignsNkMembersRelFkDelete($id, $nk, $fk)
+
+Remove the members relation to an item by id.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\PortalApi();
+$id = "id_example"; // string | Portal id
+$nk = "nk_example"; // string | Foreign key for designs.
+$fk = "fk_example"; // string | Foreign key for members
+
+try {
+    $api_instance->portalsIdDesignsNkMembersRelFkDelete($id, $nk, $fk);
+} catch (Exception $e) {
+    echo 'Exception when calling PortalApi->portalsIdDesignsNkMembersRelFkDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Portal id |
+ **nk** | **string**| Foreign key for designs. |
+ **fk** | **string**| Foreign key for members |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **portalsIdDesignsNkMembersRelFkHead**
+> bool portalsIdDesignsNkMembersRelFkHead($id, $nk, $fk)
+
+Check the existence of members relation to an item by id.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\PortalApi();
+$id = "id_example"; // string | Portal id
+$nk = "nk_example"; // string | Foreign key for designs.
+$fk = "fk_example"; // string | Foreign key for members
+
+try {
+    $result = $api_instance->portalsIdDesignsNkMembersRelFkHead($id, $nk, $fk);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PortalApi->portalsIdDesignsNkMembersRelFkHead: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Portal id |
+ **nk** | **string**| Foreign key for designs. |
+ **fk** | **string**| Foreign key for members |
+
+### Return type
+
+**bool**
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **portalsIdDesignsNkMembersRelFkPut**
+> \Swagger\Client\Model\DesignMember portalsIdDesignsNkMembersRelFkPut($id, $nk, $fk, $data)
+
+Add a related item by id for members.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\PortalApi();
+$id = "id_example"; // string | Portal id
+$nk = "nk_example"; // string | Foreign key for designs.
+$fk = "fk_example"; // string | Foreign key for members
+$data = new \Swagger\Client\Model\DesignMember(); // \Swagger\Client\Model\DesignMember | 
+
+try {
+    $result = $api_instance->portalsIdDesignsNkMembersRelFkPut($id, $nk, $fk, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PortalApi->portalsIdDesignsNkMembersRelFkPut: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Portal id |
+ **nk** | **string**| Foreign key for designs. |
+ **fk** | **string**| Foreign key for members |
+ **data** | [**\Swagger\Client\Model\DesignMember**](../Model/\Swagger\Client\Model\DesignMember.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\DesignMember**](../Model/DesignMember.md)
 
 ### Authorization
 
@@ -3402,6 +4301,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\DesignTag**](../Model/DesignTag.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **portalsIdDesignsNkTeamGet**
+> \Swagger\Client\Model\Team portalsIdDesignsNkTeamGet($id, $nk, $refresh)
+
+Fetches belongsTo relation team.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\PortalApi();
+$id = "id_example"; // string | Portal id
+$nk = "nk_example"; // string | Foreign key for designs.
+$refresh = true; // bool | 
+
+try {
+    $result = $api_instance->portalsIdDesignsNkTeamGet($id, $nk, $refresh);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PortalApi->portalsIdDesignsNkTeamGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Portal id |
+ **nk** | **string**| Foreign key for designs. |
+ **refresh** | **bool**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\Team**](../Model/Team.md)
 
 ### Authorization
 

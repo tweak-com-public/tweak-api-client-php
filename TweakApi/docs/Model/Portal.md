@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **string** |  | 
-**logo** | **object** |  | [optional] 
+**logo** | [**\Swagger\Client\Model\CloudinaryImage**](CloudinaryImage.md) |  | [optional] 
 **status** | **string** |  | [optional] 
 **language** | **string** |  | [optional] 
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 

@@ -18,6 +18,8 @@ Method | HTTP request | Description
 [**invitationTicketsIdPatch**](InvitationTicketApi.md#invitationTicketsIdPatch) | **PATCH** /InvitationTickets/{id} | Patch attributes for a model instance and persist it into the data source.
 [**invitationTicketsIdPut**](InvitationTicketApi.md#invitationTicketsIdPut) | **PUT** /InvitationTickets/{id} | Replace attributes for a model instance and persist it into the data source.
 [**invitationTicketsIdReplacePost**](InvitationTicketApi.md#invitationTicketsIdReplacePost) | **POST** /InvitationTickets/{id}/replace | Replace attributes for a model instance and persist it into the data source.
+[**invitationTicketsIdTargetDesignGet**](InvitationTicketApi.md#invitationTicketsIdTargetDesignGet) | **GET** /InvitationTickets/{id}/targetDesign | Fetches belongsTo relation targetDesign.
+[**invitationTicketsIdTargetDesignMemberGet**](InvitationTicketApi.md#invitationTicketsIdTargetDesignMemberGet) | **GET** /InvitationTickets/{id}/targetDesignMember | Fetches belongsTo relation targetDesignMember.
 [**invitationTicketsIdTargetImageFolderGet**](InvitationTicketApi.md#invitationTicketsIdTargetImageFolderGet) | **GET** /InvitationTickets/{id}/targetImageFolder | Fetches belongsTo relation targetImageFolder.
 [**invitationTicketsIdTargetImageFolderMemberGet**](InvitationTicketApi.md#invitationTicketsIdTargetImageFolderMemberGet) | **GET** /InvitationTickets/{id}/targetImageFolderMember | Fetches belongsTo relation targetImageFolderMember.
 [**invitationTicketsIdTargetPortalGet**](InvitationTicketApi.md#invitationTicketsIdTargetPortalGet) | **GET** /InvitationTickets/{id}/targetPortal | Fetches belongsTo relation targetPortal.
@@ -706,6 +708,106 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\InvitationTicket**](../Model/InvitationTicket.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **invitationTicketsIdTargetDesignGet**
+> \Swagger\Client\Model\Design invitationTicketsIdTargetDesignGet($id, $refresh)
+
+Fetches belongsTo relation targetDesign.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\InvitationTicketApi();
+$id = "id_example"; // string | InvitationTicket id
+$refresh = true; // bool | 
+
+try {
+    $result = $api_instance->invitationTicketsIdTargetDesignGet($id, $refresh);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling InvitationTicketApi->invitationTicketsIdTargetDesignGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| InvitationTicket id |
+ **refresh** | **bool**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\Design**](../Model/Design.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **invitationTicketsIdTargetDesignMemberGet**
+> \Swagger\Client\Model\DesignMember invitationTicketsIdTargetDesignMemberGet($id, $refresh)
+
+Fetches belongsTo relation targetDesignMember.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\InvitationTicketApi();
+$id = "id_example"; // string | InvitationTicket id
+$refresh = true; // bool | 
+
+try {
+    $result = $api_instance->invitationTicketsIdTargetDesignMemberGet($id, $refresh);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling InvitationTicketApi->invitationTicketsIdTargetDesignMemberGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| InvitationTicket id |
+ **refresh** | **bool**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\DesignMember**](../Model/DesignMember.md)
 
 ### Authorization
 

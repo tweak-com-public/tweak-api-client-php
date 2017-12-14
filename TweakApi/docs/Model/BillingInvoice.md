@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **paid** | **bool** |  | [optional] 
 **periodEnd** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **periodStart** | [**\DateTime**](\DateTime.md) |  | [optional] 
+**number** | **string** |  | [optional] 
 **reciptNumber** | **string** |  | [optional] 
 **startingBalance** | **double** |  | [optional] 
 **statementDescriptor** | **string** |  | [optional] 
