@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **string** |  | 
 **code** | **string** |  | 
+**legacyCode** | **string** |  | [optional] 
 **thumbnail** | [**\Swagger\Client\Model\CloudinaryImage**](CloudinaryImage.md) |  | [optional] 
 **foldingType** | **string** |  | [optional] 
 **foldingMethod** | **string** |  | [optional] 
