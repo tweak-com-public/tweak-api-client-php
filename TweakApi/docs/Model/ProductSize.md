@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **string** |  | 
 **code** | **string** |  | 
+**legacyCode** | **string** |  | [optional] 
 **thumbnail** | [**\Swagger\Client\Model\CloudinaryImage**](CloudinaryImage.md) |  | [optional] 
 **foldingType** | **string** |  | [optional] 
 **foldingMethod** | **string** |  | [optional] 
@@ -16,6 +17,7 @@ Name | Type | Description | Notes
 **pdfSize** | [**\Swagger\Client\Model\Dimensions**](Dimensions.md) |  | [optional] 
 **pdfPageCount** | **double** |  | [optional] [default to 1.0]
 **pdfDpi** | **double** |  | [optional] [default to 300.0]
+**pdfOutputScale** | **double** |  | [optional] [default to 100.0]
 **printProfile** | **string** |  | [optional] 
 **customerSize** | [**\Swagger\Client\Model\Dimensions**](Dimensions.md) |  | [optional] 
 **customerPageCount** | **double** |  | [optional] [default to 1.0]
@@ -29,6 +31,8 @@ Name | Type | Description | Notes
 **format** | **string** |  | 
 **envelopeWindow** | **string** |  | [optional] 
 **canvasImageCount** | **double** |  | [optional] [default to 0.0]
+**options** | **string** |  | [optional] [default to 'none']
+**displayType** | **string** |  | [optional] [default to 'none']
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **modified** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **id** | **string** |  | [optional] 
