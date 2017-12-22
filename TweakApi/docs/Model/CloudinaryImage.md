@@ -17,8 +17,11 @@ Name | Type | Description | Notes
 **etag** | **string** |  | [optional] 
 **url** | **string** |  | 
 **secureUrl** | **string** |  | 
+**thumbnailUrl** | **string** |  | [optional] 
+**thumbnailSecureUrl** | **string** |  | [optional] 
 **originalFilename** | **string** |  | [optional] 
 **isBase64** | **bool** |  | [optional] [default to false]
+**resp** | **object** |  | [optional] 
 **id** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
