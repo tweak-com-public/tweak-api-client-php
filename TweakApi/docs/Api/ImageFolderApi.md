@@ -167,7 +167,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **imageFoldersCountGet**
-> \Swagger\Client\Model\InlineResponse200 imageFoldersCountGet($where)
+> \Swagger\Client\Model\InlineResponse2001 imageFoldersCountGet($where)
 
 Count instances of the model matched by where from the data source.
 
@@ -201,7 +201,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -311,7 +311,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **imageFoldersIdChildrenCountGet**
-> \Swagger\Client\Model\InlineResponse200 imageFoldersIdChildrenCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 imageFoldersIdChildrenCountGet($id, $where)
 
 Counts children of ImageFolder.
 
@@ -347,7 +347,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -707,7 +707,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **imageFoldersIdExistsGet**
-> \Swagger\Client\Model\InlineResponse2001 imageFoldersIdExistsGet($id)
+> \Swagger\Client\Model\InlineResponse2002 imageFoldersIdExistsGet($id)
 
 Check whether a model instance exists in the data source.
 
@@ -741,7 +741,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -755,7 +755,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **imageFoldersIdFolderMembersCountGet**
-> \Swagger\Client\Model\InlineResponse200 imageFoldersIdFolderMembersCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 imageFoldersIdFolderMembersCountGet($id, $where)
 
 Counts folderMembers of ImageFolder.
 
@@ -791,7 +791,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -1153,7 +1153,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **imageFoldersIdHead**
-> \Swagger\Client\Model\InlineResponse2001 imageFoldersIdHead($id)
+> \Swagger\Client\Model\InlineResponse2002 imageFoldersIdHead($id)
 
 Check whether a model instance exists in the data source.
 
@@ -1187,7 +1187,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -1201,7 +1201,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **imageFoldersIdImagesCountGet**
-> \Swagger\Client\Model\InlineResponse200 imageFoldersIdImagesCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 imageFoldersIdImagesCountGet($id, $where)
 
 Counts images of ImageFolder.
 
@@ -1237,7 +1237,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -1707,7 +1707,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **imageFoldersIdMembersCountGet**
-> \Swagger\Client\Model\InlineResponse200 imageFoldersIdMembersCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 imageFoldersIdMembersCountGet($id, $where)
 
 Counts members of ImageFolder.
 
@@ -1743,7 +1743,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -2306,7 +2306,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **imageFoldersIdPortalsCountGet**
-> \Swagger\Client\Model\InlineResponse200 imageFoldersIdPortalsCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 imageFoldersIdPortalsCountGet($id, $where)
 
 Counts portals of ImageFolder.
 
@@ -2342,7 +2342,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -3147,7 +3147,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **imageFoldersUpdatePost**
-> \Swagger\Client\Model\InlineResponse2002 imageFoldersUpdatePost($where, $data)
+> \Swagger\Client\Model\InlineResponse2003 imageFoldersUpdatePost($where, $data)
 
 Update instances of the model matched by {{where}} from the data source.
 
@@ -3183,7 +3183,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
 
 ### Authorization
 

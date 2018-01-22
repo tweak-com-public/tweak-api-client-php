@@ -398,7 +398,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamMembersCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamMembersCountGet($where)
+> \Swagger\Client\Model\InlineResponse2001 teamMembersCountGet($where)
 
 Count instances of the model matched by where from the data source.
 
@@ -432,7 +432,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -542,7 +542,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamMembersIdAssignedDesignsCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamMembersIdAssignedDesignsCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamMembersIdAssignedDesignsCountGet($id, $where)
 
 Counts assignedDesigns of TeamMember.
 
@@ -578,7 +578,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -890,7 +890,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamMembersIdCommentedDesignsCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamMembersIdCommentedDesignsCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamMembersIdCommentedDesignsCountGet($id, $where)
 
 Counts commentedDesigns of TeamMember.
 
@@ -926,7 +926,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -1487,7 +1487,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamMembersIdDesignCommentsCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamMembersIdDesignCommentsCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamMembersIdDesignCommentsCountGet($id, $where)
 
 Counts designComments of TeamMember.
 
@@ -1523,7 +1523,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -1835,7 +1835,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamMembersIdDesignFoldersCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamMembersIdDesignFoldersCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamMembersIdDesignFoldersCountGet($id, $where)
 
 Counts designFolders of TeamMember.
 
@@ -1871,7 +1871,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -2183,7 +2183,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamMembersIdDesignSharesCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamMembersIdDesignSharesCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamMembersIdDesignSharesCountGet($id, $where)
 
 Counts designShares of TeamMember.
 
@@ -2219,7 +2219,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -2531,7 +2531,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamMembersIdExistsGet**
-> \Swagger\Client\Model\InlineResponse2001 teamMembersIdExistsGet($id)
+> \Swagger\Client\Model\InlineResponse2002 teamMembersIdExistsGet($id)
 
 Check whether a model instance exists in the data source.
 
@@ -2565,7 +2565,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -2629,7 +2629,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamMembersIdHead**
-> \Swagger\Client\Model\InlineResponse2001 teamMembersIdHead($id)
+> \Swagger\Client\Model\InlineResponse2002 teamMembersIdHead($id)
 
 Check whether a model instance exists in the data source.
 
@@ -2663,7 +2663,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -2677,7 +2677,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamMembersIdImageFoldersCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamMembersIdImageFoldersCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamMembersIdImageFoldersCountGet($id, $where)
 
 Counts imageFolders of TeamMember.
 
@@ -2713,7 +2713,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -3176,7 +3176,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamMembersIdInvitationTicketsCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamMembersIdInvitationTicketsCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamMembersIdInvitationTicketsCountGet($id, $where)
 
 Counts invitationTickets of TeamMember.
 
@@ -3212,7 +3212,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -3578,7 +3578,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamMembersIdNotificationsCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamMembersIdNotificationsCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamMembersIdNotificationsCountGet($id, $where)
 
 Counts notifications of TeamMember.
 
@@ -3614,7 +3614,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -4028,7 +4028,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamMembersIdPortalsCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamMembersIdPortalsCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamMembersIdPortalsCountGet($id, $where)
 
 Counts portals of TeamMember.
 
@@ -4064,7 +4064,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -4843,7 +4843,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamMembersIdRequestedDesignExportsCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamMembersIdRequestedDesignExportsCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamMembersIdRequestedDesignExportsCountGet($id, $where)
 
 Counts requestedDesignExports of TeamMember.
 
@@ -4879,7 +4879,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -5191,7 +5191,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamMembersIdRequestedDesignsCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamMembersIdRequestedDesignsCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamMembersIdRequestedDesignsCountGet($id, $where)
 
 Counts requestedDesigns of TeamMember.
 
@@ -5227,7 +5227,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -5539,7 +5539,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamMembersIdReviewedDesignsCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamMembersIdReviewedDesignsCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamMembersIdReviewedDesignsCountGet($id, $where)
 
 Counts reviewedDesigns of TeamMember.
 
@@ -5575,7 +5575,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -5887,7 +5887,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamMembersIdSharedDesignsCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamMembersIdSharedDesignsCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamMembersIdSharedDesignsCountGet($id, $where)
 
 Counts sharedDesigns of TeamMember.
 
@@ -5923,7 +5923,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -7287,7 +7287,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamMembersIdTeamBuilderConfigsCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamMembersIdTeamBuilderConfigsCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamMembersIdTeamBuilderConfigsCountGet($id, $where)
 
 Counts builderConfigs of Team.
 
@@ -7323,7 +7323,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -7935,7 +7935,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamMembersIdTeamDataSourcesCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamMembersIdTeamDataSourcesCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamMembersIdTeamDataSourcesCountGet($id, $where)
 
 Counts dataSources of Team.
 
@@ -7971,7 +7971,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -8283,7 +8283,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamMembersIdTeamDynamicDatasCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamMembersIdTeamDynamicDatasCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamMembersIdTeamDynamicDatasCountGet($id, $where)
 
 Counts dynamicDatas of Team.
 
@@ -8319,7 +8319,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -8681,7 +8681,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamMembersIdTeamImageFoldersCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamMembersIdTeamImageFoldersCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamMembersIdTeamImageFoldersCountGet($id, $where)
 
 Counts imageFolders of Team.
 
@@ -8717,7 +8717,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -9029,7 +9029,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamMembersIdTeamImagesCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamMembersIdTeamImagesCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamMembersIdTeamImagesCountGet($id, $where)
 
 Counts images of Team.
 
@@ -9065,7 +9065,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -9429,7 +9429,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamMembersIdTeamMembersCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamMembersIdTeamMembersCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamMembersIdTeamMembersCountGet($id, $where)
 
 Counts members of Team.
 
@@ -9465,7 +9465,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -10125,7 +10125,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamMembersIdTeamPortalsCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamMembersIdTeamPortalsCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamMembersIdTeamPortalsCountGet($id, $where)
 
 Counts portals of Team.
 
@@ -10161,7 +10161,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -10473,7 +10473,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamMembersIdTeamProductMaterialsCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamMembersIdTeamProductMaterialsCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamMembersIdTeamProductMaterialsCountGet($id, $where)
 
 Counts productMaterials of Team.
 
@@ -10509,7 +10509,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -10871,7 +10871,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamMembersIdTeamProductPdfColorProfilesCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamMembersIdTeamProductPdfColorProfilesCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamMembersIdTeamProductPdfColorProfilesCountGet($id, $where)
 
 Counts productPdfColorProfiles of Team.
 
@@ -10907,7 +10907,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -11217,7 +11217,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamMembersIdTeamProductSizeMaterialsCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamMembersIdTeamProductSizeMaterialsCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamMembersIdTeamProductSizeMaterialsCountGet($id, $where)
 
 Counts productSizeMaterials of Team.
 
@@ -11253,7 +11253,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -11615,7 +11615,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamMembersIdTeamTeamMembersCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamMembersIdTeamTeamMembersCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamMembersIdTeamTeamMembersCountGet($id, $where)
 
 Counts teamMembers of Team.
 
@@ -11651,7 +11651,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -11963,7 +11963,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamMembersIdTeamTemplateFoldersCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamMembersIdTeamTemplateFoldersCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamMembersIdTeamTemplateFoldersCountGet($id, $where)
 
 Counts templateFolders of Team.
 
@@ -11999,7 +11999,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -12311,7 +12311,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamMembersIdTeamTemplatesCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamMembersIdTeamTemplatesCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamMembersIdTeamTemplatesCountGet($id, $where)
 
 Counts templates of Team.
 
@@ -12347,7 +12347,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -12761,7 +12761,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamMembersIdTeamWorkflowsCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamMembersIdTeamWorkflowsCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamMembersIdTeamWorkflowsCountGet($id, $where)
 
 Counts workflows of Team.
 
@@ -12797,7 +12797,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -13109,7 +13109,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamMembersIdTemplatesCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamMembersIdTemplatesCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamMembersIdTemplatesCountGet($id, $where)
 
 Counts templates of TeamMember.
 
@@ -13145,7 +13145,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -14034,7 +14034,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamMembersIdUploadedTemplatesCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamMembersIdUploadedTemplatesCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamMembersIdUploadedTemplatesCountGet($id, $where)
 
 Counts uploadedTemplates of TeamMember.
 
@@ -14070,7 +14070,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -14382,7 +14382,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamMembersIdWorkflowsCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamMembersIdWorkflowsCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamMembersIdWorkflowsCountGet($id, $where)
 
 Counts workflows of TeamMember.
 
@@ -14418,7 +14418,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -14922,7 +14922,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamMembersUpdatePost**
-> \Swagger\Client\Model\InlineResponse2002 teamMembersUpdatePost($where, $data)
+> \Swagger\Client\Model\InlineResponse2003 teamMembersUpdatePost($where, $data)
 
 Update instances of the model matched by {{where}} from the data source.
 
@@ -14958,7 +14958,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
 
 ### Authorization
 

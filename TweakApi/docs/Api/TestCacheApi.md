@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **testCachesCountGet**
-> \Swagger\Client\Model\InlineResponse200 testCachesCountGet($where)
+> \Swagger\Client\Model\InlineResponse2001 testCachesCountGet($where)
 
 Count instances of the model matched by where from the data source.
 
@@ -155,7 +155,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -313,7 +313,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **testCachesIdExistsGet**
-> \Swagger\Client\Model\InlineResponse2001 testCachesIdExistsGet($id)
+> \Swagger\Client\Model\InlineResponse2002 testCachesIdExistsGet($id)
 
 Check whether a model instance exists in the data source.
 
@@ -347,7 +347,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -411,7 +411,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **testCachesIdHead**
-> \Swagger\Client\Model\InlineResponse2001 testCachesIdHead($id)
+> \Swagger\Client\Model\InlineResponse2002 testCachesIdHead($id)
 
 Check whether a model instance exists in the data source.
 
@@ -445,7 +445,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -801,7 +801,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **testCachesUpdatePost**
-> \Swagger\Client\Model\InlineResponse2002 testCachesUpdatePost($where, $data)
+> \Swagger\Client\Model\InlineResponse2003 testCachesUpdatePost($where, $data)
 
 Update instances of the model matched by {{where}} from the data source.
 
@@ -837,7 +837,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
 
 ### Authorization
 
