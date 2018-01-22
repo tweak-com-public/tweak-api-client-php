@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **dataSourceRecordValuesCountGet**
-> \Swagger\Client\Model\InlineResponse200 dataSourceRecordValuesCountGet($where)
+> \Swagger\Client\Model\InlineResponse2001 dataSourceRecordValuesCountGet($where)
 
 Count instances of the model matched by where from the data source.
 
@@ -159,7 +159,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -367,7 +367,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **dataSourceRecordValuesIdExistsGet**
-> \Swagger\Client\Model\InlineResponse2001 dataSourceRecordValuesIdExistsGet($id)
+> \Swagger\Client\Model\InlineResponse2002 dataSourceRecordValuesIdExistsGet($id)
 
 Check whether a model instance exists in the data source.
 
@@ -401,7 +401,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -465,7 +465,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **dataSourceRecordValuesIdHead**
-> \Swagger\Client\Model\InlineResponse2001 dataSourceRecordValuesIdHead($id)
+> \Swagger\Client\Model\InlineResponse2002 dataSourceRecordValuesIdHead($id)
 
 Check whether a model instance exists in the data source.
 
@@ -499,7 +499,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -1005,7 +1005,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **dataSourceRecordValuesUpdatePost**
-> \Swagger\Client\Model\InlineResponse2002 dataSourceRecordValuesUpdatePost($where, $data)
+> \Swagger\Client\Model\InlineResponse2003 dataSourceRecordValuesUpdatePost($where, $data)
 
 Update instances of the model matched by {{where}} from the data source.
 
@@ -1041,7 +1041,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
 
 ### Authorization
 

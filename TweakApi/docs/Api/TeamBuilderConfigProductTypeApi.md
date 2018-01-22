@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamBuilderConfigProductTypesCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamBuilderConfigProductTypesCountGet($where)
+> \Swagger\Client\Model\InlineResponse2001 teamBuilderConfigProductTypesCountGet($where)
 
 Count instances of the model matched by where from the data source.
 
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -365,7 +365,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamBuilderConfigProductTypesIdExistsGet**
-> \Swagger\Client\Model\InlineResponse2001 teamBuilderConfigProductTypesIdExistsGet($id)
+> \Swagger\Client\Model\InlineResponse2002 teamBuilderConfigProductTypesIdExistsGet($id)
 
 Check whether a model instance exists in the data source.
 
@@ -399,7 +399,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -463,7 +463,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamBuilderConfigProductTypesIdHead**
-> \Swagger\Client\Model\InlineResponse2001 teamBuilderConfigProductTypesIdHead($id)
+> \Swagger\Client\Model\InlineResponse2002 teamBuilderConfigProductTypesIdHead($id)
 
 Check whether a model instance exists in the data source.
 
@@ -497,7 +497,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -903,7 +903,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamBuilderConfigProductTypesUpdatePost**
-> \Swagger\Client\Model\InlineResponse2002 teamBuilderConfigProductTypesUpdatePost($where, $data)
+> \Swagger\Client\Model\InlineResponse2003 teamBuilderConfigProductTypesUpdatePost($where, $data)
 
 Update instances of the model matched by {{where}} from the data source.
 
@@ -939,7 +939,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
 
 ### Authorization
 

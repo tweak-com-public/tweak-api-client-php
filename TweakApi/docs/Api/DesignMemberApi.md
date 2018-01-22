@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **designMembersCountGet**
-> \Swagger\Client\Model\InlineResponse200 designMembersCountGet($where)
+> \Swagger\Client\Model\InlineResponse2001 designMembersCountGet($where)
 
 Count instances of the model matched by where from the data source.
 
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -365,7 +365,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **designMembersIdExistsGet**
-> \Swagger\Client\Model\InlineResponse2001 designMembersIdExistsGet($id)
+> \Swagger\Client\Model\InlineResponse2002 designMembersIdExistsGet($id)
 
 Check whether a model instance exists in the data source.
 
@@ -399,7 +399,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -463,7 +463,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **designMembersIdHead**
-> \Swagger\Client\Model\InlineResponse2001 designMembersIdHead($id)
+> \Swagger\Client\Model\InlineResponse2002 designMembersIdHead($id)
 
 Check whether a model instance exists in the data source.
 
@@ -497,7 +497,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -903,7 +903,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **designMembersUpdatePost**
-> \Swagger\Client\Model\InlineResponse2002 designMembersUpdatePost($where, $data)
+> \Swagger\Client\Model\InlineResponse2003 designMembersUpdatePost($where, $data)
 
 Update instances of the model matched by {{where}} from the data source.
 
@@ -939,7 +939,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
 
 ### Authorization
 

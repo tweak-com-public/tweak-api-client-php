@@ -188,7 +188,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **templatesCountGet**
-> \Swagger\Client\Model\InlineResponse200 templatesCountGet($where)
+> \Swagger\Client\Model\InlineResponse2001 templatesCountGet($where)
 
 Count instances of the model matched by where from the data source.
 
@@ -222,7 +222,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -380,7 +380,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **templatesIdDesignsCountGet**
-> \Swagger\Client\Model\InlineResponse200 templatesIdDesignsCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 templatesIdDesignsCountGet($id, $where)
 
 Counts designs of Template.
 
@@ -416,7 +416,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -780,7 +780,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **templatesIdExistsGet**
-> \Swagger\Client\Model\InlineResponse2001 templatesIdExistsGet($id)
+> \Swagger\Client\Model\InlineResponse2002 templatesIdExistsGet($id)
 
 Check whether a model instance exists in the data source.
 
@@ -814,7 +814,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -878,7 +878,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **templatesIdHead**
-> \Swagger\Client\Model\InlineResponse2001 templatesIdHead($id)
+> \Swagger\Client\Model\InlineResponse2002 templatesIdHead($id)
 
 Check whether a model instance exists in the data source.
 
@@ -912,7 +912,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -1084,7 +1084,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **templatesIdMembersCountGet**
-> \Swagger\Client\Model\InlineResponse200 templatesIdMembersCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 templatesIdMembersCountGet($id, $where)
 
 Counts members of Template.
 
@@ -1120,7 +1120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -1830,7 +1830,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **templatesIdPortalFoldersCountGet**
-> \Swagger\Client\Model\InlineResponse200 templatesIdPortalFoldersCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 templatesIdPortalFoldersCountGet($id, $where)
 
 Counts portalFolders of Template.
 
@@ -1866,7 +1866,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -2329,7 +2329,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **templatesIdPortalsCountGet**
-> \Swagger\Client\Model\InlineResponse200 templatesIdPortalsCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 templatesIdPortalsCountGet($id, $where)
 
 Counts portals of Template.
 
@@ -2365,7 +2365,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -2928,7 +2928,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **templatesIdTagsCountGet**
-> \Swagger\Client\Model\InlineResponse200 templatesIdTagsCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 templatesIdTagsCountGet($id, $where)
 
 Counts tags of Template.
 
@@ -2964,7 +2964,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -3527,7 +3527,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **templatesIdTemplateMembersCountGet**
-> \Swagger\Client\Model\InlineResponse200 templatesIdTemplateMembersCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 templatesIdTemplateMembersCountGet($id, $where)
 
 Counts templateMembers of Template.
 
@@ -3563,7 +3563,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -4215,7 +4215,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **templatesUpdatePost**
-> \Swagger\Client\Model\InlineResponse2002 templatesUpdatePost($where, $data)
+> \Swagger\Client\Model\InlineResponse2003 templatesUpdatePost($where, $data)
 
 Update instances of the model matched by {{where}} from the data source.
 
@@ -4251,7 +4251,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
 
 ### Authorization
 

@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **qTasksCountGet**
-> \Swagger\Client\Model\InlineResponse200 qTasksCountGet($where)
+> \Swagger\Client\Model\InlineResponse2001 qTasksCountGet($where)
 
 Count instances of the model matched by where from the data source.
 
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -314,7 +314,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **qTasksIdExistsGet**
-> \Swagger\Client\Model\InlineResponse2001 qTasksIdExistsGet($id)
+> \Swagger\Client\Model\InlineResponse2002 qTasksIdExistsGet($id)
 
 Check whether a model instance exists in the data source.
 
@@ -348,7 +348,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -412,7 +412,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **qTasksIdHead**
-> \Swagger\Client\Model\InlineResponse2001 qTasksIdHead($id)
+> \Swagger\Client\Model\InlineResponse2002 qTasksIdHead($id)
 
 Check whether a model instance exists in the data source.
 
@@ -446,7 +446,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -852,7 +852,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **qTasksUpdatePost**
-> \Swagger\Client\Model\InlineResponse2002 qTasksUpdatePost($where, $data)
+> \Swagger\Client\Model\InlineResponse2003 qTasksUpdatePost($where, $data)
 
 Update instances of the model matched by {{where}} from the data source.
 
@@ -888,7 +888,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
 
 ### Authorization
 

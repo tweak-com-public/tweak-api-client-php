@@ -130,7 +130,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **workflowsCountGet**
-> \Swagger\Client\Model\InlineResponse200 workflowsCountGet($where)
+> \Swagger\Client\Model\InlineResponse2001 workflowsCountGet($where)
 
 Count instances of the model matched by where from the data source.
 
@@ -164,7 +164,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -372,7 +372,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **workflowsIdExistsGet**
-> \Swagger\Client\Model\InlineResponse2001 workflowsIdExistsGet($id)
+> \Swagger\Client\Model\InlineResponse2002 workflowsIdExistsGet($id)
 
 Check whether a model instance exists in the data source.
 
@@ -406,7 +406,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -470,7 +470,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **workflowsIdHead**
-> \Swagger\Client\Model\InlineResponse2001 workflowsIdHead($id)
+> \Swagger\Client\Model\InlineResponse2002 workflowsIdHead($id)
 
 Check whether a model instance exists in the data source.
 
@@ -504,7 +504,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -718,7 +718,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **workflowsIdTemplatesCountGet**
-> \Swagger\Client\Model\InlineResponse200 workflowsIdTemplatesCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 workflowsIdTemplatesCountGet($id, $where)
 
 Counts templates of Workflow.
 
@@ -754,7 +754,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -1258,7 +1258,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **workflowsUpdatePost**
-> \Swagger\Client\Model\InlineResponse2002 workflowsUpdatePost($where, $data)
+> \Swagger\Client\Model\InlineResponse2003 workflowsUpdatePost($where, $data)
 
 Update instances of the model matched by {{where}} from the data source.
 
@@ -1294,7 +1294,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
 
 ### Authorization
 

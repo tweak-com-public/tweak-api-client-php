@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamTemplateFoldersCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamTemplateFoldersCountGet($where)
+> \Swagger\Client\Model\InlineResponse2001 teamTemplateFoldersCountGet($where)
 
 Count instances of the model matched by where from the data source.
 
@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -281,7 +281,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamTemplateFoldersIdChildrenCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamTemplateFoldersIdChildrenCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamTemplateFoldersIdChildrenCountGet($id, $where)
 
 Counts children of TeamTemplateFolder.
 
@@ -317,7 +317,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -677,7 +677,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamTemplateFoldersIdExistsGet**
-> \Swagger\Client\Model\InlineResponse2001 teamTemplateFoldersIdExistsGet($id)
+> \Swagger\Client\Model\InlineResponse2002 teamTemplateFoldersIdExistsGet($id)
 
 Check whether a model instance exists in the data source.
 
@@ -711,7 +711,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -775,7 +775,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamTemplateFoldersIdHead**
-> \Swagger\Client\Model\InlineResponse2001 teamTemplateFoldersIdHead($id)
+> \Swagger\Client\Model\InlineResponse2002 teamTemplateFoldersIdHead($id)
 
 Check whether a model instance exists in the data source.
 
@@ -809,7 +809,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -1073,7 +1073,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamTemplateFoldersIdTemplatesCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamTemplateFoldersIdTemplatesCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamTemplateFoldersIdTemplatesCountGet($id, $where)
 
 Counts templates of TeamTemplateFolder.
 
@@ -1109,7 +1109,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -1613,7 +1613,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamTemplateFoldersUpdatePost**
-> \Swagger\Client\Model\InlineResponse2002 teamTemplateFoldersUpdatePost($where, $data)
+> \Swagger\Client\Model\InlineResponse2003 teamTemplateFoldersUpdatePost($where, $data)
 
 Update instances of the model matched by {{where}} from the data source.
 
@@ -1649,7 +1649,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
 
 ### Authorization
 

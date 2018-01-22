@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 
 # **dataSourcesIdKeysCountGet**
-> \Swagger\Client\Model\InlineResponse200 dataSourcesIdKeysCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 dataSourcesIdKeysCountGet($id, $where)
 
 Counts keys of DataSource.
 
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 

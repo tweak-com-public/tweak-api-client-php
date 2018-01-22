@@ -198,7 +198,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **designsCountGet**
-> \Swagger\Client\Model\InlineResponse200 designsCountGet($where)
+> \Swagger\Client\Model\InlineResponse2001 designsCountGet($where)
 
 Count instances of the model matched by where from the data source.
 
@@ -232,7 +232,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -442,7 +442,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **designsIdCommentersCountGet**
-> \Swagger\Client\Model\InlineResponse200 designsIdCommentersCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 designsIdCommentersCountGet($id, $where)
 
 Counts commenters of Design.
 
@@ -478,7 +478,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -941,7 +941,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **designsIdCommentsCountGet**
-> \Swagger\Client\Model\InlineResponse200 designsIdCommentsCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 designsIdCommentsCountGet($id, $where)
 
 Counts comments of Design.
 
@@ -977,7 +977,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -1343,7 +1343,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **designsIdCommentsNkRepliesCountGet**
-> \Swagger\Client\Model\InlineResponse200 designsIdCommentsNkRepliesCountGet($id, $nk, $where)
+> \Swagger\Client\Model\InlineResponse2001 designsIdCommentsNkRepliesCountGet($id, $nk, $where)
 
 Counts replies of DesignComment.
 
@@ -1381,7 +1381,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -1855,7 +1855,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **designsIdDesignMembersCountGet**
-> \Swagger\Client\Model\InlineResponse200 designsIdDesignMembersCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 designsIdDesignMembersCountGet($id, $where)
 
 Counts designMembers of Design.
 
@@ -1891,7 +1891,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -2253,7 +2253,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **designsIdExistsGet**
-> \Swagger\Client\Model\InlineResponse2001 designsIdExistsGet($id)
+> \Swagger\Client\Model\InlineResponse2002 designsIdExistsGet($id)
 
 Check whether a model instance exists in the data source.
 
@@ -2287,7 +2287,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -2301,7 +2301,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **designsIdExportsCountGet**
-> \Swagger\Client\Model\InlineResponse200 designsIdExportsCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 designsIdExportsCountGet($id, $where)
 
 Counts exports of Design.
 
@@ -2337,7 +2337,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -2749,7 +2749,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **designsIdHead**
-> \Swagger\Client\Model\InlineResponse2001 designsIdHead($id)
+> \Swagger\Client\Model\InlineResponse2002 designsIdHead($id)
 
 Check whether a model instance exists in the data source.
 
@@ -2783,7 +2783,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -2797,7 +2797,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **designsIdMembersCountGet**
-> \Swagger\Client\Model\InlineResponse200 designsIdMembersCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 designsIdMembersCountGet($id, $where)
 
 Counts members of Design.
 
@@ -2833,7 +2833,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -3945,7 +3945,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **designsIdTagsCountGet**
-> \Swagger\Client\Model\InlineResponse200 designsIdTagsCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 designsIdTagsCountGet($id, $where)
 
 Counts tags of Design.
 
@@ -3981,7 +3981,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -4736,7 +4736,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **designsUpdatePost**
-> \Swagger\Client\Model\InlineResponse2002 designsUpdatePost($where, $data)
+> \Swagger\Client\Model\InlineResponse2003 designsUpdatePost($where, $data)
 
 Update instances of the model matched by {{where}} from the data source.
 
@@ -4772,7 +4772,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
 
 ### Authorization
 

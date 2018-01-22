@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **designFoldersCountGet**
-> \Swagger\Client\Model\InlineResponse200 designFoldersCountGet($where)
+> \Swagger\Client\Model\InlineResponse2001 designFoldersCountGet($where)
 
 Count instances of the model matched by where from the data source.
 
@@ -172,7 +172,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -282,7 +282,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **designFoldersIdChildrenCountGet**
-> \Swagger\Client\Model\InlineResponse200 designFoldersIdChildrenCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 designFoldersIdChildrenCountGet($id, $where)
 
 Counts children of DesignFolder.
 
@@ -318,7 +318,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -678,7 +678,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **designFoldersIdDesignsCountGet**
-> \Swagger\Client\Model\InlineResponse200 designFoldersIdDesignsCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 designFoldersIdDesignsCountGet($id, $where)
 
 Counts designs of DesignFolder.
 
@@ -714,7 +714,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -1026,7 +1026,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **designFoldersIdExistsGet**
-> \Swagger\Client\Model\InlineResponse2001 designFoldersIdExistsGet($id)
+> \Swagger\Client\Model\InlineResponse2002 designFoldersIdExistsGet($id)
 
 Check whether a model instance exists in the data source.
 
@@ -1060,7 +1060,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -1124,7 +1124,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **designFoldersIdHead**
-> \Swagger\Client\Model\InlineResponse2001 designFoldersIdHead($id)
+> \Swagger\Client\Model\InlineResponse2002 designFoldersIdHead($id)
 
 Check whether a model instance exists in the data source.
 
@@ -1158,7 +1158,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -1664,7 +1664,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **designFoldersUpdatePost**
-> \Swagger\Client\Model\InlineResponse2002 designFoldersUpdatePost($where, $data)
+> \Swagger\Client\Model\InlineResponse2003 designFoldersUpdatePost($where, $data)
 
 Update instances of the model matched by {{where}} from the data source.
 
@@ -1700,7 +1700,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
 
 ### Authorization
 

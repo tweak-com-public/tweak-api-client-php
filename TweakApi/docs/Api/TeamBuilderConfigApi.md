@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamBuilderConfigsCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamBuilderConfigsCountGet($where)
+> \Swagger\Client\Model\InlineResponse2001 teamBuilderConfigsCountGet($where)
 
 Count instances of the model matched by where from the data source.
 
@@ -251,7 +251,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -409,7 +409,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamBuilderConfigsIdExistsGet**
-> \Swagger\Client\Model\InlineResponse2001 teamBuilderConfigsIdExistsGet($id)
+> \Swagger\Client\Model\InlineResponse2002 teamBuilderConfigsIdExistsGet($id)
 
 Check whether a model instance exists in the data source.
 
@@ -443,7 +443,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -507,7 +507,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamBuilderConfigsIdHead**
-> \Swagger\Client\Model\InlineResponse2001 teamBuilderConfigsIdHead($id)
+> \Swagger\Client\Model\InlineResponse2002 teamBuilderConfigsIdHead($id)
 
 Check whether a model instance exists in the data source.
 
@@ -541,7 +541,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -605,7 +605,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamBuilderConfigsIdProductGroupsCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamBuilderConfigsIdProductGroupsCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamBuilderConfigsIdProductGroupsCountGet($id, $where)
 
 Counts productGroups of TeamBuilderConfig.
 
@@ -641,7 +641,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -903,7 +903,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamBuilderConfigsIdProductGroupsNkTypesCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamBuilderConfigsIdProductGroupsNkTypesCountGet($id, $nk, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamBuilderConfigsIdProductGroupsNkTypesCountGet($id, $nk, $where)
 
 Counts types of ProductGroup.
 
@@ -941,7 +941,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -1466,7 +1466,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamBuilderConfigsIdProductSizeMaterialsCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamBuilderConfigsIdProductSizeMaterialsCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamBuilderConfigsIdProductSizeMaterialsCountGet($id, $where)
 
 Counts productSizeMaterials of TeamBuilderConfig.
 
@@ -1502,7 +1502,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -2022,7 +2022,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamBuilderConfigsIdProductSizeMaterialsRelCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamBuilderConfigsIdProductSizeMaterialsRelCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamBuilderConfigsIdProductSizeMaterialsRelCountGet($id, $where)
 
 Counts productSizeMaterialsRel of TeamBuilderConfig.
 
@@ -2058,7 +2058,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -2677,7 +2677,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamBuilderConfigsIdProductSizesCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamBuilderConfigsIdProductSizesCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamBuilderConfigsIdProductSizesCountGet($id, $where)
 
 Counts productSizes of TeamBuilderConfig.
 
@@ -2713,7 +2713,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -2975,7 +2975,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamBuilderConfigsIdProductSizesNkMaterialsCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamBuilderConfigsIdProductSizesNkMaterialsCountGet($id, $nk, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamBuilderConfigsIdProductSizesNkMaterialsCountGet($id, $nk, $where)
 
 Counts materials of ProductSize.
 
@@ -3013,7 +3013,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -3546,7 +3546,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamBuilderConfigsIdProductSizesNkProductsCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamBuilderConfigsIdProductSizesNkProductsCountGet($id, $nk, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamBuilderConfigsIdProductSizesNkProductsCountGet($id, $nk, $where)
 
 Counts products of ProductSize.
 
@@ -3584,7 +3584,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -3908,7 +3908,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamBuilderConfigsIdProductSizesNkSizeMaterialsCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamBuilderConfigsIdProductSizesNkSizeMaterialsCountGet($id, $nk, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamBuilderConfigsIdProductSizesNkSizeMaterialsCountGet($id, $nk, $where)
 
 Counts sizeMaterials of ProductSize.
 
@@ -3946,7 +3946,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -4523,7 +4523,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamBuilderConfigsIdProductTypesCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamBuilderConfigsIdProductTypesCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamBuilderConfigsIdProductTypesCountGet($id, $where)
 
 Counts productTypes of TeamBuilderConfig.
 
@@ -4559,7 +4559,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -4873,7 +4873,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamBuilderConfigsIdProductTypesNkSizesCountGet**
-> \Swagger\Client\Model\InlineResponse200 teamBuilderConfigsIdProductTypesNkSizesCountGet($id, $nk, $where)
+> \Swagger\Client\Model\InlineResponse2001 teamBuilderConfigsIdProductTypesNkSizesCountGet($id, $nk, $where)
 
 Counts sizes of ProductType.
 
@@ -4911,7 +4911,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -5778,7 +5778,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teamBuilderConfigsUpdatePost**
-> \Swagger\Client\Model\InlineResponse2002 teamBuilderConfigsUpdatePost($where, $data)
+> \Swagger\Client\Model\InlineResponse2003 teamBuilderConfigsUpdatePost($where, $data)
 
 Update instances of the model matched by {{where}} from the data source.
 
@@ -5814,7 +5814,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
 
 ### Authorization
 
