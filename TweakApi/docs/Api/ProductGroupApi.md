@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **productGroupsCountGet**
-> \Swagger\Client\Model\InlineResponse200 productGroupsCountGet($where)
+> \Swagger\Client\Model\InlineResponse2001 productGroupsCountGet($where)
 
 Count instances of the model matched by where from the data source.
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **productGroupsIdExistsGet**
-> \Swagger\Client\Model\InlineResponse2001 productGroupsIdExistsGet($id)
+> \Swagger\Client\Model\InlineResponse2002 productGroupsIdExistsGet($id)
 
 Check whether a model instance exists in the data source.
 
@@ -354,7 +354,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -418,7 +418,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **productGroupsIdHead**
-> \Swagger\Client\Model\InlineResponse2001 productGroupsIdHead($id)
+> \Swagger\Client\Model\InlineResponse2002 productGroupsIdHead($id)
 
 Check whether a model instance exists in the data source.
 
@@ -452,7 +452,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -616,7 +616,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **productGroupsIdTypesCountGet**
-> \Swagger\Client\Model\InlineResponse200 productGroupsIdTypesCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 productGroupsIdTypesCountGet($id, $where)
 
 Counts types of ProductGroup.
 
@@ -652,7 +652,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -1156,7 +1156,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **productGroupsUpdatePost**
-> \Swagger\Client\Model\InlineResponse2002 productGroupsUpdatePost($where, $data)
+> \Swagger\Client\Model\InlineResponse2003 productGroupsUpdatePost($where, $data)
 
 Update instances of the model matched by {{where}} from the data source.
 
@@ -1192,7 +1192,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
 
 ### Authorization
 

@@ -9,6 +9,8 @@ Method | HTTP request | Description
 [**portalsCountGet**](PortalApi.md#portalsCountGet) | **GET** /Portals/count | Count instances of the model matched by where from the data source.
 [**portalsFindOneGet**](PortalApi.md#portalsFindOneGet) | **GET** /Portals/findOne | Find first instance of the model matched by filter from the data source.
 [**portalsGet**](PortalApi.md#portalsGet) | **GET** /Portals | Find all instances of the model matched by filter from the data source.
+[**portalsIdBuilderConfigDefaultGet**](PortalApi.md#portalsIdBuilderConfigDefaultGet) | **GET** /Portals/{id}/builderConfig/default | Get default TeamBuilderConfig for this Portal
+[**portalsIdDefaultBuilderConfigGet**](PortalApi.md#portalsIdDefaultBuilderConfigGet) | **GET** /Portals/{id}/defaultBuilderConfig | Fetches belongsTo relation defaultBuilderConfig.
 [**portalsIdDelete**](PortalApi.md#portalsIdDelete) | **DELETE** /Portals/{id} | Delete a model instance by {{id}} from the data source.
 [**portalsIdDesignFoldersCountGet**](PortalApi.md#portalsIdDesignFoldersCountGet) | **GET** /Portals/{id}/designFolders/count | Counts designFolders of Portal.
 [**portalsIdDesignFoldersDelete**](PortalApi.md#portalsIdDesignFoldersDelete) | **DELETE** /Portals/{id}/designFolders | Deletes all designFolders of this model.
@@ -264,7 +266,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **portalsCountGet**
-> \Swagger\Client\Model\InlineResponse200 portalsCountGet($where)
+> \Swagger\Client\Model\InlineResponse2001 portalsCountGet($where)
 
 Count instances of the model matched by where from the data source.
 
@@ -298,7 +300,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -407,6 +409,104 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **portalsIdBuilderConfigDefaultGet**
+> \Swagger\Client\Model\TeamBuilderConfig portalsIdBuilderConfigDefaultGet($id)
+
+Get default TeamBuilderConfig for this Portal
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\PortalApi();
+$id = "id_example"; // string | Portal id
+
+try {
+    $result = $api_instance->portalsIdBuilderConfigDefaultGet($id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PortalApi->portalsIdBuilderConfigDefaultGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Portal id |
+
+### Return type
+
+[**\Swagger\Client\Model\TeamBuilderConfig**](../Model/TeamBuilderConfig.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **portalsIdDefaultBuilderConfigGet**
+> \Swagger\Client\Model\TeamBuilderConfig portalsIdDefaultBuilderConfigGet($id, $refresh)
+
+Fetches belongsTo relation defaultBuilderConfig.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\PortalApi();
+$id = "id_example"; // string | Portal id
+$refresh = true; // bool | 
+
+try {
+    $result = $api_instance->portalsIdDefaultBuilderConfigGet($id, $refresh);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PortalApi->portalsIdDefaultBuilderConfigGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Portal id |
+ **refresh** | **bool**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\TeamBuilderConfig**](../Model/TeamBuilderConfig.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **portalsIdDelete**
 > object portalsIdDelete($id)
 
@@ -456,7 +556,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **portalsIdDesignFoldersCountGet**
-> \Swagger\Client\Model\InlineResponse200 portalsIdDesignFoldersCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 portalsIdDesignFoldersCountGet($id, $where)
 
 Counts designFolders of Portal.
 
@@ -492,7 +592,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -804,7 +904,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **portalsIdDesignsCountGet**
-> \Swagger\Client\Model\InlineResponse200 portalsIdDesignsCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 portalsIdDesignsCountGet($id, $where)
 
 Counts designs of Portal.
 
@@ -840,7 +940,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -1154,7 +1254,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **portalsIdDesignsNkCommentersCountGet**
-> \Swagger\Client\Model\InlineResponse200 portalsIdDesignsNkCommentersCountGet($id, $nk, $where)
+> \Swagger\Client\Model\InlineResponse2001 portalsIdDesignsNkCommentersCountGet($id, $nk, $where)
 
 Counts commenters of Design.
 
@@ -1192,7 +1292,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -1673,7 +1773,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **portalsIdDesignsNkCommentsCountGet**
-> \Swagger\Client\Model\InlineResponse200 portalsIdDesignsNkCommentsCountGet($id, $nk, $where)
+> \Swagger\Client\Model\InlineResponse2001 portalsIdDesignsNkCommentsCountGet($id, $nk, $where)
 
 Counts comments of Design.
 
@@ -1711,7 +1811,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -2035,7 +2135,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **portalsIdDesignsNkDesignMembersCountGet**
-> \Swagger\Client\Model\InlineResponse200 portalsIdDesignsNkDesignMembersCountGet($id, $nk, $where)
+> \Swagger\Client\Model\InlineResponse2001 portalsIdDesignsNkDesignMembersCountGet($id, $nk, $where)
 
 Counts designMembers of Design.
 
@@ -2073,7 +2173,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -2449,7 +2549,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **portalsIdDesignsNkExportsCountGet**
-> \Swagger\Client\Model\InlineResponse200 portalsIdDesignsNkExportsCountGet($id, $nk, $where)
+> \Swagger\Client\Model\InlineResponse2001 portalsIdDesignsNkExportsCountGet($id, $nk, $where)
 
 Counts exports of Design.
 
@@ -2487,7 +2587,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -2863,7 +2963,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **portalsIdDesignsNkMembersCountGet**
-> \Swagger\Client\Model\InlineResponse200 portalsIdDesignsNkMembersCountGet($id, $nk, $where)
+> \Swagger\Client\Model\InlineResponse2001 portalsIdDesignsNkMembersCountGet($id, $nk, $where)
 
 Counts members of Design.
 
@@ -2901,7 +3001,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -3795,7 +3895,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **portalsIdDesignsNkTagsCountGet**
-> \Swagger\Client\Model\InlineResponse200 portalsIdDesignsNkTagsCountGet($id, $nk, $where)
+> \Swagger\Client\Model\InlineResponse2001 portalsIdDesignsNkTagsCountGet($id, $nk, $where)
 
 Counts tags of Design.
 
@@ -3833,7 +3933,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -4468,7 +4568,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **portalsIdExistsGet**
-> \Swagger\Client\Model\InlineResponse2001 portalsIdExistsGet($id)
+> \Swagger\Client\Model\InlineResponse2002 portalsIdExistsGet($id)
 
 Check whether a model instance exists in the data source.
 
@@ -4502,7 +4602,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -4566,7 +4666,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **portalsIdHead**
-> \Swagger\Client\Model\InlineResponse2001 portalsIdHead($id)
+> \Swagger\Client\Model\InlineResponse2002 portalsIdHead($id)
 
 Check whether a model instance exists in the data source.
 
@@ -4600,7 +4700,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -4614,7 +4714,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **portalsIdImageFoldersCountGet**
-> \Swagger\Client\Model\InlineResponse200 portalsIdImageFoldersCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 portalsIdImageFoldersCountGet($id, $where)
 
 Counts imageFolders of Portal.
 
@@ -4650,7 +4750,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -5323,7 +5423,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **portalsIdMembersCountGet**
-> \Swagger\Client\Model\InlineResponse200 portalsIdMembersCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 portalsIdMembersCountGet($id, $where)
 
 Counts members of Portal.
 
@@ -5359,7 +5459,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -6069,7 +6169,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **portalsIdPortalMembersCountGet**
-> \Swagger\Client\Model\InlineResponse200 portalsIdPortalMembersCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 portalsIdPortalMembersCountGet($id, $where)
 
 Counts portalMembers of Portal.
 
@@ -6105,7 +6205,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -6567,7 +6667,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **portalsIdTemplateFoldersCountGet**
-> \Swagger\Client\Model\InlineResponse200 portalsIdTemplateFoldersCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 portalsIdTemplateFoldersCountGet($id, $where)
 
 Counts templateFolders of Portal.
 
@@ -6603,7 +6703,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -7075,7 +7175,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **portalsIdTemplateRelsCountGet**
-> \Swagger\Client\Model\InlineResponse200 portalsIdTemplateRelsCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 portalsIdTemplateRelsCountGet($id, $where)
 
 Counts templateRels of Portal.
 
@@ -7111,7 +7211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -7423,7 +7523,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **portalsIdTemplatesCountGet**
-> \Swagger\Client\Model\InlineResponse200 portalsIdTemplatesCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 portalsIdTemplatesCountGet($id, $where)
 
 Counts templates of Portal.
 
@@ -7459,7 +7559,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -8222,7 +8322,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **portalsUpdatePost**
-> \Swagger\Client\Model\InlineResponse2002 portalsUpdatePost($where, $data)
+> \Swagger\Client\Model\InlineResponse2003 portalsUpdatePost($where, $data)
 
 Update instances of the model matched by {{where}} from the data source.
 
@@ -8258,7 +8358,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
 
 ### Authorization
 

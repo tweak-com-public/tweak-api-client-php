@@ -151,7 +151,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tagsCountGet**
-> \Swagger\Client\Model\InlineResponse200 tagsCountGet($where)
+> \Swagger\Client\Model\InlineResponse2001 tagsCountGet($where)
 
 Count instances of the model matched by where from the data source.
 
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -343,7 +343,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tagsIdDesignsCountGet**
-> \Swagger\Client\Model\InlineResponse200 tagsIdDesignsCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 tagsIdDesignsCountGet($id, $where)
 
 Counts designs of Tag.
 
@@ -379,7 +379,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -842,7 +842,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tagsIdExistsGet**
-> \Swagger\Client\Model\InlineResponse2001 tagsIdExistsGet($id)
+> \Swagger\Client\Model\InlineResponse2002 tagsIdExistsGet($id)
 
 Check whether a model instance exists in the data source.
 
@@ -876,7 +876,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -940,7 +940,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tagsIdHead**
-> \Swagger\Client\Model\InlineResponse2001 tagsIdHead($id)
+> \Swagger\Client\Model\InlineResponse2002 tagsIdHead($id)
 
 Check whether a model instance exists in the data source.
 
@@ -974,7 +974,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -1038,7 +1038,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tagsIdProductsCountGet**
-> \Swagger\Client\Model\InlineResponse200 tagsIdProductsCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 tagsIdProductsCountGet($id, $where)
 
 Counts products of Tag.
 
@@ -1074,7 +1074,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -1637,7 +1637,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tagsIdTemplatesCountGet**
-> \Swagger\Client\Model\InlineResponse200 tagsIdTemplatesCountGet($id, $where)
+> \Swagger\Client\Model\InlineResponse2001 tagsIdTemplatesCountGet($id, $where)
 
 Counts templates of Tag.
 
@@ -1673,7 +1673,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -2328,7 +2328,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tagsUpdatePost**
-> \Swagger\Client\Model\InlineResponse2002 tagsUpdatePost($where, $data)
+> \Swagger\Client\Model\InlineResponse2003 tagsUpdatePost($where, $data)
 
 Update instances of the model matched by {{where}} from the data source.
 
@@ -2364,7 +2364,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
 
 ### Authorization
 
