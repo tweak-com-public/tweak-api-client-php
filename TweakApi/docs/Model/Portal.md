@@ -11,6 +11,8 @@ Name | Type | Description | Notes
 **modified** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **id** | **string** |  | [optional] 
 **teamId** | **string** |  | [optional] 
+**defaultBuilderConfigId** | **string** |  | [optional] 
+**defaultBuilderConfig** | [**\Swagger\Client\Model\TeamBuilderConfig**](TeamBuilderConfig.md) |  | [optional] 
 **templates** | [**\Swagger\Client\Model\Template[]**](Template.md) |  | [optional] 
 **templateRels** | [**\Swagger\Client\Model\PortalTemplate[]**](PortalTemplate.md) |  | [optional] 
 **members** | [**\Swagger\Client\Model\TeamMember[]**](TeamMember.md) |  | [optional] 

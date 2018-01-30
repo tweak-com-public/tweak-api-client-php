@@ -15,7 +15,7 @@ Method | HTTP request | Description
 [**teamsIdBrandPost**](TeamApi.md#teamsIdBrandPost) | **POST** /Teams/{id}/brand | Creates a new instance in brand of this model.
 [**teamsIdBrandPut**](TeamApi.md#teamsIdBrandPut) | **PUT** /Teams/{id}/brand | Update brand of this model.
 [**teamsIdBuilderConfigsCountGet**](TeamApi.md#teamsIdBuilderConfigsCountGet) | **GET** /Teams/{id}/builderConfigs/count | Counts builderConfigs of Team.
-[**teamsIdBuilderConfigsDefaultGet**](TeamApi.md#teamsIdBuilderConfigsDefaultGet) | **GET** /Teams/{id}/builderConfigs/default | Get default TeamBuilderConfig
+[**teamsIdBuilderConfigsDefaultGet**](TeamApi.md#teamsIdBuilderConfigsDefaultGet) | **GET** /Teams/{id}/builderConfigs/default | Get default TeamBuilderConfig for this Team
 [**teamsIdBuilderConfigsDelete**](TeamApi.md#teamsIdBuilderConfigsDelete) | **DELETE** /Teams/{id}/builderConfigs | Deletes all builderConfigs of this model.
 [**teamsIdBuilderConfigsFkDelete**](TeamApi.md#teamsIdBuilderConfigsFkDelete) | **DELETE** /Teams/{id}/builderConfigs/{fk} | Delete a related item by id for builderConfigs.
 [**teamsIdBuilderConfigsFkGet**](TeamApi.md#teamsIdBuilderConfigsFkGet) | **GET** /Teams/{id}/builderConfigs/{fk} | Find a related item by id for builderConfigs.
@@ -23,6 +23,13 @@ Method | HTTP request | Description
 [**teamsIdBuilderConfigsFkPut**](TeamApi.md#teamsIdBuilderConfigsFkPut) | **PUT** /Teams/{id}/builderConfigs/{fk} | Update a related item by id for builderConfigs.
 [**teamsIdBuilderConfigsFkWatermarkPut**](TeamApi.md#teamsIdBuilderConfigsFkWatermarkPut) | **PUT** /Teams/{id}/builderConfigs/{fk}/watermark | Change Builder Config watermark
 [**teamsIdBuilderConfigsGet**](TeamApi.md#teamsIdBuilderConfigsGet) | **GET** /Teams/{id}/builderConfigs | Queries builderConfigs of Team.
+[**teamsIdBuilderConfigsNkPortalsCountGet**](TeamApi.md#teamsIdBuilderConfigsNkPortalsCountGet) | **GET** /Teams/{id}/builderConfigs/{nk}/portals/count | Counts portals of TeamBuilderConfig.
+[**teamsIdBuilderConfigsNkPortalsDelete**](TeamApi.md#teamsIdBuilderConfigsNkPortalsDelete) | **DELETE** /Teams/{id}/builderConfigs/{nk}/portals | Deletes all portals of this model.
+[**teamsIdBuilderConfigsNkPortalsFkDelete**](TeamApi.md#teamsIdBuilderConfigsNkPortalsFkDelete) | **DELETE** /Teams/{id}/builderConfigs/{nk}/portals/{fk} | Delete a related item by id for portals.
+[**teamsIdBuilderConfigsNkPortalsFkGet**](TeamApi.md#teamsIdBuilderConfigsNkPortalsFkGet) | **GET** /Teams/{id}/builderConfigs/{nk}/portals/{fk} | Find a related item by id for portals.
+[**teamsIdBuilderConfigsNkPortalsFkPut**](TeamApi.md#teamsIdBuilderConfigsNkPortalsFkPut) | **PUT** /Teams/{id}/builderConfigs/{nk}/portals/{fk} | Update a related item by id for portals.
+[**teamsIdBuilderConfigsNkPortalsGet**](TeamApi.md#teamsIdBuilderConfigsNkPortalsGet) | **GET** /Teams/{id}/builderConfigs/{nk}/portals | Queries portals of TeamBuilderConfig.
+[**teamsIdBuilderConfigsNkPortalsPost**](TeamApi.md#teamsIdBuilderConfigsNkPortalsPost) | **POST** /Teams/{id}/builderConfigs/{nk}/portals | Creates a new instance in portals of this model.
 [**teamsIdBuilderConfigsNkProductGroupsCountGet**](TeamApi.md#teamsIdBuilderConfigsNkProductGroupsCountGet) | **GET** /Teams/{id}/builderConfigs/{nk}/productGroups/count | Counts productGroups of TeamBuilderConfig.
 [**teamsIdBuilderConfigsNkProductGroupsDelete**](TeamApi.md#teamsIdBuilderConfigsNkProductGroupsDelete) | **DELETE** /Teams/{id}/builderConfigs/{nk}/productGroups | Deletes all productGroups of this model.
 [**teamsIdBuilderConfigsNkProductGroupsFkDelete**](TeamApi.md#teamsIdBuilderConfigsNkProductGroupsFkDelete) | **DELETE** /Teams/{id}/builderConfigs/{nk}/productGroups/{fk} | Delete a related item by id for productGroups.
@@ -192,6 +199,7 @@ Method | HTTP request | Description
 [**teamsIdPortalsFkGet**](TeamApi.md#teamsIdPortalsFkGet) | **GET** /Teams/{id}/portals/{fk} | Find a related item by id for portals.
 [**teamsIdPortalsFkPut**](TeamApi.md#teamsIdPortalsFkPut) | **PUT** /Teams/{id}/portals/{fk} | Update a related item by id for portals.
 [**teamsIdPortalsGet**](TeamApi.md#teamsIdPortalsGet) | **GET** /Teams/{id}/portals | Queries portals of Team.
+[**teamsIdPortalsNkDefaultBuilderConfigGet**](TeamApi.md#teamsIdPortalsNkDefaultBuilderConfigGet) | **GET** /Teams/{id}/portals/{nk}/defaultBuilderConfig | Fetches belongsTo relation defaultBuilderConfig.
 [**teamsIdPortalsNkDesignFoldersCountGet**](TeamApi.md#teamsIdPortalsNkDesignFoldersCountGet) | **GET** /Teams/{id}/portals/{nk}/designFolders/count | Counts designFolders of Portal.
 [**teamsIdPortalsNkDesignFoldersDelete**](TeamApi.md#teamsIdPortalsNkDesignFoldersDelete) | **DELETE** /Teams/{id}/portals/{nk}/designFolders | Deletes all designFolders of this model.
 [**teamsIdPortalsNkDesignFoldersFkDelete**](TeamApi.md#teamsIdPortalsNkDesignFoldersFkDelete) | **DELETE** /Teams/{id}/portals/{nk}/designFolders/{fk} | Delete a related item by id for designFolders.
@@ -951,7 +959,7 @@ Name | Type | Description  | Notes
 # **teamsIdBuilderConfigsDefaultGet**
 > \Swagger\Client\Model\TeamBuilderConfig teamsIdBuilderConfigsDefaultGet($id)
 
-Get default TeamBuilderConfig
+Get default TeamBuilderConfig for this Team
 
 ### Example
 ```php
@@ -1336,6 +1344,368 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\TeamBuilderConfig[]**](../Model/TeamBuilderConfig.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamsIdBuilderConfigsNkPortalsCountGet**
+> \Swagger\Client\Model\InlineResponse2001 teamsIdBuilderConfigsNkPortalsCountGet($id, $nk, $where)
+
+Counts portals of TeamBuilderConfig.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamApi();
+$id = "id_example"; // string | Team id
+$nk = "nk_example"; // string | Foreign key for builderConfigs.
+$where = "where_example"; // string | Criteria to match model instances
+
+try {
+    $result = $api_instance->teamsIdBuilderConfigsNkPortalsCountGet($id, $nk, $where);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamApi->teamsIdBuilderConfigsNkPortalsCountGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Team id |
+ **nk** | **string**| Foreign key for builderConfigs. |
+ **where** | **string**| Criteria to match model instances | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamsIdBuilderConfigsNkPortalsDelete**
+> teamsIdBuilderConfigsNkPortalsDelete($id, $nk)
+
+Deletes all portals of this model.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamApi();
+$id = "id_example"; // string | Team id
+$nk = "nk_example"; // string | Foreign key for builderConfigs.
+
+try {
+    $api_instance->teamsIdBuilderConfigsNkPortalsDelete($id, $nk);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamApi->teamsIdBuilderConfigsNkPortalsDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Team id |
+ **nk** | **string**| Foreign key for builderConfigs. |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamsIdBuilderConfigsNkPortalsFkDelete**
+> teamsIdBuilderConfigsNkPortalsFkDelete($id, $nk, $fk)
+
+Delete a related item by id for portals.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamApi();
+$id = "id_example"; // string | Team id
+$nk = "nk_example"; // string | Foreign key for builderConfigs.
+$fk = "fk_example"; // string | Foreign key for portals
+
+try {
+    $api_instance->teamsIdBuilderConfigsNkPortalsFkDelete($id, $nk, $fk);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamApi->teamsIdBuilderConfigsNkPortalsFkDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Team id |
+ **nk** | **string**| Foreign key for builderConfigs. |
+ **fk** | **string**| Foreign key for portals |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamsIdBuilderConfigsNkPortalsFkGet**
+> \Swagger\Client\Model\Portal teamsIdBuilderConfigsNkPortalsFkGet($id, $nk, $fk)
+
+Find a related item by id for portals.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamApi();
+$id = "id_example"; // string | Team id
+$nk = "nk_example"; // string | Foreign key for builderConfigs.
+$fk = "fk_example"; // string | Foreign key for portals
+
+try {
+    $result = $api_instance->teamsIdBuilderConfigsNkPortalsFkGet($id, $nk, $fk);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamApi->teamsIdBuilderConfigsNkPortalsFkGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Team id |
+ **nk** | **string**| Foreign key for builderConfigs. |
+ **fk** | **string**| Foreign key for portals |
+
+### Return type
+
+[**\Swagger\Client\Model\Portal**](../Model/Portal.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamsIdBuilderConfigsNkPortalsFkPut**
+> \Swagger\Client\Model\Portal teamsIdBuilderConfigsNkPortalsFkPut($id, $nk, $fk, $data)
+
+Update a related item by id for portals.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamApi();
+$id = "id_example"; // string | Team id
+$nk = "nk_example"; // string | Foreign key for builderConfigs.
+$fk = "fk_example"; // string | Foreign key for portals
+$data = new \Swagger\Client\Model\Portal(); // \Swagger\Client\Model\Portal | 
+
+try {
+    $result = $api_instance->teamsIdBuilderConfigsNkPortalsFkPut($id, $nk, $fk, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamApi->teamsIdBuilderConfigsNkPortalsFkPut: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Team id |
+ **nk** | **string**| Foreign key for builderConfigs. |
+ **fk** | **string**| Foreign key for portals |
+ **data** | [**\Swagger\Client\Model\Portal**](../Model/\Swagger\Client\Model\Portal.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\Portal**](../Model/Portal.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamsIdBuilderConfigsNkPortalsGet**
+> \Swagger\Client\Model\Portal[] teamsIdBuilderConfigsNkPortalsGet($id, $nk, $filter)
+
+Queries portals of TeamBuilderConfig.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamApi();
+$id = "id_example"; // string | Team id
+$nk = "nk_example"; // string | Foreign key for builderConfigs.
+$filter = "filter_example"; // string | 
+
+try {
+    $result = $api_instance->teamsIdBuilderConfigsNkPortalsGet($id, $nk, $filter);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamApi->teamsIdBuilderConfigsNkPortalsGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Team id |
+ **nk** | **string**| Foreign key for builderConfigs. |
+ **filter** | **string**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\Portal[]**](../Model/Portal.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamsIdBuilderConfigsNkPortalsPost**
+> \Swagger\Client\Model\Portal teamsIdBuilderConfigsNkPortalsPost($id, $nk, $data)
+
+Creates a new instance in portals of this model.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamApi();
+$id = "id_example"; // string | Team id
+$nk = "nk_example"; // string | Foreign key for builderConfigs.
+$data = new \Swagger\Client\Model\Portal(); // \Swagger\Client\Model\Portal | 
+
+try {
+    $result = $api_instance->teamsIdBuilderConfigsNkPortalsPost($id, $nk, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamApi->teamsIdBuilderConfigsNkPortalsPost: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Team id |
+ **nk** | **string**| Foreign key for builderConfigs. |
+ **data** | [**\Swagger\Client\Model\Portal**](../Model/\Swagger\Client\Model\Portal.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\Portal**](../Model/Portal.md)
 
 ### Authorization
 
@@ -9988,6 +10358,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\Portal[]**](../Model/Portal.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamsIdPortalsNkDefaultBuilderConfigGet**
+> \Swagger\Client\Model\TeamBuilderConfig teamsIdPortalsNkDefaultBuilderConfigGet($id, $nk, $refresh)
+
+Fetches belongsTo relation defaultBuilderConfig.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamApi();
+$id = "id_example"; // string | Team id
+$nk = "nk_example"; // string | Foreign key for portals.
+$refresh = true; // bool | 
+
+try {
+    $result = $api_instance->teamsIdPortalsNkDefaultBuilderConfigGet($id, $nk, $refresh);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamApi->teamsIdPortalsNkDefaultBuilderConfigGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Team id |
+ **nk** | **string**| Foreign key for portals. |
+ **refresh** | **bool**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\TeamBuilderConfig**](../Model/TeamBuilderConfig.md)
 
 ### Authorization
 

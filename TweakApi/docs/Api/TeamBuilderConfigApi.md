@@ -14,6 +14,13 @@ Method | HTTP request | Description
 [**teamBuilderConfigsIdGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdGet) | **GET** /TeamBuilderConfigs/{id} | Find a model instance by {{id}} from the data source.
 [**teamBuilderConfigsIdHead**](TeamBuilderConfigApi.md#teamBuilderConfigsIdHead) | **HEAD** /TeamBuilderConfigs/{id} | Check whether a model instance exists in the data source.
 [**teamBuilderConfigsIdPatch**](TeamBuilderConfigApi.md#teamBuilderConfigsIdPatch) | **PATCH** /TeamBuilderConfigs/{id} | Patch attributes for a model instance and persist it into the data source.
+[**teamBuilderConfigsIdPortalsCountGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdPortalsCountGet) | **GET** /TeamBuilderConfigs/{id}/portals/count | Counts portals of TeamBuilderConfig.
+[**teamBuilderConfigsIdPortalsDelete**](TeamBuilderConfigApi.md#teamBuilderConfigsIdPortalsDelete) | **DELETE** /TeamBuilderConfigs/{id}/portals | Deletes all portals of this model.
+[**teamBuilderConfigsIdPortalsFkDelete**](TeamBuilderConfigApi.md#teamBuilderConfigsIdPortalsFkDelete) | **DELETE** /TeamBuilderConfigs/{id}/portals/{fk} | Delete a related item by id for portals.
+[**teamBuilderConfigsIdPortalsFkGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdPortalsFkGet) | **GET** /TeamBuilderConfigs/{id}/portals/{fk} | Find a related item by id for portals.
+[**teamBuilderConfigsIdPortalsFkPut**](TeamBuilderConfigApi.md#teamBuilderConfigsIdPortalsFkPut) | **PUT** /TeamBuilderConfigs/{id}/portals/{fk} | Update a related item by id for portals.
+[**teamBuilderConfigsIdPortalsGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdPortalsGet) | **GET** /TeamBuilderConfigs/{id}/portals | Queries portals of TeamBuilderConfig.
+[**teamBuilderConfigsIdPortalsPost**](TeamBuilderConfigApi.md#teamBuilderConfigsIdPortalsPost) | **POST** /TeamBuilderConfigs/{id}/portals | Creates a new instance in portals of this model.
 [**teamBuilderConfigsIdProductGroupsCountGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductGroupsCountGet) | **GET** /TeamBuilderConfigs/{id}/productGroups/count | Counts productGroups of TeamBuilderConfig.
 [**teamBuilderConfigsIdProductGroupsDelete**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductGroupsDelete) | **DELETE** /TeamBuilderConfigs/{id}/productGroups | Deletes all productGroups of this model.
 [**teamBuilderConfigsIdProductGroupsFkDelete**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductGroupsFkDelete) | **DELETE** /TeamBuilderConfigs/{id}/productGroups/{fk} | Delete a related item by id for productGroups.
@@ -592,6 +599,354 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\TeamBuilderConfig**](../Model/TeamBuilderConfig.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamBuilderConfigsIdPortalsCountGet**
+> \Swagger\Client\Model\InlineResponse2001 teamBuilderConfigsIdPortalsCountGet($id, $where)
+
+Counts portals of TeamBuilderConfig.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamBuilderConfigApi();
+$id = "id_example"; // string | TeamBuilderConfig id
+$where = "where_example"; // string | Criteria to match model instances
+
+try {
+    $result = $api_instance->teamBuilderConfigsIdPortalsCountGet($id, $where);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamBuilderConfigApi->teamBuilderConfigsIdPortalsCountGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamBuilderConfig id |
+ **where** | **string**| Criteria to match model instances | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamBuilderConfigsIdPortalsDelete**
+> teamBuilderConfigsIdPortalsDelete($id)
+
+Deletes all portals of this model.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamBuilderConfigApi();
+$id = "id_example"; // string | TeamBuilderConfig id
+
+try {
+    $api_instance->teamBuilderConfigsIdPortalsDelete($id);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamBuilderConfigApi->teamBuilderConfigsIdPortalsDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamBuilderConfig id |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamBuilderConfigsIdPortalsFkDelete**
+> teamBuilderConfigsIdPortalsFkDelete($id, $fk)
+
+Delete a related item by id for portals.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamBuilderConfigApi();
+$id = "id_example"; // string | TeamBuilderConfig id
+$fk = "fk_example"; // string | Foreign key for portals
+
+try {
+    $api_instance->teamBuilderConfigsIdPortalsFkDelete($id, $fk);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamBuilderConfigApi->teamBuilderConfigsIdPortalsFkDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamBuilderConfig id |
+ **fk** | **string**| Foreign key for portals |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamBuilderConfigsIdPortalsFkGet**
+> \Swagger\Client\Model\Portal teamBuilderConfigsIdPortalsFkGet($id, $fk)
+
+Find a related item by id for portals.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamBuilderConfigApi();
+$id = "id_example"; // string | TeamBuilderConfig id
+$fk = "fk_example"; // string | Foreign key for portals
+
+try {
+    $result = $api_instance->teamBuilderConfigsIdPortalsFkGet($id, $fk);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamBuilderConfigApi->teamBuilderConfigsIdPortalsFkGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamBuilderConfig id |
+ **fk** | **string**| Foreign key for portals |
+
+### Return type
+
+[**\Swagger\Client\Model\Portal**](../Model/Portal.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamBuilderConfigsIdPortalsFkPut**
+> \Swagger\Client\Model\Portal teamBuilderConfigsIdPortalsFkPut($id, $fk, $data)
+
+Update a related item by id for portals.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamBuilderConfigApi();
+$id = "id_example"; // string | TeamBuilderConfig id
+$fk = "fk_example"; // string | Foreign key for portals
+$data = new \Swagger\Client\Model\Portal(); // \Swagger\Client\Model\Portal | 
+
+try {
+    $result = $api_instance->teamBuilderConfigsIdPortalsFkPut($id, $fk, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamBuilderConfigApi->teamBuilderConfigsIdPortalsFkPut: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamBuilderConfig id |
+ **fk** | **string**| Foreign key for portals |
+ **data** | [**\Swagger\Client\Model\Portal**](../Model/\Swagger\Client\Model\Portal.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\Portal**](../Model/Portal.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamBuilderConfigsIdPortalsGet**
+> \Swagger\Client\Model\Portal[] teamBuilderConfigsIdPortalsGet($id, $filter)
+
+Queries portals of TeamBuilderConfig.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamBuilderConfigApi();
+$id = "id_example"; // string | TeamBuilderConfig id
+$filter = "filter_example"; // string | 
+
+try {
+    $result = $api_instance->teamBuilderConfigsIdPortalsGet($id, $filter);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamBuilderConfigApi->teamBuilderConfigsIdPortalsGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamBuilderConfig id |
+ **filter** | **string**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\Portal[]**](../Model/Portal.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamBuilderConfigsIdPortalsPost**
+> \Swagger\Client\Model\Portal teamBuilderConfigsIdPortalsPost($id, $data)
+
+Creates a new instance in portals of this model.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamBuilderConfigApi();
+$id = "id_example"; // string | TeamBuilderConfig id
+$data = new \Swagger\Client\Model\Portal(); // \Swagger\Client\Model\Portal | 
+
+try {
+    $result = $api_instance->teamBuilderConfigsIdPortalsPost($id, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamBuilderConfigApi->teamBuilderConfigsIdPortalsPost: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamBuilderConfig id |
+ **data** | [**\Swagger\Client\Model\Portal**](../Model/\Swagger\Client\Model\Portal.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\Portal**](../Model/Portal.md)
 
 ### Authorization
 
