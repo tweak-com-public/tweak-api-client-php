@@ -1,6 +1,6 @@
 <?php
 /**
- * BuilderAssetUrlApi
+ * PublicVApi
  * PHP version 5
  *
  * @category Class
@@ -46,7 +46,7 @@ use \Tweak\Api\ApiException;
 use \Tweak\Api\ObjectSerializer;
 
 /**
- * BuilderAssetUrlApi Class Doc Comment
+ * PublicVApi Class Doc Comment
  *
  * @category Class
  * @package  Tweak\Api
@@ -54,7 +54,7 @@ use \Tweak\Api\ObjectSerializer;
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class BuilderAssetUrlApi
+class PublicVApi
 {
 
     /**
@@ -94,7 +94,7 @@ class BuilderAssetUrlApi
      *
      * @param \Tweak\Api\ApiClient $apiClient set the API client
      *
-     * @return BuilderAssetUrlApi
+     * @return PublicVApi
      */
     public function setApiClient(\Tweak\Api\ApiClient $apiClient)
     {
@@ -103,37 +103,37 @@ class BuilderAssetUrlApi
     }
 
     /**
-     * Operation builderAssetUrlsDesignsIdGet
+     * Operation v1BaseLocaleCountryCodeGet
      *
-     * Get folders for Builder Asset Backgrounds
+     * Get locale from Country Code
      *
-     * @param string $id Design Id (required)
-     * @return \Swagger\Client\Model\InlineResponse200
+     * @param string $countryCode Country code (required)
+     * @return object
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function builderAssetUrlsDesignsIdGet($id)
+    public function v1BaseLocaleCountryCodeGet($countryCode)
     {
-        list($response) = $this->builderAssetUrlsDesignsIdGetWithHttpInfo($id);
+        list($response) = $this->v1BaseLocaleCountryCodeGetWithHttpInfo($countryCode);
         return $response;
     }
 
     /**
-     * Operation builderAssetUrlsDesignsIdGetWithHttpInfo
+     * Operation v1BaseLocaleCountryCodeGetWithHttpInfo
      *
-     * Get folders for Builder Asset Backgrounds
+     * Get locale from Country Code
      *
-     * @param string $id Design Id (required)
-     * @return array of \Swagger\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @param string $countryCode Country code (required)
+     * @return array of object, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function builderAssetUrlsDesignsIdGetWithHttpInfo($id)
+    public function v1BaseLocaleCountryCodeGetWithHttpInfo($countryCode)
     {
-        // verify the required parameter 'id' is set
-        if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling builderAssetUrlsDesignsIdGet');
+        // verify the required parameter 'countryCode' is set
+        if ($countryCode === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $countryCode when calling v1BaseLocaleCountryCodeGet');
         }
         // parse inputs
-        $resourcePath = "/BuilderAsset/urls/designs/{id}";
+        $resourcePath = "/v1/Base/locale/country/code";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -144,13 +144,9 @@ class BuilderAssetUrlApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
 
-        // path params
-        if ($id !== null) {
-            $resourcePath = str_replace(
-                "{" . "id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id),
-                $resourcePath
-            );
+        // query params
+        if ($countryCode !== null) {
+            $queryParams['countryCode'] = $this->apiClient->getSerializer()->toQueryValue($countryCode);
         }
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
@@ -167,6 +163,11 @@ class BuilderAssetUrlApi
         if (strlen($apiKey) !== 0) {
             $queryParams['access_token'] = $apiKey;
         }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('teamKey');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['teamKey'] = $apiKey;
+        }
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -175,15 +176,15 @@ class BuilderAssetUrlApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\InlineResponse200',
-                '/BuilderAsset/urls/designs/{id}'
+                'object',
+                '/v1/Base/locale/country/code'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, 'object', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse200', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), 'object', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -193,37 +194,37 @@ class BuilderAssetUrlApi
     }
 
     /**
-     * Operation builderAssetUrlsTemplatesIdGet
+     * Operation v1BaseLocaleCountryNameGet
      *
-     * Get folders for Builder Asset Backgrounds
+     * Get locale from Country Name
      *
-     * @param string $id Template Id (required)
-     * @return \Swagger\Client\Model\InlineResponse200
+     * @param string $countryName Country name (required)
+     * @return object
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function builderAssetUrlsTemplatesIdGet($id)
+    public function v1BaseLocaleCountryNameGet($countryName)
     {
-        list($response) = $this->builderAssetUrlsTemplatesIdGetWithHttpInfo($id);
+        list($response) = $this->v1BaseLocaleCountryNameGetWithHttpInfo($countryName);
         return $response;
     }
 
     /**
-     * Operation builderAssetUrlsTemplatesIdGetWithHttpInfo
+     * Operation v1BaseLocaleCountryNameGetWithHttpInfo
      *
-     * Get folders for Builder Asset Backgrounds
+     * Get locale from Country Name
      *
-     * @param string $id Template Id (required)
-     * @return array of \Swagger\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @param string $countryName Country name (required)
+     * @return array of object, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function builderAssetUrlsTemplatesIdGetWithHttpInfo($id)
+    public function v1BaseLocaleCountryNameGetWithHttpInfo($countryName)
     {
-        // verify the required parameter 'id' is set
-        if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling builderAssetUrlsTemplatesIdGet');
+        // verify the required parameter 'countryName' is set
+        if ($countryName === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $countryName when calling v1BaseLocaleCountryNameGet');
         }
         // parse inputs
-        $resourcePath = "/BuilderAsset/urls/templates/{id}";
+        $resourcePath = "/v1/Base/locale/country/name";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -234,13 +235,9 @@ class BuilderAssetUrlApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
 
-        // path params
-        if ($id !== null) {
-            $resourcePath = str_replace(
-                "{" . "id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id),
-                $resourcePath
-            );
+        // query params
+        if ($countryName !== null) {
+            $queryParams['countryName'] = $this->apiClient->getSerializer()->toQueryValue($countryName);
         }
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
@@ -257,6 +254,11 @@ class BuilderAssetUrlApi
         if (strlen($apiKey) !== 0) {
             $queryParams['access_token'] = $apiKey;
         }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('teamKey');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['teamKey'] = $apiKey;
+        }
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -265,15 +267,15 @@ class BuilderAssetUrlApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\InlineResponse200',
-                '/BuilderAsset/urls/templates/{id}'
+                'object',
+                '/v1/Base/locale/country/name'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, 'object', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse200', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), 'object', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -283,37 +285,31 @@ class BuilderAssetUrlApi
     }
 
     /**
-     * Operation builderAssetUrlsTweakTemplatesIdGet
+     * Operation v1BaseLocaleGet
      *
-     * Get folders for Builder Asset Backgrounds
+     * Get locale from client IP
      *
-     * @param string $id Tweak Template Id (required)
-     * @return \Swagger\Client\Model\InlineResponse200
+     * @return object
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function builderAssetUrlsTweakTemplatesIdGet($id)
+    public function v1BaseLocaleGet()
     {
-        list($response) = $this->builderAssetUrlsTweakTemplatesIdGetWithHttpInfo($id);
+        list($response) = $this->v1BaseLocaleGetWithHttpInfo();
         return $response;
     }
 
     /**
-     * Operation builderAssetUrlsTweakTemplatesIdGetWithHttpInfo
+     * Operation v1BaseLocaleGetWithHttpInfo
      *
-     * Get folders for Builder Asset Backgrounds
+     * Get locale from client IP
      *
-     * @param string $id Tweak Template Id (required)
-     * @return array of \Swagger\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function builderAssetUrlsTweakTemplatesIdGetWithHttpInfo($id)
+    public function v1BaseLocaleGetWithHttpInfo()
     {
-        // verify the required parameter 'id' is set
-        if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling builderAssetUrlsTweakTemplatesIdGet');
-        }
         // parse inputs
-        $resourcePath = "/BuilderAsset/urls/tweakTemplates/{id}";
+        $resourcePath = "/v1/Base/locale";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -324,14 +320,6 @@ class BuilderAssetUrlApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
 
-        // path params
-        if ($id !== null) {
-            $resourcePath = str_replace(
-                "{" . "id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id),
-                $resourcePath
-            );
-        }
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
@@ -347,6 +335,11 @@ class BuilderAssetUrlApi
         if (strlen($apiKey) !== 0) {
             $queryParams['access_token'] = $apiKey;
         }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('teamKey');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['teamKey'] = $apiKey;
+        }
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -355,15 +348,15 @@ class BuilderAssetUrlApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\InlineResponse200',
-                '/BuilderAsset/urls/tweakTemplates/{id}'
+                'object',
+                '/v1/Base/locale'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, 'object', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse200', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), 'object', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

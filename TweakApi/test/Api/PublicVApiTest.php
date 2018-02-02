@@ -1,6 +1,6 @@
 <?php
 /**
- * PublicVBuilderAssetApiTest
+ * PublicVApiTest
  * PHP version 5
  *
  * @category Class
@@ -46,7 +46,7 @@ use \Tweak\Api\ApiException;
 use \Tweak\Api\ObjectSerializer;
 
 /**
- * PublicVBuilderAssetApiTest Class Doc Comment
+ * PublicVApiTest Class Doc Comment
  *
  * @category Class
  * @package  Tweak\Api
@@ -54,7 +54,7 @@ use \Tweak\Api\ObjectSerializer;
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PublicVBuilderAssetApiTest extends \PHPUnit_Framework_TestCase
+class PublicVApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -90,34 +90,34 @@ class PublicVBuilderAssetApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for v1BuilderAssetBackgroundsFoldersFolderPathGet
+     * Test case for v1BaseLocaleCountryCodeGet
      *
-     * Get Builder Asset Backgrounds on a folders.
+     * Get locale from Country Code.
      *
      */
-    public function testV1BuilderAssetBackgroundsFoldersFolderPathGet()
+    public function testV1BaseLocaleCountryCodeGet()
     {
 
     }
 
     /**
-     * Test case for v1BuilderAssetBackgroundsFoldersGet
+     * Test case for v1BaseLocaleCountryNameGet
      *
-     * Get folders for Builder Asset Backgrounds.
+     * Get locale from Country Name.
      *
      */
-    public function testV1BuilderAssetBackgroundsFoldersGet()
+    public function testV1BaseLocaleCountryNameGet()
     {
 
     }
 
     /**
-     * Test case for v1BuilderAssetBackgroundsGet
+     * Test case for v1BaseLocaleGet
      *
-     * Get all Builder Asset Backgrounds.
+     * Get locale from client IP.
      *
      */
-    public function testV1BuilderAssetBackgroundsGet()
+    public function testV1BaseLocaleGet()
     {
 
     }
