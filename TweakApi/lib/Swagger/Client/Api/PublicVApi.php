@@ -1,6 +1,6 @@
 <?php
 /**
- * PublicVTeamMemberApi
+ * PublicVApi
  * PHP version 5
  *
  * @category Class
@@ -46,7 +46,7 @@ use \Tweak\Api\ApiException;
 use \Tweak\Api\ObjectSerializer;
 
 /**
- * PublicVTeamMemberApi Class Doc Comment
+ * PublicVApi Class Doc Comment
  *
  * @category Class
  * @package  Tweak\Api
@@ -54,7 +54,7 @@ use \Tweak\Api\ObjectSerializer;
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PublicVTeamMemberApi
+class PublicVApi
 {
 
     /**
@@ -94,7 +94,7 @@ class PublicVTeamMemberApi
      *
      * @param \Tweak\Api\ApiClient $apiClient set the API client
      *
-     * @return PublicVTeamMemberApi
+     * @return PublicVApi
      */
     public function setApiClient(\Tweak\Api\ApiClient $apiClient)
     {
@@ -103,43 +103,37 @@ class PublicVTeamMemberApi
     }
 
     /**
-     * Operation v1TeamMembersLoginPost
+     * Operation v1BaseLocaleCountryCodeGet
      *
-     * Change portal
+     * Get locale from Country Code
      *
-     * @param string $id TeamMember id (required)
-     * @param string $portalId Portal id (required)
-     * @return \Swagger\Client\Model\TeamMemberAccessToken
+     * @param string $countryCode Country code (required)
+     * @return object
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function v1TeamMembersLoginPost($id, $portalId)
+    public function v1BaseLocaleCountryCodeGet($countryCode)
     {
-        list($response) = $this->v1TeamMembersLoginPostWithHttpInfo($id, $portalId);
+        list($response) = $this->v1BaseLocaleCountryCodeGetWithHttpInfo($countryCode);
         return $response;
     }
 
     /**
-     * Operation v1TeamMembersLoginPostWithHttpInfo
+     * Operation v1BaseLocaleCountryCodeGetWithHttpInfo
      *
-     * Change portal
+     * Get locale from Country Code
      *
-     * @param string $id TeamMember id (required)
-     * @param string $portalId Portal id (required)
-     * @return array of \Swagger\Client\Model\TeamMemberAccessToken, HTTP status code, HTTP response headers (array of strings)
+     * @param string $countryCode Country code (required)
+     * @return array of object, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function v1TeamMembersLoginPostWithHttpInfo($id, $portalId)
+    public function v1BaseLocaleCountryCodeGetWithHttpInfo($countryCode)
     {
-        // verify the required parameter 'id' is set
-        if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling v1TeamMembersLoginPost');
-        }
-        // verify the required parameter 'portalId' is set
-        if ($portalId === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $portalId when calling v1TeamMembersLoginPost');
+        // verify the required parameter 'countryCode' is set
+        if ($countryCode === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $countryCode when calling v1BaseLocaleCountryCodeGet');
         }
         // parse inputs
-        $resourcePath = "/v1/TeamMembers/login";
+        $resourcePath = "/v1/Base/locale/country/code";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -150,21 +144,9 @@ class PublicVTeamMemberApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
 
-        // path params
-        if ($id !== null) {
-            $resourcePath = str_replace(
-                "{" . "id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($portalId !== null) {
-            $resourcePath = str_replace(
-                "{" . "portalId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($portalId),
-                $resourcePath
-            );
+        // query params
+        if ($countryCode !== null) {
+            $queryParams['countryCode'] = $this->apiClient->getSerializer()->toQueryValue($countryCode);
         }
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
@@ -190,19 +172,19 @@ class PublicVTeamMemberApi
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath,
-                'POST',
+                'GET',
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\TeamMemberAccessToken',
-                '/v1/TeamMembers/login'
+                'object',
+                '/v1/Base/locale/country/code'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TeamMemberAccessToken', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, 'object', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TeamMemberAccessToken', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), 'object', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -212,31 +194,122 @@ class PublicVTeamMemberApi
     }
 
     /**
-     * Operation v1TeamMembersLogoutPost
+     * Operation v1BaseLocaleCountryNameGet
      *
-     * Logout a TeamMember
+     * Get locale from Country Name
      *
-     * @return void
+     * @param string $countryName Country name (required)
+     * @return object
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function v1TeamMembersLogoutPost()
+    public function v1BaseLocaleCountryNameGet($countryName)
     {
-        list($response) = $this->v1TeamMembersLogoutPostWithHttpInfo();
+        list($response) = $this->v1BaseLocaleCountryNameGetWithHttpInfo($countryName);
         return $response;
     }
 
     /**
-     * Operation v1TeamMembersLogoutPostWithHttpInfo
+     * Operation v1BaseLocaleCountryNameGetWithHttpInfo
      *
-     * Logout a TeamMember
+     * Get locale from Country Name
      *
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @param string $countryName Country name (required)
+     * @return array of object, HTTP status code, HTTP response headers (array of strings)
      * @throws \Tweak\Api\ApiException on non-2xx response
      */
-    public function v1TeamMembersLogoutPostWithHttpInfo()
+    public function v1BaseLocaleCountryNameGetWithHttpInfo($countryName)
+    {
+        // verify the required parameter 'countryName' is set
+        if ($countryName === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $countryName when calling v1BaseLocaleCountryNameGet');
+        }
+        // parse inputs
+        $resourcePath = "/v1/Base/locale/country/name";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
+
+        // query params
+        if ($countryName !== null) {
+            $queryParams['countryName'] = $this->apiClient->getSerializer()->toQueryValue($countryName);
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['access_token'] = $apiKey;
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('teamKey');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['teamKey'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                'object',
+                '/v1/Base/locale/country/name'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, 'object', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), 'object', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation v1BaseLocaleGet
+     *
+     * Get locale from client IP
+     *
+     * @return object
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function v1BaseLocaleGet()
+    {
+        list($response) = $this->v1BaseLocaleGetWithHttpInfo();
+        return $response;
+    }
+
+    /**
+     * Operation v1BaseLocaleGetWithHttpInfo
+     *
+     * Get locale from client IP
+     *
+     * @return array of object, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Tweak\Api\ApiException on non-2xx response
+     */
+    public function v1BaseLocaleGetWithHttpInfo()
     {
         // parse inputs
-        $resourcePath = "/v1/TeamMembers/logout";
+        $resourcePath = "/v1/Base/locale";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -271,100 +344,12 @@ class PublicVTeamMemberApi
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath,
-                'POST',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                null,
-                '/v1/TeamMembers/logout'
-            );
-
-            return array(null, $statusCode, $httpHeader);
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation v1TeamMembersPost
-     *
-     * Create a Member
-     *
-     * @param \Swagger\Client\Model\PublicV1TeamMember $data Data to create Member (required)
-     * @return object
-     * @throws \Tweak\Api\ApiException on non-2xx response
-     */
-    public function v1TeamMembersPost($data)
-    {
-        list($response) = $this->v1TeamMembersPostWithHttpInfo($data);
-        return $response;
-    }
-
-    /**
-     * Operation v1TeamMembersPostWithHttpInfo
-     *
-     * Create a Member
-     *
-     * @param \Swagger\Client\Model\PublicV1TeamMember $data Data to create Member (required)
-     * @return array of object, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Tweak\Api\ApiException on non-2xx response
-     */
-    public function v1TeamMembersPostWithHttpInfo($data)
-    {
-        // verify the required parameter 'data' is set
-        if ($data === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $data when calling v1TeamMembersPost');
-        }
-        // parse inputs
-        $resourcePath = "/v1/TeamMembers";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json', 'application/xml', 'text/xml', 'application/javascript', 'text/javascript'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json','application/x-www-form-urlencoded','application/xml','text/xml'));
-
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        // body params
-        $_tempBody = null;
-        if (isset($data)) {
-            $_tempBody = $data;
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $queryParams['access_token'] = $apiKey;
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('teamKey');
-        if (strlen($apiKey) !== 0) {
-            $queryParams['teamKey'] = $apiKey;
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'POST',
+                'GET',
                 $queryParams,
                 $httpBody,
                 $headerParams,
                 'object',
-                '/v1/TeamMembers'
+                '/v1/Base/locale'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, 'object', $httpHeader), $statusCode, $httpHeader);
