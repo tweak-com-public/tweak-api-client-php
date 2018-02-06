@@ -176,6 +176,14 @@ class BillingPlanTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "teamId"
+     */
+    public function testPropertyTeamId()
+    {
+
+    }
+
+    /**
      * Test attribute "limit"
      */
     public function testPropertyLimit()

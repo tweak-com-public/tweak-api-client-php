@@ -1,6 +1,6 @@
 <?php
 /**
- * BillingTest
+ * BillingBankAccountTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Tweak\Api;
 
 /**
- * BillingTest Class Doc Comment
+ * BillingBankAccountTest Class Doc Comment
  *
  * @category    Class */
-// * @description Billing
+// * @description BillingBankAccount
 /**
  * @package     Tweak\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class BillingTest extends \PHPUnit_Framework_TestCase
+class BillingBankAccountTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,121 +88,9 @@ class BillingTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "Billing"
+     * Test "BillingBankAccount"
      */
-    public function testBilling()
-    {
-
-    }
-
-    /**
-     * Test attribute "companyName"
-     */
-    public function testPropertyCompanyName()
-    {
-
-    }
-
-    /**
-     * Test attribute "companyEmail"
-     */
-    public function testPropertyCompanyEmail()
-    {
-
-    }
-
-    /**
-     * Test attribute "companyVat"
-     */
-    public function testPropertyCompanyVat()
-    {
-
-    }
-
-    /**
-     * Test attribute "companyCard"
-     */
-    public function testPropertyCompanyCard()
-    {
-
-    }
-
-    /**
-     * Test attribute "companyBankAccount"
-     */
-    public function testPropertyCompanyBankAccount()
-    {
-
-    }
-
-    /**
-     * Test attribute "companySource"
-     */
-    public function testPropertyCompanySource()
-    {
-
-    }
-
-    /**
-     * Test attribute "subscription"
-     */
-    public function testPropertySubscription()
-    {
-
-    }
-
-    /**
-     * Test attribute "limit"
-     */
-    public function testPropertyLimit()
-    {
-
-    }
-
-    /**
-     * Test attribute "taxPercent"
-     */
-    public function testPropertyTaxPercent()
-    {
-
-    }
-
-    /**
-     * Test attribute "stripeCustomerId"
-     */
-    public function testPropertyStripeCustomerId()
-    {
-
-    }
-
-    /**
-     * Test attribute "stripeCardId"
-     */
-    public function testPropertyStripeCardId()
-    {
-
-    }
-
-    /**
-     * Test attribute "stripeBankAccountId"
-     */
-    public function testPropertyStripeBankAccountId()
-    {
-
-    }
-
-    /**
-     * Test attribute "stripeSourceId"
-     */
-    public function testPropertyStripeSourceId()
-    {
-
-    }
-
-    /**
-     * Test attribute "stripeSubscriptionId"
-     */
-    public function testPropertyStripeSubscriptionId()
+    public function testBillingBankAccount()
     {
 
     }
@@ -216,17 +104,105 @@ class BillingTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "teamId"
+     * Test attribute "object"
      */
-    public function testPropertyTeamId()
+    public function testPropertyObject()
     {
 
     }
 
     /**
-     * Test attribute "team"
+     * Test attribute "account"
      */
-    public function testPropertyTeam()
+    public function testPropertyAccount()
+    {
+
+    }
+
+    /**
+     * Test attribute "accountHolderName"
+     */
+    public function testPropertyAccountHolderName()
+    {
+
+    }
+
+    /**
+     * Test attribute "accountHolderType"
+     */
+    public function testPropertyAccountHolderType()
+    {
+
+    }
+
+    /**
+     * Test attribute "bankName"
+     */
+    public function testPropertyBankName()
+    {
+
+    }
+
+    /**
+     * Test attribute "country"
+     */
+    public function testPropertyCountry()
+    {
+
+    }
+
+    /**
+     * Test attribute "currency"
+     */
+    public function testPropertyCurrency()
+    {
+
+    }
+
+    /**
+     * Test attribute "defaultForCurrency"
+     */
+    public function testPropertyDefaultForCurrency()
+    {
+
+    }
+
+    /**
+     * Test attribute "fingerprint"
+     */
+    public function testPropertyFingerprint()
+    {
+
+    }
+
+    /**
+     * Test attribute "last4"
+     */
+    public function testPropertyLast4()
+    {
+
+    }
+
+    /**
+     * Test attribute "routingNumber"
+     */
+    public function testPropertyRoutingNumber()
+    {
+
+    }
+
+    /**
+     * Test attribute "status"
+     */
+    public function testPropertyStatus()
+    {
+
+    }
+
+    /**
+     * Test attribute "token"
+     */
+    public function testPropertyToken()
     {
 
     }

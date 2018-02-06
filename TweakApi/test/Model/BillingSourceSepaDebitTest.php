@@ -1,6 +1,6 @@
 <?php
 /**
- * BillingTest
+ * BillingSourceSepaDebitTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Tweak\Api;
 
 /**
- * BillingTest Class Doc Comment
+ * BillingSourceSepaDebitTest Class Doc Comment
  *
  * @category    Class */
-// * @description Billing
+// * @description BillingSourceSepaDebit
 /**
  * @package     Tweak\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class BillingTest extends \PHPUnit_Framework_TestCase
+class BillingSourceSepaDebitTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,121 +88,57 @@ class BillingTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "Billing"
+     * Test "BillingSourceSepaDebit"
      */
-    public function testBilling()
+    public function testBillingSourceSepaDebit()
     {
 
     }
 
     /**
-     * Test attribute "companyName"
+     * Test attribute "bankCode"
      */
-    public function testPropertyCompanyName()
+    public function testPropertyBankCode()
     {
 
     }
 
     /**
-     * Test attribute "companyEmail"
+     * Test attribute "country"
      */
-    public function testPropertyCompanyEmail()
+    public function testPropertyCountry()
     {
 
     }
 
     /**
-     * Test attribute "companyVat"
+     * Test attribute "fingerprint"
      */
-    public function testPropertyCompanyVat()
+    public function testPropertyFingerprint()
     {
 
     }
 
     /**
-     * Test attribute "companyCard"
+     * Test attribute "last4"
      */
-    public function testPropertyCompanyCard()
+    public function testPropertyLast4()
     {
 
     }
 
     /**
-     * Test attribute "companyBankAccount"
+     * Test attribute "mandateReference"
      */
-    public function testPropertyCompanyBankAccount()
+    public function testPropertyMandateReference()
     {
 
     }
 
     /**
-     * Test attribute "companySource"
+     * Test attribute "mandateUrl"
      */
-    public function testPropertyCompanySource()
-    {
-
-    }
-
-    /**
-     * Test attribute "subscription"
-     */
-    public function testPropertySubscription()
-    {
-
-    }
-
-    /**
-     * Test attribute "limit"
-     */
-    public function testPropertyLimit()
-    {
-
-    }
-
-    /**
-     * Test attribute "taxPercent"
-     */
-    public function testPropertyTaxPercent()
-    {
-
-    }
-
-    /**
-     * Test attribute "stripeCustomerId"
-     */
-    public function testPropertyStripeCustomerId()
-    {
-
-    }
-
-    /**
-     * Test attribute "stripeCardId"
-     */
-    public function testPropertyStripeCardId()
-    {
-
-    }
-
-    /**
-     * Test attribute "stripeBankAccountId"
-     */
-    public function testPropertyStripeBankAccountId()
-    {
-
-    }
-
-    /**
-     * Test attribute "stripeSourceId"
-     */
-    public function testPropertyStripeSourceId()
-    {
-
-    }
-
-    /**
-     * Test attribute "stripeSubscriptionId"
-     */
-    public function testPropertyStripeSubscriptionId()
+    public function testPropertyMandateUrl()
     {
 
     }
@@ -211,22 +147,6 @@ class BillingTest extends \PHPUnit_Framework_TestCase
      * Test attribute "id"
      */
     public function testPropertyId()
-    {
-
-    }
-
-    /**
-     * Test attribute "teamId"
-     */
-    public function testPropertyTeamId()
-    {
-
-    }
-
-    /**
-     * Test attribute "team"
-     */
-    public function testPropertyTeam()
     {
 
     }

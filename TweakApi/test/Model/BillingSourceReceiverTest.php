@@ -1,6 +1,6 @@
 <?php
 /**
- * BillingTest
+ * BillingSourceReceiverTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Tweak\Api;
 
 /**
- * BillingTest Class Doc Comment
+ * BillingSourceReceiverTest Class Doc Comment
  *
  * @category    Class */
-// * @description Billing
+// * @description BillingSourceReceiver
 /**
  * @package     Tweak\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class BillingTest extends \PHPUnit_Framework_TestCase
+class BillingSourceReceiverTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,121 +88,57 @@ class BillingTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "Billing"
+     * Test "BillingSourceReceiver"
      */
-    public function testBilling()
+    public function testBillingSourceReceiver()
     {
 
     }
 
     /**
-     * Test attribute "companyName"
+     * Test attribute "address"
      */
-    public function testPropertyCompanyName()
+    public function testPropertyAddress()
     {
 
     }
 
     /**
-     * Test attribute "companyEmail"
+     * Test attribute "amountCharged"
      */
-    public function testPropertyCompanyEmail()
+    public function testPropertyAmountCharged()
     {
 
     }
 
     /**
-     * Test attribute "companyVat"
+     * Test attribute "amountReceived"
      */
-    public function testPropertyCompanyVat()
+    public function testPropertyAmountReceived()
     {
 
     }
 
     /**
-     * Test attribute "companyCard"
+     * Test attribute "amountReturned"
      */
-    public function testPropertyCompanyCard()
+    public function testPropertyAmountReturned()
     {
 
     }
 
     /**
-     * Test attribute "companyBankAccount"
+     * Test attribute "refundAttributesMethod"
      */
-    public function testPropertyCompanyBankAccount()
+    public function testPropertyRefundAttributesMethod()
     {
 
     }
 
     /**
-     * Test attribute "companySource"
+     * Test attribute "refundAttributesStatus"
      */
-    public function testPropertyCompanySource()
-    {
-
-    }
-
-    /**
-     * Test attribute "subscription"
-     */
-    public function testPropertySubscription()
-    {
-
-    }
-
-    /**
-     * Test attribute "limit"
-     */
-    public function testPropertyLimit()
-    {
-
-    }
-
-    /**
-     * Test attribute "taxPercent"
-     */
-    public function testPropertyTaxPercent()
-    {
-
-    }
-
-    /**
-     * Test attribute "stripeCustomerId"
-     */
-    public function testPropertyStripeCustomerId()
-    {
-
-    }
-
-    /**
-     * Test attribute "stripeCardId"
-     */
-    public function testPropertyStripeCardId()
-    {
-
-    }
-
-    /**
-     * Test attribute "stripeBankAccountId"
-     */
-    public function testPropertyStripeBankAccountId()
-    {
-
-    }
-
-    /**
-     * Test attribute "stripeSourceId"
-     */
-    public function testPropertyStripeSourceId()
-    {
-
-    }
-
-    /**
-     * Test attribute "stripeSubscriptionId"
-     */
-    public function testPropertyStripeSubscriptionId()
+    public function testPropertyRefundAttributesStatus()
     {
 
     }
@@ -211,22 +147,6 @@ class BillingTest extends \PHPUnit_Framework_TestCase
      * Test attribute "id"
      */
     public function testPropertyId()
-    {
-
-    }
-
-    /**
-     * Test attribute "teamId"
-     */
-    public function testPropertyTeamId()
-    {
-
-    }
-
-    /**
-     * Test attribute "team"
-     */
-    public function testPropertyTeam()
     {
 
     }

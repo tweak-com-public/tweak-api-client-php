@@ -1,6 +1,6 @@
 <?php
 /**
- * BillingTest
+ * BillingSourceRedirectTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Tweak\Api;
 
 /**
- * BillingTest Class Doc Comment
+ * BillingSourceRedirectTest Class Doc Comment
  *
  * @category    Class */
-// * @description Billing
+// * @description BillingSourceRedirect
 /**
  * @package     Tweak\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class BillingTest extends \PHPUnit_Framework_TestCase
+class BillingSourceRedirectTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,121 +88,33 @@ class BillingTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "Billing"
+     * Test "BillingSourceRedirect"
      */
-    public function testBilling()
+    public function testBillingSourceRedirect()
     {
 
     }
 
     /**
-     * Test attribute "companyName"
+     * Test attribute "returnUrl"
      */
-    public function testPropertyCompanyName()
+    public function testPropertyReturnUrl()
     {
 
     }
 
     /**
-     * Test attribute "companyEmail"
+     * Test attribute "status"
      */
-    public function testPropertyCompanyEmail()
+    public function testPropertyStatus()
     {
 
     }
 
     /**
-     * Test attribute "companyVat"
+     * Test attribute "url"
      */
-    public function testPropertyCompanyVat()
-    {
-
-    }
-
-    /**
-     * Test attribute "companyCard"
-     */
-    public function testPropertyCompanyCard()
-    {
-
-    }
-
-    /**
-     * Test attribute "companyBankAccount"
-     */
-    public function testPropertyCompanyBankAccount()
-    {
-
-    }
-
-    /**
-     * Test attribute "companySource"
-     */
-    public function testPropertyCompanySource()
-    {
-
-    }
-
-    /**
-     * Test attribute "subscription"
-     */
-    public function testPropertySubscription()
-    {
-
-    }
-
-    /**
-     * Test attribute "limit"
-     */
-    public function testPropertyLimit()
-    {
-
-    }
-
-    /**
-     * Test attribute "taxPercent"
-     */
-    public function testPropertyTaxPercent()
-    {
-
-    }
-
-    /**
-     * Test attribute "stripeCustomerId"
-     */
-    public function testPropertyStripeCustomerId()
-    {
-
-    }
-
-    /**
-     * Test attribute "stripeCardId"
-     */
-    public function testPropertyStripeCardId()
-    {
-
-    }
-
-    /**
-     * Test attribute "stripeBankAccountId"
-     */
-    public function testPropertyStripeBankAccountId()
-    {
-
-    }
-
-    /**
-     * Test attribute "stripeSourceId"
-     */
-    public function testPropertyStripeSourceId()
-    {
-
-    }
-
-    /**
-     * Test attribute "stripeSubscriptionId"
-     */
-    public function testPropertyStripeSubscriptionId()
+    public function testPropertyUrl()
     {
 
     }
@@ -211,22 +123,6 @@ class BillingTest extends \PHPUnit_Framework_TestCase
      * Test attribute "id"
      */
     public function testPropertyId()
-    {
-
-    }
-
-    /**
-     * Test attribute "teamId"
-     */
-    public function testPropertyTeamId()
-    {
-
-    }
-
-    /**
-     * Test attribute "team"
-     */
-    public function testPropertyTeam()
     {
 
     }

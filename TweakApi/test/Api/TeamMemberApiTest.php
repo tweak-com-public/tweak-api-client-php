@@ -1465,6 +1465,50 @@ class TeamMemberApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for teamMembersIdTeamBillingBankAccountDelete
+     *
+     * Delete Team Billing BankAccount.
+     *
+     */
+    public function testTeamMembersIdTeamBillingBankAccountDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamBillingBankAccountPost
+     *
+     * Create Team Billing BankAccount.
+     *
+     */
+    public function testTeamMembersIdTeamBillingBankAccountPost()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamBillingBankAccountPut
+     *
+     * Update Team Billing BankAccount.
+     *
+     */
+    public function testTeamMembersIdTeamBillingBankAccountPut()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamBillingBankAccountVerifyPost
+     *
+     * Create Team Billing BankAccount.
+     *
+     */
+    public function testTeamMembersIdTeamBillingBankAccountVerifyPost()
+    {
+
+    }
+
+    /**
      * Test case for teamMembersIdTeamBillingCachedGet
      *
      * Get Cached version of Team Billing.
@@ -1548,6 +1592,39 @@ class TeamMemberApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testTeamMembersIdTeamBillingPut()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamBillingSourceDelete
+     *
+     * Delete Team Billing Source.
+     *
+     */
+    public function testTeamMembersIdTeamBillingSourceDelete()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamBillingSourcePost
+     *
+     * Create Team Billing Source.
+     *
+     */
+    public function testTeamMembersIdTeamBillingSourcePost()
+    {
+
+    }
+
+    /**
+     * Test case for teamMembersIdTeamBillingSourcePut
+     *
+     * Update Team Billing Source.
+     *
+     */
+    public function testTeamMembersIdTeamBillingSourcePut()
     {
 
     }
