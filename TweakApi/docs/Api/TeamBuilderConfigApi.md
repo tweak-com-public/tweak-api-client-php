@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**teamBuilderConfigsIdDelete**](TeamBuilderConfigApi.md#teamBuilderConfigsIdDelete) | **DELETE** /TeamBuilderConfigs/{id} | Delete a model instance by {{id}} from the data source.
 [**teamBuilderConfigsIdExistsGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdExistsGet) | **GET** /TeamBuilderConfigs/{id}/exists | Check whether a model instance exists in the data source.
 [**teamBuilderConfigsIdGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdGet) | **GET** /TeamBuilderConfigs/{id} | Find a model instance by {{id}} from the data source.
+[**teamBuilderConfigsIdGlobalGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdGlobalGet) | **GET** /TeamBuilderConfigs/{id}/global | Reset Team keys
 [**teamBuilderConfigsIdHead**](TeamBuilderConfigApi.md#teamBuilderConfigsIdHead) | **HEAD** /TeamBuilderConfigs/{id} | Check whether a model instance exists in the data source.
 [**teamBuilderConfigsIdPatch**](TeamBuilderConfigApi.md#teamBuilderConfigsIdPatch) | **PATCH** /TeamBuilderConfigs/{id} | Patch attributes for a model instance and persist it into the data source.
 [**teamBuilderConfigsIdPortalsCountGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdPortalsCountGet) | **GET** /TeamBuilderConfigs/{id}/portals/count | Counts portals of TeamBuilderConfig.
@@ -497,6 +498,54 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| Model id |
  **filter** | **string**| Filter defining fields and include - must be a JSON-encoded string ({\&quot;something\&quot;:\&quot;value\&quot;}) | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\TeamBuilderConfig**](../Model/TeamBuilderConfig.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamBuilderConfigsIdGlobalGet**
+> \Swagger\Client\Model\TeamBuilderConfig teamBuilderConfigsIdGlobalGet($id)
+
+Reset Team keys
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamBuilderConfigApi();
+$id = "id_example"; // string | TeamBuilderConfig id
+
+try {
+    $result = $api_instance->teamBuilderConfigsIdGlobalGet($id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamBuilderConfigApi->teamBuilderConfigsIdGlobalGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamBuilderConfig id |
 
 ### Return type
 
