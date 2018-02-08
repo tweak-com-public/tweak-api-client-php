@@ -16,6 +16,7 @@ Method | HTTP request | Description
 [**teamsIdBrandPut**](TeamApi.md#teamsIdBrandPut) | **PUT** /Teams/{id}/brand | Update brand of this model.
 [**teamsIdBuilderConfigsCountGet**](TeamApi.md#teamsIdBuilderConfigsCountGet) | **GET** /Teams/{id}/builderConfigs/count | Counts builderConfigs of Team.
 [**teamsIdBuilderConfigsDefaultGet**](TeamApi.md#teamsIdBuilderConfigsDefaultGet) | **GET** /Teams/{id}/builderConfigs/default | Get default TeamBuilderConfig for this Team
+[**teamsIdBuilderConfigsDefaultProductSizeMaterialsGet**](TeamApi.md#teamsIdBuilderConfigsDefaultProductSizeMaterialsGet) | **GET** /Teams/{id}/builderConfigs/default/productSizeMaterials | Get default TeamBuilderConfig ProductSizeMaterials for this Team
 [**teamsIdBuilderConfigsDelete**](TeamApi.md#teamsIdBuilderConfigsDelete) | **DELETE** /Teams/{id}/builderConfigs | Deletes all builderConfigs of this model.
 [**teamsIdBuilderConfigsFkDelete**](TeamApi.md#teamsIdBuilderConfigsFkDelete) | **DELETE** /Teams/{id}/builderConfigs/{fk} | Delete a related item by id for builderConfigs.
 [**teamsIdBuilderConfigsFkGet**](TeamApi.md#teamsIdBuilderConfigsFkGet) | **GET** /Teams/{id}/builderConfigs/{fk} | Find a related item by id for builderConfigs.
@@ -992,6 +993,54 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\TeamBuilderConfig**](../Model/TeamBuilderConfig.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamsIdBuilderConfigsDefaultProductSizeMaterialsGet**
+> \Swagger\Client\Model\ProductSizeMaterial[] teamsIdBuilderConfigsDefaultProductSizeMaterialsGet($id)
+
+Get default TeamBuilderConfig ProductSizeMaterials for this Team
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamApi();
+$id = "id_example"; // string | Team id
+
+try {
+    $result = $api_instance->teamsIdBuilderConfigsDefaultProductSizeMaterialsGet($id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamApi->teamsIdBuilderConfigsDefaultProductSizeMaterialsGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Team id |
+
+### Return type
+
+[**\Swagger\Client\Model\ProductSizeMaterial[]**](../Model/ProductSizeMaterial.md)
 
 ### Authorization
 

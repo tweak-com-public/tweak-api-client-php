@@ -129,6 +129,10 @@ Method | HTTP request | Description
 [**teamMembersIdTargetModelTargetIdInviteInviteePost**](TeamMemberApi.md#teamMembersIdTargetModelTargetIdInviteInviteePost) | **POST** /TeamMembers/{id}/{targetModel}/{targetId}/invite/{invitee} | Invite somebody to join a team, portal or other targets
 [**teamMembersIdTargetModelTargetIdInvitePost**](TeamMemberApi.md#teamMembersIdTargetModelTargetIdInvitePost) | **POST** /TeamMembers/{id}/{targetModel}/{targetId}/invite | Invite a group of people to join a team, portal or other targets
 [**teamMembersIdTeamBillingAvailablePlansGet**](TeamMemberApi.md#teamMembersIdTeamBillingAvailablePlansGet) | **GET** /TeamMembers/{id}/team/billing/availablePlans | Get Available Plans
+[**teamMembersIdTeamBillingBankAccountDelete**](TeamMemberApi.md#teamMembersIdTeamBillingBankAccountDelete) | **DELETE** /TeamMembers/{id}/team/billing/bankAccount | Delete Team Billing BankAccount
+[**teamMembersIdTeamBillingBankAccountPost**](TeamMemberApi.md#teamMembersIdTeamBillingBankAccountPost) | **POST** /TeamMembers/{id}/team/billing/bankAccount | Create Team Billing BankAccount
+[**teamMembersIdTeamBillingBankAccountPut**](TeamMemberApi.md#teamMembersIdTeamBillingBankAccountPut) | **PUT** /TeamMembers/{id}/team/billing/bankAccount | Update Team Billing BankAccount
+[**teamMembersIdTeamBillingBankAccountVerifyPost**](TeamMemberApi.md#teamMembersIdTeamBillingBankAccountVerifyPost) | **POST** /TeamMembers/{id}/team/billing/bankAccount/verify | Create Team Billing BankAccount
 [**teamMembersIdTeamBillingCachedGet**](TeamMemberApi.md#teamMembersIdTeamBillingCachedGet) | **GET** /TeamMembers/{id}/team/billing/cached | Get Cached version of Team Billing
 [**teamMembersIdTeamBillingCardDelete**](TeamMemberApi.md#teamMembersIdTeamBillingCardDelete) | **DELETE** /TeamMembers/{id}/team/billing/card | Delete Team Billing Card
 [**teamMembersIdTeamBillingCardPost**](TeamMemberApi.md#teamMembersIdTeamBillingCardPost) | **POST** /TeamMembers/{id}/team/billing/card | Create Team Billing Card
@@ -136,7 +140,12 @@ Method | HTTP request | Description
 [**teamMembersIdTeamBillingInvoicesFkPost**](TeamMemberApi.md#teamMembersIdTeamBillingInvoicesFkPost) | **POST** /TeamMembers/{id}/team/billing/invoices/{fk} | Pay Team Billing Invoice
 [**teamMembersIdTeamBillingInvoicesGet**](TeamMemberApi.md#teamMembersIdTeamBillingInvoicesGet) | **GET** /TeamMembers/{id}/team/billing/invoices | List Team Billing Invoices
 [**teamMembersIdTeamBillingInvoicesUpcomingGet**](TeamMemberApi.md#teamMembersIdTeamBillingInvoicesUpcomingGet) | **GET** /TeamMembers/{id}/team/billing/invoices/upcoming | List Upcoming Team Billing Invoices
+[**teamMembersIdTeamBillingLimitLimitIncreasePost**](TeamMemberApi.md#teamMembersIdTeamBillingLimitLimitIncreasePost) | **POST** /TeamMembers/{id}/team/billing/limit/{limit}/increase | Increase Team Billing Limit by Limit
+[**teamMembersIdTeamBillingLimitLimitIncreaseValueGet**](TeamMemberApi.md#teamMembersIdTeamBillingLimitLimitIncreaseValueGet) | **GET** /TeamMembers/{id}/team/billing/limit/{limit}/increase/{value} | Check if Team Billing Limit can be increased by Limit
 [**teamMembersIdTeamBillingPut**](TeamMemberApi.md#teamMembersIdTeamBillingPut) | **PUT** /TeamMembers/{id}/team/billing | Update Team Billing
+[**teamMembersIdTeamBillingSourceDelete**](TeamMemberApi.md#teamMembersIdTeamBillingSourceDelete) | **DELETE** /TeamMembers/{id}/team/billing/source | Delete Team Billing Source
+[**teamMembersIdTeamBillingSourcePost**](TeamMemberApi.md#teamMembersIdTeamBillingSourcePost) | **POST** /TeamMembers/{id}/team/billing/source | Create Team Billing Source
+[**teamMembersIdTeamBillingSourcePut**](TeamMemberApi.md#teamMembersIdTeamBillingSourcePut) | **PUT** /TeamMembers/{id}/team/billing/source | Update Team Billing Source
 [**teamMembersIdTeamBillingSubscriptionPlanPut**](TeamMemberApi.md#teamMembersIdTeamBillingSubscriptionPlanPut) | **PUT** /TeamMembers/{id}/team/billing/subscription/plan | Update Team Billing Subscription Plan
 [**teamMembersIdTeamBillingTaxEvidenceGet**](TeamMemberApi.md#teamMembersIdTeamBillingTaxEvidenceGet) | **GET** /TeamMembers/{id}/team/billing/taxEvidence | Get Team Billing Tax Evidence
 [**teamMembersIdTeamBillingUncachedGet**](TeamMemberApi.md#teamMembersIdTeamBillingUncachedGet) | **GET** /TeamMembers/{id}/team/billing/uncached | Get Team Billing
@@ -146,6 +155,7 @@ Method | HTTP request | Description
 [**teamMembersIdTeamBrandPut**](TeamMemberApi.md#teamMembersIdTeamBrandPut) | **PUT** /TeamMembers/{id}/team/brand | Update brand of this model.
 [**teamMembersIdTeamBuilderConfigsCountGet**](TeamMemberApi.md#teamMembersIdTeamBuilderConfigsCountGet) | **GET** /TeamMembers/{id}/team/builderConfigs/count | Counts builderConfigs of Team.
 [**teamMembersIdTeamBuilderConfigsDefaultGet**](TeamMemberApi.md#teamMembersIdTeamBuilderConfigsDefaultGet) | **GET** /TeamMembers/{id}/team/builderConfigs/default | Get default Team Builder Config
+[**teamMembersIdTeamBuilderConfigsDefaultProductSizeMaterialGet**](TeamMemberApi.md#teamMembersIdTeamBuilderConfigsDefaultProductSizeMaterialGet) | **GET** /TeamMembers/{id}/team/builderConfigs/default/productSizeMaterial | Get default Team Builder Config Product Size Materials
 [**teamMembersIdTeamBuilderConfigsDelete**](TeamMemberApi.md#teamMembersIdTeamBuilderConfigsDelete) | **DELETE** /TeamMembers/{id}/team/builderConfigs | Deletes all builderConfigs of this model.
 [**teamMembersIdTeamBuilderConfigsFkDelete**](TeamMemberApi.md#teamMembersIdTeamBuilderConfigsFkDelete) | **DELETE** /TeamMembers/{id}/team/builderConfigs/{fk} | Delete a related item by id for builderConfigs.
 [**teamMembersIdTeamBuilderConfigsFkGet**](TeamMemberApi.md#teamMembersIdTeamBuilderConfigsFkGet) | **GET** /TeamMembers/{id}/team/builderConfigs/{fk} | Find a related item by id for builderConfigs.
@@ -6549,6 +6559,204 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **teamMembersIdTeamBillingBankAccountDelete**
+> \Swagger\Client\Model\Billing teamMembersIdTeamBillingBankAccountDelete($id)
+
+Delete Team Billing BankAccount
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+
+try {
+    $result = $api_instance->teamMembersIdTeamBillingBankAccountDelete($id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamBillingBankAccountDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+
+### Return type
+
+[**\Swagger\Client\Model\Billing**](../Model/Billing.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdTeamBillingBankAccountPost**
+> \Swagger\Client\Model\Billing teamMembersIdTeamBillingBankAccountPost($id, $data)
+
+Create Team Billing BankAccount
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+$data = new \Swagger\Client\Model\TeamMember(); // \Swagger\Client\Model\TeamMember | 
+
+try {
+    $result = $api_instance->teamMembersIdTeamBillingBankAccountPost($id, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamBillingBankAccountPost: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+ **data** | [**\Swagger\Client\Model\TeamMember**](../Model/\Swagger\Client\Model\TeamMember.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\Billing**](../Model/Billing.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdTeamBillingBankAccountPut**
+> \Swagger\Client\Model\Billing teamMembersIdTeamBillingBankAccountPut($id, $data)
+
+Update Team Billing BankAccount
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+$data = new \Swagger\Client\Model\TeamMember(); // \Swagger\Client\Model\TeamMember | 
+
+try {
+    $result = $api_instance->teamMembersIdTeamBillingBankAccountPut($id, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamBillingBankAccountPut: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+ **data** | [**\Swagger\Client\Model\TeamMember**](../Model/\Swagger\Client\Model\TeamMember.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\Billing**](../Model/Billing.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdTeamBillingBankAccountVerifyPost**
+> \Swagger\Client\Model\Billing teamMembersIdTeamBillingBankAccountVerifyPost($id, $data)
+
+Create Team Billing BankAccount
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+$data = new \Swagger\Client\Model\TeamMember(); // \Swagger\Client\Model\TeamMember | 
+
+try {
+    $result = $api_instance->teamMembersIdTeamBillingBankAccountVerifyPost($id, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamBillingBankAccountVerifyPost: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+ **data** | [**\Swagger\Client\Model\TeamMember**](../Model/\Swagger\Client\Model\TeamMember.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\Billing**](../Model/Billing.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **teamMembersIdTeamBillingCachedGet**
 > \Swagger\Client\Model\Billing teamMembersIdTeamBillingCachedGet($id)
 
@@ -6893,6 +7101,110 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **teamMembersIdTeamBillingLimitLimitIncreasePost**
+> object teamMembersIdTeamBillingLimitLimitIncreasePost($id, $limit, $data)
+
+Increase Team Billing Limit by Limit
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+$limit = "limit_example"; // string | Limit name
+$data = new \Swagger\Client\Model\BillingLimitLog(); // \Swagger\Client\Model\BillingLimitLog | 
+
+try {
+    $result = $api_instance->teamMembersIdTeamBillingLimitLimitIncreasePost($id, $limit, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamBillingLimitLimitIncreasePost: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+ **limit** | **string**| Limit name |
+ **data** | [**\Swagger\Client\Model\BillingLimitLog**](../Model/\Swagger\Client\Model\BillingLimitLog.md)|  | [optional]
+
+### Return type
+
+**object**
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdTeamBillingLimitLimitIncreaseValueGet**
+> \Swagger\Client\Model\InlineResponse2005 teamMembersIdTeamBillingLimitLimitIncreaseValueGet($id, $limit, $value)
+
+Check if Team Billing Limit can be increased by Limit
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+$limit = "limit_example"; // string | Limit name
+$value = "value_example"; // string | Value
+
+try {
+    $result = $api_instance->teamMembersIdTeamBillingLimitLimitIncreaseValueGet($id, $limit, $value);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamBillingLimitLimitIncreaseValueGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+ **limit** | **string**| Limit name |
+ **value** | **string**| Value |
+
+### Return type
+
+[**\Swagger\Client\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **teamMembersIdTeamBillingPut**
 > \Swagger\Client\Model\Billing teamMembersIdTeamBillingPut($id, $data)
 
@@ -6917,6 +7229,154 @@ try {
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TeamMemberApi->teamMembersIdTeamBillingPut: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+ **data** | [**\Swagger\Client\Model\TeamMember**](../Model/\Swagger\Client\Model\TeamMember.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\Billing**](../Model/Billing.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdTeamBillingSourceDelete**
+> \Swagger\Client\Model\Billing teamMembersIdTeamBillingSourceDelete($id)
+
+Delete Team Billing Source
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+
+try {
+    $result = $api_instance->teamMembersIdTeamBillingSourceDelete($id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamBillingSourceDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+
+### Return type
+
+[**\Swagger\Client\Model\Billing**](../Model/Billing.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdTeamBillingSourcePost**
+> \Swagger\Client\Model\Billing teamMembersIdTeamBillingSourcePost($id, $data)
+
+Create Team Billing Source
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+$data = new \Swagger\Client\Model\TeamMember(); // \Swagger\Client\Model\TeamMember | 
+
+try {
+    $result = $api_instance->teamMembersIdTeamBillingSourcePost($id, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamBillingSourcePost: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+ **data** | [**\Swagger\Client\Model\TeamMember**](../Model/\Swagger\Client\Model\TeamMember.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\Billing**](../Model/Billing.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdTeamBillingSourcePut**
+> \Swagger\Client\Model\Billing teamMembersIdTeamBillingSourcePut($id, $data)
+
+Update Team Billing Source
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+$data = new \Swagger\Client\Model\TeamMember(); // \Swagger\Client\Model\TeamMember | 
+
+try {
+    $result = $api_instance->teamMembersIdTeamBillingSourcePut($id, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamBillingSourcePut: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -7372,6 +7832,54 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\TeamBuilderConfig**](../Model/TeamBuilderConfig.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdTeamBuilderConfigsDefaultProductSizeMaterialGet**
+> \Swagger\Client\Model\ProductSizeMaterial[] teamMembersIdTeamBuilderConfigsDefaultProductSizeMaterialGet($id)
+
+Get default Team Builder Config Product Size Materials
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+
+try {
+    $result = $api_instance->teamMembersIdTeamBuilderConfigsDefaultProductSizeMaterialGet($id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamBuilderConfigsDefaultProductSizeMaterialGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+
+### Return type
+
+[**\Swagger\Client\Model\ProductSizeMaterial[]**](../Model/ProductSizeMaterial.md)
 
 ### Authorization
 

@@ -57,7 +57,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **v1BuilderConfigDefaultProductSizeMaterialsGet**
-> \Swagger\Client\Model\ProductSizeMaterial v1BuilderConfigDefaultProductSizeMaterialsGet()
+> \Swagger\Client\Model\ProductSizeMaterial[] v1BuilderConfigDefaultProductSizeMaterialsGet()
 
 Get default BuilderConfig ProductSizeMaterial
 
@@ -91,7 +91,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\ProductSizeMaterial**](../Model/ProductSizeMaterial.md)
+[**\Swagger\Client\Model\ProductSizeMaterial[]**](../Model/ProductSizeMaterial.md)
 
 ### Authorization
 
