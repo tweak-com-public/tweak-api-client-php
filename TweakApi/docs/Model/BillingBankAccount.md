@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **routingNumber** | **string** |  | [optional] 
 **status** | **string** |  | [optional] 
 **token** | **string** |  | [optional] 
+**address** | [**\Swagger\Client\Model\BillingAddress**](BillingAddress.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

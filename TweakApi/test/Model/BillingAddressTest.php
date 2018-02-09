@@ -1,6 +1,6 @@
 <?php
 /**
- * PortalTest
+ * BillingAddressTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Tweak\Api;
 
 /**
- * PortalTest Class Doc Comment
+ * BillingAddressTest Class Doc Comment
  *
  * @category    Class */
-// * @description Portal
+// * @description BillingAddress
 /**
  * @package     Tweak\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PortalTest extends \PHPUnit_Framework_TestCase
+class BillingAddressTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,57 +88,57 @@ class PortalTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "Portal"
+     * Test "BillingAddress"
      */
-    public function testPortal()
+    public function testBillingAddress()
     {
 
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "city"
      */
-    public function testPropertyName()
+    public function testPropertyCity()
     {
 
     }
 
     /**
-     * Test attribute "logo"
+     * Test attribute "country"
      */
-    public function testPropertyLogo()
+    public function testPropertyCountry()
     {
 
     }
 
     /**
-     * Test attribute "status"
+     * Test attribute "line1"
      */
-    public function testPropertyStatus()
+    public function testPropertyLine1()
     {
 
     }
 
     /**
-     * Test attribute "language"
+     * Test attribute "line2"
      */
-    public function testPropertyLanguage()
+    public function testPropertyLine2()
     {
 
     }
 
     /**
-     * Test attribute "created"
+     * Test attribute "postalCode"
      */
-    public function testPropertyCreated()
+    public function testPropertyPostalCode()
     {
 
     }
 
     /**
-     * Test attribute "modified"
+     * Test attribute "state"
      */
-    public function testPropertyModified()
+    public function testPropertyState()
     {
 
     }
@@ -147,110 +147,6 @@ class PortalTest extends \PHPUnit_Framework_TestCase
      * Test attribute "id"
      */
     public function testPropertyId()
-    {
-
-    }
-
-    /**
-     * Test attribute "teamId"
-     */
-    public function testPropertyTeamId()
-    {
-
-    }
-
-    /**
-     * Test attribute "defaultBuilderConfigId"
-     */
-    public function testPropertyDefaultBuilderConfigId()
-    {
-
-    }
-
-    /**
-     * Test attribute "defaultBuilderConfig"
-     */
-    public function testPropertyDefaultBuilderConfig()
-    {
-
-    }
-
-    /**
-     * Test attribute "templates"
-     */
-    public function testPropertyTemplates()
-    {
-
-    }
-
-    /**
-     * Test attribute "templateRels"
-     */
-    public function testPropertyTemplateRels()
-    {
-
-    }
-
-    /**
-     * Test attribute "members"
-     */
-    public function testPropertyMembers()
-    {
-
-    }
-
-    /**
-     * Test attribute "portalMembers"
-     */
-    public function testPropertyPortalMembers()
-    {
-
-    }
-
-    /**
-     * Test attribute "team"
-     */
-    public function testPropertyTeam()
-    {
-
-    }
-
-    /**
-     * Test attribute "designs"
-     */
-    public function testPropertyDesigns()
-    {
-
-    }
-
-    /**
-     * Test attribute "templateFolders"
-     */
-    public function testPropertyTemplateFolders()
-    {
-
-    }
-
-    /**
-     * Test attribute "designFolders"
-     */
-    public function testPropertyDesignFolders()
-    {
-
-    }
-
-    /**
-     * Test attribute "imageFolders"
-     */
-    public function testPropertyImageFolders()
-    {
-
-    }
-
-    /**
-     * Test attribute "permission"
-     */
-    public function testPropertyPermission()
     {
 
     }

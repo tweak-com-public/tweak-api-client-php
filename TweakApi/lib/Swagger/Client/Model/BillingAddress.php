@@ -1,6 +1,6 @@
 <?php
 /**
- * BillingSourceSofort
+ * BillingAddress
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * BillingSourceSofort Class Doc Comment
+ * BillingAddress Class Doc Comment
  *
  * @category    Class */
 /** 
@@ -53,26 +53,25 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class BillingSourceSofort implements ArrayAccess
+class BillingAddress implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'BillingSourceSofort';
+    protected static $swaggerModelName = 'BillingAddress';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = array(
+        'city' => 'string',
         'country' => 'string',
-        'bankCode' => 'string',
-        'bic' => 'string',
-        'bankName' => 'string',
-        'ibanLast4' => 'string',
-        'preferredLanguage' => 'string',
-        'statementDescriptor' => 'string',
+        'line1' => 'string',
+        'line2' => 'string',
+        'postalCode' => 'string',
+        'state' => 'string',
         'id' => 'string'
     );
 
@@ -86,13 +85,12 @@ class BillingSourceSofort implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
+        'city' => 'city',
         'country' => 'country',
-        'bankCode' => 'bankCode',
-        'bic' => 'bic',
-        'bankName' => 'bankName',
-        'ibanLast4' => 'ibanLast4',
-        'preferredLanguage' => 'preferredLanguage',
-        'statementDescriptor' => 'statementDescriptor',
+        'line1' => 'line1',
+        'line2' => 'line2',
+        'postalCode' => 'postalCode',
+        'state' => 'state',
         'id' => 'id'
     );
 
@@ -106,13 +104,12 @@ class BillingSourceSofort implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
+        'city' => 'setCity',
         'country' => 'setCountry',
-        'bankCode' => 'setBankCode',
-        'bic' => 'setBic',
-        'bankName' => 'setBankName',
-        'ibanLast4' => 'setIbanLast4',
-        'preferredLanguage' => 'setPreferredLanguage',
-        'statementDescriptor' => 'setStatementDescriptor',
+        'line1' => 'setLine1',
+        'line2' => 'setLine2',
+        'postalCode' => 'setPostalCode',
+        'state' => 'setState',
         'id' => 'setId'
     );
 
@@ -126,13 +123,12 @@ class BillingSourceSofort implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
+        'city' => 'getCity',
         'country' => 'getCountry',
-        'bankCode' => 'getBankCode',
-        'bic' => 'getBic',
-        'bankName' => 'getBankName',
-        'ibanLast4' => 'getIbanLast4',
-        'preferredLanguage' => 'getPreferredLanguage',
-        'statementDescriptor' => 'getStatementDescriptor',
+        'line1' => 'getLine1',
+        'line2' => 'getLine2',
+        'postalCode' => 'getPostalCode',
+        'state' => 'getState',
         'id' => 'getId'
     );
 
@@ -157,13 +153,12 @@ class BillingSourceSofort implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['city'] = isset($data['city']) ? $data['city'] : null;
         $this->container['country'] = isset($data['country']) ? $data['country'] : null;
-        $this->container['bankCode'] = isset($data['bankCode']) ? $data['bankCode'] : null;
-        $this->container['bic'] = isset($data['bic']) ? $data['bic'] : null;
-        $this->container['bankName'] = isset($data['bankName']) ? $data['bankName'] : null;
-        $this->container['ibanLast4'] = isset($data['ibanLast4']) ? $data['ibanLast4'] : null;
-        $this->container['preferredLanguage'] = isset($data['preferredLanguage']) ? $data['preferredLanguage'] : null;
-        $this->container['statementDescriptor'] = isset($data['statementDescriptor']) ? $data['statementDescriptor'] : null;
+        $this->container['line1'] = isset($data['line1']) ? $data['line1'] : null;
+        $this->container['line2'] = isset($data['line2']) ? $data['line2'] : null;
+        $this->container['postalCode'] = isset($data['postalCode']) ? $data['postalCode'] : null;
+        $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
     }
 
@@ -191,6 +186,27 @@ class BillingSourceSofort implements ArrayAccess
 
 
     /**
+     * Gets city
+     * @return string
+     */
+    public function getCity()
+    {
+        return $this->container['city'];
+    }
+
+    /**
+     * Sets city
+     * @param string $city
+     * @return $this
+     */
+    public function setCity($city)
+    {
+        $this->container['city'] = $city;
+
+        return $this;
+    }
+
+    /**
      * Gets country
      * @return string
      */
@@ -212,127 +228,85 @@ class BillingSourceSofort implements ArrayAccess
     }
 
     /**
-     * Gets bankCode
+     * Gets line1
      * @return string
      */
-    public function getBankCode()
+    public function getLine1()
     {
-        return $this->container['bankCode'];
+        return $this->container['line1'];
     }
 
     /**
-     * Sets bankCode
-     * @param string $bankCode
+     * Sets line1
+     * @param string $line1
      * @return $this
      */
-    public function setBankCode($bankCode)
+    public function setLine1($line1)
     {
-        $this->container['bankCode'] = $bankCode;
+        $this->container['line1'] = $line1;
 
         return $this;
     }
 
     /**
-     * Gets bic
+     * Gets line2
      * @return string
      */
-    public function getBic()
+    public function getLine2()
     {
-        return $this->container['bic'];
+        return $this->container['line2'];
     }
 
     /**
-     * Sets bic
-     * @param string $bic
+     * Sets line2
+     * @param string $line2
      * @return $this
      */
-    public function setBic($bic)
+    public function setLine2($line2)
     {
-        $this->container['bic'] = $bic;
+        $this->container['line2'] = $line2;
 
         return $this;
     }
 
     /**
-     * Gets bankName
+     * Gets postalCode
      * @return string
      */
-    public function getBankName()
+    public function getPostalCode()
     {
-        return $this->container['bankName'];
+        return $this->container['postalCode'];
     }
 
     /**
-     * Sets bankName
-     * @param string $bankName
+     * Sets postalCode
+     * @param string $postalCode
      * @return $this
      */
-    public function setBankName($bankName)
+    public function setPostalCode($postalCode)
     {
-        $this->container['bankName'] = $bankName;
+        $this->container['postalCode'] = $postalCode;
 
         return $this;
     }
 
     /**
-     * Gets ibanLast4
+     * Gets state
      * @return string
      */
-    public function getIbanLast4()
+    public function getState()
     {
-        return $this->container['ibanLast4'];
+        return $this->container['state'];
     }
 
     /**
-     * Sets ibanLast4
-     * @param string $ibanLast4
+     * Sets state
+     * @param string $state
      * @return $this
      */
-    public function setIbanLast4($ibanLast4)
+    public function setState($state)
     {
-        $this->container['ibanLast4'] = $ibanLast4;
-
-        return $this;
-    }
-
-    /**
-     * Gets preferredLanguage
-     * @return string
-     */
-    public function getPreferredLanguage()
-    {
-        return $this->container['preferredLanguage'];
-    }
-
-    /**
-     * Sets preferredLanguage
-     * @param string $preferredLanguage
-     * @return $this
-     */
-    public function setPreferredLanguage($preferredLanguage)
-    {
-        $this->container['preferredLanguage'] = $preferredLanguage;
-
-        return $this;
-    }
-
-    /**
-     * Gets statementDescriptor
-     * @return string
-     */
-    public function getStatementDescriptor()
-    {
-        return $this->container['statementDescriptor'];
-    }
-
-    /**
-     * Sets statementDescriptor
-     * @param string $statementDescriptor
-     * @return $this
-     */
-    public function setStatementDescriptor($statementDescriptor)
-    {
-        $this->container['statementDescriptor'] = $statementDescriptor;
+        $this->container['state'] = $state;
 
         return $this;
     }
