@@ -19,19 +19,13 @@ Method | HTTP request | Description
 [**designCommentsIdPut**](DesignCommentApi.md#designCommentsIdPut) | **PUT** /DesignComments/{id} | Replace attributes for a model instance and persist it into the data source.
 [**designCommentsIdReplacePost**](DesignCommentApi.md#designCommentsIdReplacePost) | **POST** /DesignComments/{id}/replace | Replace attributes for a model instance and persist it into the data source.
 [**designCommentsIdRepliesCountGet**](DesignCommentApi.md#designCommentsIdRepliesCountGet) | **GET** /DesignComments/{id}/replies/count | Counts replies of DesignComment.
-[**designCommentsIdRepliesDelete**](DesignCommentApi.md#designCommentsIdRepliesDelete) | **DELETE** /DesignComments/{id}/replies | Deletes all replies of this model.
 [**designCommentsIdRepliesFkDelete**](DesignCommentApi.md#designCommentsIdRepliesFkDelete) | **DELETE** /DesignComments/{id}/replies/{fk} | Delete a related item by id for replies.
 [**designCommentsIdRepliesFkGet**](DesignCommentApi.md#designCommentsIdRepliesFkGet) | **GET** /DesignComments/{id}/replies/{fk} | Find a related item by id for replies.
 [**designCommentsIdRepliesFkPut**](DesignCommentApi.md#designCommentsIdRepliesFkPut) | **PUT** /DesignComments/{id}/replies/{fk} | Update a related item by id for replies.
 [**designCommentsIdRepliesGet**](DesignCommentApi.md#designCommentsIdRepliesGet) | **GET** /DesignComments/{id}/replies | Queries replies of DesignComment.
 [**designCommentsIdRepliesPost**](DesignCommentApi.md#designCommentsIdRepliesPost) | **POST** /DesignComments/{id}/replies | Creates a new instance in replies of this model.
 [**designCommentsIdReplyOfGet**](DesignCommentApi.md#designCommentsIdReplyOfGet) | **GET** /DesignComments/{id}/replyOf | Fetches belongsTo relation replyOf.
-[**designCommentsPatch**](DesignCommentApi.md#designCommentsPatch) | **PATCH** /DesignComments | Patch an existing model instance or insert a new one into the data source.
 [**designCommentsPost**](DesignCommentApi.md#designCommentsPost) | **POST** /DesignComments | Create a new instance of the model and persist it into the data source.
-[**designCommentsPut**](DesignCommentApi.md#designCommentsPut) | **PUT** /DesignComments | Replace an existing model instance or insert a new one into the data source.
-[**designCommentsReplaceOrCreatePost**](DesignCommentApi.md#designCommentsReplaceOrCreatePost) | **POST** /DesignComments/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
-[**designCommentsUpdatePost**](DesignCommentApi.md#designCommentsUpdatePost) | **POST** /DesignComments/update | Update instances of the model matched by {{where}} from the data source.
-[**designCommentsUpsertWithWherePost**](DesignCommentApi.md#designCommentsUpsertWithWherePost) | **POST** /DesignComments/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
 
 
 # **designCommentsChangeStreamGet**
@@ -768,53 +762,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **designCommentsIdRepliesDelete**
-> designCommentsIdRepliesDelete($id)
-
-Deletes all replies of this model.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DesignCommentApi();
-$id = "id_example"; // string | DesignComment id
-
-try {
-    $api_instance->designCommentsIdRepliesDelete($id);
-} catch (Exception $e) {
-    echo 'Exception when calling DesignCommentApi->designCommentsIdRepliesDelete: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| DesignComment id |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
 # **designCommentsIdRepliesFkDelete**
 > designCommentsIdRepliesFkDelete($id, $fk)
 
@@ -1116,54 +1063,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **designCommentsPatch**
-> \Swagger\Client\Model\DesignComment designCommentsPatch($data)
-
-Patch an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DesignCommentApi();
-$data = new \Swagger\Client\Model\DesignComment(); // \Swagger\Client\Model\DesignComment | Model instance data
-
-try {
-    $result = $api_instance->designCommentsPatch($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling DesignCommentApi->designCommentsPatch: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\DesignComment**](../Model/\Swagger\Client\Model\DesignComment.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\DesignComment**](../Model/DesignComment.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
 # **designCommentsPost**
 > \Swagger\Client\Model\DesignComment designCommentsPost($data)
 
@@ -1196,202 +1095,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **data** | [**\Swagger\Client\Model\DesignComment**](../Model/\Swagger\Client\Model\DesignComment.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\DesignComment**](../Model/DesignComment.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **designCommentsPut**
-> \Swagger\Client\Model\DesignComment designCommentsPut($data)
-
-Replace an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DesignCommentApi();
-$data = new \Swagger\Client\Model\DesignComment(); // \Swagger\Client\Model\DesignComment | Model instance data
-
-try {
-    $result = $api_instance->designCommentsPut($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling DesignCommentApi->designCommentsPut: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\DesignComment**](../Model/\Swagger\Client\Model\DesignComment.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\DesignComment**](../Model/DesignComment.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **designCommentsReplaceOrCreatePost**
-> \Swagger\Client\Model\DesignComment designCommentsReplaceOrCreatePost($data)
-
-Replace an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DesignCommentApi();
-$data = new \Swagger\Client\Model\DesignComment(); // \Swagger\Client\Model\DesignComment | Model instance data
-
-try {
-    $result = $api_instance->designCommentsReplaceOrCreatePost($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling DesignCommentApi->designCommentsReplaceOrCreatePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\DesignComment**](../Model/\Swagger\Client\Model\DesignComment.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\DesignComment**](../Model/DesignComment.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **designCommentsUpdatePost**
-> \Swagger\Client\Model\InlineResponse2003 designCommentsUpdatePost($where, $data)
-
-Update instances of the model matched by {{where}} from the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DesignCommentApi();
-$where = "where_example"; // string | Criteria to match model instances
-$data = new \Swagger\Client\Model\DesignComment(); // \Swagger\Client\Model\DesignComment | An object of model property name/value pairs
-
-try {
-    $result = $api_instance->designCommentsUpdatePost($where, $data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling DesignCommentApi->designCommentsUpdatePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **where** | **string**| Criteria to match model instances | [optional]
- **data** | [**\Swagger\Client\Model\DesignComment**](../Model/\Swagger\Client\Model\DesignComment.md)| An object of model property name/value pairs | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **designCommentsUpsertWithWherePost**
-> \Swagger\Client\Model\DesignComment designCommentsUpsertWithWherePost($where, $data)
-
-Update an existing model instance or insert a new one into the data source based on the where criteria.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DesignCommentApi();
-$where = "where_example"; // string | Criteria to match model instances
-$data = new \Swagger\Client\Model\DesignComment(); // \Swagger\Client\Model\DesignComment | An object of model property name/value pairs
-
-try {
-    $result = $api_instance->designCommentsUpsertWithWherePost($where, $data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling DesignCommentApi->designCommentsUpsertWithWherePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **where** | **string**| Criteria to match model instances | [optional]
- **data** | [**\Swagger\Client\Model\DesignComment**](../Model/\Swagger\Client\Model\DesignComment.md)| An object of model property name/value pairs | [optional]
 
 ### Return type
 

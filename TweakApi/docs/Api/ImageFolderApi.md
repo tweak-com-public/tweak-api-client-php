@@ -10,7 +10,6 @@ Method | HTTP request | Description
 [**imageFoldersFindOneGet**](ImageFolderApi.md#imageFoldersFindOneGet) | **GET** /ImageFolders/findOne | Find first instance of the model matched by filter from the data source.
 [**imageFoldersGet**](ImageFolderApi.md#imageFoldersGet) | **GET** /ImageFolders | Find all instances of the model matched by filter from the data source.
 [**imageFoldersIdChildrenCountGet**](ImageFolderApi.md#imageFoldersIdChildrenCountGet) | **GET** /ImageFolders/{id}/children/count | Counts children of ImageFolder.
-[**imageFoldersIdChildrenDelete**](ImageFolderApi.md#imageFoldersIdChildrenDelete) | **DELETE** /ImageFolders/{id}/children | Deletes all children of this model.
 [**imageFoldersIdChildrenFkDelete**](ImageFolderApi.md#imageFoldersIdChildrenFkDelete) | **DELETE** /ImageFolders/{id}/children/{fk} | Delete a related item by id for children.
 [**imageFoldersIdChildrenFkGet**](ImageFolderApi.md#imageFoldersIdChildrenFkGet) | **GET** /ImageFolders/{id}/children/{fk} | Find a related item by id for children.
 [**imageFoldersIdChildrenFkPut**](ImageFolderApi.md#imageFoldersIdChildrenFkPut) | **PUT** /ImageFolders/{id}/children/{fk} | Update a related item by id for children.
@@ -28,7 +27,6 @@ Method | HTTP request | Description
 [**imageFoldersIdGet**](ImageFolderApi.md#imageFoldersIdGet) | **GET** /ImageFolders/{id} | Find a model instance by {{id}} from the data source.
 [**imageFoldersIdHead**](ImageFolderApi.md#imageFoldersIdHead) | **HEAD** /ImageFolders/{id} | Check whether a model instance exists in the data source.
 [**imageFoldersIdImagesCountGet**](ImageFolderApi.md#imageFoldersIdImagesCountGet) | **GET** /ImageFolders/{id}/images/count | Counts images of ImageFolder.
-[**imageFoldersIdImagesDelete**](ImageFolderApi.md#imageFoldersIdImagesDelete) | **DELETE** /ImageFolders/{id}/images | Deletes all images of this model.
 [**imageFoldersIdImagesFkDelete**](ImageFolderApi.md#imageFoldersIdImagesFkDelete) | **DELETE** /ImageFolders/{id}/images/{fk} | Delete a related item by id for images.
 [**imageFoldersIdImagesFkGet**](ImageFolderApi.md#imageFoldersIdImagesFkGet) | **GET** /ImageFolders/{id}/images/{fk} | Find a related item by id for images.
 [**imageFoldersIdImagesFkPut**](ImageFolderApi.md#imageFoldersIdImagesFkPut) | **PUT** /ImageFolders/{id}/images/{fk} | Update a related item by id for images.
@@ -62,12 +60,7 @@ Method | HTTP request | Description
 [**imageFoldersIdPut**](ImageFolderApi.md#imageFoldersIdPut) | **PUT** /ImageFolders/{id} | Replace attributes for a model instance and persist it into the data source.
 [**imageFoldersIdReplacePost**](ImageFolderApi.md#imageFoldersIdReplacePost) | **POST** /ImageFolders/{id}/replace | Replace attributes for a model instance and persist it into the data source.
 [**imageFoldersIdTeamGet**](ImageFolderApi.md#imageFoldersIdTeamGet) | **GET** /ImageFolders/{id}/team | Fetches belongsTo relation team.
-[**imageFoldersPatch**](ImageFolderApi.md#imageFoldersPatch) | **PATCH** /ImageFolders | Patch an existing model instance or insert a new one into the data source.
 [**imageFoldersPost**](ImageFolderApi.md#imageFoldersPost) | **POST** /ImageFolders | Create a new instance of the model and persist it into the data source.
-[**imageFoldersPut**](ImageFolderApi.md#imageFoldersPut) | **PUT** /ImageFolders | Replace an existing model instance or insert a new one into the data source.
-[**imageFoldersReplaceOrCreatePost**](ImageFolderApi.md#imageFoldersReplaceOrCreatePost) | **POST** /ImageFolders/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
-[**imageFoldersUpdatePost**](ImageFolderApi.md#imageFoldersUpdatePost) | **POST** /ImageFolders/update | Update instances of the model matched by {{where}} from the data source.
-[**imageFoldersUpsertWithWherePost**](ImageFolderApi.md#imageFoldersUpsertWithWherePost) | **POST** /ImageFolders/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
 
 
 # **imageFoldersChangeStreamGet**
@@ -348,53 +341,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **imageFoldersIdChildrenDelete**
-> imageFoldersIdChildrenDelete($id)
-
-Deletes all children of this model.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\ImageFolderApi();
-$id = "id_example"; // string | ImageFolder id
-
-try {
-    $api_instance->imageFoldersIdChildrenDelete($id);
-} catch (Exception $e) {
-    echo 'Exception when calling ImageFolderApi->imageFoldersIdChildrenDelete: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| ImageFolder id |
-
-### Return type
-
-void (empty response body)
 
 ### Authorization
 
@@ -1238,53 +1184,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **imageFoldersIdImagesDelete**
-> imageFoldersIdImagesDelete($id)
-
-Deletes all images of this model.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\ImageFolderApi();
-$id = "id_example"; // string | ImageFolder id
-
-try {
-    $api_instance->imageFoldersIdImagesDelete($id);
-} catch (Exception $e) {
-    echo 'Exception when calling ImageFolderApi->imageFoldersIdImagesDelete: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| ImageFolder id |
-
-### Return type
-
-void (empty response body)
 
 ### Authorization
 
@@ -2954,54 +2853,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **imageFoldersPatch**
-> \Swagger\Client\Model\ImageFolder imageFoldersPatch($data)
-
-Patch an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\ImageFolderApi();
-$data = new \Swagger\Client\Model\ImageFolder(); // \Swagger\Client\Model\ImageFolder | Model instance data
-
-try {
-    $result = $api_instance->imageFoldersPatch($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ImageFolderApi->imageFoldersPatch: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\ImageFolder**](../Model/\Swagger\Client\Model\ImageFolder.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\ImageFolder**](../Model/ImageFolder.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
 # **imageFoldersPost**
 > \Swagger\Client\Model\ImageFolder imageFoldersPost($data)
 
@@ -3034,202 +2885,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **data** | [**\Swagger\Client\Model\ImageFolder**](../Model/\Swagger\Client\Model\ImageFolder.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\ImageFolder**](../Model/ImageFolder.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **imageFoldersPut**
-> \Swagger\Client\Model\ImageFolder imageFoldersPut($data)
-
-Replace an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\ImageFolderApi();
-$data = new \Swagger\Client\Model\ImageFolder(); // \Swagger\Client\Model\ImageFolder | Model instance data
-
-try {
-    $result = $api_instance->imageFoldersPut($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ImageFolderApi->imageFoldersPut: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\ImageFolder**](../Model/\Swagger\Client\Model\ImageFolder.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\ImageFolder**](../Model/ImageFolder.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **imageFoldersReplaceOrCreatePost**
-> \Swagger\Client\Model\ImageFolder imageFoldersReplaceOrCreatePost($data)
-
-Replace an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\ImageFolderApi();
-$data = new \Swagger\Client\Model\ImageFolder(); // \Swagger\Client\Model\ImageFolder | Model instance data
-
-try {
-    $result = $api_instance->imageFoldersReplaceOrCreatePost($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ImageFolderApi->imageFoldersReplaceOrCreatePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\ImageFolder**](../Model/\Swagger\Client\Model\ImageFolder.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\ImageFolder**](../Model/ImageFolder.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **imageFoldersUpdatePost**
-> \Swagger\Client\Model\InlineResponse2003 imageFoldersUpdatePost($where, $data)
-
-Update instances of the model matched by {{where}} from the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\ImageFolderApi();
-$where = "where_example"; // string | Criteria to match model instances
-$data = new \Swagger\Client\Model\ImageFolder(); // \Swagger\Client\Model\ImageFolder | An object of model property name/value pairs
-
-try {
-    $result = $api_instance->imageFoldersUpdatePost($where, $data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ImageFolderApi->imageFoldersUpdatePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **where** | **string**| Criteria to match model instances | [optional]
- **data** | [**\Swagger\Client\Model\ImageFolder**](../Model/\Swagger\Client\Model\ImageFolder.md)| An object of model property name/value pairs | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **imageFoldersUpsertWithWherePost**
-> \Swagger\Client\Model\ImageFolder imageFoldersUpsertWithWherePost($where, $data)
-
-Update an existing model instance or insert a new one into the data source based on the where criteria.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\ImageFolderApi();
-$where = "where_example"; // string | Criteria to match model instances
-$data = new \Swagger\Client\Model\ImageFolder(); // \Swagger\Client\Model\ImageFolder | An object of model property name/value pairs
-
-try {
-    $result = $api_instance->imageFoldersUpsertWithWherePost($where, $data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ImageFolderApi->imageFoldersUpsertWithWherePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **where** | **string**| Criteria to match model instances | [optional]
- **data** | [**\Swagger\Client\Model\ImageFolder**](../Model/\Swagger\Client\Model\ImageFolder.md)| An object of model property name/value pairs | [optional]
 
 ### Return type
 

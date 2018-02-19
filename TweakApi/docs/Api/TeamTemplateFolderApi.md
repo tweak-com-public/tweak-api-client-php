@@ -10,7 +10,6 @@ Method | HTTP request | Description
 [**teamTemplateFoldersFindOneGet**](TeamTemplateFolderApi.md#teamTemplateFoldersFindOneGet) | **GET** /TeamTemplateFolders/findOne | Find first instance of the model matched by filter from the data source.
 [**teamTemplateFoldersGet**](TeamTemplateFolderApi.md#teamTemplateFoldersGet) | **GET** /TeamTemplateFolders | Find all instances of the model matched by filter from the data source.
 [**teamTemplateFoldersIdChildrenCountGet**](TeamTemplateFolderApi.md#teamTemplateFoldersIdChildrenCountGet) | **GET** /TeamTemplateFolders/{id}/children/count | Counts children of TeamTemplateFolder.
-[**teamTemplateFoldersIdChildrenDelete**](TeamTemplateFolderApi.md#teamTemplateFoldersIdChildrenDelete) | **DELETE** /TeamTemplateFolders/{id}/children | Deletes all children of this model.
 [**teamTemplateFoldersIdChildrenFkDelete**](TeamTemplateFolderApi.md#teamTemplateFoldersIdChildrenFkDelete) | **DELETE** /TeamTemplateFolders/{id}/children/{fk} | Delete a related item by id for children.
 [**teamTemplateFoldersIdChildrenFkGet**](TeamTemplateFolderApi.md#teamTemplateFoldersIdChildrenFkGet) | **GET** /TeamTemplateFolders/{id}/children/{fk} | Find a related item by id for children.
 [**teamTemplateFoldersIdChildrenFkPut**](TeamTemplateFolderApi.md#teamTemplateFoldersIdChildrenFkPut) | **PUT** /TeamTemplateFolders/{id}/children/{fk} | Update a related item by id for children.
@@ -26,18 +25,12 @@ Method | HTTP request | Description
 [**teamTemplateFoldersIdReplacePost**](TeamTemplateFolderApi.md#teamTemplateFoldersIdReplacePost) | **POST** /TeamTemplateFolders/{id}/replace | Replace attributes for a model instance and persist it into the data source.
 [**teamTemplateFoldersIdTeamGet**](TeamTemplateFolderApi.md#teamTemplateFoldersIdTeamGet) | **GET** /TeamTemplateFolders/{id}/team | Fetches belongsTo relation team.
 [**teamTemplateFoldersIdTemplatesCountGet**](TeamTemplateFolderApi.md#teamTemplateFoldersIdTemplatesCountGet) | **GET** /TeamTemplateFolders/{id}/templates/count | Counts templates of TeamTemplateFolder.
-[**teamTemplateFoldersIdTemplatesDelete**](TeamTemplateFolderApi.md#teamTemplateFoldersIdTemplatesDelete) | **DELETE** /TeamTemplateFolders/{id}/templates | Deletes all templates of this model.
 [**teamTemplateFoldersIdTemplatesFkDelete**](TeamTemplateFolderApi.md#teamTemplateFoldersIdTemplatesFkDelete) | **DELETE** /TeamTemplateFolders/{id}/templates/{fk} | Delete a related item by id for templates.
 [**teamTemplateFoldersIdTemplatesFkGet**](TeamTemplateFolderApi.md#teamTemplateFoldersIdTemplatesFkGet) | **GET** /TeamTemplateFolders/{id}/templates/{fk} | Find a related item by id for templates.
 [**teamTemplateFoldersIdTemplatesFkPut**](TeamTemplateFolderApi.md#teamTemplateFoldersIdTemplatesFkPut) | **PUT** /TeamTemplateFolders/{id}/templates/{fk} | Update a related item by id for templates.
 [**teamTemplateFoldersIdTemplatesGet**](TeamTemplateFolderApi.md#teamTemplateFoldersIdTemplatesGet) | **GET** /TeamTemplateFolders/{id}/templates | Queries templates of TeamTemplateFolder.
 [**teamTemplateFoldersIdTemplatesPost**](TeamTemplateFolderApi.md#teamTemplateFoldersIdTemplatesPost) | **POST** /TeamTemplateFolders/{id}/templates | Creates a new instance in templates of this model.
-[**teamTemplateFoldersPatch**](TeamTemplateFolderApi.md#teamTemplateFoldersPatch) | **PATCH** /TeamTemplateFolders | Patch an existing model instance or insert a new one into the data source.
 [**teamTemplateFoldersPost**](TeamTemplateFolderApi.md#teamTemplateFoldersPost) | **POST** /TeamTemplateFolders | Create a new instance of the model and persist it into the data source.
-[**teamTemplateFoldersPut**](TeamTemplateFolderApi.md#teamTemplateFoldersPut) | **PUT** /TeamTemplateFolders | Replace an existing model instance or insert a new one into the data source.
-[**teamTemplateFoldersReplaceOrCreatePost**](TeamTemplateFolderApi.md#teamTemplateFoldersReplaceOrCreatePost) | **POST** /TeamTemplateFolders/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
-[**teamTemplateFoldersUpdatePost**](TeamTemplateFolderApi.md#teamTemplateFoldersUpdatePost) | **POST** /TeamTemplateFolders/update | Update instances of the model matched by {{where}} from the data source.
-[**teamTemplateFoldersUpsertWithWherePost**](TeamTemplateFolderApi.md#teamTemplateFoldersUpsertWithWherePost) | **POST** /TeamTemplateFolders/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
 
 
 # **teamTemplateFoldersChangeStreamGet**
@@ -318,53 +311,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **teamTemplateFoldersIdChildrenDelete**
-> teamTemplateFoldersIdChildrenDelete($id)
-
-Deletes all children of this model.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\TeamTemplateFolderApi();
-$id = "id_example"; // string | TeamTemplateFolder id
-
-try {
-    $api_instance->teamTemplateFoldersIdChildrenDelete($id);
-} catch (Exception $e) {
-    echo 'Exception when calling TeamTemplateFolderApi->teamTemplateFoldersIdChildrenDelete: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| TeamTemplateFolder id |
-
-### Return type
-
-void (empty response body)
 
 ### Authorization
 
@@ -1122,53 +1068,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **teamTemplateFoldersIdTemplatesDelete**
-> teamTemplateFoldersIdTemplatesDelete($id)
-
-Deletes all templates of this model.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\TeamTemplateFolderApi();
-$id = "id_example"; // string | TeamTemplateFolder id
-
-try {
-    $api_instance->teamTemplateFoldersIdTemplatesDelete($id);
-} catch (Exception $e) {
-    echo 'Exception when calling TeamTemplateFolderApi->teamTemplateFoldersIdTemplatesDelete: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| TeamTemplateFolder id |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
 # **teamTemplateFoldersIdTemplatesFkDelete**
 > teamTemplateFoldersIdTemplatesFkDelete($id, $fk)
 
@@ -1420,54 +1319,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **teamTemplateFoldersPatch**
-> \Swagger\Client\Model\TeamTemplateFolder teamTemplateFoldersPatch($data)
-
-Patch an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\TeamTemplateFolderApi();
-$data = new \Swagger\Client\Model\TeamTemplateFolder(); // \Swagger\Client\Model\TeamTemplateFolder | Model instance data
-
-try {
-    $result = $api_instance->teamTemplateFoldersPatch($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling TeamTemplateFolderApi->teamTemplateFoldersPatch: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\TeamTemplateFolder**](../Model/\Swagger\Client\Model\TeamTemplateFolder.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\TeamTemplateFolder**](../Model/TeamTemplateFolder.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
 # **teamTemplateFoldersPost**
 > \Swagger\Client\Model\TeamTemplateFolder teamTemplateFoldersPost($data)
 
@@ -1500,202 +1351,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **data** | [**\Swagger\Client\Model\TeamTemplateFolder**](../Model/\Swagger\Client\Model\TeamTemplateFolder.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\TeamTemplateFolder**](../Model/TeamTemplateFolder.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **teamTemplateFoldersPut**
-> \Swagger\Client\Model\TeamTemplateFolder teamTemplateFoldersPut($data)
-
-Replace an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\TeamTemplateFolderApi();
-$data = new \Swagger\Client\Model\TeamTemplateFolder(); // \Swagger\Client\Model\TeamTemplateFolder | Model instance data
-
-try {
-    $result = $api_instance->teamTemplateFoldersPut($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling TeamTemplateFolderApi->teamTemplateFoldersPut: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\TeamTemplateFolder**](../Model/\Swagger\Client\Model\TeamTemplateFolder.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\TeamTemplateFolder**](../Model/TeamTemplateFolder.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **teamTemplateFoldersReplaceOrCreatePost**
-> \Swagger\Client\Model\TeamTemplateFolder teamTemplateFoldersReplaceOrCreatePost($data)
-
-Replace an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\TeamTemplateFolderApi();
-$data = new \Swagger\Client\Model\TeamTemplateFolder(); // \Swagger\Client\Model\TeamTemplateFolder | Model instance data
-
-try {
-    $result = $api_instance->teamTemplateFoldersReplaceOrCreatePost($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling TeamTemplateFolderApi->teamTemplateFoldersReplaceOrCreatePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\TeamTemplateFolder**](../Model/\Swagger\Client\Model\TeamTemplateFolder.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\TeamTemplateFolder**](../Model/TeamTemplateFolder.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **teamTemplateFoldersUpdatePost**
-> \Swagger\Client\Model\InlineResponse2003 teamTemplateFoldersUpdatePost($where, $data)
-
-Update instances of the model matched by {{where}} from the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\TeamTemplateFolderApi();
-$where = "where_example"; // string | Criteria to match model instances
-$data = new \Swagger\Client\Model\TeamTemplateFolder(); // \Swagger\Client\Model\TeamTemplateFolder | An object of model property name/value pairs
-
-try {
-    $result = $api_instance->teamTemplateFoldersUpdatePost($where, $data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling TeamTemplateFolderApi->teamTemplateFoldersUpdatePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **where** | **string**| Criteria to match model instances | [optional]
- **data** | [**\Swagger\Client\Model\TeamTemplateFolder**](../Model/\Swagger\Client\Model\TeamTemplateFolder.md)| An object of model property name/value pairs | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **teamTemplateFoldersUpsertWithWherePost**
-> \Swagger\Client\Model\TeamTemplateFolder teamTemplateFoldersUpsertWithWherePost($where, $data)
-
-Update an existing model instance or insert a new one into the data source based on the where criteria.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\TeamTemplateFolderApi();
-$where = "where_example"; // string | Criteria to match model instances
-$data = new \Swagger\Client\Model\TeamTemplateFolder(); // \Swagger\Client\Model\TeamTemplateFolder | An object of model property name/value pairs
-
-try {
-    $result = $api_instance->teamTemplateFoldersUpsertWithWherePost($where, $data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling TeamTemplateFolderApi->teamTemplateFoldersUpsertWithWherePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **where** | **string**| Criteria to match model instances | [optional]
- **data** | [**\Swagger\Client\Model\TeamTemplateFolder**](../Model/\Swagger\Client\Model\TeamTemplateFolder.md)| An object of model property name/value pairs | [optional]
 
 ### Return type
 

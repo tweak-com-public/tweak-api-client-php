@@ -10,7 +10,6 @@ Method | HTTP request | Description
 [**portalTemplateFoldersFindOneGet**](PortalTemplateFolderApi.md#portalTemplateFoldersFindOneGet) | **GET** /PortalTemplateFolders/findOne | Find first instance of the model matched by filter from the data source.
 [**portalTemplateFoldersGet**](PortalTemplateFolderApi.md#portalTemplateFoldersGet) | **GET** /PortalTemplateFolders | Find all instances of the model matched by filter from the data source.
 [**portalTemplateFoldersIdChildrenCountGet**](PortalTemplateFolderApi.md#portalTemplateFoldersIdChildrenCountGet) | **GET** /PortalTemplateFolders/{id}/children/count | Counts children of PortalTemplateFolder.
-[**portalTemplateFoldersIdChildrenDelete**](PortalTemplateFolderApi.md#portalTemplateFoldersIdChildrenDelete) | **DELETE** /PortalTemplateFolders/{id}/children | Deletes all children of this model.
 [**portalTemplateFoldersIdChildrenFkDelete**](PortalTemplateFolderApi.md#portalTemplateFoldersIdChildrenFkDelete) | **DELETE** /PortalTemplateFolders/{id}/children/{fk} | Delete a related item by id for children.
 [**portalTemplateFoldersIdChildrenFkGet**](PortalTemplateFolderApi.md#portalTemplateFoldersIdChildrenFkGet) | **GET** /PortalTemplateFolders/{id}/children/{fk} | Find a related item by id for children.
 [**portalTemplateFoldersIdChildrenFkPut**](PortalTemplateFolderApi.md#portalTemplateFoldersIdChildrenFkPut) | **PUT** /PortalTemplateFolders/{id}/children/{fk} | Update a related item by id for children.
@@ -26,7 +25,6 @@ Method | HTTP request | Description
 [**portalTemplateFoldersIdPut**](PortalTemplateFolderApi.md#portalTemplateFoldersIdPut) | **PUT** /PortalTemplateFolders/{id} | Replace attributes for a model instance and persist it into the data source.
 [**portalTemplateFoldersIdReplacePost**](PortalTemplateFolderApi.md#portalTemplateFoldersIdReplacePost) | **POST** /PortalTemplateFolders/{id}/replace | Replace attributes for a model instance and persist it into the data source.
 [**portalTemplateFoldersIdTemplatesCountGet**](PortalTemplateFolderApi.md#portalTemplateFoldersIdTemplatesCountGet) | **GET** /PortalTemplateFolders/{id}/templates/count | Counts templates of PortalTemplateFolder.
-[**portalTemplateFoldersIdTemplatesDelete**](PortalTemplateFolderApi.md#portalTemplateFoldersIdTemplatesDelete) | **DELETE** /PortalTemplateFolders/{id}/templates | Deletes all templates of this model.
 [**portalTemplateFoldersIdTemplatesFkDelete**](PortalTemplateFolderApi.md#portalTemplateFoldersIdTemplatesFkDelete) | **DELETE** /PortalTemplateFolders/{id}/templates/{fk} | Delete a related item by id for templates.
 [**portalTemplateFoldersIdTemplatesFkGet**](PortalTemplateFolderApi.md#portalTemplateFoldersIdTemplatesFkGet) | **GET** /PortalTemplateFolders/{id}/templates/{fk} | Find a related item by id for templates.
 [**portalTemplateFoldersIdTemplatesFkPut**](PortalTemplateFolderApi.md#portalTemplateFoldersIdTemplatesFkPut) | **PUT** /PortalTemplateFolders/{id}/templates/{fk} | Update a related item by id for templates.
@@ -35,12 +33,7 @@ Method | HTTP request | Description
 [**portalTemplateFoldersIdTemplatesRelFkDelete**](PortalTemplateFolderApi.md#portalTemplateFoldersIdTemplatesRelFkDelete) | **DELETE** /PortalTemplateFolders/{id}/templates/rel/{fk} | Remove the templates relation to an item by id.
 [**portalTemplateFoldersIdTemplatesRelFkHead**](PortalTemplateFolderApi.md#portalTemplateFoldersIdTemplatesRelFkHead) | **HEAD** /PortalTemplateFolders/{id}/templates/rel/{fk} | Check the existence of templates relation to an item by id.
 [**portalTemplateFoldersIdTemplatesRelFkPut**](PortalTemplateFolderApi.md#portalTemplateFoldersIdTemplatesRelFkPut) | **PUT** /PortalTemplateFolders/{id}/templates/rel/{fk} | Add a related item by id for templates.
-[**portalTemplateFoldersPatch**](PortalTemplateFolderApi.md#portalTemplateFoldersPatch) | **PATCH** /PortalTemplateFolders | Patch an existing model instance or insert a new one into the data source.
 [**portalTemplateFoldersPost**](PortalTemplateFolderApi.md#portalTemplateFoldersPost) | **POST** /PortalTemplateFolders | Create a new instance of the model and persist it into the data source.
-[**portalTemplateFoldersPut**](PortalTemplateFolderApi.md#portalTemplateFoldersPut) | **PUT** /PortalTemplateFolders | Replace an existing model instance or insert a new one into the data source.
-[**portalTemplateFoldersReplaceOrCreatePost**](PortalTemplateFolderApi.md#portalTemplateFoldersReplaceOrCreatePost) | **POST** /PortalTemplateFolders/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
-[**portalTemplateFoldersUpdatePost**](PortalTemplateFolderApi.md#portalTemplateFoldersUpdatePost) | **POST** /PortalTemplateFolders/update | Update instances of the model matched by {{where}} from the data source.
-[**portalTemplateFoldersUpsertWithWherePost**](PortalTemplateFolderApi.md#portalTemplateFoldersUpsertWithWherePost) | **POST** /PortalTemplateFolders/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
 
 
 # **portalTemplateFoldersChangeStreamGet**
@@ -321,53 +314,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **portalTemplateFoldersIdChildrenDelete**
-> portalTemplateFoldersIdChildrenDelete($id)
-
-Deletes all children of this model.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\PortalTemplateFolderApi();
-$id = "id_example"; // string | PortalTemplateFolder id
-
-try {
-    $api_instance->portalTemplateFoldersIdChildrenDelete($id);
-} catch (Exception $e) {
-    echo 'Exception when calling PortalTemplateFolderApi->portalTemplateFoldersIdChildrenDelete: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| PortalTemplateFolder id |
-
-### Return type
-
-void (empty response body)
 
 ### Authorization
 
@@ -1125,53 +1071,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **portalTemplateFoldersIdTemplatesDelete**
-> portalTemplateFoldersIdTemplatesDelete($id)
-
-Deletes all templates of this model.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\PortalTemplateFolderApi();
-$id = "id_example"; // string | PortalTemplateFolder id
-
-try {
-    $api_instance->portalTemplateFoldersIdTemplatesDelete($id);
-} catch (Exception $e) {
-    echo 'Exception when calling PortalTemplateFolderApi->portalTemplateFoldersIdTemplatesDelete: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| PortalTemplateFolder id |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
 # **portalTemplateFoldersIdTemplatesFkDelete**
 > portalTemplateFoldersIdTemplatesFkDelete($id, $fk)
 
@@ -1574,54 +1473,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **portalTemplateFoldersPatch**
-> \Swagger\Client\Model\PortalTemplateFolder portalTemplateFoldersPatch($data)
-
-Patch an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\PortalTemplateFolderApi();
-$data = new \Swagger\Client\Model\PortalTemplateFolder(); // \Swagger\Client\Model\PortalTemplateFolder | Model instance data
-
-try {
-    $result = $api_instance->portalTemplateFoldersPatch($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling PortalTemplateFolderApi->portalTemplateFoldersPatch: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\PortalTemplateFolder**](../Model/\Swagger\Client\Model\PortalTemplateFolder.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\PortalTemplateFolder**](../Model/PortalTemplateFolder.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
 # **portalTemplateFoldersPost**
 > \Swagger\Client\Model\PortalTemplateFolder portalTemplateFoldersPost($data)
 
@@ -1654,202 +1505,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **data** | [**\Swagger\Client\Model\PortalTemplateFolder**](../Model/\Swagger\Client\Model\PortalTemplateFolder.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\PortalTemplateFolder**](../Model/PortalTemplateFolder.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **portalTemplateFoldersPut**
-> \Swagger\Client\Model\PortalTemplateFolder portalTemplateFoldersPut($data)
-
-Replace an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\PortalTemplateFolderApi();
-$data = new \Swagger\Client\Model\PortalTemplateFolder(); // \Swagger\Client\Model\PortalTemplateFolder | Model instance data
-
-try {
-    $result = $api_instance->portalTemplateFoldersPut($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling PortalTemplateFolderApi->portalTemplateFoldersPut: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\PortalTemplateFolder**](../Model/\Swagger\Client\Model\PortalTemplateFolder.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\PortalTemplateFolder**](../Model/PortalTemplateFolder.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **portalTemplateFoldersReplaceOrCreatePost**
-> \Swagger\Client\Model\PortalTemplateFolder portalTemplateFoldersReplaceOrCreatePost($data)
-
-Replace an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\PortalTemplateFolderApi();
-$data = new \Swagger\Client\Model\PortalTemplateFolder(); // \Swagger\Client\Model\PortalTemplateFolder | Model instance data
-
-try {
-    $result = $api_instance->portalTemplateFoldersReplaceOrCreatePost($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling PortalTemplateFolderApi->portalTemplateFoldersReplaceOrCreatePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\PortalTemplateFolder**](../Model/\Swagger\Client\Model\PortalTemplateFolder.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\PortalTemplateFolder**](../Model/PortalTemplateFolder.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **portalTemplateFoldersUpdatePost**
-> \Swagger\Client\Model\InlineResponse2003 portalTemplateFoldersUpdatePost($where, $data)
-
-Update instances of the model matched by {{where}} from the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\PortalTemplateFolderApi();
-$where = "where_example"; // string | Criteria to match model instances
-$data = new \Swagger\Client\Model\PortalTemplateFolder(); // \Swagger\Client\Model\PortalTemplateFolder | An object of model property name/value pairs
-
-try {
-    $result = $api_instance->portalTemplateFoldersUpdatePost($where, $data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling PortalTemplateFolderApi->portalTemplateFoldersUpdatePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **where** | **string**| Criteria to match model instances | [optional]
- **data** | [**\Swagger\Client\Model\PortalTemplateFolder**](../Model/\Swagger\Client\Model\PortalTemplateFolder.md)| An object of model property name/value pairs | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **portalTemplateFoldersUpsertWithWherePost**
-> \Swagger\Client\Model\PortalTemplateFolder portalTemplateFoldersUpsertWithWherePost($where, $data)
-
-Update an existing model instance or insert a new one into the data source based on the where criteria.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\PortalTemplateFolderApi();
-$where = "where_example"; // string | Criteria to match model instances
-$data = new \Swagger\Client\Model\PortalTemplateFolder(); // \Swagger\Client\Model\PortalTemplateFolder | An object of model property name/value pairs
-
-try {
-    $result = $api_instance->portalTemplateFoldersUpsertWithWherePost($where, $data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling PortalTemplateFolderApi->portalTemplateFoldersUpsertWithWherePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **where** | **string**| Criteria to match model instances | [optional]
- **data** | [**\Swagger\Client\Model\PortalTemplateFolder**](../Model/\Swagger\Client\Model\PortalTemplateFolder.md)| An object of model property name/value pairs | [optional]
 
 ### Return type
 

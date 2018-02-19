@@ -20,7 +20,6 @@ Method | HTTP request | Description
 [**portalsIdDesignFoldersGet**](PortalApi.md#portalsIdDesignFoldersGet) | **GET** /Portals/{id}/designFolders | Queries designFolders of Portal.
 [**portalsIdDesignFoldersPost**](PortalApi.md#portalsIdDesignFoldersPost) | **POST** /Portals/{id}/designFolders | Creates a new instance in designFolders of this model.
 [**portalsIdDesignsCountGet**](PortalApi.md#portalsIdDesignsCountGet) | **GET** /Portals/{id}/designs/count | Counts designs of Portal.
-[**portalsIdDesignsDelete**](PortalApi.md#portalsIdDesignsDelete) | **DELETE** /Portals/{id}/designs | Deletes all designs of this model.
 [**portalsIdDesignsFkDelete**](PortalApi.md#portalsIdDesignsFkDelete) | **DELETE** /Portals/{id}/designs/{fk} | Delete a related item by id for designs.
 [**portalsIdDesignsFkGet**](PortalApi.md#portalsIdDesignsFkGet) | **GET** /Portals/{id}/designs/{fk} | Find a related item by id for designs.
 [**portalsIdDesignsFkPut**](PortalApi.md#portalsIdDesignsFkPut) | **PUT** /Portals/{id}/designs/{fk} | Update a related item by id for designs.
@@ -161,12 +160,7 @@ Method | HTTP request | Description
 [**portalsIdTemplatesRelFkDelete**](PortalApi.md#portalsIdTemplatesRelFkDelete) | **DELETE** /Portals/{id}/templates/rel/{fk} | Remove the templates relation to an item by id.
 [**portalsIdTemplatesRelFkHead**](PortalApi.md#portalsIdTemplatesRelFkHead) | **HEAD** /Portals/{id}/templates/rel/{fk} | Check the existence of templates relation to an item by id.
 [**portalsIdTemplatesRelFkPut**](PortalApi.md#portalsIdTemplatesRelFkPut) | **PUT** /Portals/{id}/templates/rel/{fk} | Add a related item by id for templates.
-[**portalsPatch**](PortalApi.md#portalsPatch) | **PATCH** /Portals | Patch an existing model instance or insert a new one into the data source.
 [**portalsPost**](PortalApi.md#portalsPost) | **POST** /Portals | Create a new instance of the model and persist it into the data source.
-[**portalsPut**](PortalApi.md#portalsPut) | **PUT** /Portals | Replace an existing model instance or insert a new one into the data source.
-[**portalsReplaceOrCreatePost**](PortalApi.md#portalsReplaceOrCreatePost) | **POST** /Portals/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
-[**portalsUpdatePost**](PortalApi.md#portalsUpdatePost) | **POST** /Portals/update | Update instances of the model matched by {{where}} from the data source.
-[**portalsUpsertWithWherePost**](PortalApi.md#portalsUpsertWithWherePost) | **POST** /Portals/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
 
 
 # **portalsChangeStreamGet**
@@ -941,53 +935,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **portalsIdDesignsDelete**
-> portalsIdDesignsDelete($id)
-
-Deletes all designs of this model.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\PortalApi();
-$id = "id_example"; // string | Portal id
-
-try {
-    $api_instance->portalsIdDesignsDelete($id);
-} catch (Exception $e) {
-    echo 'Exception when calling PortalApi->portalsIdDesignsDelete: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Portal id |
-
-### Return type
-
-void (empty response body)
 
 ### Authorization
 
@@ -8129,54 +8076,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **portalsPatch**
-> \Swagger\Client\Model\Portal portalsPatch($data)
-
-Patch an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\PortalApi();
-$data = new \Swagger\Client\Model\Portal(); // \Swagger\Client\Model\Portal | Model instance data
-
-try {
-    $result = $api_instance->portalsPatch($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling PortalApi->portalsPatch: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\Portal**](../Model/\Swagger\Client\Model\Portal.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\Portal**](../Model/Portal.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
 # **portalsPost**
 > \Swagger\Client\Model\Portal portalsPost($data)
 
@@ -8209,202 +8108,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **data** | [**\Swagger\Client\Model\Portal**](../Model/\Swagger\Client\Model\Portal.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\Portal**](../Model/Portal.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **portalsPut**
-> \Swagger\Client\Model\Portal portalsPut($data)
-
-Replace an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\PortalApi();
-$data = new \Swagger\Client\Model\Portal(); // \Swagger\Client\Model\Portal | Model instance data
-
-try {
-    $result = $api_instance->portalsPut($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling PortalApi->portalsPut: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\Portal**](../Model/\Swagger\Client\Model\Portal.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\Portal**](../Model/Portal.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **portalsReplaceOrCreatePost**
-> \Swagger\Client\Model\Portal portalsReplaceOrCreatePost($data)
-
-Replace an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\PortalApi();
-$data = new \Swagger\Client\Model\Portal(); // \Swagger\Client\Model\Portal | Model instance data
-
-try {
-    $result = $api_instance->portalsReplaceOrCreatePost($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling PortalApi->portalsReplaceOrCreatePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\Portal**](../Model/\Swagger\Client\Model\Portal.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\Portal**](../Model/Portal.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **portalsUpdatePost**
-> \Swagger\Client\Model\InlineResponse2003 portalsUpdatePost($where, $data)
-
-Update instances of the model matched by {{where}} from the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\PortalApi();
-$where = "where_example"; // string | Criteria to match model instances
-$data = new \Swagger\Client\Model\Portal(); // \Swagger\Client\Model\Portal | An object of model property name/value pairs
-
-try {
-    $result = $api_instance->portalsUpdatePost($where, $data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling PortalApi->portalsUpdatePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **where** | **string**| Criteria to match model instances | [optional]
- **data** | [**\Swagger\Client\Model\Portal**](../Model/\Swagger\Client\Model\Portal.md)| An object of model property name/value pairs | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **portalsUpsertWithWherePost**
-> \Swagger\Client\Model\Portal portalsUpsertWithWherePost($where, $data)
-
-Update an existing model instance or insert a new one into the data source based on the where criteria.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\PortalApi();
-$where = "where_example"; // string | Criteria to match model instances
-$data = new \Swagger\Client\Model\Portal(); // \Swagger\Client\Model\Portal | An object of model property name/value pairs
-
-try {
-    $result = $api_instance->portalsUpsertWithWherePost($where, $data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling PortalApi->portalsUpsertWithWherePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **where** | **string**| Criteria to match model instances | [optional]
- **data** | [**\Swagger\Client\Model\Portal**](../Model/\Swagger\Client\Model\Portal.md)| An object of model property name/value pairs | [optional]
 
 ### Return type
 

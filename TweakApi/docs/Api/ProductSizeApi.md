@@ -14,7 +14,6 @@ Method | HTTP request | Description
 [**productSizesIdGet**](ProductSizeApi.md#productSizesIdGet) | **GET** /ProductSizes/{id} | Find a model instance by {{id}} from the data source.
 [**productSizesIdHead**](ProductSizeApi.md#productSizesIdHead) | **HEAD** /ProductSizes/{id} | Check whether a model instance exists in the data source.
 [**productSizesIdMaterialsCountGet**](ProductSizeApi.md#productSizesIdMaterialsCountGet) | **GET** /ProductSizes/{id}/materials/count | Counts materials of ProductSize.
-[**productSizesIdMaterialsDelete**](ProductSizeApi.md#productSizesIdMaterialsDelete) | **DELETE** /ProductSizes/{id}/materials | Deletes all materials of this model.
 [**productSizesIdMaterialsFkDelete**](ProductSizeApi.md#productSizesIdMaterialsFkDelete) | **DELETE** /ProductSizes/{id}/materials/{fk} | Delete a related item by id for materials.
 [**productSizesIdMaterialsFkGet**](ProductSizeApi.md#productSizesIdMaterialsFkGet) | **GET** /ProductSizes/{id}/materials/{fk} | Find a related item by id for materials.
 [**productSizesIdMaterialsFkPut**](ProductSizeApi.md#productSizesIdMaterialsFkPut) | **PUT** /ProductSizes/{id}/materials/{fk} | Update a related item by id for materials.
@@ -35,19 +34,13 @@ Method | HTTP request | Description
 [**productSizesIdPut**](ProductSizeApi.md#productSizesIdPut) | **PUT** /ProductSizes/{id} | Replace attributes for a model instance and persist it into the data source.
 [**productSizesIdReplacePost**](ProductSizeApi.md#productSizesIdReplacePost) | **POST** /ProductSizes/{id}/replace | Replace attributes for a model instance and persist it into the data source.
 [**productSizesIdSizeMaterialsCountGet**](ProductSizeApi.md#productSizesIdSizeMaterialsCountGet) | **GET** /ProductSizes/{id}/sizeMaterials/count | Counts sizeMaterials of ProductSize.
-[**productSizesIdSizeMaterialsDelete**](ProductSizeApi.md#productSizesIdSizeMaterialsDelete) | **DELETE** /ProductSizes/{id}/sizeMaterials | Deletes all sizeMaterials of this model.
 [**productSizesIdSizeMaterialsFkDelete**](ProductSizeApi.md#productSizesIdSizeMaterialsFkDelete) | **DELETE** /ProductSizes/{id}/sizeMaterials/{fk} | Delete a related item by id for sizeMaterials.
 [**productSizesIdSizeMaterialsFkGet**](ProductSizeApi.md#productSizesIdSizeMaterialsFkGet) | **GET** /ProductSizes/{id}/sizeMaterials/{fk} | Find a related item by id for sizeMaterials.
 [**productSizesIdSizeMaterialsFkPut**](ProductSizeApi.md#productSizesIdSizeMaterialsFkPut) | **PUT** /ProductSizes/{id}/sizeMaterials/{fk} | Update a related item by id for sizeMaterials.
 [**productSizesIdSizeMaterialsGet**](ProductSizeApi.md#productSizesIdSizeMaterialsGet) | **GET** /ProductSizes/{id}/sizeMaterials | Queries sizeMaterials of ProductSize.
 [**productSizesIdSizeMaterialsPost**](ProductSizeApi.md#productSizesIdSizeMaterialsPost) | **POST** /ProductSizes/{id}/sizeMaterials | Creates a new instance in sizeMaterials of this model.
 [**productSizesIdTypeGet**](ProductSizeApi.md#productSizesIdTypeGet) | **GET** /ProductSizes/{id}/type | Fetches belongsTo relation type.
-[**productSizesPatch**](ProductSizeApi.md#productSizesPatch) | **PATCH** /ProductSizes | Patch an existing model instance or insert a new one into the data source.
 [**productSizesPost**](ProductSizeApi.md#productSizesPost) | **POST** /ProductSizes | Create a new instance of the model and persist it into the data source.
-[**productSizesPut**](ProductSizeApi.md#productSizesPut) | **PUT** /ProductSizes | Replace an existing model instance or insert a new one into the data source.
-[**productSizesReplaceOrCreatePost**](ProductSizeApi.md#productSizesReplaceOrCreatePost) | **POST** /ProductSizes/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
-[**productSizesUpdatePost**](ProductSizeApi.md#productSizesUpdatePost) | **POST** /ProductSizes/update | Update instances of the model matched by {{where}} from the data source.
-[**productSizesUpsertWithWherePost**](ProductSizeApi.md#productSizesUpsertWithWherePost) | **POST** /ProductSizes/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
 
 
 # **productSizesChangeStreamGet**
@@ -522,53 +515,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **productSizesIdMaterialsDelete**
-> productSizesIdMaterialsDelete($id)
-
-Deletes all materials of this model.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\ProductSizeApi();
-$id = "id_example"; // string | ProductSize id
-
-try {
-    $api_instance->productSizesIdMaterialsDelete($id);
-} catch (Exception $e) {
-    echo 'Exception when calling ProductSizeApi->productSizesIdMaterialsDelete: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| ProductSize id |
-
-### Return type
-
-void (empty response body)
 
 ### Authorization
 
@@ -1581,53 +1527,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **productSizesIdSizeMaterialsDelete**
-> productSizesIdSizeMaterialsDelete($id)
-
-Deletes all sizeMaterials of this model.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\ProductSizeApi();
-$id = "id_example"; // string | ProductSize id
-
-try {
-    $api_instance->productSizesIdSizeMaterialsDelete($id);
-} catch (Exception $e) {
-    echo 'Exception when calling ProductSizeApi->productSizesIdSizeMaterialsDelete: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| ProductSize id |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
 # **productSizesIdSizeMaterialsFkDelete**
 > productSizesIdSizeMaterialsFkDelete($id, $fk)
 
@@ -1929,54 +1828,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **productSizesPatch**
-> \Swagger\Client\Model\ProductSize productSizesPatch($data)
-
-Patch an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\ProductSizeApi();
-$data = new \Swagger\Client\Model\ProductSize(); // \Swagger\Client\Model\ProductSize | Model instance data
-
-try {
-    $result = $api_instance->productSizesPatch($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ProductSizeApi->productSizesPatch: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\ProductSize**](../Model/\Swagger\Client\Model\ProductSize.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\ProductSize**](../Model/ProductSize.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
 # **productSizesPost**
 > \Swagger\Client\Model\ProductSize productSizesPost($data)
 
@@ -2009,202 +1860,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **data** | [**\Swagger\Client\Model\ProductSize**](../Model/\Swagger\Client\Model\ProductSize.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\ProductSize**](../Model/ProductSize.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **productSizesPut**
-> \Swagger\Client\Model\ProductSize productSizesPut($data)
-
-Replace an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\ProductSizeApi();
-$data = new \Swagger\Client\Model\ProductSize(); // \Swagger\Client\Model\ProductSize | Model instance data
-
-try {
-    $result = $api_instance->productSizesPut($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ProductSizeApi->productSizesPut: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\ProductSize**](../Model/\Swagger\Client\Model\ProductSize.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\ProductSize**](../Model/ProductSize.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **productSizesReplaceOrCreatePost**
-> \Swagger\Client\Model\ProductSize productSizesReplaceOrCreatePost($data)
-
-Replace an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\ProductSizeApi();
-$data = new \Swagger\Client\Model\ProductSize(); // \Swagger\Client\Model\ProductSize | Model instance data
-
-try {
-    $result = $api_instance->productSizesReplaceOrCreatePost($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ProductSizeApi->productSizesReplaceOrCreatePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\ProductSize**](../Model/\Swagger\Client\Model\ProductSize.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\ProductSize**](../Model/ProductSize.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **productSizesUpdatePost**
-> \Swagger\Client\Model\InlineResponse2003 productSizesUpdatePost($where, $data)
-
-Update instances of the model matched by {{where}} from the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\ProductSizeApi();
-$where = "where_example"; // string | Criteria to match model instances
-$data = new \Swagger\Client\Model\ProductSize(); // \Swagger\Client\Model\ProductSize | An object of model property name/value pairs
-
-try {
-    $result = $api_instance->productSizesUpdatePost($where, $data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ProductSizeApi->productSizesUpdatePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **where** | **string**| Criteria to match model instances | [optional]
- **data** | [**\Swagger\Client\Model\ProductSize**](../Model/\Swagger\Client\Model\ProductSize.md)| An object of model property name/value pairs | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **productSizesUpsertWithWherePost**
-> \Swagger\Client\Model\ProductSize productSizesUpsertWithWherePost($where, $data)
-
-Update an existing model instance or insert a new one into the data source based on the where criteria.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\ProductSizeApi();
-$where = "where_example"; // string | Criteria to match model instances
-$data = new \Swagger\Client\Model\ProductSize(); // \Swagger\Client\Model\ProductSize | An object of model property name/value pairs
-
-try {
-    $result = $api_instance->productSizesUpsertWithWherePost($where, $data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ProductSizeApi->productSizesUpsertWithWherePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **where** | **string**| Criteria to match model instances | [optional]
- **data** | [**\Swagger\Client\Model\ProductSize**](../Model/\Swagger\Client\Model\ProductSize.md)| An object of model property name/value pairs | [optional]
 
 ### Return type
 

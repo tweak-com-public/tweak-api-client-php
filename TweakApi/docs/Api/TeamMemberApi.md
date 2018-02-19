@@ -10,7 +10,6 @@ Method | HTTP request | Description
 [**teamMembersFindOneGet**](TeamMemberApi.md#teamMembersFindOneGet) | **GET** /TeamMembers/findOne | Find first instance of the model matched by filter from the data source.
 [**teamMembersGet**](TeamMemberApi.md#teamMembersGet) | **GET** /TeamMembers | Find all instances of the model matched by filter from the data source.
 [**teamMembersIdAssignedDesignsCountGet**](TeamMemberApi.md#teamMembersIdAssignedDesignsCountGet) | **GET** /TeamMembers/{id}/assignedDesigns/count | Counts assignedDesigns of TeamMember.
-[**teamMembersIdAssignedDesignsDelete**](TeamMemberApi.md#teamMembersIdAssignedDesignsDelete) | **DELETE** /TeamMembers/{id}/assignedDesigns | Deletes all assignedDesigns of this model.
 [**teamMembersIdAssignedDesignsFkDelete**](TeamMemberApi.md#teamMembersIdAssignedDesignsFkDelete) | **DELETE** /TeamMembers/{id}/assignedDesigns/{fk} | Delete a related item by id for assignedDesigns.
 [**teamMembersIdAssignedDesignsFkGet**](TeamMemberApi.md#teamMembersIdAssignedDesignsFkGet) | **GET** /TeamMembers/{id}/assignedDesigns/{fk} | Find a related item by id for assignedDesigns.
 [**teamMembersIdAssignedDesignsFkPut**](TeamMemberApi.md#teamMembersIdAssignedDesignsFkPut) | **PUT** /TeamMembers/{id}/assignedDesigns/{fk} | Update a related item by id for assignedDesigns.
@@ -103,14 +102,12 @@ Method | HTTP request | Description
 [**teamMembersIdRequestedDesignExportsGet**](TeamMemberApi.md#teamMembersIdRequestedDesignExportsGet) | **GET** /TeamMembers/{id}/requestedDesignExports | Queries requestedDesignExports of TeamMember.
 [**teamMembersIdRequestedDesignExportsPost**](TeamMemberApi.md#teamMembersIdRequestedDesignExportsPost) | **POST** /TeamMembers/{id}/requestedDesignExports | Creates a new instance in requestedDesignExports of this model.
 [**teamMembersIdRequestedDesignsCountGet**](TeamMemberApi.md#teamMembersIdRequestedDesignsCountGet) | **GET** /TeamMembers/{id}/requestedDesigns/count | Counts requestedDesigns of TeamMember.
-[**teamMembersIdRequestedDesignsDelete**](TeamMemberApi.md#teamMembersIdRequestedDesignsDelete) | **DELETE** /TeamMembers/{id}/requestedDesigns | Deletes all requestedDesigns of this model.
 [**teamMembersIdRequestedDesignsFkDelete**](TeamMemberApi.md#teamMembersIdRequestedDesignsFkDelete) | **DELETE** /TeamMembers/{id}/requestedDesigns/{fk} | Delete a related item by id for requestedDesigns.
 [**teamMembersIdRequestedDesignsFkGet**](TeamMemberApi.md#teamMembersIdRequestedDesignsFkGet) | **GET** /TeamMembers/{id}/requestedDesigns/{fk} | Find a related item by id for requestedDesigns.
 [**teamMembersIdRequestedDesignsFkPut**](TeamMemberApi.md#teamMembersIdRequestedDesignsFkPut) | **PUT** /TeamMembers/{id}/requestedDesigns/{fk} | Update a related item by id for requestedDesigns.
 [**teamMembersIdRequestedDesignsGet**](TeamMemberApi.md#teamMembersIdRequestedDesignsGet) | **GET** /TeamMembers/{id}/requestedDesigns | Queries requestedDesigns of TeamMember.
 [**teamMembersIdRequestedDesignsPost**](TeamMemberApi.md#teamMembersIdRequestedDesignsPost) | **POST** /TeamMembers/{id}/requestedDesigns | Creates a new instance in requestedDesigns of this model.
 [**teamMembersIdReviewedDesignsCountGet**](TeamMemberApi.md#teamMembersIdReviewedDesignsCountGet) | **GET** /TeamMembers/{id}/reviewedDesigns/count | Counts reviewedDesigns of TeamMember.
-[**teamMembersIdReviewedDesignsDelete**](TeamMemberApi.md#teamMembersIdReviewedDesignsDelete) | **DELETE** /TeamMembers/{id}/reviewedDesigns | Deletes all reviewedDesigns of this model.
 [**teamMembersIdReviewedDesignsFkDelete**](TeamMemberApi.md#teamMembersIdReviewedDesignsFkDelete) | **DELETE** /TeamMembers/{id}/reviewedDesigns/{fk} | Delete a related item by id for reviewedDesigns.
 [**teamMembersIdReviewedDesignsFkGet**](TeamMemberApi.md#teamMembersIdReviewedDesignsFkGet) | **GET** /TeamMembers/{id}/reviewedDesigns/{fk} | Find a related item by id for reviewedDesigns.
 [**teamMembersIdReviewedDesignsFkPut**](TeamMemberApi.md#teamMembersIdReviewedDesignsFkPut) | **PUT** /TeamMembers/{id}/reviewedDesigns/{fk} | Update a related item by id for reviewedDesigns.
@@ -129,6 +126,10 @@ Method | HTTP request | Description
 [**teamMembersIdTargetModelTargetIdInviteInviteePost**](TeamMemberApi.md#teamMembersIdTargetModelTargetIdInviteInviteePost) | **POST** /TeamMembers/{id}/{targetModel}/{targetId}/invite/{invitee} | Invite somebody to join a team, portal or other targets
 [**teamMembersIdTargetModelTargetIdInvitePost**](TeamMemberApi.md#teamMembersIdTargetModelTargetIdInvitePost) | **POST** /TeamMembers/{id}/{targetModel}/{targetId}/invite | Invite a group of people to join a team, portal or other targets
 [**teamMembersIdTeamBillingAvailablePlansGet**](TeamMemberApi.md#teamMembersIdTeamBillingAvailablePlansGet) | **GET** /TeamMembers/{id}/team/billing/availablePlans | Get Available Plans
+[**teamMembersIdTeamBillingBankAccountDelete**](TeamMemberApi.md#teamMembersIdTeamBillingBankAccountDelete) | **DELETE** /TeamMembers/{id}/team/billing/bankAccount | Delete Team Billing BankAccount
+[**teamMembersIdTeamBillingBankAccountPost**](TeamMemberApi.md#teamMembersIdTeamBillingBankAccountPost) | **POST** /TeamMembers/{id}/team/billing/bankAccount | Create Team Billing BankAccount
+[**teamMembersIdTeamBillingBankAccountPut**](TeamMemberApi.md#teamMembersIdTeamBillingBankAccountPut) | **PUT** /TeamMembers/{id}/team/billing/bankAccount | Update Team Billing BankAccount
+[**teamMembersIdTeamBillingBankAccountVerifyPost**](TeamMemberApi.md#teamMembersIdTeamBillingBankAccountVerifyPost) | **POST** /TeamMembers/{id}/team/billing/bankAccount/verify | Create Team Billing BankAccount
 [**teamMembersIdTeamBillingCachedGet**](TeamMemberApi.md#teamMembersIdTeamBillingCachedGet) | **GET** /TeamMembers/{id}/team/billing/cached | Get Cached version of Team Billing
 [**teamMembersIdTeamBillingCardDelete**](TeamMemberApi.md#teamMembersIdTeamBillingCardDelete) | **DELETE** /TeamMembers/{id}/team/billing/card | Delete Team Billing Card
 [**teamMembersIdTeamBillingCardPost**](TeamMemberApi.md#teamMembersIdTeamBillingCardPost) | **POST** /TeamMembers/{id}/team/billing/card | Create Team Billing Card
@@ -136,7 +137,12 @@ Method | HTTP request | Description
 [**teamMembersIdTeamBillingInvoicesFkPost**](TeamMemberApi.md#teamMembersIdTeamBillingInvoicesFkPost) | **POST** /TeamMembers/{id}/team/billing/invoices/{fk} | Pay Team Billing Invoice
 [**teamMembersIdTeamBillingInvoicesGet**](TeamMemberApi.md#teamMembersIdTeamBillingInvoicesGet) | **GET** /TeamMembers/{id}/team/billing/invoices | List Team Billing Invoices
 [**teamMembersIdTeamBillingInvoicesUpcomingGet**](TeamMemberApi.md#teamMembersIdTeamBillingInvoicesUpcomingGet) | **GET** /TeamMembers/{id}/team/billing/invoices/upcoming | List Upcoming Team Billing Invoices
+[**teamMembersIdTeamBillingLimitLimitIncreasePost**](TeamMemberApi.md#teamMembersIdTeamBillingLimitLimitIncreasePost) | **POST** /TeamMembers/{id}/team/billing/limit/{limit}/increase | Increase Team Billing Limit by Limit
+[**teamMembersIdTeamBillingLimitLimitIncreaseValueGet**](TeamMemberApi.md#teamMembersIdTeamBillingLimitLimitIncreaseValueGet) | **GET** /TeamMembers/{id}/team/billing/limit/{limit}/increase/{value} | Check if Team Billing Limit can be increased by Limit
 [**teamMembersIdTeamBillingPut**](TeamMemberApi.md#teamMembersIdTeamBillingPut) | **PUT** /TeamMembers/{id}/team/billing | Update Team Billing
+[**teamMembersIdTeamBillingSourceDelete**](TeamMemberApi.md#teamMembersIdTeamBillingSourceDelete) | **DELETE** /TeamMembers/{id}/team/billing/source | Delete Team Billing Source
+[**teamMembersIdTeamBillingSourcePost**](TeamMemberApi.md#teamMembersIdTeamBillingSourcePost) | **POST** /TeamMembers/{id}/team/billing/source | Create Team Billing Source
+[**teamMembersIdTeamBillingSourcePut**](TeamMemberApi.md#teamMembersIdTeamBillingSourcePut) | **PUT** /TeamMembers/{id}/team/billing/source | Update Team Billing Source
 [**teamMembersIdTeamBillingSubscriptionPlanPut**](TeamMemberApi.md#teamMembersIdTeamBillingSubscriptionPlanPut) | **PUT** /TeamMembers/{id}/team/billing/subscription/plan | Update Team Billing Subscription Plan
 [**teamMembersIdTeamBillingTaxEvidenceGet**](TeamMemberApi.md#teamMembersIdTeamBillingTaxEvidenceGet) | **GET** /TeamMembers/{id}/team/billing/taxEvidence | Get Team Billing Tax Evidence
 [**teamMembersIdTeamBillingUncachedGet**](TeamMemberApi.md#teamMembersIdTeamBillingUncachedGet) | **GET** /TeamMembers/{id}/team/billing/uncached | Get Team Billing
@@ -158,15 +164,13 @@ Method | HTTP request | Description
 [**teamMembersIdTeamDataRecordGet**](TeamMemberApi.md#teamMembersIdTeamDataRecordGet) | **GET** /TeamMembers/{id}/teamData/record | Get TeamData Record
 [**teamMembersIdTeamDataRecordPost**](TeamMemberApi.md#teamMembersIdTeamDataRecordPost) | **POST** /TeamMembers/{id}/teamData/record | Create TeamData Record
 [**teamMembersIdTeamDataRecordPut**](TeamMemberApi.md#teamMembersIdTeamDataRecordPut) | **PUT** /TeamMembers/{id}/teamData/record | Update TeamData Record
-[**teamMembersIdTeamDataSourcesCountGet**](TeamMemberApi.md#teamMembersIdTeamDataSourcesCountGet) | **GET** /TeamMembers/{id}/team/dataSources/count | Counts dataSources of Team.
-[**teamMembersIdTeamDataSourcesDelete**](TeamMemberApi.md#teamMembersIdTeamDataSourcesDelete) | **DELETE** /TeamMembers/{id}/team/dataSources | Deletes all dataSources of this model.
-[**teamMembersIdTeamDataSourcesFkDelete**](TeamMemberApi.md#teamMembersIdTeamDataSourcesFkDelete) | **DELETE** /TeamMembers/{id}/team/dataSources/{fk} | Delete a related item by id for dataSources.
-[**teamMembersIdTeamDataSourcesFkGet**](TeamMemberApi.md#teamMembersIdTeamDataSourcesFkGet) | **GET** /TeamMembers/{id}/team/dataSources/{fk} | Find a related item by id for dataSources.
-[**teamMembersIdTeamDataSourcesFkPut**](TeamMemberApi.md#teamMembersIdTeamDataSourcesFkPut) | **PUT** /TeamMembers/{id}/team/dataSources/{fk} | Update a related item by id for dataSources.
-[**teamMembersIdTeamDataSourcesGet**](TeamMemberApi.md#teamMembersIdTeamDataSourcesGet) | **GET** /TeamMembers/{id}/team/dataSources | Queries dataSources of Team.
-[**teamMembersIdTeamDataSourcesPost**](TeamMemberApi.md#teamMembersIdTeamDataSourcesPost) | **POST** /TeamMembers/{id}/team/dataSources | Creates a new instance in dataSources of this model.
+[**teamMembersIdTeamDataSourceSoapsCountGet**](TeamMemberApi.md#teamMembersIdTeamDataSourceSoapsCountGet) | **GET** /TeamMembers/{id}/team/dataSourceSoaps/count | Counts dataSourceSoaps of Team.
+[**teamMembersIdTeamDataSourceSoapsFkDelete**](TeamMemberApi.md#teamMembersIdTeamDataSourceSoapsFkDelete) | **DELETE** /TeamMembers/{id}/team/dataSourceSoaps/{fk} | Delete a related item by id for dataSourceSoaps.
+[**teamMembersIdTeamDataSourceSoapsFkGet**](TeamMemberApi.md#teamMembersIdTeamDataSourceSoapsFkGet) | **GET** /TeamMembers/{id}/team/dataSourceSoaps/{fk} | Find a related item by id for dataSourceSoaps.
+[**teamMembersIdTeamDataSourceSoapsFkPut**](TeamMemberApi.md#teamMembersIdTeamDataSourceSoapsFkPut) | **PUT** /TeamMembers/{id}/team/dataSourceSoaps/{fk} | Update a related item by id for dataSourceSoaps.
+[**teamMembersIdTeamDataSourceSoapsGet**](TeamMemberApi.md#teamMembersIdTeamDataSourceSoapsGet) | **GET** /TeamMembers/{id}/team/dataSourceSoaps | Queries dataSourceSoaps of Team.
+[**teamMembersIdTeamDataSourceSoapsPost**](TeamMemberApi.md#teamMembersIdTeamDataSourceSoapsPost) | **POST** /TeamMembers/{id}/team/dataSourceSoaps | Creates a new instance in dataSourceSoaps of this model.
 [**teamMembersIdTeamDynamicDatasCountGet**](TeamMemberApi.md#teamMembersIdTeamDynamicDatasCountGet) | **GET** /TeamMembers/{id}/team/dynamicDatas/count | Counts dynamicDatas of Team.
-[**teamMembersIdTeamDynamicDatasDelete**](TeamMemberApi.md#teamMembersIdTeamDynamicDatasDelete) | **DELETE** /TeamMembers/{id}/team/dynamicDatas | Deletes all dynamicDatas of this model.
 [**teamMembersIdTeamDynamicDatasFkDelete**](TeamMemberApi.md#teamMembersIdTeamDynamicDatasFkDelete) | **DELETE** /TeamMembers/{id}/team/dynamicDatas/{fk} | Delete a related item by id for dynamicDatas.
 [**teamMembersIdTeamDynamicDatasFkGet**](TeamMemberApi.md#teamMembersIdTeamDynamicDatasFkGet) | **GET** /TeamMembers/{id}/team/dynamicDatas/{fk} | Find a related item by id for dynamicDatas.
 [**teamMembersIdTeamDynamicDatasFkPut**](TeamMemberApi.md#teamMembersIdTeamDynamicDatasFkPut) | **PUT** /TeamMembers/{id}/team/dynamicDatas/{fk} | Update a related item by id for dynamicDatas.
@@ -294,12 +298,7 @@ Method | HTTP request | Description
 [**teamMembersIdWorkflowsFkPut**](TeamMemberApi.md#teamMembersIdWorkflowsFkPut) | **PUT** /TeamMembers/{id}/workflows/{fk} | Update a related item by id for workflows.
 [**teamMembersIdWorkflowsGet**](TeamMemberApi.md#teamMembersIdWorkflowsGet) | **GET** /TeamMembers/{id}/workflows | Queries workflows of TeamMember.
 [**teamMembersIdWorkflowsPost**](TeamMemberApi.md#teamMembersIdWorkflowsPost) | **POST** /TeamMembers/{id}/workflows | Creates a new instance in workflows of this model.
-[**teamMembersPatch**](TeamMemberApi.md#teamMembersPatch) | **PATCH** /TeamMembers | Patch an existing model instance or insert a new one into the data source.
 [**teamMembersPost**](TeamMemberApi.md#teamMembersPost) | **POST** /TeamMembers | Create a new instance of the model and persist it into the data source.
-[**teamMembersPut**](TeamMemberApi.md#teamMembersPut) | **PUT** /TeamMembers | Replace an existing model instance or insert a new one into the data source.
-[**teamMembersReplaceOrCreatePost**](TeamMemberApi.md#teamMembersReplaceOrCreatePost) | **POST** /TeamMembers/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
-[**teamMembersUpdatePost**](TeamMemberApi.md#teamMembersUpdatePost) | **POST** /TeamMembers/update | Update instances of the model matched by {{where}} from the data source.
-[**teamMembersUpsertWithWherePost**](TeamMemberApi.md#teamMembersUpsertWithWherePost) | **POST** /TeamMembers/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
 
 
 # **teamMembersChangeStreamGet**
@@ -580,53 +579,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **teamMembersIdAssignedDesignsDelete**
-> teamMembersIdAssignedDesignsDelete($id)
-
-Deletes all assignedDesigns of this model.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\TeamMemberApi();
-$id = "id_example"; // string | TeamMember id
-
-try {
-    $api_instance->teamMembersIdAssignedDesignsDelete($id);
-} catch (Exception $e) {
-    echo 'Exception when calling TeamMemberApi->teamMembersIdAssignedDesignsDelete: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| TeamMember id |
-
-### Return type
-
-void (empty response body)
 
 ### Authorization
 
@@ -5241,53 +5193,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **teamMembersIdRequestedDesignsDelete**
-> teamMembersIdRequestedDesignsDelete($id)
-
-Deletes all requestedDesigns of this model.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\TeamMemberApi();
-$id = "id_example"; // string | TeamMember id
-
-try {
-    $api_instance->teamMembersIdRequestedDesignsDelete($id);
-} catch (Exception $e) {
-    echo 'Exception when calling TeamMemberApi->teamMembersIdRequestedDesignsDelete: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| TeamMember id |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
 # **teamMembersIdRequestedDesignsFkDelete**
 > teamMembersIdRequestedDesignsFkDelete($id, $fk)
 
@@ -5577,53 +5482,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **teamMembersIdReviewedDesignsDelete**
-> teamMembersIdReviewedDesignsDelete($id)
-
-Deletes all reviewedDesigns of this model.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\TeamMemberApi();
-$id = "id_example"; // string | TeamMember id
-
-try {
-    $api_instance->teamMembersIdReviewedDesignsDelete($id);
-} catch (Exception $e) {
-    echo 'Exception when calling TeamMemberApi->teamMembersIdReviewedDesignsDelete: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| TeamMember id |
-
-### Return type
-
-void (empty response body)
 
 ### Authorization
 
@@ -6550,6 +6408,204 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **teamMembersIdTeamBillingBankAccountDelete**
+> \Swagger\Client\Model\Billing teamMembersIdTeamBillingBankAccountDelete($id)
+
+Delete Team Billing BankAccount
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+
+try {
+    $result = $api_instance->teamMembersIdTeamBillingBankAccountDelete($id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamBillingBankAccountDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+
+### Return type
+
+[**\Swagger\Client\Model\Billing**](../Model/Billing.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdTeamBillingBankAccountPost**
+> \Swagger\Client\Model\Billing teamMembersIdTeamBillingBankAccountPost($id, $data)
+
+Create Team Billing BankAccount
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+$data = new \Swagger\Client\Model\TeamMember(); // \Swagger\Client\Model\TeamMember | 
+
+try {
+    $result = $api_instance->teamMembersIdTeamBillingBankAccountPost($id, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamBillingBankAccountPost: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+ **data** | [**\Swagger\Client\Model\TeamMember**](../Model/\Swagger\Client\Model\TeamMember.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\Billing**](../Model/Billing.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdTeamBillingBankAccountPut**
+> \Swagger\Client\Model\Billing teamMembersIdTeamBillingBankAccountPut($id, $data)
+
+Update Team Billing BankAccount
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+$data = new \Swagger\Client\Model\TeamMember(); // \Swagger\Client\Model\TeamMember | 
+
+try {
+    $result = $api_instance->teamMembersIdTeamBillingBankAccountPut($id, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamBillingBankAccountPut: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+ **data** | [**\Swagger\Client\Model\TeamMember**](../Model/\Swagger\Client\Model\TeamMember.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\Billing**](../Model/Billing.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdTeamBillingBankAccountVerifyPost**
+> \Swagger\Client\Model\Billing teamMembersIdTeamBillingBankAccountVerifyPost($id, $data)
+
+Create Team Billing BankAccount
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+$data = new \Swagger\Client\Model\TeamMember(); // \Swagger\Client\Model\TeamMember | 
+
+try {
+    $result = $api_instance->teamMembersIdTeamBillingBankAccountVerifyPost($id, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamBillingBankAccountVerifyPost: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+ **data** | [**\Swagger\Client\Model\TeamMember**](../Model/\Swagger\Client\Model\TeamMember.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\Billing**](../Model/Billing.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **teamMembersIdTeamBillingCachedGet**
 > \Swagger\Client\Model\Billing teamMembersIdTeamBillingCachedGet($id)
 
@@ -6894,6 +6950,110 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **teamMembersIdTeamBillingLimitLimitIncreasePost**
+> object teamMembersIdTeamBillingLimitLimitIncreasePost($id, $limit, $data)
+
+Increase Team Billing Limit by Limit
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+$limit = "limit_example"; // string | Limit name
+$data = new \Swagger\Client\Model\BillingLimitLog(); // \Swagger\Client\Model\BillingLimitLog | 
+
+try {
+    $result = $api_instance->teamMembersIdTeamBillingLimitLimitIncreasePost($id, $limit, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamBillingLimitLimitIncreasePost: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+ **limit** | **string**| Limit name |
+ **data** | [**\Swagger\Client\Model\BillingLimitLog**](../Model/\Swagger\Client\Model\BillingLimitLog.md)|  | [optional]
+
+### Return type
+
+**object**
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdTeamBillingLimitLimitIncreaseValueGet**
+> \Swagger\Client\Model\InlineResponse2004 teamMembersIdTeamBillingLimitLimitIncreaseValueGet($id, $limit, $value)
+
+Check if Team Billing Limit can be increased by Limit
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+$limit = "limit_example"; // string | Limit name
+$value = "value_example"; // string | Value
+
+try {
+    $result = $api_instance->teamMembersIdTeamBillingLimitLimitIncreaseValueGet($id, $limit, $value);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamBillingLimitLimitIncreaseValueGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+ **limit** | **string**| Limit name |
+ **value** | **string**| Value |
+
+### Return type
+
+[**\Swagger\Client\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **teamMembersIdTeamBillingPut**
 > \Swagger\Client\Model\Billing teamMembersIdTeamBillingPut($id, $data)
 
@@ -6918,6 +7078,154 @@ try {
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TeamMemberApi->teamMembersIdTeamBillingPut: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+ **data** | [**\Swagger\Client\Model\TeamMember**](../Model/\Swagger\Client\Model\TeamMember.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\Billing**](../Model/Billing.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdTeamBillingSourceDelete**
+> \Swagger\Client\Model\Billing teamMembersIdTeamBillingSourceDelete($id)
+
+Delete Team Billing Source
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+
+try {
+    $result = $api_instance->teamMembersIdTeamBillingSourceDelete($id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamBillingSourceDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+
+### Return type
+
+[**\Swagger\Client\Model\Billing**](../Model/Billing.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdTeamBillingSourcePost**
+> \Swagger\Client\Model\Billing teamMembersIdTeamBillingSourcePost($id, $data)
+
+Create Team Billing Source
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+$data = new \Swagger\Client\Model\TeamMember(); // \Swagger\Client\Model\TeamMember | 
+
+try {
+    $result = $api_instance->teamMembersIdTeamBillingSourcePost($id, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamBillingSourcePost: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| TeamMember id |
+ **data** | [**\Swagger\Client\Model\TeamMember**](../Model/\Swagger\Client\Model\TeamMember.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\Billing**](../Model/Billing.md)
+
+### Authorization
+
+[access_token](../../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
+ - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamMembersIdTeamBillingSourcePut**
+> \Swagger\Client\Model\Billing teamMembersIdTeamBillingSourcePut($id, $data)
+
+Update Team Billing Source
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new Tweak\Api\Api\TeamMemberApi();
+$id = "id_example"; // string | TeamMember id
+$data = new \Swagger\Client\Model\TeamMember(); // \Swagger\Client\Model\TeamMember | 
+
+try {
+    $result = $api_instance->teamMembersIdTeamBillingSourcePut($id, $data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamBillingSourcePut: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -7983,10 +8291,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **teamMembersIdTeamDataSourcesCountGet**
-> \Swagger\Client\Model\InlineResponse2001 teamMembersIdTeamDataSourcesCountGet($id, $where)
+# **teamMembersIdTeamDataSourceSoapsCountGet**
+> \Swagger\Client\Model\InlineResponse2001 teamMembersIdTeamDataSourceSoapsCountGet($id, $where)
 
-Counts dataSources of Team.
+Counts dataSourceSoaps of Team.
 
 ### Example
 ```php
@@ -8003,10 +8311,10 @@ $id = "id_example"; // string | TeamMember id
 $where = "where_example"; // string | Criteria to match model instances
 
 try {
-    $result = $api_instance->teamMembersIdTeamDataSourcesCountGet($id, $where);
+    $result = $api_instance->teamMembersIdTeamDataSourceSoapsCountGet($id, $where);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamDataSourcesCountGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamDataSourceSoapsCountGet: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -8033,10 +8341,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **teamMembersIdTeamDataSourcesDelete**
-> teamMembersIdTeamDataSourcesDelete($id)
+# **teamMembersIdTeamDataSourceSoapsFkDelete**
+> teamMembersIdTeamDataSourceSoapsFkDelete($id, $fk)
 
-Deletes all dataSources of this model.
+Delete a related item by id for dataSourceSoaps.
 
 ### Example
 ```php
@@ -8050,11 +8358,12 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 
 $api_instance = new Tweak\Api\Api\TeamMemberApi();
 $id = "id_example"; // string | TeamMember id
+$fk = "fk_example"; // string | Foreign key for dataSourceSoaps
 
 try {
-    $api_instance->teamMembersIdTeamDataSourcesDelete($id);
+    $api_instance->teamMembersIdTeamDataSourceSoapsFkDelete($id, $fk);
 } catch (Exception $e) {
-    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamDataSourcesDelete: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamDataSourceSoapsFkDelete: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -8064,6 +8373,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| TeamMember id |
+ **fk** | **string**| Foreign key for dataSourceSoaps |
 
 ### Return type
 
@@ -8080,59 +8390,10 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **teamMembersIdTeamDataSourcesFkDelete**
-> teamMembersIdTeamDataSourcesFkDelete($id, $fk)
+# **teamMembersIdTeamDataSourceSoapsFkGet**
+> \Swagger\Client\Model\DataSourceSoap teamMembersIdTeamDataSourceSoapsFkGet($id, $fk)
 
-Delete a related item by id for dataSources.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\TeamMemberApi();
-$id = "id_example"; // string | TeamMember id
-$fk = "fk_example"; // string | Foreign key for dataSources
-
-try {
-    $api_instance->teamMembersIdTeamDataSourcesFkDelete($id, $fk);
-} catch (Exception $e) {
-    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamDataSourcesFkDelete: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| TeamMember id |
- **fk** | **string**| Foreign key for dataSources |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **teamMembersIdTeamDataSourcesFkGet**
-> \Swagger\Client\Model\DataSource teamMembersIdTeamDataSourcesFkGet($id, $fk)
-
-Find a related item by id for dataSources.
+Find a related item by id for dataSourceSoaps.
 
 ### Example
 ```php
@@ -8146,13 +8407,13 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 
 $api_instance = new Tweak\Api\Api\TeamMemberApi();
 $id = "id_example"; // string | TeamMember id
-$fk = "fk_example"; // string | Foreign key for dataSources
+$fk = "fk_example"; // string | Foreign key for dataSourceSoaps
 
 try {
-    $result = $api_instance->teamMembersIdTeamDataSourcesFkGet($id, $fk);
+    $result = $api_instance->teamMembersIdTeamDataSourceSoapsFkGet($id, $fk);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamDataSourcesFkGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamDataSourceSoapsFkGet: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -8162,11 +8423,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| TeamMember id |
- **fk** | **string**| Foreign key for dataSources |
+ **fk** | **string**| Foreign key for dataSourceSoaps |
 
 ### Return type
 
-[**\Swagger\Client\Model\DataSource**](../Model/DataSource.md)
+[**\Swagger\Client\Model\DataSourceSoap**](../Model/DataSourceSoap.md)
 
 ### Authorization
 
@@ -8179,10 +8440,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **teamMembersIdTeamDataSourcesFkPut**
-> \Swagger\Client\Model\DataSource teamMembersIdTeamDataSourcesFkPut($id, $fk, $data)
+# **teamMembersIdTeamDataSourceSoapsFkPut**
+> \Swagger\Client\Model\DataSourceSoap teamMembersIdTeamDataSourceSoapsFkPut($id, $fk, $data)
 
-Update a related item by id for dataSources.
+Update a related item by id for dataSourceSoaps.
 
 ### Example
 ```php
@@ -8196,14 +8457,14 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 
 $api_instance = new Tweak\Api\Api\TeamMemberApi();
 $id = "id_example"; // string | TeamMember id
-$fk = "fk_example"; // string | Foreign key for dataSources
-$data = new \Swagger\Client\Model\DataSource(); // \Swagger\Client\Model\DataSource | 
+$fk = "fk_example"; // string | Foreign key for dataSourceSoaps
+$data = new \Swagger\Client\Model\DataSourceSoap(); // \Swagger\Client\Model\DataSourceSoap | 
 
 try {
-    $result = $api_instance->teamMembersIdTeamDataSourcesFkPut($id, $fk, $data);
+    $result = $api_instance->teamMembersIdTeamDataSourceSoapsFkPut($id, $fk, $data);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamDataSourcesFkPut: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamDataSourceSoapsFkPut: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -8213,12 +8474,12 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| TeamMember id |
- **fk** | **string**| Foreign key for dataSources |
- **data** | [**\Swagger\Client\Model\DataSource**](../Model/\Swagger\Client\Model\DataSource.md)|  | [optional]
+ **fk** | **string**| Foreign key for dataSourceSoaps |
+ **data** | [**\Swagger\Client\Model\DataSourceSoap**](../Model/\Swagger\Client\Model\DataSourceSoap.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\DataSource**](../Model/DataSource.md)
+[**\Swagger\Client\Model\DataSourceSoap**](../Model/DataSourceSoap.md)
 
 ### Authorization
 
@@ -8231,10 +8492,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **teamMembersIdTeamDataSourcesGet**
-> \Swagger\Client\Model\DataSource[] teamMembersIdTeamDataSourcesGet($id, $filter)
+# **teamMembersIdTeamDataSourceSoapsGet**
+> \Swagger\Client\Model\DataSourceSoap[] teamMembersIdTeamDataSourceSoapsGet($id, $filter)
 
-Queries dataSources of Team.
+Queries dataSourceSoaps of Team.
 
 ### Example
 ```php
@@ -8251,10 +8512,10 @@ $id = "id_example"; // string | TeamMember id
 $filter = "filter_example"; // string | 
 
 try {
-    $result = $api_instance->teamMembersIdTeamDataSourcesGet($id, $filter);
+    $result = $api_instance->teamMembersIdTeamDataSourceSoapsGet($id, $filter);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamDataSourcesGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamDataSourceSoapsGet: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -8268,7 +8529,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\DataSource[]**](../Model/DataSource.md)
+[**\Swagger\Client\Model\DataSourceSoap[]**](../Model/DataSourceSoap.md)
 
 ### Authorization
 
@@ -8281,10 +8542,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **teamMembersIdTeamDataSourcesPost**
-> \Swagger\Client\Model\DataSource teamMembersIdTeamDataSourcesPost($id, $data)
+# **teamMembersIdTeamDataSourceSoapsPost**
+> \Swagger\Client\Model\DataSourceSoap teamMembersIdTeamDataSourceSoapsPost($id, $data)
 
-Creates a new instance in dataSources of this model.
+Creates a new instance in dataSourceSoaps of this model.
 
 ### Example
 ```php
@@ -8298,13 +8559,13 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 
 $api_instance = new Tweak\Api\Api\TeamMemberApi();
 $id = "id_example"; // string | TeamMember id
-$data = new \Swagger\Client\Model\DataSource(); // \Swagger\Client\Model\DataSource | 
+$data = new \Swagger\Client\Model\DataSourceSoap(); // \Swagger\Client\Model\DataSourceSoap | 
 
 try {
-    $result = $api_instance->teamMembersIdTeamDataSourcesPost($id, $data);
+    $result = $api_instance->teamMembersIdTeamDataSourceSoapsPost($id, $data);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamDataSourcesPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamDataSourceSoapsPost: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -8314,11 +8575,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| TeamMember id |
- **data** | [**\Swagger\Client\Model\DataSource**](../Model/\Swagger\Client\Model\DataSource.md)|  | [optional]
+ **data** | [**\Swagger\Client\Model\DataSourceSoap**](../Model/\Swagger\Client\Model\DataSourceSoap.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\DataSource**](../Model/DataSource.md)
+[**\Swagger\Client\Model\DataSourceSoap**](../Model/DataSourceSoap.md)
 
 ### Authorization
 
@@ -8369,53 +8630,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **teamMembersIdTeamDynamicDatasDelete**
-> teamMembersIdTeamDynamicDatasDelete($id)
-
-Deletes all dynamicDatas of this model.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\TeamMemberApi();
-$id = "id_example"; // string | TeamMember id
-
-try {
-    $api_instance->teamMembersIdTeamDynamicDatasDelete($id);
-} catch (Exception $e) {
-    echo 'Exception when calling TeamMemberApi->teamMembersIdTeamDynamicDatasDelete: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| TeamMember id |
-
-### Return type
-
-void (empty response body)
 
 ### Authorization
 
@@ -14778,54 +14992,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **teamMembersPatch**
-> \Swagger\Client\Model\TeamMember teamMembersPatch($data)
-
-Patch an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\TeamMemberApi();
-$data = new \Swagger\Client\Model\TeamMember(); // \Swagger\Client\Model\TeamMember | Model instance data
-
-try {
-    $result = $api_instance->teamMembersPatch($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling TeamMemberApi->teamMembersPatch: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\TeamMember**](../Model/\Swagger\Client\Model\TeamMember.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\TeamMember**](../Model/TeamMember.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
 # **teamMembersPost**
 > \Swagger\Client\Model\TeamMember teamMembersPost($data)
 
@@ -14858,202 +15024,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **data** | [**\Swagger\Client\Model\TeamMember**](../Model/\Swagger\Client\Model\TeamMember.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\TeamMember**](../Model/TeamMember.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **teamMembersPut**
-> \Swagger\Client\Model\TeamMember teamMembersPut($data)
-
-Replace an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\TeamMemberApi();
-$data = new \Swagger\Client\Model\TeamMember(); // \Swagger\Client\Model\TeamMember | Model instance data
-
-try {
-    $result = $api_instance->teamMembersPut($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling TeamMemberApi->teamMembersPut: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\TeamMember**](../Model/\Swagger\Client\Model\TeamMember.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\TeamMember**](../Model/TeamMember.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **teamMembersReplaceOrCreatePost**
-> \Swagger\Client\Model\TeamMember teamMembersReplaceOrCreatePost($data)
-
-Replace an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\TeamMemberApi();
-$data = new \Swagger\Client\Model\TeamMember(); // \Swagger\Client\Model\TeamMember | Model instance data
-
-try {
-    $result = $api_instance->teamMembersReplaceOrCreatePost($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling TeamMemberApi->teamMembersReplaceOrCreatePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\TeamMember**](../Model/\Swagger\Client\Model\TeamMember.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\TeamMember**](../Model/TeamMember.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **teamMembersUpdatePost**
-> \Swagger\Client\Model\InlineResponse2003 teamMembersUpdatePost($where, $data)
-
-Update instances of the model matched by {{where}} from the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\TeamMemberApi();
-$where = "where_example"; // string | Criteria to match model instances
-$data = new \Swagger\Client\Model\TeamMember(); // \Swagger\Client\Model\TeamMember | An object of model property name/value pairs
-
-try {
-    $result = $api_instance->teamMembersUpdatePost($where, $data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling TeamMemberApi->teamMembersUpdatePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **where** | **string**| Criteria to match model instances | [optional]
- **data** | [**\Swagger\Client\Model\TeamMember**](../Model/\Swagger\Client\Model\TeamMember.md)| An object of model property name/value pairs | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **teamMembersUpsertWithWherePost**
-> \Swagger\Client\Model\TeamMember teamMembersUpsertWithWherePost($where, $data)
-
-Update an existing model instance or insert a new one into the data source based on the where criteria.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\TeamMemberApi();
-$where = "where_example"; // string | Criteria to match model instances
-$data = new \Swagger\Client\Model\TeamMember(); // \Swagger\Client\Model\TeamMember | An object of model property name/value pairs
-
-try {
-    $result = $api_instance->teamMembersUpsertWithWherePost($where, $data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling TeamMemberApi->teamMembersUpsertWithWherePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **where** | **string**| Criteria to match model instances | [optional]
- **data** | [**\Swagger\Client\Model\TeamMember**](../Model/\Swagger\Client\Model\TeamMember.md)| An object of model property name/value pairs | [optional]
 
 ### Return type
 

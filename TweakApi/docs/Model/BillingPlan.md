@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **statementDescription** | **string** |  | [optional] 
 **trialPeriodDays** | **double** |  | [optional] 
 **type** | **string** |  | [optional] 
+**teamId** | **string** |  | [optional] 
 **limit** | [**\Swagger\Client\Model\BillingLimit**](BillingLimit.md) |  | [optional] 
 **created** | [**\DateTime**](\DateTime.md) |  | [optional] 
 
