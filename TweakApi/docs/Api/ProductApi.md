@@ -18,7 +18,6 @@ Method | HTTP request | Description
 [**productsIdReplacePost**](ProductApi.md#productsIdReplacePost) | **POST** /Products/{id}/replace | Replace attributes for a model instance and persist it into the data source.
 [**productsIdSizeGet**](ProductApi.md#productsIdSizeGet) | **GET** /Products/{id}/size | Fetches belongsTo relation size.
 [**productsIdTagsCountGet**](ProductApi.md#productsIdTagsCountGet) | **GET** /Products/{id}/tags/count | Counts tags of Product.
-[**productsIdTagsDelete**](ProductApi.md#productsIdTagsDelete) | **DELETE** /Products/{id}/tags | Deletes all tags of this model.
 [**productsIdTagsFkDelete**](ProductApi.md#productsIdTagsFkDelete) | **DELETE** /Products/{id}/tags/{fk} | Delete a related item by id for tags.
 [**productsIdTagsFkGet**](ProductApi.md#productsIdTagsFkGet) | **GET** /Products/{id}/tags/{fk} | Find a related item by id for tags.
 [**productsIdTagsFkPut**](ProductApi.md#productsIdTagsFkPut) | **PUT** /Products/{id}/tags/{fk} | Update a related item by id for tags.
@@ -27,12 +26,7 @@ Method | HTTP request | Description
 [**productsIdTagsRelFkDelete**](ProductApi.md#productsIdTagsRelFkDelete) | **DELETE** /Products/{id}/tags/rel/{fk} | Remove the tags relation to an item by id.
 [**productsIdTagsRelFkHead**](ProductApi.md#productsIdTagsRelFkHead) | **HEAD** /Products/{id}/tags/rel/{fk} | Check the existence of tags relation to an item by id.
 [**productsIdTagsRelFkPut**](ProductApi.md#productsIdTagsRelFkPut) | **PUT** /Products/{id}/tags/rel/{fk} | Add a related item by id for tags.
-[**productsPatch**](ProductApi.md#productsPatch) | **PATCH** /Products | Patch an existing model instance or insert a new one into the data source.
 [**productsPost**](ProductApi.md#productsPost) | **POST** /Products | Create a new instance of the model and persist it into the data source.
-[**productsPut**](ProductApi.md#productsPut) | **PUT** /Products | Replace an existing model instance or insert a new one into the data source.
-[**productsReplaceOrCreatePost**](ProductApi.md#productsReplaceOrCreatePost) | **POST** /Products/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
-[**productsUpdatePost**](ProductApi.md#productsUpdatePost) | **POST** /Products/update | Update instances of the model matched by {{where}} from the data source.
-[**productsUpsertWithWherePost**](ProductApi.md#productsUpsertWithWherePost) | **POST** /Products/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
 
 
 # **productsChangeStreamGet**
@@ -719,53 +713,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **productsIdTagsDelete**
-> productsIdTagsDelete($id)
-
-Deletes all tags of this model.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\ProductApi();
-$id = "id_example"; // string | Product id
-
-try {
-    $api_instance->productsIdTagsDelete($id);
-} catch (Exception $e) {
-    echo 'Exception when calling ProductApi->productsIdTagsDelete: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Product id |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
 # **productsIdTagsFkDelete**
 > productsIdTagsFkDelete($id, $fk)
 
@@ -1168,54 +1115,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **productsPatch**
-> \Swagger\Client\Model\Product productsPatch($data)
-
-Patch an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\ProductApi();
-$data = new \Swagger\Client\Model\Product(); // \Swagger\Client\Model\Product | Model instance data
-
-try {
-    $result = $api_instance->productsPatch($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ProductApi->productsPatch: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\Product**](../Model/\Swagger\Client\Model\Product.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\Product**](../Model/Product.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
 # **productsPost**
 > \Swagger\Client\Model\Product productsPost($data)
 
@@ -1248,202 +1147,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **data** | [**\Swagger\Client\Model\Product**](../Model/\Swagger\Client\Model\Product.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\Product**](../Model/Product.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **productsPut**
-> \Swagger\Client\Model\Product productsPut($data)
-
-Replace an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\ProductApi();
-$data = new \Swagger\Client\Model\Product(); // \Swagger\Client\Model\Product | Model instance data
-
-try {
-    $result = $api_instance->productsPut($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ProductApi->productsPut: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\Product**](../Model/\Swagger\Client\Model\Product.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\Product**](../Model/Product.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **productsReplaceOrCreatePost**
-> \Swagger\Client\Model\Product productsReplaceOrCreatePost($data)
-
-Replace an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\ProductApi();
-$data = new \Swagger\Client\Model\Product(); // \Swagger\Client\Model\Product | Model instance data
-
-try {
-    $result = $api_instance->productsReplaceOrCreatePost($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ProductApi->productsReplaceOrCreatePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\Product**](../Model/\Swagger\Client\Model\Product.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\Product**](../Model/Product.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **productsUpdatePost**
-> \Swagger\Client\Model\InlineResponse2003 productsUpdatePost($where, $data)
-
-Update instances of the model matched by {{where}} from the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\ProductApi();
-$where = "where_example"; // string | Criteria to match model instances
-$data = new \Swagger\Client\Model\Product(); // \Swagger\Client\Model\Product | An object of model property name/value pairs
-
-try {
-    $result = $api_instance->productsUpdatePost($where, $data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ProductApi->productsUpdatePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **where** | **string**| Criteria to match model instances | [optional]
- **data** | [**\Swagger\Client\Model\Product**](../Model/\Swagger\Client\Model\Product.md)| An object of model property name/value pairs | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **productsUpsertWithWherePost**
-> \Swagger\Client\Model\Product productsUpsertWithWherePost($where, $data)
-
-Update an existing model instance or insert a new one into the data source based on the where criteria.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\ProductApi();
-$where = "where_example"; // string | Criteria to match model instances
-$data = new \Swagger\Client\Model\Product(); // \Swagger\Client\Model\Product | An object of model property name/value pairs
-
-try {
-    $result = $api_instance->productsUpsertWithWherePost($where, $data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ProductApi->productsUpsertWithWherePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **where** | **string**| Criteria to match model instances | [optional]
- **data** | [**\Swagger\Client\Model\Product**](../Model/\Swagger\Client\Model\Product.md)| An object of model property name/value pairs | [optional]
 
 ### Return type
 

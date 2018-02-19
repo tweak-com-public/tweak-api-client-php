@@ -11,7 +11,6 @@ Method | HTTP request | Description
 [**templatesGet**](TemplateApi.md#templatesGet) | **GET** /Templates | Find all instances of the model matched by filter from the data source.
 [**templatesIdDelete**](TemplateApi.md#templatesIdDelete) | **DELETE** /Templates/{id} | Delete a model instance by {{id}} from the data source.
 [**templatesIdDesignsCountGet**](TemplateApi.md#templatesIdDesignsCountGet) | **GET** /Templates/{id}/designs/count | Counts designs of Template.
-[**templatesIdDesignsDelete**](TemplateApi.md#templatesIdDesignsDelete) | **DELETE** /Templates/{id}/designs | Deletes all designs of this model.
 [**templatesIdDesignsFkDelete**](TemplateApi.md#templatesIdDesignsFkDelete) | **DELETE** /Templates/{id}/designs/{fk} | Delete a related item by id for designs.
 [**templatesIdDesignsFkGet**](TemplateApi.md#templatesIdDesignsFkGet) | **GET** /Templates/{id}/designs/{fk} | Find a related item by id for designs.
 [**templatesIdDesignsFkPut**](TemplateApi.md#templatesIdDesignsFkPut) | **PUT** /Templates/{id}/designs/{fk} | Update a related item by id for designs.
@@ -83,12 +82,7 @@ Method | HTTP request | Description
 [**templatesIdUploaderGet**](TemplateApi.md#templatesIdUploaderGet) | **GET** /Templates/{id}/uploader | Fetches belongsTo relation uploader.
 [**templatesIdUrlReviewGet**](TemplateApi.md#templatesIdUrlReviewGet) | **GET** /Templates/{id}/url/review | Get URL to review a template
 [**templatesIdWorkflowGet**](TemplateApi.md#templatesIdWorkflowGet) | **GET** /Templates/{id}/workflow | Fetches belongsTo relation workflow.
-[**templatesPatch**](TemplateApi.md#templatesPatch) | **PATCH** /Templates | Patch an existing model instance or insert a new one into the data source.
 [**templatesPost**](TemplateApi.md#templatesPost) | **POST** /Templates | Create a new instance of the model and persist it into the data source.
-[**templatesPut**](TemplateApi.md#templatesPut) | **PUT** /Templates | Replace an existing model instance or insert a new one into the data source.
-[**templatesReplaceOrCreatePost**](TemplateApi.md#templatesReplaceOrCreatePost) | **POST** /Templates/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
-[**templatesUpdatePost**](TemplateApi.md#templatesUpdatePost) | **POST** /Templates/update | Update instances of the model matched by {{where}} from the data source.
-[**templatesUpsertWithWherePost**](TemplateApi.md#templatesUpsertWithWherePost) | **POST** /Templates/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
 
 
 # **templatesChangeStreamGet**
@@ -417,53 +411,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **templatesIdDesignsDelete**
-> templatesIdDesignsDelete($id)
-
-Deletes all designs of this model.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\TemplateApi();
-$id = "id_example"; // string | Template id
-
-try {
-    $api_instance->templatesIdDesignsDelete($id);
-} catch (Exception $e) {
-    echo 'Exception when calling TemplateApi->templatesIdDesignsDelete: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Template id |
-
-### Return type
-
-void (empty response body)
 
 ### Authorization
 
@@ -4022,54 +3969,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **templatesPatch**
-> \Swagger\Client\Model\Template templatesPatch($data)
-
-Patch an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\TemplateApi();
-$data = new \Swagger\Client\Model\Template(); // \Swagger\Client\Model\Template | Model instance data
-
-try {
-    $result = $api_instance->templatesPatch($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling TemplateApi->templatesPatch: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\Template**](../Model/\Swagger\Client\Model\Template.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\Template**](../Model/Template.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
 # **templatesPost**
 > \Swagger\Client\Model\Template templatesPost($data)
 
@@ -4102,202 +4001,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **data** | [**\Swagger\Client\Model\Template**](../Model/\Swagger\Client\Model\Template.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\Template**](../Model/Template.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **templatesPut**
-> \Swagger\Client\Model\Template templatesPut($data)
-
-Replace an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\TemplateApi();
-$data = new \Swagger\Client\Model\Template(); // \Swagger\Client\Model\Template | Model instance data
-
-try {
-    $result = $api_instance->templatesPut($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling TemplateApi->templatesPut: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\Template**](../Model/\Swagger\Client\Model\Template.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\Template**](../Model/Template.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **templatesReplaceOrCreatePost**
-> \Swagger\Client\Model\Template templatesReplaceOrCreatePost($data)
-
-Replace an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\TemplateApi();
-$data = new \Swagger\Client\Model\Template(); // \Swagger\Client\Model\Template | Model instance data
-
-try {
-    $result = $api_instance->templatesReplaceOrCreatePost($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling TemplateApi->templatesReplaceOrCreatePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\Template**](../Model/\Swagger\Client\Model\Template.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\Template**](../Model/Template.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **templatesUpdatePost**
-> \Swagger\Client\Model\InlineResponse2003 templatesUpdatePost($where, $data)
-
-Update instances of the model matched by {{where}} from the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\TemplateApi();
-$where = "where_example"; // string | Criteria to match model instances
-$data = new \Swagger\Client\Model\Template(); // \Swagger\Client\Model\Template | An object of model property name/value pairs
-
-try {
-    $result = $api_instance->templatesUpdatePost($where, $data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling TemplateApi->templatesUpdatePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **where** | **string**| Criteria to match model instances | [optional]
- **data** | [**\Swagger\Client\Model\Template**](../Model/\Swagger\Client\Model\Template.md)| An object of model property name/value pairs | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **templatesUpsertWithWherePost**
-> \Swagger\Client\Model\Template templatesUpsertWithWherePost($where, $data)
-
-Update an existing model instance or insert a new one into the data source based on the where criteria.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\TemplateApi();
-$where = "where_example"; // string | Criteria to match model instances
-$data = new \Swagger\Client\Model\Template(); // \Swagger\Client\Model\Template | An object of model property name/value pairs
-
-try {
-    $result = $api_instance->templatesUpsertWithWherePost($where, $data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling TemplateApi->templatesUpsertWithWherePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **where** | **string**| Criteria to match model instances | [optional]
- **data** | [**\Swagger\Client\Model\Template**](../Model/\Swagger\Client\Model\Template.md)| An object of model property name/value pairs | [optional]
 
 ### Return type
 

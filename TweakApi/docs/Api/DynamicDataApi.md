@@ -18,7 +18,6 @@ Method | HTTP request | Description
 [**dynamicDataIdDataSourceSoapGet**](DynamicDataApi.md#dynamicDataIdDataSourceSoapGet) | **GET** /DynamicData/{id}/dataSourceSoap | Fetches belongsTo relation dataSourceSoap.
 [**dynamicDataIdDelete**](DynamicDataApi.md#dynamicDataIdDelete) | **DELETE** /DynamicData/{id} | Delete a model instance by {{id}} from the data source.
 [**dynamicDataIdDesignsCountGet**](DynamicDataApi.md#dynamicDataIdDesignsCountGet) | **GET** /DynamicData/{id}/designs/count | Counts designs of DynamicData.
-[**dynamicDataIdDesignsDelete**](DynamicDataApi.md#dynamicDataIdDesignsDelete) | **DELETE** /DynamicData/{id}/designs | Deletes all designs of this model.
 [**dynamicDataIdDesignsFkDelete**](DynamicDataApi.md#dynamicDataIdDesignsFkDelete) | **DELETE** /DynamicData/{id}/designs/{fk} | Delete a related item by id for designs.
 [**dynamicDataIdDesignsFkGet**](DynamicDataApi.md#dynamicDataIdDesignsFkGet) | **GET** /DynamicData/{id}/designs/{fk} | Find a related item by id for designs.
 [**dynamicDataIdDesignsFkPut**](DynamicDataApi.md#dynamicDataIdDesignsFkPut) | **PUT** /DynamicData/{id}/designs/{fk} | Update a related item by id for designs.
@@ -42,12 +41,7 @@ Method | HTTP request | Description
 [**dynamicDataIdRecordsUploadCsvPost**](DynamicDataApi.md#dynamicDataIdRecordsUploadCsvPost) | **POST** /DynamicData/{id}/records/upload/csv | Upload CSV for this Dynamic Data
 [**dynamicDataIdReplacePost**](DynamicDataApi.md#dynamicDataIdReplacePost) | **POST** /DynamicData/{id}/replace | Replace attributes for a model instance and persist it into the data source.
 [**dynamicDataIdTeamGet**](DynamicDataApi.md#dynamicDataIdTeamGet) | **GET** /DynamicData/{id}/team | Fetches belongsTo relation team.
-[**dynamicDataPatch**](DynamicDataApi.md#dynamicDataPatch) | **PATCH** /DynamicData | Patch an existing model instance or insert a new one into the data source.
 [**dynamicDataPost**](DynamicDataApi.md#dynamicDataPost) | **POST** /DynamicData | Create a new instance of the model and persist it into the data source.
-[**dynamicDataPut**](DynamicDataApi.md#dynamicDataPut) | **PUT** /DynamicData | Replace an existing model instance or insert a new one into the data source.
-[**dynamicDataReplaceOrCreatePost**](DynamicDataApi.md#dynamicDataReplaceOrCreatePost) | **POST** /DynamicData/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
-[**dynamicDataUpdatePost**](DynamicDataApi.md#dynamicDataUpdatePost) | **POST** /DynamicData/update | Update instances of the model matched by {{where}} from the data source.
-[**dynamicDataUpsertWithWherePost**](DynamicDataApi.md#dynamicDataUpsertWithWherePost) | **POST** /DynamicData/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
 
 
 # **dynamicDataChangeStreamGet**
@@ -726,53 +720,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **dynamicDataIdDesignsDelete**
-> dynamicDataIdDesignsDelete($id)
-
-Deletes all designs of this model.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DynamicDataApi();
-$id = "id_example"; // string | DynamicData id
-
-try {
-    $api_instance->dynamicDataIdDesignsDelete($id);
-} catch (Exception $e) {
-    echo 'Exception when calling DynamicDataApi->dynamicDataIdDesignsDelete: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| DynamicData id |
-
-### Return type
-
-void (empty response body)
 
 ### Authorization
 
@@ -1938,54 +1885,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **dynamicDataPatch**
-> \Swagger\Client\Model\DynamicData dynamicDataPatch($data)
-
-Patch an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DynamicDataApi();
-$data = new \Swagger\Client\Model\DynamicData(); // \Swagger\Client\Model\DynamicData | Model instance data
-
-try {
-    $result = $api_instance->dynamicDataPatch($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling DynamicDataApi->dynamicDataPatch: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\DynamicData**](../Model/\Swagger\Client\Model\DynamicData.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\DynamicData**](../Model/DynamicData.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
 # **dynamicDataPost**
 > \Swagger\Client\Model\DynamicData dynamicDataPost($data)
 
@@ -2018,202 +1917,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **data** | [**\Swagger\Client\Model\DynamicData**](../Model/\Swagger\Client\Model\DynamicData.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\DynamicData**](../Model/DynamicData.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **dynamicDataPut**
-> \Swagger\Client\Model\DynamicData dynamicDataPut($data)
-
-Replace an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DynamicDataApi();
-$data = new \Swagger\Client\Model\DynamicData(); // \Swagger\Client\Model\DynamicData | Model instance data
-
-try {
-    $result = $api_instance->dynamicDataPut($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling DynamicDataApi->dynamicDataPut: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\DynamicData**](../Model/\Swagger\Client\Model\DynamicData.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\DynamicData**](../Model/DynamicData.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **dynamicDataReplaceOrCreatePost**
-> \Swagger\Client\Model\DynamicData dynamicDataReplaceOrCreatePost($data)
-
-Replace an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DynamicDataApi();
-$data = new \Swagger\Client\Model\DynamicData(); // \Swagger\Client\Model\DynamicData | Model instance data
-
-try {
-    $result = $api_instance->dynamicDataReplaceOrCreatePost($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling DynamicDataApi->dynamicDataReplaceOrCreatePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\DynamicData**](../Model/\Swagger\Client\Model\DynamicData.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\DynamicData**](../Model/DynamicData.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **dynamicDataUpdatePost**
-> \Swagger\Client\Model\InlineResponse2003 dynamicDataUpdatePost($where, $data)
-
-Update instances of the model matched by {{where}} from the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DynamicDataApi();
-$where = "where_example"; // string | Criteria to match model instances
-$data = new \Swagger\Client\Model\DynamicData(); // \Swagger\Client\Model\DynamicData | An object of model property name/value pairs
-
-try {
-    $result = $api_instance->dynamicDataUpdatePost($where, $data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling DynamicDataApi->dynamicDataUpdatePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **where** | **string**| Criteria to match model instances | [optional]
- **data** | [**\Swagger\Client\Model\DynamicData**](../Model/\Swagger\Client\Model\DynamicData.md)| An object of model property name/value pairs | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **dynamicDataUpsertWithWherePost**
-> \Swagger\Client\Model\DynamicData dynamicDataUpsertWithWherePost($where, $data)
-
-Update an existing model instance or insert a new one into the data source based on the where criteria.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DynamicDataApi();
-$where = "where_example"; // string | Criteria to match model instances
-$data = new \Swagger\Client\Model\DynamicData(); // \Swagger\Client\Model\DynamicData | An object of model property name/value pairs
-
-try {
-    $result = $api_instance->dynamicDataUpsertWithWherePost($where, $data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling DynamicDataApi->dynamicDataUpsertWithWherePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **where** | **string**| Criteria to match model instances | [optional]
- **data** | [**\Swagger\Client\Model\DynamicData**](../Model/\Swagger\Client\Model\DynamicData.md)| An object of model property name/value pairs | [optional]
 
 ### Return type
 

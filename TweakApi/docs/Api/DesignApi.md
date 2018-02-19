@@ -30,7 +30,6 @@ Method | HTTP request | Description
 [**designsIdCommentsNkCommenterGet**](DesignApi.md#designsIdCommentsNkCommenterGet) | **GET** /Designs/{id}/comments/{nk}/commenter | Fetches belongsTo relation commenter.
 [**designsIdCommentsNkDesignGet**](DesignApi.md#designsIdCommentsNkDesignGet) | **GET** /Designs/{id}/comments/{nk}/design | Fetches belongsTo relation design.
 [**designsIdCommentsNkRepliesCountGet**](DesignApi.md#designsIdCommentsNkRepliesCountGet) | **GET** /Designs/{id}/comments/{nk}/replies/count | Counts replies of DesignComment.
-[**designsIdCommentsNkRepliesDelete**](DesignApi.md#designsIdCommentsNkRepliesDelete) | **DELETE** /Designs/{id}/comments/{nk}/replies | Deletes all replies of this model.
 [**designsIdCommentsNkRepliesFkDelete**](DesignApi.md#designsIdCommentsNkRepliesFkDelete) | **DELETE** /Designs/{id}/comments/{nk}/replies/{fk} | Delete a related item by id for replies.
 [**designsIdCommentsNkRepliesFkGet**](DesignApi.md#designsIdCommentsNkRepliesFkGet) | **GET** /Designs/{id}/comments/{nk}/replies/{fk} | Find a related item by id for replies.
 [**designsIdCommentsNkRepliesFkPut**](DesignApi.md#designsIdCommentsNkRepliesFkPut) | **PUT** /Designs/{id}/comments/{nk}/replies/{fk} | Update a related item by id for replies.
@@ -93,12 +92,7 @@ Method | HTTP request | Description
 [**designsIdTagsRelFkPut**](DesignApi.md#designsIdTagsRelFkPut) | **PUT** /Designs/{id}/tags/rel/{fk} | Add a related item by id for tags.
 [**designsIdTeamGet**](DesignApi.md#designsIdTeamGet) | **GET** /Designs/{id}/team | Fetches belongsTo relation team.
 [**designsIdTemplateGet**](DesignApi.md#designsIdTemplateGet) | **GET** /Designs/{id}/template | Fetches belongsTo relation template.
-[**designsPatch**](DesignApi.md#designsPatch) | **PATCH** /Designs | Patch an existing model instance or insert a new one into the data source.
 [**designsPost**](DesignApi.md#designsPost) | **POST** /Designs | Create a new instance of the model and persist it into the data source.
-[**designsPut**](DesignApi.md#designsPut) | **PUT** /Designs | Replace an existing model instance or insert a new one into the data source.
-[**designsReplaceOrCreatePost**](DesignApi.md#designsReplaceOrCreatePost) | **POST** /Designs/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
-[**designsUpdatePost**](DesignApi.md#designsUpdatePost) | **POST** /Designs/update | Update instances of the model matched by {{where}} from the data source.
-[**designsUpsertWithWherePost**](DesignApi.md#designsUpsertWithWherePost) | **POST** /Designs/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
 
 
 # **designsChangeStreamGet**
@@ -1382,55 +1376,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **designsIdCommentsNkRepliesDelete**
-> designsIdCommentsNkRepliesDelete($id, $nk)
-
-Deletes all replies of this model.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DesignApi();
-$id = "id_example"; // string | Design id
-$nk = "nk_example"; // string | Foreign key for comments.
-
-try {
-    $api_instance->designsIdCommentsNkRepliesDelete($id, $nk);
-} catch (Exception $e) {
-    echo 'Exception when calling DesignApi->designsIdCommentsNkRepliesDelete: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Design id |
- **nk** | **string**| Foreign key for comments. |
-
-### Return type
-
-void (empty response body)
 
 ### Authorization
 
@@ -4543,54 +4488,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **designsPatch**
-> \Swagger\Client\Model\Design designsPatch($data)
-
-Patch an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DesignApi();
-$data = new \Swagger\Client\Model\Design(); // \Swagger\Client\Model\Design | Model instance data
-
-try {
-    $result = $api_instance->designsPatch($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling DesignApi->designsPatch: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\Design**](../Model/\Swagger\Client\Model\Design.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\Design**](../Model/Design.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
 # **designsPost**
 > \Swagger\Client\Model\Design designsPost($data)
 
@@ -4623,202 +4520,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **data** | [**\Swagger\Client\Model\Design**](../Model/\Swagger\Client\Model\Design.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\Design**](../Model/Design.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **designsPut**
-> \Swagger\Client\Model\Design designsPut($data)
-
-Replace an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DesignApi();
-$data = new \Swagger\Client\Model\Design(); // \Swagger\Client\Model\Design | Model instance data
-
-try {
-    $result = $api_instance->designsPut($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling DesignApi->designsPut: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\Design**](../Model/\Swagger\Client\Model\Design.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\Design**](../Model/Design.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **designsReplaceOrCreatePost**
-> \Swagger\Client\Model\Design designsReplaceOrCreatePost($data)
-
-Replace an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DesignApi();
-$data = new \Swagger\Client\Model\Design(); // \Swagger\Client\Model\Design | Model instance data
-
-try {
-    $result = $api_instance->designsReplaceOrCreatePost($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling DesignApi->designsReplaceOrCreatePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\Design**](../Model/\Swagger\Client\Model\Design.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\Design**](../Model/Design.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **designsUpdatePost**
-> \Swagger\Client\Model\InlineResponse2003 designsUpdatePost($where, $data)
-
-Update instances of the model matched by {{where}} from the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DesignApi();
-$where = "where_example"; // string | Criteria to match model instances
-$data = new \Swagger\Client\Model\Design(); // \Swagger\Client\Model\Design | An object of model property name/value pairs
-
-try {
-    $result = $api_instance->designsUpdatePost($where, $data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling DesignApi->designsUpdatePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **where** | **string**| Criteria to match model instances | [optional]
- **data** | [**\Swagger\Client\Model\Design**](../Model/\Swagger\Client\Model\Design.md)| An object of model property name/value pairs | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **designsUpsertWithWherePost**
-> \Swagger\Client\Model\Design designsUpsertWithWherePost($where, $data)
-
-Update an existing model instance or insert a new one into the data source based on the where criteria.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DesignApi();
-$where = "where_example"; // string | Criteria to match model instances
-$data = new \Swagger\Client\Model\Design(); // \Swagger\Client\Model\Design | An object of model property name/value pairs
-
-try {
-    $result = $api_instance->designsUpsertWithWherePost($where, $data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling DesignApi->designsUpsertWithWherePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **where** | **string**| Criteria to match model instances | [optional]
- **data** | [**\Swagger\Client\Model\Design**](../Model/\Swagger\Client\Model\Design.md)| An object of model property name/value pairs | [optional]
 
 ### Return type
 

@@ -16,14 +16,12 @@ Method | HTTP request | Description
 [**teamBuilderConfigsIdHead**](TeamBuilderConfigApi.md#teamBuilderConfigsIdHead) | **HEAD** /TeamBuilderConfigs/{id} | Check whether a model instance exists in the data source.
 [**teamBuilderConfigsIdPatch**](TeamBuilderConfigApi.md#teamBuilderConfigsIdPatch) | **PATCH** /TeamBuilderConfigs/{id} | Patch attributes for a model instance and persist it into the data source.
 [**teamBuilderConfigsIdPortalsCountGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdPortalsCountGet) | **GET** /TeamBuilderConfigs/{id}/portals/count | Counts portals of TeamBuilderConfig.
-[**teamBuilderConfigsIdPortalsDelete**](TeamBuilderConfigApi.md#teamBuilderConfigsIdPortalsDelete) | **DELETE** /TeamBuilderConfigs/{id}/portals | Deletes all portals of this model.
 [**teamBuilderConfigsIdPortalsFkDelete**](TeamBuilderConfigApi.md#teamBuilderConfigsIdPortalsFkDelete) | **DELETE** /TeamBuilderConfigs/{id}/portals/{fk} | Delete a related item by id for portals.
 [**teamBuilderConfigsIdPortalsFkGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdPortalsFkGet) | **GET** /TeamBuilderConfigs/{id}/portals/{fk} | Find a related item by id for portals.
 [**teamBuilderConfigsIdPortalsFkPut**](TeamBuilderConfigApi.md#teamBuilderConfigsIdPortalsFkPut) | **PUT** /TeamBuilderConfigs/{id}/portals/{fk} | Update a related item by id for portals.
 [**teamBuilderConfigsIdPortalsGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdPortalsGet) | **GET** /TeamBuilderConfigs/{id}/portals | Queries portals of TeamBuilderConfig.
 [**teamBuilderConfigsIdPortalsPost**](TeamBuilderConfigApi.md#teamBuilderConfigsIdPortalsPost) | **POST** /TeamBuilderConfigs/{id}/portals | Creates a new instance in portals of this model.
 [**teamBuilderConfigsIdProductGroupsCountGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductGroupsCountGet) | **GET** /TeamBuilderConfigs/{id}/productGroups/count | Counts productGroups of TeamBuilderConfig.
-[**teamBuilderConfigsIdProductGroupsDelete**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductGroupsDelete) | **DELETE** /TeamBuilderConfigs/{id}/productGroups | Deletes all productGroups of this model.
 [**teamBuilderConfigsIdProductGroupsFkDelete**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductGroupsFkDelete) | **DELETE** /TeamBuilderConfigs/{id}/productGroups/{fk} | Delete a related item by id for productGroups.
 [**teamBuilderConfigsIdProductGroupsFkGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductGroupsFkGet) | **GET** /TeamBuilderConfigs/{id}/productGroups/{fk} | Find a related item by id for productGroups.
 [**teamBuilderConfigsIdProductGroupsFkPut**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductGroupsFkPut) | **PUT** /TeamBuilderConfigs/{id}/productGroups/{fk} | Update a related item by id for productGroups.
@@ -40,7 +38,6 @@ Method | HTTP request | Description
 [**teamBuilderConfigsIdProductGroupsRelFkHead**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductGroupsRelFkHead) | **HEAD** /TeamBuilderConfigs/{id}/productGroups/rel/{fk} | Check the existence of productGroups relation to an item by id.
 [**teamBuilderConfigsIdProductGroupsRelFkPut**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductGroupsRelFkPut) | **PUT** /TeamBuilderConfigs/{id}/productGroups/rel/{fk} | Add a related item by id for productGroups.
 [**teamBuilderConfigsIdProductSizeMaterialsCountGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizeMaterialsCountGet) | **GET** /TeamBuilderConfigs/{id}/productSizeMaterials/count | Counts productSizeMaterials of TeamBuilderConfig.
-[**teamBuilderConfigsIdProductSizeMaterialsDelete**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizeMaterialsDelete) | **DELETE** /TeamBuilderConfigs/{id}/productSizeMaterials | Deletes all productSizeMaterials of this model.
 [**teamBuilderConfigsIdProductSizeMaterialsFkDelete**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizeMaterialsFkDelete) | **DELETE** /TeamBuilderConfigs/{id}/productSizeMaterials/{fk} | Delete a related item by id for productSizeMaterials.
 [**teamBuilderConfigsIdProductSizeMaterialsFkGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizeMaterialsFkGet) | **GET** /TeamBuilderConfigs/{id}/productSizeMaterials/{fk} | Find a related item by id for productSizeMaterials.
 [**teamBuilderConfigsIdProductSizeMaterialsFkPut**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizeMaterialsFkPut) | **PUT** /TeamBuilderConfigs/{id}/productSizeMaterials/{fk} | Update a related item by id for productSizeMaterials.
@@ -51,7 +48,6 @@ Method | HTTP request | Description
 [**teamBuilderConfigsIdProductSizeMaterialsNkTeamGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizeMaterialsNkTeamGet) | **GET** /TeamBuilderConfigs/{id}/productSizeMaterials/{nk}/team | Fetches belongsTo relation team.
 [**teamBuilderConfigsIdProductSizeMaterialsPost**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizeMaterialsPost) | **POST** /TeamBuilderConfigs/{id}/productSizeMaterials | Creates a new instance in productSizeMaterials of this model.
 [**teamBuilderConfigsIdProductSizeMaterialsRelCountGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizeMaterialsRelCountGet) | **GET** /TeamBuilderConfigs/{id}/productSizeMaterialsRel/count | Counts productSizeMaterialsRel of TeamBuilderConfig.
-[**teamBuilderConfigsIdProductSizeMaterialsRelDelete**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizeMaterialsRelDelete) | **DELETE** /TeamBuilderConfigs/{id}/productSizeMaterialsRel | Deletes all productSizeMaterialsRel of this model.
 [**teamBuilderConfigsIdProductSizeMaterialsRelFkDelete**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizeMaterialsRelFkDelete) | **DELETE** /TeamBuilderConfigs/{id}/productSizeMaterials/rel/{fk} | Remove the productSizeMaterials relation to an item by id.
 [**teamBuilderConfigsIdProductSizeMaterialsRelFkDelete_0**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizeMaterialsRelFkDelete_0) | **DELETE** /TeamBuilderConfigs/{id}/productSizeMaterialsRel/{fk} | Delete a related item by id for productSizeMaterialsRel.
 [**teamBuilderConfigsIdProductSizeMaterialsRelFkGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizeMaterialsRelFkGet) | **GET** /TeamBuilderConfigs/{id}/productSizeMaterialsRel/{fk} | Find a related item by id for productSizeMaterialsRel.
@@ -64,13 +60,11 @@ Method | HTTP request | Description
 [**teamBuilderConfigsIdProductSizeMaterialsRelNkProductSizeMaterialGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizeMaterialsRelNkProductSizeMaterialGet) | **GET** /TeamBuilderConfigs/{id}/productSizeMaterialsRel/{nk}/productSizeMaterial | Fetches belongsTo relation productSizeMaterial.
 [**teamBuilderConfigsIdProductSizeMaterialsRelPost**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizeMaterialsRelPost) | **POST** /TeamBuilderConfigs/{id}/productSizeMaterialsRel | Creates a new instance in productSizeMaterialsRel of this model.
 [**teamBuilderConfigsIdProductSizesCountGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizesCountGet) | **GET** /TeamBuilderConfigs/{id}/productSizes/count | Counts productSizes of TeamBuilderConfig.
-[**teamBuilderConfigsIdProductSizesDelete**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizesDelete) | **DELETE** /TeamBuilderConfigs/{id}/productSizes | Deletes all productSizes of this model.
 [**teamBuilderConfigsIdProductSizesFkDelete**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizesFkDelete) | **DELETE** /TeamBuilderConfigs/{id}/productSizes/{fk} | Delete a related item by id for productSizes.
 [**teamBuilderConfigsIdProductSizesFkGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizesFkGet) | **GET** /TeamBuilderConfigs/{id}/productSizes/{fk} | Find a related item by id for productSizes.
 [**teamBuilderConfigsIdProductSizesFkPut**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizesFkPut) | **PUT** /TeamBuilderConfigs/{id}/productSizes/{fk} | Update a related item by id for productSizes.
 [**teamBuilderConfigsIdProductSizesGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizesGet) | **GET** /TeamBuilderConfigs/{id}/productSizes | Queries productSizes of TeamBuilderConfig.
 [**teamBuilderConfigsIdProductSizesNkMaterialsCountGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizesNkMaterialsCountGet) | **GET** /TeamBuilderConfigs/{id}/productSizes/{nk}/materials/count | Counts materials of ProductSize.
-[**teamBuilderConfigsIdProductSizesNkMaterialsDelete**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizesNkMaterialsDelete) | **DELETE** /TeamBuilderConfigs/{id}/productSizes/{nk}/materials | Deletes all materials of this model.
 [**teamBuilderConfigsIdProductSizesNkMaterialsFkDelete**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizesNkMaterialsFkDelete) | **DELETE** /TeamBuilderConfigs/{id}/productSizes/{nk}/materials/{fk} | Delete a related item by id for materials.
 [**teamBuilderConfigsIdProductSizesNkMaterialsFkGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizesNkMaterialsFkGet) | **GET** /TeamBuilderConfigs/{id}/productSizes/{nk}/materials/{fk} | Find a related item by id for materials.
 [**teamBuilderConfigsIdProductSizesNkMaterialsFkPut**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizesNkMaterialsFkPut) | **PUT** /TeamBuilderConfigs/{id}/productSizes/{nk}/materials/{fk} | Update a related item by id for materials.
@@ -88,7 +82,6 @@ Method | HTTP request | Description
 [**teamBuilderConfigsIdProductSizesNkProductsGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizesNkProductsGet) | **GET** /TeamBuilderConfigs/{id}/productSizes/{nk}/products | Queries products of ProductSize.
 [**teamBuilderConfigsIdProductSizesNkProductsPost**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizesNkProductsPost) | **POST** /TeamBuilderConfigs/{id}/productSizes/{nk}/products | Creates a new instance in products of this model.
 [**teamBuilderConfigsIdProductSizesNkSizeMaterialsCountGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizesNkSizeMaterialsCountGet) | **GET** /TeamBuilderConfigs/{id}/productSizes/{nk}/sizeMaterials/count | Counts sizeMaterials of ProductSize.
-[**teamBuilderConfigsIdProductSizesNkSizeMaterialsDelete**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizesNkSizeMaterialsDelete) | **DELETE** /TeamBuilderConfigs/{id}/productSizes/{nk}/sizeMaterials | Deletes all sizeMaterials of this model.
 [**teamBuilderConfigsIdProductSizesNkSizeMaterialsFkDelete**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizesNkSizeMaterialsFkDelete) | **DELETE** /TeamBuilderConfigs/{id}/productSizes/{nk}/sizeMaterials/{fk} | Delete a related item by id for sizeMaterials.
 [**teamBuilderConfigsIdProductSizesNkSizeMaterialsFkGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizesNkSizeMaterialsFkGet) | **GET** /TeamBuilderConfigs/{id}/productSizes/{nk}/sizeMaterials/{fk} | Find a related item by id for sizeMaterials.
 [**teamBuilderConfigsIdProductSizesNkSizeMaterialsFkPut**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizesNkSizeMaterialsFkPut) | **PUT** /TeamBuilderConfigs/{id}/productSizes/{nk}/sizeMaterials/{fk} | Update a related item by id for sizeMaterials.
@@ -100,14 +93,12 @@ Method | HTTP request | Description
 [**teamBuilderConfigsIdProductSizesRelFkHead**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizesRelFkHead) | **HEAD** /TeamBuilderConfigs/{id}/productSizes/rel/{fk} | Check the existence of productSizes relation to an item by id.
 [**teamBuilderConfigsIdProductSizesRelFkPut**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductSizesRelFkPut) | **PUT** /TeamBuilderConfigs/{id}/productSizes/rel/{fk} | Add a related item by id for productSizes.
 [**teamBuilderConfigsIdProductTypesCountGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductTypesCountGet) | **GET** /TeamBuilderConfigs/{id}/productTypes/count | Counts productTypes of TeamBuilderConfig.
-[**teamBuilderConfigsIdProductTypesDelete**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductTypesDelete) | **DELETE** /TeamBuilderConfigs/{id}/productTypes | Deletes all productTypes of this model.
 [**teamBuilderConfigsIdProductTypesFkDelete**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductTypesFkDelete) | **DELETE** /TeamBuilderConfigs/{id}/productTypes/{fk} | Delete a related item by id for productTypes.
 [**teamBuilderConfigsIdProductTypesFkGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductTypesFkGet) | **GET** /TeamBuilderConfigs/{id}/productTypes/{fk} | Find a related item by id for productTypes.
 [**teamBuilderConfigsIdProductTypesFkPut**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductTypesFkPut) | **PUT** /TeamBuilderConfigs/{id}/productTypes/{fk} | Update a related item by id for productTypes.
 [**teamBuilderConfigsIdProductTypesGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductTypesGet) | **GET** /TeamBuilderConfigs/{id}/productTypes | Queries productTypes of TeamBuilderConfig.
 [**teamBuilderConfigsIdProductTypesNkGroupGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductTypesNkGroupGet) | **GET** /TeamBuilderConfigs/{id}/productTypes/{nk}/group | Fetches belongsTo relation group.
 [**teamBuilderConfigsIdProductTypesNkSizesCountGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductTypesNkSizesCountGet) | **GET** /TeamBuilderConfigs/{id}/productTypes/{nk}/sizes/count | Counts sizes of ProductType.
-[**teamBuilderConfigsIdProductTypesNkSizesDelete**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductTypesNkSizesDelete) | **DELETE** /TeamBuilderConfigs/{id}/productTypes/{nk}/sizes | Deletes all sizes of this model.
 [**teamBuilderConfigsIdProductTypesNkSizesFkDelete**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductTypesNkSizesFkDelete) | **DELETE** /TeamBuilderConfigs/{id}/productTypes/{nk}/sizes/{fk} | Delete a related item by id for sizes.
 [**teamBuilderConfigsIdProductTypesNkSizesFkGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductTypesNkSizesFkGet) | **GET** /TeamBuilderConfigs/{id}/productTypes/{nk}/sizes/{fk} | Find a related item by id for sizes.
 [**teamBuilderConfigsIdProductTypesNkSizesFkPut**](TeamBuilderConfigApi.md#teamBuilderConfigsIdProductTypesNkSizesFkPut) | **PUT** /TeamBuilderConfigs/{id}/productTypes/{nk}/sizes/{fk} | Update a related item by id for sizes.
@@ -120,12 +111,7 @@ Method | HTTP request | Description
 [**teamBuilderConfigsIdPut**](TeamBuilderConfigApi.md#teamBuilderConfigsIdPut) | **PUT** /TeamBuilderConfigs/{id} | Replace attributes for a model instance and persist it into the data source.
 [**teamBuilderConfigsIdReplacePost**](TeamBuilderConfigApi.md#teamBuilderConfigsIdReplacePost) | **POST** /TeamBuilderConfigs/{id}/replace | Replace attributes for a model instance and persist it into the data source.
 [**teamBuilderConfigsIdTeamGet**](TeamBuilderConfigApi.md#teamBuilderConfigsIdTeamGet) | **GET** /TeamBuilderConfigs/{id}/team | Fetches belongsTo relation team.
-[**teamBuilderConfigsPatch**](TeamBuilderConfigApi.md#teamBuilderConfigsPatch) | **PATCH** /TeamBuilderConfigs | Patch an existing model instance or insert a new one into the data source.
 [**teamBuilderConfigsPost**](TeamBuilderConfigApi.md#teamBuilderConfigsPost) | **POST** /TeamBuilderConfigs | Create a new instance of the model and persist it into the data source.
-[**teamBuilderConfigsPut**](TeamBuilderConfigApi.md#teamBuilderConfigsPut) | **PUT** /TeamBuilderConfigs | Replace an existing model instance or insert a new one into the data source.
-[**teamBuilderConfigsReplaceOrCreatePost**](TeamBuilderConfigApi.md#teamBuilderConfigsReplaceOrCreatePost) | **POST** /TeamBuilderConfigs/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
-[**teamBuilderConfigsUpdatePost**](TeamBuilderConfigApi.md#teamBuilderConfigsUpdatePost) | **POST** /TeamBuilderConfigs/update | Update instances of the model matched by {{where}} from the data source.
-[**teamBuilderConfigsUpsertWithWherePost**](TeamBuilderConfigApi.md#teamBuilderConfigsUpsertWithWherePost) | **POST** /TeamBuilderConfigs/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
 
 
 # **teamBuilderConfigsChangeStreamGet**
@@ -706,53 +692,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **teamBuilderConfigsIdPortalsDelete**
-> teamBuilderConfigsIdPortalsDelete($id)
-
-Deletes all portals of this model.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\TeamBuilderConfigApi();
-$id = "id_example"; // string | TeamBuilderConfig id
-
-try {
-    $api_instance->teamBuilderConfigsIdPortalsDelete($id);
-} catch (Exception $e) {
-    echo 'Exception when calling TeamBuilderConfigApi->teamBuilderConfigsIdPortalsDelete: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| TeamBuilderConfig id |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
 # **teamBuilderConfigsIdPortalsFkDelete**
 > teamBuilderConfigsIdPortalsFkDelete($id, $fk)
 
@@ -1042,53 +981,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **teamBuilderConfigsIdProductGroupsDelete**
-> teamBuilderConfigsIdProductGroupsDelete($id)
-
-Deletes all productGroups of this model.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\TeamBuilderConfigApi();
-$id = "id_example"; // string | TeamBuilderConfig id
-
-try {
-    $api_instance->teamBuilderConfigsIdProductGroupsDelete($id);
-} catch (Exception $e) {
-    echo 'Exception when calling TeamBuilderConfigApi->teamBuilderConfigsIdProductGroupsDelete: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| TeamBuilderConfig id |
-
-### Return type
-
-void (empty response body)
 
 ### Authorization
 
@@ -1915,53 +1807,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **teamBuilderConfigsIdProductSizeMaterialsDelete**
-> teamBuilderConfigsIdProductSizeMaterialsDelete($id)
-
-Deletes all productSizeMaterials of this model.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\TeamBuilderConfigApi();
-$id = "id_example"; // string | TeamBuilderConfig id
-
-try {
-    $api_instance->teamBuilderConfigsIdProductSizeMaterialsDelete($id);
-} catch (Exception $e) {
-    echo 'Exception when calling TeamBuilderConfigApi->teamBuilderConfigsIdProductSizeMaterialsDelete: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| TeamBuilderConfig id |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
 # **teamBuilderConfigsIdProductSizeMaterialsFkDelete**
 > teamBuilderConfigsIdProductSizeMaterialsFkDelete($id, $fk)
 
@@ -2459,53 +2304,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **teamBuilderConfigsIdProductSizeMaterialsRelDelete**
-> teamBuilderConfigsIdProductSizeMaterialsRelDelete($id)
-
-Deletes all productSizeMaterialsRel of this model.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\TeamBuilderConfigApi();
-$id = "id_example"; // string | TeamBuilderConfig id
-
-try {
-    $api_instance->teamBuilderConfigsIdProductSizeMaterialsRelDelete($id);
-} catch (Exception $e) {
-    echo 'Exception when calling TeamBuilderConfigApi->teamBuilderConfigsIdProductSizeMaterialsRelDelete: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| TeamBuilderConfig id |
-
-### Return type
-
-void (empty response body)
 
 ### Authorization
 
@@ -3126,53 +2924,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **teamBuilderConfigsIdProductSizesDelete**
-> teamBuilderConfigsIdProductSizesDelete($id)
-
-Deletes all productSizes of this model.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\TeamBuilderConfigApi();
-$id = "id_example"; // string | TeamBuilderConfig id
-
-try {
-    $api_instance->teamBuilderConfigsIdProductSizesDelete($id);
-} catch (Exception $e) {
-    echo 'Exception when calling TeamBuilderConfigApi->teamBuilderConfigsIdProductSizesDelete: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| TeamBuilderConfig id |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
 # **teamBuilderConfigsIdProductSizesFkDelete**
 > teamBuilderConfigsIdProductSizesFkDelete($id, $fk)
 
@@ -3414,55 +3165,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **teamBuilderConfigsIdProductSizesNkMaterialsDelete**
-> teamBuilderConfigsIdProductSizesNkMaterialsDelete($id, $nk)
-
-Deletes all materials of this model.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\TeamBuilderConfigApi();
-$id = "id_example"; // string | TeamBuilderConfig id
-$nk = "nk_example"; // string | Foreign key for productSizes.
-
-try {
-    $api_instance->teamBuilderConfigsIdProductSizesNkMaterialsDelete($id, $nk);
-} catch (Exception $e) {
-    echo 'Exception when calling TeamBuilderConfigApi->teamBuilderConfigsIdProductSizesNkMaterialsDelete: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| TeamBuilderConfig id |
- **nk** | **string**| Foreign key for productSizes. |
-
-### Return type
-
-void (empty response body)
 
 ### Authorization
 
@@ -4359,55 +4061,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **teamBuilderConfigsIdProductSizesNkSizeMaterialsDelete**
-> teamBuilderConfigsIdProductSizesNkSizeMaterialsDelete($id, $nk)
-
-Deletes all sizeMaterials of this model.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\TeamBuilderConfigApi();
-$id = "id_example"; // string | TeamBuilderConfig id
-$nk = "nk_example"; // string | Foreign key for productSizes.
-
-try {
-    $api_instance->teamBuilderConfigsIdProductSizesNkSizeMaterialsDelete($id, $nk);
-} catch (Exception $e) {
-    echo 'Exception when calling TeamBuilderConfigApi->teamBuilderConfigsIdProductSizesNkSizeMaterialsDelete: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| TeamBuilderConfig id |
- **nk** | **string**| Foreign key for productSizes. |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
 # **teamBuilderConfigsIdProductSizesNkSizeMaterialsFkDelete**
 > teamBuilderConfigsIdProductSizesNkSizeMaterialsFkDelete($id, $nk, $fk)
 
@@ -4972,53 +4625,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **teamBuilderConfigsIdProductTypesDelete**
-> teamBuilderConfigsIdProductTypesDelete($id)
-
-Deletes all productTypes of this model.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\TeamBuilderConfigApi();
-$id = "id_example"; // string | TeamBuilderConfig id
-
-try {
-    $api_instance->teamBuilderConfigsIdProductTypesDelete($id);
-} catch (Exception $e) {
-    echo 'Exception when calling TeamBuilderConfigApi->teamBuilderConfigsIdProductTypesDelete: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| TeamBuilderConfig id |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
 # **teamBuilderConfigsIdProductTypesFkDelete**
 > teamBuilderConfigsIdProductTypesFkDelete($id, $fk)
 
@@ -5312,55 +4918,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **teamBuilderConfigsIdProductTypesNkSizesDelete**
-> teamBuilderConfigsIdProductTypesNkSizesDelete($id, $nk)
-
-Deletes all sizes of this model.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\TeamBuilderConfigApi();
-$id = "id_example"; // string | TeamBuilderConfig id
-$nk = "nk_example"; // string | Foreign key for productTypes.
-
-try {
-    $api_instance->teamBuilderConfigsIdProductTypesNkSizesDelete($id, $nk);
-} catch (Exception $e) {
-    echo 'Exception when calling TeamBuilderConfigApi->teamBuilderConfigsIdProductTypesNkSizesDelete: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| TeamBuilderConfig id |
- **nk** | **string**| Foreign key for productTypes. |
-
-### Return type
-
-void (empty response body)
 
 ### Authorization
 
@@ -5985,54 +5542,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **teamBuilderConfigsPatch**
-> \Swagger\Client\Model\TeamBuilderConfig teamBuilderConfigsPatch($data)
-
-Patch an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\TeamBuilderConfigApi();
-$data = new \Swagger\Client\Model\TeamBuilderConfig(); // \Swagger\Client\Model\TeamBuilderConfig | Model instance data
-
-try {
-    $result = $api_instance->teamBuilderConfigsPatch($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling TeamBuilderConfigApi->teamBuilderConfigsPatch: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\TeamBuilderConfig**](../Model/\Swagger\Client\Model\TeamBuilderConfig.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\TeamBuilderConfig**](../Model/TeamBuilderConfig.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
 # **teamBuilderConfigsPost**
 > \Swagger\Client\Model\TeamBuilderConfig teamBuilderConfigsPost($data)
 
@@ -6065,202 +5574,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **data** | [**\Swagger\Client\Model\TeamBuilderConfig**](../Model/\Swagger\Client\Model\TeamBuilderConfig.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\TeamBuilderConfig**](../Model/TeamBuilderConfig.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **teamBuilderConfigsPut**
-> \Swagger\Client\Model\TeamBuilderConfig teamBuilderConfigsPut($data)
-
-Replace an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\TeamBuilderConfigApi();
-$data = new \Swagger\Client\Model\TeamBuilderConfig(); // \Swagger\Client\Model\TeamBuilderConfig | Model instance data
-
-try {
-    $result = $api_instance->teamBuilderConfigsPut($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling TeamBuilderConfigApi->teamBuilderConfigsPut: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\TeamBuilderConfig**](../Model/\Swagger\Client\Model\TeamBuilderConfig.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\TeamBuilderConfig**](../Model/TeamBuilderConfig.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **teamBuilderConfigsReplaceOrCreatePost**
-> \Swagger\Client\Model\TeamBuilderConfig teamBuilderConfigsReplaceOrCreatePost($data)
-
-Replace an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\TeamBuilderConfigApi();
-$data = new \Swagger\Client\Model\TeamBuilderConfig(); // \Swagger\Client\Model\TeamBuilderConfig | Model instance data
-
-try {
-    $result = $api_instance->teamBuilderConfigsReplaceOrCreatePost($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling TeamBuilderConfigApi->teamBuilderConfigsReplaceOrCreatePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\TeamBuilderConfig**](../Model/\Swagger\Client\Model\TeamBuilderConfig.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\TeamBuilderConfig**](../Model/TeamBuilderConfig.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **teamBuilderConfigsUpdatePost**
-> \Swagger\Client\Model\InlineResponse2003 teamBuilderConfigsUpdatePost($where, $data)
-
-Update instances of the model matched by {{where}} from the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\TeamBuilderConfigApi();
-$where = "where_example"; // string | Criteria to match model instances
-$data = new \Swagger\Client\Model\TeamBuilderConfig(); // \Swagger\Client\Model\TeamBuilderConfig | An object of model property name/value pairs
-
-try {
-    $result = $api_instance->teamBuilderConfigsUpdatePost($where, $data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling TeamBuilderConfigApi->teamBuilderConfigsUpdatePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **where** | **string**| Criteria to match model instances | [optional]
- **data** | [**\Swagger\Client\Model\TeamBuilderConfig**](../Model/\Swagger\Client\Model\TeamBuilderConfig.md)| An object of model property name/value pairs | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **teamBuilderConfigsUpsertWithWherePost**
-> \Swagger\Client\Model\TeamBuilderConfig teamBuilderConfigsUpsertWithWherePost($where, $data)
-
-Update an existing model instance or insert a new one into the data source based on the where criteria.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\TeamBuilderConfigApi();
-$where = "where_example"; // string | Criteria to match model instances
-$data = new \Swagger\Client\Model\TeamBuilderConfig(); // \Swagger\Client\Model\TeamBuilderConfig | An object of model property name/value pairs
-
-try {
-    $result = $api_instance->teamBuilderConfigsUpsertWithWherePost($where, $data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling TeamBuilderConfigApi->teamBuilderConfigsUpsertWithWherePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **where** | **string**| Criteria to match model instances | [optional]
- **data** | [**\Swagger\Client\Model\TeamBuilderConfig**](../Model/\Swagger\Client\Model\TeamBuilderConfig.md)| An object of model property name/value pairs | [optional]
 
 ### Return type
 

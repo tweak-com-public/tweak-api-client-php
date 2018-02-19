@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **members** | [**\Swagger\Client\Model\Customer[]**](Customer.md) |  | [optional] 
 **builderConfigs** | [**\Swagger\Client\Model\TeamBuilderConfig[]**](TeamBuilderConfig.md) |  | [optional] 
 **dynamicDatas** | [**\Swagger\Client\Model\DynamicData[]**](DynamicData.md) |  | [optional] 
+**dataSourceSoaps** | [**\Swagger\Client\Model\DataSourceSoap[]**](DataSourceSoap.md) |  | [optional] 
 **teamMembers** | [**\Swagger\Client\Model\TeamMember[]**](TeamMember.md) |  | [optional] 
 **portals** | [**\Swagger\Client\Model\Portal[]**](Portal.md) |  | [optional] 
 **templates** | [**\Swagger\Client\Model\Template[]**](Template.md) |  | [optional] 
