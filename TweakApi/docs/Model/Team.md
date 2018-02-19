@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **string** |  | 
+**isLegacyPartner** | **bool** |  | [optional] [default to false]
 **logo** | [**\Swagger\Client\Model\CloudinaryImage**](CloudinaryImage.md) |  | [optional] 
 **subdomain** | **string** |  | [optional] 
 **country** | **string** |  | [optional] [default to 'Ireland']
@@ -20,8 +21,8 @@ Name | Type | Description | Notes
 **teamDataId** | **string** |  | [optional] 
 **members** | [**\Swagger\Client\Model\Customer[]**](Customer.md) |  | [optional] 
 **builderConfigs** | [**\Swagger\Client\Model\TeamBuilderConfig[]**](TeamBuilderConfig.md) |  | [optional] 
-**dataSources** | [**\Swagger\Client\Model\DataSource[]**](DataSource.md) |  | [optional] 
 **dynamicDatas** | [**\Swagger\Client\Model\DynamicData[]**](DynamicData.md) |  | [optional] 
+**dataSourceSoaps** | [**\Swagger\Client\Model\DataSourceSoap[]**](DataSourceSoap.md) |  | [optional] 
 **teamMembers** | [**\Swagger\Client\Model\TeamMember[]**](TeamMember.md) |  | [optional] 
 **portals** | [**\Swagger\Client\Model\Portal[]**](Portal.md) |  | [optional] 
 **templates** | [**\Swagger\Client\Model\Template[]**](Template.md) |  | [optional] 

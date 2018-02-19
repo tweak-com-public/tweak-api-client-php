@@ -10,7 +10,6 @@ Method | HTTP request | Description
 [**designFoldersFindOneGet**](DesignFolderApi.md#designFoldersFindOneGet) | **GET** /DesignFolders/findOne | Find first instance of the model matched by filter from the data source.
 [**designFoldersGet**](DesignFolderApi.md#designFoldersGet) | **GET** /DesignFolders | Find all instances of the model matched by filter from the data source.
 [**designFoldersIdChildrenCountGet**](DesignFolderApi.md#designFoldersIdChildrenCountGet) | **GET** /DesignFolders/{id}/children/count | Counts children of DesignFolder.
-[**designFoldersIdChildrenDelete**](DesignFolderApi.md#designFoldersIdChildrenDelete) | **DELETE** /DesignFolders/{id}/children | Deletes all children of this model.
 [**designFoldersIdChildrenFkDelete**](DesignFolderApi.md#designFoldersIdChildrenFkDelete) | **DELETE** /DesignFolders/{id}/children/{fk} | Delete a related item by id for children.
 [**designFoldersIdChildrenFkGet**](DesignFolderApi.md#designFoldersIdChildrenFkGet) | **GET** /DesignFolders/{id}/children/{fk} | Find a related item by id for children.
 [**designFoldersIdChildrenFkPut**](DesignFolderApi.md#designFoldersIdChildrenFkPut) | **PUT** /DesignFolders/{id}/children/{fk} | Update a related item by id for children.
@@ -18,7 +17,6 @@ Method | HTTP request | Description
 [**designFoldersIdChildrenPost**](DesignFolderApi.md#designFoldersIdChildrenPost) | **POST** /DesignFolders/{id}/children | Creates a new instance in children of this model.
 [**designFoldersIdDelete**](DesignFolderApi.md#designFoldersIdDelete) | **DELETE** /DesignFolders/{id} | Delete a model instance by {{id}} from the data source.
 [**designFoldersIdDesignsCountGet**](DesignFolderApi.md#designFoldersIdDesignsCountGet) | **GET** /DesignFolders/{id}/designs/count | Counts designs of DesignFolder.
-[**designFoldersIdDesignsDelete**](DesignFolderApi.md#designFoldersIdDesignsDelete) | **DELETE** /DesignFolders/{id}/designs | Deletes all designs of this model.
 [**designFoldersIdDesignsFkDelete**](DesignFolderApi.md#designFoldersIdDesignsFkDelete) | **DELETE** /DesignFolders/{id}/designs/{fk} | Delete a related item by id for designs.
 [**designFoldersIdDesignsFkGet**](DesignFolderApi.md#designFoldersIdDesignsFkGet) | **GET** /DesignFolders/{id}/designs/{fk} | Find a related item by id for designs.
 [**designFoldersIdDesignsFkPut**](DesignFolderApi.md#designFoldersIdDesignsFkPut) | **PUT** /DesignFolders/{id}/designs/{fk} | Update a related item by id for designs.
@@ -33,12 +31,7 @@ Method | HTTP request | Description
 [**designFoldersIdPortalGet**](DesignFolderApi.md#designFoldersIdPortalGet) | **GET** /DesignFolders/{id}/portal | Fetches belongsTo relation portal.
 [**designFoldersIdPut**](DesignFolderApi.md#designFoldersIdPut) | **PUT** /DesignFolders/{id} | Replace attributes for a model instance and persist it into the data source.
 [**designFoldersIdReplacePost**](DesignFolderApi.md#designFoldersIdReplacePost) | **POST** /DesignFolders/{id}/replace | Replace attributes for a model instance and persist it into the data source.
-[**designFoldersPatch**](DesignFolderApi.md#designFoldersPatch) | **PATCH** /DesignFolders | Patch an existing model instance or insert a new one into the data source.
 [**designFoldersPost**](DesignFolderApi.md#designFoldersPost) | **POST** /DesignFolders | Create a new instance of the model and persist it into the data source.
-[**designFoldersPut**](DesignFolderApi.md#designFoldersPut) | **PUT** /DesignFolders | Replace an existing model instance or insert a new one into the data source.
-[**designFoldersReplaceOrCreatePost**](DesignFolderApi.md#designFoldersReplaceOrCreatePost) | **POST** /DesignFolders/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
-[**designFoldersUpdatePost**](DesignFolderApi.md#designFoldersUpdatePost) | **POST** /DesignFolders/update | Update instances of the model matched by {{where}} from the data source.
-[**designFoldersUpsertWithWherePost**](DesignFolderApi.md#designFoldersUpsertWithWherePost) | **POST** /DesignFolders/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
 
 
 # **designFoldersChangeStreamGet**
@@ -319,53 +312,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **designFoldersIdChildrenDelete**
-> designFoldersIdChildrenDelete($id)
-
-Deletes all children of this model.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DesignFolderApi();
-$id = "id_example"; // string | DesignFolder id
-
-try {
-    $api_instance->designFoldersIdChildrenDelete($id);
-} catch (Exception $e) {
-    echo 'Exception when calling DesignFolderApi->designFoldersIdChildrenDelete: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| DesignFolder id |
-
-### Return type
-
-void (empty response body)
 
 ### Authorization
 
@@ -715,53 +661,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **designFoldersIdDesignsDelete**
-> designFoldersIdDesignsDelete($id)
-
-Deletes all designs of this model.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DesignFolderApi();
-$id = "id_example"; // string | DesignFolder id
-
-try {
-    $api_instance->designFoldersIdDesignsDelete($id);
-} catch (Exception $e) {
-    echo 'Exception when calling DesignFolderApi->designFoldersIdDesignsDelete: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| DesignFolder id |
-
-### Return type
-
-void (empty response body)
 
 ### Authorization
 
@@ -1471,54 +1370,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **designFoldersPatch**
-> \Swagger\Client\Model\DesignFolder designFoldersPatch($data)
-
-Patch an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DesignFolderApi();
-$data = new \Swagger\Client\Model\DesignFolder(); // \Swagger\Client\Model\DesignFolder | Model instance data
-
-try {
-    $result = $api_instance->designFoldersPatch($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling DesignFolderApi->designFoldersPatch: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\DesignFolder**](../Model/\Swagger\Client\Model\DesignFolder.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\DesignFolder**](../Model/DesignFolder.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
 # **designFoldersPost**
 > \Swagger\Client\Model\DesignFolder designFoldersPost($data)
 
@@ -1551,202 +1402,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **data** | [**\Swagger\Client\Model\DesignFolder**](../Model/\Swagger\Client\Model\DesignFolder.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\DesignFolder**](../Model/DesignFolder.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **designFoldersPut**
-> \Swagger\Client\Model\DesignFolder designFoldersPut($data)
-
-Replace an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DesignFolderApi();
-$data = new \Swagger\Client\Model\DesignFolder(); // \Swagger\Client\Model\DesignFolder | Model instance data
-
-try {
-    $result = $api_instance->designFoldersPut($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling DesignFolderApi->designFoldersPut: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\DesignFolder**](../Model/\Swagger\Client\Model\DesignFolder.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\DesignFolder**](../Model/DesignFolder.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **designFoldersReplaceOrCreatePost**
-> \Swagger\Client\Model\DesignFolder designFoldersReplaceOrCreatePost($data)
-
-Replace an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DesignFolderApi();
-$data = new \Swagger\Client\Model\DesignFolder(); // \Swagger\Client\Model\DesignFolder | Model instance data
-
-try {
-    $result = $api_instance->designFoldersReplaceOrCreatePost($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling DesignFolderApi->designFoldersReplaceOrCreatePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\DesignFolder**](../Model/\Swagger\Client\Model\DesignFolder.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\DesignFolder**](../Model/DesignFolder.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **designFoldersUpdatePost**
-> \Swagger\Client\Model\InlineResponse2003 designFoldersUpdatePost($where, $data)
-
-Update instances of the model matched by {{where}} from the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DesignFolderApi();
-$where = "where_example"; // string | Criteria to match model instances
-$data = new \Swagger\Client\Model\DesignFolder(); // \Swagger\Client\Model\DesignFolder | An object of model property name/value pairs
-
-try {
-    $result = $api_instance->designFoldersUpdatePost($where, $data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling DesignFolderApi->designFoldersUpdatePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **where** | **string**| Criteria to match model instances | [optional]
- **data** | [**\Swagger\Client\Model\DesignFolder**](../Model/\Swagger\Client\Model\DesignFolder.md)| An object of model property name/value pairs | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **designFoldersUpsertWithWherePost**
-> \Swagger\Client\Model\DesignFolder designFoldersUpsertWithWherePost($where, $data)
-
-Update an existing model instance or insert a new one into the data source based on the where criteria.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\DesignFolderApi();
-$where = "where_example"; // string | Criteria to match model instances
-$data = new \Swagger\Client\Model\DesignFolder(); // \Swagger\Client\Model\DesignFolder | An object of model property name/value pairs
-
-try {
-    $result = $api_instance->designFoldersUpsertWithWherePost($where, $data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling DesignFolderApi->designFoldersUpsertWithWherePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **where** | **string**| Criteria to match model instances | [optional]
- **data** | [**\Swagger\Client\Model\DesignFolder**](../Model/\Swagger\Client\Model\DesignFolder.md)| An object of model property name/value pairs | [optional]
 
 ### Return type
 

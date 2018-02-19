@@ -3,11 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**address** | **string** |  | [optional] 
+**address** | [**\Swagger\Client\Model\BillingAddress**](BillingAddress.md) |  | [optional] 
 **email** | **string** |  | [optional] 
 **name** | **string** |  | [optional] 
 **phone** | **string** |  | [optional] 
-**verifiedAddress** | **string** |  | [optional] 
+**verifiedAddress** | [**\Swagger\Client\Model\BillingAddress**](BillingAddress.md) |  | [optional] 
 **verifiedEmail** | **string** |  | [optional] 
 **verifiedName** | **string** |  | [optional] 
 **verifiedPhone** | **string** |  | [optional] 

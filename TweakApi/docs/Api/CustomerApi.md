@@ -57,15 +57,13 @@ Method | HTTP request | Description
 [**customersIdTeamsNkBuilderConfigsFkPut**](CustomerApi.md#customersIdTeamsNkBuilderConfigsFkPut) | **PUT** /Customers/{id}/teams/{nk}/builderConfigs/{fk} | Update a related item by id for builderConfigs.
 [**customersIdTeamsNkBuilderConfigsGet**](CustomerApi.md#customersIdTeamsNkBuilderConfigsGet) | **GET** /Customers/{id}/teams/{nk}/builderConfigs | Queries builderConfigs of Team.
 [**customersIdTeamsNkBuilderConfigsPost**](CustomerApi.md#customersIdTeamsNkBuilderConfigsPost) | **POST** /Customers/{id}/teams/{nk}/builderConfigs | Creates a new instance in builderConfigs of this model.
-[**customersIdTeamsNkDataSourcesCountGet**](CustomerApi.md#customersIdTeamsNkDataSourcesCountGet) | **GET** /Customers/{id}/teams/{nk}/dataSources/count | Counts dataSources of Team.
-[**customersIdTeamsNkDataSourcesDelete**](CustomerApi.md#customersIdTeamsNkDataSourcesDelete) | **DELETE** /Customers/{id}/teams/{nk}/dataSources | Deletes all dataSources of this model.
-[**customersIdTeamsNkDataSourcesFkDelete**](CustomerApi.md#customersIdTeamsNkDataSourcesFkDelete) | **DELETE** /Customers/{id}/teams/{nk}/dataSources/{fk} | Delete a related item by id for dataSources.
-[**customersIdTeamsNkDataSourcesFkGet**](CustomerApi.md#customersIdTeamsNkDataSourcesFkGet) | **GET** /Customers/{id}/teams/{nk}/dataSources/{fk} | Find a related item by id for dataSources.
-[**customersIdTeamsNkDataSourcesFkPut**](CustomerApi.md#customersIdTeamsNkDataSourcesFkPut) | **PUT** /Customers/{id}/teams/{nk}/dataSources/{fk} | Update a related item by id for dataSources.
-[**customersIdTeamsNkDataSourcesGet**](CustomerApi.md#customersIdTeamsNkDataSourcesGet) | **GET** /Customers/{id}/teams/{nk}/dataSources | Queries dataSources of Team.
-[**customersIdTeamsNkDataSourcesPost**](CustomerApi.md#customersIdTeamsNkDataSourcesPost) | **POST** /Customers/{id}/teams/{nk}/dataSources | Creates a new instance in dataSources of this model.
+[**customersIdTeamsNkDataSourceSoapsCountGet**](CustomerApi.md#customersIdTeamsNkDataSourceSoapsCountGet) | **GET** /Customers/{id}/teams/{nk}/dataSourceSoaps/count | Counts dataSourceSoaps of Team.
+[**customersIdTeamsNkDataSourceSoapsFkDelete**](CustomerApi.md#customersIdTeamsNkDataSourceSoapsFkDelete) | **DELETE** /Customers/{id}/teams/{nk}/dataSourceSoaps/{fk} | Delete a related item by id for dataSourceSoaps.
+[**customersIdTeamsNkDataSourceSoapsFkGet**](CustomerApi.md#customersIdTeamsNkDataSourceSoapsFkGet) | **GET** /Customers/{id}/teams/{nk}/dataSourceSoaps/{fk} | Find a related item by id for dataSourceSoaps.
+[**customersIdTeamsNkDataSourceSoapsFkPut**](CustomerApi.md#customersIdTeamsNkDataSourceSoapsFkPut) | **PUT** /Customers/{id}/teams/{nk}/dataSourceSoaps/{fk} | Update a related item by id for dataSourceSoaps.
+[**customersIdTeamsNkDataSourceSoapsGet**](CustomerApi.md#customersIdTeamsNkDataSourceSoapsGet) | **GET** /Customers/{id}/teams/{nk}/dataSourceSoaps | Queries dataSourceSoaps of Team.
+[**customersIdTeamsNkDataSourceSoapsPost**](CustomerApi.md#customersIdTeamsNkDataSourceSoapsPost) | **POST** /Customers/{id}/teams/{nk}/dataSourceSoaps | Creates a new instance in dataSourceSoaps of this model.
 [**customersIdTeamsNkDynamicDatasCountGet**](CustomerApi.md#customersIdTeamsNkDynamicDatasCountGet) | **GET** /Customers/{id}/teams/{nk}/dynamicDatas/count | Counts dynamicDatas of Team.
-[**customersIdTeamsNkDynamicDatasDelete**](CustomerApi.md#customersIdTeamsNkDynamicDatasDelete) | **DELETE** /Customers/{id}/teams/{nk}/dynamicDatas | Deletes all dynamicDatas of this model.
 [**customersIdTeamsNkDynamicDatasFkDelete**](CustomerApi.md#customersIdTeamsNkDynamicDatasFkDelete) | **DELETE** /Customers/{id}/teams/{nk}/dynamicDatas/{fk} | Delete a related item by id for dynamicDatas.
 [**customersIdTeamsNkDynamicDatasFkGet**](CustomerApi.md#customersIdTeamsNkDynamicDatasFkGet) | **GET** /Customers/{id}/teams/{nk}/dynamicDatas/{fk} | Find a related item by id for dynamicDatas.
 [**customersIdTeamsNkDynamicDatasFkPut**](CustomerApi.md#customersIdTeamsNkDynamicDatasFkPut) | **PUT** /Customers/{id}/teams/{nk}/dynamicDatas/{fk} | Update a related item by id for dynamicDatas.
@@ -169,16 +167,11 @@ Method | HTTP request | Description
 [**customersLogoutPost**](CustomerApi.md#customersLogoutPost) | **POST** /Customers/logout | Logout a user with access token.
 [**customersMeTokenGet**](CustomerApi.md#customersMeTokenGet) | **GET** /Customers/me/token | Get token info
 [**customersMeTokenRefreshGet**](CustomerApi.md#customersMeTokenRefreshGet) | **GET** /Customers/me/token/refresh | Refresh current access token
-[**customersPatch**](CustomerApi.md#customersPatch) | **PATCH** /Customers | Patch an existing model instance or insert a new one into the data source.
 [**customersPost**](CustomerApi.md#customersPost) | **POST** /Customers | Create a new instance of the model and persist it into the data source.
-[**customersPut**](CustomerApi.md#customersPut) | **PUT** /Customers | Replace an existing model instance or insert a new one into the data source.
 [**customersRegisterPost**](CustomerApi.md#customersRegisterPost) | **POST** /Customers/register | Create customer and assign it to a team
-[**customersReplaceOrCreatePost**](CustomerApi.md#customersReplaceOrCreatePost) | **POST** /Customers/replaceOrCreate | Replace an existing model instance or insert a new one into the data source.
 [**customersResetPasswordPost**](CustomerApi.md#customersResetPasswordPost) | **POST** /Customers/reset-password | Reset user&#39;s password via a password-reset token.
 [**customersResetPasswordTokenGet**](CustomerApi.md#customersResetPasswordTokenGet) | **GET** /Customers/reset-password/token | Get token info for reset password token
 [**customersResetPost**](CustomerApi.md#customersResetPost) | **POST** /Customers/reset | Reset password for a user with email.
-[**customersUpdatePost**](CustomerApi.md#customersUpdatePost) | **POST** /Customers/update | Update instances of the model matched by {{where}} from the data source.
-[**customersUpsertWithWherePost**](CustomerApi.md#customersUpsertWithWherePost) | **POST** /Customers/upsertWithWhere | Update an existing model instance or insert a new one into the data source based on the where criteria.
 
 
 # **customersChangePasswordPost**
@@ -918,7 +911,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **customersIdActiveGet**
-> \Swagger\Client\Model\InlineResponse2004 customersIdActiveGet($id)
+> \Swagger\Client\Model\InlineResponse2003 customersIdActiveGet($id)
 
 Define whether customer is active or not
 
@@ -952,7 +945,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
+[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
 
 ### Authorization
 
@@ -2821,10 +2814,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **customersIdTeamsNkDataSourcesCountGet**
-> \Swagger\Client\Model\InlineResponse2001 customersIdTeamsNkDataSourcesCountGet($id, $nk, $where)
+# **customersIdTeamsNkDataSourceSoapsCountGet**
+> \Swagger\Client\Model\InlineResponse2001 customersIdTeamsNkDataSourceSoapsCountGet($id, $nk, $where)
 
-Counts dataSources of Team.
+Counts dataSourceSoaps of Team.
 
 ### Example
 ```php
@@ -2842,10 +2835,10 @@ $nk = "nk_example"; // string | Foreign key for teams.
 $where = "where_example"; // string | Criteria to match model instances
 
 try {
-    $result = $api_instance->customersIdTeamsNkDataSourcesCountGet($id, $nk, $where);
+    $result = $api_instance->customersIdTeamsNkDataSourceSoapsCountGet($id, $nk, $where);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CustomerApi->customersIdTeamsNkDataSourcesCountGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CustomerApi->customersIdTeamsNkDataSourceSoapsCountGet: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -2873,10 +2866,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **customersIdTeamsNkDataSourcesDelete**
-> customersIdTeamsNkDataSourcesDelete($id, $nk)
+# **customersIdTeamsNkDataSourceSoapsFkDelete**
+> customersIdTeamsNkDataSourceSoapsFkDelete($id, $nk, $fk)
 
-Deletes all dataSources of this model.
+Delete a related item by id for dataSourceSoaps.
 
 ### Example
 ```php
@@ -2891,11 +2884,12 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 $api_instance = new Tweak\Api\Api\CustomerApi();
 $id = "id_example"; // string | Customer id
 $nk = "nk_example"; // string | Foreign key for teams.
+$fk = "fk_example"; // string | Foreign key for dataSourceSoaps
 
 try {
-    $api_instance->customersIdTeamsNkDataSourcesDelete($id, $nk);
+    $api_instance->customersIdTeamsNkDataSourceSoapsFkDelete($id, $nk, $fk);
 } catch (Exception $e) {
-    echo 'Exception when calling CustomerApi->customersIdTeamsNkDataSourcesDelete: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CustomerApi->customersIdTeamsNkDataSourceSoapsFkDelete: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -2906,6 +2900,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| Customer id |
  **nk** | **string**| Foreign key for teams. |
+ **fk** | **string**| Foreign key for dataSourceSoaps |
 
 ### Return type
 
@@ -2922,61 +2917,10 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **customersIdTeamsNkDataSourcesFkDelete**
-> customersIdTeamsNkDataSourcesFkDelete($id, $nk, $fk)
+# **customersIdTeamsNkDataSourceSoapsFkGet**
+> \Swagger\Client\Model\DataSourceSoap customersIdTeamsNkDataSourceSoapsFkGet($id, $nk, $fk)
 
-Delete a related item by id for dataSources.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\CustomerApi();
-$id = "id_example"; // string | Customer id
-$nk = "nk_example"; // string | Foreign key for teams.
-$fk = "fk_example"; // string | Foreign key for dataSources
-
-try {
-    $api_instance->customersIdTeamsNkDataSourcesFkDelete($id, $nk, $fk);
-} catch (Exception $e) {
-    echo 'Exception when calling CustomerApi->customersIdTeamsNkDataSourcesFkDelete: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Customer id |
- **nk** | **string**| Foreign key for teams. |
- **fk** | **string**| Foreign key for dataSources |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **customersIdTeamsNkDataSourcesFkGet**
-> \Swagger\Client\Model\DataSource customersIdTeamsNkDataSourcesFkGet($id, $nk, $fk)
-
-Find a related item by id for dataSources.
+Find a related item by id for dataSourceSoaps.
 
 ### Example
 ```php
@@ -2991,13 +2935,13 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 $api_instance = new Tweak\Api\Api\CustomerApi();
 $id = "id_example"; // string | Customer id
 $nk = "nk_example"; // string | Foreign key for teams.
-$fk = "fk_example"; // string | Foreign key for dataSources
+$fk = "fk_example"; // string | Foreign key for dataSourceSoaps
 
 try {
-    $result = $api_instance->customersIdTeamsNkDataSourcesFkGet($id, $nk, $fk);
+    $result = $api_instance->customersIdTeamsNkDataSourceSoapsFkGet($id, $nk, $fk);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CustomerApi->customersIdTeamsNkDataSourcesFkGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CustomerApi->customersIdTeamsNkDataSourceSoapsFkGet: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -3008,11 +2952,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| Customer id |
  **nk** | **string**| Foreign key for teams. |
- **fk** | **string**| Foreign key for dataSources |
+ **fk** | **string**| Foreign key for dataSourceSoaps |
 
 ### Return type
 
-[**\Swagger\Client\Model\DataSource**](../Model/DataSource.md)
+[**\Swagger\Client\Model\DataSourceSoap**](../Model/DataSourceSoap.md)
 
 ### Authorization
 
@@ -3025,10 +2969,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **customersIdTeamsNkDataSourcesFkPut**
-> \Swagger\Client\Model\DataSource customersIdTeamsNkDataSourcesFkPut($id, $nk, $fk, $data)
+# **customersIdTeamsNkDataSourceSoapsFkPut**
+> \Swagger\Client\Model\DataSourceSoap customersIdTeamsNkDataSourceSoapsFkPut($id, $nk, $fk, $data)
 
-Update a related item by id for dataSources.
+Update a related item by id for dataSourceSoaps.
 
 ### Example
 ```php
@@ -3043,14 +2987,14 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 $api_instance = new Tweak\Api\Api\CustomerApi();
 $id = "id_example"; // string | Customer id
 $nk = "nk_example"; // string | Foreign key for teams.
-$fk = "fk_example"; // string | Foreign key for dataSources
-$data = new \Swagger\Client\Model\DataSource(); // \Swagger\Client\Model\DataSource | 
+$fk = "fk_example"; // string | Foreign key for dataSourceSoaps
+$data = new \Swagger\Client\Model\DataSourceSoap(); // \Swagger\Client\Model\DataSourceSoap | 
 
 try {
-    $result = $api_instance->customersIdTeamsNkDataSourcesFkPut($id, $nk, $fk, $data);
+    $result = $api_instance->customersIdTeamsNkDataSourceSoapsFkPut($id, $nk, $fk, $data);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CustomerApi->customersIdTeamsNkDataSourcesFkPut: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CustomerApi->customersIdTeamsNkDataSourceSoapsFkPut: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -3061,12 +3005,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| Customer id |
  **nk** | **string**| Foreign key for teams. |
- **fk** | **string**| Foreign key for dataSources |
- **data** | [**\Swagger\Client\Model\DataSource**](../Model/\Swagger\Client\Model\DataSource.md)|  | [optional]
+ **fk** | **string**| Foreign key for dataSourceSoaps |
+ **data** | [**\Swagger\Client\Model\DataSourceSoap**](../Model/\Swagger\Client\Model\DataSourceSoap.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\DataSource**](../Model/DataSource.md)
+[**\Swagger\Client\Model\DataSourceSoap**](../Model/DataSourceSoap.md)
 
 ### Authorization
 
@@ -3079,10 +3023,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **customersIdTeamsNkDataSourcesGet**
-> \Swagger\Client\Model\DataSource[] customersIdTeamsNkDataSourcesGet($id, $nk, $filter)
+# **customersIdTeamsNkDataSourceSoapsGet**
+> \Swagger\Client\Model\DataSourceSoap[] customersIdTeamsNkDataSourceSoapsGet($id, $nk, $filter)
 
-Queries dataSources of Team.
+Queries dataSourceSoaps of Team.
 
 ### Example
 ```php
@@ -3100,10 +3044,10 @@ $nk = "nk_example"; // string | Foreign key for teams.
 $filter = "filter_example"; // string | 
 
 try {
-    $result = $api_instance->customersIdTeamsNkDataSourcesGet($id, $nk, $filter);
+    $result = $api_instance->customersIdTeamsNkDataSourceSoapsGet($id, $nk, $filter);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CustomerApi->customersIdTeamsNkDataSourcesGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CustomerApi->customersIdTeamsNkDataSourceSoapsGet: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -3118,7 +3062,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\DataSource[]**](../Model/DataSource.md)
+[**\Swagger\Client\Model\DataSourceSoap[]**](../Model/DataSourceSoap.md)
 
 ### Authorization
 
@@ -3131,10 +3075,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **customersIdTeamsNkDataSourcesPost**
-> \Swagger\Client\Model\DataSource customersIdTeamsNkDataSourcesPost($id, $nk, $data)
+# **customersIdTeamsNkDataSourceSoapsPost**
+> \Swagger\Client\Model\DataSourceSoap customersIdTeamsNkDataSourceSoapsPost($id, $nk, $data)
 
-Creates a new instance in dataSources of this model.
+Creates a new instance in dataSourceSoaps of this model.
 
 ### Example
 ```php
@@ -3149,13 +3093,13 @@ Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'Y
 $api_instance = new Tweak\Api\Api\CustomerApi();
 $id = "id_example"; // string | Customer id
 $nk = "nk_example"; // string | Foreign key for teams.
-$data = new \Swagger\Client\Model\DataSource(); // \Swagger\Client\Model\DataSource | 
+$data = new \Swagger\Client\Model\DataSourceSoap(); // \Swagger\Client\Model\DataSourceSoap | 
 
 try {
-    $result = $api_instance->customersIdTeamsNkDataSourcesPost($id, $nk, $data);
+    $result = $api_instance->customersIdTeamsNkDataSourceSoapsPost($id, $nk, $data);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CustomerApi->customersIdTeamsNkDataSourcesPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CustomerApi->customersIdTeamsNkDataSourceSoapsPost: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -3166,11 +3110,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| Customer id |
  **nk** | **string**| Foreign key for teams. |
- **data** | [**\Swagger\Client\Model\DataSource**](../Model/\Swagger\Client\Model\DataSource.md)|  | [optional]
+ **data** | [**\Swagger\Client\Model\DataSourceSoap**](../Model/\Swagger\Client\Model\DataSourceSoap.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\DataSource**](../Model/DataSource.md)
+[**\Swagger\Client\Model\DataSourceSoap**](../Model/DataSourceSoap.md)
 
 ### Authorization
 
@@ -3223,55 +3167,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **customersIdTeamsNkDynamicDatasDelete**
-> customersIdTeamsNkDynamicDatasDelete($id, $nk)
-
-Deletes all dynamicDatas of this model.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\CustomerApi();
-$id = "id_example"; // string | Customer id
-$nk = "nk_example"; // string | Foreign key for teams.
-
-try {
-    $api_instance->customersIdTeamsNkDynamicDatasDelete($id, $nk);
-} catch (Exception $e) {
-    echo 'Exception when calling CustomerApi->customersIdTeamsNkDynamicDatasDelete: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Customer id |
- **nk** | **string**| Foreign key for teams. |
-
-### Return type
-
-void (empty response body)
 
 ### Authorization
 
@@ -8576,54 +8471,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **customersPatch**
-> \Swagger\Client\Model\Customer customersPatch($data)
-
-Patch an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\CustomerApi();
-$data = new \Swagger\Client\Model\Customer(); // \Swagger\Client\Model\Customer | Model instance data
-
-try {
-    $result = $api_instance->customersPatch($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling CustomerApi->customersPatch: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\Customer**](../Model/\Swagger\Client\Model\Customer.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\Customer**](../Model/Customer.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
 # **customersPost**
 > \Swagger\Client\Model\Customer customersPost($data)
 
@@ -8647,54 +8494,6 @@ try {
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomerApi->customersPost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\Customer**](../Model/\Swagger\Client\Model\Customer.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\Customer**](../Model/Customer.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **customersPut**
-> \Swagger\Client\Model\Customer customersPut($data)
-
-Replace an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\CustomerApi();
-$data = new \Swagger\Client\Model\Customer(); // \Swagger\Client\Model\Customer | Model instance data
-
-try {
-    $result = $api_instance->customersPut($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling CustomerApi->customersPut: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -8756,54 +8555,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\TeamMember**](../Model/TeamMember.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **customersReplaceOrCreatePost**
-> \Swagger\Client\Model\Customer customersReplaceOrCreatePost($data)
-
-Replace an existing model instance or insert a new one into the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\CustomerApi();
-$data = new \Swagger\Client\Model\Customer(); // \Swagger\Client\Model\Customer | Model instance data
-
-try {
-    $result = $api_instance->customersReplaceOrCreatePost($data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling CustomerApi->customersReplaceOrCreatePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **data** | [**\Swagger\Client\Model\Customer**](../Model/\Swagger\Client\Model\Customer.md)| Model instance data | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\Customer**](../Model/Customer.md)
 
 ### Authorization
 
@@ -8946,106 +8697,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 void (empty response body)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **customersUpdatePost**
-> \Swagger\Client\Model\InlineResponse2003 customersUpdatePost($where, $data)
-
-Update instances of the model matched by {{where}} from the data source.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\CustomerApi();
-$where = "where_example"; // string | Criteria to match model instances
-$data = new \Swagger\Client\Model\Customer(); // \Swagger\Client\Model\Customer | An object of model property name/value pairs
-
-try {
-    $result = $api_instance->customersUpdatePost($where, $data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling CustomerApi->customersUpdatePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **where** | **string**| Criteria to match model instances | [optional]
- **data** | [**\Swagger\Client\Model\Customer**](../Model/\Swagger\Client\Model\Customer.md)| An object of model property name/value pairs | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
-
-### Authorization
-
-[access_token](../../README.md#access_token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, application/xml, text/xml
- - **Accept**: application/json, application/xml, text/xml, application/javascript, text/javascript
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **customersUpsertWithWherePost**
-> \Swagger\Client\Model\Customer customersUpsertWithWherePost($where, $data)
-
-Update an existing model instance or insert a new one into the data source based on the where criteria.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-Tweak\Api\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Tweak\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
-
-$api_instance = new Tweak\Api\Api\CustomerApi();
-$where = "where_example"; // string | Criteria to match model instances
-$data = new \Swagger\Client\Model\Customer(); // \Swagger\Client\Model\Customer | An object of model property name/value pairs
-
-try {
-    $result = $api_instance->customersUpsertWithWherePost($where, $data);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling CustomerApi->customersUpsertWithWherePost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **where** | **string**| Criteria to match model instances | [optional]
- **data** | [**\Swagger\Client\Model\Customer**](../Model/\Swagger\Client\Model\Customer.md)| An object of model property name/value pairs | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\Customer**](../Model/Customer.md)
 
 ### Authorization
 
